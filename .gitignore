@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+out/
+dist/
+
+# OS and Editor junk
+.DS_Store
+.env
+.vscode/
+
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules/

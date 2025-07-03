@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
+import logo from "../../public/logos/Accolades_logo_TM-2048x376 2.svg";
 function Header() {
   return (
     <div
@@ -16,7 +16,7 @@ function Header() {
       }}
     >
       <Image
-        src={"/logos/Accolades_logo.png"}
+        src={logo}
         alt="accolades logo"
         height={100}
         width={100}

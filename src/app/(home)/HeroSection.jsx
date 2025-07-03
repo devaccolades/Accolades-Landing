@@ -17,7 +17,7 @@ function HeroSection() {
         </h1>
         <p className="text-[14px] font-medium max-w-md text-center ">
           Explore our expert video production services that build brand reach
-          and boost sales.
+          and boost sales.{""}
         </p>
 
         <Button content={"View Our Work"} py={15} px={20}/>

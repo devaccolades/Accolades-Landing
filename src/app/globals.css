@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff; /* white background */
+  --foreground: #000000; /* black text */
+  --font-family-base: var(--font-poppins);
+  --font-zen: var(--font-zen-old-mincho);
+}
+
+/* optional: keep dark mode override */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-base), sans-serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.font-zen {
+  font-family: var(--font-zen-old-mincho), serif;
+}
+
+.containers {
+  width: 80%;
+  margin: 0 auto;
+}

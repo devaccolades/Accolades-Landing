@@ -16,34 +16,37 @@ const icons = [x, insta, linkedin, fb];
 
 const Footer = () => {
   return (
-    <main className="bg-[#E4F2F2] py-10">
+    <main className="bg-[#E4F2F2] py-6 md:py-10">
       <section className="containers">
         {/* Header Section */}
-        <div className="flex justify-between items-start flex-wrap gap-4">
-          <div className="font-zen font-bold text-[48px] leading-none">
+        <div className="flex justify-between items-center flex-wrap ">
+          <div className="font-zen font-bold text-[28px] md:text-[36px] xl:text-[48px] leading-[100%] mb-3">
             <h4>
               Got a story to <span className="text-[#0C7379]">tell?</span>
             </h4>
-            <p className="font-poppins font-normal text-[16px] text-[#0C0902] mt-2">
+            <p className="font-poppins font-normal text-[14px] lg:text-[16px] leading-[120%] text-[#0C0902] mt-2">
               Let’s create a video that makes your brand unforgettable.
             </p>
           </div>
-          <Button content="Book a call with our team" py={12} px={16} />
+          <Button
+            content="Book a call with our team"
+            className="px-3 py-2 xl:py-3 xl:px-4"
+          />
         </div>
 
         {/* Divider */}
         <Image
           src={line}
           alt="divider"
-          className="w-full my-10 object-cover bg-no-repeat"
+          className="w-full my-5 lg:my-10 object-cover bg-no-repeat"
         />
 
         {/* Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-start">
           {/* Left Section */}
-          <div className="font-poppins space-y-4">
+          <div className="font-poppins space-y-2 md:space-y-4">
             <Image src={logo} alt="Accolades Logo" />
-            <h5 className="text-[#0C7379] text-[20px] font-semibold">
+            <h5 className="text-[#0C7379] text-[16px] md:text-[20px] font-semibold">
               Accolades Integrated Pvt Ltd
             </h5>
             <p className="text-[#0C0902] text-[15px]">
@@ -64,18 +67,18 @@ const Footer = () => {
 
           {/* Right Section */}
           <div>
-            <h5 className="text-[#0C7379] text-[20px] font-semibold mb-4">
+            <h5 className="text-[#0C7379] text-[16px] lg:text-[20px] font-semibold mb-2 md:mb-4">
               Other services
             </h5>
 
             {/* Services List */}
-            <div className="flex gap-8 mb-6 flex-wrap">
-              <ul className="list-disc list-inside text-[#0C0902] text-[16px] font-semibold space-y-1">
+            <div className="flex gap-3 xl:gap-8 mb-6 flex-wrap">
+              <ul className="list-disc list-inside text-[#0C0902] text-[14px] lg:text-[16px] font-semibold space-y-1">
                 <li>Google Ads</li>
                 <li>Search Engine Optimization</li>
                 <li>Social Media Marketing</li>
               </ul>
-              <ul className="list-disc list-inside text-[#0C0902] text-[16px] font-semibold space-y-1">
+              <ul className="list-disc list-inside text-[#0C0902] text-[14px] lg:text-[16px] font-semibold space-y-1">
                 <li>Online Marketing</li>
                 <li>Graphic Designing</li>
                 <li>Web Development</li>
@@ -88,12 +91,12 @@ const Footer = () => {
               {icons.map((icon, index) => (
                 <div
                   key={index}
-                  className="bg-[#0C7379] w-[60px] h-[50px] flex items-center justify-center rounded-[20px]"
+                  className="bg-[#0C7379] w-[40px] h-[30px] xl:w-[60px] xl:h-[50px] flex items-center justify-center rounded-[16px] xl:rounded-[20px]"
                 >
                   <Image
                     src={icon}
                     alt={`social-${index}`}
-                    className="w-[30px] h-auto p-1"
+                    className="w-[25px] xl:w-[30px] h-auto p-1"
                   />
                 </div>
               ))}

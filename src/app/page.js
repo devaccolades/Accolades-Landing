@@ -7,6 +7,7 @@ import Footer from "@/Layout/Footer";
 import WhyAccolades from "./(home)/WhyAccolades";
 import OurPartners from "./(home)/OurPartners";
 import FeaturedWorks from "./(home)/FeaturedWork";
+import WhyBrands from "./(home)/WhyBrands";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <HeroSection />
       <UnderHero />
       <VideoServices />
-      <WhyBrands/>
+      <WhyBrands />
       <OurPartners />
       <FeaturedWorks /> 
       <Footer />

@@ -56,7 +56,7 @@ const FeaturedWorks = () => {
   const [playingIndex, setPlayingIndex] = useState(null);
 
   return (
-    <section className="py-16 bg-white mx-auto">
+    <section className="py-6 bg-white mx-auto">
       <div className=" mx-auto text-center px-4">
         <h2 className="text-3xl font-zen font-semibold mb-4">
           Featured <span className="text-teal-600">Works</span>

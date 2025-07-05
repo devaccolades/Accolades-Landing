@@ -9,6 +9,8 @@ function VideoServices() {
   const contents = [
     {
       name: "Presentation Videos",
+      companyName: "accolades",
+      videoType: "Corporate Video",
       videos: [
         {
           orientation: "vertical",
@@ -26,6 +28,8 @@ function VideoServices() {
     },
     {
       name: "Drone Videos",
+      companyName: "accolades",
+      videoType: "Corporate Video",
       videos: [
         {
           orientation: "vertical",
@@ -43,6 +47,8 @@ function VideoServices() {
     },
     {
       name: "Corporate Videos",
+      companyName: "accolades",
+      videoType: "Corporate Video",
       videos: [
         {
           orientation: "vertical",
@@ -60,6 +66,8 @@ function VideoServices() {
     },
     {
       name: "Ad Films",
+      companyName: "accolades",
+      videoType: "Corporate Video",
       videos: [
         {
           orientation: "vertical",
@@ -77,6 +85,8 @@ function VideoServices() {
     },
     {
       name: "Skits",
+      companyName: "accolades",
+      videoType: "Corporate Video",
       videos: [
         {
           orientation: "vertical",
@@ -94,6 +104,8 @@ function VideoServices() {
     },
     {
       name: "Motion Graphics",
+      companyName: "accolades",
+      videoType: "Corporate Video",
       videos: [
         {
           orientation: "vertical",
@@ -111,6 +123,8 @@ function VideoServices() {
     },
     {
       name: "Testimonial Videos",
+      companyName: "accolades",
+      videoType: "Corporate Video",
       videos: [
         {
           orientation: "vertical",
@@ -176,13 +190,32 @@ function VideoServices() {
             >
               {item.videos.map((vid, index) => (
                 <div key={vid.video}>
-                  <Image src={vid.orientation === "vertical" ? phone : ""} />
-                  <video
-                    key={index}
-                    src={vid.video}
-                    controls
-                    className="w-full h-auto rounded-lg shadow-md"
-                  />
+                  <div className="relative w-[255px] h-[512px] ">
+                    {/* Video container with clipping */}
+                    <div className="absolute inset-0 overflow-hidden rounded-[30px] mx-[10px] my-[10px]">
+                      <video
+                        key={index}
+                        src={vid.video}
+                        controls
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Phone overlay image */}
+                    <Image
+                      src={vid.orientation === "vertical" ? phone : ""}
+                      alt="phone frame"
+                      width={255}
+                      height={512}
+                      className="w-[255px] h-[512px] absolute top-0 left-0 z-10 pointer-events-none "
+                    />
+                  </div>
+                  <p className="ml-6 font-semibold text-[16px]">
+                    {item.companyName}
+                  </p>
+                  <p className="ml-6 font-normal text-[16px]">
+                    {item.videoType}
+                  </p>
                 </div>
               ))}
             </div>

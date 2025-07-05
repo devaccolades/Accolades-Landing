@@ -11,13 +11,11 @@ import FeaturedWorks from "./(home)/FeaturedWork";
 export default function Home() {
   return (
     <>
-      {/* <Header />
+      <Header />
       <HeroSection />
       <UnderHero />
       <VideoServices />
-      <WhyAccolades /> */}
-      <OurPartners />
-      <FeaturedWorks />
+      <WhyBrands/>
       <Footer />
     </>
   );

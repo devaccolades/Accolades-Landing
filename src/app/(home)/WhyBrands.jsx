@@ -4,10 +4,12 @@ import ScrollingRow from "./ScrollingRow";
 
 function WhyBrands() {
   return (
-    <section className="containers py-[160px] grid ">
+    <section className="containers py-4 grid relative">
+      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10" />
       <div className=" grid grid-cols-2 ">
         <div className="row-span-1 px-4">
-          <div className="flex items-center">
+          <div className="flex items-center mt-[100px]">
             <Image
               src={"/images/sidebar.png"}
               alt="sidebar"
@@ -51,7 +53,7 @@ function WhyBrands() {
             </p>
           </div>
         </div>
-        <div className="row-span-1">
+        <div className="row-span-1 h-[600px] overflow-hidden -mt-[10px]">
           <div className="flex gap-4">
             <ScrollingRow direction="up" />
             <ScrollingRow direction="down" />

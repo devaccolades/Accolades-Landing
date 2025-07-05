@@ -1,9 +1,39 @@
 import React from "react";
 
-function Button({ content, py, px }) {
+function Button({ content, className = "" }) {
   return (
+    // <div
+    //   className="p-1 xl:p-2 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
+    //   style={{
+    //     background:
+    //       "linear-gradient(360deg,rgba(213, 244, 246, 1) 0%, rgba(12, 115, 121, 1) 100%)",
+    //     boxShadow: "0 4px 15px rgba(12, 115, 121, 0.2)",
+    //   }}
+    // >
+    //   <div
+    //     className="p-1 xl:p-2 rounded-full transition-all duration-300 hover:scale-[1.02]"
+    //     style={{
+    //       background:
+    //         "linear-gradient(180deg,rgba(213, 244, 246, 1) 0%, rgba(58, 134, 138, 1) 100%)",
+    //     }}
+    //   >
+    //     <button
+    //       className="text-[#0C7379] text-[14px] font-bold rounded-full leading-[110%]
+    //                  transition-all duration-300 hover:text-[#0A6065] hover:shadow-inner
+    //                  active:scale-95 active:brightness-95
+    //                  relative overflow-hidden group"
+    //       style={{
+    //         background: "linear-gradient(180deg, #E8FEFF 0%, #DCEBEC 100%)",
+    //         paddingTop: `${py}px`,
+    //         paddingBottom: `${py}px`,
+    //         paddingLeft: `${px}px`,
+    //         paddingRight: `${px}px`,
+    //       }}
+    //     >
+    //       <span className="relative z-10">{content}</span>
+
     <div
-      className="p-2 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
+      className="p-1 xl:p-[6px] rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
       style={{
         background:
           "linear-gradient(360deg,rgba(213, 244, 246, 1) 0%, rgba(12, 115, 121, 1) 100%)",
@@ -11,26 +41,24 @@ function Button({ content, py, px }) {
       }}
     >
       <div
-        className="p-2 rounded-full transition-all duration-300 hover:scale-[1.02]"
+        className="p-1 xl:p-[6px] rounded-full transition-all duration-300 hover:scale-[1.02]"
         style={{
           background:
             "linear-gradient(180deg,rgba(213, 244, 246, 1) 0%, rgba(58, 134, 138, 1) 100%)",
         }}
       >
         <button
-          className="text-[#0C7379] text-[14px] font-bold rounded-full leading-[110%] 
-                     transition-all duration-300 hover:text-[#0A6065] hover:shadow-inner
-                     active:scale-95 active:brightness-95
-                     relative overflow-hidden group"
+          className={`text-[#0C7379] text-[14px] font-bold rounded-full leading-[110%] 
+                      transition-all duration-300 hover:text-[#0A6065] hover:shadow-inner
+                      active:scale-95 active:brightness-95
+                      relative overflow-hidden group ${className}`}
           style={{
             background: "linear-gradient(180deg, #E8FEFF 0%, #DCEBEC 100%)",
-            paddingTop: `${py}px`,
-            paddingBottom: `${py}px`,
-            paddingLeft: `${px}px`,
-            paddingRight: `${px}px`,
           }}
         >
-          <span className="relative z-10">{content}</span>
+          <span className="relative z-10 text-[13px] lg:text-[14px]">
+            {content}
+          </span>
 
           {/* Shimmer effect */}
           <div

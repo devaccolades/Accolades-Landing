@@ -16,6 +16,8 @@ export default function Home() {
       <UnderHero />
       <VideoServices />
       <WhyBrands/>
+      <OurPartners />
+      <FeaturedWorks /> 
       <Footer />
     </>
   );

@@ -5,6 +5,8 @@ import UnderHero from "./(home)/UnderHero";
 import VideoServices from "./(home)/VideoServices";
 import Footer from "@/Layout/Footer";
 import WhyAccolades from "./(home)/WhyAccolades";
+import OurPartners from "./(home)/OurPartners";
+import FeaturedWorks from "./(home)/FeaturedWork";
 
 export default function Home() {
   return (
@@ -12,8 +14,10 @@ export default function Home() {
       {/* <Header />
       <HeroSection />
       <UnderHero />
-      <VideoServices /> */}
-      <WhyAccolades />
+      <VideoServices />
+      <WhyAccolades /> */}
+      <OurPartners />
+      <FeaturedWorks />
       <Footer />
     </>
   );

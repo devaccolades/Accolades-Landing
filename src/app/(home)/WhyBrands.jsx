@@ -52,7 +52,7 @@ function WhyBrands() {
           </div>
         </div>
         <div className="row-span-1">
-          <div className="flex ">
+          <div className="flex gap-4">
             <ScrollingRow direction="up" />
             <ScrollingRow direction="down" />
           </div>

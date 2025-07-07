@@ -8,6 +8,7 @@ import WhyAccolades from "./(home)/WhyAccolades";
 import OurPartners from "./(home)/OurPartners";
 import FeaturedWorks from "./(home)/FeaturedWork";
 import WhyBrands from "./(home)/WhyBrands";
+import WhatOurClientsSay from "./(home)/OurClientsSay";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <WhyBrands />
       <OurPartners />
       <FeaturedWorks /> 
+      <WhatOurClientsSay />
       <Footer />
     </>
   );

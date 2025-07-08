@@ -8,12 +8,16 @@ import WhyAccolades from "./(home)/WhyAccolades";
 import OurPartners from "./(home)/OurPartners";
 import FeaturedWorks from "./(home)/FeaturedWork";
 import WhyBrands from "./(home)/WhyBrands";
+import WhatOurClientsSay from "./(home)/OurClientsSay";
 import { getHeroSection, getVideoCategories } from "./Server";
 
 export default async function Home() {
   const hero = await getHeroSection();
   const video = await getVideoCategories();
   console.log("video", video);
+
+
+
 
   return (
     <>
@@ -23,7 +27,8 @@ export default async function Home() {
       {video && <VideoServices data={video} />}
       <WhyBrands />
       <OurPartners />
-      <FeaturedWorks />
+      <FeaturedWorks /> 
+      <WhatOurClientsSay />
       <Footer />
     </>
   );

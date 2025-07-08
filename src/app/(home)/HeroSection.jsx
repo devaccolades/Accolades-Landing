@@ -1,26 +1,36 @@
 import Button from "@/component/Button";
 import Image from "next/image";
 import React from "react";
+import { BASE_URL } from "../Server";
 
-function HeroSection() {
+function HeroSection({ data }) {
+  console.log("data", data);
   return (
     <section className="bg-white text-black h-[90vh] flex justify-center items-center">
       <div className="flex flex-col items-center gap-4">
-        <Image
-          src={"/images/google.png"}
-          height={100}
-          width={100}
-          alt="google paratner"
-        />
-        <h1 className="text-[64px] leading-[64px] text-center max-w-xl">
-          Visual Stories That Drive Impact
-        </h1>
-        <p className="text-[14px] font-medium max-w-md text-center ">
-          Explore our expert video production services that build brand reach
-          and boost sales.{""}
-        </p>
+        {data && (
+          <Image
+            src={BASE_URL + data.googleImage.url}
+            height={100}
+            width={100}
+            alt="google paratner"
+          />
+        )}
+        {data && (
+          <h1 className="text-[64px] leading-[64px] text-center max-w-xl">
+            {data.HeroTitle}
+          </h1>
+        )}
+        {data && (
+          <p className="text-[14px] font-medium max-w-md text-center ">
+            {data.subTitle}
+          </p>
+        )}
 
-        <Button content={"View Our Work"} py={15} px={20}/>
+        <Button
+          content={"View Our Work"}
+          className="px-3 py-2 xl:py-3 xl:px-4"
+        />
       </div>
     </section>
   );

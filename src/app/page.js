@@ -13,15 +13,15 @@ import WhatOurClientsSay from "./(home)/OurClientsSay";
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <HeroSection />
       <UnderHero />
       <VideoServices />
       <WhyBrands />
       <OurPartners />
-      <FeaturedWorks /> 
+      <FeaturedWorks />  */}
       <WhatOurClientsSay />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

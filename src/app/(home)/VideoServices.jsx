@@ -2,146 +2,171 @@
 import Button from "@/component/Button";
 import React, { useEffect, useState } from "react";
 import phone from "../../../public/images/phone.png";
+import cover1 from "../../../public/images/cover1.png"
+import cover2 from "../../../public/images/cover2.png"
+import cover3 from "../../../public/images/cover3.png"
 import Image from "next/image";
 
-function VideoServices() {
+function VideoServices({data}) {
   const [selected, setSelected] = useState("Presentation Videos");
-  const contents = [
-    {
-      name: "Presentation Videos",
-      companyName: "accolades",
-      videoType: "Corporate Video",
-      videos: [
-        {
-          orientation: "vertical",
-          video: "/videos/pres1.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres2.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres3.mp4",
-        },
-      ],
-    },
-    {
-      name: "Drone Videos",
-      companyName: "accolades",
-      videoType: "Corporate Video",
-      videos: [
-        {
-          orientation: "vertical",
-          video: "/videos/pres1.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres2.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres3.mp4",
-        },
-      ],
-    },
-    {
-      name: "Corporate Videos",
-      companyName: "accolades",
-      videoType: "Corporate Video",
-      videos: [
-        {
-          orientation: "vertical",
-          video: "/videos/pres1.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres2.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres3.mp4",
-        },
-      ],
-    },
-    {
-      name: "Ad Films",
-      companyName: "accolades",
-      videoType: "Corporate Video",
-      videos: [
-        {
-          orientation: "vertical",
-          video: "/videos/pres1.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres2.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres3.mp4",
-        },
-      ],
-    },
-    {
-      name: "Skits",
-      companyName: "accolades",
-      videoType: "Corporate Video",
-      videos: [
-        {
-          orientation: "vertical",
-          video: "/videos/pres1.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres2.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres3.mp4",
-        },
-      ],
-    },
-    {
-      name: "Motion Graphics",
-      companyName: "accolades",
-      videoType: "Corporate Video",
-      videos: [
-        {
-          orientation: "vertical",
-          video: "/videos/pres1.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres2.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres3.mp4",
-        },
-      ],
-    },
-    {
-      name: "Testimonial Videos",
-      companyName: "accolades",
-      videoType: "Corporate Video",
-      videos: [
-        {
-          orientation: "vertical",
-          video: "/videos/pres1.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres2.mp4",
-        },
-        {
-          orientation: "vertical",
-          video: "/videos/pres3.mp4",
-        },
-      ],
-    },
-  ];
+  // const contents = [
+  //   {
+  //     name: "Presentation Videos",
+  //     companyName: "accolades",
+  //     videoType: "Corporate Video",
+  //     videos: [
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres1.mp4",
+  //         poster:"/images/cover1.png"
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres2.mp4",
+  //         poster:"/images/cover2.png"
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres3.mp4",
+  //         poster:"/images/cover3.png"
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "Drone Videos",
+  //     companyName: "accolades",
+  //     videoType: "Corporate Video",
+  //     videos: [
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres1.mp4",
+  //         poster:{cover1}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres2.mp4",
+  //         poster:{cover2}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres3.mp4",
+  //         poster:{cover3}
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "Corporate Videos",
+  //     companyName: "accolades",
+  //     videoType: "Corporate Video",
+  //     videos: [
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres1.mp4",
+  //         poster:{cover1}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres2.mp4",
+  //         poster:{cover2}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres3.mp4",
+  //         poster:{cover3}
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "Ad Films",
+  //     companyName: "accolades",
+  //     videoType: "Corporate Video",
+  //     videos: [
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres1.mp4",
+  //         poster:{cover1}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres2.mp4",
+  //         poster:{cover2}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres3.mp4",
+  //         poster:{cover3}
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "Skits",
+  //     companyName: "accolades",
+  //     videoType: "Corporate Video",
+  //     videos: [
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres1.mp4",
+  //         poster:{cover1}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres2.mp4",
+  //         poster:{cover2}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres3.mp4",
+  //         poster:{cover3}
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "Motion Graphics",
+  //     companyName: "accolades",
+  //     videoType: "Corporate Video",
+  //     videos: [
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres1.mp4",
+  //         poster:{cover1}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres2.mp4",
+  //         poster:{cover2}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres3.mp4",
+  //         poster:{cover3}
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "Testimonial Videos",
+  //     companyName: "accolades",
+  //     videoType: "Corporate Video",
+  //     videos: [
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres1.mp4",
+  //         poster:{cover1}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres2.mp4",
+  //         poster:{cover2}
+  //       },
+  //       {
+  //         orientation: "vertical",
+  //         video: "/videos/pres3.mp4",
+  //         poster:{cover3}
+  //       },
+  //     ],
+  //   },
+  // ];
 
+  const contents = data
   useEffect(() => {
     console.log("selected", selected);
   }, [selected]);
@@ -158,7 +183,10 @@ function VideoServices() {
             {/* Video Item (clickable) */}
             {/* Show Button Only If Selected */}
             {selected === item.name ? (
-              <Button content={item.name} py={10} px={20} />
+              <Button
+                content={item.name}
+                className="px-3 py-2 xl:py-3 xl:px-4"
+              />
             ) : (
               <p
                 onClick={() => setSelected(item.name)}
@@ -196,8 +224,9 @@ function VideoServices() {
                       <video
                         key={index}
                         src={vid.video}
-                        controls
+                        // controls
                         className="w-full h-full object-cover"
+                        poster={vid.poster}
                       />
                     </div>
 

@@ -163,7 +163,7 @@ const partners = [
 
 const OurPartners = () => {
   return (
-    <section className="relative overflow-hidden py-6 bg-white">
+    <section className="mx-0 md:mx-20  relative overflow-hidden py-6 bg-white">
       {/* Title aligned exactly like in your image */}
       <div className="mx-auto px-4">
         <h2 className="font-poppins text-[20px] leading-[156%] font-semibold mx-4 sm:mx-20 mb-8 text-left">Our Partners</h2>

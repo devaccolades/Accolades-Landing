@@ -9,6 +9,7 @@ import OurPartners from "./(home)/OurPartners";
 import FeaturedWorks from "./(home)/FeaturedWork";
 import WhyBrands from "./(home)/WhyBrands";
 import { getHeroSection, getVideoCategories } from "./Server";
+import WhatOurClientsSay from "./(home)/OurClientsSay";
 
 export default async function Home() {
   const hero = await getHeroSection();
@@ -23,7 +24,8 @@ export default async function Home() {
       {video && <VideoServices data={video} />}
       <WhyBrands />
       <OurPartners />
-      <FeaturedWorks />
+      <FeaturedWorks /> 
+      <WhatOurClientsSay />
       <Footer />
     </>
   );

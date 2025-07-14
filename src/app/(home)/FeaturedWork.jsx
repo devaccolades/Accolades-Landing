@@ -12,47 +12,10 @@ import "swiper/css/pagination";
 import video1 from "../../../public/images/thumbnail.jpg";
 import video2 from "../../../public/images/thumbnail.jpg";
 import play from "../../../public/images/play-circle.svg";
+import { BASE_URL } from "../Server";
 
-const works = [
-  {
-    src: "/images/video1.mp4",
-    thumbnail: video1,
-    client: "Client name here",
-    type: "Corporate video"
-  },
-  {
-    src: "/images/video1.mp4",
-    thumbnail: video2,
-    client: "Client name here",
-    type: "Corporate video"
-  },
-  {
-    src: "/images/video1.mp4",
-    thumbnail: video1,
-    client: "Client name here",
-    type: "Corporate video"
-  },
-  {
-    src: "/images/video1.mp4",
-    thumbnail: video2,
-    client: "Client name here",
-    type: "Corporate video"
-  },
-  {
-    src: "/images/video1.mp4",
-    thumbnail: video1,
-    client: "Client name here",
-    type: "Corporate video"
-  },
-  {
-    src: "/images/video1.mp4",
-    thumbnail: video2,
-    client: "Client name here",
-    type: "Corporate video"
-  },
-];
-
-const FeaturedWorks = () => {
+const FeaturedWorks = ({ data }) => {
+  const works = data.parterVideos;
   const [playingIndex, setPlayingIndex] = useState(null);
 
   return (
@@ -62,9 +25,7 @@ const FeaturedWorks = () => {
           Featured <span className="text-teal-600">Works</span>
         </h2>
         <p className="font-poppins font-semibold text-[12px] md:text-[14px] leading-[156%] text-black mx-auto lg:mx-[150px] xl:mx-[250px]">
-          Explore a selection of our most impactful video projects across formats like ad films, drone reels,
-          corporate stories, and more. Each video is crafted to deliver not just visual appeal, but real business
-          results—whether it's boosting visibility, engagement, or conversions.
+          {data.mainTitle}
         </p>
       </div>
 
@@ -97,7 +58,7 @@ const FeaturedWorks = () => {
                       className="object-cover w-full h-full absolute inset-0"
                     /> */}
                     <video
-                      src={work.src}
+                      src={BASE_URL + work.video.url}
                       autoPlay
                       playsInline
                       controls
@@ -117,8 +78,8 @@ const FeaturedWorks = () => {
                 ) : (
                   <>
                     <Image
-                      src={work.thumbnail}
-                      alt={work.client}
+                      src={BASE_URL + work.image.url}
+                      alt={work.image.id}
                       fill
                       className="object-cover"
                     />
@@ -128,17 +89,21 @@ const FeaturedWorks = () => {
 
                     {/* Play icon in bottom-right */}
                     <div className="absolute bottom-4 right-4 w-10 h-10 opacity-90 group-hover:scale-105 transition z-10">
-                      <Image src={play} alt="Play icon" fill className="object-contain" />
+                      <Image
+                        src={play}
+                        alt="Play icon"
+                        fill
+                        className="object-contain"
+                      />
                     </div>
 
                     {/* Text bottom left */}
                     <div className="absolute bottom-4 left-4 text-white z-10">
-                      <p className="font-medium">{work.client}</p>
-                      <p className="text-sm">{work.type}</p>
+                      <p className="font-medium">{work.clientName}</p>
+                      <p className="text-sm">{work.videoType}</p>
                     </div>
                   </>
                 )}
-
               </div>
             </SwiperSlide>
           ))}

@@ -2,12 +2,11 @@ import Image from "next/image";
 import React from "react";
 import ScrollingRow from "./ScrollingRow";
 
-function WhyBrands() {
+function WhyBrands({ data }) {
   return (
-    <section className="containers py-4 grid relative">
-      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white to-transparent z-10" />
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10" />
-      <div className=" grid grid-cols-2 ">
+    <section className="containers py-4 grid ">
+      
+      <div className=" grid grid-cols-1 md:grid-cols-2 ">
         <div className="row-span-1 px-4">
           <div className="flex items-center mt-[100px]">
             <Image
@@ -53,10 +52,15 @@ function WhyBrands() {
             </p>
           </div>
         </div>
-        <div className="row-span-1 h-[600px] overflow-hidden -mt-[10px]">
+        <div className="row-span-1 h-[600px] overflow-hidden md:-mt-[10px] relative">
+          <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10" />
           <div className="flex gap-4">
-            <ScrollingRow direction="up" />
-            <ScrollingRow direction="down" />
+            <ScrollingRow direction="up" video={data} />
+            <ScrollingRow direction="down" video={data} />
+            <div className="md:hidden">
+              <ScrollingRow direction="up" video={data} />
+            </div>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import phone from "../../../public/images/phone.png";
 import laptop from "../../../public/images/MacBook Pro 14.png";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion, AnimatePresence } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -46,11 +47,23 @@ function VideoServices({ data }) {
 
   return (
     <section className="containers py-10">
-      <p className="text-[40px] leading-[40px] font-zen mb-6 font-bold">
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-[40px] leading-[40px] font-zen mb-6 font-bold"
+      >
         Our Video <span className="text-[#0C7379]">Services</span>
-      </p>
+      </motion.p>
 
-      <div className="flex gap-[20px] items-center overflow-x-scroll">
+      <motion.div
+        className="flex gap-[20px] items-center overflow-x-scroll"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         {contents.map((item) => (
           <div key={item.name} className="text-center">
             {selected === item.name ? (
@@ -70,15 +83,22 @@ function VideoServices({ data }) {
             )}
           </div>
         ))}
-      </div>
+      </motion.div>
 
-      <p className="mt-[20px] text-[14px] font-medium leading-[156%] max-w-4xl">
+      <motion.p
+        className="mt-[20px] text-[14px] font-medium leading-[156%] max-w-4xl"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        {" "}
         Our presentation videos are designed to simplify complex ideas and
         deliver polished, professional messages that resonate. Whether it's for
         internal meetings, investor pitches, or client onboarding, these videos
         help build trust and clarity—ultimately supporting better engagement and
         faster decision-making.
-      </p>
+      </motion.p>
 
       <div>
         {contents.map((item) =>
@@ -106,8 +126,7 @@ function VideoServices({ data }) {
                         item.videos.some((v) => v.orientation === "vertical") &&
                         !item.videos.some((v) => v.orientation === "horizontal")
                           ? 2
-                          : 1
-                          ,
+                          : 1,
                     },
                     1024: {
                       slidesPerView:
@@ -132,83 +151,95 @@ function VideoServices({ data }) {
                     },
                   }}
                 >
-                  {item.videos.map((vid, index) => {
-                    const videoKey = `${item.name}-${index}`;
-                    const isHovered = hoverStates[videoKey] || false;
-                    const isVertical = vid.orientation === "vertical";
+                  <AnimatePresence mode="wait">
+                    {item.videos.map((vid, index) => {
+                      const videoKey = `${item.name}-${index}`;
+                      const isHovered = hoverStates[videoKey] || false;
+                      const isVertical = vid.orientation === "vertical";
 
-                    return (
-                      <SwiperSlide
-                        key={index}
-                        className={` ${
-                          isVertical
-                            ? "w-[255px]"
-                            : " h-full w-full md:!w-[734.5px] md:!h-[425px] mt-[20px]"
-                        }`}
-                      >
-                        <div className="flex flex-col justify-center md:items-center">
-                          <div
-                            className={`relative top-0 ${
+                      return (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 30 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: index * 0.15 }}
+                          exit={{ opacity: 0, y: 30 }}
+                          viewport={{ once: true, amount: 0.3 }}
+                        >
+                          <SwiperSlide
+                            className={` ${
                               isVertical
-                                ? "w-[255px] h-[512px]"
-                                : "w-[250px] h-[201px] md:w-[734px] md:h-[420px]"
+                                ? "w-[255px]"
+                                : "md:!w-[734.5px] md:!h-[425px] mt-[20px]"
                             }`}
                           >
-                            <div
-                              className={`absolute  inset-0 overflow-hidden ${
-                                isVertical
-                                  ? "rounded-[30px] mx-[10px] my-[10px]"
-                                  : "-left-[55px] h-[170px] w-[245px]  rounded-[20px] mx-[70px] my-[0px] md:w-[570px] md:h-[425px] md:left-[0px] md:inset-0"
-                              } bg-black`}
-                              onMouseEnter={() =>
-                                handleMouseEnter(item.name, index)
-                              }
-                              onMouseLeave={() =>
-                                handleMouseLeave(item.name, index)
-                              }
-                            >
-                              {!isHovered && (
-                                <Image
-                                  src={vid.poster}
-                                  alt="cover"
-                                  fill
-                                  className="object-cover transition-opacity duration-300"
-                                />
-                              )}
-                              {isHovered && (
-                                <video
-                                  ref={(el) =>
-                                    (videoRefs.current[videoKey] = el)
+                            <div className="flex flex-col justify-center md:items-center">
+                              <div
+                                className={`relative top-0 ${
+                                  isVertical
+                                    ? "w-[255px] h-[512px]"
+                                    : "w-[250px] h-[201px] md:w-[734px] md:h-[420px]"
+                                }`}
+                              >
+                                <div
+                                  className={`absolute  inset-0 overflow-hidden ${
+                                    isVertical
+                                      ? "rounded-[30px] mx-[10px] my-[10px]"
+                                      : "-left-[55px] h-[170px] w-[245px]  rounded-[20px] mx-[70px] my-[0px] md:w-[570px] md:h-[425px] md:left-[0px] md:inset-0"
+                                  } bg-black`}
+                                  onMouseEnter={() =>
+                                    handleMouseEnter(item.name, index)
                                   }
-                                  src={vid.video}
-                                  className="absolute inset-0 w-full h-full object-contain"
-                                  muted
-                                  playsInline
+                                  onMouseLeave={() =>
+                                    handleMouseLeave(item.name, index)
+                                  }
+                                >
+                                  {!isHovered && (
+                                    <Image
+                                      src={vid.poster}
+                                      alt="cover"
+                                      fill
+                                      className="object-cover transition-opacity duration-300"
+                                    />
+                                  )}
+                                  {isHovered && (
+                                    <video
+                                      ref={(el) =>
+                                        (videoRefs.current[videoKey] = el)
+                                      }
+                                      src={vid.video}
+                                      className="absolute inset-0 w-full h-full object-contain"
+                                      muted
+                                      playsInline
+                                    />
+                                  )}
+                                </div>
+                                <Image
+                                  src={isVertical ? phone : laptop}
+                                  alt={
+                                    isVertical ? "phone frame" : "laptop frame"
+                                  }
+                                  width={isVertical ? 255 : undefined}
+                                  height={isVertical ? 512 : undefined}
+                                  className={`absolute top-0 left-0 z-10 pointer-events-none ${
+                                    isVertical
+                                      ? "w-[255px] h-[512px]"
+                                      : "  md:w-[704px] md:h-[425px] w-[250px] h-[180px] object-cover"
+                                  }`}
                                 />
-                              )}
+                              </div>
+                              <p className="ml-6 font-semibold text-[16px]">
+                                {item.companyName}
+                              </p>
+                              <p className="ml-6 font-normal text-[16px]">
+                                {item.videoType}
+                              </p>
                             </div>
-                            <Image
-                              src={isVertical ? phone : laptop}
-                              alt={isVertical ? "phone frame" : "laptop frame"}
-                              width={isVertical ? 255 : undefined}
-                              height={isVertical ? 512 : undefined}
-                              className={`absolute top-0 left-0 z-10 pointer-events-none ${
-                                isVertical
-                                  ? "w-[255px] h-[512px]"
-                                  : "  md:w-[704px] md:h-[425px] w-[250px] h-[180px] object-cover"
-                              }`}
-                            />
-                          </div>
-                          <p className="ml-6 font-semibold text-[16px]">
-                            {item.companyName}
-                          </p>
-                          <p className="ml-6 font-normal text-[16px]">
-                            {item.videoType}
-                          </p>
-                        </div>
-                      </SwiperSlide>
-                    );
-                  })}
+                          </SwiperSlide>
+                        </motion.div>
+                      );
+                    })}
+                  </AnimatePresence>
                 </Swiper>
               )}
             </div>

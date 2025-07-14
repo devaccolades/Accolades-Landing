@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Button from "@/component/Button";
@@ -9,17 +10,40 @@ import insta from "../../public/social/2959748_instagram_photo_share_icon (1) 3.
 import x from "../../public/social/11244080_x_twitter_elon musk_twitter new logo_icon 3.svg";
 import linkedin from "../../public/social/7156610_linkedin_social_media_icon (4) 3.svg";
 import fb from "../../public/social/Group.svg";
-
+import { motion } from "framer-motion";
 import logo from "../../public/logos/Accolades_logo_TM-2048x376 2.svg";
 
 const icons = [x, insta, linkedin, fb];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 const Footer = () => {
   return (
     <main className="bg-[#E4F2F2] py-6 md:py-10">
-      <section className="containers">
+      <motion.section
+        className="containers"
+        initial="hidden"
+        whileInView="visible"
+        variants={staggerContainer}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         {/* Header Section */}
-        <div className="flex justify-between items-center flex-wrap ">
+        <motion.div
+          variants={fadeUp}
+          className="flex justify-between items-center flex-wrap"
+        >
           <div className="font-zen font-bold text-[28px] md:text-[36px] xl:text-[48px] leading-[100%] mb-3">
             <h4>
               Got a story to <span className="text-[#0C7379]">tell?</span>
@@ -32,19 +56,27 @@ const Footer = () => {
             content="Book a call with our team"
             className="px-3 py-2 xl:py-3 xl:px-4"
           />
-        </div>
+        </motion.div>
 
         {/* Divider */}
-        <Image
-          src={line}
-          alt="divider"
-          className="w-full my-5 lg:my-10 object-cover bg-no-repeat"
-        />
+        <motion.div variants={fadeUp}>
+          <Image
+            src={line}
+            alt="divider"
+            className="w-full my-5 lg:my-10 object-cover bg-no-repeat"
+          />
+        </motion.div>
 
         {/* Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-start">
+        <motion.div
+          variants={staggerContainer}
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-start"
+        >
           {/* Left Section */}
-          <div className="font-poppins space-y-2 md:space-y-4">
+          <motion.div
+            variants={fadeUp}
+            className="font-poppins space-y-2 md:space-y-4"
+          >
             <Image src={logo} alt="Accolades Logo" />
             <h5 className="text-[#0C7379] text-[16px] md:text-[20px] font-semibold">
               Accolades Integrated Pvt Ltd
@@ -63,15 +95,13 @@ const Footer = () => {
                 <p>+91 9048100233</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Section */}
-          <div>
+          <motion.div variants={fadeUp}>
             <h5 className="text-[#0C7379] text-[16px] lg:text-[20px] font-semibold mb-2 md:mb-4">
               Other services
             </h5>
-
-            {/* Services List */}
             <div className="flex gap-3 xl:gap-8 mb-6 flex-wrap">
               <ul className="list-disc list-inside text-[#0C0902] text-[14px] lg:text-[16px] font-semibold space-y-1">
                 <li>Google Ads</li>
@@ -84,8 +114,6 @@ const Footer = () => {
                 <li>Web Development</li>
               </ul>
             </div>
-
-            {/* Divider + Social Icons */}
             <Image src={halfLine} alt="divider" className="w-full mb-3" />
             <div className="flex gap-3">
               {icons.map((icon, index) => (
@@ -101,9 +129,9 @@ const Footer = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        </motion.div>
+      </motion.section>
     </main>
   );
 };

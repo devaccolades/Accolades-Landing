@@ -33,7 +33,7 @@ function Button({ content, className = "" }) {
     //       <span className="relative z-10">{content}</span>
 
     <div
-      className="p-1 xl:p-[6px] rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
+      className="p-[3px] xl:p-[6px] rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
       style={{
         background:
           "linear-gradient(360deg,rgba(213, 244, 246, 1) 0%, rgba(12, 115, 121, 1) 100%)",
@@ -41,7 +41,7 @@ function Button({ content, className = "" }) {
       }}
     >
       <div
-        className="p-1 xl:p-[6px] rounded-full transition-all duration-300 hover:scale-[1.02]"
+        className="p-[3px] xl:p-[6px] rounded-full transition-all duration-300 hover:scale-[1.02]"
         style={{
           background:
             "linear-gradient(180deg,rgba(213, 244, 246, 1) 0%, rgba(58, 134, 138, 1) 100%)",

@@ -1,6 +1,7 @@
 // lib/server.js
 
-export const BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
+export const BASE_URL =
+  process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
 
 export async function getHeroSection() {
   const res = await fetch(`${BASE_URL}/api/hero?populate=*`);
@@ -37,5 +38,66 @@ export async function getVideoCategories() {
   } catch (error) {
     console.error("Error fetching video categories:", error);
     return [];
+  }
+}
+
+export async function getWhyBrandChoose() {
+  try {
+    const res = await fetch(`${BASE_URL}/api/why-brand?populate=*`);
+    if (!res.ok) {
+      throw new Error("error to fetch the data");
+    }
+
+    const json = await res.json();
+    return json.data.brandVideos;
+  } catch (error) {
+    console.error("Error in fetching the data", error);
+  }
+}
+export async function getOurPartner() {
+  try {
+    const res = await fetch(`${BASE_URL}/api/our-client?populate=*`);
+    if (!res.ok) {
+      throw new Error("error to fetch the data");
+    }
+
+    const json = await res.json();
+    return json.data.clientLogo.map((item) => ({
+      logo: BASE_URL + item.url,
+    }));
+  } catch (error) {
+    console.error("Error in fetching the data", error);
+  }
+}
+
+export async function getFeaturedParteners() {
+  try {
+    const res = await fetch(
+      `${BASE_URL}/api/featured-work?populate[0]=parterVideos&populate[1]=parterVideos.video&populate[2]=parterVideos.image`
+    );
+    if (!res.ok) {
+      throw new Error("error to fetch the data");
+    }
+
+    const json = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Error in fetching the data", error);
+  }
+}
+
+export async function getWhatOurClientSays() {
+  try {
+    const res = await fetch(
+      `${BASE_URL}/api/what-our-client-said?populate[0]=videoTestimonial&populate[1]=videoTestimonial.oneVideoofTest&populate[2]=videoTestimonial.onePosterImage&populate[3]=testText&populate[4]=testText.logo&populate[5]=testText.personImage`
+    );
+    if (!res.ok) {
+      throw new Error("error to fetch the data");
+    }
+
+    const json = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Error in fetching the data", error);
   }
 }

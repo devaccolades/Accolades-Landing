@@ -55,8 +55,6 @@
 
 // // export default OurPartners;
 
-
-
 // "use client";
 
 // import Image from "next/image";
@@ -133,40 +131,38 @@
 
 //       </div>
 
-     
 //     </section>
 //   );
 // };
 
 // export default OurPartners;
 
-
 "use client";
 
 import Image from "next/image";
 import React from "react";
-import national from '../../../public/images/national.png'
-import cidbi from '../../../public/images/cidbi.png'
-import conf from '../../../public/images/confident.png'
+import national from "../../../public/images/national.png";
+import cidbi from "../../../public/images/cidbi.png";
+import conf from "../../../public/images/confident.png";
 
-const partners = [
-  { src: national, alt: "National Builders" },
-  { src: cidbi, alt: "GDSI" },
-  { src: conf, alt: "Confident Group" },
-  { src: national, alt: "National Builders" },
-  { src: cidbi, alt: "GDSI" },
-  { src: conf, alt: "Confident Group" },
-  { src: conf, alt: "National Builders" },
-  { src: national, alt: "GDSI" },
-  { src: cidbi, alt: "Confident Group" },
-];
+const OurPartners = ({ data }) => {
+  const partners = data;
 
-const OurPartners = () => {
+  function generateLoopedPartners(partners, minItems = 10) {
+    if (partners.length === 0) return [];
+    const repeatCount = Math.ceil(minItems / partners.length);
+    return Array(repeatCount).fill(partners).flat();
+  }
+
+  const loopedPartners = generateLoopedPartners(partners, 14);
+
   return (
     <section className="mx-0 md:mx-20  relative overflow-hidden py-6 bg-white">
       {/* Title aligned exactly like in your image */}
       <div className="mx-auto px-4">
-        <h2 className="font-poppins text-[20px] leading-[156%] font-semibold mx-4 sm:mx-20 mb-8 text-left">Our Partners</h2>
+        <h2 className="font-poppins text-[20px] leading-[156%] font-semibold mx-4 sm:mx-20 mb-8 text-left">
+          Our Partners
+        </h2>
       </div>
 
       <div className="relative w-full overflow-hidden">
@@ -176,32 +172,15 @@ const OurPartners = () => {
 
         {/* First row - scrolling left */}
         <div className="flex animate-marquee whitespace-nowrap items-center mb-4">
-          {partners.map((partner, index) => (
+          {loopedPartners.map((partner, index) => (
             <div
               key={`left-${index}`}
               className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-4"
             >
               <div className="relative h-20 w-32">
                 <Image
-                  src={partner.src}
-                  alt={partner.alt}
-                  fill
-                  className="object-contain"
-                  sizes="128px"
-                />
-              </div>
-            </div>
-          ))}
-          {/* Duplicate for seamless loop */}
-          {partners.map((partner, index) => (
-            <div
-              key={`left-duplicate-${index}`}
-              className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-4"
-            >
-              <div className="relative h-20 w-32">
-                <Image
-                  src={partner.src}
-                  alt={partner.alt}
+                  src={partner.logo}
+                  alt="partner logo"
                   fill
                   className="object-contain"
                   sizes="128px"
@@ -211,17 +190,16 @@ const OurPartners = () => {
           ))}
         </div>
 
-        {/* Second row - scrolling right */}
         <div className="flex animate-marquee-reverse whitespace-nowrap items-center">
-          {partners.map((partner, index) => (
+          {loopedPartners.map((partner, index) => (
             <div
               key={`right-${index}`}
               className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-4"
             >
               <div className="relative h-20 w-32">
                 <Image
-                  src={partner.src}
-                  alt={partner.alt}
+                  src={partner.logo}
+                  alt="partner logo"
                   fill
                   className="object-contain"
                   sizes="128px"
@@ -229,16 +207,15 @@ const OurPartners = () => {
               </div>
             </div>
           ))}
-          {/* Duplicate for seamless loop */}
-          {partners.map((partner, index) => (
+          {loopedPartners.map((partner, index) => (
             <div
-              key={`right-duplicate-${index}`}
+              key={`right-${index}`}
               className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-4"
             >
               <div className="relative h-20 w-32">
                 <Image
-                  src={partner.src}
-                  alt={partner.alt}
+                  src={partner.logo}
+                  alt="partner logo"
                   fill
                   className="object-contain"
                   sizes="128px"

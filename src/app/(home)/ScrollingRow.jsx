@@ -1,14 +1,19 @@
 import React from "react";
+import { BASE_URL } from "../Server";
 
-const ScrollingRow = ({ direction = "up" }) => {
-  const videos = [
-    "/videos/video.mp4",
-    "/videos/video2.mp4",
-    "/videos/video3.mp4",
-    "/videos/video4.mp4",
-    "/videos/video5.mp4",
-    "/videos/video6.mp4",
-  ];
+const ScrollingRow = ({ direction = "up", video }) => {
+
+  function shuffleArray(array) {
+  const newArray = [...array]; // clone the original array to avoid mutating
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+}
+
+  console.log("that video",video)
+  const videos = shuffleArray(video);
   const animationClass =
     direction === "up" ? "animate-scroll-up" : "animate-scroll-down";
 
@@ -27,7 +32,7 @@ const ScrollingRow = ({ direction = "up" }) => {
         {[...videos, ...videos].map((video, i) => (
           <video
             key={i}
-            src={video}
+            src={BASE_URL + video.url}
             autoPlay
             loop
             muted

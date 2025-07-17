@@ -11,6 +11,7 @@ import WhyBrands from "./(home)/WhyBrands";
 import {
   getFeaturedParteners,
   getHeroSection,
+  getModalVideo,
   getOurPartner,
   getVideoCategories,
   getWhatOurClientSays,
@@ -24,12 +25,13 @@ export default async function Home() {
   const brandVideo = await getWhyBrandChoose();
   const partners = await getOurPartner();
   const featured = await getFeaturedParteners();
-  const client = await getWhatOurClientSays()
-  console.log("client", client);
+  const client = await getWhatOurClientSays();
+  const modal = await getModalVideo();
+  // console.log("modal", hero);
 
   return (
     <>
-      <Header />
+      {modal && <Header data={modal} />}
       {hero && <HeroSection data={hero} />}
       <UnderHero />
       {video && <VideoServices data={video} />}
@@ -37,7 +39,11 @@ export default async function Home() {
       {partners && <OurPartners data={partners} />}
       {featured && <FeaturedWorks data={featured} />}
       {client && <WhatOurClientsSay data={client} />}
-      <Footer />
+      {modal && <Footer data={modal}/>}
     </>
   );
 }
+
+
+
+

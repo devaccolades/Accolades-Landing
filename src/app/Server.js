@@ -101,3 +101,18 @@ export async function getWhatOurClientSays() {
     console.error("Error in fetching the data", error);
   }
 }
+
+export async function getModalVideo() {
+  try {
+    const res = await fetch(
+      `${BASE_URL}/api/modal?populate=*`
+    );
+    if (!res.ok) {
+      throw new Error("Failed to fetch modal video");
+    }
+    const json = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Error in fetching the modal video", error);
+  }
+}

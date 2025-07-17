@@ -46,7 +46,7 @@ const FeaturedWorks = ({ data }) => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <h2 className="text-[24px] md:text-[32px] lg:text-[40px] font-zen font-semibold mb-4">
+        <h2 className="text-[24px] md:text-[32px] lg:text-[40px] font-zen font-semibold mb-[10px] lg:mb-4">
           Featured <span className="text-teal-600">Works</span>
         </h2>
         <p className="font-poppins font-semibold text-[12px] md:text-[14px] leading-[156%] text-black mx-auto lg:mx-[150px] xl:mx-[250px]">
@@ -56,7 +56,7 @@ const FeaturedWorks = ({ data }) => {
 
       {/* Video Cards (animated per card) */}
       <motion.div
-        className="mt-10 ml-0 md:ml-20 mx-auto px-4"
+        className="mt-[19px] lg:mt-10 ml-0 md:ml-20 mx-auto px-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"

@@ -1,16 +1,22 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../public/logos/Accolades_logo_TM-2048x376 2.svg";
 import { motion } from "framer-motion";
+import Modal from "@/component/Modal";
 
-function Header() {
+function Header({data}) {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(true);
+  };
   return (
     <motion.header
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="sticky bg-white w-[90%] h-[51px] flex justify-between items-center px-[5px] py-[6px] mx-auto border border-[#E9E9E9]  rounded-[15px] top-[33px] z-50"
+      className="sticky bg-white w-[90%] md:w-[82%] h-[51px] flex justify-between items-center px-[5px] py-[6px] mx-auto border border-[#E9E9E9]  rounded-[15px] top-[20px] lg:top-[33px]  z-50"
       style={{
         boxShadow: `
           0px 17px 37px 0px #0000001A,
@@ -28,13 +34,13 @@ function Header() {
         width={100}
         className="object-cover h-[28px] w-[154px] md:w-[218px] md:h-[40px]"
       />
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-        className="bg-[#0C7379] text-[13px] lg:text-[14px] font-bold rounded-lg py-[6px] px-[14px] md:py-[10px] md:px-[20px] text-white transition-transform"
+      <button
+        onClick={() => setModalOpen(true)}
+        className="bg-[#0C7379] text-[13px] lg:text-[14px] font-bold rounded-lg py-[6px] px-[14px] md:py-[10px] md:px-[20px] text-white transition-transform cursor-pointer"
       >
         Contact Us
-      </motion.button>
+      </button>
+      <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} data={data} />
     </motion.header>
   );
 }

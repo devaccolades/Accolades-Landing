@@ -9,10 +9,10 @@ function WhyBrands({ data }) {
     <section className="containers py-4 grid">
       <div className="grid grid-cols-1 md:grid-cols-2">
         {/* TEXT SECTION */}
-        <div className="row-span-1 px-4">
+        <div className="row-span-1">
           {/* Top strip with arrows */}
           <motion.div
-            className="flex items-center mt-[100px]"
+            className="flex items-center lg:mt-[100px]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -37,7 +37,7 @@ function WhyBrands({ data }) {
 
           {/* Main Heading */}
           <motion.p
-            className="font-zen text-[40px] font-bold leading-[40px] mt-[10px]"
+            className="font-zen  text-[36px] leading-[32px] lg:text-[40px] font-bold lg:leading-[40px] mt-[10px]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -49,7 +49,7 @@ function WhyBrands({ data }) {
 
           {/* Paragraphs with staggered fade-in */}
           <motion.div
-            className="flex flex-col gap-[16px] mt-[15px]"
+            className="flex flex-col gap-[16px] mt-[15px] md:mr-[20px]"
             initial="hidden"
             whileInView="visible"
             variants={{
@@ -86,7 +86,7 @@ function WhyBrands({ data }) {
         </div>
 
         {/* SCROLLING VIDEO SECTION */}
-        <div className="row-span-1 h-[600px] overflow-hidden md:-mt-[10px] relative">
+        <div className="row-span-1 h-[400px] md:h-[600px] overflow-hidden mt-[20px] md:-mt-[10px] relative">
           <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white to-transparent z-10" />
           <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10" />
           <div className="flex gap-4">

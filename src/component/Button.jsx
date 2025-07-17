@@ -48,7 +48,7 @@ function Button({ content, className = "" }) {
         }}
       >
         <button
-          className={`text-[#0C7379] text-[14px] font-bold rounded-full leading-[110%] 
+          className={`text-[#0C7379] text-[12px] md:text-[13px] lg:text-[14px] font-bold rounded-full leading-[110%] 
                       transition-all duration-300 hover:text-[#0A6065] hover:shadow-inner
                       active:scale-95 active:brightness-95
                       relative overflow-hidden group ${className}`}

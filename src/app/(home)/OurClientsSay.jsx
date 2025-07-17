@@ -42,7 +42,7 @@ const WhatOurClientsSay = ({ data }) => {
       combinedTestimonials.push({ type: "text", data: textTestimonials[i] });
   }
 
-  console.log("combinedTestimonials", combinedTestimonials);
+  // console.log("combinedTestimonials", combinedTestimonials);
 
   return (
     <section className="ml-0 md:ml-20 mx-auto px-4 py-10">
@@ -100,7 +100,7 @@ const WhatOurClientsSay = ({ data }) => {
           }}
         >
           {combinedTestimonials.map((item, index) => (
-            <SwiperSlide key={item.data.id || index}>
+            <SwiperSlide key={index}>
               <motion.div variants={itemVariants}>
                 {item.type === "video" ? (
                   <div className="relative h-[400px] md:h-[480px] w-full rounded-2xl overflow-hidden shadow hover:shadow-lg transition">

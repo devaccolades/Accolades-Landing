@@ -13,9 +13,7 @@ function VideoServices({ data }) {
   const [selected, setSelected] = useState(data[0].name);
   const contents = data;
 
-  useEffect(() => {
-    console.log("selected", selected, data);
-  }, [selected]);
+
 
   // Create refs and hover states for all videos
   const videoRefs = useRef({});
@@ -46,19 +44,19 @@ function VideoServices({ data }) {
   };
 
   return (
-    <section className="containers py-10">
+    <section className="containers pb-10">
       <motion.p
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-[40px] leading-[40px] font-zen mb-6 font-bold"
+        className="text-[24px] lg:text-[40px] leading-[40px] font-zen mb-[14px] lg:mb-6 font-bold"
       >
         Our Video <span className="text-[#0C7379]">Services</span>
       </motion.p>
 
       <motion.div
-        className="flex gap-[20px] items-center overflow-x-scroll"
+        className="flex gap-[20px] items-center overflow-x-scroll scrollbar-hidden"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
@@ -159,7 +157,7 @@ function VideoServices({ data }) {
 
                       return (
                         <motion.div
-                          key={index}
+                          key={videoKey}
                           initial={{ opacity: 0, y: 30 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: index * 0.15 }}
@@ -167,13 +165,14 @@ function VideoServices({ data }) {
                           viewport={{ once: true, amount: 0.3 }}
                         >
                           <SwiperSlide
+                          key={videoKey}
                             className={` ${
                               isVertical
                                 ? "w-[255px]"
                                 : "md:!w-[734.5px] md:!h-[425px] mt-[20px]"
                             }`}
                           >
-                            <div className="flex flex-col justify-center md:items-center">
+                            <div key={videoKey} className="flex flex-col justify-center md:items-center">
                               <div
                                 className={`relative top-0 ${
                                   isVertical
@@ -185,12 +184,12 @@ function VideoServices({ data }) {
                                   className={`absolute  inset-0 overflow-hidden ${
                                     isVertical
                                       ? "rounded-[30px] mx-[10px] my-[10px]"
-                                      : "-left-[55px] h-[170px] w-[245px]  rounded-[20px] mx-[70px] my-[0px] md:w-[570px] md:h-[425px] md:left-[0px] md:inset-0"
+                                      : "-left-[68px] h-[170px] w-[245px]  rounded-[20px] mx-[70px] my-[0px] md:w-[570px] md:h-[425px] md:left-[0px] md:inset-0"
                                   } bg-black`}
                                   onMouseEnter={() =>
                                     handleMouseEnter(item.name, index)
                                   }
-                                  onMouseLeave={() =>
+                                  onMouseLeave={() => 
                                     handleMouseLeave(item.name, index)
                                   }
                                 >

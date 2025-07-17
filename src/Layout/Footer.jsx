@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Button from "@/component/Button";
 import line from "../../public/Group 1000005896.svg";
@@ -12,8 +12,21 @@ import linkedin from "../../public/social/7156610_linkedin_social_media_icon (4)
 import fb from "../../public/social/Group.svg";
 import { motion } from "framer-motion";
 import logo from "../../public/logos/Accolades_logo_TM-2048x376 2.svg";
+import Link from "next/link";
+import Modal from "@/component/Modal";
 
-const icons = [x, insta, linkedin, fb];
+const icons = [
+  { icon: x, link: "https://www.instagram.com/accolades_integrated/?hl=en" },
+  {
+    icon: insta,
+    link: "https://www.instagram.com/accolades_integrated/?hl=en",
+  },
+  {
+    icon: linkedin,
+    link: "https://www.linkedin.com/company/accoladesintegrated/posts/?feedView=all",
+  },
+  { icon: fb, link: "https://www.facebook.com/accoladesmc/" },
+];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -29,7 +42,8 @@ const staggerContainer = {
   },
 };
 
-const Footer = () => {
+const Footer = ({ data }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
   return (
     <main className="bg-[#E4F2F2] py-6 md:py-10">
       <motion.section
@@ -53,6 +67,7 @@ const Footer = () => {
             </p>
           </div>
           <Button
+            onClick={() => setModalOpen(true)}
             content="Book a call with our team"
             className="px-3 py-2 xl:py-3 xl:px-4"
           />
@@ -117,20 +132,32 @@ const Footer = () => {
             <Image src={halfLine} alt="divider" className="w-full mb-3" />
             <div className="flex gap-3">
               {icons.map((icon, index) => (
-                <div
+                <a
+                  href={icon.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={index}
-                  className="bg-[#0C7379] w-[40px] h-[30px] xl:w-[60px] xl:h-[50px] flex items-center justify-center rounded-[16px] xl:rounded-[20px]"
                 >
-                  <Image
-                    src={icon}
-                    alt={`social-${index}`}
-                    className="w-[25px] xl:w-[30px] h-auto p-1"
-                  />
-                </div>
+                  <div
+                    key={index}
+                    className="bg-[#0C7379] w-[40px] h-[30px] xl:w-[60px] xl:h-[50px] flex items-center justify-center rounded-[16px] xl:rounded-[20px]"
+                  >
+                    <Image
+                      src={icon.icon}
+                      alt={`social-${index}`}
+                      className="w-[25px] xl:w-[30px] h-auto p-1"
+                    />
+                  </div>
+                </a>
               ))}
             </div>
           </motion.div>
         </motion.div>
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => setModalOpen(false)}
+          data={data}
+        />
       </motion.section>
     </main>
   );

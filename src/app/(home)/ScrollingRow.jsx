@@ -1,19 +1,25 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../Server";
 
 const ScrollingRow = ({ direction = "up", video }) => {
+  const [shuffledVideos, setShuffledVideos] = useState([]);
 
-  function shuffleArray(array) {
-  const newArray = [...array]; // clone the original array to avoid mutating
-  for (let i = newArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-  }
-  return newArray;
-}
+  useEffect(() => {
+    function shuffleArray(array) {
+      const newArray = [...array];
+      for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+      }
+      return newArray;
+    }
 
-  console.log("that video",video)
-  const videos = shuffleArray(video);
+    if (video && video.length) {
+      setShuffledVideos(shuffleArray(video));
+    }
+  }, [video]);
+
   const animationClass =
     direction === "up" ? "animate-scroll-up" : "animate-scroll-down";
 
@@ -23,16 +29,19 @@ const ScrollingRow = ({ direction = "up", video }) => {
     animationIterationCount: "infinite",
   };
 
+  // Don't render anything on server (initial empty state)
+  if (shuffledVideos.length === 0) return null;
+
   return (
     <div className="overflow-hidden h-full">
       <div
         className={`flex flex-col gap-4 ${animationClass}`}
         style={scrollingStyle}
       >
-        {[...videos, ...videos].map((video, i) => (
+        {[...shuffledVideos, ...shuffledVideos].map((vid, i) => (
           <video
-            key={i}
-            src={BASE_URL + video.url}
+            key={vid.url + i}
+            src={BASE_URL + vid.url}
             autoPlay
             loop
             muted

@@ -7,12 +7,36 @@ import { motion } from "framer-motion";
 
 function HeroSection({ data }) {
   return (
-    <section className="bg-white text-black h-[90vh] flex justify-center items-center">
+    <section className="relative bg-white text-black h-[69vh] md:h-[80vh] lg:h-[906px] overflow-hidden flex items-center justify-center -mt-[52px]">
+      {/* Background Image in desktop*/}
+      <div
+        className="hidden lg:block absolute inset-0 bg-no-repeat bg-cover bg-center z-0 h-full"
+        style={{
+          backgroundImage: `url(${BASE_URL + data?.heroBg?.url})`,
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      {/* Background Image in tab*/}
+      <div
+        className="hidden md:block lg:hidden absolute inset-0 bg-no-repeat bg-cover bg-center z-0 h-full"
+        style={{
+          backgroundImage: `url(${BASE_URL + data?.tab?.url})`,
+        }}
+      />
+      {/* Background Image in mobile*/}
+      <div
+        className="md:hidden absolute inset-0 bg-no-repeat bg-cover bg-center z-0 h-full"
+        style={{
+          backgroundImage: `url(${BASE_URL + data?.mobile?.url})`,
+        }}
+      />
+      {/* White to Transparent Overlay at Bottom */}
+      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-white to-transparent z-10" />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="flex flex-col items-center gap-2 md:gap-4"
+        className="flex flex-col items-center gap-2 md:gap-4 z-40 md:-mt-[100px] lg:-mt-[150px]"
       >
         {data?.googleImage?.url && (
           <motion.div

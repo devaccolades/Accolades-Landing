@@ -2,18 +2,43 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import { Zen_Old_Mincho } from "next/font/google";
+import localFont from "next/font/local";
 
-const zenOldMincho = Zen_Old_Mincho({
-  variable: "--font-zen-old-mincho",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // You can include other weights if needed
-});
-
-const poppins = Poppins({
+const poppins = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Poppins-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    // Add other weights/styles as needed
+  ],
   variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
+
+const zenOldMincho = localFont({
+  src: [
+    {
+      path: "../../public/fonts/ZenOldMincho-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    // Add other weights/styles as needed
+  ],
+  variable: "--font-zen-old-mincho",
+});
+
+// const zenOldMincho = Zen_Old_Mincho({
+//   variable: "--font-zen-old-mincho",
+//   subsets: ["latin"],
+//   weight: ["400", "500", "600", "700"], // You can include other weights if needed
+// });
+
+// const poppins = Poppins({
+//   variable: "--font-poppins",
+//   subsets: ["latin"],
+//   weight: ["400", "500", "600", "700"],
+// });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

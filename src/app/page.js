@@ -39,11 +39,7 @@ export default async function Home() {
       {partners && <OurPartners data={partners} />}
       {featured && <FeaturedWorks data={featured} />}
       {client && <WhatOurClientsSay data={client} />}
-      {modal && <Footer data={modal}/>}
+      {modal && <Footer data={modal} />}
     </>
   );
 }
-
-
-
-

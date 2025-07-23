@@ -1,25 +1,34 @@
 import React from "react";
 import float from "../../../public/home/floating.gif";
 import Image from "next/image";
+import digital from "../../../public/home/Frame 1171275626.svg";
+import creative from "../../../public/home/Vector (1).svg";
+import web from "../../../public/home/Frame 1171275625.svg";
 
 const services = [
   {
     title: "Digital Marketing",
     description:
       "Get ROI through digital marketing services, drive successful online marketing campaigns with our digital marketing services.",
-    bgColor: "bg-[#E9F2F5]", // Light blue
+    bgColor: "bg-[#E5EEF0]", // Light blue
+    textColor: "text-[#2C99B1]", // Darker blue
+    icon: digital,
   },
   {
     title: "Web Development",
     description:
       "Build fast, responsive websites and web apps tailored to your business goals and user needs.",
-    bgColor: "bg-[#FDEFEF]", // Light red/pink
+    bgColor: "bg-[#FDEFEF]", // Light pink
+    textColor: "text-[#C94A4A]", // Darker red
+    icon: web,
   },
   {
     title: "Content Creation",
     description:
       "Engage your audience with high-quality content that speaks to your brand and drives results.",
-    bgColor: "bg-[#F2F9EF]", // Light green
+    bgColor: "bg-[#e1d4fa]", // Light Violet
+    textColor: "text-[#64489e]", // Dark Violet
+    icon: creative,
   },
 ];
 
@@ -61,9 +70,18 @@ const OurServices = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-[#E9F2F5] p-8 rounded-[30px] text-center pt-16 shadow-sm"
+            className={`relative p-4 rounded-[30px] text-center shadow-sm ${service.bgColor}`}
           >
-            <h3 className="text-[#0996AE] w-[50%] mx-auto leading-[100%] text-[20px] md:text-[22px] font-bold  mb-4">
+            <div className="h-[100px] w-[100px] p-5 absolute -top-[18%] left-1/2 -translate-x-1/2 rounded-full bg-white">
+              <Image
+                src={service.icon}
+                alt="icon"
+                className={`h-full w-full object-contain object-center ${service.textColor}`}
+              />
+            </div>
+            <h3
+              className={`w-[70%] mx-auto leading-[100%] text-[20px] md:text-[22px] font-bold mb-4 pt-14 ${service.textColor}`}
+            >
               {service.title}
             </h3>
             <p className="text-[#333] font-mont text-[14px] leading-[156%]">

@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import HeroSection from "./(home)/HeroSection";
+import Accolades from "./(home)/Accolades";
 
 function page() {
   return (
-    <div>
-      <h1>this is the home page</h1>
-    </div>
-  )
+    <>
+      <HeroSection />
+      <Accolades />
+    </>
+  );
 }
 
-export default page
+export default page;

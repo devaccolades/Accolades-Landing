@@ -1,0 +1,32 @@
+import React from "react";
+import Image from "next/image";
+import stack from "../../../public/home/1133de05fd2a190083088cb835978a45d95b9e4e.png";
+import bottom from "../../../public/home/bottom-line.svg";
+
+const Accolades = () => {
+  return (
+    <>
+      <section className="containers flex flex-col md:flex-row justify-between items-center gap-10">
+        <Image src={stack} alt="top-line" />
+        <div className="w-full">
+          <p className="text-[18px] font-normal">
+            Accolades, the creative hub for digital marketing in Kerala, keenly
+            takes care of your diverse internet marketing solutions for your
+            business. Our services include Graphics Designing, Content
+            Marketing, Google Ads, Meta Ads, Social Media Marketing, Web
+            Development and SEO Services. We also undertake other conventional
+            advertisements and offline event marketing too. As one of the top
+            digital marketing company in Kochi, we help you grow your business
+            by driving traffic to your website. Regardless of the business’s
+            size we can convert visitors into your potential customers. We
+            operate globally while being centralized in Kochi, Kerala and
+            regional offices at Mumbai, Bengaluru, Trivandrum and Calicut.
+          </p>
+        </div>
+      </section>
+      <Image src={bottom} alt="bottom-line" className="containers py-28" />
+    </>
+  );
+};
+
+export default Accolades;

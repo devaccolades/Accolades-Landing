@@ -5,6 +5,7 @@
   --foreground: #000000; /* black text */
   --font-family-base: var(--font-poppins);
   --font-zen: var(--font-zen-old-mincho);
+  --font-mont: var(--font-mont);
 }
 
 /* optional: keep dark mode override */
@@ -24,6 +25,10 @@ body {
 
 .font-zen {
   font-family: var(--font-zen-old-mincho), serif;
+}
+
+.font-mont {
+  font-family: var(--font-mont), serif;
 }
 
 .containers {

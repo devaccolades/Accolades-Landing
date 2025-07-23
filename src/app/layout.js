@@ -28,6 +28,19 @@ const zenOldMincho = localFont({
   variable: "--font-zen-old-mincho",
 });
 
+
+const mont = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Montserrat-Regular.woff",
+      weight: "400",
+      style: "normal",
+    },
+    // Add other weights/styles as needed
+  ],
+  variable: "--font-mont",
+});
+
 // const zenOldMincho = Zen_Old_Mincho({
 //   variable: "--font-zen-old-mincho",
 //   subsets: ["latin"],
@@ -59,7 +72,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${zenOldMincho.variable} ${geistSans.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
+        className={`${mont.variable} ${zenOldMincho.variable} ${geistSans.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>

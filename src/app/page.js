@@ -1,45 +1,11 @@
-import Header from "@/Layout/Header";
-import Image from "next/image";
-import HeroSection from "./(home)/HeroSection";
-import UnderHero from "./(home)/UnderHero";
-import VideoServices from "./(home)/VideoServices";
-import Footer from "@/Layout/Footer";
-import WhyAccolades from "./(home)/WhyAccolades";
-import OurPartners from "./(home)/OurPartners";
-import FeaturedWorks from "./(home)/FeaturedWork";
-import WhyBrands from "./(home)/WhyBrands";
-import {
-  getFeaturedParteners,
-  getHeroSection,
-  getModalVideo,
-  getOurPartner,
-  getVideoCategories,
-  getWhatOurClientSays,
-  getWhyBrandChoose,
-} from "./Server";
-import WhatOurClientsSay from "./(home)/OurClientsSay";
+import React from 'react'
 
-export default async function Home() {
-  const hero = await getHeroSection();
-  const video = await getVideoCategories();
-  const brandVideo = await getWhyBrandChoose();
-  const partners = await getOurPartner();
-  const featured = await getFeaturedParteners();
-  const client = await getWhatOurClientSays();
-  const modal = await getModalVideo();
-  // console.log("modal", hero);
-
+function page() {
   return (
-    <>
-      {modal && <Header data={modal} />}
-      {hero && <HeroSection data={hero} />}
-      <UnderHero />
-      {video && <VideoServices data={video} />}
-      {brandVideo && <WhyBrands data={brandVideo} />}
-      {partners && <OurPartners data={partners} />}
-      {featured && <FeaturedWorks data={featured} />}
-      {client && <WhatOurClientsSay data={client} />}
-      {modal && <Footer data={modal} />}
-    </>
-  );
+    <div>
+      <h1>this is the home page</h1>
+    </div>
+  )
 }
+
+export default page

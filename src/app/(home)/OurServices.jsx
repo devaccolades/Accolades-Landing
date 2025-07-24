@@ -35,7 +35,7 @@ const services = [
 const OurServices = () => {
   return (
     <>
-      <section className="containers flex flex-col md:flex-row justify-between items-center gap-10">
+      <section className="containers flex flex-col md:flex-row justify-between items-center gap-10  ">
         <div className="w-full">
           <p className="text-[14px] xl:text-[18px] font-mont font-normal">
             Accolades, the creative hub for digital marketing in Kerala, keenly
@@ -66,7 +66,7 @@ const OurServices = () => {
           </div>
         </div>
       </section>
-      <section className="containers grid grid-cols-3 gap-5 py-10">
+      <section className="containers grid grid-cols-3 gap-5 pt-20 pb-10">
         {services.map((service, index) => (
           <div
             key={index}

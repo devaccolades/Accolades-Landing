@@ -30,7 +30,11 @@ const Accolades = () => {
           </p>
         </div>
       </section>
-      <Image src={bottom} alt="bottom-line" className="containers py-28" />
+      <Image
+        src={bottom}
+        alt="bottom-line"
+        className="containers py-10 md:py-20 xl:py-28"
+      />
     </>
   );
 };

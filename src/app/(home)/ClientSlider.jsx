@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/free-mode";
 import Image from "next/image";
+import bottom from "../../../public/home/bottom-line.svg";
 
 import cl1 from "../../../public/Group 207.png";
 import cl2 from "../../../public/Group 208.png";
@@ -29,54 +30,60 @@ const logos = [
 
 const ClientSlider = () => {
   return (
-    <section className="py-10">
-      <Swiper
-        loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        freeMode={true}
-        grabCursor={true}
-        slidesPerView="auto"
-        spaceBetween={20}
-        breakpoints={{
-          320: {
-            slidesPerView: 2,
-          },
-          640: {
-            slidesPerView: 3,
-          },
-          768: {
-            slidesPerView: 4,
-          },
-          1024: {
-            slidesPerView: 5,
-          },
-          1280: {
-            slidesPerView: 6,
-          },
-        }}
-        modules={[Autoplay, FreeMode]}
-        className="w-full"
-      >
-        {logos.map((logo) => (
-          <SwiperSlide
-            key={logo.id}
-            className="flex items-center justify-center"
-          >
-            <div className="w-28 h-20 sm:w-32 sm:h-24 relative transition-transform duration-300 hover:scale-105">
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                fill
-                className="object-contain"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </section>
+    <>
+      <section className="py-10">
+        <Swiper
+          loop={true}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+          }}
+          freeMode={true}
+          grabCursor={true}
+          slidesPerView="auto"
+          spaceBetween={20}
+          speed={4000}
+          allowTouchMove={false}
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+            },
+            640: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 6,
+            },
+            1280: {
+              slidesPerView: 7,
+            },
+          }}
+          modules={[Autoplay, FreeMode]}
+          className="w-full"
+        >
+          {logos.map((logo) => (
+            <SwiperSlide
+              key={logo.id}
+              className="flex items-center justify-center"
+            >
+              <div className="w-[170px] h-[100px]  relative transition-transform duration-300 hover:scale-105">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+      <Image src={bottom} alt="bottom-line" className="containers py-20" />
+    </>
   );
 };
 

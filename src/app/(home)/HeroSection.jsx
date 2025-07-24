@@ -7,24 +7,35 @@ import topline from "../../../public/home/top-line.svg";
 const HeroSection = () => {
   return (
     <>
-      <div className="containers flex flex-col-reverse md:flex-row justify-between gap-5 pt-10  items-center">
-        <div className="w-full flex-1   flex justify-start ">
-          <div className="">
-            <h3 className="text-[36px] font-normal leading-[100%]">We are </h3>
-            <h3 className="text-[#3FB4BA] text-[76px] font-semibold leading-[100%]">
+      <div className="containers flex flex-col-reverse md:flex-row justify-between gap-6 pt-8 md:pt-14 items-center">
+        {/* Text Content */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+          <div className="text-left">
+            <h3 className="text-[28px] md:text-[32px] lg:text-[36px] font-normal leading-tight">
+              We are
+            </h3>
+            <h3 className="text-[#3FB4BA] text-[60px] lg:text-[76px] font-semibold leading-tight">
               Creatively
             </h3>
-            <h3 className="font-bold text-[86px] leading-[100%]">Different</h3>
-            <h3 className="text-[36px] font-normal leading-[100%]">
+            <h3 className="font-bold text-[72px] lg:text-[86px] leading-tight">
+              Different
+            </h3>
+            <h3 className="text-[20px]  md:text-[28px] lg:text-[36px] font-normal leading-tight mt-2">
               We take your business to new heights
             </h3>
           </div>
         </div>
-        <div className="w-full flex-1  flex justify-end ">
-          <Image src={socialgiff} alt="Social" className="w-auto h-[500px]" />
+
+        {/* Animated Image */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+          <Image src={socialgiff} alt="Social" className="h-[500px]  w-auto" />
         </div>
       </div>
-      <Image src={topline} alt="line" className="containers h-auto py-28" />
+
+      {/* Bottom Topline */}
+      <div className="containers py-10 sm:py-16 md:py-24">
+        <Image src={topline} alt="Decorative Line" className="w-full h-auto" />
+      </div>
     </>
   );
 };

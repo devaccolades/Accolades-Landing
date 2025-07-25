@@ -107,7 +107,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto my-6 flex flex-col-reverse md:flex-row items-center justify-between gap-4  px-2 relative">
+      <div className="containers py-6 flex flex-col-reverse md:flex-row items-center justify-between gap-4  px-2 relative">
         <p className="text-sm text-center md:text-left">
           © 2022-23 | All Rights Reserved
         </p>

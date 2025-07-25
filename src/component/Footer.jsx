@@ -5,6 +5,8 @@ import Image from "next/image";
 
 import logo from "../../public/accolades_logo.svg";
 import cover from "../../public/Line 1 (1).svg";
+import line from "../../public/Line 1 (3).svg";
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -14,17 +16,20 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="relative text-[#3C3C3C] pt-28 mt-14">
-      {/* Background Image */}
+    <footer className="relative text-[#3C3C3C] pt-12 md:pt-28 mt-10 md:mt-14 overflow-hidden">
+      {/* Responsive Background Images */}
+      <Image
+        src={line}
+        alt="mobile-line"
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10 block md:hidden"
+      />
       <Image
         src={cover}
-        alt="line"
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        alt="desktop-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10 hidden md:block"
       />
 
-      {/* Footer Content */}
-      <div className="containers relative flex flex-col md:flex-row md:justify-between gap-10 border-b border-gray-300 pb-10">
-        {/* Logo + Description */}
+      <div className="containers relative flex flex-col md:flex-row md:justify-between gap-10 border-b border-gray-300 pb-10 items-center">
         <div className="md:w-[28%] space-y-4 text-center md:text-left">
           <div className="flex justify-center md:justify-start h-[70px] w-auto">
             <Image
@@ -41,56 +46,55 @@ const Footer = () => {
             demand from us.
           </p>
         </div>
+        <div className="flex flex-col md:flex-row justify-center md:justify-between gap-5 md:gap-5 ">
+          <div className="md:w-[15%]">
+            <h4 className="font-semibold text-teal-700 mb-3 text-center md:text-left">
+              Explore
+            </h4>
+            <ul className="space-y-2 text-center md:text-left text-sm">
+              <li>
+                <a href="#" className="hover:text-teal-700 transition">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-teal-700 transition">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-teal-700 transition">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-teal-700 transition">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-teal-700 transition">
+                  Blogs
+                </a>
+              </li>
+            </ul>
+          </div>
 
-        {/* Explore Links */}
-        <div className="md:w-[15%]">
-          <h4 className="font-semibold text-teal-700 mb-3 text-center md:text-left">
-            Explore
-          </h4>
-          <ul className="space-y-2 text-center md:text-left text-sm">
-            <li>
-              <a href="#" className="hover:text-teal-700 transition">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-teal-700 transition">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-teal-700 transition">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-teal-700 transition">
-                Careers
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-teal-700 transition">
-                Blogs
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Branches */}
-        <div className="md:w-[15%]">
-          <h4 className="font-semibold text-teal-700 mb-3 text-center md:text-left">
-            Branches
-          </h4>
-          <ul className="space-y-2 text-center md:text-left text-sm">
-            <li>Calicut</li>
-            <li>Trivandrum</li>
-            <li>Bengaluru</li>
-            <li>Mumbai</li>
-          </ul>
+          <div className="md:w-[15%]">
+            <h4 className="font-semibold text-teal-700 mb-3 text-center md:text-left">
+              Branches
+            </h4>
+            <ul className="space-y-2 text-center md:text-left text-sm">
+              <li>Calicut</li>
+              <li>Trivandrum</li>
+              <li>Bengaluru</li>
+              <li>Mumbai</li>
+            </ul>
+          </div>
         </div>
 
         {/* Address */}
-        <div className="md:w-[30%] text-center md:text-left">
+        <div className=" md:w-[30%] text-center md:text-left">
           <h4 className="font-semibold text-teal-700 mb-3">
             Address Corporate Office
           </h4>
@@ -103,7 +107,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto mt-6 flex flex-col-reverse md:flex-row items-center justify-between gap-4 pt-4 px-2 relative">
+      <div className="max-w-7xl mx-auto my-6 flex flex-col-reverse md:flex-row items-center justify-between gap-4  px-2 relative">
         <p className="text-sm text-center md:text-left">
           © 2022-23 | All Rights Reserved
         </p>

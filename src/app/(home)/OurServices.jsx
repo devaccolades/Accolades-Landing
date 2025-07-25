@@ -66,7 +66,7 @@ const OurServices = () => {
           </div>
         </div>
       </section>
-      <section className="containers grid grid-cols-3 gap-5 pt-20 pb-10">
+      <section className="containers grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-5 pt-20 pb-10">
         {services.map((service, index) => (
           <div
             key={index}

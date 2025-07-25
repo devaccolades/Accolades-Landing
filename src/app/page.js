@@ -19,7 +19,7 @@ function page() {
       <HeroSection />
       <Accolades />
       <OurServices />
-      {/* <Count /> */}
+      <Count />
       {/* <Projects /> */}
       {/* <ProjectSlider /> */}
       {/* <OurClients /> */}

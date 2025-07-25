@@ -4,7 +4,8 @@ import React from "react";
 import Image from "next/image";
 
 import logo from "../../public/accolades_logo.svg";
-import cover from "../../public/Line 1 (1).svg";
+// import cover from "../../public/Line 1 (1).svg";
+import cover from "../../public/Line 1.png";
 import line from "../../public/Line 1 (3).svg";
 
 import {
@@ -16,20 +17,19 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="relative text-[#3C3C3C] pt-12 md:pt-28 mt-10 md:mt-14 overflow-hidden">
-      {/* Responsive Background Images */}
+    <footer className="relative text-[#3C3C3C] pt-12 md:pt-28  overflow-hidden">
       <Image
         src={line}
         alt="mobile-line"
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10 block md:hidden"
+        className="absolute top-0 left-0 w-full h-full object-cover  block md:hidden "
       />
       <Image
         src={cover}
         alt="desktop-cover"
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10 hidden md:block"
+        className="absolute top-0 left-0 w-full h-full object-cover  hidden md:block"
       />
 
-      <div className="containers relative flex flex-col md:flex-row md:justify-between gap-10 border-b border-gray-300 pb-10 items-center">
+      <div className=" containers relative flex flex-col md:flex-row md:justify-between gap-10 border-b border-gray-300 pb-10 items-center">
         <div className="md:w-[28%] space-y-4 text-center md:text-left">
           <div className="flex justify-center md:justify-start h-[70px] w-auto">
             <Image

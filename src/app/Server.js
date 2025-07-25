@@ -1,13 +1,13 @@
 // lib/server.js
 
 export const BASE_URL =
-  process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
+  process.env.NEXT_PUBLIC_STRAPI_URL || "https://strapi.video.accoladesweb.com";
 
 export async function getHeroSection() {
   const res = await fetch(`${BASE_URL}/api/hero?populate=*`);
-  if (!res.ok) {
-    throw new Error("Failed to fetch hero section");
-  }
+  // if (!res.ok) {
+  //   throw new Error("Failed to fetch hero section");
+  // }
   const json = await res.json();
   return json.data;
 }
@@ -18,9 +18,9 @@ export async function getVideoCategories() {
       `${BASE_URL}/api/video-categories?populate[0]=videos&populate[1]=videos.video&populate[2]=videos.poster`
     );
 
-    if (!res.ok) {
-      throw new Error("Failed to fetch video categories");
-    }
+    // if (!res.ok) {
+    //   throw new Error("Failed to fetch video categories");
+    // }
 
     const json = await res.json();
 
@@ -44,9 +44,9 @@ export async function getVideoCategories() {
 export async function getWhyBrandChoose() {
   try {
     const res = await fetch(`${BASE_URL}/api/why-brand?populate=*`);
-    if (!res.ok) {
-      throw new Error("error to fetch the data");
-    }
+    // if (!res.ok) {
+    //   throw new Error("error to fetch the data");
+    // }
 
     const json = await res.json();
     return json.data.brandVideos;
@@ -57,9 +57,9 @@ export async function getWhyBrandChoose() {
 export async function getOurPartner() {
   try {
     const res = await fetch(`${BASE_URL}/api/our-client?populate=*`);
-    if (!res.ok) {
-      throw new Error("error to fetch the data");
-    }
+    // if (!res.ok) {
+    //   throw new Error("error to fetch the data");
+    // }
 
     const json = await res.json();
     return json.data.clientLogo.map((item) => ({
@@ -75,9 +75,9 @@ export async function getFeaturedParteners() {
     const res = await fetch(
       `${BASE_URL}/api/featured-work?populate[0]=parterVideos&populate[1]=parterVideos.video&populate[2]=parterVideos.image`
     );
-    if (!res.ok) {
-      throw new Error("error to fetch the data");
-    }
+    // if (!res.ok) {
+    //   throw new Error("error to fetch the data");
+    // }
 
     const json = await res.json();
     return json.data;
@@ -91,9 +91,9 @@ export async function getWhatOurClientSays() {
     const res = await fetch(
       `${BASE_URL}/api/what-our-client-said?populate[0]=videoTestimonial&populate[1]=videoTestimonial.oneVideoofTest&populate[2]=videoTestimonial.onePosterImage&populate[3]=testText&populate[4]=testText.logo&populate[5]=testText.personImage`
     );
-    if (!res.ok) {
-      throw new Error("error to fetch the data");
-    }
+    // if (!res.ok) {
+    //   throw new Error("error to fetch the data");
+    // }
 
     const json = await res.json();
     return json.data;
@@ -107,9 +107,9 @@ export async function getModalVideo() {
     const res = await fetch(
       `${BASE_URL}/api/modal?populate=*`
     );
-    if (!res.ok) {
-      throw new Error("Failed to fetch modal video");
-    }
+    // if (!res.ok) {
+    //   throw new Error("Failed to fetch modal video");
+    // }
     const json = await res.json();
     return json.data;
   } catch (error) {

@@ -36,7 +36,6 @@ body {
   margin: 0 auto;
 }
 
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
@@ -44,10 +43,9 @@ body {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hidden {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
-
 
 @media (max-width: 1023px) {
   .containers {
@@ -91,7 +89,6 @@ body {
   }
 }
 
-
 @keyframes marquee-reverse {
   0% {
     transform: translateX(-50%);
@@ -109,4 +106,50 @@ body {
 .animate-marquee-reverse {
   animation: marquee-reverse 30s linear infinite;
   width: max-content;
+}
+
+.count-desktop {
+  display: block;
+}
+
+.count-mobile {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .count-desktop {
+    display: none;
+  }
+
+  .count-mobile {
+    display: block;
+  }
+
+  .count-text {
+    grid-template-columns: 1fr !important;
+  }
+
+  .count-text h2 {
+    font-size: 45px !important;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 767px) {
+  .count-text {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .count-text h2 {
+    font-size: 36px !important;
+  }
+
+  .count-text > div {
+    border: none !important;
+    border-left: 1px solid white;
+  }
+
+  .count-text > div:first-child {
+    border-left: none !important;
+  }
 }

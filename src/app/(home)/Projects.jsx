@@ -7,7 +7,7 @@ const Projects = () => {
     <section className="containers flex flex-col md:flex-row justify-between items-center gap-10 pb-10">
       <div className="relative w-full">
         <Image src={float} alt="gif" className="w-full" />
-        <div className="absolute inset-0 flex flex-col justify-center items-start pl-[15%]">
+        <div className="absolute inset-0 flex flex-col justify-center items-start md:pl-[15%]">
           <h3 className="text-[36px] text-[#3F3F3F] font-normal leading-[100%]">
             Latest Projects
           </h3>

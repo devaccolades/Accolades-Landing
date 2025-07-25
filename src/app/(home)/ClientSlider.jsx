@@ -82,7 +82,11 @@ const ClientSlider = () => {
           ))}
         </Swiper>
       </section>
-      <Image src={bottom} alt="bottom-line" className="containers py-20" />
+      <Image
+        src={bottom}
+        alt="bottom-line"
+        className="containers py-6 md:py-12 lg:py-20"
+      />
     </>
   );
 };

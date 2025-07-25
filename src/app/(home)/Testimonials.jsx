@@ -64,26 +64,27 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section>
-      <div className="text-center font-mont space-y-3">
-        <h3 className="font-normal text-[36px] text-[#3F3F3F] leading-[100%]">
+      <div className="text-center font-mont space-y-2 md:space-y-0">
+        <h3 className="font-normal text-[24px]  md:text-[32px] lg:text-[36px] text-[#3F3F3F] leading-[100%] md:leading-snug">
           What Our Customers Say
         </h3>
-        <h3 className="text-[#3FB4BA] font-semibold text-[76px] leading-[100%]">
+        <h3 className="text-[#3FB4BA] font-semibold text-[40px] md:text-[64px] lg:text-[76px] leading-[100%] md:leading-snug">
           Client
         </h3>
-        <h3 className=" font-bold text-[86px] leading-[100%] text-[#3F3F3F]">
+        <h3 className="font-bold text-[48px]  md:text-[72px] lg:text-[86px] text-[#3F3F3F] leading-[100%] md:leading-snug">
           Testimonials
         </h3>
       </div>
+
       <div className="py-10 px-4">
         <Swiper
-          modules={[Pagination, Autoplay]}
+          modules={[Autoplay]}
           spaceBetween={20}
           slidesPerView={1}
           loop={true}
-          pagination={{ clickable: true }}
+          // pagination={{ clickable: true }}
           autoplay={{
-            delay: 4000,
+            delay: 2000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -126,7 +127,11 @@ const Testimonials = () => {
           ))}
         </Swiper>
       </div>
-      <Image src={bottom} alt="bottom-line" className="containers py-20" />
+      <Image
+        src={bottom}
+        alt="bottom-line"
+        className="containers py-6 md:py-12 lg:py-20"
+      />
     </section>
   );
 };

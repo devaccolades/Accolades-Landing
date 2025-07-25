@@ -99,7 +99,11 @@ const ProjectSlider = () => {
           ))}
         </Swiper>
       </section>
-      <Image src={topline} alt="line" className="containers h-auto py-20" />
+      <Image
+        src={topline}
+        alt="line"
+        className="containers h-auto py-6 md:py-12 lg:py-20"
+      />
     </>
   );
 };

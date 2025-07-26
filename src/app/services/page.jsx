@@ -9,6 +9,7 @@ import centerR from "../../../public/services/centerR.png";
 import centerL from "../../../public/services/centerL.png";
 import Image from "next/image";
 import Navbar from "@/component/Navbar";
+import Footer from "@/Layout/Footer";
 
 function page() {
   return (
@@ -47,6 +48,7 @@ function page() {
         <Digital />
         <Creative />
         <Web />
+        <Footer />
       </section>
     </>
   );

@@ -10,11 +10,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 function VideoServices({ data }) {
-  console.log("data", data);
+  console.log("data", data[0]);
   const [selected, setSelected] = useState(data[0]);
   const contents = data;
-
-
 
   // Create refs and hover states for all videos
   const videoRefs = useRef({});
@@ -166,14 +164,17 @@ function VideoServices({ data }) {
                           viewport={{ once: true, amount: 0.3 }}
                         >
                           <SwiperSlide
-                          key={videoKey}
+                            key={videoKey}
                             className={` ${
                               isVertical
                                 ? "w-[255px]"
                                 : "md:!w-[734.5px] md:!h-[425px] mt-[20px]"
                             }`}
                           >
-                            <div key={videoKey} className="flex flex-col justify-center md:items-center">
+                            <div
+                              key={videoKey}
+                              className="flex flex-col justify-center md:items-center"
+                            >
                               <div
                                 className={`relative top-0 ${
                                   isVertical
@@ -190,7 +191,7 @@ function VideoServices({ data }) {
                                   onMouseEnter={() =>
                                     handleMouseEnter(item.name, index)
                                   }
-                                  onMouseLeave={() => 
+                                  onMouseLeave={() =>
                                     handleMouseLeave(item.name, index)
                                   }
                                 >

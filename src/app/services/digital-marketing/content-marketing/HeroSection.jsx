@@ -1,9 +1,9 @@
 import Image from "next/image";
-import heroImg from "../../../public/content-marketing/heroImg.png";
+import heroImg from "../../../../../public/content-marketing/heroImg.png";
 import { TrendingUp, DollarSign, Users } from "lucide-react";
-import icon1 from "../../../public/content-marketing/icon1.svg";
-import icon2 from "../../../public/content-marketing/icon2.svg";
-import icon3 from "../../../public/content-marketing/icon3.svg";
+import icon1 from "../../../../../public/content-marketing/icon1.svg";
+import icon2 from "../../../../../public/content-marketing/icon2.svg";
+import icon3 from "../../../../../public/content-marketing/icon3.svg";
 
 export default function HeroSection() {
   return (

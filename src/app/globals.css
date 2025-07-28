@@ -108,7 +108,6 @@ body {
   width: max-content;
 }
 
-<<<<<<< Updated upstream
 .count-desktop {
   display: block;
 }
@@ -154,16 +153,14 @@ body {
     border-left: none !important;
   }
 }
-=======
 
 .custom-scrollbar-hide::-webkit-scrollbar {
-    display: none;
-    width: 0; /* Ensures no space is taken */
-    height: 0; /* Ensures no space is taken */
+  display: none;
+  width: 0; /* Ensures no space is taken */
+  height: 0; /* Ensures no space is taken */
 }
 
 /* Hide scrollbar for Firefox */
 .custom-scrollbar-hide {
-    scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; /* Firefox */
 }
->>>>>>> Stashed changes

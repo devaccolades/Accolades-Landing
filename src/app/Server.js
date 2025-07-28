@@ -104,9 +104,7 @@ export async function getWhatOurClientSays() {
 
 export async function getModalVideo() {
   try {
-    const res = await fetch(
-      `${BASE_URL}/api/modal?populate=*`
-    );
+    const res = await fetch(`${BASE_URL}/api/modal?populate=*`);
     // if (!res.ok) {
     //   throw new Error("Failed to fetch modal video");
     // }

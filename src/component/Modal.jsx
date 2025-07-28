@@ -62,10 +62,10 @@ export default function Modal({ isOpen, onClose, data }) {
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-lg shadow-xl max-w-2xl w-full  h-[50vh] grid grid-cols-10"
+        className="bg-white rounded-lg shadow-xl max-w-2xl w-[80%] md:w-full  h-[50vh] grid grid-rows-2 md:grid-rows-1 grid-cols-5 md:grid-cols-10 "
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="col-span-4 overflow-hidden">
+        <div className="col-span-5 md:col-span-4 overflow-hidden">
           <video
             src={BASE_URL + data.modalVideo.url}
             className="w-full h-full object-cover rounded-lg mb-4"
@@ -74,7 +74,7 @@ export default function Modal({ isOpen, onClose, data }) {
             poster={BASE_URL + data.poster.url}
           ></video>
         </div>
-        <div className="col-span-6">
+        <div className="col-span-5 md:col-span-6">
           <form
             onSubmit={handleSubmit}
             className="bg-white p-6 rounded-lg  max-w-md w-full space-y-4 "

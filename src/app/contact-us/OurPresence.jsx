@@ -14,7 +14,7 @@ export default function OurPresence() {
             </section>
             <section className='container mx-auto px-4 py-8 my-10'>
 
-                <div className='flex flex-wrap justify-between gap-4 text-[28px]'>
+                <div className='flex flex-wrap justify-between gap-4 text-[18px] md:text-[28px]'>
                     <button className='bg-white text-[#3FB4BA] font-semibold py-3 px-10 rounded-xl shadow-sm hover:bg-gray-100 transition-colors duration-300'>
                         Kochi (HQ)
                     </button>

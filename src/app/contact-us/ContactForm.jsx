@@ -7,8 +7,8 @@ export default function ContactForm() {
             <div className='flex flex-col md:flex-row gap-8 items-center md:items-start'>
                 {/* Left Side: Illustration */}
                 {/* This div dictates the image width and holds the next/image component */}
-                <div className='bg-[#E0F2F4] rounded-xl overflow-hidden flex justify-center items-center p-4
-                            flex-shrink-0 w-full md:w-auto md:max-w-[350px]'> {/* Adjust max-w-[450px] as needed */}
+                <div className='bg-[#E0F2F4] rounded-xl overflow-hidden justify-center items-center p-4
+                            flex-shrink-0 hidden md:flex w-full md:w-auto md:max-w-[350px]'> {/* Adjust max-w-[450px] as needed */}
                     <Image
                         src="/contact-us/contact.png" // Path relative to the 'public' directory
                         alt="Contact Illustration"
@@ -21,8 +21,8 @@ export default function ContactForm() {
                 </div>
 
                 {/* Right Side: Form Fields - flex-1 takes remaining space */}
-                <div className='flex-1 p-4'>
-                    <form className='grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4'>
+                <div className='flex-1'>
+                    <form className='grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 bg-[#D9EBED] p-4 rounded-md'>
                         {/* First Name */}
                         <div>
                             <label htmlFor='firstName' className='block text-gray-700 font-semibold mb-2'>
@@ -33,7 +33,7 @@ export default function ContactForm() {
                                 id='firstName'
                                 name='firstName'
                                 placeholder='Enter First Name'
-                                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200'
+                                className='w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200'
                             />
                         </div>
 
@@ -47,7 +47,7 @@ export default function ContactForm() {
                                 id='lastName'
                                 name='lastName'
                                 placeholder='Enter Last Name'
-                                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200'
+                                className='w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200'
                             />
                         </div>
 
@@ -61,7 +61,7 @@ export default function ContactForm() {
                                 id='email'
                                 name='email'
                                 placeholder='Enter Your Email'
-                                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200'
+                                className='w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200'
                             />
                         </div>
 
@@ -75,7 +75,7 @@ export default function ContactForm() {
                                 id='phone'
                                 name='phone'
                                 placeholder='Enter Your Phone'
-                                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200'
+                                className='w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200'
                             />
                         </div>
 
@@ -89,7 +89,7 @@ export default function ContactForm() {
                                 name='message'
                                 rows='5'
                                 placeholder='Enter Your Message'
-                                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y transition-all duration-200'
+                                className='w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y transition-all duration-200'
                             ></textarea>
                         </div>
 

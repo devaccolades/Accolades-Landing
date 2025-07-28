@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // Import chevron icons
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function HeroSection() {
   const tagRows = [
@@ -73,7 +73,7 @@ export default function HeroSection() {
   return (
     <div className="lg:py-10 py-6 ">
       <div className="bg-white containers rounded-[30px] py-6">
-        <h1 className="text-[#3FB4BA] font-mont font-bold xl:text-[70px] lg:text-[50px] md:text-[40px] text-[30px] leading-[130%] text-center text-center mb-2">
+        <h1 className="text-[#3FB4BA] font-mont font-bold xl:text-[70px] lg:text-[50px] md:text-[40px] text-[30px] leading-[130%] text-center mb-2">
           Blog
         </h1>
         <p className="font-poppins font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-black w-[86%] mx-auto">

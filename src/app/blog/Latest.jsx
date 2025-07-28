@@ -2,16 +2,16 @@
 
 import { Clock, MapPin, ArrowRight, ArrowLeft } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react"; // Import useState
-import img8 from "../../../public/about-us/img8.png";
-import img9 from "../../../public/about-us/img9.png";
-import img10 from "../../../public/about-us/img10.png";
-import img11 from "../../../public/about-us/img11.png";
-import img12 from "../../../public/about-us/img12.png";
-import img13 from "../../../public/about-us/img13.png";
-import img14 from "../../../public/about-us/img14.png";
-import img15 from "../../../public/about-us/img15.png";
-import img16 from "../../../public/about-us/img16.png";
+import { useState } from "react";
+import img8 from "../../../public/blog/img8.png";
+import img9 from "../../../public/blog/img9.png";
+import img10 from "../../../public/blog/img10.png";
+import img11 from "../../../public/blog/img11.png";
+import img12 from "../../../public/blog/img12.png";
+import img13 from "../../../public/blog/img13.png";
+import img14 from "../../../public/blog/img14.png";
+import img15 from "../../../public/blog/img15.png";
+import img16 from "../../../public/blog/img16.png";
 
 const BlogCardsGrid = () => {
   const blogPosts = [

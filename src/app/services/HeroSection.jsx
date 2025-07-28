@@ -2,7 +2,7 @@ import React from "react";
 
 function HeroSection() {
   return (
-    <section className="h-[60vh] w-full ">
+    <section className="h-[60vh] w-full pt-12">
       <div className="flex flex-col items-center justify-center bg-white w-[90%] mx-auto p-4 rounded-2xl relative z-10">
         <h1 className="font-monst text-[32px] md:text-[86px] font-bold leading-[130%] text-[#3FB4BA]">
           Services

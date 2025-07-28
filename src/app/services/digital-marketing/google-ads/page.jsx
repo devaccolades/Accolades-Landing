@@ -2,7 +2,7 @@ import Footer from "@/component/Footer";
 import Navbar from "@/component/Navbar";
 import React from "react";
 import HeroSection from "./HeroSection";
-import Types from "./types";
+// import Types from "./types";
 import Cards from "./Cards";
 
 const page = () => {

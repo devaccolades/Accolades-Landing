@@ -12,8 +12,10 @@ const Details = () => {
           We are experienced professionals, who sketch out efficient Social
           Media Marketing strategy and Packages to help you.
         </p>
-        <Image src={data} alt="cover" className="hidden md:block " />
-        <Image src={mobile} alt="cover" className=" md:hidden " />
+        <div className="flex justify-center items-center">
+          <Image src={data} alt="cover" className="hidden md:block " />
+          <Image src={mobile} alt="cover" className=" md:hidden " />
+        </div>
         <div className="pt-5 block md:hidden space-y-2">
           <p className="bg-[#F2FBFB] border border-[#BFE1DE] rounded-[20px] text-center text-[13px] p-2">
             Boost your sales and leads

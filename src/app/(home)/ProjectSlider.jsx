@@ -72,11 +72,11 @@ const ProjectSlider = () => {
                   className={`
     relative w-full flex items-center justify-center 
     transition-all duration-700 ease-out rounded-lg 
-    overflow-hidden transform-gpu bg-white
+    overflow-hidden transform-gpu bg-transparent
     ${
       isActive
-        ? "blur-none scale-90 sm:scale-110 z-10 "
-        : "blur-[1px] sm:blur-sm scale-95 sm:scale-90 z-0 shadow-md"
+        ? "blur-none scale-90 lg:scale-105 z-10 "
+        : "blur-[1px] sm:blur-sm scale-80 lg:scale-90 z-0 shadow-md"
     }
   `}
                   style={{

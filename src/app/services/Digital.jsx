@@ -1,18 +1,24 @@
 import Image from "next/image";
 import React from "react";
 import image1 from "../../../public/services/digital.png";
+import digital from "../../../public/services/digitals.png";
+
 
 function Digital() {
   return (
     <seciton className="flex justify-center overflow-visible relative z-10 mx-auto w-[90%]">
       <div className="flex gap-[10px] w-full ">
-        <div className="w-[1%] md:w-[10%] lg:w-[15%] ">
-          <p className=" text-[#3FB4BA] m-0 text-[25px] md:text-[40px] lg:text-[91px] font-bold font-mont w-fit transform -rotate-[90deg] h-fit sticky top-50 mt-32">
-            Digital
-          </p>
+        <div className="w-[10%] md:w-[10%] lg:w-[15%] ">
+          <Image
+            src={digital}
+            alt="digital"
+            height={100}
+            width={100}
+            className="w-fit h-fit sticky top-50 mt-0"
+          />
         </div>
         <div className="w-full flex flex-col gap-10 md:gap-[100px] lg:gap-[130px] bg-white/60 p-5 rounded-xl">
-          <p className="font-mont text-[32px]  md:text-[50px] lg:text-[76px]  font-semibold leading-[110%] text-center text-[#3FB4BA]">
+          <p className="font-mont text-[32px]  md:text-[50px] lg:text-[76px]  font-semibold leading-[110%] text-center text-[#3FB4BA] mt-[35px]">
             Digital Marketing
           </p>
           <div className="flex flex-col md:flex-row justify-around items-center gap-4 mt-[34px] md:mt-[20px] ">

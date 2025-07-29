@@ -13,14 +13,13 @@ import family from "../../../public/home/family.png";
 import niahara from "../../../public/home/nihara.png";
 import silk from "../../../public/home/silk_galeria.png";
 
-const images = [
+const fallbackImages = [
   { id: 1, src: alappat, alt: "Alappat" },
   { id: 2, src: family, alt: "Family" },
   { id: 3, src: niahara, alt: "Niahara" },
   { id: 4, src: silk, alt: "Silk Galeria" },
 ];
-
-const ProjectSlider = () => {
+const ProjectSlider = ({ images = fallbackImages }) => {
   return (
     <>
       <section className=" py-6 sm:py-8 md:py-10 overflow-hidden relative">
@@ -87,7 +86,7 @@ const ProjectSlider = () => {
                 >
                   <Image
                     src={item.src}
-                    alt={item.alt}
+                    alt={item.id}
                     width={400} // Or use container width
                     height={300} // Adjust as needed or based on image size
                     className="object-contain w-full h-full"

@@ -9,17 +9,17 @@ const cards = [
   {
     title: "Branding & Packaging",
     image: brand,
-    bgColor: "bg-[#26C5D9]",
+    
   },
   {
     title: "Graphics & Motion",
     image: motion,
-    bgColor: "bg-[#EF3E3E]",
+    
   },
   {
     title: "Video Production",
     image: video,
-    bgColor: "bg-[#62C5F8]",
+    
   },
 ];
 

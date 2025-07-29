@@ -58,14 +58,14 @@ export default function Modal({ isOpen, onClose, data }) {
 
   return (
     <div
-      className="fixed inset-0 bg-black/50 bg-opacity-50 flex items-center justify-center z-50 "
+      className="fixed inset-0 bg-black/50 bg-opacity-50 flex md:items-center justify-center z-50 "
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-lg shadow-xl max-w-2xl w-[80%] md:w-full  h-[50vh] grid grid-rows-2 md:grid-rows-1 grid-cols-5 md:grid-cols-10 "
+        className="bg-white rounded-lg shadow-xl w-[80%] max-w-[442px] md:max-w-[900px] md:w-full h-[50vh] grid grid-rows-2 md:grid-rows-1 grid-cols-5 md:grid-cols-12 mt-8"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="col-span-5 md:col-span-4 overflow-hidden">
+        <div className="col-span-5 md:col-span-6 overflow-hidden h-[170px] md:h-[404px]">
           <video
             src={BASE_URL + data.modalVideo.url}
             className="w-full h-full object-cover rounded-lg mb-4"

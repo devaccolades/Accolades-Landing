@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 
 function VideoServices({ data }) {
   console.log("data", data[0]);
-  const [selected, setSelected] = useState(data[0]);
+  const [selected, setSelected] = useState(data[0].name);
   const contents = data;
 
   // Create refs and hover states for all videos

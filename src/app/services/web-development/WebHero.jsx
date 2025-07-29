@@ -36,7 +36,7 @@ export default function WebHero() {
             <h2 className="text-[20px] lg:text-[24px] leading-[130%] font-bold font-mont text-[#1eb2a6] mb-2">
               Web Development
             </h2>
-            <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[130%]">
+            <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%]">
               Accolades is envisioned to cater the newest and finest web development
               solutions to businesses in Kerala. We perceive the worth of your
               investments, which is why our professional web development team is

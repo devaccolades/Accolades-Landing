@@ -13,6 +13,8 @@ const slider1 = [
   { id: 2, src: alappat, alt: "Family" },
   { id: 3, src: alappat, alt: "Niahara" },
   { id: 4, src: alappat, alt: "Silk Galeria" },
+  { id: 4, src: alappat, alt: "Silk Galeria" },
+  { id: 4, src: alappat, alt: "Silk Galeria" },
   { id: 5, src: alappat, alt: "Silk Galeria" },
 ];
 
@@ -22,9 +24,13 @@ const slider2 = [
   { id: 3, src: family, alt: "Niahara" },
   { id: 4, src: family, alt: "Silk Galeria" },
   { id: 5, src: family, alt: "Silk Galeria" },
+  { id: 5, src: family, alt: "Silk Galeria" },
+  { id: 5, src: family, alt: "Silk Galeria" },
 ];
 const slider3 = [
   { id: 1, src: niahara, alt: "Alappat" },
+  { id: 2, src: niahara, alt: "Family" },
+  { id: 2, src: niahara, alt: "Family" },
   { id: 2, src: niahara, alt: "Family" },
   { id: 3, src: niahara, alt: "Niahara" },
   { id: 4, src: silk, alt: "Silk Galeria" },

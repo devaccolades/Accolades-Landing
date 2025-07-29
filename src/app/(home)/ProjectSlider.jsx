@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -18,17 +18,25 @@ const fallbackImages = [
   { id: 2, src: family, alt: "Family" },
   { id: 3, src: niahara, alt: "Niahara" },
   { id: 4, src: silk, alt: "Silk Galeria" },
+  { id: 4, src: silk, alt: "Silk Galeria" },
+  { id: 4, src: silk, alt: "Silk Galeria" },
+  { id: 4, src: silk, alt: "Silk Galeria" },
 ];
 const ProjectSlider = ({ images = fallbackImages }) => {
+  const sliderKey = useMemo(() => {
+    return images.map((img) => img.id).join("-");
+  }, [images]);
+
   return (
     <>
-      <section className=" py-6 sm:py-8 md:py-10 overflow-hidden relative">
+      <section className=" py-6  md:py-10 overflow-hidden relative">
         <Swiper
+          key={sliderKey}
           centeredSlides
           loop={true}
           grabCursor
           autoplay={{
-            delay: 3000,
+            delay: 500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
@@ -98,11 +106,11 @@ const ProjectSlider = ({ images = fallbackImages }) => {
           ))}
         </Swiper>
       </section>
-      <Image
+      {/* <Image
         src={topline}
         alt="line"
         className="containers h-auto py-6 md:py-12 lg:py-20"
-      />
+      /> */}
     </>
   );
 };

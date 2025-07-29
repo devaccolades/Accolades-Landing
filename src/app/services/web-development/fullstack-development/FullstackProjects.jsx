@@ -46,7 +46,7 @@ const projects = [
   },
 ];
 
-export default function WordProjects() {
+export default function FullstackProjects() {
   return (
    
     // <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg::px-20">

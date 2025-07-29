@@ -1,15 +1,20 @@
 import React from "react";
 import image1 from "../../../public/services/digital.png";
 import Image from "next/image";
+import web from "../../../public/services/web.png";
 
 function Web() {
   return (
-    <seciton className="w-full flex justify-end overflow-visible mt-24 mb:mt-96 relative z-10 mb-24">
+    <seciton className="w-[90%] mx-auto flex justify-end overflow-visible mt-24 md:mt-96 relative z-10 mb-24">
       <div className="flex gap-[10px] w-full ">
-        <div className="w-[1%] md:w-[10%] lg:w-[15%]">
-          <p className=" text-[#3FB4BA] m-0 text-[25px] md:text-[40px] lg:text-[91px] font-bold font-mont w-fit transform -rotate-[90deg] h-fit sticky top-50 mb-32">
-            WEB
-          </p>
+        <div className="w-[10%] md:w-[10%] lg:w-[15%]">
+          <Image
+            src={web}
+            alt="web "
+            height={100}
+            width={100}
+            className="w-fit h-fit sticky top-50 mt-0"
+          />
         </div>
         <div className="w-full flex flex-col gap-10 md:gap-[100px] lg:gap-[130px]  p-5 rounded-xl">
           <div className="flex flex-col md:flex-row-reverse justify-around items-center gap-4 mt-[34px] md:mt-[20px] ">

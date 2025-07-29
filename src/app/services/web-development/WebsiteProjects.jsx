@@ -48,13 +48,14 @@ const projects = [
 
 export default function WebsiteProjects() {
   return (
-    // <div className="min-h-screen py-12 px-4 md:px-20">
-    <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg::px-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-white rounded-2xl shadow p-4 md:p-8">
+   
+    // <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg::px-20">
+     <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 ">
+      <div className="">
+        <div className="bg-white rounded-2xl shadow p-4 md:p-8 mx-3 md:mx-10 lg:mx-22 xl:mx-28">
 
-          <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-4">Web Projects</h2>
-          <p className="text-gray-700 font-mont text-[14px] leading-relaxed">
+          <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 ">Web Projects</h2>
+          <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
             Accolades is envisioned to cater the newest and finest web development
             solutions to businesses in Kerala. We perceive the worth of your
             investments, which is why our professional web development team is
@@ -62,7 +63,7 @@ export default function WebsiteProjects() {
           </p>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 ml-3 md:ml-10 lg:ml-22 xl:ml-28">
           <Swiper
             modules={[Navigation, Pagination]}
             // spaceBetween={1}

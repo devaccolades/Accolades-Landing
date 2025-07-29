@@ -1,23 +1,26 @@
-import Footer from '@/component/Footer'
-import Navbar from '@/component/Navbar'
-import React from 'react'
-import Herosection from '../../digital-marketing/performance-marketing/Herosection'
+import Footer from "@/component/Footer";
+import Navbar from "@/component/Navbar";
+import React from "react";
+import HeroSection from "./HeroSection";
+import WhatWeOffer from "./WhatWeOffer";
+import Tools from "../Tools";
+import Featured from "./Featured";
 
-const heroData = {
-  main_title: "Branding & Packaging",
-  title: "Build a Brand That Commands Attention",
-  subtitle: "From logo to label, we craft cohesive brand identities that turn first impressions into lasting connections.",
-  button_text: "Get a Creative Proposal",
-  image: "/creative/branding/hero.webp",
-};
 const page = () => {
   return (
     <>
-      <Navbar />
-      <Herosection {...heroData}/>
-      <Footer />
+      <main className="bg-[#F1F1F1] ">
+        <Navbar />
+        <HeroSection />
+        <WhatWeOffer />
+        <Featured />
+        <Tools />
+      </main>
+      <main className="-mt-[65px]">
+        <Footer />
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;

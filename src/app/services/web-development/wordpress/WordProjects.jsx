@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import classic from "../../../../public/web/classic.png";
-import jugal from "../../../../public/web/jugal.png";
+import classic from "../../../../../public/web/classic.png";
+import jugal from "../../../../../public/web/jugal.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -46,10 +46,10 @@ const projects = [
   },
 ];
 
-export default function WebsiteProjects() {
+export default function WordProjects() {
   return (
     // <div className="min-h-screen py-12 px-4 md:px-20">
-    <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg::px-20">
+    <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="bg-white rounded-2xl shadow p-4 md:p-8">
 

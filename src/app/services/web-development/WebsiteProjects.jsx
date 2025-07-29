@@ -49,29 +49,39 @@ const projects = [
 export default function WebsiteFeatures() {
   return (
     // <div className="min-h-screen py-12 px-4 md:px-20">
-       <div className=" min-h-screen py-12 px-4 md:px-20">
+    <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg::px-20">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-white rounded-2xl shadow p-8">
+        <div className="bg-white rounded-2xl shadow p-4 md:p-8">
 
-            <h2 className="text-2xl font-bold font-mont text-[#1eb2a6] mb-4">Web Projects</h2>
-            <p className="text-gray-700 font-mont text-sm leading-relaxed">
-              Accolades is envisioned to cater the newest and finest web development
-              solutions to businesses in Kerala. We perceive the worth of your
-              investments, which is why our professional web development team is
-             
-            </p>
-          </div>
+          <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-4">Web Projects</h2>
+          <p className="text-gray-700 font-mont text-[14px] leading-relaxed">
+            Accolades is envisioned to cater the newest and finest web development
+            solutions to businesses in Kerala. We perceive the worth of your
+            investments, which is why our professional web development team is
 
-         <div className="mt-10">
+          </p>
+        </div>
+
+        <div className="mt-10">
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={30}
+            // spaceBetween={1}
             slidesPerView={1}
             // navigation
             // pagination={{ clickable: true }}
             breakpoints={{
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              320: {
+                slidesPerView: 1.2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 1.5,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 2.3,
+                spaceBetween: 50,
+              },
             }}
           >
             {projects.map((project, index) => (
@@ -94,6 +104,8 @@ export default function WebsiteFeatures() {
           </Swiper>
         </div>
       </div>
+
+      <div className="absolute bottom--1 left-0 w-full h-14 md:h-34 bg-gradient-to-t from-[#3FB4BA]/80 to-[#f1f5f5] pointer-events-none rounded-b-2xl" />
     </div>
   );
 }

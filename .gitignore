@@ -20,9 +20,9 @@ yarn-debug.log*
 yarn-error.log*
 node_modules/
 
-# yarn.lock
-# .yarn/*
-# !.yarn/releases
-# !.yarn/plugins
-# !.yarn/sdks
-# !.yarn/versions
+yarn.lock
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions

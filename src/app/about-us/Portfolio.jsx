@@ -26,7 +26,9 @@ export default function Portfolio() {
         <h1 className="text-center font-mont font-semibold xl:text-[56px] lg:text-[46px] md:text-[36px] text-[26px] leading-[110%] md:w-[60%] lg:w-[65%] xl:w-[55%] mx-auto">
           <span className="text-[#3FB4BA]">Innovative Inventions </span>With Quality
         </h1>
-        <Image src={Invention} alt="invention-img" className="ml-4 md:ml-16 lg:ml-22 py-6 mx-auto w-full" />
+        <div className="flex ">
+        <Image src={Invention} alt="invention-img" className=" py-6 mx-auto h-full w-auto" />
+        </div>
 
         <div className="flex flex-col md:grid md:grid-cols-1 lg:grid-cols-2 md:gap-8 mb-6">
           <div className="flex md:hidden lg:hidden flex-col justify-center items-center text-center mb-6">

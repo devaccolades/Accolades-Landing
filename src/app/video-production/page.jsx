@@ -2,6 +2,7 @@ import FeaturedWork from "./FeaturedWork";
 import HeroSection from "./HeroSection";
 import Tech from "./Equipment";
 import VideoTypesSection from "./VideoTypesSection";
+import Process from "./Process";
 
 export default function page() {
   return (
@@ -10,6 +11,7 @@ export default function page() {
       <HeroSection />
       <VideoTypesSection />
       <FeaturedWork />
+      <Process />
       <Tech />
     </div>
     </>

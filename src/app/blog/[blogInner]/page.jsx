@@ -7,9 +7,13 @@ export default function page() {
   return (
     <>
       <Navbar />
+      <main className="bg-[#F1F1F1]">
       <HeroSection />
       <BlogPost />
+      </main>
+      <main className="-mt-[65px]">
       <Footer />
+      </main>
     </>
   )
 }

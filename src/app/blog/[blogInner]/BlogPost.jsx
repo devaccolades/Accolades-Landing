@@ -59,14 +59,14 @@ export default function BlogPost() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 pb-20">
       <div className="containers py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 md:gap-6 gap-4 ">
           {/* Main Content */}
           <div className="lg:col-span-2">
             <article className="bg-white rounded-2xl shadow-lg overflow-hidden">
               {/* Header */}
-              <div className="px-8 pt-8">
+              <div className="md:px-8 px-4 pt-8">
                 <span className="font-mont p-2 font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[120%] text-[#7B7B7B] rounded-[30px] border-2 border-[#F1F1F1]">
                   DIGITAL MARKETING
                 </span>
@@ -83,7 +83,7 @@ export default function BlogPost() {
               </div>
 
               {/* Content */}
-              <div className="px-8 pb-6">
+              <div className="md:px-8 px-4 pb-6">
                 <div className="prose prose-lg max-w-none">
                   <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#000000] mb-6">
                     Social media agencies are an integral part of forming

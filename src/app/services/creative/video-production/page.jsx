@@ -3,17 +3,23 @@ import HeroSection from "./HeroSection";
 import Tech from "./Equipment";
 import VideoTypesSection from "./VideoTypesSection";
 import Process from "./Process";
+import Navbar from "@/component/Navbar";
+import Footer from "@/component/Footer";
 
 export default function page() {
   return (
     <>
-    <div className="bg-gradient-to-br from-white to-[#e6f4f9]">
+    <Navbar />
+    <main className="bg-[#F1F1F1]">
       <HeroSection />
       <VideoTypesSection />
       <FeaturedWork />
       <Process />
       <Tech />
-    </div>
+    </main>
+    <main className="-mt-[65px]">
+    <Footer />
+    </main>
     </>
   )
 }

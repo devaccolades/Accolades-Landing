@@ -70,7 +70,7 @@ const ProjectSlider = ({ images = fallbackImages }) => {
             },
           }}
           modules={[Autoplay]}
-          className="w-full !overflow-visible pt-10 md:pt-24"
+          className="w-full !overflow-visible pt-10 md:pt-24 "
         >
           {images.map((item, index) => (
             <SwiperSlide key={index} className="!overflow-visible">

@@ -7,7 +7,7 @@ import Hero from "../../../../public/web/banner.png";
 
 export default function WebHero() {
   return (
-    <div className="py-6 md:py-12 px-4 md:px-10 lg:px-20">
+    <div className="pt-20 pb-8 px-4 md:px-10 lg:px-20">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="bg-white rounded-[30px] py-6 px-4">

@@ -149,7 +149,7 @@ const ReachUs = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your Email"
-                  className="w-full rounded-full border border-gray-300 px-3 py-3 outline-none"
+                  className="w-full rounded-full font-mont border border-gray-300 px-3 py-3 outline-none"
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -163,7 +163,7 @@ const ReachUs = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
-                  className="w-full rounded-full border border-gray-300 px-3 py-3 outline-none"
+                  className="w-full rounded-full font-mont border border-gray-300 px-3 py-3 outline-none"
                 />
                 {errors.name && (
                   <p className="text-red-500 text-sm mt-1">{errors.name}</p>
@@ -172,7 +172,7 @@ const ReachUs = () => {
 
               <button
                 type="submit"
-                className="bg-white text-[#17AABF] font-medium rounded-full px-10 py-3 mt-2 hover:bg-gray-100 transition"
+                className="bg-white text-[#17AABF] font-mont font-medium rounded-full px-10 py-3 mt-2 hover:bg-gray-100 transition"
                 disabled={loading}
               >
                 {loading ? "Loading..." : "Submit"}

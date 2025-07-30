@@ -8,10 +8,19 @@ import { motion } from "framer-motion"; // ✅ Import motion
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+// Video imports
+// import feVid from "../../../public/videos/featuredWorks/fe1.mp4";
+// import feVid2 from "../../../public/videos/featuredWorks/fe2.mp4";
+// import feVid3 from "../../../public/videos/featuredWorks/fe3.mp4";
+
+// image import
+import feI1 from "../../../public/videos/featuredWorks/feI1.png";
+import feI2 from "../../../public/videos/featuredWorks/feI2.png";
+import feI3 from "../../../public/videos/featuredWorks/feI3.png";
 
 // Images
 import play from "../../../public/images/play-circle.svg";
-import { BASE_URL } from "../Server";
+import { BASE_URL, getVideoCategories } from "../Server";
 
 const containerVariants = {
   hidden: {},
@@ -32,8 +41,29 @@ const cardVariants = {
   },
 };
 
+const featuredWorks = [
+  {
+    client: "PRISM Trading",
+    getVideoCategories: "Testimonial Video",
+    image: feI1,
+    video: "/videos/featuredWorks/fe1.mp4",
+  },
+  {
+    client: "Sky Line",
+    getVideoCategories: "Testimonial Video",
+    image: feI2,
+    video: "/videos/featuredWorks/fe2.mp4",
+  },
+  {
+    client: "National Builders",
+    getVideoCategories: "Testimonial Video",
+    image: feI3,
+    video: "/videos/featuredWorks/fe3.mp4",
+  },
+];
+
 const FeaturedWorks = ({ data }) => {
-  const works = data.parterVideos;
+  const works = featuredWorks;
   const [playingIndex, setPlayingIndex] = useState(null);
 
   return (
@@ -83,7 +113,7 @@ const FeaturedWorks = ({ data }) => {
                 {playingIndex === index ? (
                   <>
                     <video
-                      src={BASE_URL + work.video.url}
+                      src={work.video}
                       autoPlay
                       playsInline
                       controls
@@ -95,14 +125,14 @@ const FeaturedWorks = ({ data }) => {
                     <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/0 to-transparent pointer-events-none" />
                     <div className="absolute bottom-4 left-4 text-white z-10">
                       <p className="font-medium">{work.client}</p>
-                      <p className="text-sm">{work.type}</p>
+                      <p className="text-sm">{work.getVideoCategories}</p>
                     </div>
                   </>
                 ) : (
                   <>
                     <Image
-                      src={BASE_URL + work.image.url}
-                      alt={work.image.id}
+                      src={work.image}
+                      alt={work.image.id || work.image}
                       fill
                       className="object-cover"
                     />
@@ -116,8 +146,8 @@ const FeaturedWorks = ({ data }) => {
                       />
                     </div>
                     <div className="absolute bottom-4 left-4 text-white z-10">
-                      <p className="font-medium">{work.clientName}</p>
-                      <p className="text-sm">{work.videoType}</p>
+                      <p className="font-medium">{work.client}</p>
+                      <p className="text-sm">{work.getVideoCategories}</p>
                     </div>
                   </>
                 )}

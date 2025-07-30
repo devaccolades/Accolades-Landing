@@ -1,7 +1,64 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image"; // Import the Image component from next/image
 
 export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+    consent: false,
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [responseMsg, setResponseMsg] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.consent) {
+      setResponseMsg("Please agree to the Terms and Privacy Policy.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const res = await fetch("/api/send-contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      setResponseMsg(data.message);
+      if (data.success) {
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+          consent: false,
+        });
+      }
+    } catch (err) {
+      setResponseMsg("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <section className="container mx-auto px-4 py-8 bg-white rounded-2xl shadow-xl my-10">
       <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
@@ -26,98 +83,97 @@ export default function ContactForm() {
 
         {/* Right Side: Form Fields - flex-1 takes remaining space */}
         <div className="flex-1">
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 bg-[#D9EBED] p-4 rounded-md">
-            {/* First Name */}
+           <form
+            className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 bg-[#D9EBED] p-4 rounded-md"
+            onSubmit={handleSubmit}
+          >
             <div>
-              <label
-                htmlFor="firstName"
-                className="block text-gray-700 font-semibold mb-2"
-              >
+              <label htmlFor="firstName" className="block text-gray-700 font-semibold mb-2">
                 First Name
               </label>
               <input
                 type="text"
                 id="firstName"
                 name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
                 placeholder="Enter First Name"
-                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200"
+                required
+                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
-            {/* Last Name */}
             <div>
-              <label
-                htmlFor="lastName"
-                className="block text-gray-700 font-semibold mb-2"
-              >
+              <label htmlFor="lastName" className="block text-gray-700 font-semibold mb-2">
                 Last Name
               </label>
               <input
                 type="text"
                 id="lastName"
                 name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
                 placeholder="Enter Last Name"
-                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200"
+                required
+                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
-            {/* Email */}
             <div>
-              <label
-                htmlFor="email"
-                className="block text-gray-700 font-semibold mb-2"
-              >
+              <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
                 Email
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Enter Your Email"
-                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200"
+                required
+                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
-            {/* Phone */}
             <div>
-              <label
-                htmlFor="phone"
-                className="block text-gray-700 font-semibold mb-2"
-              >
+              <label htmlFor="phone" className="block text-gray-700 font-semibold mb-2">
                 Phone
               </label>
               <input
                 type="tel"
                 id="phone"
                 name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 placeholder="Enter Your Phone"
-                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all duration-200"
+                required
+                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
-            {/* Message */}
             <div className="md:col-span-2">
-              <label
-                htmlFor="message"
-                className="block text-gray-700 font-semibold mb-2"
-              >
+              <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
                 Message
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows="5"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Enter Your Message"
-                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y transition-all duration-200"
+                required
+                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y"
               ></textarea>
             </div>
 
-            {/* Consent Checkbox */}
             <div className="md:col-span-2 flex items-center">
               <input
                 type="checkbox"
                 id="consent"
                 name="consent"
+                checked={formData.consent}
+                onChange={handleChange}
                 className="form-checkbox h-5 w-5 text-teal-600 rounded focus:ring-teal-500 border-gray-300"
               />
               <label htmlFor="consent" className="ml-2 text-gray-600 text-sm">
@@ -132,15 +188,21 @@ export default function ContactForm() {
               </label>
             </div>
 
-            {/* Send Button */}
             <div className="md:col-span-2 flex justify-end mt-4">
               <button
                 type="submit"
-                className="bg-teal-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all duration-300"
+                disabled={loading}
+                className="bg-teal-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all duration-300 disabled:opacity-50"
               >
-                Send
+                {loading ? "Sending..." : "Send"}
               </button>
             </div>
+
+            {responseMsg && (
+              <div className="md:col-span-2 text-center mt-2 text-sm text-gray-700">
+                {responseMsg}
+              </div>
+            )}
           </form>
         </div>
       </div>

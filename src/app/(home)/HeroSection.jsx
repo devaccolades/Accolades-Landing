@@ -50,17 +50,17 @@ const HeroSection = () => {
         {/* Text Content */}
         <div className="w-full md:w-1/2 flex justify-start md:justify-start">
           <div className="text-left">
-            <h3 className="text-[28px] md:text-[32px] lg:text-[36px] font-normal leading-tight">
+            <h3 className="text-[28px] font-mont md:text-[32px] lg:text-[36px] font-normal leading-tight">
               We are
             </h3>
             <h3 className="text-[#3FB4BA] text-[60px] xl:text-[76px] font-semibold leading-tight relative">
               <span>{displayText}</span>
-              <span className="animate-pulse text-[#3FB4BA]">|</span>
+              <span className="animate-pulse text-[#3FB4BA] font-mont">|</span>
             </h3>
-            <h3 className="font-bold text-[72px] xl:text-[86px] leading-tight">
+            <h3 className="font-bold font-mont text-[72px] xl:text-[86px] leading-tight">
               Different
             </h3>
-            <h3 className="text-[20px] md:text-[28px] xl:text-[36px] font-normal leading-tight mt-2">
+            <h3 className="text-[20px] md:text-[28px] xl:text-[36px]  font-mont font-normal leading-tight mt-2">
               We take your business to new heights
             </h3>
           </div>

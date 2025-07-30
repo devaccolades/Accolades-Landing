@@ -46,7 +46,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="containers flex flex-col-reverse md:flex-row justify-between gap-6 pt-8 md:pt-14 items-center">
+      <div className="containers flex flex-col-reverse md:flex-row justify-between gap-6 pt-20  items-center">
         {/* Text Content */}
         <div className="w-full md:w-1/2 flex justify-start md:justify-start">
           <div className="text-left">
@@ -57,7 +57,7 @@ const HeroSection = () => {
               <span>{displayText}</span>
               <span className="animate-pulse text-[#3FB4BA] font-mont">|</span>
             </h3>
-            <h3 className="font-bold font-mont text-[72px] xl:text-[86px] leading-tight">
+            <h3 className="font-bold font-mont text-[65px] md:text-[72px] xl:text-[86px] leading-tight">
               Different
             </h3>
             <h3 className="text-[20px] md:text-[28px] xl:text-[36px]  font-mont font-normal leading-tight mt-2">

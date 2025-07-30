@@ -2,18 +2,55 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import logo from "../../public/accolades_logo.svg";
-import { FaBars, FaTimes, FaChevronRight, FaChevronDown } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaChevronRight,
+  FaChevronDown,
+  FaArrowLeft,
+} from "react-icons/fa";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMainDropdownOpen, setIsMainDropdownOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [activeServicePage, setActiveServicePage] = useState(null);
   const [screenHeight, setScreenHeight] = useState(0);
   const [scrolled, setScrolled] = useState(false);
 
   const servicesRef = useRef(null);
   const mainDropdownRef = useRef(null);
+
+  // Service pages data
+  const servicePages = {
+    Creative: {
+      title: "Creative Services",
+      services: [
+        "Graphics & Motion",
+        "Branding & Packaging",
+        "Video Production",
+      ],
+    },
+    "Digital Marketing": {
+      title: "Digital Services",
+      services: [
+        "Performance Marketing",
+        "Google Ads",
+        "Search Engine Optimization",
+        "Social Media Marketing",
+        "Content Marketing",
+      ],
+    },
+    "Web Development": {
+      title: "Web Services",
+      services: [
+        "FullStack Web Development",
+        "WordPress Pages",
+        "Ecommerce Website",
+      ],
+    },
+  };
 
   // Track screen height for responsive design
   useEffect(() => {
@@ -31,7 +68,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20); // adjust threshold as needed
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -43,6 +80,7 @@ const Navbar = () => {
     const handleClickOutside = (event) => {
       if (servicesRef.current && !servicesRef.current.contains(event.target)) {
         setIsServicesOpen(false);
+        setActiveServicePage(null);
       }
       if (
         mainDropdownRef.current &&
@@ -74,6 +112,14 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
+  const handleServiceHover = (service) => {
+    setActiveServicePage(service);
+  };
+
+  const handleServiceLeave = () => {
+    // Don't immediately close - let the dropdown's mouse leave handle it
+  };
+
   // Determine if it's a short screen (like landscape phones)
   const isShortScreen = screenHeight < 600;
   const isMediumScreen = screenHeight >= 600 && screenHeight < 800;
@@ -82,7 +128,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  cursor-pointer
           ${
             scrolled
               ? "bg-white shadow-md border-b border-gray-200"
@@ -104,58 +150,91 @@ const Navbar = () => {
           {/* Desktop Right Section (768px and above) */}
           <div className="hidden md:flex items-center gap-4 xl:gap-6">
             {/* Let's Talk Button */}
-            <button className="border border-[#00777D] text-[#00777D] px-4 xl:px-6 py-2 rounded-full text-sm xl:text-base transition-all duration-300 hover:bg-[#00777D] hover:text-white hover:shadow-lg transform hover:scale-105 whitespace-nowrap">
+            {/* <button className="border border-[#00777D] text-[#00777D] px-4 xl:px-6 py-2 rounded-full text-sm xl:text-base transition-all duration-300 hover:bg-[#00777D] hover:text-white hover:shadow-lg transform hover:scale-105 whitespace-nowrap">
               Let's Talk
-            </button>
+            </button> */}
 
             {/* Services Icon + Dropdown */}
-            <div className="relative" ref={servicesRef}>
-              <div
-                onClick={() => setIsServicesOpen((prev) => !prev)}
-                className="cursor-pointer text-[#00777D] hover:text-[#005a5f] transition-all duration-300 select-none flex items-center gap-2 py-2 px-1"
-              >
-                <span className="text-sm xl:text-base whitespace-nowrap">
+            {/* Desktop Services Dropdown with Hover-based Two-Level Menu */}
+            <div
+              className="relative"
+              ref={servicesRef}
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => {
+                setIsServicesOpen(false);
+                setActiveServicePage(null);
+              }}
+            >
+              {/* Main Services Label */}
+              <div className="cursor-pointer text-[#00777D] hover:text-[#005a5f] transition-all duration-300 select-none flex items-center gap-2 py-2 px-1 group">
+                <span className="text-sm xl:text-base whitespace-nowrap group-hover:font-medium transition-all duration-200">
                   Services
                 </span>
-                <div
-                  className={`transition-transform duration-300 ${
-                    isServicesOpen ? "rotate-90" : ""
-                  }`}
-                >
-                  <FaChevronRight className="w-3 h-3" />
-                </div>
+                <FaChevronRight className="w-3 h-3 transition-all duration-300 group-hover:scale-110" />
               </div>
 
+              {/* First Level: Main Services Dropdown */}
               <div
-                className={`absolute top-full right-0 bg-white shadow-xl rounded-lg overflow-hidden min-w-[180px] transition-all duration-300 transform origin-top-right border ${
+                className={`absolute top-[70%] right-0 z-40 bg-white shadow-xl rounded-lg overflow-hidden transition-all duration-300 border-gray-700 min-w-[200px] ${
                   isServicesOpen
-                    ? "opacity-100 scale-100 translate-y-1"
+                    ? "opacity-100 scale-100 translate-y-1 pointer-events-auto"
                     : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
                 }`}
               >
                 <div className="py-2">
-                  {[
-                    "Translation",
-                    "Localization",
-                    "Voice Over",
-                    "Subtitling",
-                  ].map((service, index) => (
+                  {Object.keys(servicePages).map((service, index) => (
                     <div
                       key={service}
-                      className="cursor-pointer hover:bg-gray-50 text-[#00777D] hover:text-[#005a5f] px-4 py-3 transition-all duration-200 transform hover:translate-x-1 text-sm border-b border-gray-100 last:border-b-0"
+                      className="cursor-pointer hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 text-[#00777D] hover:text-[#005a5f] px-4 py-3 transition-all duration-300 transform hover:translate-x-2 hover:shadow-sm text-sm border-b border-gray-100 last:border-b-0 flex items-center justify-between group"
+                      onMouseEnter={() => setActiveServicePage(service)}
                       style={{ transitionDelay: `${index * 50}ms` }}
                     >
-                      {service}
+                      <span className="group-hover:font-medium transition-all duration-200">
+                        {service}
+                      </span>
+                      <FaChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:translate-x-1" />
                     </div>
                   ))}
                 </div>
               </div>
+
+              {/* Second Level: Sub-services Dropdown (left side of parent) */}
+              {activeServicePage && (
+                <div
+                  className={`absolute top-[70%] right-[190%] mr-[25px] z-30 bg-white shadow-xl rounded-lg overflow-hidden transition-all duration-300  min-w-[260px] ${
+                    isServicesOpen
+                      ? "opacity-100 scale-100 translate-y-1 pointer-events-auto"
+                      : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+                  }`}
+                >
+                  <div className="px-4 py-3 border-b border-gray-200 bg-gradient-to-r from-[#00777D] to-[#6DB4BA] text-white">
+                    <h3 className="font-semibold text-sm">
+                      {servicePages[activeServicePage]?.title}
+                    </h3>
+                  </div>
+                  <div className="py-2">
+                    {servicePages[activeServicePage]?.services.map(
+                      (item, index) => (
+                        <div
+                          key={item}
+                          className="cursor-pointer hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 text-[#00777D] hover:text-[#005a5f] px-4 py-3 transition-all duration-300 transform hover:translate-x-2 hover:shadow-sm text-sm border-b border-gray-100 last:border-b-0 group"
+                          style={{ transitionDelay: `${index * 30}ms` }}
+                        >
+                          <span className="group-hover:font-medium transition-all duration-200">
+                            {item}
+                          </span>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Menu Icon + Dropdown */}
             <div className="relative" ref={mainDropdownRef}>
               <div
-                className="w-8 h-8 xl:w-10 xl:h-10 text-[#00777D] cursor-pointer transition-all duration-300 hover:text-[#005a5f] hover:scale-110 transform flex items-center justify-center"
+                className="w-8 h-8 xl:w-10 xl:h-10 text-[#00777D] cursor-pointer transition-all duration-300 hover:text-[#005a5f] hover:scale-110 transform flex items-center justify-center hover:bg-gray-100 hover:bg-opacity-50 rounded-full "
                 onClick={() => setIsMainDropdownOpen((prev) => !prev)}
               >
                 {isMainDropdownOpen ? (
@@ -166,21 +245,23 @@ const Navbar = () => {
               </div>
 
               <div
-                className={`absolute top-full right-0 bg-white shadow-xl rounded-lg overflow-hidden min-w-[140px] transition-all duration-300 transform origin-top-right border ${
+                className={`absolute top-full right-0 bg-white shadow-xl rounded-lg overflow-hidden min-w-[140px] transition-all duration-300 transform origin-top-right border-gray-500 ${
                   isMainDropdownOpen
                     ? "opacity-100 scale-100 translate-y-1"
                     : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
                 }`}
               >
                 <div className="py-2">
-                  {["Home", "About", "Services", "Contact"].map(
+                  {["Home", "About", "Contact", "Careers", "Blog"].map(
                     (item, index) => (
                       <div
                         key={item}
-                        className="cursor-pointer hover:bg-gray-50 text-[#00777D] hover:text-[#005a5f] px-4 py-3 transition-all duration-200 transform hover:translate-x-1 text-sm border-b border-gray-100 last:border-b-0"
+                        className="cursor-pointer hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 text-[#00777D] hover:text-[#005a5f] px-4 py-3 transition-all duration-300 transform hover:translate-x-2 hover:shadow-sm text-sm border-b border-gray-100 last:border-b-0 group"
                         style={{ transitionDelay: `${index * 50}ms` }}
                       >
-                        {item}
+                        <span className="group-hover:font-medium transition-all duration-200">
+                          {item}
+                        </span>
                       </div>
                     )
                   )}
@@ -209,7 +290,7 @@ const Navbar = () => {
           className={`fixed inset-0 bg-[#6DB4BA] z-50 md:hidden transition-all duration-500 ease-in-out ${
             isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
-          style={{ height: "100vh", height: "100dvh" }} // Use dynamic viewport height
+          style={{ height: "100vh", height: "100dvh" }}
         >
           {/* Close Button */}
           <div
@@ -220,7 +301,7 @@ const Navbar = () => {
             <div
               className={`${
                 isShortScreen ? "w-7 h-7" : "w-8 h-8"
-              } text-white cursor-pointer transition-all duration-300 hover:scale-110 transform flex items-center justify-center`}
+              } text-white cursor-pointer transition-all duration-300 hover:scale-110 transform flex items-center justify-center hover:bg-white hover:bg-opacity-20 rounded-full`}
               onClick={() => setIsMenuOpen(false)}
             >
               <FaTimes className={`${isShortScreen ? "w-5 h-5" : "w-6 h-6"}`} />
@@ -251,7 +332,7 @@ const Navbar = () => {
                 (item, index) => (
                   <div
                     key={item}
-                    className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 ${
+                    className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide ${
                       isShortScreen
                         ? "text-xl"
                         : isMediumScreen
@@ -277,7 +358,7 @@ const Navbar = () => {
               {/* Digital Marketing with Dropdown */}
               <div className="flex flex-col items-center w-full">
                 <div
-                  className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 flex items-center gap-3 ${
+                  className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide flex items-center gap-3 ${
                     isShortScreen
                       ? "text-xl"
                       : isMediumScreen
@@ -291,12 +372,18 @@ const Navbar = () => {
                   style={{
                     transitionDelay: isMenuOpen ? "700ms" : "0ms",
                   }}
-                  onClick={() => setIsMobileServicesOpen((prev) => !prev)}
+                  onClick={() =>
+                    setIsMobileServicesOpen((prev) =>
+                      prev === "digital" ? null : "digital"
+                    )
+                  }
                 >
                   <span>Digital Marketing</span>
                   <div
-                    className={`transition-transform duration-300 ${
-                      isMobileServicesOpen ? "rotate-90" : ""
+                    className={`transition-all duration-300 ${
+                      isMobileServicesOpen === "digital"
+                        ? "rotate-90 scale-110"
+                        : ""
                     }`}
                   >
                     <FaChevronRight
@@ -307,23 +394,24 @@ const Navbar = () => {
 
                 {/* Services Submenu */}
                 <div
-                  className={`flex flex-col items-center w-full transition-all duration-300 ${
+                  className={`flex flex-col items-center w-full transition-all duration-500 ${
                     isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"
                   } ${
-                    isMobileServicesOpen
-                      ? "opacity-100 max-h-96"
-                      : "opacity-0 max-h-0 overflow-hidden"
+                    isMobileServicesOpen === "digital"
+                      ? "opacity-100 max-h-96 transform translate-y-0"
+                      : "opacity-0 max-h-0 overflow-hidden transform -translate-y-4"
                   }`}
                 >
                   {[
-                    "SEO",
+                    "Performance Marketing",
+                    "Google Ads",
+                    "Search Engine Optimization",
                     "Social Media Marketing",
-                    "PPC Advertising",
                     "Content Marketing",
                   ].map((service, index) => (
                     <div
                       key={service}
-                      className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 text-center ${
+                      className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
                         isShortScreen ? "text-base" : "text-lg"
                       }`}
                       style={{
@@ -338,12 +426,9 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Additional Services */}
-              {["Web Development", "Graphic Design"].map((item, index) => (
+              <div className="flex flex-col items-center w-full">
                 <div
-                  key={item}
-                  className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 ${
+                  className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide flex items-center gap-3 ${
                     isShortScreen
                       ? "text-xl"
                       : isMediumScreen
@@ -354,19 +439,132 @@ const Navbar = () => {
                       ? "translate-y-0 opacity-100"
                       : "translate-y-8 opacity-0"
                   }`}
-                  style={{
-                    transitionDelay: isMenuOpen
-                      ? `${(index + 6) * 100 + 200}ms`
-                      : "0ms",
-                  }}
-                  onClick={() => setIsMenuOpen(false)}
+                  style={{ transitionDelay: isMenuOpen ? "1100ms" : "0ms" }}
+                  onClick={() =>
+                    setIsMobileServicesOpen((prev) =>
+                      prev === "web" ? null : "web"
+                    )
+                  }
                 >
-                  {item}
+                  <span>Web Development</span>
+                  <div
+                    className={`transition-all duration-300 ${
+                      isMobileServicesOpen === "web"
+                        ? "rotate-90 scale-110"
+                        : ""
+                    }`}
+                  >
+                    <FaChevronRight
+                      className={`${isShortScreen ? "w-3 h-3" : "w-4 h-4"}`}
+                    />
+                  </div>
                 </div>
-              ))}
+
+                {/* Web Dev Submenu */}
+                <div
+                  className={`flex flex-col items-center w-full transition-all duration-500 ${
+                    isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"
+                  } ${
+                    isMobileServicesOpen === "web"
+                      ? "opacity-100 max-h-96 transform translate-y-0"
+                      : "opacity-0 max-h-0 overflow-hidden transform -translate-y-4"
+                  }`}
+                >
+                  {[
+                    "FullStack Web Development",
+                    "WordPress Pages",
+                    "Ecommerce Website",
+                  ].map((service, index) => (
+                    <div
+                      key={service}
+                      className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
+                        isShortScreen ? "text-base" : "text-lg"
+                      }`}
+                      style={{
+                        transitionDelay:
+                          isMobileServicesOpen === "web"
+                            ? `${index * 100}ms`
+                            : "0ms",
+                      }}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {service}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Creative (Graphics) with Submenu */}
+              <div className="flex flex-col items-center w-full">
+                <div
+                  className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide flex items-center gap-3 ${
+                    isShortScreen
+                      ? "text-xl"
+                      : isMediumScreen
+                      ? "text-2xl"
+                      : "text-2xl sm:text-3xl"
+                  } ${
+                    isMenuOpen
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-8 opacity-0"
+                  }`}
+                  style={{ transitionDelay: isMenuOpen ? "1200ms" : "0ms" }}
+                  onClick={() =>
+                    setIsMobileServicesOpen((prev) =>
+                      prev === "creative" ? null : "creative"
+                    )
+                  }
+                >
+                  <span>Creative (Graphics)</span>
+                  <div
+                    className={`transition-all duration-300 ${
+                      isMobileServicesOpen === "creative"
+                        ? "rotate-90 scale-110"
+                        : ""
+                    }`}
+                  >
+                    <FaChevronRight
+                      className={`${isShortScreen ? "w-3 h-3" : "w-4 h-4"}`}
+                    />
+                  </div>
+                </div>
+
+                {/* Creative Submenu */}
+                <div
+                  className={`flex flex-col items-center w-full transition-all duration-500 ${
+                    isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"
+                  } ${
+                    isMobileServicesOpen === "creative"
+                      ? "opacity-100 max-h-96 transform translate-y-0"
+                      : "opacity-0 max-h-0 overflow-hidden transform -translate-y-4"
+                  }`}
+                >
+                  {[
+                    "Graphics & Motion",
+                    "Branding & Packaging",
+                    "Video Production",
+                  ].map((service, index) => (
+                    <div
+                      key={service}
+                      className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
+                        isShortScreen ? "text-base" : "text-lg"
+                      }`}
+                      style={{
+                        transitionDelay:
+                          isMobileServicesOpen === "creative"
+                            ? `${index * 100}ms`
+                            : "0ms",
+                      }}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {service}
+                    </div>
+                  ))}
+                </div>
+              </div>
 
               {/* Let's Talk Button */}
-              <div
+              {/* <div
                 className={`transition-all duration-300 transform ${
                   isShortScreen ? "mt-4" : "mt-6"
                 } ${
@@ -379,14 +577,14 @@ const Navbar = () => {
                 }}
               >
                 <button
-                  className={`border-2 border-white text-white rounded-full transition-all duration-300 hover:bg-white hover:text-[#6DB4BA] transform hover:scale-105 ${
+                  className={`border-2 border-white text-white rounded-full transition-all duration-300 hover:bg-white hover:text-[#6DB4BA] transform hover:scale-105 hover:shadow-lg ${
                     isShortScreen ? "px-6 py-2 text-base" : "px-8 py-3 text-lg"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Let's Talk
                 </button>
-              </div>
+              </div> */}
             </nav>
           </div>
         </div>

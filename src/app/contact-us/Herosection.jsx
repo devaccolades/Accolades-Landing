@@ -5,14 +5,16 @@ import { FaXTwitter } from 'react-icons/fa6';
 export default function Herosection() {
     return (
         <>
-            <section className='containers my-10 px-4 py-8 mx-auto bg-white font-mont rounded-2xl shadow-xl '>
+            <section className='containers pt-[100px] pb-10 mx-auto  '>
+                <div className='bg-white font-mont rounded-2xl shadow-xl px-4 py-8 '>
+
                 <h2 className='text-center text-5xl md:text-7xl font-extrabold  text-[#3FB4BA] mb-8'>
                     Contact
                 </h2>
-                <div className='flex flex-col md:flex-row gap-10 items-center'>
+                <div className='flex flex-col md:flex-row md:gap-10 items-center'>
                     {/* Left Box - Modified for the desired shape */}
                     <div className='flex-1 flex items-center justify-center p-4'>
-                        <div className='relative text-white text-[36px] md:text-[45px] font-extrabold'>
+                        <div className='relative text-white text-[16px] md:text-[22px] lg:text-[27px] xl:text-[42px] font-extrabold'>
 
                             <div className='bg-[#3FB4BA] rounded-t-xl rounded-br-xl rounded-bl-xl p-4 shadow-md'>
                                 We would love to hear
@@ -26,7 +28,7 @@ export default function Herosection() {
 
                     {/* Right Box */}
                     <div className='flex-1 flex flex-col justify-center text-gray-600 p-4'>
-                        <p className='mb-6 text-lg'>
+                      <p className="mb-6 text-[14px] md:text-[18px]  ">
                             Our team is always willing to respond your queries and
                             provide the support you need. Whether you have specific
                             queries or need general information, we're just a message away.
@@ -67,6 +69,8 @@ export default function Herosection() {
                         </div>
                     </div>
                 </div>
+                </div>
+
             </section>
         </>
     );

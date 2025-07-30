@@ -68,8 +68,8 @@ export default function ContactForm() {
 };
 
   return (
-    <section className="containers mx-auto px-4 py-8 bg-white rounded-2xl shadow-xl my-10">
-      <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+    <section className="containers mx-auto  py-10">
+      <div className="flex flex-col md:flex-row gap-8 items-center md:items-start px-4 py-8 bg-white rounded-2xl shadow-xl">
         {/* Left Side: Illustration */}
         {/* This div dictates the image width and holds the next/image component */}
         <div

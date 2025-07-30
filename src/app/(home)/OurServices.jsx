@@ -9,7 +9,8 @@ const services = [
   {
     title: "Digital Marketing",
     description:
-      "Get ROI through digital marketing services, drive successful online marketing campaigns with our digital marketing services.",
+    "Grow your brand and achieve measurable results with us. Maximize your ROI with tailored digital marketing services online campaigns that drive impactful results.",
+      // "Get ROI through digital marketing services, drive successful online marketing campaigns with our digital marketing services.",
     bgColor: "bg-[#E5EEF0]", // Light blue
     textColor: "text-[#2C99B1]", // Darker blue
     icon: digital,
@@ -17,15 +18,17 @@ const services = [
   {
     title: "Web Development",
     description:
-      "Build fast, responsive websites and web apps tailored to your business goals and user needs.",
+    "Get your website developed exactly to fit your business requirements. We build cross-browser compatible and responsive sites with the latest features for optimal performance.",
+      // "Build fast, responsive websites and web apps tailored to your business goals and user needs.",
     bgColor: "bg-[#FDEFEF]", // Light pink
     textColor: "text-[#C94A4A]", // Darker red
     icon: web,
   },
   {
-    title: "Content Creation",
+    title: "Creative Design",
     description:
-      "Engage your audience with high-quality content that speaks to your brand and drives results.",
+    "We provide creative design for social media and digital ads along with graphic designs like brochure, magazine ads to elevate your brand’s online presence.  ",
+      // "Engage your audience with high-quality content that speaks to your brand and drives results.",
     bgColor: "bg-[#e1d4fa]", // Light Violet
     textColor: "text-[#64489e]", // Dark Violet
     icon: creative,

@@ -11,40 +11,39 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+
+import img1 from "../../../../../public/web/abe.jpg";
+import img2 from "../../../../../public/web/abls.jpg";
+import img3 from "../../../../../public/web/alpha.jpg";
+import img4 from "../../../../../public/web/atc.jpg";
+import img5 from "../../../../../public/web/cidbi.jpg";
+import img6 from "../../../../../public/web/ggc.jpg";
+import img7 from "../../../../../public/web/na-bu.jpg";
+import img8 from "../../../../../public/web/green.jpg";
+
 const projects = [
+ 
   {
-    title: "CLASSIC HOMES",
-    image: classic,
+    title: "ABLS HUMAN RESOURCES",
+    image: img2,
   },
+  
   {
-    title: "JUGALBANDHI",
-    image: jugal,
+    title: "ATC KODANAD",
+    image: img4,
   },
+  
   {
-    title: "CLASSIC HOMES",
-    image: classic,
+    title: "GO GREEN COMPANY",
+    image: img6,
   },
+  
   {
-    title: "JUGALBANDHI",
-    image: jugal,
-  },
-  {
-    title: "CLASSIC HOMES",
-    image: classic,
-  },
-  {
-    title: "JUGALBANDHI",
-    image: jugal,
-  },
-  {
-    title: "CLASSIC HOMES",
-    image: classic,
-  },
-  {
-    title: "JUGALBANDHI",
-    image: jugal,
+    title: "GREEN TEA",
+    image: img8,
   },
 ];
+
 
 export default function WordProjects() {
   return (
@@ -56,9 +55,9 @@ export default function WordProjects() {
 
           <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 md:mb-4">Web Projects</h2>
           <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
-            Accolades is envisioned to cater the newest and finest web development
-            solutions to businesses in Kerala. We perceive the worth of your
-            investments, which is why our professional web development team is
+            We build WordPress sites that are fast, sleek, and easy to run. Each project reflects smart design, simple flow,
+             and strong performance. Our websites load fast, rank well, and work across all screens. Clients trust us for 
+             websites that grow with their brand.
 
           </p>
         </div>

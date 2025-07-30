@@ -12,18 +12,18 @@ const Projects = () => {
             Latest Projects
           </h3>
           <h3 className="text-[#3FB4BA] text-[48px] md:text-[56px] xl:text-[76px] font-semibold leading-[100%]">
-            Our
+            Recent
           </h3>
           <h3 className="font-bold text-[48px] md:text-[64px] xl:text-[86px] leading-[100%">
-            Latest
+            Highlights
           </h3>
         </div>
       </div>
       <div className="w-full">
         <p className="text-[14px] xl:text-[18px] font-mont font-normal">
-          We have given services for about 250 plus happy clients including
-          Benoy Marbles, National Builders, Manappu- ram, Karikkineth, Ocean,
-          etc. Timebound work comple tion, teamwork and unity makes us stand out
+          Discover our latest work, where creativity meets strategy to deliver 
+          exceptional results. Each project reflects our dedication to helping 
+          brands thrive through innovative digital solutions.	
         </p>
       </div>
     </section>

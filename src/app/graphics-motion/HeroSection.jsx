@@ -4,7 +4,7 @@ import heroImg from "../../../public/graphics-motion/heroImg.png";
 export default function HeroSection() {
   return (
     <>
-      <div className="lg:py-12 md:py-8 py-4">
+      <div className="lg:pt-12 md:pt-8 py-4">
         <div className="bg-white containers rounded-[30px] py-6">
           <h1 className="text-[#3FB4BA] font-mont font-bold xl:text-[70px] lg:text-[50px] md:text-[40px] text-[30px] leading-[130%] text-center mb-2">
             Graphics & Motion

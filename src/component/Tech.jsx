@@ -8,7 +8,7 @@ export default function Tech({tools, title, para}) {
             {title}
           </h2>
 
-          <div className="grid md:grid-cols-5 gap-6 mb-6">
+          <div className="grid grid-cols-2  md:grid-cols-5 gap-6 mb-6">
             {tools.map((tool, index) => (
               <div
                 key={index}

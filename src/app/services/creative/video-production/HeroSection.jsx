@@ -1,10 +1,10 @@
 import Image from "next/image";
-import heroImg from "../../../public/video-production/heroImg.png";
+import heroImg from "../../../../../public/video-production/heroImg.png";
 
 export default function HeroSection() {
   return (
     <>
-      <div className="lg:pt-12 md:pt-8 pt-4">
+      <div className="pt-16 md:pt-20 lg:pt-26">
         <div className="bg-white containers rounded-[30px] py-6">
           <h1 className="text-[#3FB4BA] font-mont font-bold xl:text-[70px] lg:text-[50px] md:text-[40px] text-[30px] leading-[130%] text-center mb-2">
             Video Production
@@ -12,7 +12,7 @@ export default function HeroSection() {
         </div>
       </div>
       <section className="lg:py-16 md:py-12 py-6">
-        <div className="containers grid md:grid-cols-2 md:gap-6 lg:gap-8 items-center">
+        <div className="containers grid md:grid-cols-2 gap-6 lg:gap-8 items-center">
           <span className="bg-white md:p-8 p-6 rounded-xl shadow-md">
             <h2 className="font-mont font-semibold xl:text-[42px] lg:text-[38px] md:text-[32px] text-[26px] leading-[110%]  text-[#199eb8] md:mb-4 mb-2 ">
               Videos That Captivate, Convert & Communicate

@@ -6,12 +6,14 @@ import Footer from "@/component/Footer";
 export default function page() {
   return (
     <>
-    <Navbar />
-    <div className="bg-gradient-to-br from-white to-[#e6f4f9]">
-    <HeroSection />
-    <Latest />
-    </div>
-    <Footer />
+      <Navbar />
+      <main className="bg-[#F1F1F1]">
+        <HeroSection />
+        <Latest />
+      </main>
+      <main className="-mt-[65px]">
+      <Footer />
+      </main>
     </>
-  )
+  );
 }

@@ -8,7 +8,7 @@ import icon3 from "../../../../../public/content-marketing/icon3.svg";
 export default function HeroSection() {
   return (
     <>
-      <div className="bg-gradient-to-br from-teal-100 to-blue-100 lg:py-16 md:py-12 py-6">
+      <div className="bg-gradient-to-br from-teal-100 to-blue-100 lg:pb-16 md:pb-12 pb-6 pt-16 md:pt-20 lg:pt-26">
         <div className="lg:mb-16 md:mb-12 mb-6 containers">
           <div className="bg-white shadow-lg py-2 text-center rounded-[30px] ">
             <h1 className="font-mont font-bold xl:text-[86px] lg:text-[76px] md:text-[66px] text-[30px] leading-[100%] text-[#3FB4BA] md:px-20 px-4">
@@ -26,24 +26,12 @@ export default function HeroSection() {
                 </p>
 
                 <h2 className="font-mont font-bold lg:text-[32px] md:text-[30px] text-[26px] leading-[130%] text-[#3FB4BA] mb-4 md:mb-6">
-                  Content Marketing
+                  Creative Messaging
                 </h2>
 
-                <div className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#000000] space-y-4">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. Interdum curabitur
-                    diam rhoncus sit augue sed purus vitae nulla. Mus ultrices
-                    quis eget elit. Elementum rhoncus sit ac adipiscing.
-                    Pharetra viverra faucibus habitant libero ornare aliquet
-                    adipiscing mus a. Fermentum augue elit sed nibh mattis non.
-                    Mi ridiculus lectus morbi vulputate donec tempus nunc
-                    fermentum. Ultrices sed non consectetur eget ut amet nullam.
-                    In adipiscing sed aliquam sed etiam tincidunt molestie
-                    scelerisque auctor. Sapien enim eu ipsum etiam vitae risus.
-                    Justo diam magna pulvinar egestas mauris et et at. Porttitor
-                    quam molestie commodo cursus rhoncus venenatis sed amet.
-                    Consequat vitae malesuada egestas integer felis sem. Nunc
-                    sagittis pellentesque odio mus.
+                <div className="space-y-4">
+                  <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#000000]">
+                    Content marketing at Accolades Integrated is about creating meaningful connections with your audience. We craft compelling, engaging, and value-driven content that resonates with your target audience. From blogs and social media posts to videos and infographics, we design strategies that amplify your brand's voice. Our data-driven approach ensures every piece of content boosts engagement, enhances visibility, and drives conversions. Partner with us to transform your digital presence and achieve measurable growth through impactful storytelling.
                   </p>
                 </div>
               </div>
@@ -63,7 +51,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="bg-gradient-to-br from-teal-200 to-cyan-300 flex items-center justify-center py-8 md:py-12 lg:py-16">
+      <div className="flex items-center justify-center pt-8 md:pt-12 lg:pt-16 pb-20 lg:pb-30 ">
         <div className="containers mx-auto">
           {/* Main Content Card */}
           <div className="bg-white rounded-3xl lg:p-8 p-6 shadow-lg">
@@ -71,7 +59,7 @@ export default function HeroSection() {
             <h1 className="md:text-center font-mont font-semibold xl:text-[20px] md:text-[18px] text-[16px] leading-[150%] mb-4 md:mb-8 lg:mb-12">
               Content is the present and future of marketing. Specifically,
               there are three reasons and benefits for enterprises that use
-              content marketing
+              content marketing :
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 md:gap-6 gap-4 mb-4 md:mb-8 lg:mb-12">
@@ -122,23 +110,7 @@ export default function HeroSection() {
                 day.
               </p>
               <p>
-                It is irrefutable you can no longer ignore content marketing.
-                The vast majority of business-to-consumer (B2C) brands
-                efficiently handle content marketing to connect, attract, and
-                retain specific audiences. The "content" piece of content
-                promotion will voluntarily undergo several distinct forms. Our
-                Content promoting key strategists adopt precisely a scientific
-                approach to content campaigns, utilizing hard data to
-                meticulously craft the proper strategy for any client's specific
-                goals. The content strategy typically constitutes the economic
-                foundation behind each deliverable created to make sure solely
-                high-quality content is strategically placed in front of your
-                possible audience. Whether you're unfamiliar with content
-                marketing or looking eagerly to refine your current strategy,
-                Accolades represent the most appropriate agency that can do
-                wonders in content thereby fostering your business amenity. Our
-                diligent and eager team is resolute to abundantly supply you
-                absolutely the best in exclusive content promotion.
+                Content marketing is now essential and can no longer be overlooked. For business-to-consumer (B2C) brands, it is a key strategy for connecting with, attracting, and retaining target audiences. Content marketing spans various forms, and at Accolades, our strategists use a scientific, data-driven approach to create customized campaigns. Every content piece is designed based on solid analytics to ensure it aligns with your business goals. From blog posts to social media, we ensure high-quality content reaches your audience effectively. Whether you are new to content marketing or aiming to refine your current strategy, Accolades is the right partner to elevate your content efforts. Our dedicated team crafts innovative content strategies that drive engagement and deliver results, fostering your business’s growth and success. With our expertise, you can rest assured that your content will be crafted and positioned to generate maximum impact.
               </p>
             </div>
           </div>

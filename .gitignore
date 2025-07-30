@@ -26,3 +26,5 @@ yarn.lock
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+
+.env.local

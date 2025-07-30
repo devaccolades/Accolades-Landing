@@ -1,0 +1,39 @@
+import nodemailer from "nodemailer";
+
+export async function POST(req) {
+  try {
+    const { name, email, phone } = await req.json();
+
+    const transporter = nodemailer.createTransport({
+      service: "Gmail",
+      auth: {
+        user: process.env.SMTP_EMAIL,
+        pass: process.env.SMTP_PASSWORD,
+      },
+    });
+
+    const mailOptions = {
+      from: `"Accolades Website" <${process.env.SMTP_EMAIL}>`,
+      to: "manjimanm001@gmail.com", // Replace with the receiver's email
+      subject: "New Contact Form Submission",
+      html: `
+        <h3>Contact Form Details</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+      `,
+    };
+
+    await transporter.sendMail(mailOptions);
+    console.log("ENV EMAIL:", process.env.SMTP_EMAIL);
+console.log("Received:", { name, email, phone });
+
+
+    return Response.json({ success: true, message: "Email sent successfully!" });
+  } catch (error) {
+    console.error("Email send error:", error);
+    return Response.json({ success: false, message: "Failed to send email." }, { status: 500 });
+  }
+
+  
+}

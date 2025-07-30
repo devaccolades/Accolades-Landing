@@ -1,0 +1,41 @@
+import nodemailer from "nodemailer";
+
+export async function POST(req) {
+  try {
+    const { firstName, lastName, email, phone, message } = await req.json();
+
+    const transporter = nodemailer.createTransport({
+      service: "Gmail",
+      auth: {
+        user: process.env.SMTP_EMAIL,
+        pass: process.env.SMTP_PASSWORD,
+      },
+    });
+
+    const mailOptions = {
+      from: `"Accolades Website" <${process.env.SMTP_EMAIL}>`,
+      to: "manjimanm001@gmail.com",
+      subject: "New Contact Form Submission",
+      html: `
+  <div style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2 style="color: #008080;">New Contact Message</h2>
+    <p><strong>First Name:</strong> ${firstName}</p>
+    <p><strong>Last Name:</strong> ${lastName}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Phone:</strong> ${phone}</p>
+    <p style="margin-top: 10px;"><strong>Message:</strong></p>
+    <div style="background-color: #f1f1f1; padding: 10px; border-left: 4px solid #008080;">
+      ${message}
+    </div>
+  </div>
+`
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    return Response.json({ success: true, message: "Contact email sent successfully!" });
+  } catch (error) {
+    console.error("Email send error:", error);
+    return Response.json({ success: false, message: "Failed to send contact email." }, { status: 500 });
+  }
+}

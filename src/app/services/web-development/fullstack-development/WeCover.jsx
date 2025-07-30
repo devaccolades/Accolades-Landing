@@ -3,6 +3,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import react from "../../../../../public/web/react.png";
 import next from "../../../../../public/web/next-js.png";
+import postg from "../../../../../public/web/postgres.png";
+import py from "../../../../../public/web/python.png";
+import mg from "../../../../../public/web/mongo.png";
+import dj from "../../../../../public/web/dj2.png";
+import st from "../../../../../public/web/strapi.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -24,23 +29,28 @@ const techList = [
         type: "frontend",
     },
     {
-        title: "Node.js",
-        logo: react,
+        title: "Python",
+        logo: py,
         type: "backend",
     },
     {
-        title: "Express.js",
-        logo: next,
+        title: "Django",
+        logo: dj,
+        type: "backend",
+    },
+    {
+        title: "Strapi",
+        logo: st,
         type: "backend",
     },
     {
         title: "MongoDB",
-        logo: next,
+        logo: mg,
         type: "database",
     },
     {
         title: "PostgreSQL",
-        logo: next,
+        logo: postg,
         type: "database",
     },
 ];
@@ -131,10 +141,10 @@ export default function WhatWeCover() {
 
                 {/* Description */}
                 <p className="text-gray-600 font-mont text-[13px] md:text-[14px] leading-relaxed mt-4">
-                    Lorem ipsum dolor sit amet consectetur. Eget porttitor elementum
-                    hendrerit a diam suspendisse tellus. Consequat enim auctor dignissim
-                    mattis vitae tincidunt. Facilisis mi neque tellus viverra ac mauris
-                    adipiscing nulla. Praesent purus ornare non eros et.
+                    We build powerful apps using React.js and Next.js for fast and dynamic frontends. 
+                    Our backend stack includes Python and Django, trusted for speed and security. 
+                    We work with PostgreSQL and other databases to manage data with ease. Every layer 
+                    is built to scale, load fast, and keep your data safe.
                 </p>
             </div>
 

@@ -5,6 +5,7 @@ import HeroSection from "./HeroSection";
 import WhatWeOffer from "./WhatWeOffer";
 import Tools from "../Tools";
 import Featured from "./Featured";
+import Our from "./Our";
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
         <HeroSection />
         <WhatWeOffer />
         <Featured />
+        <Our />
         <Tools />
       </main>
       <main className="-mt-[65px]">

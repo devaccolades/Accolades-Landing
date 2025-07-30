@@ -61,7 +61,7 @@ const HeroSection = () => {
               Different
             </h3>
             <h3 className="text-[20px] md:text-[28px] xl:text-[36px]  font-mont font-normal leading-tight mt-2">
-              We take your business to new heights
+              We help your business grow through digital innovation.
             </h3>
           </div>
         </div>

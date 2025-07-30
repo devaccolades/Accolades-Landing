@@ -7,6 +7,7 @@ import circleT from "../../../public/services/topC.png";
 import circleTL from "../../../public/services/circletTL.png";
 import centerR from "../../../public/services/centerR.png";
 import centerL from "../../../public/services/centerL.png";
+import bottomGrade from "../../../public/services/bottomSide.png";
 import Image from "next/image";
 import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
@@ -42,6 +43,13 @@ function page() {
         height={100}
         width={100}
         className="absolute top-10 left-0 h-full w-auto z-0"
+      />
+      <Image
+        src={bottomGrade}
+        alt="crcle on top"
+        height={100}
+        width={100}
+        className="absolute bottom-0 left-0 h-[100vh] w-full w-auto z-0"
       />
       <HeroSection />
       <Digital />

@@ -3,6 +3,10 @@
 import { useState } from "react";
 
 const ReachUs = () => {
+  const [loading, setLoading] = useState(false);
+
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [messageType, setMessageType] = useState("success");
   const [formData, setFormData] = useState({
     phone: "",
     email: "",
@@ -46,55 +50,46 @@ const ReachUs = () => {
 
   // ✅ Handle form submission
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (!validate()) return;
+    if (!validate()) return;
 
-  try {
-    const res = await fetch("/api/send-mail", {
+    setLoading(true); // Start loading
+    setSubmitMessage("");
 
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const res = await fetch("/api/send-mail", {
 
-    const result = await res.json();
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (result.success) {
-      alert("Email sent successfully!");
-      setFormData({ phone: "", email: "", name: "" });
-    } else {
-      alert("Email failed to send.");
+      const result = await res.json();
+
+      if (result.success) {
+        setMessageType("success");
+        setSubmitMessage("Submitted successfully!");
+        setFormData({ phone: "", email: "", name: "" });
+      } else {
+        setMessageType("error");
+        setSubmitMessage(" failed to submit.");
+      }
+    } catch (error) {
+      console.error("Email submit error:", error);
+      setMessageType("error");
+      setSubmitMessage("Something went wrong.");
+    } finally {
+      setLoading(false);
+      
+      setTimeout(() => {
+      setSubmitMessage("");
+    }, 5000);
     }
-  } catch (error) {
-    console.error("Email submit error:", error);
-    alert("Something went wrong.");
-  }
+  };
 
-    setFormData({
-      phone: "",
-      email: "",
-      name: "",
-    });
-};
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   if (!validate()) return;
-
-
-  //   console.log("Form submitted:", formData);
-
- 
-    // setFormData({
-    //   phone: "",
-    //   email: "",
-    //   name: "",
-    // });
-  // };
   return (
     <main className="containers pb-10">
       <section className="bg-[#EDF5F8] rounded-[50px] lg:rounded-[70px] px-6 md:px-12 py-6 md:py-12">
@@ -132,7 +127,7 @@ const ReachUs = () => {
           </div>
 
           <div className="w-full md:w-[30%] flex-1">
-           <form onSubmit={handleSubmit} className="space-y-4 w-full">
+            <form onSubmit={handleSubmit} className="space-y-4 w-full">
               <div>
                 <input
                   type="text"
@@ -178,9 +173,19 @@ const ReachUs = () => {
               <button
                 type="submit"
                 className="bg-white text-[#17AABF] font-medium rounded-full px-10 py-3 mt-2 hover:bg-gray-100 transition"
+                disabled={loading}
               >
-                Submit
+                {loading ? "Loading..." : "Submit"}
               </button>
+
+              {submitMessage && (
+                <p
+                  className={`text-sm mt-2 ${messageType === "success" ? "text-green-600" : "text-red-500"
+                    }`}
+                >
+                  {submitMessage}
+                </p>
+              )}
             </form>
           </div>
         </div>

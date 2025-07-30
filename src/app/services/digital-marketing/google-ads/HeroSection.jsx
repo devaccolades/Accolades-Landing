@@ -4,7 +4,7 @@ import side from "../../../../../public/google/OBJECTS.png";
 
 const HeroSection = () => {
   return (
-    <section className="containers pt-5">
+    <section className="containers pt-[100px]">
       <h1
         className="bg-white text-center text-[#3FB4BA] text-[36px] md:text-[50px] lg:text-[86px] font-mont py-5 rounded-[30px] font-extrabold
         leading-[100%]"

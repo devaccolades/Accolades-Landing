@@ -11,54 +11,57 @@ import bottom from "../../../public/home/bottom-line.svg";
 const testimonials = [
   {
     id: 1,
-    name: "Mr. Nidhin Ramesh",
+    name: "Cochin HT",
     role: "Director, Client Experience",
     content:
-      "Lorem ipsum dolor sit amet consectetur. Egestas turpis gravida urna habitasse cursus duis nec condimentum. Nec integer facilisis platea amet sem. Facilisis aliquam luctus leo erat nunc. Aenean proin sed senectus ut.",
+    "	Accolades is an excellent team to work with.Their approach has been more consultative than other agencies that we have worked with.We have collaborate with  them since last 3years and we are extremely happy with their service.",
+      
     avatar: user,
     bgColor: "bg-red-100",
     quoteColor: "text-red-300",
   },
   {
     id: 2,
-    name: "Mr. Nidhin Ramesh",
+    name: "QIMS",
     role: "Director, Client Experience",
     content:
-      "Lorem ipsum dolor sit amet consectetur. Egestas turpis gravida urna habitasse cursus duis nec condimentum. Nec integer facilisis platea amet sem. Facilisis aliquam luctus leo erat nunc. Aenean proin sed senectus ut.",
+    "We are one of the client of Accolades Media. Quilon Institute of Management Studies, QIMS, Kollam is one of the top Aviation Degree colleges in Kerala. We are extremely satisfied in the professional way of works in website Management, Online Marketing and designing. M.D of the company Mr Jagesh always shows a professional approach in all the dealings and projects.. We suggest this excellent company for website Management, online marketing and SEO on the base of our experience for the last 2 years.. All the very Best for the Team Accolades...",
+    
     avatar: user,
     bgColor: "bg-blue-100",
     quoteColor: "text-blue-300",
   },
   {
     id: 3,
-    name: "Mr. Nidhin Ramesh",
+    name: "Sherbin Ahammed",
     role: "Director, Client Experience",
     content:
-      "Lorem ipsum dolor sit amet consectetur. Egestas turpis gravida urna habitasse cursus duis nec condimentum. Nec integer facilisis platea amet sem. Facilisis aliquam luctus leo erat nunc. Aenean proin sed senectus ut.",
+    "Accolades is an excellent team to work with comprising of very talented and dedicated staff they were patient enough to listen to my requirements and guide me with the best possible social networking strategy which has indeed started to show results within a very short time. I recommend Accolades to anyone like me for wants the best social media marketing team to scale up their business. All the best team Accolades.",
+    
     avatar: user,
     bgColor: "bg-purple-100",
     quoteColor: "text-purple-300",
   },
-  {
-    id: 4,
-    name: "Mr. Nidhin Ramesh",
-    role: "Director, Client Experience",
-    content:
-      "Lorem ipsum dolor sit amet consectetur. Egestas turpis gravida urna habitasse cursus duis nec condimentum. Nec integer facilisis platea amet sem. Facilisis aliquam luctus leo erat nunc. Aenean proin sed senectus ut.",
-    avatar: user,
-    bgColor: "bg-orange-100",
-    quoteColor: "text-orange-300",
-  },
-  {
-    id: 5,
-    name: "Mr. Nidhin Ramesh",
-    role: "Director, Client Experience",
-    content:
-      "Lorem ipsum dolor sit amet consectetur. Egestas turpis gravida urna habitasse cursus duis nec condimentum. Nec integer facilisis platea amet sem. Facilisis aliquam luctus leo erat nunc. Aenean proin sed senectus ut.",
-    avatar: user,
-    bgColor: "bg-orange-100",
-    quoteColor: "text-orange-300",
-  },
+  // {
+  //   id: 4,
+  //   name: "Mr. Nidhin Ramesh",
+  //   role: "Director, Client Experience",
+  //   content:
+  //     "Lorem ipsum dolor sit amet consectetur. Egestas turpis gravida urna habitasse cursus duis nec condimentum. Nec integer facilisis platea amet sem. Facilisis aliquam luctus leo erat nunc. Aenean proin sed senectus ut.",
+  //   avatar: user,
+  //   bgColor: "bg-orange-100",
+  //   quoteColor: "text-orange-300",
+  // },
+  // {
+  //   id: 5,
+  //   name: "Mr. Nidhin Ramesh",
+  //   role: "Director, Client Experience",
+  //   content:
+  //     "Lorem ipsum dolor sit amet consectetur. Egestas turpis gravida urna habitasse cursus duis nec condimentum. Nec integer facilisis platea amet sem. Facilisis aliquam luctus leo erat nunc. Aenean proin sed senectus ut.",
+  //   avatar: user,
+  //   bgColor: "bg-orange-100",
+  //   quoteColor: "text-orange-300",
+  // },
 ];
 
 const Testimonials = () => {
@@ -105,7 +108,7 @@ const Testimonials = () => {
           {testimonials.map((t) => (
             <SwiperSlide key={t.id}>
               <div
-                className={`rounded-3xl p-6 sm:p-8 h-full ${t.bgColor} transition-shadow shadow-md hover:shadow-xl`}
+                className={`rounded-3xl p-6 sm:p-8 min-h-[500px] ${t.bgColor} transition-shadow shadow-md hover:shadow-xl`}
               >
                 <FaQuoteLeft
                   className={`text-5xl  ${t.quoteColor} absolute top-8 left-8 opacity-30`}
@@ -118,9 +121,9 @@ const Testimonials = () => {
                     height={64}
                     className="rounded-full mb-4 object-cover"
                   />
-                  <p className="text-gray-700 mb-4">{t.content}</p>
-                  <p className="font-semibold">{t.name}</p>
-                  <p className="text-sm text-gray-600">{t.role}</p>
+                  <p className="text-gray-700 font-mont mb-4">{t.content}</p>
+                  <p className="font-semibold font-mont">{t.name}</p>
+                  <p className="text-sm text-gray-600 font-mont">{t.role}</p>
                 </div>
               </div>
             </SwiperSlide>

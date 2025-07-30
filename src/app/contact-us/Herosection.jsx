@@ -5,7 +5,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 export default function Herosection() {
     return (
         <>
-            <section className='container my-10 px-4 py-8 mx-auto bg-white font-mont rounded-2xl shadow-xl '>
+            <section className='containers my-10 px-4 py-8 mx-auto bg-white font-mont rounded-2xl shadow-xl '>
                 <h2 className='text-center text-5xl md:text-7xl font-extrabold  text-[#3FB4BA] mb-8'>
                     Contact
                 </h2>
@@ -17,7 +17,7 @@ export default function Herosection() {
                             <div className='bg-[#3FB4BA] rounded-t-xl rounded-br-xl rounded-bl-xl p-4 shadow-md'>
                                 We would love to hear
                             </div>
-        
+
                             <div className='bg-[#3FB4BA] rounded-b-xl rounded-tr-xl rounded-tl-none p-4 mt-[-10px] w-fit shadow-md'>
                                 from you
                             </div>
@@ -27,10 +27,11 @@ export default function Herosection() {
                     {/* Right Box */}
                     <div className='flex-1 flex flex-col justify-center text-gray-600 p-4'>
                         <p className='mb-6 text-lg'>
-                            Lorem ipsum dolor sit amet consectetur. Lobortis enim ante enim
-                            metus et ultricies interdum. Netus malesuada fermentum enim at sed
-                            morbi dis in lorem. Proin sapien tincidunt sed malesuada consequat
-                            pellentesque ipsum. Nibh lectus cras id metus magna.
+                            Our team is always willing to respond your queries and
+                            provide the support you need. Whether you have specific
+                            queries or need general information, we're just a message away.
+                            Fill up the form below and send. We will get back to you promptly.
+                            Connect with us today!
                         </p>
 
                         {/* Social Icons */}

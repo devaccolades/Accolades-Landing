@@ -14,6 +14,17 @@ import { motion } from "framer-motion";
 
 import { BASE_URL } from "../Server";
 
+// Video imports
+// import feVid from "../../../public/videos/featuredWorks/fe1.mp4";
+// import feVid2 from "../../../public/videos/featuredWorks/fe2.mp4";
+// import feVid3 from "../../../public/videos/featuredWorks/fe3.mp4";
+
+// image import
+import feI1 from "../../../public/videos/featuredWorks/feI1.png";
+import feI2 from "../../../public/videos/featuredWorks/feI2.png";
+import feI3 from "../../../public/videos/featuredWorks/feI3.png";
+import avathar from "../../../public/videos/avathar.png";
+
 const containerVariants = {
   hidden: {},
   visible: {
@@ -28,10 +39,44 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const WhatOurClientsSay = ({ data }) => {
-  const videotestimonials = data.videoTestimonial;
+const textTest = [
+  {
+    type: "text",
+    logo: "",
+    text: "Worked with accolades for few of my clients. I do prefer them for more of my upcoming projects. Prompt response from client service. Always there a call away.",
+    name: "Joseph Mampilly",
+    position: "",
+  },
+];
 
-  const textTestimonials = data.testText;
+const VidTest = [
+  {
+    type: "video",
+    video: "/videos/featuredWorks/fe1.mp4",
+    image: feI1,
+    name: "Jomon Chacko",
+    position: "Managing Partner",
+  },
+  {
+    type: "video",
+    video: "/videos/featuredWorks/fe2.mp4",
+    image: feI2,
+    name: "Josbin Itty",
+    position: "Digital Marketing Manager",
+  },
+  {
+    type: "video",
+    video: "/videos/featuredWorks/fe3.mp4",
+    image: feI3,
+    name: "Sijo Sunny",
+    position: "Director",
+  },
+];
+
+const WhatOurClientsSay = ({ data }) => {
+  const videotestimonials = VidTest;
+
+  const textTestimonials = textTest;
   const [progress, setProgress] = useState(0);
   const [playingIndex, setPlayingIndex] = useState(null);
 
@@ -42,7 +87,7 @@ const WhatOurClientsSay = ({ data }) => {
       combinedTestimonials.push({ type: "text", data: textTestimonials[i] });
   }
 
-  // console.log("combinedTestimonials", combinedTestimonials);
+  console.log("combinedTestimonials", combinedTestimonials);
 
   return (
     <section className="ml-0 md:ml-20 mx-auto px-4 py-10">
@@ -106,7 +151,7 @@ const WhatOurClientsSay = ({ data }) => {
                   <div className="relative h-[400px] md:h-[480px] w-full rounded-2xl overflow-hidden shadow hover:shadow-lg transition">
                     {playingIndex === index ? (
                       <video
-                        src={BASE_URL + item.data.oneVideoofTest.url}
+                        src={item.data.video}
                         autoPlay
                         playsInline
                         controls
@@ -118,8 +163,8 @@ const WhatOurClientsSay = ({ data }) => {
                     ) : (
                       <>
                         <Image
-                          src={BASE_URL + item.data.onePosterImage.url}
-                          alt={item.data.name}
+                          src={item.data.image}
+                          alt={item.data.image}
                           fill
                           className="object-cover rounded-2xl"
                         />
@@ -142,20 +187,22 @@ const WhatOurClientsSay = ({ data }) => {
                 ) : (
                   <div className="flex flex-col justify-between bg-[#f0f4f8] w-full rounded-2xl overflow-hidden shadow hover:shadow-lg transition h-[400px] md:h-[480px] p-6 text-left">
                     <div className="flex flex-col items-start">
-                      <Image
-                        src={BASE_URL + item.data.logo.url}
-                        alt="logo"
-                        width={80}
-                        height={80}
-                        className="object-contain h-[80px] w-[80px]"
-                      />
+                      {item.data.image && (
+                        <Image
+                          src={item.data.logo || ""}
+                          alt="logo"
+                          width={80}
+                          height={80}
+                          className="object-contain h-[80px] w-[80px]"
+                        />
+                      )}
                       <p className="text-black font-poppins text-[13px] md:text-[14px] lg:text-[16px] leading-[140%] mt-4">
-                        {item.data.testimonilaText}
+                        {item.data.text}
                       </p>
                     </div>
                     <div className="flex items-center gap-3 mt-4">
                       <Image
-                        src={BASE_URL + item.data.personImage.url}
+                        src={item.data.image || avathar}
                         alt={item.data.name}
                         width={40}
                         height={40}

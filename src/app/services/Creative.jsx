@@ -6,7 +6,7 @@ import creative from "../../../public/services/creative.png";
 
 function Creative() {
   return (
-    <seciton className="w-[90%] mx-auto flex justify-end overflow-visible mt-24 md:mt-96 relative z-10">
+    <seciton className="w-[90%] mx-auto flex justify-end overflow-visible mt-24 md:mt-42 relative z-10">
       <div className="flex gap-[10px] w-full">
         <div className="w-[10%] md:w-[10%] lg:w-[15%]">
           <Image

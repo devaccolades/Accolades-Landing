@@ -129,21 +129,21 @@ function VideoServices({ data }) {
                       slidesPerView:
                         item.videos.some((v) => v.orientation === "vertical") &&
                         !item.videos.some((v) => v.orientation === "horizontal")
-                          ? 2.5
+                          ? 4
                           : 1.5,
                     },
                     1280: {
                       slidesPerView:
                         item.videos.some((v) => v.orientation === "vertical") &&
                         !item.videos.some((v) => v.orientation === "horizontal")
-                          ? 2.5
+                          ? 4
                           : 1.5,
                     },
                     1536: {
                       slidesPerView:
                         item.videos.some((v) => v.orientation === "vertical") &&
                         !item.videos.some((v) => v.orientation === "horizontal")
-                          ? 2.5
+                          ? 4
                           : 1.5,
                     },
                   }}
@@ -210,7 +210,6 @@ function VideoServices({ data }) {
                                       }
                                       src={vid.video}
                                       className="absolute inset-0 w-full h-full object-contain"
-                                      muted
                                       playsInline
                                     />
                                   )}

@@ -3,13 +3,16 @@ import adobeE from "../../../../public/creative/Adobe_After_Effects_CC_icon.svg 
 import adobeC from "../../../../public/creative/Adobe_Creative_Cloud_rainbow_icon.svg 1.png";
 import adobeP from "../../../../public/creative/Adobe_Premiere_Pro_CC_icon.svg 1.png";
 import canva from "../../../../public/creative/Canva-New-Logo-1440x810 1.png";
+import pr from "../../../../public/creative/Adobe_Premiere_Pro_CC_icon.svg 2.svg";
+import illus from "../../../../public/creative/c3e0457062b464bcdaa727faec5642528bcb2fb7.png";
 import Image from "next/image";
 
 const tools = [
   { name: "After Effects", icon: adobeE },
   { name: "Adobe Creative Cloud", icon: adobeC },
-  { name: "Canva Pro", icon: adobeP },
-  { name: "Premiere Pro", icon: canva },
+  { name: "Canva Pro", icon: canva },
+  { name: "Premiere Pro", icon: adobeP },
+  { name: "Adobe Illustrator", icon: illus },
 ];
 
 const Tools = () => {
@@ -44,10 +47,12 @@ const Tools = () => {
           </div>
 
           <p className="text-gray-700 text-sm max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur. Eget porttitor elementum
-            hendrerit a diam suspendisse tellus. Consequat enim auctor dignissim
-            mattis vitae tincidunt. Facilisis mi neque tellus viverra ac mauris
-            adipiscing nulla. Praesent purus ornare non eros et.
+            Our team leverages industry-leading tools to bring creativity and
+            precision to every project. From motion graphics with After Effects
+            to design and layout with Illustrator and Canva Pro, we ensure every
+            visual asset meets the highest standards. These platforms empower us
+            to craft compelling content, streamline collaboration, and deliver
+            impactful results across digital and print media.
           </p>
         </div>
       </section>

@@ -108,7 +108,7 @@ const Testimonials = () => {
           {testimonials.map((t) => (
             <SwiperSlide key={t.id}>
               <div
-                className={`rounded-3xl p-6 sm:p-8 min-h-[500px] ${t.bgColor} transition-shadow shadow-md hover:shadow-xl`}
+                className={`rounded-3xl p-2 md:p-8 min-h-[500px] ${t.bgColor} transition-shadow shadow-md hover:shadow-xl`}
               >
                 <FaQuoteLeft
                   className={`text-5xl  ${t.quoteColor} absolute top-8 left-8 opacity-30`}
@@ -121,7 +121,7 @@ const Testimonials = () => {
                     height={64}
                     className="rounded-full mb-4 object-cover"
                   />
-                  <p className="text-gray-700 font-mont mb-4">{t.content}</p>
+                  <p className="text-gray-700 font-mont text-[13px] md:text-[14px] mb-4">{t.content}</p>
                   <p className="font-semibold font-mont">{t.name}</p>
                   <p className="text-sm text-gray-600 font-mont">{t.role}</p>
                 </div>

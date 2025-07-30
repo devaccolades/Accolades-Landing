@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ProcessImg from "../../../public/video-production/process.svg";
+import ProcessImg from "../../../../../public/video-production/process.svg";
 
 export default function Process() {
   return (

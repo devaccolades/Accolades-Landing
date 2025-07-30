@@ -1,5 +1,5 @@
 import React from 'react'
-import VideoSlider from '../services/creative/VideoSlider'
+import VideoSlider from '../VideoSlider'
 
 export default function FeaturedWork() {
   return (

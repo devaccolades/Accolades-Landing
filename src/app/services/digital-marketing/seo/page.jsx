@@ -8,12 +8,14 @@ export default function page() {
   return (
     <>
     <Navbar />
-    <div className="bg-gradient-to-br from-white to-[#e6f4f9]">
+    <main className="bg-[#F1F1F1]">
       <HeroSection />
       <Process />
       <Types />
-    </div>
+    </main>
+    <main className="-mt-[65px]">
     <Footer />
+    </main>
     </>
   )
 }

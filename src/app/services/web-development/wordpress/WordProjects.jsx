@@ -55,9 +55,9 @@ export default function WordProjects() {
 
           <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 md:mb-4">Web Projects</h2>
           <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
-            Accolades is envisioned to cater the newest and finest web development
-            solutions to businesses in Kerala. We perceive the worth of your
-            investments, which is why our professional web development team is
+            We build WordPress sites that are fast, sleek, and easy to run. Each project reflects smart design, simple flow,
+             and strong performance. Our websites load fast, rank well, and work across all screens. Clients trust us for 
+             websites that grow with their brand.
 
           </p>
         </div>

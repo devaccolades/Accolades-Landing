@@ -65,9 +65,9 @@ export default function WebsiteProjects() {
 
           <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 ">Web Projects</h2>
           <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
-            Accolades is envisioned to cater the newest and finest web development
-            solutions to businesses in Kerala. We perceive the worth of your
-            investments, which is why our professional web development team is
+            We craft digital spaces that elevate your brand. From builders and education websites to study abroad 
+            and many, our work spans diverse industries. Each site blends smart design, smooth flow, and solid tech.
+             We help brands stand out and grow online with ease.
 
           </p>
         </div>

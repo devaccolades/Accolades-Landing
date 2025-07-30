@@ -8,39 +8,50 @@ import family from "../../../../../public/home/family.png";
 import niahara from "../../../../../public/home/nihara.png";
 import silk from "../../../../../public/home/silk_galeria.png";
 
-const slider1 = [
-  { id: 1, src: alappat, alt: "Alappat" },
-  { id: 2, src: alappat, alt: "Family" },
-  { id: 3, src: alappat, alt: "Niahara" },
-  { id: 4, src: alappat, alt: "Silk Galeria" },
-  { id: 4, src: alappat, alt: "Silk Galeria" },
-  { id: 4, src: alappat, alt: "Silk Galeria" },
-  { id: 5, src: alappat, alt: "Silk Galeria" },
+import pack1 from "../../../../../public/creative/branding/1.1 (1)-min.jpg";
+import pack2 from "../../../../../public/creative/branding/Mockup_002-min.jpg";
+import pack3 from "../../../../../public/creative/branding/Poster02-min.jpg";
+import pack4 from "../../../../../public/creative/branding/Black papper 150_11zon.webp";
+import pack5 from "../../../../../public/creative/branding/GARAM MASALA 100g-min_11zon.webp";
+import pack6 from "../../../../../public/creative/branding/SAMABAR POWDER 100g_11zon.webp";
+
+import brand1 from "../../../../../public/creative/branding/01 (1)-min.jpg";
+import brand2 from "../../../../../public/creative/branding/01-min.jpg";
+import brand3 from "../../../../../public/creative/branding/Square_Book_Mockup_1 copy-min.jpg";
+
+import logo1 from "../../../../../public/creative/branding/0222-min.jpg";
+import logo2 from "../../../../../public/creative/branding/Asset 1.png";
+
+const logo = [
+  { id: 1, src: logo1, alt: "logo" },
+  { id: 2, src: logo2, alt: "logo" },
 ];
 
-const slider2 = [
-  { id: 1, src: family, alt: "Alappat" },
-  { id: 2, src: family, alt: "Family" },
-  { id: 3, src: family, alt: "Niahara" },
-  { id: 4, src: family, alt: "Silk Galeria" },
-  { id: 5, src: family, alt: "Silk Galeria" },
-  { id: 5, src: family, alt: "Silk Galeria" },
-  { id: 5, src: family, alt: "Silk Galeria" },
+const branding = [
+  { id: 1, src: brand1, alt: "brand" },
+  { id: 2, src: brand2, alt: "brand" },
+  { id: 3, src: brand3, alt: "brand" },
+  { id: 1, src: brand1, alt: "brand" },
+  { id: 2, src: brand2, alt: "brand" },
+  { id: 3, src: brand3, alt: "brand" },
 ];
-const slider3 = [
-  { id: 1, src: niahara, alt: "Alappat" },
-  { id: 2, src: niahara, alt: "Family" },
-  { id: 2, src: niahara, alt: "Family" },
-  { id: 2, src: niahara, alt: "Family" },
-  { id: 3, src: niahara, alt: "Niahara" },
-  { id: 4, src: silk, alt: "Silk Galeria" },
-  { id: 5, src: silk, alt: "Silk Galeria" },
+const packing = [
+  { id: 1, src: pack1, alt: "one" },
+  { id: 5, src: pack5, alt: "two" },
+  { id: 3, src: pack3, alt: "three" },
+  { id: 4, src: pack4, alt: "one" },
+  { id: 2, src: pack2, alt: "two" },
+  { id: 6, src: pack6, alt: "three" },
 ];
 
 const Featured = () => {
   const [active, setActive] = useState("Logo");
 
-  const buttons = ["Logo", "Package", "Rebranding"];
+  const buttons = [
+    // "Logo",
+    "Package",
+    "Rebranding",
+  ];
 
   return (
     <section className=" py-5">
@@ -64,9 +75,9 @@ const Featured = () => {
         ))}
       </div>
       <div className="relative ">
-        {active === "Logo" && <ProjectSlider images={slider1} />}
-        {active === "Package" && <ProjectSlider images={slider2} />}
-        {active === "Rebranding" && <ProjectSlider images={slider3} />}
+        {/* {active === "Logo" && <ProjectSlider images={logo} />} */}
+        {active === "Package" && <ProjectSlider images={packing} />}
+        {active === "Rebranding" && <ProjectSlider images={branding} />}
       </div>
     </section>
   );

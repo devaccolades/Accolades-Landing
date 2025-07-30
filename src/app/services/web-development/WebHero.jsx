@@ -37,23 +37,26 @@ export default function WebHero() {
               Web Development
             </h2>
             <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%]">
-              Accolades is envisioned to cater the newest and finest web development
-              solutions to businesses in Kerala. We perceive the worth of your
-              investments, which is why our professional web development team is
-              here to supply you with a host of robust services. Our classy website
-              styles are aesthetically pleasing and elevate your business to
-              unprecedented heights of success. We have 5+ years' expertise and
-              expert web designers who offer cost-effective creative web design and
-              web development solutions. We style websites that nurture your leads
-              and turn them into long-lasting high-paying customers. Accolades, the
-              digital marketing company in Cochin, offers the most affordable,
-              responsive & professional web design services in Kochi that help you
-              optimize your lead conversion. We proactively commit to the success
-              of your website. Our specialty in functionality, lead-generating
-              potential, and conversion ability of your website — rather than
-              aesthetics alone — helps us bring you measurable results. Let's stand
-              above the cloud and rise above the noise.
+              Accolades Integrated deliver innovative and cost-effective web development services for businesses
+             in Kerala. With over five years of expertise, our skilled web designers create responsive, 
+             lead-generating websites that elevate your business.
             </p>
+            <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%] mt-2">
+             We focus on functionality, usability, and conversion optimization, ensuring your site turns visitors
+           into loyal customers. Our designs are both visually appealing and performance-driven, tailored to meet
+            your business goals. 
+              </p>
+               <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%] mt-2">
+             As a trusted web development company in Kochi, we provide scalable solutions that align with your needs. 
+             Our commitment to your success drives us to craft websites that stand out and perform exceptionally. 
+              </p>
+               <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%] mt-2">
+            Choose Accolades for professional web design services that amplify your digital presence and help you achieve
+           measurable results. Let’s transform your vision into a powerful, lead-generating website that stands above the competition. 
+              </p>
+              <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%] mt-2">
+             Optimize your online growth with us—your trusted partner in web development in Kerala.
+             </p>
           </div>
         </div>
       </div>

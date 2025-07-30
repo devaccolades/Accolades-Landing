@@ -6,9 +6,55 @@ import {
   FaBars,
   FaTimes,
   FaChevronRight,
+  FaChevronLeft,
   FaChevronDown,
   FaArrowLeft,
 } from "react-icons/fa";
+
+import Link from "next/link";
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about-us" },
+  { label: "Contact", href: "/contact-us" },
+  { label: "Careers", href: "/careers" },
+  { label: "Blog", href: "/blog" },
+];
+
+const mobileServicePages = {
+  digital: [
+    {
+      label: "Performance Marketing",
+      href: "/services/digital-marketing/performance",
+    },
+    { label: "Google Ads", href: "/services/digital-marketing/google-ads" },
+    {
+      label: "Search Engine Optimization",
+      href: "/services/digital-marketing/seo",
+    },
+    {
+      label: "Social Media Marketing",
+      href: "/services/digital-marketing/social-media",
+    },
+    { label: "Content Marketing", href: "/services/digital-marketing/content" },
+  ],
+  web: [
+    {
+      label: "FullStack Web Development",
+      href: "/services/web-development/fullstack",
+    },
+    { label: "WordPress Pages", href: "/services/web-development/wordpress" },
+    { label: "Ecommerce Website", href: "/services/web-development/ecommerce" },
+  ],
+  creative: [
+    { label: "Graphics & Motion", href: "/services/creative/graphics-motion" },
+    {
+      label: "Branding & Packaging",
+      href: "/services/creative/branding-packaging",
+    },
+    { label: "Video Production", href: "/services/creative/video-production" },
+  ],
+};
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,28 +72,62 @@ const Navbar = () => {
   const servicePages = {
     Creative: {
       title: "Creative Services",
+      href: "/services/creative",
       services: [
-        "Graphics & Motion",
-        "Branding & Packaging",
-        "Video Production",
+        {
+          label: "Graphics & Motion",
+          href: "/services/creative/graphics-motion",
+        },
+        {
+          label: "Branding & Packaging",
+          href: "/services/creative/branding-packaging",
+        },
+        {
+          label: "Video Production",
+          href: "/services/creative/video-production",
+        },
       ],
     },
     "Digital Marketing": {
       title: "Digital Services",
+      href: "/services/digital-marketing",
       services: [
-        "Performance Marketing",
-        "Google Ads",
-        "Search Engine Optimization",
-        "Social Media Marketing",
-        "Content Marketing",
+        {
+          label: "Performance Marketing",
+          href: "/services/digital-marketing/performance-marketing",
+        },
+        { label: "Google Ads", href: "/services/digital-marketing/google-ads" },
+        {
+          label: "Search Engine Optimization",
+          href: "/services/digital-marketing/search-engine-optimization",
+        },
+        {
+          label: "Social Media Marketing",
+          href: "/services/digital-marketing/smm",
+        },
+        {
+          label: "Content Marketing",
+          href: "/services/digital/content-marketing",
+        },
       ],
     },
     "Web Development": {
       title: "Web Services",
+      href: "/services/web-development",
+
       services: [
-        "FullStack Web Development",
-        "WordPress Pages",
-        "Ecommerce Website",
+        {
+          label: "FullStack Web Development",
+          href: "/services/web-development/fullstack-development",
+        },
+        {
+          label: "WordPress Pages",
+          href: "/services/web-development/wordpress",
+        },
+        {
+          label: "Ecommerce Website",
+          href: "/services/web-development/ecommerce",
+        },
       ],
     },
   };
@@ -137,15 +217,17 @@ const Navbar = () => {
       >
         <header className="containers bg-transparent py-3 flex items-center justify-between relative z-50">
           {/* Logo */}
-          <div className="flex items-center gap-2 flex-shrink-0">
-            <Image
-              src={logo}
-              alt="Accolades Logo"
-              width={100}
-              height={100}
-              className="w-auto h-[40px] "
-            />
-          </div>
+          <Link href="/">
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <Image
+                src={logo}
+                alt="Accolades Logo"
+                width={100}
+                height={100}
+                className="w-auto h-[40px] "
+              />
+            </div>
+          </Link>
 
           {/* Desktop Right Section (768px and above) */}
           <div className="hidden md:flex items-center gap-4 xl:gap-6">
@@ -183,7 +265,8 @@ const Navbar = () => {
               >
                 <div className="py-2">
                   {Object.keys(servicePages).map((service, index) => (
-                    <div
+                    <Link
+                      href={servicePages[service].href}
                       key={service}
                       className="cursor-pointer hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 text-[#00777D] hover:text-[#005a5f] px-4 py-3 transition-all duration-300 transform hover:translate-x-2 hover:shadow-sm text-sm border-b border-gray-100 last:border-b-0 flex items-center justify-between group"
                       onMouseEnter={() => setActiveServicePage(service)}
@@ -193,7 +276,7 @@ const Navbar = () => {
                         {service}
                       </span>
                       <FaChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:translate-x-1" />
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -215,15 +298,16 @@ const Navbar = () => {
                   <div className="py-2">
                     {servicePages[activeServicePage]?.services.map(
                       (item, index) => (
-                        <div
-                          key={item}
-                          className="cursor-pointer hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 text-[#00777D] hover:text-[#005a5f] px-4 py-3 transition-all duration-300 transform hover:translate-x-2 hover:shadow-sm text-sm border-b border-gray-100 last:border-b-0 group"
-                          style={{ transitionDelay: `${index * 30}ms` }}
-                        >
-                          <span className="group-hover:font-medium transition-all duration-200">
-                            {item}
-                          </span>
-                        </div>
+                        <Link href={item.href} key={item.label}>
+                          <div
+                            className="cursor-pointer hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 text-[#00777D] hover:text-[#005a5f] px-4 py-3 transition-all duration-300 transform hover:translate-x-2 hover:shadow-sm text-sm border-b border-gray-100 last:border-b-0 group"
+                            style={{ transitionDelay: `${index * 30}ms` }}
+                          >
+                            <span className="group-hover:font-medium transition-all duration-200">
+                              {item.label}
+                            </span>
+                          </div>
+                        </Link>
                       )
                     )}
                   </div>
@@ -252,19 +336,18 @@ const Navbar = () => {
                 }`}
               >
                 <div className="py-2">
-                  {["Home", "About", "Contact", "Careers", "Blog"].map(
-                    (item, index) => (
+                  {navItems.map((item, index) => (
+                    <Link key={item.label} href={item.href}>
                       <div
-                        key={item}
                         className="cursor-pointer hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 text-[#00777D] hover:text-[#005a5f] px-4 py-3 transition-all duration-300 transform hover:translate-x-2 hover:shadow-sm text-sm border-b border-gray-100 last:border-b-0 group"
                         style={{ transitionDelay: `${index * 50}ms` }}
                       >
                         <span className="group-hover:font-medium transition-all duration-200">
-                          {item}
+                          {item.label}
                         </span>
                       </div>
-                    )
-                  )}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
@@ -391,8 +474,6 @@ const Navbar = () => {
                     />
                   </div>
                 </div>
-
-                {/* Services Submenu */}
                 <div
                   className={`flex flex-col items-center w-full transition-all duration-500 ${
                     isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"

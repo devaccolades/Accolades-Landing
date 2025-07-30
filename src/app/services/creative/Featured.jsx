@@ -5,7 +5,25 @@ import VideoSlider from "./VideoSlider";
 import shade from "../../../../public/creative/Vector (2).svg";
 import Image from "next/image";
 
+import p1 from "../../../../public/creative/2-7-25 copy-min.jpg";
+import p2 from "../../../../public/creative/22-5-25 copy-min.jpg";
+import p3 from "../../../../public/creative/24-5-25 copy-min.jpg";
+import p4 from "../../../../public/creative/arya bhangi 7-7-25-min.jpg";
+import p5 from "../../../../public/creative/corel1 copy-min.jpg";
+import p6 from "../../../../public/creative/curegarden 05 copy-min.jpg";
+import p7 from "../../../../public/creative/futura 07  bali copy-min.jpg";
+
 const categories = ["Branding & Graphics", "Motion & Video"];
+
+const posters = [
+  { id: 1, src: p1, alt: "poster" },
+  { id: 2, src: p2, alt: "poster" },
+  { id: 3, src: p3, alt: "poster" },
+  { id: 4, src: p4, alt: "poster" },
+  { id: 5, src: p5, alt: "poster" },
+  { id: 6, src: p6, alt: "poster" },
+  { id: 7, src: p7, alt: "poster" },
+];
 
 const Featured = () => {
   const [active, setActive] = useState("Branding & Graphics");
@@ -39,7 +57,7 @@ const Featured = () => {
       </div>
       <div className="relative ">
         {/* Conditionally render components */}
-        {active === "Branding & Graphics" && <ProjectSlider />}
+        {active === "Branding & Graphics" && <ProjectSlider images={posters} />}
         {active === "Motion & Video" && <VideoSlider />}
       </div>
     </section>

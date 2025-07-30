@@ -3,9 +3,9 @@ import Icon from '../../public/video-production/icon.svg'
 
 export default function Card({sectionTitle, videoTypes, showButton = false, buttons = []}) {
   return (
-    <section className="py-10 bg-white">
+    <section className="lg:py-10 md:py-8 py-6 bg-white">
       <div className="containers">
-        <div className="flex items-start justify-between mb-8">
+        <div className="flex items-start justify-between lg:mb-8 md:mb-6 mb-4 ">
           <h2 className="font-mont font-bold xl:text-[40px] lg:text-[32px] md:text-[26px] text-[20px] leading-[130%] text-[#3FB4BA]">
             {sectionTitle}
           </h2>
@@ -31,7 +31,7 @@ export default function Card({sectionTitle, videoTypes, showButton = false, butt
                 Graphics
               </button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-12">
               {videoTypes.graphics.map((video, index) => (
                 <div
                   key={index}
@@ -64,7 +64,7 @@ export default function Card({sectionTitle, videoTypes, showButton = false, butt
                 Motion Design
               </button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {videoTypes.motionDesign.map((video, index) => (
                 <div
                   key={index}
@@ -91,7 +91,7 @@ export default function Card({sectionTitle, videoTypes, showButton = false, butt
 
         {/* Original single array format (for backward compatibility) */}
         {Array.isArray(videoTypes) && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {videoTypes.map((video, index) => (
               <div
                 key={index}

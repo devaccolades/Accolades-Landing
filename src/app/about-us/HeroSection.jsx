@@ -5,12 +5,12 @@ export default function HeroSection() {
   return (
     <>
       <div className="bg-gradient-to-br from-white to-[#e6f4f9]">
-        <h1 className="font-mont font-bold xl:text-[48px] lg:text-[42px] md:text-[36px] text-[30px] leading-[100%] text-center text-[#218D8C] pt-6 lg:pt-12 lg:pb-8">
-          Meet Accolades
+        <h1 className="font-mont font-bold xl:text-[48px] lg:text-[42px] md:text-[36px] text-[30px] leading-[100%] text-center text-[#218D8C] pt-16 md:pt-20 lg:pt-26 lg:pb-8">
+          Empowered Excellence
         </h1>
 
         <section className="lg:py-16 md:py-12 py-6">
-          <div className="containers grid md:grid-cols-2 md:gap-12 gap-8 items-center">
+          <div className="containers grid md:grid-cols-2 md:gap-6 gap-4 items-center">
             <span className="bg-white md:p-8 p-6 rounded-xl shadow-md">
               <h2 className="font-mont font-semibold xl:text-[42px] lg:text-[38px] md:text-[32px] text-[26px] leading-[110%]  text-[#199eb8] md:mb-4 mb-2 ">
                 Accolades
@@ -19,20 +19,15 @@ export default function HeroSection() {
                 The ideal platform for all your queries
               </h3>
               <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
-                The ultimatum of our successful company is to adequately provide
-                our prospective clients with the required service that they
-                promptly demand from us. To procure the desired result we
-                earnestly strive with all our collaborative effort. It’s our
-                genuine commitment and ultimate responsibility to amend the
-                success rate for all our specific clients.
+                We provide innovative digital marketing solutions to answer all your business needs. From strategy to execution, our expert team ensures seamless support, helping you connect, grow, and excel in the digital space. We are your trusted partner for maximizing engagement, enhancing visibility, and driving success across online platforms..
               </p>
             </span>
 
-            <div className="flex justify-center md:justify-end w-full h-full">
+            <div className="flex justify-center md:justify-end items-center w-full h-full">
               <Image
                 src={heroImg}
                 alt="Accolades Graphic"
-                className="xl:w-[500px] lg:w-[415px] md:w-[300px] w-full "
+                className="xl:w-[500px] lg:w-[415px] md:w-[300px] w-full h-[200px] "
               />
             </div>
           </div>
@@ -62,14 +57,7 @@ export default function HeroSection() {
             </div>
             <div className="md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
               <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
-                Lorem ipsum dolor sit amet consectetur. Dolor massa mauris
-                praesent volutpat egestas sapien elementum nibh sed. Vitae dui
-                leo turpis dui in laoreet. Aliquet nunc scelerisque enim orci.
-                Lobortis non fringilla venenatis vulputate tincidunt ultrices
-                volutpat aliquet. Scelerisque eu risus viverra interdum mattis
-                dis dui tempus. Viverra nunc sed amet vel cursus viverra. Erat
-                nibh justo duis maecenas purus tristique placerat. Enim
-                pellentesque dolor integer non justo.
+                We are a dedicated team of digital marketing experts based in Kochi passionate about driving your brand's growth. With innovative strategies and tailored solutions, we help businesses thrive in the digital landscape. Our focus on creativity, data-driven insights, and cutting-edge technology ensures impactful results. Partner with us to elevate your online presence, enhance engagement, and achieve measurable success. We have physical presence at Calicut, Trivandrum, Bengaluru, Mumbai and we serve globally.
               </p>
             </div>
           </div>
@@ -78,14 +66,7 @@ export default function HeroSection() {
 
             <div className="md:w-1/2 bg-white p-8 rounded-lg shadow-lg mb-8 md:mb-0 order-2 md:order-1">
               <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
-                Lorem ipsum dolor sit amet consectetur. Dolor massa mauris
-                praesent volutpat egestas sapien elementum nibh sed. Vitae dui
-                leo turpis dui in laoreet. Aliquet nunc scelerisque enim orci.
-                Lobortis non fringilla venenatis vulputate tincidunt ultrices
-                volutpat aliquet. Scelerisque eu risus viverra interdum mattis
-                dis dui tempus. Viverra nunc sed amet vel cursus viverra. Erat
-                nibh justo duis maecenas purus tristique placerat. Enim
-                pellentesque dolor integer non justo.
+                We deliver complete digital marketing solutions tailored to your goals. From SEO and social media management to content creation and analytics, we enhance your brand’s online visibility. Other services include Google and Meta Ads, web design, and graphic design. With compelling graphic designs, we create impactful brand visuals, enhancing your online presence. . By combining creativity with data-driven methods, we deliver measurable results that drive engagement, boost conversions, and fuel growth.
               </p>
             </div>
 

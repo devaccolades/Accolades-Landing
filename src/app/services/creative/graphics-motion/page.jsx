@@ -1,17 +1,23 @@
+import Footer from "@/component/Footer";
 import FeaturedWork from "./FeatureWork";
 import HeroSection from "./HeroSection";
 import Platforms from "./Platforms";
 import Services from "./Services";
+import Navbar from "@/component/Navbar";
 
 export default function page() {
   return (
     <>
-    <div className="bg-gradient-to-br from-white to-[#e6f4f9]">
+    <Navbar />
+    <main className="bg-[#F1F1F1]">
       <HeroSection />
       <Services />
       <FeaturedWork />
       <Platforms />
-    </div>
+    </main>
+    <main className="-mt-[65px]">
+      <Footer />
+    </main>
     </>
   )
 }

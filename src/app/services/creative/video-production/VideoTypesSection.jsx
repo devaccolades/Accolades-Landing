@@ -1,7 +1,7 @@
-import corporateImg from "../../../public/video-production/corporate.png";
-import socialReelsImg from "../../../public/video-production/social.png";
-import testimonialImg from "../../../public/video-production/testimonial.png";
-import adFilmsImg from "../../../public/video-production/ad-films.png";
+import corporateImg from "../../../../../public/video-production/corporate.png";
+import socialReelsImg from "../../../../../public/video-production/social.png";
+import testimonialImg from "../../../../../public/video-production/testimonial.png";
+import adFilmsImg from "../../../../../public/video-production/ad-films.png";
 import Card from "@/component/Card";
 
 const videoTypesData = [

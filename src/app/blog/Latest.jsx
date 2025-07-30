@@ -12,6 +12,7 @@ import img13 from "../../../public/blog/img13.png";
 import img14 from "../../../public/blog/img14.png";
 import img15 from "../../../public/blog/img15.png";
 import img16 from "../../../public/blog/img16.png";
+import Link from "next/link";
 
 const BlogCardsGrid = () => {
   const blogPosts = [
@@ -251,9 +252,9 @@ const BlogCardsGrid = () => {
               </h3>
               <div className="flex-shrink-0">
                 <div className="md:w-14 md:h-14 h-10 w-10 rounded-full border-4 border-[#BFE1DE] flex items-center justify-center">
-                  <button className="md:w-10 md:h-10 w-8 h-8 bg-teal-600 hover:bg-teal-700 text-white rounded-full flex items-center justify-center transition-colors duration-200 group-hover:scale-110 transform">
+                  <Link href={`/blog/${post.id}`} className="md:w-10 md:h-10 w-8 h-8 bg-teal-600 hover:bg-teal-700 text-white rounded-full flex items-center justify-center transition-colors duration-200 group-hover:scale-110 transform">
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -264,18 +265,17 @@ const BlogCardsGrid = () => {
   };
 
   return (
-    <div className="w-full containers mx-auto ">
+    <div className="w-full containers mx-auto pb-16">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         {currentPosts.map((post) => (
-          <BlogCard key={post.id} post={post} />
+          <BlogCard  post={post} key={post.id} />
         ))}
       </div>
 
-      {/* Pagination Controls */}
       <div className="flex justify-center items-center mt-8 pb-8 space-x-2">
         <button
           onClick={previousPage}
-          disabled={currentPage === 1} // Disable if on the first page
+          disabled={currentPage === 1}
           className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200
     ${
       currentPage === 1

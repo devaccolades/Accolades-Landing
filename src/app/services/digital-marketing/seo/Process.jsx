@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
-import img18 from '../../../../public/seo/image18.svg'
-import img19 from '../../../../public/seo/image19.svg'
-import img20 from '../../../../public/seo/image20.svg'
-import img21 from '../../../../public/seo/image21.svg'
-import img22 from '../../../../public/seo/image22.svg'
-import img23 from '../../../../public/seo/image23.svg'
-import img24 from '../../../../public/seo/image24.svg'
-import img26 from '../../../../public/seo/image26.svg'
-import img27 from '../../../../public/seo/image27.svg'
+import img18 from '../../../../../public/seo/image18.svg'
+import img19 from '../../../../../public/seo/image19.svg'
+import img20 from '../../../../../public/seo/image20.svg'
+import img21 from '../../../../../public/seo/image21.svg'
+import img22 from '../../../../../public/seo/image22.svg'
+import img23 from '../../../../../public/seo/image23.svg'
+import img24 from '../../../../../public/seo/image24.svg'
+import img26 from '../../../../../public/seo/image26.svg'
+import img27 from '../../../../../public/seo/image27.svg'
 
 const seoSteps = [
   {

@@ -22,9 +22,9 @@ export default function Portfolio() {
 
   return (
     <>
-      <div className="containers mx-auto lg:py-16 md:py-12 py-6">
+      <div className="containers mx-auto lg:pt-16 md:pt-12 pyt-6 pb-10 md:pb-20 lg:pb-30">
         <h1 className="text-center font-mont font-semibold xl:text-[56px] lg:text-[46px] md:text-[36px] text-[26px] leading-[110%] md:w-[60%] lg:w-[65%] xl:w-[55%] mx-auto">
-          <span className="text-[#3FB4BA]">Innovative Inventions </span>With Quality
+          <span className="text-[#3FB4BA]">Creative Solutions</span> Delivering Quality
         </h1>
         <div className="flex ">
         <Image src={Invention} alt="invention-img" className=" py-6 mx-auto h-full w-auto" />
@@ -59,7 +59,7 @@ export default function Portfolio() {
             ))}
           </div>
 
-          <div className="hidden md:flex lg:flex relative flex-col justify-center items-center md:justify-start md:items-start lg:items-center lg:justify-center text-center lg:text-left lg:pl-20 order-1 lg:order-2">
+          <div className="hidden md:flex lg:flex relative flex-col justify-center md:justify-start items-start lg:justify-center text-center lg:text-left lg:pl-20 order-1 lg:order-2">
             <div className="absolute -z-10 top-0 right-1/4 translate-x-1/2 opacity-30">
               <div className="w-0 h-0 border-l-[30px] border-l-transparent border-b-[50px] border-b-blue-200 border-r-[30px] border-r-transparent"></div>
             </div>
@@ -71,12 +71,12 @@ export default function Portfolio() {
             </div>
 
             <p className="font-mont font-normal xl:text-[44px] lg:text-[38px] md:text-[32px] leading-[130%] text-[#3F3F3F] mb-2">
-              Explore Portfolio
+              See Our Impact
             </p>
             <h2 className="font-mont font-semibold xl:text-[44px] lg:text-[38px] md:text-[32px] leading-[110%] tracking-[3%] text-[#3FB4BA]">
-              Our <br />
+              Latest  <br />
               <span className="font-mont font-bold xl:text-[44px] lg:text-[38px] md:text-[32px] leading-[130%] text-[#3F3F3F]">
-                Latest
+                Creations
               </span>
             </h2>
           </div>

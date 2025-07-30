@@ -1,4 +1,4 @@
-import Featured from "../services/creative/Featured";
+import Featured from "../Featured";
 
 export default function FeatureWork() {
   return (

@@ -53,27 +53,27 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-center md:text-left text-sm">
               <li>
-                <a href="#" className="hover:text-teal-700 transition">
+                <a href="/" className="hover:text-teal-700 transition">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-teal-700 transition">
+                <a href="/about-us" className="hover:text-teal-700 transition">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-teal-700 transition">
+                <a href="/services" className="hover:text-teal-700 transition">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-teal-700 transition">
+                <a href="/careers" className="hover:text-teal-700 transition">
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-teal-700 transition">
+                <a href="/blogs" className="hover:text-teal-700 transition">
                   Blogs
                 </a>
               </li>
@@ -100,8 +100,9 @@ const Footer = () => {
           </h4>
           <p className="text-[15px] leading-relaxed">
             Accolades Integrated Pvt Ltd <br />
-            No.32/3071 – B, First Floor, Anjiparambil Building, <br />
-            Ponnurunni, NH Bypass, Vyttila, Kochi – 682019
+            Rahmath Building, 46/2056 - A, AKG Vayanasala Road, Chakkaraparambu,
+            <br />
+            Vennala, Kochi, Ernakulam, Kerala 682028
           </p>
         </div>
       </div>
@@ -109,29 +110,29 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="containers py-6 flex flex-col-reverse md:flex-row items-center justify-between gap-4  px-2 relative">
         <p className="text-sm text-center md:text-left">
-          © 2022-23 | All Rights Reserved
+          © 2025 | All Rights Reserved
         </p>
         <div className="flex gap-3">
           <a
-            href="#"
+            href="https://www.facebook.com/accoladesmc/"
             className="p-2 border rounded-sm hover:bg-gray-100 transition"
           >
             <FaFacebookF size={16} />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/accolades_integrated"
             className="p-2 border rounded-sm hover:bg-gray-100 transition"
           >
             <FaInstagram size={16} />
           </a>
-          <a
+          {/* <a
             href="#"
             className="p-2 border rounded-sm hover:bg-gray-100 transition"
           >
             <FaXTwitter size={16} />
-          </a>
+          </a> */}
           <a
-            href="#"
+            href="https://ca.linkedin.com/company/accoladesintegrated"
             className="p-2 border rounded-sm hover:bg-gray-100 transition"
           >
             <FaLinkedinIn size={16} />

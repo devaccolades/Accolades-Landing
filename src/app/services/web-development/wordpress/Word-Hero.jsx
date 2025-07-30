@@ -4,10 +4,11 @@
 import Image from "next/image";
 import React from "react";
 import Hero from "../../../../../public/web/word.png";
+import Link from "next/link"
 
 export default function WordpressHero() {
   return (
-    <div className="py-6 md:py-12 px-4 md:px-10 lg:px-20">
+    <div className="pt-20 pb-8 px-4 md:px-10 lg:px-20">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="bg-white rounded-[30px] py-6 px-4">
@@ -37,9 +38,11 @@ export default function WordpressHero() {
             <p className="text-gray-700 font-mont text-[12px] lg:text-[14px] xl:text-[16px] leading-[130%]">
              From lightning-fast blogs to stunning landing pages — we make WordPress work for you.
             </p>
-            <button className="mt-4 px-6 py-2 bg-[#4bb9af] text-white rounded-4xl font-mont font-semibold hover:bg-[#17a19b] transition-colors">
-             Get a Creative Proposal
-            </button>
+         <Link href="/contact-us">
+        <button className="mt-4 px-6 py-2 bg-[#4bb9af] text-white rounded-4xl font-mont font-semibold hover:bg-[#17a19b] transition-colors">
+          Get a Creative Proposal
+        </button>
+      </Link>
           </div>
         </div>
       </div>

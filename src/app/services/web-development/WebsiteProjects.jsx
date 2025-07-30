@@ -11,38 +11,47 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import img1 from "../../../../public/web/abe.jpg";
+import img2 from "../../../../public/web/abls.jpg";
+import img3 from "../../../../public/web/alpha.jpg";
+import img4 from "../../../../public/web/atc.jpg";
+import img5 from "../../../../public/web/cidbi.jpg";
+import img6 from "../../../../public/web/ggc.jpg";
+import img7 from "../../../../public/web/na-bu.jpg";
+import img8 from "../../../../public/web/green.jpg";
+
 const projects = [
   {
-    title: "CLASSIC HOMES",
-    image: classic,
+    title: "ABE SERVICES",
+    image: img1,
   },
   {
-    title: "JUGALBANDHI",
-    image: jugal,
+    title: "ABLS HUMAN RESOURCES",
+    image: img2,
   },
   {
-    title: "CLASSIC HOMES",
-    image: classic,
+    title: "ALPHA ARC",
+    image: img3,
   },
   {
-    title: "JUGALBANDHI",
-    image: jugal,
+    title: "ATC KODANAD",
+    image: img4,
   },
   {
-    title: "CLASSIC HOMES",
-    image: classic,
+    title: "CIDBI",
+    image: img5,
   },
   {
-    title: "JUGALBANDHI",
-    image: jugal,
+    title: "GO GREEN COMPANY",
+    image: img6,
   },
   {
-    title: "CLASSIC HOMES",
-    image: classic,
+    title: "NATIONAL BUILDERS",
+    image: img7
   },
   {
-    title: "JUGALBANDHI",
-    image: jugal,
+    title: "GREEN TEA",
+    image: img8,
   },
 ];
 
@@ -56,9 +65,9 @@ export default function WebsiteProjects() {
 
           <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 ">Web Projects</h2>
           <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
-            Accolades is envisioned to cater the newest and finest web development
-            solutions to businesses in Kerala. We perceive the worth of your
-            investments, which is why our professional web development team is
+            We craft digital spaces that elevate your brand. From builders and education websites to study abroad 
+            and many, our work spans diverse industries. Each site blends smart design, smooth flow, and solid tech.
+             We help brands stand out and grow online with ease.
 
           </p>
         </div>

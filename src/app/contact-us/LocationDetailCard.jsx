@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 export default function LocationDetailCard({ locationName, address, email, phoneNumbers, mapEmbedUrl }) {
     return (
-        <section className='container mx-auto px-4 py-8 bg-white rounded-2xl shadow-xl my-10'>
+        <section className='containers mx-auto px-4 py-8 bg-white rounded-2xl shadow-xl my-10'>
             <div className='flex flex-col md:flex-row gap-8'>
                 {/* Left Side: Text Details */}
                 <div className='flex-1 p-4'>

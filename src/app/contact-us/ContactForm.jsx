@@ -24,43 +24,51 @@ export default function ContactForm() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!formData.consent) {
-      setResponseMsg("Please agree to the Terms and Privacy Policy.");
-      return;
-    }
+  if (!formData.consent) {
+    setResponseMsg("Please agree to the Terms and Privacy Policy.");
+    setTimeout(() => setResponseMsg(""), 4000); // clear message after 4s
+    return;
+  }
 
-    try {
-      setLoading(true);
-      const res = await fetch("/api/send-contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+  try {
+    setLoading(true);
+    setResponseMsg("");
+
+    const res = await fetch("/api/send-contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+    setResponseMsg(data.message);
+
+    if (data.success) {
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+        consent: false,
       });
-
-      const data = await res.json();
-      setResponseMsg(data.message);
-      if (data.success) {
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-          consent: false,
-        });
-      }
-    } catch (err) {
-      setResponseMsg("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
     }
-  };
+  } catch (err) {
+    setResponseMsg("Something went wrong. Please try again.");
+  } finally {
+    setLoading(false);
+
+    // ⏳ clear the response message after 4 seconds
+    setTimeout(() => setResponseMsg(""), 4000);
+  }
+};
+
   return (
-    <section className="container mx-auto px-4 py-8 bg-white rounded-2xl shadow-xl my-10">
+    <section className="containers mx-auto px-4 py-8 bg-white rounded-2xl shadow-xl my-10">
       <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
         {/* Left Side: Illustration */}
         {/* This div dictates the image width and holds the next/image component */}
@@ -204,6 +212,17 @@ export default function ContactForm() {
               </div>
             )}
           </form>
+          {responseMsg && (
+  <div
+    className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-md text-white shadow-md z-50 transition-all duration-300 ${
+      responseMsg.toLowerCase().includes("success")
+        ? "bg-green-600"
+        : "bg-red-600"
+    }`}
+  >
+    {responseMsg}
+  </div>
+)}
         </div>
       </div>
     </section>

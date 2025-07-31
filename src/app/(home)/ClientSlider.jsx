@@ -16,6 +16,7 @@ import cl5 from "../../../public/Group 211.png";
 import cl6 from "../../../public/Group 212.png";
 import cl7 from "../../../public/Group 213.png";
 import cl8 from "../../../public/Group206.png";
+import cl9 from "../../../public/clients/2c851e25ba22c1716cf66563d4157775812054ee.png";
 
 const logos = [
   { id: 1, src: cl1, alt: "Client 1" },
@@ -26,6 +27,7 @@ const logos = [
   { id: 6, src: cl6, alt: "Client 6" },
   { id: 7, src: cl7, alt: "Client 7" },
   { id: 8, src: cl8, alt: "Client 8" },
+  { id: 9, src: cl9, alt: "Client 9" },
 ];
 
 const ClientSlider = () => {

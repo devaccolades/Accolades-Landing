@@ -14,16 +14,16 @@ const Projects = () => {
           <h3 className="text-[#3FB4BA] text-[48px] md:text-[56px] xl:text-[76px] font-semibold leading-[100%]">
             Recent
           </h3>
-          <h3 className="font-bold text-[48px] md:text-[64px] xl:text-[86px] leading-[100%">
+          <h3 className="font-bold text-[36px] md:text-[48px] xl:text-[64px] leading-[100%">
             Highlights
           </h3>
         </div>
       </div>
       <div className="w-full">
-        <p className="text-[14px] xl:text-[18px] font-mont font-normal">
-          Discover our latest work, where creativity meets strategy to deliver 
-          exceptional results. Each project reflects our dedication to helping 
-          brands thrive through innovative digital solutions.	
+        <p className="text-[16px] md:text-[20px] xl:text-[28px]  font-mont font-normal leading-[156%]">
+          Discover our latest work, where creativity meets strategy to deliver
+          exceptional results. Each project reflects our dedication to helping
+          brands thrive through innovative digital solutions.
         </p>
       </div>
     </section>

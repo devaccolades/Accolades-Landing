@@ -3,13 +3,13 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 export default function LocationDetailCard({ locationName, address, email, phoneNumbers, mapEmbedUrl }) {
     return (
-        <section className='containers mx-auto  py-10'>
+        <section className='relative containers mx-auto  py-10'>
             <div className='px-4 py-8 bg-white rounded-2xl shadow-xl'>
 
             <div className='flex flex-col md:flex-row gap-8'>
                 {/* Left Side: Text Details */}
                 <div className='flex-1 p-4'>
-                    <h3 className='text-4xl font-extrabold text-[#3FB4BA] mb-6'>
+                    <h3 className='text-4xl font-mont font-extrabold text-[#3FB4BA] mb-6'>
                         {locationName}
                     </h3>
 
@@ -17,8 +17,8 @@ export default function LocationDetailCard({ locationName, address, email, phone
                     <div className='flex items-start mb-4'>
                         <FaMapMarkerAlt className='text-teal-500 text-2xl mr-3 mt-1 flex-shrink-0' />
                         <div>
-                            <p className='text-gray-700 font-semibold text-lg mb-1'>Address</p>
-                            <p className='text-gray-600 text-base leading-relaxed'>
+                            <p className='text-gray-700 font-mont font-semibold text-lg mb-1'>Address</p>
+                            <p className='text-gray-600  font-mont text-base leading-relaxed'>
                                 {address}
                             </p>
                         </div>
@@ -28,8 +28,8 @@ export default function LocationDetailCard({ locationName, address, email, phone
                     <div className='flex items-start mb-4'>
                         <FaEnvelope className='text-teal-500 text-2xl mr-3 mt-1 flex-shrink-0' />
                         <div>
-                            <p className='text-gray-700 font-semibold text-lg mb-1'>Email us at</p>
-                            <a href={`mailto:${email}`} className='text-gray-600 text-base hover:text-teal-500 transition-colors duration-200'>
+                            <p className='text-gray-700 font-mont font-semibold text-lg mb-1'>Email us at</p>
+                            <a href={`mailto:${email}`} className='text-gray-600 font-mont text-base hover:text-teal-500 transition-colors duration-200'>
                                 {email}
                             </a>
                         </div>
@@ -39,8 +39,8 @@ export default function LocationDetailCard({ locationName, address, email, phone
                     <div className='flex items-start'>
                         <FaPhone className='text-teal-500 text-2xl mr-3 mt-1 flex-shrink-0' />
                         <div>
-                            <p className='text-gray-700 font-semibold text-lg mb-1'>Call us on</p>
-                            <p className='text-gray-600 text-base'>
+                            <p className='text-gray-700 font-mont font-semibold text-lg mb-1'>Call us on</p>
+                            <p className='text-gray-600 font-mont text-base'>
                                 {phoneNumbers.map((phone, index) => (
                                     <React.Fragment key={index}>
                                         <a href={`tel:${phone.replace(/\s/g, '')}`} className='hover:text-teal-500 transition-colors duration-200'>
@@ -69,7 +69,7 @@ export default function LocationDetailCard({ locationName, address, email, phone
                                 title={`Map of ${locationName}`} // Good for accessibility
                             ></iframe>
                         ) : (
-                            <div className="flex items-center justify-center h-full text-gray-500">
+                            <div className="flex  font-mont items-center justify-center h-full text-gray-500">
                                 Map not available for this location.
                             </div>
                         )}

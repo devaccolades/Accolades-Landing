@@ -46,21 +46,21 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="containers flex flex-col-reverse md:flex-row justify-between gap-6 pt-20  items-center">
+      <div className="containers flex flex-col-reverse md:flex-row justify-between gap-6 pt-[100px]  items-center">
         {/* Text Content */}
         <div className="w-full md:w-1/2 flex justify-start md:justify-start">
           <div className="text-left">
-            <h3 className="text-[28px] font-mont md:text-[32px] lg:text-[36px] font-normal leading-tight">
+            <h3 className="text-[24px] font-mont md:text-[32px] lg:text-[36px] font-medium leading-tight">
               We are
             </h3>
-            <h3 className="text-[#3FB4BA] text-[60px] xl:text-[76px] font-semibold leading-tight relative">
+            <h3 className="text-[#3FB4BA] text-[40px] md:text-[52px] xl:text-[60px] font-semibold leading-tight relative">
               <span>{displayText}</span>
               <span className="animate-pulse text-[#3FB4BA] font-mont">|</span>
             </h3>
-            <h3 className="font-bold font-mont text-[65px] md:text-[72px] xl:text-[86px] leading-tight">
+            <h3 className="font-bold font-mont text-[40px] md:text-[52px] xl:text-[60px] leading-tight">
               Different
             </h3>
-            <h3 className="text-[20px] md:text-[28px] xl:text-[36px]  font-mont font-normal leading-tight mt-2">
+            <h3 className="text-[16px] md:text-[20px] xl:text-[28px]  font-mont font-normal leading-tight mt-2">
               We help your business grow through digital innovation.
             </h3>
           </div>

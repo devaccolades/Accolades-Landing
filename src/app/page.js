@@ -20,13 +20,13 @@ function page() {
       <Accolades />
       <OurServices />
       <Count />
-      {/* <Projects />
+      <Projects />
       <ProjectSlider />
       <OurClients />
       <ClientSlider />
       <Testimonials />
       <ReachUs />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

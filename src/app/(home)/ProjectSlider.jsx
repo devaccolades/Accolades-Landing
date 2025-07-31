@@ -12,15 +12,18 @@ import alappat from "../../../public/home/alappat.png";
 import family from "../../../public/home/family.png";
 import niahara from "../../../public/home/nihara.png";
 import silk from "../../../public/home/silk_galeria.png";
+import fut from "../../../public/creative/futura04-min.jpg";
+import cure from "../../../public/creative/branding/curegarden 05 copy-min (1).jpg";
 
 const fallbackImages = [
+  { id: 4, src: niahara, alt: "Niahara" },
   { id: 1, src: alappat, alt: "Alappat" },
   { id: 2, src: family, alt: "Family" },
   { id: 3, src: niahara, alt: "Niahara" },
-  { id: 4, src: silk, alt: "Silk Galeria" },
-  { id: 4, src: silk, alt: "Silk Galeria" },
-  { id: 4, src: silk, alt: "Silk Galeria" },
-  { id: 4, src: silk, alt: "Silk Galeria" },
+  // { id: 4, src: fut, alt: "futura" },
+  // { id: 5, src: cure, alt: "cure garden" },
+  { id: 6, src: silk, alt: "silk" },
+  { id: 5, src: family, alt: "Family" },
 ];
 const ProjectSlider = ({ images = fallbackImages }) => {
   const sliderKey = useMemo(() => {

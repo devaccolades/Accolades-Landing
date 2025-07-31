@@ -33,10 +33,10 @@ const approaches = [
 
 const CreativeApproach = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-[#F8FCFF] to-white pb-12 containers">
+    <section className="w-full bg-white p-10 rounded-[30px]  containers">
       {/* Title */}
       <motion.h2
-        className="text-2xl md:text-4xl font-bold text-teal-600 mb-10 text-center md:text-left"
+        className="text-2xl md:text-4xl font-bold text-teal-600 mb-5 text-center md:text-left"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -66,7 +66,9 @@ const CreativeApproach = () => {
             />
             {/* Text */}
             <div>
-              <h3 className="text-lg font-semibold text-teal-600">{item.title}</h3>
+              <h3 className="text-lg font-semibold text-teal-600">
+                {item.title}
+              </h3>
               <p className="text-gray-600 text-sm">{item.desc}</p>
             </div>
           </motion.div>

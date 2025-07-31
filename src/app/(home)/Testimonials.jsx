@@ -8,14 +8,17 @@ import { FaQuoteLeft } from "react-icons/fa";
 import user from "../../../public/testimonial-dp.png";
 import bottom from "../../../public/home/bottom-line.svg";
 
+import client from "../../../public/Group 213.png";
+import rak from "../../../public/clients/2c851e25ba22c1716cf66563d4157775812054ee.png";
+
 const testimonials = [
   {
     id: 1,
     name: "Cochin HT",
     role: "Director, Client Experience",
     content:
-    "	Accolades is an excellent team to work with.Their approach has been more consultative than other agencies that we have worked with.We have collaborate with  them since last 3years and we are extremely happy with their service.",
-      
+      "	Accolades is an excellent team to work with.Their approach has been more consultative than other agencies that we have worked with.We have collaborate with  them since last 3years and we are extremely happy with their service.",
+
     avatar: user,
     bgColor: "bg-red-100",
     quoteColor: "text-red-300",
@@ -25,8 +28,8 @@ const testimonials = [
     name: "QIMS",
     role: "Director, Client Experience",
     content:
-    "We are one of the client of Accolades Media. Quilon Institute of Management Studies, QIMS, Kollam is one of the top Aviation Degree colleges in Kerala. We are extremely satisfied in the professional way of works in website Management, Online Marketing and designing. M.D of the company Mr Jagesh always shows a professional approach in all the dealings and projects.. We suggest this excellent company for website Management, online marketing and SEO on the base of our experience for the last 2 years.. All the very Best for the Team Accolades...",
-    
+      "We are one of the client of Accolades Media. Quilon Institute of Management Studies, QIMS, Kollam is one of the top Aviation Degree colleges in Kerala. We are extremely satisfied in the professional way of works in website Management, Online Marketing and designing. M.D of the company Mr Jagesh always shows a professional approach in all the dealings and projects.. We suggest this excellent company for website Management, online marketing and SEO on the base of our experience for the last 2 years.. All the very Best for the Team Accolades...",
+
     avatar: user,
     bgColor: "bg-blue-100",
     quoteColor: "text-blue-300",
@@ -36,32 +39,45 @@ const testimonials = [
     name: "Sherbin Ahammed",
     role: "Director, Client Experience",
     content:
-    "Accolades is an excellent team to work with comprising of very talented and dedicated staff they were patient enough to listen to my requirements and guide me with the best possible social networking strategy which has indeed started to show results within a very short time. I recommend Accolades to anyone like me for wants the best social media marketing team to scale up their business. All the best team Accolades.",
-    
+      "Accolades is an excellent team to work with comprising of very talented and dedicated staff they were patient enough to listen to my requirements and guide me with the best possible social networking strategy which has indeed started to show results within a very short time. I recommend Accolades to anyone like me for wants the best social media marketing team to scale up their business. All the best team Accolades.",
+
     avatar: user,
     bgColor: "bg-purple-100",
     quoteColor: "text-purple-300",
   },
-  // {
-  //   id: 4,
-  //   name: "Mr. Nidhin Ramesh",
-  //   role: "Director, Client Experience",
-  //   content:
-  //     "Lorem ipsum dolor sit amet consectetur. Egestas turpis gravida urna habitasse cursus duis nec condimentum. Nec integer facilisis platea amet sem. Facilisis aliquam luctus leo erat nunc. Aenean proin sed senectus ut.",
-  //   avatar: user,
-  //   bgColor: "bg-orange-100",
-  //   quoteColor: "text-orange-300",
-  // },
-  // {
-  //   id: 5,
-  //   name: "Mr. Nidhin Ramesh",
-  //   role: "Director, Client Experience",
-  //   content:
-  //     "Lorem ipsum dolor sit amet consectetur. Egestas turpis gravida urna habitasse cursus duis nec condimentum. Nec integer facilisis platea amet sem. Facilisis aliquam luctus leo erat nunc. Aenean proin sed senectus ut.",
-  //   avatar: user,
-  //   bgColor: "bg-orange-100",
-  //   quoteColor: "text-orange-300",
-  // },
+  {
+    id: 4,
+    name: "English Cafe",
+    role: "",
+    content:
+      "Hai, the last one year they are assisting us by giving their best in Google ads, very professional and responsible firm with aiming more results to client. Their client dealing is absolutely fine!",
+
+    avatar: client,
+    bgColor: "bg-cyan-100",
+    quoteColor: "text-cyan-300",
+  },
+  {
+    id: 5,
+    name: "RAK Interiors",
+    role: "",
+    content:
+      "Definitely great value for the money.. The very best company for professional digital marketing services.. Highly recommended",
+
+    avatar: rak,
+    bgColor: "bg-blue-100",
+    quoteColor: "text-blue-300",
+  },
+  {
+    id: 6,
+    name: "Sherbin Ahammed",
+    role: "Director, Client Experience",
+    content:
+      "Accolades is an excellent team to work with comprising of very talented and dedicated staff they were patient enough to listen to my requirements and guide me with the best possible social networking strategy which has indeed started to show results within a very short time. I recommend Accolades to anyone like me for wants the best social media marketing team to scale up their business. All the best team Accolades.",
+
+    avatar: user,
+    bgColor: "bg-purple-100",
+    quoteColor: "text-purple-300",
+  },
 ];
 
 const Testimonials = () => {
@@ -71,15 +87,15 @@ const Testimonials = () => {
         <h3 className="font-normal text-[24px]  md:text-[32px] lg:text-[36px] text-[#3F3F3F] leading-[100%] md:leading-snug">
           What Our Customers Say
         </h3>
-        <h3 className="text-[#3FB4BA] font-semibold text-[40px] md:text-[64px] lg:text-[76px] leading-[100%] md:leading-snug">
+        <h3 className="text-[#3FB4BA] font-semibold text-[32px] md:text-[48px] lg:text-[64px] leading-[100%] ">
           Client
         </h3>
-        <h3 className="font-bold text-[48px]  md:text-[72px] lg:text-[86px] text-[#3F3F3F] leading-[100%] md:leading-snug">
+        <h3 className="font-bold text-[32px] md:text-[48px] lg:text-[64px] text-[#3F3F3F] leading-[100%] ">
           Testimonials
         </h3>
       </div>
 
-      <div className="py-10 px-4">
+      <div className="py-14 ">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={20}
@@ -87,7 +103,7 @@ const Testimonials = () => {
           loop={true}
           // pagination={{ clickable: true }}
           autoplay={{
-            delay: 2000,
+            delay: 1000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -95,13 +111,13 @@ const Testimonials = () => {
               slidesPerView: 1.2,
             },
             768: {
-              slidesPerView: 2,
+              slidesPerView: 2.5,
             },
             1024: {
               slidesPerView: 2.5,
             },
             1280: {
-              slidesPerView: 3,
+              slidesPerView: 3.5,
             },
           }}
         >
@@ -117,11 +133,13 @@ const Testimonials = () => {
                   <Image
                     src={t.avatar}
                     alt={t.name}
-                    width={64}
-                    height={64}
+                    width={70}
+                    height={70}
                     className="rounded-full mb-4 object-cover"
                   />
-                  <p className="text-gray-700 font-mont text-[13px] md:text-[14px] mb-4">{t.content}</p>
+                  <p className="text-gray-700 font-mont text-[13px] md:text-[14px] mb-4">
+                    {t.content}
+                  </p>
                   <p className="font-semibold font-mont">{t.name}</p>
                   <p className="text-sm text-gray-600 font-mont">{t.role}</p>
                 </div>

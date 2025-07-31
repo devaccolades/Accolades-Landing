@@ -3,6 +3,7 @@ import React from "react";
 import image1 from "../../../public/services/digital.png";
 import web from "../../../public/services/web.png";
 import creative from "../../../public/services/creative.png";
+import Link from "next/link";
 
 function Creative() {
   return (
@@ -32,18 +33,19 @@ function Creative() {
               <h1 className="text-[#3FB4BA] text-[28px] md:text-[35px] lg:text-[75px] font-semibold font-mont leading-[100%]">
                 Creative Design
               </h1>
-              <h1 className="text-[24px] leading-[150%] font-semibold font-mont">
+              {/* <h1 className="text-[24px] leading-[150%] font-semibold font-mont">
                 Lorem ipsum dolor sit amet consectetur.
-              </h1>
+              </h1> */}
               <p className="max-w-md text-[12px] md:text-[14px] lg:text-[18px] md:leading-[150%] font-mont ">
-                Lorem ipsum dolor sit amet consectetur. Ultrices tristique orci
-                non a ultrices eget libero. Convallis aliquet ac sed sit gravida
-                eget. Nunc lacus velit quisque mauris vulputate hendrerit lorem
-                mauris massa. Amet posuere eu elit in.
+                We provide creative for social media and digital ads along with
+                graphic designs like brochure, magazine ads to elevate your
+                brand’s online presence.
               </p>
-              <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
-                see more
-              </button>
+              <Link href={"/services/creative"}>
+                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
+                  see more
+                </button>
+              </Link>
             </div>
           </div>
         </div>

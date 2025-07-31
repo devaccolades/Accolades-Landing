@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import image1 from "../../../public/services/digital.png";
 import digital from "../../../public/services/digitals.png";
-
+import Link from "next/link";
 
 function Digital() {
   return (
@@ -36,14 +36,18 @@ function Digital() {
                 Google Ads
               </h1>
               <p className="max-w-md text-[12px] md:text-[14px] lg:text-[18px] md:leading-[150%] font-mont ">
-                Lorem ipsum dolor sit amet consectetur. Ultrices tristique orci
-                non a ultrices eget libero. Convallis aliquet ac sed sit gravida
-                eget. Nunc lacus velit quisque mauris vulputate hendrerit lorem
-                mauris massa. Amet posuere eu elit in.
+                It’s the prevalent method of strategically placing online
+                advertisements on web pages that accurately report desired
+                results from search engine queries. That is, when a user
+                searches for something on Google, the official list of the ads
+                that instantly appear above the organic listing is called Search
+                Ad.
               </p>
-              <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
-                see more
-              </button>
+              <Link href={"/services/digital-marketing/google-ads"}>
+                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
+                  see more
+                </button>
+              </Link>
             </div>
           </div>
           {/* second section  */}
@@ -62,14 +66,22 @@ function Digital() {
                 Search Engine Optimization
               </h1>
               <p className="max-w-md text-[12px] md:text-[14px] lg:text-[18px] md:leading-[150%] font-mont ">
-                Lorem ipsum dolor sit amet consectetur. Ultrices tristique orci
-                non a ultrices eget libero. Convallis aliquet ac sed sit gravida
-                eget. Nunc lacus velit quisque mauris vulputate hendrerit lorem
-                mauris massa. Amet posuere eu elit in.
+                Our team, Accolades Media the digital marketing agency in Kochi
+                possesses the top Search Engine Optimization experts, who are
+                professionally specialized, in Search Engine Optimization
+                Services, to elevate our prospective clientele to the front
+                runner in any search engine, by prioritizing the appropriate
+                keywords that are suitable to generate the potential traffic to
+                experience enhanced webpage visibility. The add-on advantage of
+                receiving the professional guidance of a Search Engine Optimizer
+                like us is to uplift and prioritize the randomly gathered
+                contents from the internet.
               </p>
-              <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
-                see more
-              </button>
+              <Link href={"/services/digital-marketing/seo"}>
+                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
+                  see more
+                </button>
+              </Link>
             </div>
           </div>
           {/* third secton  */}
@@ -89,14 +101,18 @@ function Digital() {
                 Social Media Marketing
               </h1>
               <p className="max-w-md text-[12px] md:text-[14px] lg:text-[18px] md:leading-[150%] font-mont ">
-                Lorem ipsum dolor sit amet consectetur. Ultrices tristique orci
-                non a ultrices eget libero. Convallis aliquet ac sed sit gravida
-                eget. Nunc lacus velit quisque mauris vulputate hendrerit lorem
-                mauris massa. Amet posuere eu elit in.
+                We are a leading social media marketing agency Kochi that aims
+                to develop successful content, run effective campaigns, and
+                forge strong customer bonds for a brand. With a focus on
+                creative work combined with data analysis, we provide you with
+                engaging content for your social media profiles that do more
+                than grab people’s attention.
               </p>
-              <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
-                see more
-              </button>
+              <Link href={"/services/digital-marketing/smm"}>
+                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
+                  see more
+                </button>
+              </Link>
             </div>
           </div>
           {/* fourth secton  */}
@@ -115,14 +131,19 @@ function Digital() {
                 Content Marketing
               </h1>
               <p className="max-w-md text-[12px] md:text-[14px] lg:text-[18px] md:leading-[150%] font-mont ">
-                Lorem ipsum dolor sit amet consectetur. Ultrices tristique orci
-                non a ultrices eget libero. Convallis aliquet ac sed sit gravida
-                eget. Nunc lacus velit quisque mauris vulputate hendrerit lorem
-                mauris massa. Amet posuere eu elit in.
+                A category of marketing that involves the creation and sharing
+                of relevant and consistent online content, such as videos,
+                blogs, and social media posts that do not explicitly promote a
+                brand but is intended to stimulate interest in its products or
+                services. Its long-term strategy builds a strong relationship
+                with your target audience by giving them high-quality content
+                that is appropriate.
               </p>
-              <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
-                see more
-              </button>
+              <Link href={"/services/digital-marketing/content-marketing"}>
+                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
+                  see more
+                </button>
+              </Link>
             </div>
           </div>
         </div>

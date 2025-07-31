@@ -2,6 +2,7 @@ import React from "react";
 import image1 from "../../../public/services/digital.png";
 import Image from "next/image";
 import web from "../../../public/services/web.png";
+import Link from "next/link";
 
 function Web() {
   return (
@@ -29,20 +30,21 @@ function Web() {
             </div>
             <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-lg max-w-[338px] lg:max-w-[608px]">
               <h1 className="text-[#3FB4BA] text-[28px] md:text-[35px] lg:text-[75px] font-semibold font-mont leading-[100%]">
-                Creative Design
+                Web Development
               </h1>
-              <h1 className="text-[24px] leading-[150%] font-semibold font-mont">
+              {/* <h1 className="text-[24px] leading-[150%] font-semibold font-mont">
                 Lorem ipsum dolor sit amet consectetur.
-              </h1>
+              </h1> */}
               <p className="max-w-md text-[12px] md:text-[14px] lg:text-[18px] md:leading-[150%] font-mont ">
-                Lorem ipsum dolor sit amet consectetur. Ultrices tristique orci
-                non a ultrices eget libero. Convallis aliquet ac sed sit gravida
-                eget. Nunc lacus velit quisque mauris vulputate hendrerit lorem
-                mauris massa. Amet posuere eu elit in.
+                Get your website developed exactly to fit your business
+                requirements. We build cross-browser compatible and responsive
+                sites with the latest features for optimal performance.
               </p>
-              <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
-                see more
-              </button>
+              <Link href={"/services/web-development"}>
+                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
+                  see more
+                </button>
+              </Link>
             </div>
           </div>
         </div>

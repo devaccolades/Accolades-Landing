@@ -53,11 +53,11 @@ const HeroSection = () => {
             <h3 className="text-[24px] font-mont md:text-[32px] lg:text-[36px] font-medium leading-tight">
               We are
             </h3>
-            <h3 className="text-[#3FB4BA] text-[40px] md:text-[52px] xl:text-[60px] font-semibold leading-tight relative">
+            <h3 className="text-[#3FB4BA] text-[44px] md:text-[56px] xl:text-[60px] font-semibold leading-tight relative">
               <span>{displayText}</span>
               <span className="animate-pulse text-[#3FB4BA] font-mont">|</span>
             </h3>
-            <h3 className="font-bold font-mont text-[40px] md:text-[52px] xl:text-[60px] leading-tight">
+            <h3 className="font-bold font-mont text-[44px] md:text-[56px] xl:text-[60px] leading-tight">
               Different
             </h3>
             <h3 className="text-[16px] md:text-[20px] xl:text-[28px]  font-mont font-normal leading-tight mt-2">

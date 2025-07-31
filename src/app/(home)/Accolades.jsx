@@ -6,16 +6,17 @@ import bottom from "../../../public/home/bottom-line.svg";
 const Accolades = () => {
   return (
     <>
-      <section className="containers flex flex-col md:flex-row justify-between items-center gap-10">
-        <div className="w-auto h-full">
+      {/* <section className="containers flex flex-col md:grid md:grid-cols-2 justify-center items-center  gap-10"> */}
+      <section className="containers flex flex-col md:grid md:grid-cols-2 md:place-items-center gap-10">
+        <div className="w-auto h-full flex justify-center items-center">
           <Image
             src={stack}
             alt="top-line"
             className="w-full object-center object-cover"
           />
         </div>
-        <div className="w-full md:w-1/2">
-          <p className="text-[14px] xl:text-[18px] font-mont font-normal">
+        <div className="w-full">
+          <p className="text-[14px] md:text-[16px] xl:text-[20px] 2xl:text-[28px] font-mont font-normal">
             Accolades, the creative hub for digital marketing in Kerala, keenly
             takes care of your diverse internet marketing solutions for your
             business. Our services include Graphics Designing, Content

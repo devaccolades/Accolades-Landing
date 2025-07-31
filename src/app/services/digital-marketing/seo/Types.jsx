@@ -4,6 +4,10 @@ import Frame2 from "../../../../../public/seo/Frame2.png";
 
 export default function Types() {
   return (
+    <div       style={{
+        background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
+      }}>
+
     <div className="containers mx-auto lg:pt-12 md:pt-10 pt-6 pb-24">
       {/* First Row: Para Left, Image Right */}
       <div className="flex flex-col md:flex-row items-center justify-center lg:mb-16 md:mb-12 mb-8">
@@ -34,6 +38,7 @@ export default function Types() {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 }

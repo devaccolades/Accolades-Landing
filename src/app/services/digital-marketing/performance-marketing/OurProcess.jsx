@@ -6,7 +6,7 @@ import React from "react";
 
 const OurProcess = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-[#F8FCFF] to-white pt-6 lg:py-12 containers text-center md:h-screen">
+    <section className="w-full pt-6 lg:py-12 containers text-center ">
       {/* Title */}
       <motion.h2
         className="text-2xl md:text-4xl font-bold text-teal-600 "

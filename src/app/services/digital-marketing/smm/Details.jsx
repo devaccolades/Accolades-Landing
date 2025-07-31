@@ -8,7 +8,7 @@ const Details = () => {
   return (
     <section className="containers">
       <div className="bg-white p-[5%] md:p-[3%] rounded-[20px] md:rounded-[30px]">
-        <p className="font-mont text-[16px] md:text-[18px] font-bold leading-[156%] pb-10">
+        <p className="font-mont text-[16px] md:text-[18px] font-semibold leading-[156%] pb-10">
           We are experienced professionals, who sketch out efficient Social
           Media Marketing strategy and Packages to help you.
         </p>
@@ -39,7 +39,7 @@ const Details = () => {
             (likes, shares)
           </p>
         </div>
-        <p className="font-mont text-[13px] md:text-[16px] font-normal leading-[156%] pt-10">
+        <p className="font-mont text-[13px] md:text-[16px] font-normal leading-[156%] pt-7">
           We are one of the leading Best Social media marketing agency Kochi and
           also Google AdWords partner in kochi , as we have extended our Social
           Media Management sector to Calicut also. The key element to success in

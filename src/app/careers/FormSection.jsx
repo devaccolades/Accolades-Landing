@@ -108,7 +108,7 @@ function FormSection() {
       <form
         onSubmit={handleSubmit}
         encType="multipart/form-data"
-        className="w-[90%] md:w-[80%] rounded-2xl bg-white/60 mx-auto relative z-10 p-[15px] md:p-[40px] flex flex-col"
+        className="w-[90%] md:w-[80%] rounded-2xl bg-white/60 mx-auto font-mont relative z-10 p-[15px] md:p-[40px] flex flex-col"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[10px] lg:gap-x-12">
           {/* First Name */}

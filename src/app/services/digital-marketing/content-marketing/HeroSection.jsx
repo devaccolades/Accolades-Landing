@@ -8,10 +8,10 @@ import icon3 from "../../../../../public/content-marketing/icon3.svg";
 export default function HeroSection() {
   return (
     <>
-      <div className=" lg:pb-16 md:pb-12 pb-6 pt-[100px]">
+      <div className="lg:pb-16 md:pb-12 pb-6 pt-16 md:pt-20 lg:pt-26">
         <div className="lg:mb-16 md:mb-12 mb-6 containers">
-          <div className="bg-white shadow-lg py-5 text-center rounded-[30px] ">
-            <h1 className="font-mont font-bold text-[36px] md:text-[50px] lg:text-[64px] leading-[100%] text-[#3FB4BA] md:px-20 px-4">
+          <div className="bg-white shadow-lg py-2 text-center rounded-[30px] ">
+            <h1 className="font-mont font-bold xl:text-[86px] lg:text-[76px] md:text-[66px] text-[30px] leading-[100%] text-[#3FB4BA] md:px-20 px-4">
               Content Marketing
             </h1>
           </div>
@@ -25,7 +25,7 @@ export default function HeroSection() {
                   CONTENT ISN'T THE KING, IT'S THE KINGDOM
                 </p>
 
-                <h2 className="font-mont font-bold lg:text-[32px] md:text-[30px] text-[26px] leading-[130%] text-[#3FB4BA] mb-2">
+                <h2 className="font-mont font-bold lg:text-[32px] md:text-[30px] text-[26px] leading-[130%] text-[#3FB4BA] mb-4 md:mb-6">
                   Creative Messaging
                 </h2>
 

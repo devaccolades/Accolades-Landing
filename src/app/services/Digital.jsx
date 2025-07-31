@@ -7,8 +7,8 @@ import digital from "../../../public/services/digitals.png";
 function Digital() {
   return (
     <seciton className="flex justify-center overflow-visible relative z-10 mx-auto w-[90%]">
-      <div className="flex gap-[10px] w-full ">
-        <div className="w-[10%] md:w-[10%] lg:w-[15%] ">
+      <div className="flex gap-[10px] w-full relative">
+        <div className="absoulte w-[10%] md:w-[10%] lg:w-[15%] ">
           <Image
             src={digital}
             alt="digital"
@@ -17,8 +17,8 @@ function Digital() {
             className="w-fit h-fit sticky top-50 mt-0"
           />
         </div>
-        <div className="w-full flex flex-col gap-10 md:gap-[100px] lg:gap-[130px] bg-white/60 p-5 rounded-xl">
-          <p className="font-mont text-[32px]  md:text-[50px] lg:text-[76px]  font-semibold leading-[110%] text-center text-[#3FB4BA] mt-[35px]">
+        <div className="w-full flex flex-col md:gap-[100px] lg:gap-[130px] bg-white/60 p-5 rounded-xl">
+          <p className="font-mont text-[24px]  md:text-[50px] lg:text-[76px]  font-semibold leading-[110%] text-center text-[#3FB4BA] mt-[17px] md:mt-[35px]">
             Digital Marketing
           </p>
           <div className="flex flex-col md:flex-row justify-around items-center gap-4 mt-[34px] md:mt-[20px] ">

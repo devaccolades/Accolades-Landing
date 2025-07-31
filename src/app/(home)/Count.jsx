@@ -20,7 +20,7 @@ const Count = () => {
         />
       </div>
 
-      <div className="count-text containers absolute top-1/2 left-1/2 -translate-1/2 px-4 grid grid-cols-1 md:grid-cols-3 text-center gap-8">
+      <div className="count-text containers absolute top-1/2 left-1/2 -translate-1/2 px-4 grid grid-cols-1 md:grid-cols-3 text-center gap-8 ">
         <div>
           <h2 className="text-white text-[60px] xl:text-[96px] font-bold mb-2">
             150+

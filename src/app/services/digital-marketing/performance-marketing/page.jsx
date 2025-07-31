@@ -10,7 +10,8 @@ import CreativeApproach from "./CreativeApproach";
 const heroData = {
   main_title: "Performance Marketing",
   title: "Drive Measurable Growth with Performance Marketing",
-  subtitle: "Our campaigns don’t just look good — they convert. From clicks to customers we deliver real, trackable results.",
+  subtitle:
+    "Our campaigns don’t just look good — they convert. From clicks to customers we deliver real, trackable results.",
   button_text: "Get a Creative Proposal",
   image: "/services/performance.webp",
 };
@@ -66,28 +67,39 @@ const tools = [
   },
 ];
 
-const offer ={
-   title: "What We Offer",
-  desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae velit sequi, explicabo voluptate maxime temporibus architecto voluptatibus. Dicta eligendi earum porro fugiat dolor rem obcaecati deserunt aut mollitia. Sint, nesciunt!",
-  services :services
-}
-const tech ={
-   title: "Tools & Tech We Use",
-  desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae velit sequi, explicabo voluptate maxime temporibus architecto voluptatibus. Dicta eligendi earum porro fugiat dolor rem obcaecati deserunt aut mollitia. Sint, nesciunt!",
-  services :tools
-}
+const offer = {
+  title: "What We Offer",
+  desc: "We specialize in crafting high-impact performance marketing strategies designed to drive ROI. From Google Ads to Meta and LinkedIn campaigns, we tailor every ad to align with your audience’s intent. Our focus is on measurable growth — turning every click into a conversion opportunity with highly optimized ad creatives and landing experiences.",
+  services: services,
+};
+const tech = {
+  title: "Tools & Tech We Use",
+  desc: "To ensure peak performance and precise tracking, we leverage a suite of industry-leading tools. From audience targeting and analytics with Meta Business Suite and Google Ads, to conversion tracking with Google Tag Manager and behavior insights via Hotjar — our tech stack enables real-time data optimization for better campaign results.",
+  services: tools,
+};
 
 const page = () => {
   return (
     <>
-      <Navbar />
-      <Herosection {...heroData}/>
-      <WhatWeOffer {...offer}/>
-      <ServicesIncluded />
-      <OurProcess/>
-      <CreativeApproach />
-      <WhatWeOffer {...tech}/>
-      <Footer />
+      <main className="bg-[#F1F1F1]">
+        <Navbar />
+        <Herosection {...heroData} />
+        <WhatWeOffer {...offer} />
+        <ServicesIncluded />
+        <OurProcess />
+        <CreativeApproach />
+        <div
+          className="pb-24"
+          style={{
+            background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
+          }}
+        >
+          <WhatWeOffer {...tech} />
+        </div>
+      </main>
+      <main className="-mt-[65px]">
+        <Footer />
+      </main>
     </>
   );
 };

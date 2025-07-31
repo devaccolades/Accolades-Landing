@@ -27,9 +27,9 @@ import React from "react";
 //   },
 // ];
 
-const WhatWeOffer = ({title,services,desc}) => {
+const WhatWeOffer = ({ title, services, desc }) => {
   return (
-    <section className="w-full bg-gradient-to-b from-[#F8FCFF] to-white py-12 containers">
+    <section className="w-full  py-12 containers">
       <div className="bg-white rounded-3xl shadow-md p-6 md:p-10">
         {/* Title */}
         <motion.h2

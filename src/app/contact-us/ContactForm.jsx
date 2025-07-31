@@ -68,7 +68,7 @@ export default function ContactForm() {
 };
 
   return (
-    <section className="containers mx-auto  py-10">
+    <section className="relative containers mx-auto  py-10">
       <div className="flex flex-col md:flex-row gap-8 items-center md:items-start px-4 py-8 bg-white rounded-2xl shadow-xl">
         {/* Left Side: Illustration */}
         {/* This div dictates the image width and holds the next/image component */}
@@ -96,7 +96,7 @@ export default function ContactForm() {
             onSubmit={handleSubmit}
           >
             <div>
-              <label htmlFor="firstName" className="block text-gray-700 font-semibold mb-2">
+              <label htmlFor="firstName" className="block text-gray-700 font-mont font-semibold mb-2">
                 First Name
               </label>
               <input
@@ -107,12 +107,12 @@ export default function ContactForm() {
                 onChange={handleChange}
                 placeholder="Enter First Name"
                 required
-                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] font-mont rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
             <div>
-              <label htmlFor="lastName" className="block text-gray-700 font-semibold mb-2">
+              <label htmlFor="lastName" className="block text-gray-700 font-mont font-semibold mb-2">
                 Last Name
               </label>
               <input
@@ -123,12 +123,12 @@ export default function ContactForm() {
                 onChange={handleChange}
                 placeholder="Enter Last Name"
                 required
-                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 font-mont border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
+              <label htmlFor="email" className="block font-mont text-gray-700 font-semibold mb-2">
                 Email
               </label>
               <input
@@ -139,12 +139,12 @@ export default function ContactForm() {
                 onChange={handleChange}
                 placeholder="Enter Your Email"
                 required
-                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 font-mont border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-gray-700 font-semibold mb-2">
+              <label htmlFor="phone" className="block font-mont text-gray-700 font-semibold mb-2">
                 Phone
               </label>
               <input
@@ -155,12 +155,12 @@ export default function ContactForm() {
                 onChange={handleChange}
                 placeholder="Enter Your Phone"
                 required
-                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 font-mont border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
             <div className="md:col-span-2">
-              <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
+              <label htmlFor="message"  className="block font-mont text-gray-700 font-semibold mb-2">
                 Message
               </label>
               <textarea
@@ -171,7 +171,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 placeholder="Enter Your Message"
                 required
-                className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y"
+                className="w-full px-4 py-3 font-mont border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y"
               ></textarea>
             </div>
 
@@ -184,7 +184,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 className="form-checkbox h-5 w-5 text-teal-600 rounded focus:ring-teal-500 border-gray-300"
               />
-              <label htmlFor="consent" className="ml-2 text-gray-600 text-sm">
+              <label htmlFor="consent" className="ml-2 text-gray-600 font-mont text-sm">
                 I agree with{" "}
                 <a href="#" className="text-teal-500 hover:underline">
                   Terms of Use
@@ -200,14 +200,14 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-teal-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all duration-300 disabled:opacity-50"
+                className="bg-teal-500 text-white font-mont font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all duration-300 disabled:opacity-50"
               >
                 {loading ? "Sending..." : "Send"}
               </button>
             </div>
 
             {responseMsg && (
-              <div className="md:col-span-2 text-center mt-2 text-sm text-gray-700">
+              <div className="md:col-span-2 text-center font-mont mt-2 text-sm text-gray-700">
                 {responseMsg}
               </div>
             )}
@@ -225,6 +225,8 @@ export default function ContactForm() {
 )}
         </div>
       </div>
+
+       
     </section>
   );
 }

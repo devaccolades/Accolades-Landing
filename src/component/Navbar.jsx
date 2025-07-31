@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import logo from "../../public/accolades_logo.svg";
+
 import {
   FaBars,
   FaTimes,
@@ -21,8 +22,16 @@ const navItems = [
   { label: "Blog", href: "/blog" },
 ];
 
+const mobileNavLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about-us" },
+  { label: "Blogs", href: "/blog" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact-us" },
+];
+
 const mobileServicePages = {
-  digital: [
+  "digital": [
     {
       label: "Performance Marketing",
       href: "/services/digital-marketing/performance",
@@ -38,15 +47,15 @@ const mobileServicePages = {
     },
     { label: "Content Marketing", href: "/services/digital-marketing/content" },
   ],
-  web: [
+  "web": [
     {
       label: "FullStack Web Development",
-      href: "/services/web-development/fullstack",
+      href: "/services/web-development/fullstack-development",
     },
     { label: "WordPress Pages", href: "/services/web-development/wordpress" },
     { label: "Ecommerce Website", href: "/services/web-development/ecommerce" },
   ],
-  creative: [
+  "creative": [
     { label: "Graphics & Motion", href: "/services/creative/graphics-motion" },
     {
       label: "Branding & Packaging",
@@ -411,8 +420,10 @@ const Navbar = () => {
               }`}
             >
               {/* Main Menu Items */}
-              {["Home", "About", "Blogs", "Careers", "Contact"].map(
-                (item, index) => (
+              {/* {["Home", "About", "Blogs", "Careers", "Contact"].map(
+                (item, index) => ( */}
+                {mobileNavLinks.map((item, index) => (
+  <Link key={item.label} href={item.href} passHref>
                   <div
                     key={item}
                     className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide ${
@@ -433,9 +444,11 @@ const Navbar = () => {
                     }}
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {item}
+                    {item.label}
                   </div>
+                  </Link>
                 )
+                
               )}
 
               {/* Digital Marketing with Dropdown */}
@@ -483,15 +496,17 @@ const Navbar = () => {
                       : "opacity-0 max-h-0 overflow-hidden transform -translate-y-4"
                   }`}
                 >
-                  {[
+                  {/* {[
                     "Performance Marketing",
                     "Google Ads",
                     "Search Engine Optimization",
                     "Social Media Marketing",
                     "Content Marketing",
-                  ].map((service, index) => (
+                  ].map((service, index) => ( */}
+                  {mobileServicePages["digital"].map((item, index) => (
+  <Link href={item.href} key={item.label}>
                     <div
-                      key={service}
+                      // key={service}
                       className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
                         isShortScreen ? "text-base" : "text-lg"
                       }`}
@@ -502,8 +517,9 @@ const Navbar = () => {
                       }}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {service}
+                      {item.label}
                     </div>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -541,7 +557,7 @@ const Navbar = () => {
                   </div>
                 </div>
 
-                {/* Web Dev Submenu */}
+                
                 <div
                   className={`flex flex-col items-center w-full transition-all duration-500 ${
                     isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"
@@ -551,13 +567,15 @@ const Navbar = () => {
                       : "opacity-0 max-h-0 overflow-hidden transform -translate-y-4"
                   }`}
                 >
-                  {[
+                  {/* {[
                     "FullStack Web Development",
                     "WordPress Pages",
                     "Ecommerce Website",
-                  ].map((service, index) => (
+                  ].map((service, index) => ( */}
+                 {mobileServicePages["web"].map((item, index) => (
+  <Link href={item.href} key={item.label}>
                     <div
-                      key={service}
+                      // key={service}
                       className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
                         isShortScreen ? "text-base" : "text-lg"
                       }`}
@@ -569,8 +587,9 @@ const Navbar = () => {
                       }}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {service}
+                      {item.label}
                     </div>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -620,13 +639,15 @@ const Navbar = () => {
                       : "opacity-0 max-h-0 overflow-hidden transform -translate-y-4"
                   }`}
                 >
-                  {[
+                  {/* {[
                     "Graphics & Motion",
                     "Branding & Packaging",
                     "Video Production",
-                  ].map((service, index) => (
+                  ].map((service, index) => ( */}
+                  {mobileServicePages["creative"].map((item, index) => (
+  <Link href={item.href} key={item.label}>
                     <div
-                      key={service}
+                      // key={service}
                       className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
                         isShortScreen ? "text-base" : "text-lg"
                       }`}
@@ -638,8 +659,9 @@ const Navbar = () => {
                       }}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {service}
+                     {item.label}
                     </div>
+                    </Link>
                   ))}
                 </div>
               </div>

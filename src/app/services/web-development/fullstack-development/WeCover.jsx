@@ -5,9 +5,10 @@ import react from "../../../../../public/web/react.png";
 import next from "../../../../../public/web/next-js.png";
 import postg from "../../../../../public/web/postgres.png";
 import py from "../../../../../public/web/python.png";
-import mg from "../../../../../public/web/mongo.png";
+import mg from "../../../../../public/web/mong.png";
 import dj from "../../../../../public/web/dj2.png";
 import st from "../../../../../public/web/strapi.png";
+import sq from "../../../../../public/web/sql.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -51,6 +52,11 @@ const techList = [
     {
         title: "PostgreSQL",
         logo: postg,
+        type: "database",
+    },
+    {
+        title: "SQLite",
+        logo: sq,
         type: "database",
     },
 ];

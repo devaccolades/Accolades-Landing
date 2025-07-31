@@ -5,10 +5,10 @@ import { FaXTwitter } from 'react-icons/fa6';
 export default function Herosection() {
     return (
         <>
-            <section className='containers pt-[100px] pb-10 mx-auto  '>
+            <section className='relative containers pt-[100px] pb-10 mx-auto  '>
                 <div className='bg-white font-mont rounded-2xl shadow-xl px-4 py-8 '>
 
-                <h2 className='text-center text-5xl md:text-7xl font-extrabold  text-[#3FB4BA] mb-8'>
+                <h2 className='text-center text-5xl md:text-7xl font-extrabold  text-[#3FB4BA] mb-2 md:mb-6 lg:mb-8'>
                     Contact
                 </h2>
                 <div className='flex flex-col md:flex-row md:gap-10 items-center'>
@@ -28,7 +28,7 @@ export default function Herosection() {
 
                     {/* Right Box */}
                     <div className='flex-1 flex flex-col justify-center text-gray-600 p-4'>
-                      <p className="mb-6 text-[14px] md:text-[18px]  ">
+                      <p className="mb-6 text-[14px] font-mont md:text-[18px]  ">
                             Our team is always willing to respond your queries and
                             provide the support you need. Whether you have specific
                             queries or need general information, we're just a message away.

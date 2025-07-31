@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function Tech({tools, title, para}) {
   return (
     <>
-      <section className="lg:pt-12 md:pt-10 pt-8 bg-gradient-to-b from-white to-[#d3f2f4] pb-24">
+      <section className="lg:pt-12 md:pt-10 bg-gradient-to-b from-white to-[#d3f2f4] pb-24">
         <div className="containers px-4 bg-white p-6 md:p-10 rounded-[30px] shadow">
           <h2 className="font-mont font-bold xl:text-[40px] lg:text-[32px] md:text-[26px] text-[20px] text-[#3FB4BA] mb-6">
             {title}

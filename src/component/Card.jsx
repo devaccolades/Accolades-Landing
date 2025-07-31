@@ -31,7 +31,7 @@ export default function Card({sectionTitle, videoTypes, showButton = false, butt
                 Graphics
               </button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-12">
               {videoTypes.graphics.map((video, index) => (
                 <div
                   key={index}

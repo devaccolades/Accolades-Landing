@@ -28,7 +28,7 @@ const posters = [
 const Featured = () => {
   const [active, setActive] = useState("Branding & Graphics");
   return (
-    <section className="relative bg-white pt-10 mt-10">
+    <section className="relative bg-white pt-6 md:pt-10">
       <Image
         src={shade}
         alt="shade"
@@ -38,7 +38,7 @@ const Featured = () => {
         <h2 className="text-[32px] xl:text-[40px] font-bold text-[#0199A4] mb-3 z-10">
           Featured Work
         </h2>
-        <div className="flex flex-wrap gap-4 ">
+        <div className="flex flex-wrap md:gap-4 gap-2 ">
           {categories.map((category) => (
             <button
               key={category}

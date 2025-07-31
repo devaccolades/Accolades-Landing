@@ -59,7 +59,9 @@ export default function BlogPost() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 pb-20">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 pb-20"       style={{
+        background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
+      }}>
       <div className="containers py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 md:gap-6 gap-4 ">
           {/* Main Content */}

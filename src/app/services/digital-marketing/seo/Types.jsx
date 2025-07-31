@@ -16,7 +16,11 @@ export default function Types() {
             <h1 className="font-mont font-bold text-[24px] lg:text-[36px] leading-[100%] text-[#3FB4BA] mb-3">
               On-page SEO
             </h1>
+<<<<<<< HEAD
             <p className="font-mont font-normal text-[13px] md:text-[14px] xl:text-[18px] leading-[156%] text-[#2B2A29] text-justify">
+=======
+            <p className="font-mont font-normal text-[13px] md:text-[14px] xl:text-[18px] leading-[156%] text-[#2B2A29] ">
+>>>>>>> e4c8ca360abbfe0289b8988001798fd624b14d2c
               On-page SEO is essential for a winning digital marketing strategy.
               It involves optimizing individual web pages to rank higher in
               search engine results and drive more relevant traffic. At
@@ -35,7 +39,11 @@ export default function Types() {
             <Image
               src={Frame1}
               alt="frame1"
+<<<<<<< HEAD
               className="lg:w-[500px] md:w-[300px] md:h-[300px] h-[200px]"
+=======
+              className="lg:w-[500px] md:w-[300px] md:h-[300px] h-[200px] "
+>>>>>>> e4c8ca360abbfe0289b8988001798fd624b14d2c
             />
           </div>
         </div>
@@ -53,7 +61,11 @@ export default function Types() {
             <h1 className="font-mont font-bold text-[24px] lg:text-[36px] leading-[100%] text-[#3FB4BA] mb-3">
               Off-page SEO
             </h1>
+<<<<<<< HEAD
             <p className="font-mont font-normal text-[13px] md:text-[14px] xl:text-[18px] leading-[156%] text-[#2B2A29] text-justify">
+=======
+            <p className="font-mont font-normal text-[13px] md:text-[14px] xl:text-[18px] leading-[156%] text-[#2B2A29] ">
+>>>>>>> e4c8ca360abbfe0289b8988001798fd624b14d2c
               Off-page SEO enhances your website’s authority and reputation
               using external strategies. It includes building high-quality
               backlinks, social media marketing, and online brand mentions. At

@@ -76,10 +76,7 @@ function FormSection() {
     try {
       const res = await fetch("/api/form-send", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json", // Corrected line
-        },
-        body: JSON.stringify(formData),
+        body: form,
       });
 
       const result = await res.json();
@@ -208,7 +205,7 @@ function FormSection() {
           </div>
 
           {/* File Upload (Optional) */}
-          {/* <div>
+          <div>
             <p className="font-mont text-[14px] font-semibold mb-[10px]">
               Upload Resume
             </p>
@@ -217,11 +214,11 @@ function FormSection() {
               name="file"
               onChange={handleChange}
               className="p-[19px] bg-white w-full rounded-xl border border-gray-300"
-            /> */}
-          {/* {errors.file && (
+            />
+            {errors.file && (
               <p className="text-red-500 text-sm mt-1">{errors.file}</p>
-            )} */}
-          {/* </div> */}
+            )}
+          </div>
 
           {/* Terms Checkbox (Optional) */}
           <div className="flex items-center gap-4 col-span-1 lg:col-span-2 mt-4">

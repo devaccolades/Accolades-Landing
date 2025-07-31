@@ -34,7 +34,7 @@ function page() {
         height={100}
         width={100}
         className="absolute top-10 right-0 h-full w-auto z-0"
-      />*/}
+      /> */}
       <Image
         src={centerR}
         alt="crcle on top"

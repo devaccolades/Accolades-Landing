@@ -1,11 +1,12 @@
 import Image from "next/image";
 import heroImg from "../../../public/about-us/img1.webp";
+import float from "../../../public/about-us/floating.gif";
 
 export default function HeroSection() {
   return (
     <>
       <div className="bg-gradient-to-br from-white to-[#e6f4f9]">
-        <h1 className="font-mont font-bold xl:text-[48px] lg:text-[42px] md:text-[36px] text-[30px] leading-[100%] text-center text-[#218D8C] pt-16 md:pt-20 lg:pt-26 lg:pb-8">
+        <h1 className="font-mont font-bold xl:text-[48px] lg:text-[42px] md:text-[36px] text-[30px] leading-[100%] text-center text-[#218D8C] pt-20 md:pt-24 lg:pt-30 lg:pb-8">
           Empowered Excellence
         </h1>
 
@@ -27,13 +28,13 @@ export default function HeroSection() {
               <Image
                 src={heroImg}
                 alt="Accolades Graphic"
-                className="xl:w-[500px] lg:w-[415px] md:w-[300px] w-full h-[200px] "
+                className="xl:w-[500px] lg:w-[415px] md:w-[300px] w-full h-[200px] md:h-[300px] lg:h-[400px] object-center"
               />
             </div>
           </div>
         </section>
         
-        <div className="relative">
+        {/* <div className="relative">
           {" "}
           <div className="absolute -z-10 top-[20%] left-[10%] opacity-30">
             <div className="w-0 h-0 border-l-[30px] border-l-transparent border-b-[50px] border-b-blue-200 border-r-[30px] border-r-transparent"></div>
@@ -44,13 +45,14 @@ export default function HeroSection() {
           <div className="absolute -z-10 bottom-[10%] left-[20%] opacity-30">
             <div className="w-0 h-0 border-l-[30px] border-l-transparent border-t-[50px] border-t-green-200 border-r-[30px] border-r-transparent"></div>
           </div>
-        </div>
+        </div> */}
 
         <div className="containers mx-auto lg:py-16 md:py-12 py-6 ">
           {" "}
           <div className="flex flex-col md:flex-row items-center justify-center lg:mb-16 md:mb-12 mb-8 ">
             {" "}
-            <div className="md:w-1/2 text-center md:text-left mb-4 md:mb-0">
+            <div className="relative md:w-1/2 text-center md:text-left mb-4 md:mb-0">
+                      <Image src={float} alt="gif" className="w-full absolute -top-16 md:-top-36 lg:-top-40 xl:-top-60" />
               <h2 className="font-mont font-semibold xl:text-[42px] lg:text-[38px] md:text-[32px] text-[26px] leading-[110%] text-[#199eb8] text-center">
                 Who we are?
               </h2>
@@ -70,13 +72,15 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <div className="md:w-1/2 text-center md:text-right order-1 md:order-2 mb-3 md:mb-0">
+            <div className="relative md:w-1/2 text-center md:text-right order-1 md:order-2 mb-3 md:mb-0">
+                      <Image src={float} alt="gif" className="w-full absolute -top-16 md:-top-36 lg:-top-40 xl:-top-60" />
+            
               <h2 className="font-mont font-semibold xl:text-[42px] lg:text-[38px] md:text-[32px] text-[26px] leading-[110%]  text-[#199eb8] text-center ">
                 What we do?
               </h2>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </>
   );

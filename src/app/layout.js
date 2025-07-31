@@ -28,17 +28,6 @@ const zenOldMincho = localFont({
   variable: "--font-zen-old-mincho",
 });
 
-// const mont = localFont({
-//   src: [
-//     {
-//       path: "../../public/fonts/Montserrat-Regular.woff",
-//       weight: "400",
-//       style: "normal",
-//     },
-//   ],
-//   variable: "--font-mont",
-// });
-
 const mont = Montserrat({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],

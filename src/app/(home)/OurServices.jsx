@@ -9,8 +9,8 @@ const services = [
   {
     title: "Digital Marketing",
     description:
-    "Grow your brand and achieve measurable results with us. Maximize your ROI with tailored digital marketing services online campaigns that drive impactful results.",
-      // "Get ROI through digital marketing services, drive successful online marketing campaigns with our digital marketing services.",
+      "Grow your brand and achieve measurable results with us. Maximize your ROI with tailored digital marketing services online campaigns that drive impactful results.",
+
     bgColor: "bg-[#E5EEF0]", // Light blue
     textColor: "text-[#2C99B1]", // Darker blue
     icon: digital,
@@ -18,8 +18,8 @@ const services = [
   {
     title: "Web Development",
     description:
-    "Get your website developed exactly to fit your business requirements. We build cross-browser compatible and responsive sites with the latest features for optimal performance.",
-      // "Build fast, responsive websites and web apps tailored to your business goals and user needs.",
+      "Get your website developed exactly to fit your business requirements. We build cross-browser compatible and responsive sites with the latest features for optimal performance.",
+
     bgColor: "bg-[#FDEFEF]", // Light pink
     textColor: "text-[#C94A4A]", // Darker red
     icon: web,
@@ -27,8 +27,8 @@ const services = [
   {
     title: "Creative Design",
     description:
-    "We provide creative design for social media and digital ads along with graphic designs like brochure, magazine ads to elevate your brand’s online presence.  ",
-      // "Engage your audience with high-quality content that speaks to your brand and drives results.",
+      "We provide creative design for social media and digital ads along with graphic designs like brochure, magazine ads to elevate your brand’s online presence.  ",
+
     bgColor: "bg-[#e1d4fa]", // Light Violet
     textColor: "text-[#64489e]", // Dark Violet
     icon: creative,
@@ -38,9 +38,9 @@ const services = [
 const OurServices = () => {
   return (
     <>
-      <section className="containers flex flex-col md:flex-row justify-between items-center gap-10  ">
+      <section className="containers flex flex-col-reverse md:flex-row justify-between items-center gap-10  ">
         <div className="w-full">
-          <p className="text-[14px] xl:text-[18px] font-mont font-normal">
+          <p className="text-[14px] md:text-[16px] xl:text-[20px] 2xl:text-[28px] leading-[156%] font-mont font-normal">
             Accolades, the creative hub for digital marketing in Kerala, keenly
             takes care of your diverse internet marketing solutions for your
             business. Our services include Graphics Designing, Content
@@ -69,7 +69,7 @@ const OurServices = () => {
           </div>
         </div>
       </section>
-      <section className="containers grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-5 pt-20 pb-10">
+      <section className="containers grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-5 pt-20 pb-10 ">
         {services.map((service, index) => (
           <div
             key={index}

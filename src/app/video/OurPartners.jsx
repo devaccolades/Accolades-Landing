@@ -4,9 +4,6 @@
 
 import Image from "next/image";
 import React from "react";
-import national from "../../../public/images/national.png";
-import cidbi from "../../../public/images/cidbi.png";
-import conf from "../../../public/images/confident.png";
 
 const OurPartners = ({ data }) => {
   const partners = data;

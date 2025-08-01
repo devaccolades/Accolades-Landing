@@ -16,6 +16,7 @@ import Link from "next/link";
 
 const navItems = [
   { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
   { label: "About", href: "/about-us" },
   { label: "Contact", href: "/contact-us" },
   { label: "Careers", href: "/careers" },
@@ -24,6 +25,7 @@ const navItems = [
 
 const mobileNavLinks = [
   { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
   { label: "About", href: "/about-us" },
   { label: "Blogs", href: "/blog" },
   { label: "Careers", href: "/careers" },
@@ -31,7 +33,7 @@ const mobileNavLinks = [
 ];
 
 const mobileServicePages = {
-  "digital": [
+  digital: [
     {
       label: "Performance Marketing",
       href: "/services/digital-marketing/performance",
@@ -47,7 +49,7 @@ const mobileServicePages = {
     },
     { label: "Content Marketing", href: "/services/digital-marketing/content" },
   ],
-  "web": [
+  web: [
     {
       label: "FullStack Web Development",
       href: "/services/web-development/fullstack-development",
@@ -55,7 +57,7 @@ const mobileServicePages = {
     { label: "WordPress Pages", href: "/services/web-development/wordpress" },
     { label: "Ecommerce Website", href: "/services/web-development/ecommerce" },
   ],
-  "creative": [
+  creative: [
     { label: "Graphics & Motion", href: "/services/creative/graphics-motion" },
     {
       label: "Branding & Packaging",
@@ -108,7 +110,7 @@ const Navbar = () => {
         { label: "Google Ads", href: "/services/digital-marketing/google-ads" },
         {
           label: "Search Engine Optimization",
-          href: "/services/digital-marketing/search-engine-optimization",
+          href: "/services/digital-marketing/seo",
         },
         {
           label: "Social Media Marketing",
@@ -422,8 +424,8 @@ const Navbar = () => {
               {/* Main Menu Items */}
               {/* {["Home", "About", "Blogs", "Careers", "Contact"].map(
                 (item, index) => ( */}
-                {mobileNavLinks.map((item, index) => (
-  <Link key={item.label} href={item.href} passHref>
+              {mobileNavLinks.map((item, index) => (
+                <Link key={item.label} href={item.href} passHref>
                   <div
                     key={item}
                     className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide ${
@@ -446,10 +448,8 @@ const Navbar = () => {
                   >
                     {item.label}
                   </div>
-                  </Link>
-                )
-                
-              )}
+                </Link>
+              ))}
 
               {/* Digital Marketing with Dropdown */}
               <div className="flex flex-col items-center w-full">
@@ -504,21 +504,21 @@ const Navbar = () => {
                     "Content Marketing",
                   ].map((service, index) => ( */}
                   {mobileServicePages["digital"].map((item, index) => (
-  <Link href={item.href} key={item.label}>
-                    <div
-                      // key={service}
-                      className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
-                        isShortScreen ? "text-base" : "text-lg"
-                      }`}
-                      style={{
-                        transitionDelay: isMobileServicesOpen
-                          ? `${index * 100}ms`
-                          : "0ms",
-                      }}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.label}
-                    </div>
+                    <Link href={item.href} key={item.label}>
+                      <div
+                        // key={service}
+                        className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
+                          isShortScreen ? "text-base" : "text-lg"
+                        }`}
+                        style={{
+                          transitionDelay: isMobileServicesOpen
+                            ? `${index * 100}ms`
+                            : "0ms",
+                        }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.label}
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -557,7 +557,6 @@ const Navbar = () => {
                   </div>
                 </div>
 
-                
                 <div
                   className={`flex flex-col items-center w-full transition-all duration-500 ${
                     isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"
@@ -572,23 +571,23 @@ const Navbar = () => {
                     "WordPress Pages",
                     "Ecommerce Website",
                   ].map((service, index) => ( */}
-                 {mobileServicePages["web"].map((item, index) => (
-  <Link href={item.href} key={item.label}>
-                    <div
-                      // key={service}
-                      className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
-                        isShortScreen ? "text-base" : "text-lg"
-                      }`}
-                      style={{
-                        transitionDelay:
-                          isMobileServicesOpen === "web"
-                            ? `${index * 100}ms`
-                            : "0ms",
-                      }}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.label}
-                    </div>
+                  {mobileServicePages["web"].map((item, index) => (
+                    <Link href={item.href} key={item.label}>
+                      <div
+                        // key={service}
+                        className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
+                          isShortScreen ? "text-base" : "text-lg"
+                        }`}
+                        style={{
+                          transitionDelay:
+                            isMobileServicesOpen === "web"
+                              ? `${index * 100}ms`
+                              : "0ms",
+                        }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.label}
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -645,22 +644,22 @@ const Navbar = () => {
                     "Video Production",
                   ].map((service, index) => ( */}
                   {mobileServicePages["creative"].map((item, index) => (
-  <Link href={item.href} key={item.label}>
-                    <div
-                      // key={service}
-                      className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
-                        isShortScreen ? "text-base" : "text-lg"
-                      }`}
-                      style={{
-                        transitionDelay:
-                          isMobileServicesOpen === "creative"
-                            ? `${index * 100}ms`
-                            : "0ms",
-                      }}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                     {item.label}
-                    </div>
+                    <Link href={item.href} key={item.label}>
+                      <div
+                        // key={service}
+                        className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
+                          isShortScreen ? "text-base" : "text-lg"
+                        }`}
+                        style={{
+                          transitionDelay:
+                            isMobileServicesOpen === "creative"
+                              ? `${index * 100}ms`
+                              : "0ms",
+                        }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.label}
+                      </div>
                     </Link>
                   ))}
                 </div>

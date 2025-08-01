@@ -51,7 +51,7 @@ function page() {
       />
       <Navbar />
       <HeroSection />
-      <Discover />
+      {/* <Discover /> */}
       <FormSection />
       <Footer />
     </section>

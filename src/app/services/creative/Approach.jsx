@@ -34,7 +34,7 @@ const steps = [
 
 const Approach = () => {
   return (
-    <section className="containers pt-10">
+    <section className="containers py-10">
       <h3 className="font-mont font-extrabold text-[24px] md:text-[32px] xl:text-[40px] text-[#3FB4BA]">
         Our Creative Approach
       </h3>

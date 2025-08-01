@@ -43,26 +43,32 @@
 //   );
 // }
 
-
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 export default function OurPresence() {
-  const locations = ["Kochi (HQ)", "Calicut", "Trivandrum", "Bengaluru", "Mumbai"];
+  const locations = [
+    "Kochi (HQ)",
+    "Calicut",
+    "Trivandrum",
+    "Bengaluru",
+    "Mumbai",
+  ];
 
   return (
     <>
       <section className="relative containers mx-auto py-2 md:py-6">
-        <div className="bg-white rounded-2xl shadow-xl px-4 py-8">
-          <h2 className="text-center font-mont text-2xl md:text-7xl font-extrabold text-[#3FB4BA] mb-2 md:mb-6">
+        <div className="bg-white rounded-2xl shadow-xl p-8">
+          <h2 className="text-center font-mont font-bold text-[36px] md:text-[50px] lg:text-[64px] text-[#3FB4BA] mb-4">
             Our Presence
           </h2>
           <p className="text-center font-mont text-gray-600 text-[13px] mdtext-[16px] lg:text-[18px] mx-auto mb-4 md:mb-10">
-            We operate globally and have strong local presence across India as a leading digital marketing
-            company. We’re strategically positioned to meet diverse client needs worldwide with headquarters
-            at Kochi, branches at Trivandrum, Calicut, Mumbai, and Bengaluru.
+            We operate globally and have strong local presence across India as a
+            leading digital marketing company. We’re strategically positioned to
+            meet diverse client needs worldwide with headquarters at Kochi,
+            branches at Trivandrum, Calicut, Mumbai, and Bengaluru.
           </p>
         </div>
       </section>

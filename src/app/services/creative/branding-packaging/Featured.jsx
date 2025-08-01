@@ -45,7 +45,7 @@ const packing = [
 ];
 
 const Featured = () => {
-  const [active, setActive] = useState("Logo");
+  const [active, setActive] = useState("Package");
 
   const buttons = [
     // "Logo",

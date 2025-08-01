@@ -20,7 +20,12 @@ export default function HeroSection() {
                 The ideal platform for all your queries
               </h3>
               <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
-                We provide innovative digital marketing solutions to answer all your business needs. From strategy to execution, our expert team ensures seamless support, helping you connect, grow, and excel in the digital space. We are your trusted partner for maximizing engagement, enhancing visibility, and driving success across online platforms..
+                We provide innovative digital marketing solutions to answer all
+                your business needs. From strategy to execution, our expert team
+                ensures seamless support, helping you connect, grow, and excel
+                in the digital space. We are your trusted partner for maximizing
+                engagement, enhancing visibility, and driving success across
+                online platforms..
               </p>
             </span>
 
@@ -33,54 +38,63 @@ export default function HeroSection() {
             </div>
           </div>
         </section>
-        
-        {/* <div className="relative">
-          {" "}
-          <div className="absolute -z-10 top-[20%] left-[10%] opacity-30">
-            <div className="w-0 h-0 border-l-[30px] border-l-transparent border-b-[50px] border-b-blue-200 border-r-[30px] border-r-transparent"></div>
-          </div>
-          <div className="absolute -z-10 top-[60%] right-[5%] opacity-30">
-            <div className="w-16 h-16 bg-pink-200 rounded-full"></div>
-          </div>
-          <div className="absolute -z-10 bottom-[10%] left-[20%] opacity-30">
-            <div className="w-0 h-0 border-l-[30px] border-l-transparent border-t-[50px] border-t-green-200 border-r-[30px] border-r-transparent"></div>
-          </div>
-        </div> */}
 
         <div className="containers mx-auto lg:py-16 md:py-12 py-6 ">
           {" "}
           <div className="flex flex-col md:flex-row items-center justify-center lg:mb-16 md:mb-12 mb-8 ">
             {" "}
             <div className="relative md:w-1/2 text-center md:text-left mb-4 md:mb-0">
-                      <Image src={float} alt="gif" className="w-full absolute -top-16 md:-top-36 lg:-top-40 xl:-top-60" />
+              <Image
+                src={float}
+                alt="gif"
+                className="w-full absolute -top-16 md:-top-36 lg:-top-40 xl:-top-60"
+              />
               <h2 className="font-mont font-semibold xl:text-[42px] lg:text-[38px] md:text-[32px] text-[26px] leading-[110%] text-[#199eb8] text-center">
                 Who we are?
               </h2>
             </div>
             <div className="md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
               <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
-                We are a dedicated team of digital marketing experts based in Kochi passionate about driving your brand's growth. With innovative strategies and tailored solutions, we help businesses thrive in the digital landscape. Our focus on creativity, data-driven insights, and cutting-edge technology ensures impactful results. Partner with us to elevate your online presence, enhance engagement, and achieve measurable success. We have physical presence at Calicut, Trivandrum, Bengaluru, Mumbai and we serve globally.
+                We are a dedicated team of digital marketing experts based in
+                Kochi passionate about driving your brand's growth. With
+                innovative strategies and tailored solutions, we help businesses
+                thrive in the digital landscape. Our focus on creativity,
+                data-driven insights, and cutting-edge technology ensures
+                impactful results. Partner with us to elevate your online
+                presence, enhance engagement, and achieve measurable success. We
+                have physical presence at Calicut, Trivandrum, Bengaluru, Mumbai
+                and we serve globally.
               </p>
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center">
             {" "}
-
             <div className="md:w-1/2 bg-white p-8 rounded-lg shadow-lg mb-8 md:mb-0 order-2 md:order-1">
               <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
-                We deliver complete digital marketing solutions tailored to your goals. From SEO and social media management to content creation and analytics, we enhance your brand’s online visibility. Other services include Google and Meta Ads, web design, and graphic design. With compelling graphic designs, we create impactful brand visuals, enhancing your online presence. . By combining creativity with data-driven methods, we deliver measurable results that drive engagement, boost conversions, and fuel growth.
+                We deliver complete digital marketing solutions tailored to your
+                goals. From SEO and social media management to content creation
+                and analytics, we enhance your brand’s online visibility. Other
+                services include Google and Meta Ads, web design, and graphic
+                design. With compelling graphic designs, we create impactful
+                brand visuals, enhancing your online presence. . By combining
+                creativity with data-driven methods, we deliver measurable
+                results that drive engagement, boost conversions, and fuel
+                growth.
               </p>
             </div>
-
             <div className="relative md:w-1/2 text-center md:text-right order-1 md:order-2 mb-3 md:mb-0">
-                      <Image src={float} alt="gif" className="w-full absolute -top-16 md:-top-36 lg:-top-40 xl:-top-60" />
-            
+              <Image
+                src={float}
+                alt="gif"
+                className="w-full absolute -top-16 md:-top-36 lg:-top-40 xl:-top-60"
+              />
+
               <h2 className="font-mont font-semibold xl:text-[42px] lg:text-[38px] md:text-[32px] text-[26px] leading-[110%]  text-[#199eb8] text-center ">
                 What we do?
               </h2>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
     </>
   );

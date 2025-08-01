@@ -17,8 +17,8 @@ function Digital() {
             className="w-fit h-fit sticky top-50 mt-0"
           />
         </div>
-        <div className="w-full flex flex-col md:gap-[100px] lg:gap-[130px] bg-white/60 p-5 rounded-xl">
-          <p className="font-mont text-[24px]  md:text-[50px] lg:text-[76px]  font-semibold leading-[110%] text-center text-[#3FB4BA] mt-[17px] md:mt-[35px]">
+        <div className="w-full flex flex-col md:gap-[40px] lg:gap-[60px] bg-white/60 p-5 rounded-[30px]">
+          <p className="font-mont text-[36px] md:text-[50px] lg:text-[64px] font-semibold leading-[110%] text-center text-[#3FB4BA] mt-[17px] md:mt-[35px]">
             Digital Marketing
           </p>
           <div className="flex flex-col md:flex-row justify-around items-center gap-4 mt-[34px] md:mt-[20px] ">
@@ -31,7 +31,7 @@ function Digital() {
                 className="h-full w-full md:h-[190px] lg:h-full object-cover object-center p-3"
               />
             </div>
-            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-lg max-w-[338px] lg:max-w-[608px]">
+            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
               <h1 className="text-[#3FB4BA] text-[28px]md:text-[35px] font-semibold lg:text-[50px] font-mont leading-[100%]">
                 Google Ads
               </h1>
@@ -44,7 +44,7 @@ function Digital() {
                 Ad.
               </p>
               <Link href={"/services/digital-marketing/google-ads"}>
-                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
+                <button className="bg-[#3FB4BA] px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-[30px] font-semibold mt-[15px]">
                   see more
                 </button>
               </Link>
@@ -61,7 +61,7 @@ function Digital() {
                 className="h-full w-full md:h-[190px] lg:h-full object-cover object-center p-3"
               />
             </div>
-            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-lg max-w-[338px] lg:max-w-[608px]">
+            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
               <h1 className="text-[#3FB4BA] text-[28px]md:text-[35px] font-semibold lg:text-[50px] font-mont leading-[100%]">
                 Search Engine Optimization
               </h1>
@@ -78,7 +78,7 @@ function Digital() {
                 contents from the internet.
               </p>
               <Link href={"/services/digital-marketing/seo"}>
-                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
+                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-[30px] font-semibold mt-[15px]">
                   see more
                 </button>
               </Link>
@@ -96,7 +96,7 @@ function Digital() {
                 className="h-full w-full md:h-[190px] lg:h-full object-cover object-center p-3"
               />
             </div>
-            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-lg max-w-[338px] lg:max-w-[608px]">
+            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
               <h1 className="text-[#3FB4BA] text-[28px]md:text-[35px] font-semibold lg:text-[50px] font-mont leading-[100%]">
                 Social Media Marketing
               </h1>
@@ -109,7 +109,7 @@ function Digital() {
                 than grab people’s attention.
               </p>
               <Link href={"/services/digital-marketing/smm"}>
-                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
+                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-[30px] font-semibold mt-[15px]">
                   see more
                 </button>
               </Link>
@@ -126,7 +126,7 @@ function Digital() {
                 className="h-full w-full md:h-[190px] lg:h-full object-cover object-center p-3"
               />
             </div>
-            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-lg max-w-[338px] lg:max-w-[608px]">
+            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
               <h1 className="text-[#3FB4BA] text-[28px]md:text-[35px] font-semibold lg:text-[50px] font-mont leading-[100%]">
                 Content Marketing
               </h1>
@@ -140,7 +140,7 @@ function Digital() {
                 that is appropriate.
               </p>
               <Link href={"/services/digital-marketing/content-marketing"}>
-                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
+                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-[30px] font-semibold mt-[15px]">
                   see more
                 </button>
               </Link>

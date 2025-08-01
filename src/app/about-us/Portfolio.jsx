@@ -23,13 +23,13 @@ export default function Portfolio() {
 
   return (
     <>
-      <div className="containers mx-auto lg:pt-16 md:pt-12 pyt-6 ">
+      <div className="containers mx-auto lg:pt-16 md:pt-12 py-6 ">
         <h1 className="relative text-center font-mont font-semibold xl:text-[56px] lg:text-[46px] md:text-[36px] text-[26px] leading-[110%] md:w-[60%] lg:w-[65%] xl:w-[55%] mx-auto">
-          <Image
+          {/* <Image
             src={float}
             alt="gif"
-            className="w-full absolute -top-30 lg:-top-40 xl:-top-60"
-          />
+            className="w-[70%] lg:w-full absolute -top-30 lg:-top-40 xl:-top-60"
+          /> */}
           <span className="text-[#3FB4BA]">Creative Solutions</span> Delivering
           Quality
         </h1>
@@ -42,85 +42,54 @@ export default function Portfolio() {
         </div>
       </div>
       <div
-      className="pb-30"
+        className="pb-30"
         style={{
           background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
         }}
       >
         <div className="containers">
-          <div className="relative flex flex-col md:grid md:grid-cols-1 lg:grid-cols-2 md:gap-8 mb-6">
-            <div className="flex md:hidden lg:hidden flex-col justify-start items-start mb-6">
-              <Image
-                src={float}
-                alt="gif"
-                className="absolute w-[80%] -top-10"
-              />
-
-              <p className="font-mont font-normal text-[32px] leading-[130%] text-[#3F3F3F] mb-2">
-                See Our Impact
-              </p>
-              <h2 className="font-mont font-semibold text-[32px] leading-[110%] tracking-[3%] text-[#3FB4BA]">
-                Latest <br />
-                <span className="font-mont font-bold text-[32px] leading-[130%] text-[#3F3F3F]">
-                  Creations
-                </span>
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-2 gap-2 order-2 lg:order-1">
+          <div className="relative flex flex-col-reverse lg:grid lg:grid-cols-[55%_1fr]">
+            <div className="grid grid-cols-2 gap-2 mb-5">
               {topImages.map((image, index) => (
-                <div key={index} className="col-span-1">
-                  <div className="relative h-[150px] sm:h-[180px] md:h-[200px] lg:h-[240px] xl:h-[290px] w-full">
+                <div key={index} className="w-full">
+                  <div className="relative h-[250px]  2xl:h-[350px] w-auto ">
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      fill
-                      sizes="(max-width: 640px) 50vw, (max-width: 768px) 40vw, 290px"
-                      className="rounded-lg object-cover object-center"
+                      className="rounded-lg w-full h-full object-cover"
                     />
                   </div>
                 </div>
               ))}
             </div>
-
-            <div className="relative hidden md:flex lg:flex flex-col justify-center md:justify-start items-start lg:justify-center text-center lg:text-left lg:pl-20 order-1 lg:order-2">
-              <div className="absolute -z-10 top-0 right-1/4 translate-x-1/2 opacity-30">
-                <div className="w-0 h-0 border-l-[30px] border-l-transparent border-b-[50px] border-b-blue-200 border-r-[30px] border-r-transparent"></div>
-              </div>
-              <div className="absolute -z-10 top-1/2 left-1/4 -translate-y-1/2 opacity-30">
-                <div className="w-16 h-16 bg-pink-200 rounded-full"></div>
-              </div>
-              <div className="absolute -z-10 bottom-0 right-1/3 translate-x-1/2 opacity-30">
-                <div className="w-0 h-0 border-l-[30px] border-l-transparent border-t-[50px] border-t-green-200 border-r-[30px] border-r-transparent"></div>
-              </div>
+            <div className="relative w-full">
               <Image
                 src={float}
                 alt="gif"
-                className="hidden md:flex absolute md:-top-50 lg:left-10 xl:top-10"
+                className="w-[60%] lg:w-full h-full"
               />
-
-              <p className="font-mont font-normal xl:text-[44px] lg:text-[38px] md:text-[32px] leading-[130%] text-[#3F3F3F] mb-2">
-                See Our Impact
-              </p>
-              <h2 className="font-mont font-semibold xl:text-[44px] lg:text-[38px] md:text-[32px] leading-[110%] tracking-[3%] text-[#3FB4BA]">
-                Latest <br />
-                <span className="font-mont font-bold xl:text-[44px] lg:text-[38px] md:text-[32px] leading-[130%] text-[#3F3F3F]">
-                  Creations
-                </span>
-              </h2>
+              <div className="absolute inset-0 flex flex-col justify-center items-start lg:pl-[5%]">
+                <h3 className="text-[36px] text-[#3F3F3F] font-normal leading-[100%]">
+                  Latest Projects
+                </h3>
+                <h3 className="text-[#3FB4BA] text-[48px] md:text-[56px] xl:text-[76px] font-semibold leading-[100%]">
+                  Recent
+                </h3>
+                <h3 className="font-bold text-[36px] md:text-[48px] xl:text-[64px] leading-[100%">
+                  Highlights
+                </h3>
+              </div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {bottomImages.map((image, index) => (
-              <div key={index} className="col-span-1">
-                <div className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[600px] w-full">
+              <div key={index} className="">
+                <div className="relative h-[300px] md:h-[700px] lg:h-[450px] 2xl:h-[750px] w-auto">
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                    className="rounded-lg object-cover"
+                    className="rounded-lg h-full w-full object-cover "
                   />
                 </div>
               </div>

@@ -5,10 +5,7 @@ import side from "../../../../../public/creative/branding/hero.webp";
 const HeroSection = () => {
   return (
     <section className="containers font-mont pt-[100px]">
-      <h1
-        className="bg-white text-center text-[#3FB4BA] text-[36px] md:text-[50px] font-mont py-5 mb-5 rounded-[30px] font-extrabold
-          leading-[100%]"
-      >
+      <h1 className="bg-white text-center text-[#3FB4BA] text-[36px] md:text-[50px] lg:text-[60px] font-mont py-5 mb-5 rounded-[30px] font-bold leading-[100%]">
         Branding & Packaging
       </h1>
       <div className="flex flex-col-reverse md:grid md:grid-cols-[50%_1fr] pb-[2%] items-center gap-5">

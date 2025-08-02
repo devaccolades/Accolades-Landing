@@ -1,5 +1,5 @@
 import React from "react";
-import adobeE from "../../../../public/services/meta.png";
+import adobeE from "../../../../public/services/metaa.png";
 import adobeC from "../../../../public/services/gads.png";
 import adobeP from "../../../../public/creative/Adobe_Premiere_Pro_CC_icon.svg 1.png";
 import canva from "../../../../public/creative/Canva-New-Logo-1440x810 1.png";
@@ -40,7 +40,7 @@ const Tools = () => {
                   className="mb-2"
                 />
                 <p className="font-semibold text-[12px] md:text-[14px]">
-                  {tool.name}
+                  {/* {tool.name} */}
                 </p>
               </div>
             ))}

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  devIndicators: false,
   images: {
     domains: ['https://strapi.video.accoladesweb.com'], // Your existing Strapi host configuration+
     unoptimized: true, // Disable Next.js image optimization

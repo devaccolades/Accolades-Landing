@@ -47,12 +47,12 @@ const Tools = () => {
           </div>
 
           <p className="text-gray-700 text-sm max-w-3xl mx-auto">
-            Our team leverages industry-leading tools to bring creativity and
-            precision to every project. From motion graphics with After Effects
-            to design and layout with Illustrator and Canva Pro, we ensure every
-            visual asset meets the highest standards. These platforms empower us
-            to craft compelling content, streamline collaboration, and deliver
-            impactful results across digital and print media.
+           We leverage industry-leading tools to ensure every digital marketing campaign is efficient,
+           targeted, and result-oriented. Our team uses Google Ads to run highly optimized search and display 
+           campaigns, while Meta Business Suite helps us manage and monitor Facebook and Instagram ads seamlessly
+           across platforms. To track and measure performance, we rely on Google Analytics, offering deep insights
+           into user behavior and campaign ROI. These tools, combined with our strategic expertise, enable us to make
+           data-driven decisions, refine targeting, and maximize the impact of every marketing initiative.
           </p>
         </div>
       </section>

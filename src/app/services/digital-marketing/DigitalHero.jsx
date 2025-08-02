@@ -16,14 +16,15 @@ const DigitalHero = () => {
           <h3 className="text-[#3FB4BA] text-[24px] lg:text-[40px] font-extrabold leading-[120%]">
             Bringing Ideas to Life with Design That Inspires
           </h3>
-          <h3 className="text-[16px] lg:text-[20px] text-[#333333] leading-[110%] font-normal">
+          {/* <h3 className="text-[16px] lg:text-[20px] text-[#333333] leading-[110%] font-normal">
             Fuel your growth with scroll-stopping visuals, thumb-stopping
             videos, and packaging that leaps off the shelf.
-          </h3>
+          </h3> */}
           <p className="text-[13px] md:text-[16px]  leading-[156%]">
-            Whether you’re launching a startup or refreshing an iconic brand,
-            our creative squad blends art and strategy to turn attention into
-            action.
+            At Accolades Integrated, we harness the power of digital to transform brands and accelerate business growth.
+           Our expert team blends strategy, creativity, and technology to deliver performance-driven digital marketing 
+           solutions tailored to your goals. From Google Ads and Meta Campaigns to SEO, content creation, LinkedIn marketing, 
+           and analytics—every service is built to boost visibility, engage audiences, and drive measurable results.
           </p>
         </div>
         <div>

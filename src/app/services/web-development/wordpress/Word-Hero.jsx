@@ -1,22 +1,15 @@
-
-
 "use client";
 import Image from "next/image";
 import React from "react";
 import Hero from "../../../../../public/web/word.png";
-import Link from "next/link"
+import Link from "next/link";
+import AnimatedWebTitle from "@/component/AnimatedWebTitle";
 
 export default function WordpressHero() {
   return (
-    <div className="pt-20 pb-8 px-4 md:px-10 lg:px-20">
-      <div className="mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="bg-white rounded-[30px] py-6 px-4">
-          <h1 className="text-[#3FB4BA] font-mont font-bold text-center leading-[130%]  text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[70px]">
-            Wordpress Pages
-          </h1>
-        </div>
-
+    <div className="containers pt-[100px]">
+      <div className="">
+        <AnimatedWebTitle text={"Wordpress Pages"} />
         {/* Content Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-8 mt-10 items-center">
           {/* Right Image First on Mobile */}
@@ -31,18 +24,18 @@ export default function WordpressHero() {
 
           {/* Left Text Second on Mobile */}
           <div className="bg-white rounded-2xl shadow-md p-2 md:p-4 order-2 md:order-1">
-           
             <h2 className="text-[20px] lg:text-[30px] xl:text-[40px] leading-[130%] font-bold font-mont text-[#1eb2a6] mb-2">
-             Custom WordPress Solutions for All Needs
+              Custom WordPress Solutions for All Needs
             </h2>
             <p className="text-gray-700 font-mont text-[12px] lg:text-[14px] xl:text-[16px] leading-[130%]">
-             From lightning-fast blogs to stunning landing pages — we make WordPress work for you.
+              From lightning-fast blogs to stunning landing pages — we make
+              WordPress work for you.
             </p>
-         <Link href="/contact-us">
-        <button className="mt-4 px-6 py-2 bg-[#4bb9af] text-white rounded-4xl font-mont font-semibold hover:bg-[#17a19b] transition-colors">
-          Get a Creative Proposal
-        </button>
-      </Link>
+            <Link href="/contact-us">
+              <button className="mt-4 px-6 py-2 bg-[#4bb9af] text-white rounded-4xl font-mont font-semibold hover:bg-[#17a19b] transition-colors">
+                Get a Creative Proposal
+              </button>
+            </Link>
           </div>
         </div>
       </div>

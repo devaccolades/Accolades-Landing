@@ -1,79 +1,13 @@
 "use client";
 
 import { Clock, MapPin, ArrowRight, ArrowLeft } from "lucide-react";
-import Image from "next/image";
 import { useState, useEffect } from "react";
-import img8 from "../../../public/blog/img8.png";
-import img9 from "../../../public/blog/img9.png";
-import img10 from "../../../public/blog/img10.png";
-import img11 from "../../../public/blog/img11.png";
-import img12 from "../../../public/blog/img12.png";
-import img13 from "../../../public/blog/img13.png";
+
 import Link from "next/link";
+import blogPosts from './blogPosts.js'
+import Image from "next/image";
 
 const BlogCardsGrid = ({ selectedTag }) => {
-  const blogPosts = [
-    {
-      id: 1,
-      date: "November 20, 2023",
-      readTime: "5 min",
-      title: "Custom vs. Template-Based Ecommerce Websites: Which is Right for You?",
-      key: 'Business', // FIXED: Consistent casing
-      image: img8,
-      backgroundColor: "bg-gradient-to-br from-blue-400 to-purple-500",
-      imageOverlay: "digital-marketing-icons",
-    },
-    {
-      id: 2,
-      date: "November 20, 2023",
-      readTime: "5 min",
-      title: "Top Marketing Channels for 2025 and How to Choose Them Wisely",
-      key: 'Digital Marketing', // FIXED: Match the tag label exactly
-      image: img9,
-      backgroundColor: "bg-gradient-to-br from-orange-400 to-red-500",
-      imageOverlay: "mobile-apps",
-    },
-    {
-      id: 3,
-      date: "November 20, 2023",
-      readTime: "5 min",
-      title: "Types of Google Ads – Which Is Right for You",
-      key: 'Google adwords', // FIXED: Match the tag label exactly
-      image: img10,
-      backgroundColor: "bg-gradient-to-br from-pink-400 to-purple-600",
-      imageOverlay: "web-design",
-    },
-    {
-      id: 4,
-      date: "November 20, 2023",
-      readTime: "5 min",
-      title: "Design Your Digital Success Story: Top Web Designing Companies in Trivandrum for Innovative Websites",
-      key: 'web designing companies', // FIXED: Match the tag label exactly
-      image: img11,
-      backgroundColor: "bg-gradient-to-br from-cyan-500 to-blue-500",
-      imageOverlay: "web-development",
-    },
-    {
-      id: 5,
-      date: "November 20, 2023",
-      readTime: "5 min",
-      title: "4 Best SMM Techniques To Improve Social Media Engagement",
-      key: "Social media agencies", // FIXED: Match the tag label exactly (case sensitive)
-      image: img12,
-      backgroundColor: "bg-gradient-to-br from-gray-800 to-gray-900",
-      imageOverlay: "coding",
-    },
-    {
-      id: 6,
-      date: "November 20, 2023",
-      readTime: "5 min",
-      title: "Unleashing the Power of Python: Top Python Developers in Kerala for Your Next Project",
-      key: 'Python developers in kerala', // FIXED: Match the tag label exactly (case sensitive)
-      image: img13,
-      backgroundColor: "bg-gradient-to-br from-blue-400 to-purple-500",
-      imageOverlay: "marketing",
-    },
-  ];
 
   // FIXED: Better filtering logic with exact case-sensitive matching
   const filteredPosts = selectedTag === "All" 
@@ -119,7 +53,7 @@ const BlogCardsGrid = ({ selectedTag }) => {
         <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1 h-full flex flex-col">
           {/* Image Section */}
           <div
-            className={`h-48 relative ${post.backgroundColor} overflow-hidden rounded-t-2xl`}
+            className={`h-48 relative overflow-hidden rounded-t-2xl`}
           >
             {/* Header with date and time */}
             <div className="absolute top-4 left-4 right-4 flex justify-between items-center z-10">
@@ -142,7 +76,7 @@ const BlogCardsGrid = ({ selectedTag }) => {
                 src={post.image}
                 alt={post.title}
                 fill
-                className="object-cover opacity-90"
+                className="object-cover object-center opacity-90"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
@@ -157,7 +91,7 @@ const BlogCardsGrid = ({ selectedTag }) => {
               <div className="flex-shrink-0">
                 <div className="md:w-14 md:h-14 h-10 w-10 rounded-full border-4 border-[#BFE1DE] flex items-center justify-center">
                   <Link
-                    href={`/blog/${post.id}`}
+                    href={`/blog/${post.key}`}
                     className="md:w-10 md:h-10 w-8 h-8 bg-teal-600 hover:bg-teal-700 text-white rounded-full flex items-center justify-center transition-colors duration-200 group-hover:scale-110 transform"
                   >
                     <ArrowRight className="w-4 h-4" />
@@ -180,12 +114,12 @@ const BlogCardsGrid = ({ selectedTag }) => {
       <div className="w-full h-full containers mx-auto pb-20 md:pb-30">
         {/* ADDED: Display current filter and count */}
         <div className="mb-6 text-center">
-          <p className="text-white font-mont text-lg">
+          {/* <p className="text-white font-mont text-lg">
             {selectedTag === "All" 
               ? `Showing all ${filteredPosts.length} posts` 
               : `Showing ${filteredPosts.length} posts for "${selectedTag}"`
             }
-          </p>
+          </p> */}
         </div>
 
         {/* ADDED: Handle empty state */}

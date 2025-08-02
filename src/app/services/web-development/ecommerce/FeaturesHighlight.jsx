@@ -26,10 +26,10 @@ const features = [
 
 const FeaturesHighlight = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-[#F8FCFF] to-white py-12 containers">
+    <section className="w-full  to-white pb-12 containers">
       {/* Title */}
       <motion.h2
-        className="text-2xl md:text-4xl font-bold text-teal-600 mb-10 text-center"
+        className="text-2xl md:text-4xl font-bold text-white mb-4 text-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -50,7 +50,9 @@ const FeaturesHighlight = () => {
             viewport={{ once: true }}
           >
             <div className="text-3xl mb-3">{feature.icon}</div>
-            <h3 className="text-lg font-semibold text-teal-600 mb-2">{feature.title}</h3>
+            <h3 className="text-lg font-semibold text-teal-600 mb-2">
+              {feature.title}
+            </h3>
             <p className="text-gray-600 text-sm">{feature.desc}</p>
           </motion.div>
         ))}

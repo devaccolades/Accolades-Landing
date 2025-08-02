@@ -1,21 +1,14 @@
-
-
 "use client";
 import Image from "next/image";
 import React from "react";
 import Hero from "../../../../public/web/banner.png";
+import AnimatedWebTitle from "@/component/AnimatedWebTitle";
 
 export default function WebHero() {
   return (
-    <div className="pt-20 pb-8 px-4 md:px-10 lg:px-20">
-      <div className="mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="bg-white rounded-[30px] py-6 px-4">
-          <h1 className="text-[#3FB4BA] font-mont font-bold text-center leading-[130%]  text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[70px]">
-            Web Development
-          </h1>
-        </div>
-
+    <div className="containers pt-[100px]">
+      <div className="">
+        <AnimatedWebTitle text={"Web Development"} />
         {/* Content Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-8 mt-10 items-center">
           {/* Right Image First on Mobile */}
@@ -37,26 +30,33 @@ export default function WebHero() {
               Web Development
             </h2>
             <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%]">
-              Accolades Integrated deliver innovative and cost-effective web development services for businesses
-             in Kerala. With over five years of expertise, our skilled web designers create responsive, 
-             lead-generating websites that elevate your business.
+              Accolades Integrated deliver innovative and cost-effective web
+              development services for businesses in Kerala. With over five
+              years of expertise, our skilled web designers create responsive,
+              lead-generating websites that elevate your business.
             </p>
             <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%] mt-2">
-             We focus on functionality, usability, and conversion optimization, ensuring your site turns visitors
-           into loyal customers. Our designs are both visually appealing and performance-driven, tailored to meet
-            your business goals. 
-              </p>
-               <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%] mt-2">
-             As a trusted web development company in Kochi, we provide scalable solutions that align with your needs. 
-             Our commitment to your success drives us to craft websites that stand out and perform exceptionally. 
-              </p>
-               <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%] mt-2">
-            Choose Accolades for professional web design services that amplify your digital presence and help you achieve
-           measurable results. Let’s transform your vision into a powerful, lead-generating website that stands above the competition. 
-              </p>
-              <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%] mt-2">
-             Optimize your online growth with us—your trusted partner in web development in Kerala.
-             </p>
+              We focus on functionality, usability, and conversion optimization,
+              ensuring your site turns visitors into loyal customers. Our
+              designs are both visually appealing and performance-driven,
+              tailored to meet your business goals.
+            </p>
+            <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%] mt-2">
+              As a trusted web development company in Kochi, we provide scalable
+              solutions that align with your needs. Our commitment to your
+              success drives us to craft websites that stand out and perform
+              exceptionally.
+            </p>
+            <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%] mt-2">
+              Choose Accolades for professional web design services that amplify
+              your digital presence and help you achieve measurable results.
+              Let’s transform your vision into a powerful, lead-generating
+              website that stands above the competition.
+            </p>
+            <p className="text-gray-700 font-mont text-[12px] lg:text-[13px] xl:text-[16px] leading-[156%] mt-2">
+              Optimize your online growth with us—your trusted partner in web
+              development in Kerala.
+            </p>
           </div>
         </div>
       </div>

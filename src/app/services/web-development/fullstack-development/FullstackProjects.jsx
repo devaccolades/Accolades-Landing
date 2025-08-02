@@ -25,39 +25,43 @@ const projects = [
   {
     title: "ABE SERVICES",
     image: img1,
+    link: "https://abeservices.in/"
   },
-  
+
   {
     title: "ALPHA ARC",
     image: img3,
+    link: "https://alphaarc.in/"
   },
- 
+
   {
     title: "CIDBI",
     image: img5,
+    link: "https://cidbi.com/"
   },
- 
+
   {
     title: "NATIONAL BUILDERS",
-    image: img7
+    image: img7,
+    link: "https://nationalbuilders.in/"
   },
- 
+
 ];
 
 
 export default function FullstackProjects() {
   return (
-   
+
     // <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg::px-20">
-     <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-8 ">
+    <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-8 ">
       <div className="">
         <div className="bg-white rounded-2xl shadow p-4 md:p-8 mx-3 md:mx-10 lg:mx-20 ">
 
           <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 md:mb-4">Web Projects</h2>
           <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
             We build full stack websites that are smart, smooth, and secure. Each site runs fast and
-             adapts well to any screen. Our code stacks scale with ease and handle real-world load. 
-             We turn concepts into high-performing digital platforms.
+            adapts well to any screen. Our code stacks scale with ease and handle real-world load.
+            We turn concepts into high-performing digital platforms.
 
           </p>
         </div>
@@ -85,16 +89,36 @@ export default function FullstackProjects() {
             }}
           >
             {projects.map((project, index) => (
+              // <SwiperSlide key={index}>
+              //   <div className="flex flex-col items-center">
+              //     <div className="relative w-full aspect-[3/4]">
+              //       <Image
+              //         src={project.image}
+              //         alt={project.title}
+              //         fill
+              //         className="rounded-md shadow-lg object-cover"
+              //       />
+              //     </div>
+              //     <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-4">
+              //       {project.title}
+              //     </h3>
+              //   </div>
+              // </SwiperSlide>
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-center">
-                  <div className="relative w-full aspect-[3/4]">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative w-full aspect-[3/4] block"
+                  >
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
                       className="rounded-md shadow-lg object-cover"
                     />
-                  </div>
+                  </a>
                   <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-4">
                     {project.title}
                   </h3>

@@ -1,15 +1,16 @@
-import Footer from '@/component/Footer'
-import Navbar from '@/component/Navbar'
-import React from 'react'
-import Herosection from '../../digital-marketing/performance-marketing/Herosection'
-import WhatWeOffer from '../../digital-marketing/performance-marketing/WhatWeOffer';
-import FeaturesHighlight from './FeaturesHighlight';
-import WebsiteProjectsIntro from './WebsiteProjectsIntro';
+import Footer from "@/component/Footer";
+import Navbar from "@/component/Navbar";
+import React from "react";
+import Herosection from "../../digital-marketing/performance-marketing/Herosection";
+import WhatWeOffer from "../../digital-marketing/performance-marketing/WhatWeOffer";
+import FeaturesHighlight from "./FeaturesHighlight";
+import WebsiteProjectsIntro from "./WebsiteProjectsIntro";
 
 const heroData = {
   main_title: "Ecommerce Website",
   title: "Your Online Store. Built to Convert.",
-  subtitle: "Whether you're starting from scratch or scaling to thousands of orders, we build ecommerce platforms that drive revenue.",
+  subtitle:
+    "Whether you're starting from scratch or scaling to thousands of orders, we build ecommerce platforms that drive revenue.",
   button_text: "Get a Creative Proposal",
   image: "/web/ecom/ecom.webp",
 };
@@ -37,25 +38,27 @@ const tools = [
   },
 ];
 
-
-const tech ={
-   title: "Supported Platforms",
+const tech = {
+  title: "Supported Platforms",
   desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae velit sequi, explicabo voluptate maxime temporibus architecto voluptatibus. Dicta eligendi earum porro fugiat dolor rem obcaecati deserunt aut mollitia. Sint, nesciunt!",
-  services :tools
-}
-
+  services: tools,
+};
 
 const page = () => {
   return (
-    <>
-      <Navbar/>
+    <div
+      style={{
+        background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
+      }}
+    >
+      <Navbar />
       <Herosection {...heroData} />
-      <WhatWeOffer {...tech}/>
-      <FeaturesHighlight/>
-      <WebsiteProjectsIntro />
+      <WhatWeOffer {...tech} />
+      <FeaturesHighlight />
+      {/* <WebsiteProjectsIntro /> */}
       <Footer />
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default page
+export default page;

@@ -22,42 +22,46 @@ import img7 from "../../../../../public/web/na-bu.jpg";
 import img8 from "../../../../../public/web/green.jpg";
 
 const projects = [
- 
+
   {
     title: "ABLS HUMAN RESOURCES",
     image: img2,
+    link: "https://ablshumanresources.com/"
   },
-  
+
   {
     title: "ATC KODANAD",
     image: img4,
+    link: "https://atckodanad.com/"
   },
-  
+
   {
     title: "GO GREEN COMPANY",
     image: img6,
+    link: "https://ggc-travel.com/"
   },
-  
+
   {
     title: "GREEN TEA",
     image: img8,
+    link: "https://greenteahotels.com/"
   },
 ];
 
 
 export default function WordProjects() {
   return (
-   
+
     // <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg::px-20">
-     <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-8 ">
+    <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-8 ">
       <div className="">
         <div className="bg-white rounded-2xl shadow p-4 md:p-8 mx-3 md:mx-10 lg:mx-20 ">
 
           <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 md:mb-4">Web Projects</h2>
           <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
             We build WordPress sites that are fast, sleek, and easy to run. Each project reflects smart design, simple flow,
-             and strong performance. Our websites load fast, rank well, and work across all screens. Clients trust us for 
-             websites that grow with their brand.
+            and strong performance. Our websites load fast, rank well, and work across all screens. Clients trust us for
+            websites that grow with their brand.
 
           </p>
         </div>
@@ -85,16 +89,36 @@ export default function WordProjects() {
             }}
           >
             {projects.map((project, index) => (
+              // <SwiperSlide key={index}>
+              //   <div className="flex flex-col items-center">
+              //     <div className="relative w-full aspect-[3/4]">
+              //       <Image
+              //         src={project.image}
+              //         alt={project.title}
+              //         fill
+              //         className="rounded-md shadow-lg object-cover"
+              //       />
+              //     </div>
+              //     <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-4">
+              //       {project.title}
+              //     </h3>
+              //   </div>
+              // </SwiperSlide>
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-center">
-                  <div className="relative w-full aspect-[3/4]">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative w-full aspect-[3/4] block"
+                  >
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
                       className="rounded-md shadow-lg object-cover"
                     />
-                  </div>
+                  </a>
                   <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-4">
                     {project.title}
                   </h3>

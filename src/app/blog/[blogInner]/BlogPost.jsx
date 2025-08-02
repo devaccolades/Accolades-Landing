@@ -59,7 +59,7 @@ export default function BlogPost() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 pb-20"       style={{
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 pb-20" style={{
         background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
       }}>
       <div className="containers py-6">
@@ -115,12 +115,8 @@ export default function BlogPost() {
                   </p>
                 </div>
 
-                <div className="mb-4">
-                  <Image src={Img17} alt="img17" />
-                </div>
-
                 <div className="prose prose-lg max-w-none mb-8">
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#000000] mb-8">
                     Social media campaigns in Mumbai are characterized by
                     focused advertising. Mumbai's agencies provide social media
                     management and customer acquisition. Due to their expertise,
@@ -132,7 +128,7 @@ export default function BlogPost() {
                     excellent for startups, small businesses, and enterprises.
                   </p>
 
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#000000] mb-8">
                     These agencies also use a variety uses and analytical tools
                     and advanced indicators. They provide detailed analytics and
                     insights to help businesses understand their customers
@@ -144,12 +140,8 @@ export default function BlogPost() {
                   </p>
                 </div>
 
-                <div className="mb-4">
-                  <Image src={Img18} alt="img18" />
-                </div>
-
                 <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#000000] mb-8">
                     Social media businesses also provide community engagement
                     services as they build trust and authenticity by quickly
                     answering inquiries and comments. They help online

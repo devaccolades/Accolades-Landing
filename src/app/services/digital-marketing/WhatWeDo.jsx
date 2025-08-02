@@ -72,8 +72,9 @@ const WhatWeDo = () => {
   {/* Second row: 2 cards centered */}
   <div className="flex justify-center gap-5 xl:gap-10 pt-5 flex-wrap">
     {cards.slice(3).map((card, index) => (
-      <div
-        key={index}
+      <Link
+     key={index}
+     href={card.link}
         className="w-full md:w-[45%] lg:w-[30%] h-auto rounded-[20px] bg-white shadow-lg overflow-hidden flex flex-col justify-between p-2"
       >
         <Image
@@ -89,7 +90,7 @@ const WhatWeDo = () => {
           </h3>
           <Image src={arrow} alt="icon" className="w-[32px] h-auto" />
         </div>
-      </div>
+      </Link>
     ))}
   </div>
 

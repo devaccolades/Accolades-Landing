@@ -20,8 +20,6 @@ const fallbackImages = [
   { id: 1, src: alappat, alt: "Alappat" },
   { id: 2, src: family, alt: "Family" },
   { id: 3, src: niahara, alt: "Niahara" },
-  // { id: 4, src: fut, alt: "futura" },
-  // { id: 5, src: cure, alt: "cure garden" },
   { id: 6, src: silk, alt: "silk" },
   { id: 5, src: family, alt: "Family" },
 ];
@@ -69,6 +67,10 @@ const ProjectSlider = ({ images = fallbackImages }) => {
             },
             1536: {
               slidesPerView: 4,
+              spaceBetween: 30,
+            },
+            1900: {
+              slidesPerView: 6,
               spaceBetween: 30,
             },
           }}

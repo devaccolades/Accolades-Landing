@@ -1,15 +1,12 @@
 import Image from "next/image";
 import heroImg from "../../../../../public/video-production/heroImg.png";
+import AnimatedTitle from "@/component/AnimatedTitle";
 
 export default function HeroSection() {
   return (
     <>
-      <div className="pt-16 md:pt-20 lg:pt-26">
-        <div className="bg-white containers rounded-[30px] py-6">
-          <h1 className="text-[#3FB4BA] font-mont font-bold xl:text-[70px] lg:text-[50px] md:text-[40px] text-[30px] leading-[130%] text-center mb-2">
-            Video Production
-          </h1>
-        </div>
+      <div className="containers pt-[100px]">
+        <AnimatedTitle text={"Video Production"} />
       </div>
       <section className="lg:py-16 md:py-12 py-6">
         <div className="containers grid md:grid-cols-2 gap-6 lg:gap-8 items-center">
@@ -21,7 +18,9 @@ export default function HeroSection() {
               From product explainers to cinematic brand films — we shoot, edit,
               and deliver videos your audience will remember.
             </p>
-            <button className="font-mont font-semibold lg:text-[14px] text-[12px] leading-[100%] text-[#FFFFFF] bg-[#3FB4BA] px-6 py-3 rounded-[25px] mt-2 ">Get a Creative Proposal</button>
+            <button className="font-mont font-semibold lg:text-[14px] text-[12px] leading-[100%] text-[#FFFFFF] bg-[#3FB4BA] px-6 py-3 rounded-[25px] mt-2 ">
+              Get a Creative Proposal
+            </button>
           </span>
 
           <div className="flex justify-center items-center lg:justify-end w-full h-full">

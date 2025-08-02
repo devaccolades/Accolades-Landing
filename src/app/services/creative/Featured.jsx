@@ -23,6 +23,13 @@ const posters = [
   { id: 5, src: p5, alt: "poster" },
   { id: 6, src: p6, alt: "poster" },
   { id: 7, src: p7, alt: "poster" },
+  { id: 1, src: p1, alt: "poster" },
+  { id: 2, src: p2, alt: "poster" },
+  { id: 3, src: p3, alt: "poster" },
+  { id: 4, src: p4, alt: "poster" },
+  { id: 5, src: p5, alt: "poster" },
+  { id: 6, src: p6, alt: "poster" },
+  { id: 7, src: p7, alt: "poster" },
 ];
 
 const Featured = () => {

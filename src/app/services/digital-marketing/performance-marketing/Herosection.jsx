@@ -1,5 +1,6 @@
 "use client";
 
+import AnimatedWebTitle from "@/component/AnimatedWebTitle";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
@@ -8,7 +9,7 @@ const Herosection = ({ main_title, title, subtitle, button_text, image }) => {
   return (
     <section className="w-full  containers pt-[100px] ">
       {/* Title with White Background */}
-      <motion.div
+      {/* <motion.div
         className="bg-white rounded-2xl px-6  mx-auto w-full shadow-md mb-10"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,10 +19,11 @@ const Herosection = ({ main_title, title, subtitle, button_text, image }) => {
         <h2 className="text-2xl md:text-4xl leading-[100%] py-5 font-bold text-center text-[#3FB4BA]">
           {main_title}
         </h2>
-      </motion.div>
+      </motion.div> */}
+      <AnimatedWebTitle text={main_title} />
 
       {/* Content Box */}
-      <div className=" flex flex-col-reverse md:flex-row items-center gap-8 overflow-hidden ">
+      <div className=" flex flex-col-reverse md:flex-row items-center gap-8 overflow-hidden my-6 ">
         {/* Text Section */}
         <motion.div
           className="flex-1 p-4  md:p-6 bg-white rounded-3xl shadow-md"

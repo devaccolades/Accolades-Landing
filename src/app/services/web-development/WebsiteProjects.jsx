@@ -24,63 +24,67 @@ const projects = [
   {
     title: "ABE SERVICES",
     image: img1,
-    link: "https://abeservices.in/"
+    link: "https://abeservices.in/",
   },
   {
     title: "ABLS HUMAN RESOURCES",
     image: img2,
-    link: "https://ablshumanresources.com/"
+    link: "https://ablshumanresources.com/",
   },
   {
     title: "ALPHA ARC",
     image: img3,
-    link: "https://alphaarc.in/"
+    link: "https://alphaarc.in/",
   },
   {
     title: "ATC KODANAD",
     image: img4,
-    link: "https://atckodanad.com/"
+    link: "https://atckodanad.com/",
   },
   {
     title: "CIDBI",
     image: img5,
-    link: "https://cidbi.com/"
+    link: "https://cidbi.com/",
   },
   {
     title: "GO GREEN COMPANY",
     image: img6,
-    link: "https://ggc-travel.com/"
+    link: "https://ggc-travel.com/",
   },
   {
     title: "NATIONAL BUILDERS",
     image: img7,
-    link: "https://nationalbuilders.in/"
+    link: "https://nationalbuilders.in/",
   },
   {
     title: "GREEN TEA",
     image: img8,
-    link: "https://greenteahotels.com/"
+    link: "https://greenteahotels.com/",
   },
 ];
 
 export default function WebsiteProjects() {
   return (
-
-    // <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg::px-20">
-    <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 ">
+    <div
+      className=" pb-[150px] bg-[#f1f5f5] "
+      style={{
+        background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
+      }}
+    >
       <div className="">
-        <div className="bg-white rounded-2xl shadow p-4 md:p-8 mx-3 md:mx-10 lg:mx-22 xl:mx-28">
-
-          <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 ">Web Projects</h2>
+        <div className="containers bg-white rounded-2xl shadow p-4 md:p-8 ">
+          <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 ">
+            Web Projects
+          </h2>
           <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
-            We craft digital spaces that elevate your brand. From builders and education websites to study abroad
-            and many, our work spans diverse industries. Each site blends smart design, smooth flow, and solid tech.
-            We help brands stand out and grow online with ease.
-
+            We craft digital spaces that elevate your brand. From builders and
+            education websites to study abroad and many, our work spans diverse
+            industries. Each site blends smart design, smooth flow, and solid
+            tech. We help brands stand out and grow online with ease.
           </p>
         </div>
 
-        <div className="mt-10 ml-3 md:ml-10 lg:ml-22 xl:ml-28">
+        <div className="mt-16 ml-[5%] lg:ml-[10%]">
           <Swiper
             modules={[Navigation, Pagination]}
             // spaceBetween={1}
@@ -103,21 +107,6 @@ export default function WebsiteProjects() {
             }}
           >
             {projects.map((project, index) => (
-              // <SwiperSlide key={index}>
-              //   <div className="flex flex-col items-center">
-              //     <div className="relative w-full aspect-[3/4]">
-              //       <Image
-              //         src={project.image}
-              //         alt={project.title}
-              //         fill
-              //         className="rounded-md shadow-lg object-cover"
-              //       />
-              //     </div>
-              //     <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-4">
-              //       {project.title}
-              //     </h3>
-              //   </div>
-              // </SwiperSlide>
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-center">
                   <a
@@ -130,7 +119,7 @@ export default function WebsiteProjects() {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="rounded-md shadow-lg object-cover"
+                      className="rounded-md shadow-lg object-cover object-left"
                     />
                   </a>
                   <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-4">
@@ -142,8 +131,6 @@ export default function WebsiteProjects() {
           </Swiper>
         </div>
       </div>
-
-      <div className="absolute bottom--1 left-0 w-full h-14 md:h-34 bg-gradient-to-t from-[#3FB4BA]/80 to-[#f1f5f5] pointer-events-none rounded-b-2xl" />
     </div>
   );
 }

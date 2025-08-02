@@ -8,16 +8,15 @@ import WebsiteProjects from "./WebsiteProjects";
 const page = () => {
   return (
     <>
-    
-      
-      <Navbar  />
-       <div className="bg-gradient-to-br from-[#ecf3f6] to-[#f1f5f5]">
-      <WebHero />
-      <WebsiteFeatures />
-      <WebsiteProjects />
-       </div>
-      <Footer />
-     
+      <Navbar />
+      <div className="bg-[#F1F1F1]">
+        <WebHero />
+        <WebsiteFeatures />
+        <WebsiteProjects />
+      </div>
+      <div className="-mt-[65px]">
+        <Footer />
+      </div>
     </>
   );
 };

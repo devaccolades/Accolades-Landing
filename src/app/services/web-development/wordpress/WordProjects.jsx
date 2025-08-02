@@ -11,7 +11,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-
 import img1 from "../../../../../public/web/abe.jpg";
 import img2 from "../../../../../public/web/abls.jpg";
 import img3 from "../../../../../public/web/alpha.jpg";
@@ -22,57 +21,56 @@ import img7 from "../../../../../public/web/na-bu.jpg";
 import img8 from "../../../../../public/web/green.jpg";
 
 const projects = [
-
   {
     title: "ABLS HUMAN RESOURCES",
     image: img2,
-    link: "https://ablshumanresources.com/"
+    link: "https://ablshumanresources.com/",
   },
 
   {
     title: "ATC KODANAD",
     image: img4,
-    link: "https://atckodanad.com/"
+    link: "https://atckodanad.com/",
   },
 
   {
     title: "GO GREEN COMPANY",
     image: img6,
-    link: "https://ggc-travel.com/"
+    link: "https://ggc-travel.com/",
   },
 
   {
     title: "GREEN TEA",
     image: img8,
-    link: "https://greenteahotels.com/"
+    link: "https://greenteahotels.com/",
   },
 ];
 
-
 export default function WordProjects() {
   return (
-
-    // <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg::px-20">
-    <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-8 ">
+    <div
+      className="bg-[#f1f5f5] pt-4 pb-[100px]"
+      style={{
+        background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
+      }}
+    >
       <div className="">
-        <div className="bg-white rounded-2xl shadow p-4 md:p-8 mx-3 md:mx-10 lg:mx-20 ">
-
-          <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 md:mb-4">Web Projects</h2>
+        <div className="containers bg-white rounded-2xl shadow p-4 md:p-8 ">
+          <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 md:mb-4">
+            Web Projects
+          </h2>
           <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
-            We build WordPress sites that are fast, sleek, and easy to run. Each project reflects smart design, simple flow,
-            and strong performance. Our websites load fast, rank well, and work across all screens. Clients trust us for
-            websites that grow with their brand.
-
+            We build WordPress sites that are fast, sleek, and easy to run. Each
+            project reflects smart design, simple flow, and strong performance.
+            Our websites load fast, rank well, and work across all screens.
+            Clients trust us for websites that grow with their brand.
           </p>
         </div>
 
-        <div className="mt-10 ml-3 md:ml-10 lg:ml-22">
+        <div className="mt-10 ml-[5%] lg:ml-[10%]">
           <Swiper
             modules={[Navigation, Pagination]}
-            // spaceBetween={1}
             slidesPerView={1}
-            // navigation
-            // pagination={{ clickable: true }}
             breakpoints={{
               320: {
                 slidesPerView: 1.2,
@@ -89,21 +87,6 @@ export default function WordProjects() {
             }}
           >
             {projects.map((project, index) => (
-              // <SwiperSlide key={index}>
-              //   <div className="flex flex-col items-center">
-              //     <div className="relative w-full aspect-[3/4]">
-              //       <Image
-              //         src={project.image}
-              //         alt={project.title}
-              //         fill
-              //         className="rounded-md shadow-lg object-cover"
-              //       />
-              //     </div>
-              //     <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-4">
-              //       {project.title}
-              //     </h3>
-              //   </div>
-              // </SwiperSlide>
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-center">
                   <a
@@ -128,8 +111,6 @@ export default function WordProjects() {
           </Swiper>
         </div>
       </div>
-
-      <div className="absolute bottom--1 left-0 w-full h-14 md:h-34 bg-gradient-to-t from-[#3FB4BA]/80 to-[#f1f5f5] pointer-events-none rounded-b-2xl" />
     </div>
   );
 }

@@ -39,11 +39,13 @@ export default function OfferAndFeatures() {
   ];
 
   return (
-    <div className=" py-6  px-4 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto text-center">
+    <div className="containers py-10  ">
+      <div className=" text-center">
         {/* We Offer */}
-        <h2 className="text-[20px] md:text-[30px] lg:text-[40px] md:text-4xl font-mont font-bold text-[#1eb2a6] mb-4 md:mb-6 lg:mb-10">We Offer</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6 mb-8 lg:mb-10">
+        <h2 className="text-[20px] md:text-[30px] lg:text-[40px] font-mont font-bold text-[#1eb2a6] mb-4 ">
+          We Offer
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6 mb-8 ">
           {offers.map((item, index) => (
             <div
               key={index}
@@ -59,7 +61,7 @@ export default function OfferAndFeatures() {
         </div>
 
         {/* Features Highlight */}
-        <h2 className="text-[20px] md:text-[30px] lg:text-[40px] font-mont font-bold text-[#1eb2a6] mb-4 md:mb-6 lg:mb-10">
+        <h2 className="text-[20px] md:text-[30px] lg:text-[40px] font-mont font-bold text-[#1eb2a6] mb-4">
           Features Highlight
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6">

@@ -17,7 +17,7 @@ function Web() {
             className="w-fit h-fit sticky top-50 mt-0"
           />
         </div>
-        <div className="w-full flex flex-col gap-10 md:gap-[100px] lg:gap-[130px]  p-5 rounded-xl">
+        <div className="w-full flex flex-col gap-10 md:gap-[100px] lg:gap-[130px]  p-5 rounded-[30px]">
           <div className="flex flex-col md:flex-row-reverse justify-around items-center gap-4 mt-[34px] md:mt-[20px] ">
             <div className="w-full h-full max-w-[338px] max-h-[338px] flex justify-center items-center md:w-full md:h-full lg:w-full lg:h-full bg-white">
               <Image
@@ -28,7 +28,7 @@ function Web() {
                 className="h-full w-full md:h-[190px] lg:h-full object-cover object-center p-3"
               />
             </div>
-            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-lg max-w-[338px] lg:max-w-[608px]">
+            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
               <h1 className="text-[#3FB4BA] text-[28px] md:text-[35px] lg:text-[75px] font-semibold font-mont leading-[100%]">
                 Web Development
               </h1>
@@ -41,7 +41,7 @@ function Web() {
                 sites with the latest features for optimal performance.
               </p>
               <Link href={"/services/web-development"}>
-                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-xl font-semibold mt-[15px]">
+                <button className="bg-[#3FB4BA]  px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-[30px] font-semibold mt-[15px]">
                   see more
                 </button>
               </Link>

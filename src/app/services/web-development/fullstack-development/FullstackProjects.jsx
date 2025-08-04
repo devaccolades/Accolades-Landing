@@ -48,10 +48,16 @@ const projects = [
 
 export default function FullstackProjects() {
   return (
-    // <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg::px-20">
-    <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-8 ">
+   
+    // <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-8 ">
+     <div
+      className="bg-[#f1f5f5] pt-4 pb-[100px]"
+      style={{
+        background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
+      }}
+    >
       <div className="">
-        <div className="bg-white rounded-2xl shadow p-4 md:p-8 mx-3 md:mx-10 lg:mx-20 ">
+        <div className="bg-white rounded-2xl shadow containers px-4 py-4 md:py-8 mx-3 md:mx-10 lg:mx-20 ">
           <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 md:mb-4">
             Web Projects
           </h2>
@@ -63,7 +69,7 @@ export default function FullstackProjects() {
           </p>
         </div>
 
-        <div className="mt-10 ml-3 md:ml-10 lg:ml-22">
+        <div className="mt-10 ml-3 md:ml-10 lg:ml-26 xl:ml-38">
           <Swiper
             modules={[Navigation, Pagination]}
             // spaceBetween={1}
@@ -86,21 +92,7 @@ export default function FullstackProjects() {
             }}
           >
             {projects.map((project, index) => (
-              // <SwiperSlide key={index}>
-              //   <div className="flex flex-col items-center">
-              //     <div className="relative w-full aspect-[3/4]">
-              //       <Image
-              //         src={project.image}
-              //         alt={project.title}
-              //         fill
-              //         className="rounded-md shadow-lg object-cover"
-              //       />
-              //     </div>
-              //     <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-4">
-              //       {project.title}
-              //     </h3>
-              //   </div>
-              // </SwiperSlide>
+          
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-center">
                   <a
@@ -112,11 +104,11 @@ export default function FullstackProjects() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      fill
-                      className="rounded-md shadow-lg object-cover"
+                      fit
+                      className="rounded-md object-contain"
                     />
                   </a>
-                  <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-4">
+                  <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-2">
                     {project.title}
                   </h3>
                 </div>
@@ -126,7 +118,7 @@ export default function FullstackProjects() {
         </div>
       </div>
 
-      <div className="absolute bottom--1 left-0 w-full h-14 md:h-34 bg-gradient-to-t from-[#3FB4BA]/80 to-[#f1f5f5] pointer-events-none rounded-b-2xl" />
+     
     </div>
   );
 }

@@ -33,7 +33,7 @@ const WhatWeOffer = ({ title, services, desc }) => {
       <div className="bg-white rounded-3xl shadow-md p-6 md:p-10">
         {/* Title */}
         <motion.h2
-          className="text-2xl md:text-4xl font-bold text-teal-600 mb-8"
+          className="text-2xl md:text-4xl font-mont font-bold text-teal-600 mb-8"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -62,14 +62,14 @@ const WhatWeOffer = ({ title, services, desc }) => {
                 height={80}
                 className="object-contain h-[60px] md:h-[80px]"
               />
-              <p className="font-semibold text-sm md:text-xl">{service.name}</p>
+              <p className="font-semibold font-mont text-sm md:text-xl">{service.name}</p>
             </div>
           ))}
         </motion.div>
 
         {/* Description */}
         <motion.p
-          className="text-gray-600 text-sm md:text-base"
+          className="text-gray-600 font-mont text-sm md:text-base"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

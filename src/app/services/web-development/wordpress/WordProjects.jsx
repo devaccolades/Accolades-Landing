@@ -96,8 +96,8 @@ export default function WordProjects() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      fill
-                      className="rounded-md shadow-lg object-cover"
+                      fit
+                      className="rounded-md object-contain"
                     />
                   </a>
                   <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-4">

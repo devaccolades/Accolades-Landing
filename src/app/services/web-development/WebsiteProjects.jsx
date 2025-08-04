@@ -118,8 +118,8 @@ export default function WebsiteProjects() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      fill
-                      className="rounded-md shadow-lg object-cover object-left"
+                      fit
+                      className="rounded-md  object-contain object-left"
                     />
                   </a>
                   <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-4">

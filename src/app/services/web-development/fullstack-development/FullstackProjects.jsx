@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import classic from "../../../../../public/web/classic.png";
-import jugal from "../../../../../public/web/jugal.png";
+// import classic from "../../../../../../public/web/classic.png";
+// import jugal from "../../../../../public/web/jugal.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -11,58 +11,55 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-
-import img1 from "../../../../public/web/abes.png";
-import img2 from "../../../../public/web/ablss.png";
-import img3 from "../../../../public/web/arc.png";
-import img4 from "../../../../public/web/atcc.png";
-import img5 from "../../../../public/web/cidb.png";
-import img6 from "../../../../public/web/ggc.png";
-import img7 from "../../../../public/web/nabuil.png";
-import img8 from "../../../../public/web/gtea.png";
+import img1 from "../../../../../public/web/abes.png";
+import img2 from "../../../../../public/web/ablss.png";
+import img3 from "../../../../../public/web/arc.png";
+import img4 from "../../../../../public/web/atcc.png";
+import img5 from "../../../../../public/web/cidb.png";
+import img6 from "../../../../../public/web/ggc.png";
+import img7 from "../../../../../public/web/nabuil.png";
+import img8 from "../../../../../public/web/gtea.png";
 
 const projects = [
   {
     title: "ABE SERVICES",
     image: img1,
-    link: "https://abeservices.in/"
+    link: "https://abeservices.in/",
   },
 
   {
     title: "ALPHA ARC",
     image: img3,
-    link: "https://alphaarc.in/"
+    link: "https://alphaarc.in/",
   },
 
   {
     title: "CIDBI",
     image: img5,
-    link: "https://cidbi.com/"
+    link: "https://cidbi.com/",
   },
 
   {
     title: "NATIONAL BUILDERS",
     image: img7,
-    link: "https://nationalbuilders.in/"
+    link: "https://nationalbuilders.in/",
   },
-
 ];
-
 
 export default function FullstackProjects() {
   return (
-
     // <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-12 px-4 md:px-10 lg::px-20">
     <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-8 ">
       <div className="">
         <div className="bg-white rounded-2xl shadow p-4 md:p-8 mx-3 md:mx-10 lg:mx-20 ">
-
-          <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 md:mb-4">Web Projects</h2>
+          <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 md:mb-4">
+            Web Projects
+          </h2>
           <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
-            We build full stack websites that are smart, smooth, and secure. Each site runs fast and
-            adapts well to any screen. Our code stacks scale with ease and handle real-world load.
-            We turn concepts into high-performing digital platforms.
-
+            We build full stack websites that are smart, smooth, and secure.
+            Each site runs fast and adapts well to any screen. Our code stacks
+            scale with ease and handle real-world load. We turn concepts into
+            high-performing digital platforms.
           </p>
         </div>
 

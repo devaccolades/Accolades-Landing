@@ -3,17 +3,20 @@ import Image from "next/image";
 import React from "react";
 import Hero from "../../../../../public/web/fullstack.jpg";
 import Link from "next/link";
+import AnimatedWebTitle from "@/component/AnimatedWebTitle";
 
 export default function FullstackHero() {
   return (
-    <div className="pt-20 pb-8 px-4 md:px-10 lg:px-20">
+    // <div className="pt-20 pb-8 px-4 md:px-10 lg:px-20">
+       <div className="containers pt-20">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="bg-white rounded-[30px] py-6 px-4">
+        {/* <div className="bg-white rounded-[30px] py-6 px-4">
           <h1 className="text-[#3FB4BA] font-mont font-bold text-center leading-[130%]  text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[70px]">
             Full-Stack Web Development
           </h1>
-        </div>
+        </div> */}
+        <AnimatedWebTitle text={"Full-Stack Web Development"}/>
 
         {/* Content Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-8 mt-10 items-center">

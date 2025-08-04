@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import side from "../../../../../public/creative/branding/hero.webp";
 import AnimatedTitle from "@/component/AnimatedTitle";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -16,9 +17,11 @@ const HeroSection = () => {
             From logo to label, we craft cohesive brand identities that turn
             first impressions into lasting connections.
           </h3>
+           <Link href="/contact-us">
           <button className="w-fit bg-[#3FB4BA] px-3 py-2 rounded-full text-[12px] md:text-[14px] text-white font-medium">
             Get a creative proposal
           </button>
+          </Link>
         </div>
         <div className="h-full w-auto rounded-[30px]">
           <Image

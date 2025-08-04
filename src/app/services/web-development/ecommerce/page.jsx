@@ -6,6 +6,11 @@ import WhatWeOffer from "../../digital-marketing/performance-marketing/WhatWeOff
 import FeaturesHighlight from "./FeaturesHighlight";
 import WebsiteProjectsIntro from "./WebsiteProjectsIntro";
 
+import next from "../../../../../public/web/next-js.png";
+import py from "../../../../../public/web/python.png";
+import dj from "../../../../../public/web/dj2.png";
+import postg from "../../../../../public/web/postgres.png";
+
 const heroData = {
   main_title: "Ecommerce Website",
   title: "Your Online Store. Built to Convert.",
@@ -26,16 +31,36 @@ const tools = [
     name: "WooCommerce",
     image: "/web/ecom/woo.png",
   },
-  {
-    id: 3,
-    name: "Laravel",
-    image: "/web/ecom/lar.png",
-  },
+  // {
+  //   id: 3,
+  //   name: "Laravel",
+  //   image: "/web/ecom/lar.png",
+  // },
   {
     id: 4,
     name: "React",
     image: "/web/ecom/react.png",
   },
+  {
+    id: 5,
+    name: "Next.js",
+    image: next,
+  },
+  // {
+  //   id: 6,
+  //   name: "Python",
+  //   image: py,
+  // },
+  {
+    id: 7,
+    name: "Django",
+    image: dj,
+  },
+  // {
+  //   id: 8,
+  //   name: "PostgreSQL",
+  //   image: postg,
+  // },
 ];
 
 const tech = {

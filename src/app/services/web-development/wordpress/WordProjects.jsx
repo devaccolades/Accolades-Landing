@@ -96,7 +96,7 @@ export default function WordProjects() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      fit
+                      
                       className="rounded-md object-contain"
                     />
                   </a>

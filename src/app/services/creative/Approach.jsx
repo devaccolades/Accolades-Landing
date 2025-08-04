@@ -52,10 +52,10 @@ const Approach = () => {
               className="min-w-[90px]"
             />
             <div>
-              <h4 className="text-[#007A8B] font-semibold leading-[110%] mb-1">
+              <h4 className="text-[#007A8B] font-mont font-semibold leading-[110%] mb-1">
                 {step.title}
               </h4>
-              <p className="text-gray-700 text-sm">{step.description}</p>
+              <p className="text-gray-700 font-mont text-sm">{step.description}</p>
             </div>
           </div>
         ))}

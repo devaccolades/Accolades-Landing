@@ -1,6 +1,7 @@
 import Image from "next/image";
 import heroImg from "../../../../../public/video-production/heroImg.png";
 import AnimatedTitle from "@/component/AnimatedTitle";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -18,9 +19,11 @@ export default function HeroSection() {
               From product explainers to cinematic brand films — we shoot, edit,
               and deliver videos your audience will remember.
             </p>
+             <Link href="/contact-us">
             <button className="font-mont font-semibold lg:text-[14px] text-[12px] leading-[100%] text-[#FFFFFF] bg-[#3FB4BA] px-6 py-3 rounded-[25px] mt-2 ">
               Get a Creative Proposal
             </button>
+            </Link>
           </span>
 
           <div className="flex justify-center items-center lg:justify-end w-full h-full">

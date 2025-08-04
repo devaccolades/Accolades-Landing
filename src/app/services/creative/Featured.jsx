@@ -42,7 +42,7 @@ const Featured = () => {
         className="w-full h-full absolute left-0 top-[-200px] z-0"
       />
       <div className="relative containers bg-white rounded-[20px] md:rounded-[40px] p-4 md:p-8 shadow-sm">
-        <h2 className="text-[32px] xl:text-[40px] font-bold text-[#0199A4] mb-3 z-10">
+        <h2 className="font-mont text-[32px] xl:text-[40px] font-bold text-[#0199A4] mb-3 z-10">
           Featured Work
         </h2>
         <div className="flex flex-wrap md:gap-4 gap-2 ">
@@ -50,7 +50,7 @@ const Featured = () => {
             <button
               key={category}
               onClick={() => setActive(category)}
-              className={`px-6 py-2 rounded-full border-2 text-sm font-medium transition-all
+              className={`px-6 py-2 rounded-full border-2 text-sm font-mont font-medium transition-all
                 ${
                   active === category
                     ? "bg-[#0199A4] text-white border-[#0199A4]"
@@ -62,7 +62,7 @@ const Featured = () => {
           ))}
         </div>
       </div>
-      <div className="relative ">
+      <div className="relative font-mont ">
         {/* Conditionally render components */}
         {active === "Branding & Graphics" && <ProjectSlider images={posters} />}
         {active === "Motion & Video" && <VideoSlider />}

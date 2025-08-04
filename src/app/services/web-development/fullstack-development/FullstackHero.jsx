@@ -6,7 +6,8 @@ import Link from "next/link";
 
 export default function FullstackHero() {
   return (
-    <div className="pt-20 pb-8 px-4 md:px-10 lg:px-20">
+    // <div className="pt-20 pb-8 px-4 md:px-10 lg:px-20">
+       <div className="containers pt-20">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="bg-white rounded-[30px] py-6 px-4">

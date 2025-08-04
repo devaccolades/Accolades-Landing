@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import React from "react";
-import classic from "../../../../../public/web/classic.png";
-import jugal from "../../../../../public/web/jugal.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -11,14 +9,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import img1 from "../../../../public/web/abes.png";
-import img2 from "../../../../public/web/ablss.png";
-import img3 from "../../../../public/web/arc.png";
-import img4 from "../../../../public/web/atcc.png";
-import img5 from "../../../../public/web/cidb.png";
-import img6 from "../../../../public/web/ggc.png";
-import img7 from "../../../../public/web/nabuil.png";
-import img8 from "../../../../public/web/gtea.png";
+// import img1 from "../../../../../public/web/abes.png";
+import img2 from "../../../../../public/web/ablss.png";
+import img3 from "../../../../../public/web/arc.png";
+import img4 from "../../../../../public/web/atcc.png";
+import img5 from "../../../../../public/web/cidb.png";
+import img6 from "../../../../../public/web/ggc.png";
+import img7 from "../../../../../public/web/nabuil.png";
+import img8 from "../../../../../public/web/gtea.png";
 
 const projects = [
   {

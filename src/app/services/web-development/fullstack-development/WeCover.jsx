@@ -17,7 +17,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 
-// Tabs and Technologies Data
+// Tabs and Technologies Data.
 const techList = [
     {
         title: "React.js",
@@ -90,7 +90,8 @@ export default function WhatWeCover() {
     const [selectedTab, setSelectedTab] = useState("frontend");
 
     return (
-        <section className=" py-6 px-4 md:px-8 lg:px-20">
+        // <section className=" py-6 px-4 md:px-8 lg:px-20">
+         <section className=" containers">
             {/* What We Cover Section */}
             <div className="max-w-7xl mx-auto mb-8 bg-white px-2 md:px-4  lg:px-8 py-6 md:py-4  lg:py-8 rounded-2xl shadow-lg">
                 <h2 className="text-[20px] md:text-2xl font-bold font-mont text-[#1eb2a6] mb-4 md:mb-6">What We Cover</h2>

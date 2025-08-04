@@ -40,7 +40,7 @@ const Footer = () => {
               className="h-full w-full"
             />
           </div>
-          <p className="text-[15px] leading-relaxed">
+          <p className="text-[15px] font-mont leading-relaxed">
             The ultimatum of our successful company is to adequately provide our
             prospective clients with the required service that they promptly
             demand from us.
@@ -48,10 +48,10 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-center md:justify-between gap-5 md:gap-5 ">
           <div className="md:w-[15%]">
-            <h4 className="font-semibold text-teal-700 mb-3 text-center md:text-left">
+            <h4 className="font-semibold text-teal-700 font-mont mb-3 text-center md:text-left">
               Explore
             </h4>
-            <ul className="space-y-2 text-center md:text-left text-sm">
+            <ul className="space-y-2 text-center font-mont md:text-left text-sm">
               <li>
                 <a href="/" className="hover:text-teal-700 transition">
                   Home
@@ -81,10 +81,10 @@ const Footer = () => {
           </div>
 
           <div className="md:w-[15%]">
-            <h4 className="font-semibold text-teal-700 mb-3 text-center md:text-left">
+            <h4 className="font-semibold font-mont text-teal-700 mb-3 text-center md:text-left">
               Branches
             </h4>
-            <ul className="space-y-2 text-center md:text-left text-sm">
+            <ul className="space-y-2 font-mont text-center md:text-left text-sm">
               <li>Calicut</li>
               <li>Trivandrum</li>
               <li>Bengaluru</li>
@@ -95,10 +95,10 @@ const Footer = () => {
 
         {/* Address */}
         <div className=" md:w-[30%] text-center md:text-left">
-          <h4 className="font-semibold text-teal-700 mb-3">
+          <h4 className="font-semibold font-mont text-teal-700 mb-3">
             Address Corporate Office
           </h4>
-          <p className="text-[15px] leading-relaxed">
+          <p className="text-[15px] font-mont leading-relaxed">
             Accolades Integrated Pvt Ltd <br />
             Rahmath Building, 46/2056 - A, AKG Vayanasala Road, Chakkaraparambu,
             <br />
@@ -109,7 +109,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="containers py-6 flex flex-col-reverse md:flex-row items-center justify-between gap-4  px-2 relative">
-        <p className="text-sm text-center md:text-left">
+        <p className="text-sm font-mont text-center md:text-left">
           © 2025 | All Rights Reserved
         </p>
         <div className="flex gap-3">

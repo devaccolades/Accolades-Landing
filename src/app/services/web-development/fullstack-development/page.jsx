@@ -9,12 +9,14 @@ function page() {
   return (
     <div>
       <Navbar />
-       <div className="bg-gradient-to-br from-[#ecf3f6] to-[#f1f5f5]">
+       <div className="bg-[#F1F1F1]">
          <FullstackHero /> 
          <WhatWeCover />
          <FullstackProjects />
              </div>
+               <div className="-mt-[65px]">
              <Footer />
+             </div>
     </div>
   )
 }

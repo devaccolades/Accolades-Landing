@@ -8,7 +8,7 @@ import AnimatedWebTitle from "@/component/AnimatedWebTitle";
 export default function WordpressHero() {
   return (
     <div className="containers pt-[100px]">
-      <div className="">
+      <div className="font-mont">
         <AnimatedWebTitle text={"Wordpress Pages"} />
         {/* Content Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-8 mt-10 items-center">

@@ -25,7 +25,7 @@ export default function Herosection() {
             </div>
 
             {/* Right Box */}
-            <div className="flex-1 flex flex-col justify-center text-gray-600 p-4">
+            <div className="flex-1 flex flex-col justify-center text-gray-600 p-4"> 
               <p className="mb-6 text-[14px] font-mont md:text-[18px]  ">
                 Our team is always willing to respond your queries and provide
                 the support you need. Whether you have specific queries or need

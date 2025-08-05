@@ -4,17 +4,19 @@ import { TrendingUp, DollarSign, Users } from "lucide-react";
 import icon1 from "../../../../../public/content-marketing/icon1.svg";
 import icon2 from "../../../../../public/content-marketing/icon2.svg";
 import icon3 from "../../../../../public/content-marketing/icon3.svg";
+import AnimatedPopTitle from "@/component/AnimatedDigitalTitle";
 
 export default function HeroSection() {
   return (
     <>
       <div className="lg:pb-16 md:pb-12 pb-6 pt-16 md:pt-20 lg:pt-26">
         <div className="lg:mb-16 md:mb-12 mb-6 containers">
-          <div className="bg-white shadow-lg py-2 text-center rounded-[30px] ">
+          {/* <div className="bg-white shadow-lg py-2 text-center rounded-[30px] ">
             <h1 className="font-mont font-bold xl:text-[86px] lg:text-[76px] md:text-[66px] text-[30px] leading-[100%] text-[#3FB4BA] md:px-20 px-4">
               Content Marketing
             </h1>
-          </div>
+          </div> */}
+          <AnimatedPopTitle text={"Content      Marketing"} />
         </div>
 
         <div className="containers">

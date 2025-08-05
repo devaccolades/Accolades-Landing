@@ -46,7 +46,7 @@ const Footer = () => {
             demand from us.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row justify-center md:justify-between gap-5 md:gap-5 ">
+        <div className="md:flex grid grid-cols-2   md:flex-row justify-center md:justify-between gap-15 md:gap-1 lg:gap-5 ">
           <div className="md:w-[15%]">
             <h4 className="font-semibold text-teal-700 font-mont mb-3 text-center md:text-left">
               Explore
@@ -112,6 +112,11 @@ const Footer = () => {
         <p className="text-sm font-mont text-center md:text-left">
           © 2025 | All Rights Reserved
         </p>
+
+        <p className="text-sm font-mont text-center md:text-left">
+          mail@accoladesmedia.co.in
+          </p>
+          
         <div className="flex gap-3">
           <a
             href="https://www.facebook.com/accoladesmc/"

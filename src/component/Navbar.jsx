@@ -36,7 +36,7 @@ const mobileServicePages = {
   digital: [
     {
       label: "Performance Marketing",
-      href: "/services/digital-marketing/performance",
+      href: "/services/digital-marketing/performance-marketing",
     },
     { label: "Google Ads", href: "/services/digital-marketing/google-ads" },
     {
@@ -45,9 +45,9 @@ const mobileServicePages = {
     },
     {
       label: "Social Media Marketing",
-      href: "/services/digital-marketing/social-media",
+      href: "/services/digital-marketing/smm",
     },
-    { label: "Content Marketing", href: "/services/digital-marketing/content" },
+    { label: "Content Marketing", href: "/services/digital-marketing/content-marketing" },
   ],
   web: [
     {
@@ -118,7 +118,7 @@ const Navbar = () => {
         },
         {
           label: "Content Marketing",
-          href: "/services/digital/content-marketing",
+          href: "/services/digital-marketing/content-marketing",
         },
       ],
     },

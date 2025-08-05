@@ -20,7 +20,7 @@ function HeroSection() {
               innovation
             </p>
           </div>
-          <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap md:justify-center lg:justify-between items-center gap-4 mt-[80px] ">
+          <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap md:justify-center lg:justify-between items-center gap-4 mt-[60px] ">
             <div className="bg-white shadow-lg rounded-2xl px-[15px] py-[20px] md:p-[30px] flex flex-col items-center justify-center gap-[10px] ">
               <div className="flex justify-center items-center w-[100px] h-[100px] bg-[#3CC3C3]/30 rounded-full">
                 <div className="flex justify-center items-center w-[80px] h-[80px] bg-[#3CC3C3] rounded-full">

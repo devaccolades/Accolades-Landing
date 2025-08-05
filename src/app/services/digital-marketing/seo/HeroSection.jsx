@@ -1,11 +1,15 @@
+import AnimatedPopTitle from "@/component/AnimatedDigitalTitle";
+
 export default function HeroSection() {
   return (
     <div className="lg:pb-12 md:pb-10 pt-[100px]">
-      <div className="bg-white containers rounded-[30px] py-6">
-        <h1 className="text-[#3FB4BA] font-mont font-bold text-[36px] md:text-[50px] lg:text-[64px]  leading-[100%] text-center ">
+      <div className="bg-white containers rounded-[30px] py-2">
+        {/* <h1 className="text-[#3FB4BA] font-mont font-bold text-[36px] md:text-[50px] lg:text-[64px]  leading-[100%] text-center ">
           SEO
-        </h1>
+        </h1> */}
+        <AnimatedPopTitle text={"SEO"} />
       </div>
+
       <div className="containers">
         <div className="w-full">
           <div className="bg-white rounded-[30px] px-6 md:px-8 lg:px-10 py-6 md:py-8 lg:py-10 mt-6 space-y-2">

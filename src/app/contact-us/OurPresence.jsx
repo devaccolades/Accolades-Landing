@@ -61,7 +61,7 @@ export default function OurPresence() {
     <>
       <section className="relative containers mx-auto py-2 md:py-6">
         <div className="bg-white rounded-2xl shadow-xl p-8">
-          <h2 className="text-center font-mont font-bold text-[36px] md:text-[50px] lg:text-[64px] text-[#3FB4BA] mb-4">
+          <h2 className="text-center font-mont font-bold text-[36px] md:text-[50px] lg:text-[64px] leading-[96%] text-[#3FB4BA] mb-4">
             Our Presence
           </h2>
           <p className="text-center font-mont text-gray-600 text-[13px] mdtext-[16px] lg:text-[18px] mx-auto mb-4 md:mb-10">

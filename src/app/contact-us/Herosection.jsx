@@ -6,7 +6,7 @@ export default function Herosection() {
   return (
     <>
       <section className="relative containers pt-[100px] pb-10 mx-auto  ">
-        <div className="bg-white font-mont rounded-2xl shadow-xl p-8 ">
+        <div className="bg-white font-mont rounded-2xl shadow-xl p-2 md:p-8 ">
           <h2 className="text-center font-mont font-bold text-[36px] md:text-[50px] lg:text-[64px]  text-[#3FB4BA] mb-4 leading-[100%] ">
             Contact
           </h2>

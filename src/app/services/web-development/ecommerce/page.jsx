@@ -65,7 +65,7 @@ const tools = [
 
 const tech = {
   title: "Supported Platforms",
-  desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae velit sequi, explicabo voluptate maxime temporibus architecto voluptatibus. Dicta eligendi earum porro fugiat dolor rem obcaecati deserunt aut mollitia. Sint, nesciunt!",
+  desc: "At Accolades Integrated, we build powerful and scalable eCommerce websites that deliver seamless shopping experiences and drive conversions. Our development team works with a range of cutting-edge platforms and technologies including Shopify, WooCommerce, Next.js, and React to create customized, high-performance online stores. Whether you're launching a new eCommerce venture or upgrading an existing one, we ensure your website is secure, mobile-responsive, fast, and fully optimized for user experience and sales. From intuitive UI/UX to integrated payment solutions and backend management, we deliver complete eCommerce solutions tailored to your business goals.",
   services: tools,
 };
 
@@ -82,6 +82,7 @@ const page = () => {
       <FeaturesHighlight />
       {/* <WebsiteProjectsIntro /> */}
       <Footer />
+      
     </div>
   );
 };

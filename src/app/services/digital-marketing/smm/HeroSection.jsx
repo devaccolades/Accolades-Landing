@@ -1,16 +1,18 @@
 import React from "react";
 import side from "../../../../../public/google/Frame 1171275830.png";
 import Image from "next/image";
+import AnimatedPopTitle from "@/component/AnimatedDigitalTitle";
 
 const HeroSection = () => {
   return (
     <section className="containers pt-[100px] font-mont">
-      <h1
+      {/* <h1
         className="bg-white text-center text-[#3FB4BA] text-[36px] md:text-[50px] lg:text-[64px] font-mont py-5  rounded-[30px] font-bold
         leading-[100%]"
       >
         SMM
-      </h1>
+      </h1> */}
+      <AnimatedPopTitle text={"SMM"} />
 
       <div className="flex flex-col-reverse md:grid md:grid-cols-[60%_1fr] py-[5%] items-center gap-5">
         <div className="flex flex-col font-mont bg-white p-5 lg:p-8 rounded-[30px] lg:space-y-3 space-y-2">

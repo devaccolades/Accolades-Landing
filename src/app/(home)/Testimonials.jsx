@@ -108,10 +108,10 @@ const Testimonials = () => {
           }}
           breakpoints={{
             320: {
-              slidesPerView: 1.2,
+              slidesPerView: 1.1,
             },
             768: {
-              slidesPerView: 2.5,
+              slidesPerView: 1.6,
             },
             1024: {
               slidesPerView: 2.5,

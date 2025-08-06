@@ -220,10 +220,9 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  cursor-pointer
-          ${
-            scrolled
-              ? "bg-white shadow-md border-b border-gray-200"
-              : "bg-transparent"
+          ${scrolled
+            ? "bg-white shadow-md border-b border-gray-200"
+            : "bg-transparent"
           }`}
       >
         <header className="containers bg-transparent py-3 flex items-center justify-between relative z-50">
@@ -268,11 +267,10 @@ const Navbar = () => {
 
               {/* First Level: Main Services Dropdown */}
               <div
-                className={`absolute top-[70%] right-0 z-40 bg-white shadow-xl rounded-lg overflow-hidden transition-all duration-300 border-gray-700 min-w-[200px] ${
-                  isServicesOpen
+                className={`absolute top-[70%] right-0 z-40 bg-white shadow-xl rounded-lg overflow-hidden transition-all duration-300 border-gray-700 min-w-[200px] ${isServicesOpen
                     ? "opacity-100 scale-100 translate-y-1 pointer-events-auto"
                     : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
-                }`}
+                  }`}
               >
                 <div className="py-2">
                   {Object.keys(servicePages).map((service, index) => (
@@ -295,11 +293,10 @@ const Navbar = () => {
               {/* Second Level: Sub-services Dropdown (left side of parent) */}
               {activeServicePage && (
                 <div
-                  className={`absolute top-[70%] right-[190%] mr-[25px] z-30 bg-white shadow-xl rounded-lg overflow-hidden transition-all duration-300  min-w-[260px] ${
-                    isServicesOpen
+                  className={`absolute top-[70%] right-[190%] mr-[25px] z-30 bg-white shadow-xl rounded-lg overflow-hidden transition-all duration-300  min-w-[260px] ${isServicesOpen
                       ? "opacity-100 scale-100 translate-y-1 pointer-events-auto"
                       : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
-                  }`}
+                    }`}
                 >
                   <div className="px-4 py-3 border-b border-gray-200 bg-gradient-to-r from-[#00777D] to-[#6DB4BA] text-white">
                     <h3 className="font-semibold text-sm">
@@ -340,11 +337,10 @@ const Navbar = () => {
               </div>
 
               <div
-                className={`absolute top-full right-0 bg-white shadow-xl rounded-lg overflow-hidden min-w-[140px] transition-all duration-300 transform origin-top-right border-gray-500 ${
-                  isMainDropdownOpen
+                className={`absolute top-full right-0 bg-white shadow-xl rounded-lg overflow-hidden min-w-[140px] transition-all duration-300 transform origin-top-right border-gray-500 ${isMainDropdownOpen
                     ? "opacity-100 scale-100 translate-y-1"
                     : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
-                }`}
+                  }`}
               >
                 <div className="py-2">
                   {navItems.map((item, index) => (
@@ -381,21 +377,18 @@ const Navbar = () => {
 
         {/* Mobile Full Screen Menu Overlay */}
         <div
-          className={`fixed inset-0 bg-[#6DB4BA] z-50 md:hidden transition-all duration-500 ease-in-out ${
-            isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
+          className={`fixed inset-0 bg-[#6DB4BA] z-50 md:hidden transition-all duration-500 ease-in-out ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+            }`}
           style={{ height: "100vh", height: "100dvh" }}
         >
           {/* Close Button */}
           <div
-            className={`absolute ${
-              isShortScreen ? "top-3 right-4" : "top-4 right-6"
-            }`}
+            className={`absolute ${isShortScreen ? "top-3 right-4" : "top-4 right-6"
+              }`}
           >
             <div
-              className={`${
-                isShortScreen ? "w-7 h-7" : "w-8 h-8"
-              } text-white cursor-pointer transition-all duration-300 hover:scale-110 transform flex items-center justify-center hover:bg-white hover:bg-opacity-20 rounded-full`}
+              className={`${isShortScreen ? "w-7 h-7" : "w-8 h-8"
+                } text-white cursor-pointer transition-all duration-300 hover:scale-110 transform flex items-center justify-center hover:bg-white hover:bg-opacity-20 rounded-full`}
               onClick={() => setIsMenuOpen(false)}
             >
               <FaTimes className={`${isShortScreen ? "w-5 h-5" : "w-6 h-6"}`} />
@@ -404,22 +397,20 @@ const Navbar = () => {
 
           {/* Menu Content - Responsive based on screen height */}
           <div
-            className={`flex flex-col items-center h-full px-4 sm:px-8 ${
-              isShortScreen
+            className={`flex flex-col items-center h-full px-4 sm:px-8 ${isShortScreen
                 ? "justify-start pt-16 overflow-y-auto"
                 : isMediumScreen
-                ? "justify-center py-8"
-                : "justify-center"
-            }`}
+                  ? "justify-center py-8"
+                  : "justify-center"
+              }`}
           >
             <nav
-              className={`flex flex-col items-center text-white w-full max-w-sm ${
-                isShortScreen
+              className={`flex flex-col items-center text-white w-full max-w-sm ${isShortScreen
                   ? "space-y-2 pb-8"
                   : isMediumScreen
-                  ? "space-y-3"
-                  : "space-y-4"
-              }`}
+                    ? "space-y-3"
+                    : "space-y-4"
+                }`}
             >
               {/* Main Menu Items */}
               {/* {["Home", "About", "Blogs", "Careers", "Contact"].map(
@@ -428,17 +419,15 @@ const Navbar = () => {
                 <Link key={item.label} href={item.href} passHref>
                   <div
                     key={item}
-                    className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide ${
-                      isShortScreen
+                    className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide ${isShortScreen
                         ? "text-xl"
                         : isMediumScreen
-                        ? "text-2xl"
-                        : "text-2xl sm:text-3xl"
-                    } ${
-                      isMenuOpen
+                          ? "text-2xl"
+                          : "text-2xl sm:text-3xl"
+                      } ${isMenuOpen
                         ? "translate-y-0 opacity-100"
                         : "translate-y-8 opacity-0"
-                    }`}
+                      }`}
                     style={{
                       transitionDelay: isMenuOpen
                         ? `${index * 100 + 200}ms`
@@ -454,17 +443,15 @@ const Navbar = () => {
               {/* Digital Marketing with Dropdown */}
               <div className="flex flex-col items-center w-full">
                 <div
-                  className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide flex items-center gap-3 ${
-                    isShortScreen
+                  className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide flex items-center gap-3 ${isShortScreen
                       ? "text-xl"
                       : isMediumScreen
-                      ? "text-2xl"
-                      : "text-2xl sm:text-3xl"
-                  } ${
-                    isMenuOpen
+                        ? "text-2xl"
+                        : "text-2xl sm:text-3xl"
+                    } ${isMenuOpen
                       ? "translate-y-0 opacity-100"
                       : "translate-y-8 opacity-0"
-                  }`}
+                    }`}
                   style={{
                     transitionDelay: isMenuOpen ? "700ms" : "0ms",
                   }}
@@ -474,13 +461,20 @@ const Navbar = () => {
                     )
                   }
                 >
-                  <span>Digital Marketing</span>
+                  {/* <span>Digital Marketing</span> */}
+                  <Link href="/services/digital-marketing" passHref>
+                    <span
+                      onClick={() => setIsMenuOpen(false)}
+                      // className="underline decoration-dotted underline-offset-4"
+                    >
+                      Digital Marketing
+                    </span>
+                  </Link>
                   <div
-                    className={`transition-all duration-300 ${
-                      isMobileServicesOpen === "digital"
+                    className={`transition-all duration-300 ${isMobileServicesOpen === "digital"
                         ? "rotate-90 scale-110"
                         : ""
-                    }`}
+                      }`}
                   >
                     <FaChevronRight
                       className={`${isShortScreen ? "w-3 h-3" : "w-4 h-4"}`}
@@ -488,28 +482,19 @@ const Navbar = () => {
                   </div>
                 </div>
                 <div
-                  className={`flex flex-col items-center w-full transition-all duration-500 ${
-                    isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"
-                  } ${
-                    isMobileServicesOpen === "digital"
+                  className={`flex flex-col items-center w-full transition-all duration-500 ${isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"
+                    } ${isMobileServicesOpen === "digital"
                       ? "opacity-100 max-h-96 transform translate-y-0"
                       : "opacity-0 max-h-0 overflow-hidden transform -translate-y-4"
-                  }`}
+                    }`}
                 >
-                  {/* {[
-                    "Performance Marketing",
-                    "Google Ads",
-                    "Search Engine Optimization",
-                    "Social Media Marketing",
-                    "Content Marketing",
-                  ].map((service, index) => ( */}
+                  
                   {mobileServicePages["digital"].map((item, index) => (
                     <Link href={item.href} key={item.label}>
                       <div
                         // key={service}
-                        className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
-                          isShortScreen ? "text-base" : "text-lg"
-                        }`}
+                        className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${isShortScreen ? "text-base" : "text-lg"
+                          }`}
                         style={{
                           transitionDelay: isMobileServicesOpen
                             ? `${index * 100}ms`
@@ -525,17 +510,15 @@ const Navbar = () => {
               </div>
               <div className="flex flex-col items-center w-full">
                 <div
-                  className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide flex items-center gap-3 ${
-                    isShortScreen
+                  className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide flex items-center gap-3 ${isShortScreen
                       ? "text-xl"
                       : isMediumScreen
-                      ? "text-2xl"
-                      : "text-2xl sm:text-3xl"
-                  } ${
-                    isMenuOpen
+                        ? "text-2xl"
+                        : "text-2xl sm:text-3xl"
+                    } ${isMenuOpen
                       ? "translate-y-0 opacity-100"
                       : "translate-y-8 opacity-0"
-                  }`}
+                    }`}
                   style={{ transitionDelay: isMenuOpen ? "1100ms" : "0ms" }}
                   onClick={() =>
                     setIsMobileServicesOpen((prev) =>
@@ -543,13 +526,20 @@ const Navbar = () => {
                     )
                   }
                 >
-                  <span>Web Development</span>
+                  {/* <span>Web Development</span> */}
+                  <Link href="/services/web-development" passHref>
+                    <span
+                      onClick={() => setIsMenuOpen(false)}
+                      // className="underline decoration-dotted underline-offset-4"
+                    >
+                      Web Development
+                    </span>
+                  </Link>
                   <div
-                    className={`transition-all duration-300 ${
-                      isMobileServicesOpen === "web"
+                    className={`transition-all duration-300 ${isMobileServicesOpen === "web"
                         ? "rotate-90 scale-110"
                         : ""
-                    }`}
+                      }`}
                   >
                     <FaChevronRight
                       className={`${isShortScreen ? "w-3 h-3" : "w-4 h-4"}`}
@@ -558,26 +548,19 @@ const Navbar = () => {
                 </div>
 
                 <div
-                  className={`flex flex-col items-center w-full transition-all duration-500 ${
-                    isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"
-                  } ${
-                    isMobileServicesOpen === "web"
+                  className={`flex flex-col items-center w-full transition-all duration-500 ${isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"
+                    } ${isMobileServicesOpen === "web"
                       ? "opacity-100 max-h-96 transform translate-y-0"
                       : "opacity-0 max-h-0 overflow-hidden transform -translate-y-4"
-                  }`}
+                    }`}
                 >
-                  {/* {[
-                    "FullStack Web Development",
-                    "WordPress Pages",
-                    "Ecommerce Website",
-                  ].map((service, index) => ( */}
+                 
                   {mobileServicePages["web"].map((item, index) => (
                     <Link href={item.href} key={item.label}>
                       <div
                         // key={service}
-                        className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
-                          isShortScreen ? "text-base" : "text-lg"
-                        }`}
+                        className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${isShortScreen ? "text-base" : "text-lg"
+                          }`}
                         style={{
                           transitionDelay:
                             isMobileServicesOpen === "web"
@@ -596,17 +579,15 @@ const Navbar = () => {
               {/* Creative (Graphics) with Submenu */}
               <div className="flex flex-col items-center w-full">
                 <div
-                  className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide flex items-center gap-3 ${
-                    isShortScreen
+                  className={`cursor-pointer font-light hover:text-gray-200 transition-all duration-300 transform hover:scale-105 hover:tracking-wide flex items-center gap-3 ${isShortScreen
                       ? "text-xl"
                       : isMediumScreen
-                      ? "text-2xl"
-                      : "text-2xl sm:text-3xl"
-                  } ${
-                    isMenuOpen
+                        ? "text-2xl"
+                        : "text-2xl sm:text-3xl"
+                    } ${isMenuOpen
                       ? "translate-y-0 opacity-100"
                       : "translate-y-8 opacity-0"
-                  }`}
+                    }`}
                   style={{ transitionDelay: isMenuOpen ? "1200ms" : "0ms" }}
                   onClick={() =>
                     setIsMobileServicesOpen((prev) =>
@@ -614,13 +595,20 @@ const Navbar = () => {
                     )
                   }
                 >
-                  <span>Creative (Graphics)</span>
+                  {/* <span>Creative (Graphics)</span> */}
+                  <Link href="/services/creative" passHref>
+                    <span
+                      onClick={() => setIsMenuOpen(false)}
+                    // className="underline decoration-dotted underline-offset-4"
+                    >
+                      Creative
+                    </span>
+                  </Link>
                   <div
-                    className={`transition-all duration-300 ${
-                      isMobileServicesOpen === "creative"
+                    className={`transition-all duration-300 ${isMobileServicesOpen === "creative"
                         ? "rotate-90 scale-110"
                         : ""
-                    }`}
+                      }`}
                   >
                     <FaChevronRight
                       className={`${isShortScreen ? "w-3 h-3" : "w-4 h-4"}`}
@@ -630,26 +618,19 @@ const Navbar = () => {
 
                 {/* Creative Submenu */}
                 <div
-                  className={`flex flex-col items-center w-full transition-all duration-500 ${
-                    isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"
-                  } ${
-                    isMobileServicesOpen === "creative"
+                  className={`flex flex-col items-center w-full transition-all duration-500 ${isShortScreen ? "mt-2 space-y-2" : "mt-3 space-y-3"
+                    } ${isMobileServicesOpen === "creative"
                       ? "opacity-100 max-h-96 transform translate-y-0"
                       : "opacity-0 max-h-0 overflow-hidden transform -translate-y-4"
-                  }`}
+                    }`}
                 >
-                  {/* {[
-                    "Graphics & Motion",
-                    "Branding & Packaging",
-                    "Video Production",
-                  ].map((service, index) => ( */}
+                  
                   {mobileServicePages["creative"].map((item, index) => (
                     <Link href={item.href} key={item.label}>
                       <div
                         // key={service}
-                        className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${
-                          isShortScreen ? "text-base" : "text-lg"
-                        }`}
+                        className={`cursor-pointer font-light text-gray-200 hover:text-white transition-all duration-300 transform hover:scale-105 hover:tracking-wide text-center ${isShortScreen ? "text-base" : "text-lg"
+                          }`}
                         style={{
                           transitionDelay:
                             isMobileServicesOpen === "creative"

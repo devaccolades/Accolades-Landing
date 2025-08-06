@@ -37,7 +37,7 @@ const itemVariants = {
 
 const ServicesIncluded = () => {
   return (
-    <section className="w-full  py-12 containers">
+    <section className="w-full py-6  containers">
       <div>
         {/* Title */}
         <motion.h2

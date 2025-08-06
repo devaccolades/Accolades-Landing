@@ -1,5 +1,6 @@
 "use client";
 
+import AnimatedPopTitle from "@/component/AnimatedDigitalTitle";
 import AnimatedWebTitle from "@/component/AnimatedWebTitle";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -20,7 +21,7 @@ const Herosection = ({ main_title, title, subtitle, button_text, image }) => {
           {main_title}
         </h2>
       </motion.div> */}
-      <AnimatedWebTitle text={main_title} />
+      <AnimatedPopTitle text={main_title} />
 
       {/* Content Box */}
       <div className=" flex flex-col-reverse md:flex-row items-center gap-8 overflow-hidden my-6 ">
@@ -32,10 +33,10 @@ const Herosection = ({ main_title, title, subtitle, button_text, image }) => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-lg sm:text-xl md:text-3xl font-mont font-bold text-[#3FB4BA] mb-4">
+          <h3 className="text-lg  md:text-xl lg:text-2xl font-mont font-bold text-[#3FB4BA] mb-4">
             {title}
           </h3>
-          <p className="text-sm  md:text-lg font-mont text-gray-700 mb-6">{subtitle}</p>
+          <p className="text-[13px]  md:text-[16px] font-mont text-gray-700 mb-6">{subtitle}</p>
           <a
             href="/contact-us"
             className="text-[12px]  md:text-[14px] bg-[#3FB4BA] text-white font-mont font-medium px-3 py-2 rounded-full shadow hover:bg-[#3FB4BA] transition-all"

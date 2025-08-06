@@ -40,18 +40,9 @@ const OurServices = () => {
     <>
       <section className="containers flex flex-col-reverse md:flex-row justify-between items-center gap-10  ">
         <div className="w-full">
-          <p className="text-[14px] md:text-[16px] xl:text-[20px] 2xl:text-[28px] leading-[156%] font-mont font-normal">
-            Accolades, the creative hub for digital marketing in Kerala, keenly
-            takes care of your diverse internet marketing solutions for your
-            business. Our services include Graphics Designing, Content
-            Marketing, Google Ads, Meta Ads, Social Media Marketing, Web
-            Development and SEO Services. We also undertake other conventional
-            advertisements and offline event marketing too. As one of the top
-            digital marketing company in Kochi, we help you grow your business
-            by driving traffic to your website. Regardless of the business’s
-            size we can convert visitors into your potential customers. We
-            operate globally while being centralized in Kochi, Kerala and
-            regional offices at Mumbai, Bengaluru, Trivandrum and Calicut.
+          <p className="text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] leading-[156%] font-mont font-normal">
+           We deliver a complete suite of digital marketing solutions, from graphic design, social media marketing & management, 
+           Google & Meta Ads to web development and SEO. Our goal is to drive measurable growth by crafting personalized strategies for your brand’s success.
           </p>
         </div>
         <div className="relative w-full">

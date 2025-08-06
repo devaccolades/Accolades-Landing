@@ -16,7 +16,18 @@ import cl5 from "../../../../public/Group 211.png";
 import cl6 from "../../../../public/Group 212.png";
 import cl7 from "../../../../public/Group 213.png";
 import cl8 from "../../../../public/Group206.png";
-import cl9 from "../../../../public/clients/2c851e25ba22c1716cf66563d4157775812054ee.png";
+import cl9 from "../../../../public/rak1.png";
+import cl10 from "../../../../public/bus.png";
+import cl11 from "../../../../public/fas.png";
+import cl12 from "../../../../public/cdb.png";
+import cl13 from "../../../../public/conf.png";
+import cl14 from "../../../../public/nhc.png";
+import cl15 from "../../../../public/sun.png";
+import cl16 from "../../../../public/arya.png";
+import cl17 from "../../../../public/arj.png";
+import cl18 from "../../../../public/mioc1.png";
+import cl19 from "../../../../public/cine1.png";
+import cl20 from "../../../../public/clas.png";
 
 
 const logos = [
@@ -29,6 +40,17 @@ const logos = [
   { id: 7, src: cl7, alt: "Client 7" },
   { id: 8, src: cl8, alt: "Client 8" },
   { id: 9, src: cl9, alt: "Client 9" },
+  { id: 10, src: cl10, alt: "Client 10" },
+  { id: 11, src: cl11, alt: "Client 11" },
+  { id: 12, src: cl12, alt: "Client 12" },
+  { id: 13, src: cl13, alt: "Client 13" },
+  { id: 14, src: cl14, alt: "Client 14" },
+  { id: 15, src: cl15, alt: "Client 15" },
+  { id: 16, src: cl16, alt: "Client 16" },
+  { id: 17, src: cl17, alt: "Client 17" },
+  { id: 18, src: cl18, alt: "Client 18" },
+  { id: 19, src: cl19, alt: "Client 19" },
+  { id: 20, src: cl20, alt: "Client 20" },
 ];
 
 const OurClients = () => {

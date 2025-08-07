@@ -62,7 +62,7 @@ const WhatWeOffer = ({ title, services, desc }) => {
                 height={80}
                 className="object-contain h-[60px] md:h-[80px]"
               />
-              <p className="font-semibold font-mont text-sm md:text-xl">{service.name}</p>
+              <p className="font-semibold font-mont text-[13px] lg:text-[14px]">{service.name}</p>
             </div>
           ))}
         </motion.div>

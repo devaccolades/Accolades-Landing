@@ -55,7 +55,9 @@ function page() {
       <Digital />
       <Creative />
       <Web />
-      <Footer />
+      <div className="-mb-[37px]">
+        <Footer />
+      </div>
     </section>
   );
 }

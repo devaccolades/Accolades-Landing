@@ -31,8 +31,8 @@ function Digital() {
                 className="h-full w-full md:h-[190px] lg:h-full object-cover object-center p-3"
               />
             </div>
-            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
-              <h1 className="text-[#3FB4BA] text-[28px]md:text-[35px] font-semibold lg:text-[50px] font-mont leading-[100%]">
+            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[10px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
+              <h1 className="text-[#3FB4BA] text-[28px] md:text-[30px] font-semibold lg:text-[40px] font-mont leading-[100%]">
                 Google Ads
               </h1>
               <p className="max-w-md text-[12px] md:text-[14px] lg:text-[18px] md:leading-[150%] font-mont ">
@@ -61,8 +61,8 @@ function Digital() {
                 className="h-full w-full md:h-[190px] lg:h-full object-cover object-center p-3"
               />
             </div>
-            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
-              <h1 className="text-[#3FB4BA] text-[28px]md:text-[35px] font-semibold lg:text-[50px] font-mont leading-[100%]">
+            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[10px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
+              <h1 className="text-[#3FB4BA] text-[28px]md:text-[30px] font-semibold lg:text-[40px] font-mont leading-[100%]">
                 Search Engine Optimization
               </h1>
               <p className="max-w-md text-[12px] md:text-[14px] lg:text-[18px] md:leading-[150%] font-mont ">
@@ -96,8 +96,8 @@ function Digital() {
                 className="h-full w-full md:h-[190px] lg:h-full object-cover object-center p-3"
               />
             </div>
-            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
-              <h1 className="text-[#3FB4BA] text-[28px]md:text-[35px] font-semibold lg:text-[50px] font-mont leading-[100%]">
+            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[10px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
+              <h1 className="text-[#3FB4BA] text-[28px]md:text-[30px] font-semibold lg:text-[40px] font-mont leading-[100%]">
                 Social Media Marketing
               </h1>
               <p className="max-w-md text-[12px] md:text-[14px] lg:text-[18px] md:leading-[150%] font-mont ">
@@ -126,8 +126,8 @@ function Digital() {
                 className="h-full w-full md:h-[190px] lg:h-full object-cover object-center p-3"
               />
             </div>
-            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[30px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
-              <h1 className="text-[#3FB4BA] text-[28px]md:text-[35px] font-semibold lg:text-[50px] font-mont leading-[100%]">
+            <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[10px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
+              <h1 className="text-[#3FB4BA] text-[28px]md:text-[30px] font-semibold lg:text-[40px] font-mont leading-[100%]">
                 Content Marketing
               </h1>
               <p className="max-w-md text-[12px] md:text-[14px] lg:text-[18px] md:leading-[150%] font-mont ">

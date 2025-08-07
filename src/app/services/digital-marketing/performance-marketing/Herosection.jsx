@@ -33,7 +33,7 @@ const Herosection = ({ main_title, title, subtitle, button_text, image }) => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-lg  md:text-xl lg:text-2xl font-mont font-bold text-[#3FB4BA] mb-4">
+          <h3 className="text-lg  md:text-xl lg:text-2xl leading-[136%] font-mont font-bold text-[#3FB4BA] mb-4">
             {title}
           </h3>
           <p className="text-[13px]  md:text-[16px] font-mont text-gray-700 mb-6">{subtitle}</p>

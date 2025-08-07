@@ -1,21 +1,17 @@
-"use client";
-import { useState } from "react";
 import Navbar from "@/component/Navbar";
-import HeroSection from "./HeroSection";
-import Latest from "./Latest";
 import Footer from "@/component/Footer";
+import BlogThings from "./BlogThings";
+import { getBlogs } from "../Server";
 
-export default function page() {
-  const [selectedTag, setSelectedTag] = useState("All");
+export default async function page() {
+  const data = await getBlogs();
+  console.log("data",data)
   return (
     <>
       <Navbar />
-      <main className="bg-[#F1F1F1]">
-        <HeroSection selectedTag={selectedTag} setSelectedTag={setSelectedTag} />
-        <Latest selectedTag={selectedTag} />
-      </main>
+      <BlogThings data={data}/>
       <main className="-mt-[65px]">
-      <Footer />
+        <Footer />
       </main>
     </>
   );

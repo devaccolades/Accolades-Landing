@@ -23,11 +23,11 @@ export default function HeroSection() {
           <div className="flex flex-col lg:flex-row gap-8 items-center">
             <div className="lg:w-3/4 w-full">
               <div className="bg-white rounded-[30px] px-6 md:px-8 lg:px-10 py-6 md:py-8 lg:py-10 mt-6">
-                <p className="font-mont font-normal md:text-[24px] text-[20px] leading-[130%] -tracking-[2%] text-[#333333] uppercase">
+                <p className="font-mont font-normal md:text-[15px] text-[10px] leading-[130%] -tracking-[2%] text-[#333333] uppercase">
                   CONTENT ISN'T THE KING, IT'S THE KINGDOM
                 </p>
 
-                <h2 className="font-mont font-bold lg:text-[32px] md:text-[30px] text-[26px] leading-[130%] text-[#3FB4BA] mb-4 md:mb-6">
+                <h2 className="font-mont font-bold lg:text-[32px] md:text-[30px] text-[26px] leading-[100%] md:leading-[130%] text-[#3FB4BA] mb-4 md:mb-6">
                   Creative Messaging
                 </h2>
 
@@ -72,7 +72,7 @@ export default function HeroSection() {
           {/* Main Content Card */}
           <div className="bg-white rounded-3xl lg:p-8 p-6 shadow-lg">
             {/* Header */}
-            <h1 className="md:text-center font-mont font-semibold xl:text-[20px] md:text-[18px] text-[16px] leading-[150%] mb-4 md:mb-8 lg:mb-12">
+            <h1 className="md:text-center font-mont font-semibold xl:text-[20px] md:text-[18px] text-[14px] leading-[150%] mb-4 md:mb-8 lg:mb-12">
               Content is the present and future of marketing. Specifically,
               there are three reasons and benefits for enterprises that use
               content marketing :

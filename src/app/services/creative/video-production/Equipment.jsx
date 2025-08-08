@@ -1,10 +1,10 @@
 import Tech from "@/component/Tech";
 import React from "react";
 import Image from "next/image";
-import davinci from "../../../../../public/video-production/tech1.svg";
-import adobe from "../../../../../public/video-production/tech2.svg";
-import afterEffects from "../../../../../public/video-production/tech3.svg";
-import canva from "../../../../../public/video-production/tech4.svg";
+import davinci from "../../../../../public/video-production/Tech1.svg";
+import adobe from "../../../../../public/video-production/Tech2.svg";
+import afterEffects from "../../../../../public/video-production/Tech3.svg";
+import canva from "../../../../../public/video-production/Tech4.svg";
 // import Invention from "../../../../../public/video-production/invention.png";
 
 export default function Equipment() {

@@ -54,12 +54,12 @@ const featuredWorks = [
     image: feI2,
     video: "/videos/featuredWorks/fe2.mp4",
   },
-  {
-    client: "National Builders",
-    getVideoCategories: "Testimonial Video",
-    image: feI3,
-    video: "/videos/featuredWorks/fe3.mp4",
-  },
+  // {
+  //   client: "National Builders",
+  //   getVideoCategories: "Testimonial Video",
+  //   image: feI3,
+  //   video: "/videos/featuredWorks/fe3.mp4",
+  // },
 ];
 
 const FeaturedWorks = ({ data }) => {

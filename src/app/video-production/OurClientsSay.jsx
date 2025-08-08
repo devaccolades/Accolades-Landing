@@ -64,13 +64,13 @@ const VidTest = [
     name: "Josbin Itty",
     position: "Digital Marketing Manager",
   },
-  {
-    type: "video",
-    video: "/videos/featuredWorks/fe3.mp4",
-    image: feI3,
-    name: "Sijo Sunny",
-    position: "Director",
-  },
+  // {
+  //   type: "video",
+  //   video: "/videos/featuredWorks/fe3.mp4",
+  //   image: feI3,
+  //   name: "Sijo Sunny",
+  //   position: "Director",
+  // },
 ];
 
 const WhatOurClientsSay = ({ data }) => {

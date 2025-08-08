@@ -73,7 +73,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/blogs" className="hover:text-teal-700 transition">
+                <a href="/blog" className="hover:text-teal-700 transition">
                   Blogs
                 </a>
               </li>
@@ -114,9 +114,11 @@ const Footer = () => {
         </p>
 
         <p className="text-sm font-mont text-center md:text-left">
-          mail@accoladesmedia.co.in
-          </p>
-          
+          <a href="mailto:mail@accoladesmedia.co.in" className="hover:underline">
+            mail@accoladesmedia.co.in
+          </a>
+        </p>
+
         <div className="flex gap-3">
           <a
             href="https://www.facebook.com/accoladesmc/"

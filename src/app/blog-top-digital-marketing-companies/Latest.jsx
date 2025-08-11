@@ -1,5 +1,5 @@
 "use client";
-
+import {motion} from "framer-motion"
 import { Clock, MapPin, ArrowRight, ArrowLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -63,6 +63,7 @@ const BlogCardsGrid = ({ selectedTag, data }) => {
     }
   };
 
+
   // Single card component
   const BlogCard = ({ post }) => {
     // console.log("post", post);
@@ -107,7 +108,7 @@ const BlogCardsGrid = ({ selectedTag, data }) => {
               <div className="flex-shrink-0">
                 <div className="md:w-14 md:h-14 h-10 w-10 rounded-full border-4 border-[#BFE1DE] flex items-center justify-center">
                   <Link
-                    href={`/blog/${post.id}`}
+                    href={`/blog-top-digital-marketing-companies/${post.id}`}
                     className="md:w-10 md:h-10 w-8 h-8 bg-teal-600 hover:bg-teal-700 text-white rounded-full flex items-center justify-center transition-colors duration-200 group-hover:scale-110 transform"
                   >
                     <ArrowRight className="w-4 h-4" />
@@ -147,11 +148,15 @@ const BlogCardsGrid = ({ selectedTag, data }) => {
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4 lg:gap-6 auto-rows-fr">
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4 lg:gap-6 auto-rows-fr"
+             initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}>
               {currentPosts.map((post) => (
                 <BlogCard post={post} key={post.id} />
               ))}
-            </div>
+            </motion.div>
 
             {/* FIXED: Only show pagination if there are multiple pages */}
             {totalPages > 1 && (

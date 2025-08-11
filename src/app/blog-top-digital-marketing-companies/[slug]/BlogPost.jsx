@@ -1,3 +1,5 @@
+"use client"
+import {motion} from "framer-motion"
 import React from "react";
 import {
   Calendar,
@@ -67,9 +69,14 @@ export default function BlogPost({ data,category }) {
       }}
     >
       <div className="containers py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 md:gap-6 gap-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 md:gap-6 gap-4 "
+         >
           {/* Main Content */}
-          <div className="lg:col-span-2">
+          <motion.div className="lg:col-span-2"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}>
             <article className="bg-white rounded-2xl shadow-lg overflow-hidden">
               {/* Header */}
               <div className="md:px-8 px-4 pt-8">
@@ -92,13 +99,18 @@ export default function BlogPost({ data,category }) {
                 <div dangerouslySetInnerHTML={{ __html: data?.description }} />
               </div>
             </article>
-          </div>
+          </motion.div>
 
           {/* Sidebar */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1"
+          >
             <div className="sticky top-8 space-y-6">
               {/* Related Posts */}
-              <div className="bg-white rounded-2xl shadow-lg p-6">
+              <motion.div className="bg-white rounded-2xl shadow-lg p-6"
+              initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}>
                 <h3 className="font-mont font-semibold lg:text-[22px] md:text-[20px] text-[18px] leading-[150%] text-[#707070] mb-6">
                   Related posts
                 </h3>
@@ -116,7 +128,7 @@ export default function BlogPost({ data,category }) {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
               {/* Social Media Icons */}
               <div className=" p-2">

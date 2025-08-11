@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion"
 import React from "react";
 import float from "../../../public/home/floating.gif";
 import Image from "next/image";
@@ -41,13 +43,22 @@ const OurServices = () => {
       <section className="containers flex flex-col-reverse md:flex-row justify-between items-center gap-10  ">
         <div className="w-full">
           <p className="text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] leading-[156%] font-mont font-normal">
-           We deliver a complete suite of digital marketing solutions, from graphic design, social media marketing & management, 
-           Google & Meta Ads to web development and SEO. Our goal is to drive measurable growth by crafting personalized strategies for your brand’s success.
+            We deliver a complete suite of digital marketing solutions, from graphic design, social media marketing & management,
+            Google & Meta Ads to web development and SEO. Our goal is to drive measurable growth by crafting personalized strategies for your brand’s success.
           </p>
         </div>
         <div className="relative w-full">
           <Image src={float} alt="gif" className="w-full" />
-          <div className="absolute inset-0 flex flex-col justify-center items-start pl-[15%]">
+          <div className="absolute inset-0 flex flex-col justify-center items-start pl-[15%]"
+            
+          >
+            <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            viewport={{ once: true }}
+            >
+
             <h3 className="text-[36px] text-[#3F3F3F] font-normal leading-[100%]">
               What we do{" "}
             </h3>
@@ -57,14 +68,24 @@ const OurServices = () => {
             <h3 className="font-bold text-[48px] md:text-[64px] xl:text-[86px] leading-[100%">
               Services
             </h3>
-          </div>
+          </motion.div>
+            </div>
+
         </div>
       </section>
       <section className="containers grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-5 pt-20 pb-10 ">
         {services.map((service, index) => (
-          <div
+          <motion.div
             key={index}
             className={`relative p-4 rounded-[30px] text-center shadow-sm ${service.bgColor}`}
+            initial={{ opacity: 0, y: 40, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+            delay: index * 0.15, // stagger effect
+          }}
+          viewport={{ once: true }}
           >
             <div className="h-[100px] w-[100px] p-5 absolute -top-[18%] left-1/2 -translate-x-1/2 rounded-full bg-white">
               <Image
@@ -81,7 +102,7 @@ const OurServices = () => {
             <p className="text-[#333] font-mont text-[14px] leading-[156%]">
               {service.description}
             </p>
-          </div>
+          </motion.div>
         ))}
       </section>
     </>

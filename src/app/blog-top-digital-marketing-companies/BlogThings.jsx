@@ -20,4 +20,5 @@ function BlogThings({ data }) {
   );
 }
 
+
 export default BlogThings;

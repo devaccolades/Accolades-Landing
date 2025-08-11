@@ -1,5 +1,5 @@
 "use client";
-
+import {motion} from "framer-motion"
 import { Clock, MapPin, ArrowRight, ArrowLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -62,6 +62,7 @@ const BlogCardsGrid = ({ selectedTag, data }) => {
       setCurrentPage(currentPage - 1);
     }
   };
+
 
   // Single card component
   const BlogCard = ({ post }) => {
@@ -147,11 +148,15 @@ const BlogCardsGrid = ({ selectedTag, data }) => {
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4 lg:gap-6 auto-rows-fr">
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4 lg:gap-6 auto-rows-fr"
+             initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}>
               {currentPosts.map((post) => (
                 <BlogCard post={post} key={post.id} />
               ))}
-            </div>
+            </motion.div>
 
             {/* FIXED: Only show pagination if there are multiple pages */}
             {totalPages > 1 && (

@@ -1,9 +1,27 @@
+'use client';
 import React from "react";
 import side from "../../../../public/creative/OBJECTS (3).svg";
 import Image from "next/image";
 import AnimatedTitle from "@/component/AnimatedTitle";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
+
+  const paragraphText1 = "Fuel your growth with scroll-stopping visuals, thumb-stopping videos, and packaging that leaps off the shelf."
+
+    const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.05 },
+    },
+  };
+
+    const word = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  };
+
   return (
     <section className="containers pt-[100px]">
       <AnimatedTitle text={"Creative"} />
@@ -13,14 +31,25 @@ const HeroSection = () => {
             Bringing Ideas to Life with Design That Inspires
           </h3>
           <h3 className="text-[13px] md:text-[14px] xl:text-[18px] leading-[156%]">
-            Fuel your growth with scroll-stopping visuals, thumb-stopping
-            videos, and packaging that leaps off the shelf.
+
           </h3>
-          <p className="text-[13px] md:text-[14px] xl:text-[18px] leading-[156%]">
-            Whether you’re launching a startup or refreshing an iconic brand,
-            our creative squad blends art and strategy to turn attention into
-            action.
-          </p>
+              <motion.p
+                variants={container}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify"
+              >
+                {paragraphText1.split(" ").map((wordText, i) => (
+                  <motion.span
+                    key={i}
+                    variants={word}
+                    style={{ display: "inline-block", marginRight: "5px" }}
+                  >
+                    {wordText}
+                  </motion.span>
+                ))}
+              </motion.p>
         </div>
         <div>
           <Image src={side} alt="side-image" className="w-full h-auto" />

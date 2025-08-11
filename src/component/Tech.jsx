@@ -1,17 +1,55 @@
+'use client';
+import { motion } from "framer-motion";
 import Image from "next/image";
+
 export default function Tech({tools, title, para}) {
+  const containerVariants = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.15 } },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
+  };
+
+  const wordVariants = {
+    hidden: { opacity: 0, y: 10 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.25 } },
+  };
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
   return (
     <>
       <section className="lg:pt-12 md:pt-10 bg-gradient-to-b from-white to-[#d3f2f4] pb-24">
         <div className="containers px-4 bg-white p-6 md:p-10 rounded-[30px] shadow">
-          <h2 className="font-mont font-bold xl:text-[40px] lg:text-[32px] md:text-[26px] text-[20px] text-[#3FB4BA] mb-6">
+          {/* Animated Title */}
+          <motion.h2 
+            className="font-mont font-bold xl:text-[40px] lg:text-[32px] md:text-[26px] text-[20px] text-[#3FB4BA] mb-6"
+            variants={titleVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
             {title}
-          </h2>
+          </motion.h2>
 
-          <div className="grid grid-cols-2  md:grid-cols-5 gap-6 mb-6">
+          {/* Animated Tools Grid */}
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-6"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
             {tools.map((tool, index) => (
-              <div
+              <motion.div
                 key={index}
+                variants={itemVariants}
                 className="flex flex-col items-center text-center"
               >
                 <div className="w-16 h-16 mb-2">
@@ -24,13 +62,24 @@ export default function Tech({tools, title, para}) {
                 <p className="font-poppins font-semibold lg:text-[16px] md:text-[14px] text-[12px] text-[#0C0902]">
                   {tool.name}
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
-          <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px]">
-            {para}
-          </p>
+          {/* Animated Paragraph Word-by-Word */}
+          <motion.p 
+            className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] flex flex-wrap gap-[4px]"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            {para.split(" ").map((word, i) => (
+              <motion.span key={i} variants={wordVariants}>
+                {word}
+              </motion.span>
+            ))}
+          </motion.p>
         </div>
       </section>
     </>

@@ -1,8 +1,8 @@
 // lib/server.js
 
 export const BASE_URL =
-  // process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
-process.env.NEXT_PUBLIC_STRAPI_URL || "https://strapi.video.accoladesweb.com";
+  process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
+// process.env.NEXT_PUBLIC_STRAPI_URL || "https://strapi.video.accoladesweb.com";
 
 export async function getHeroSection() {
   const res = await fetch(`${BASE_URL}/api/hero?populate=*`);
@@ -129,14 +129,14 @@ export async function getBlogs() {
   }
 }
 
-// export async function getSeo(page) {
-//   try {
-//     const res = await fetch(
-//       `${BASE_URL}/api/seos?filters[page][$eq]=${page}&populate=ogImage`
-//     );
-//     const json = await res.json();
-//     return json.data;
-//   } catch (error) {
-//     console.log("Error in fetch ing the Seo tags", error);
-//   }
-// }
+export async function getSeo(page) {
+  try {
+    const res = await fetch(
+      `${BASE_URL}/api/seos?filters[page][$eq]=${page}&populate=ogImage`
+    );
+    const json = await res.json();
+    return json.data;
+  } catch (error) {
+    console.log("Error in fetch ing the Seo tags", error);
+  }
+}

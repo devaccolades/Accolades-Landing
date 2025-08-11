@@ -2,6 +2,7 @@ import Navbar from "../../../../component/Navbar";
 import HeroSection from "./HeroSection";
 import Footer from '../../../../component/Footer'
 
+
 export default function page() {
   return (
     <>

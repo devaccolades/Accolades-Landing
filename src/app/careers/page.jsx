@@ -11,6 +11,7 @@ import Image from "next/image";
 import Discover from "./Discover";
 import FormSection from "./FormSection";
 
+
 function page() {
   return (
     <section className="relative">

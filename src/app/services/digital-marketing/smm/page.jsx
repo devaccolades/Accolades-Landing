@@ -4,6 +4,8 @@ import React from "react";
 import HeroSection from "./HeroSection";
 import Details from "./Details";
 
+
+
 const page = () => {
   return (
     <>

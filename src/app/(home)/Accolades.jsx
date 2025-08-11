@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion"
 import React from "react";
 import Image from "next/image";
 import stack from "../../../public/home/1133de05fd2a190083088cb835978a45d95b9e4e.png";
@@ -15,7 +17,11 @@ const Accolades = () => {
             className="w-full object-center object-cover"
           />
         </div>
-        <div className="w-full">
+        <motion.div className="w-full"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true ,amount: 0.3}}>
           <p className="text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] font-mont font-normal">
             Accolades, the creative hub for digital marketing in Kerala, keenly
             takes care of your diverse internet marketing solutions for your
@@ -29,7 +35,7 @@ const Accolades = () => {
             operate globally while being centralized in Kochi, Kerala and
             regional offices at Mumbai, Bengaluru, Trivandrum and Calicut.
           </p>
-        </div>
+        </motion.div>
       </section>
       <Image
         src={bottom}

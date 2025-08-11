@@ -4,6 +4,7 @@ import Process from "./Process";
 import Types from "./Types";
 import Footer from "@/component/Footer";
 
+
 export default function page() {
   return (
     <>

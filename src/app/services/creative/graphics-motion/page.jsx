@@ -5,6 +5,7 @@ import Platforms from "./Platforms";
 import Services from "./Services";
 import Navbar from "@/component/Navbar";
 
+
 export default function page() {
   return (
     <>

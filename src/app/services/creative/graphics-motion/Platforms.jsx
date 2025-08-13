@@ -9,7 +9,8 @@ import Photoshop from "../../../../../public/graphics-motion/5.svg";
 export default function Platforms() {
   const tools = [
     {
-      name: "Illustrator",
+      
+      name: "After Effects",
       icon: Illustrator,
     },
     {
@@ -17,15 +18,15 @@ export default function Platforms() {
       icon: Adobe,
     },
     {
-      name: "After Effects",
+      name: "Illustrator",
       icon: afterEffects,
     },
     {
-      name: "Canva Pro",
+      name: "Photoshop",
       icon: canva,
     },
     {
-      name: "Photoshop",
+      name: "Canva Pro",
       icon: Photoshop,
     },
   ];

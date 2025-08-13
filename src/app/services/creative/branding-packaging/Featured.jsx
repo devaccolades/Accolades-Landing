@@ -3,10 +3,10 @@ import ProjectSlider from "@/app/(home)/ProjectSlider";
 import Image from "next/image";
 import React, { useState } from "react";
 
-import alappat from "../../../../../public/home/alappat.png";
-import family from "../../../../../public/home/family.png";
-import niahara from "../../../../../public/home/nihara.png";
-import silk from "../../../../../public/home/silk_galeria.png";
+// import alappat from "../../../../../public/home/alappat.png";
+// import family from "../../../../../public/home/family.png";
+// import niahara from "../../../../../public/home/nihara.png";
+// import silk from "../../../../../public/home/silk_galeria.png";
 
 import pack1 from "../../../../../public/creative/branding/1.1 (1)-min.jpg";
 import pack2 from "../../../../../public/creative/branding/Mockup_002-min.jpg";

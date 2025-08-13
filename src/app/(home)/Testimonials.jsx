@@ -124,12 +124,12 @@ const Testimonials = () => {
           {testimonials.map((t) => (
             <SwiperSlide key={t.id}>
               <div
-                className={`rounded-3xl p-2 md:p-8 min-h-[500px] ${t.bgColor} transition-shadow shadow-md hover:shadow-xl`}
+                className={`rounded-3xl p-2 md:p-8 min-h-[500px] ${t.bgColor} transition-shadow shadow-md hover:shadow-xl flex flex-col`}
               >
                 <FaQuoteLeft
                   className={`text-5xl  ${t.quoteColor} absolute top-8 left-8 opacity-30`}
                 />
-                <div className="flex flex-col items-center text-center">
+                <div className="flex flex-col items-center text-center flex-grow">
                   <Image
                     src={t.avatar}
                     alt={t.name}
@@ -137,11 +137,13 @@ const Testimonials = () => {
                     height={70}
                     className="rounded-full mb-4 object-cover"
                   />
-                  <p className="text-gray-700 font-mont text-[13px] md:text-[14px] mb-4">
+                  <p className="text-gray-700 font-mont text-[13px] md:text-[14px] mb-4 flex-grow">
                     {t.content}
                   </p>
+                  <div className="mt-auto">
                   <p className="font-semibold font-mont">{t.name}</p>
                   <p className="text-sm text-gray-600 font-mont">{t.role}</p>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>

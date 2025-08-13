@@ -8,20 +8,42 @@ import "swiper/css/navigation";
 import Image from "next/image";
 // import topline from "../../../public/home/top-line.svg";
 
-import alappat from "../../../public/home/alappat.webp";
-import family from "../../../public/home/family.webp";
-import niahara from "../../../public/home/nihara.webp";
-import silk from "../../../public/home/silk_galeria.webp";
+import alappat from "../../../public/home/01-min.png";
+import family from "../../../public/home/02-min.png";
+import p3 from "../../../public/home/03-min.png";
+import p4 from "../../../public/home/04-min.png";
+import p5 from "../../../public/home/05-min.png";
+import p6 from "../../../public/home/06-min.png";
+import p7 from "../../../public/home/07-min.png";
+import p8 from "../../../public/home/08-min.png";
+import p9 from "../../../public/home/09-min.png";
+import p10 from "../../../public/home/10-min.png"; 
+ import p11 from "../../../public/home/11-min.png";
+ import p12 from "../../../public/home/12-min.png";
+
+// import niahara from "../../../public/home/nihara.webp";
+// import silk from "../../../public/home/silk_galeria.webp";
 import fut from "../../../public/creative/futura04-min.jpg";
 import cure from "../../../public/creative/branding/curegarden 05 copy-min (1).jpg";
+import { fromJSON } from "postcss";
 
 const fallbackImages = [
-  { id: 4, src: niahara, alt: "Niahara" },
+  
   { id: 1, src: alappat, alt: "Alappat" },
   { id: 2, src: family, alt: "Family" },
-  { id: 3, src: niahara, alt: "Niahara" },
-  { id: 6, src: silk, alt: "silk" },
-  { id: 5, src: family, alt: "Family" },
+  { id: 3, src: p3, alt: "Project 3" },
+  { id: 4, src: p4, alt: "Project 4" },
+  { id: 5, src: p5, alt: "Project 5" },
+  { id: 6, src: p6, alt: "Project 6"  },
+  { id: 7, src: p7, alt: "Project 7" },
+  { id: 8, src: p8, alt: "Project 8" },
+  { id: 9, src: p9, alt: "Project 9" },
+  { id: 10, src: p10, alt: "Project 10" },
+  { id: 11, src: p11, alt: "Project 11" },
+  { id: 12, src: p12, alt: "Project 12" },
+  // { id: 3, src: niahara, alt: "Niahara" },
+  // { id: 6, src: silk, alt: "silk" },
+  // { id: 5, src: family, alt: "Family" },
 ];
 const ProjectSlider = ({ images = fallbackImages }) => {
   const sliderKey = useMemo(() => {

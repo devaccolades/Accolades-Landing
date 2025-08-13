@@ -3,7 +3,7 @@ import Navbar from "@/component/Navbar";
 import React from "react";
 import HeroSection from "./HeroSection";
 import Details from "./Details";
-import { BASE_URL, getSeo } from "../Server";
+import { BASE_URL, getSeo } from "@/app/Server";
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {

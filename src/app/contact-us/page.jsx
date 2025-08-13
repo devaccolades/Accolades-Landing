@@ -12,7 +12,7 @@ import centerR from "../../../public/services/centerR.png";
 import centerL from "../../../public/services/centerL.png";
 import bottomGrade from "../../../public/services/bottomSide.png";
 import Image from "next/image";
-import { BASE_URL, getSeo } from "./Server";
+import { BASE_URL, getSeo } from '../Server'
 
 export const dynamic = "force-dynamic";
 

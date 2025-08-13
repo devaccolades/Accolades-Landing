@@ -88,7 +88,7 @@ export default function WebsiteProjects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative w-full aspect-[3/4] block group"
+                    // className="relative w-full aspect-[3/4] block group"
                   >
                     <motion.div
                       whileHover={{ scale: 1.05 }}
@@ -98,7 +98,7 @@ export default function WebsiteProjects() {
                       <Image
                         src={project.image}
                         alt={project.title}
-                        className="rounded-md object-contain object-left"
+                        className="rounded-md object-contain object-left mb-2"
                       />
                     </motion.div>
                   </a>

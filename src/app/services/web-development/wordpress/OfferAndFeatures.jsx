@@ -1,5 +1,9 @@
+
+
 "use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function OfferAndFeatures() {
   const offers = [
@@ -39,43 +43,65 @@ export default function OfferAndFeatures() {
   ];
 
   return (
-    <div className="containers py-10  ">
-      <div className=" text-center">
+    <div className="containers py-10">
+      <div className="text-center">
         {/* We Offer */}
-        <h2 className="text-[20px] md:text-[30px] lg:text-[40px] font-mont font-bold text-[#1eb2a6] mb-4 ">
+        <motion.h2
+          className="text-[20px] md:text-[30px] lg:text-[40px] font-mont font-bold text-[#1eb2a6] mb-4"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           We Offer
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6 mb-8 ">
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6 mb-8">
           {offers.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-white rounded-xl shadow-md p-3 lg:p-6 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <h3 className="text-md font-bold font-mont text-[#1eb2a6] mb-2">
                 <span className="mr-2">{item.icon}</span>
                 {item.title}
               </h3>
               <p className="text-sm font-mont text-gray-600">{item.desc}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Features Highlight */}
-        <h2 className="text-[20px] md:text-[30px] lg:text-[40px] font-mont font-bold text-[#1eb2a6] mb-4">
+        <motion.h2
+          className="text-[20px] md:text-[30px] lg:text-[40px] font-mont font-bold text-[#1eb2a6] mb-4"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           Features Highlight
-        </h2>
+        </motion.h2>
+
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6">
           {features.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-white rounded-xl shadow-md p-4 lg:p-6 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <h3 className="text-md font-mont font-bold text-[#1eb2a6] mb-2">
                 <span className="mr-2">{item.icon}</span>
                 {item.title}
               </h3>
               <p className="text-sm font-mont text-gray-600">{item.desc}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

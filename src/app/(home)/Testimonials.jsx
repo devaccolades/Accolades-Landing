@@ -5,11 +5,11 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { FaQuoteLeft } from "react-icons/fa";
-import user from "../../../public/testimonial-dp.png";
-import bottom from "../../../public/home/bottom-line.svg";
+import user from "../../../public/testimonial-dp.webp";
+import bottom from "../../../public/home/bottom-line.webp";
 
-import client from "../../../public/Group 213.png";
-import rak from "../../../public/clients/2c851e25ba22c1716cf66563d4157775812054ee.png";
+import client from "../../../public/Group 213.webp";
+import rak from "../../../public/clients/2c851e25ba22c1716cf66563d4157775812054ee.webp";
 
 const testimonials = [
   {

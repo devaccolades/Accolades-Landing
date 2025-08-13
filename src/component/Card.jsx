@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Icon from '../../public/video-production/icon.svg'
+import Icon from '../../public/video-production/icon.webp'
 
 export default function Card({sectionTitle, videoTypes, showButton = false, buttons = []}) {
   // Container animation for staggered children

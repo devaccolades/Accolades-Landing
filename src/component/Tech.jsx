@@ -40,7 +40,7 @@ export default function Tech({tools, title, para}) {
 
           {/* Animated Tools Grid */}
           <motion.div 
-            className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-6"
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"

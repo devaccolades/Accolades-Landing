@@ -1,5 +1,5 @@
 import React from "react";
-import arrow from "../../../public/Arrow 4.svg";
+import arrow from "../../../public/Arrow 4.webp";
 import Image from "next/image";
 
 const WhyAccolades = () => {

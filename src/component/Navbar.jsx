@@ -63,7 +63,7 @@ const mobileServicePages = {
       label: "Branding & Packaging",
       href: "/services/creative/branding-packaging",
     },
-    { label: "Video Production", href: "/services/creative/video-production" },
+    { label: "Video Production", href: "/services/creative/video-productions" },
   ],
 };
 
@@ -95,7 +95,7 @@ const Navbar = () => {
         },
         {
           label: "Video Production",
-          href: "/services/creative/video-production",
+          href: "/services/creative/video-productions",
         },
       ],
     },

@@ -127,7 +127,7 @@ export default function HeroSection() {
             >
               {/* Main Title */}
               <motion.h2 
-                className="font-mont font-semibold xl:text-[42px] lg:text-[38px] md:text-[32px] text-[26px] leading-[110%] text-[#199eb8] md:mb-4 mb-2"
+                className="font-mont font-semibold xl:text-[42px] lg:text-[38px] md:text-[32px] text-[20px] leading-[110%] text-[#199eb8] md:mb-4 mb-2"
                 variants={textVariants}
               >
                 Videos That Captivate, Convert & Communicate

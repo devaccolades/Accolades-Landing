@@ -1,29 +1,46 @@
+
+
 "use client";
+
 import Image from "next/image";
 import React from "react";
 import Hero from "../../../../../public/web/word.png";
 import Link from "next/link";
 import AnimatedWebTitle from "@/component/AnimatedWebTitle";
+import { motion } from "framer-motion";
 
 export default function WordpressHero() {
   return (
     <div className="containers pt-[100px]">
       <div className="font-mont">
         <AnimatedWebTitle text={"Wordpress Pages"} />
+
         {/* Content Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-8 mt-10 items-center">
           {/* Right Image First on Mobile */}
-          <div className="flex justify-center  order-1 md:order-2">
+          <motion.div
+            className="flex justify-center order-1 md:order-2"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <Image
               src={Hero}
               alt="Web Development Illustration"
               className="object-contain w-64 md:w-96 lg:w-[500px] h-auto"
               priority
             />
-          </div>
+          </motion.div>
 
           {/* Left Text Second on Mobile */}
-          <div className="bg-white rounded-2xl shadow-md p-2 md:p-4 order-2 md:order-1">
+          <motion.div
+            className="bg-white rounded-2xl shadow-md p-2 md:p-4 order-2 md:order-1"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <h2 className="text-[20px] lg:text-[30px] xl:text-[40px] leading-[130%] font-bold font-mont text-[#1eb2a6] mb-2">
               Custom WordPress Solutions for All Needs
             </h2>
@@ -36,7 +53,7 @@ export default function WordpressHero() {
                 Get a Creative Proposal
               </button>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

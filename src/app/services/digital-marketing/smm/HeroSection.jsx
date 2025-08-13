@@ -1,21 +1,35 @@
+
+
+
+"use client";
+
 import React from "react";
 import side from "../../../../../public/google/Frame 1171275830.png";
 import Image from "next/image";
 import AnimatedPopTitle from "@/component/AnimatedDigitalTitle";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="containers pt-[100px] font-mont">
-      {/* <h1
-        className="bg-white text-center text-[#3FB4BA] text-[36px] md:text-[50px] lg:text-[64px] font-mont py-5  rounded-[30px] font-bold
-        leading-[100%]"
+    <section className="containers pt-[100px] font-mont overflow-hidden">
+      {/* Animated Title */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        SMM
-      </h1> */}
-      <AnimatedPopTitle text={"SMM"} />
+        <AnimatedPopTitle text={"SMM"} />
+      </motion.div>
 
+      {/* Content Row */}
       <div className="flex flex-col-reverse md:grid md:grid-cols-[60%_1fr] py-[5%] items-center gap-5">
-        <div className="flex flex-col font-mont bg-white p-5 lg:p-8 rounded-[30px] lg:space-y-3 space-y-2">
+        {/* Text Section */}
+        <motion.div
+          className="flex flex-col font-mont bg-white p-5 lg:p-8 rounded-[30px] lg:space-y-3 space-y-2"
+          initial={{ opacity: 0, x: -60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        >
           <h3 className="text-[16px] lg:text-[20px] leading-[110%] font-normal">
             WHY YOU CHOOSE OUR SOCIAL MEDIA MARKETING SERVICE?
           </h3>
@@ -32,10 +46,16 @@ const HeroSection = () => {
             establishment. We depict excellent piece of designs, which captivate
             the broad attention of multitude.
           </p>
-        </div>
-        <div>
+        </motion.div>
+
+        {/* Image Section */}
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+        >
           <Image src={side} alt="side-image" className="w-full h-auto" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

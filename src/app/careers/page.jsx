@@ -5,7 +5,7 @@ import HeroSection from "./HeroSection";
 import circleT from "../../../public/services/topC.webp";
 import circleTL from "../../../public/services/circletTL.webp";
 import centerR from "../../../public/services/centerR.webp";
-import centerL from "../../../public/services/centerL.webp";
+// import centerL from "../../../public/services/centerL.webp";
 import bottomGrade from "../../../public/services/bottomSide.webp";
 import Image from "next/image";
 import Discover from "./Discover";

@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import Image from "next/image";
-import topline from "../../../public/home/top-line.svg";
+// import topline from "../../../public/home/top-line.svg";
 
 import alappat from "../../../public/home/alappat.webp";
 import family from "../../../public/home/family.webp";

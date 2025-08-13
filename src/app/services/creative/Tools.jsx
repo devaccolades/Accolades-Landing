@@ -7,12 +7,13 @@ import adobeC from "../../../../public/creative/Adobe_Creative_Cloud_rainbow_ico
 import adobeP from "../../../../public/creative/Adobe_Premiere_Pro_CC_icon.svg 1.png";
 import canva from "../../../../public/creative/Canva-New-Logo-1440x810 1.png";
 import illus from "../../../../public/creative/c3e0457062b464bcdaa727faec5642528bcb2fb7.png";
+import Photoshop from "../../../../public/graphics-motion/4.svg";
 
 const tools = [
   { name: "After Effects", icon: adobeE },
   { name: "Adobe Creative Cloud", icon: adobeC },
   { name: "Canva Pro", icon: canva },
-  { name: "Premiere Pro", icon: adobeP },
+  { name: "Photoshop", icon: Photoshop },
   { name: "Adobe Illustrator", icon: illus },
 ];
 

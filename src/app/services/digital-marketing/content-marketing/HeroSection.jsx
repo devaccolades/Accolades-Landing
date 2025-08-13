@@ -1,33 +1,42 @@
+
+"use client";
 import Image from "next/image";
 import heroImg from "../../../../../public/content-marketing/heroImg.png";
-import { TrendingUp, DollarSign, Users } from "lucide-react";
 import icon1 from "../../../../../public/content-marketing/icon1.svg";
 import icon2 from "../../../../../public/content-marketing/icon2.svg";
 import icon3 from "../../../../../public/content-marketing/icon3.svg";
 import AnimatedPopTitle from "@/component/AnimatedDigitalTitle";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
     <>
       <div className="lg:pb-16 md:pb-12 pb-6 pt-16 md:pt-20 lg:pt-26">
         <div className="lg:mb-16 md:mb-12 mb-6 containers">
-          {/* <div className="bg-white shadow-lg py-2 text-center rounded-[30px] ">
-            <h1 className="font-mont font-bold xl:text-[86px] lg:text-[76px] md:text-[66px] text-[30px] leading-[100%] text-[#3FB4BA] md:px-20 px-4">
-              Content Marketing
-            </h1>
-          </div> */}
-          <AnimatedPopTitle text={"Content      Marketing"} />
+          {/* <motion.div
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          > */}
+            <AnimatedPopTitle text={"Content      Marketing"} />
+          {/* </motion.div> */}
         </div>
 
         <div className="containers">
           <div className="flex flex-col lg:flex-row gap-8 items-center">
-            <div className="lg:w-3/4 w-full">
+            <motion.div
+              className="lg:w-3/4 w-full"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
               <div className="bg-white rounded-[30px] px-6 md:px-8 lg:px-10 py-6 md:py-8 lg:py-10 mt-6">
                 <p className="font-mont font-normal md:text-[15px] text-[10px] leading-[130%] -tracking-[2%] text-[#333333] uppercase">
                   CONTENT ISN'T THE KING, IT'S THE KINGDOM
                 </p>
 
-                <h2 className="font-mont font-bold lg:text-[32px] md:text-[30px] text-[26px] leading-[100%] md:leading-[130%] text-[#3FB4BA] mb-4 md:mb-6">
+                <h2 className="font-mont font-bold lg:text-[32px] md:text-[30px] text-[20px] leading-[100%] md:leading-[130%] text-[#3FB4BA] mb-4 md:mb-6">
                   Creative Messaging
                 </h2>
 
@@ -46,9 +55,15 @@ export default function HeroSection() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="lg:w-1/4 w-full">
+            <motion.div
+              className="lg:w-1/4 w-full"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
               <div className="relative">
                 <div className="rounded-lg overflow-hidden aspect-square h-full md:h-[300px] lg:h-full w-full">
                   <Image
@@ -58,10 +73,12 @@ export default function HeroSection() {
                   />
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
+
+      {/* Second Section */}
       <div
         className="flex items-center justify-center pt-8 md:pt-12 lg:pt-16 pb-20 lg:pb-30 "
         style={{
@@ -69,9 +86,13 @@ export default function HeroSection() {
         }}
       >
         <div className="containers mx-auto">
-          {/* Main Content Card */}
-          <div className="bg-white rounded-3xl lg:p-8 p-6 shadow-lg">
-            {/* Header */}
+          <motion.div
+            className="bg-white rounded-3xl lg:p-8 p-6 shadow-lg"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <h1 className="md:text-center font-mont font-semibold xl:text-[20px] md:text-[18px] text-[14px] leading-[150%] mb-4 md:mb-8 lg:mb-12">
               Content is the present and future of marketing. Specifically,
               there are three reasons and benefits for enterprises that use
@@ -79,47 +100,34 @@ export default function HeroSection() {
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 md:gap-6 gap-4 mb-4 md:mb-8 lg:mb-12">
-              {/* Increased Sales */}
-              <div className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
-                  <Image
-                    src={icon1}
-                    alt="Increased Sales"
-                    className="w-8 h-8"
-                  />
-                </div>
-                <h3 className="font-mont font-semibold xl:text-[28px] leading-[100%] text-[#2C99B1]">
-                  Increased sales
-                </h3>
-              </div>
-
-              {/* Cost Savings */}
-              <div className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
-                  <Image src={icon2} alt="Cost Savings" className="w-8 h-8" />
-                </div>
-                <h3 className="font-mont font-semibold xl:text-[28px] leading-[100%] text-[#2C99B1]">
-                  Cost savings
-                </h3>
-              </div>
-
-              {/* Better Customers */}
-              <div className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
-                  <Image
-                    src={icon3}
-                    alt="Better Customers"
-                    className="w-8 h-8"
-                  />
-                </div>
-                <h3 className="font-mont font-semibold xl:text-[28px] leading-[100%] text-[#2C99B1]">
-                  Better customers
-                </h3>
-              </div>
+              {[{ icon: icon1, text: "Increased sales" },
+                { icon: icon2, text: "Cost savings" },
+                { icon: icon3, text: "Better customers" }].map((item, i) => (
+                <motion.div
+                  key={i}
+                  className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-300"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: i * 0.2, duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
+                    <Image src={item.icon} alt={item.text} className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-mont font-semibold xl:text-[28px] leading-[100%] text-[#2C99B1]">
+                    {item.text}
+                  </h3>
+                </motion.div>
+              ))}
             </div>
 
-            {/* Description Text */}
-            <div className="space-y-4 font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#000000] ">
+            <motion.div
+              className="space-y-4 font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#000000]"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
               <p>
                 This is what makes content marketing so intriguing in today's
                 environment of thousands of marketing messages per person per
@@ -143,8 +151,8 @@ export default function HeroSection() {
                 rest assured that your content will be crafted and positioned to
                 generate maximum impact.
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </>

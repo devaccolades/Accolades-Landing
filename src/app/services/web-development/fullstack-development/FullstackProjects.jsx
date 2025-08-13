@@ -10,6 +10,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { motion } from "framer-motion";
 
 import img1 from "../../../../../public/web/abes.png";
 import img2 from "../../../../../public/web/ablss.png";
@@ -48,16 +49,23 @@ const projects = [
 
 export default function FullstackProjects() {
   return (
-   
-    // <div className=" min-h-screen pb-4 bg-[#f1f5f5] pt-4 md:pb-16 md:pt-8 ">
-     <div
+
+
+    <div
       className="bg-[#f1f5f5] pt-4 pb-[100px]"
       style={{
         background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
       }}
     >
       <div className="">
-        <div className="bg-white rounded-2xl shadow containers px-4 py-4 md:py-8 mx-3 md:mx-10 lg:mx-20 ">
+       
+        <motion.div
+          className="bg-white rounded-2xl shadow containers px-4 py-4 md:py-8 mx-3 md:mx-10 lg:mx-20"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 md:mb-4">
             Web Projects
           </h2>
@@ -67,58 +75,63 @@ export default function FullstackProjects() {
             scale with ease and handle real-world load. We turn concepts into
             high-performing digital platforms.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mt-10 ml-3 md:ml-10 lg:ml-26 xl:ml-38">
+        <motion.div
+          className="mt-10 ml-3 md:ml-10 lg:ml-26 xl:ml-38"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <Swiper
             modules={[Navigation, Pagination]}
-            // spaceBetween={1}
             slidesPerView={1}
-            // navigation
-            // pagination={{ clickable: true }}
             breakpoints={{
-              320: {
-                slidesPerView: 1.2,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 1.5,
-                spaceBetween: 30,
-              },
-              1024: {
-                slidesPerView: 2.3,
-                spaceBetween: 50,
-              },
+              320: { slidesPerView: 1.2, spaceBetween: 20 },
+              768: { slidesPerView: 1.5, spaceBetween: 30 },
+              1024: { slidesPerView: 2.3, spaceBetween: 50 },
             }}
           >
             {projects.map((project, index) => (
-          
               <SwiperSlide key={index}>
-                <div className="flex flex-col items-center">
+                <motion.div
+                  className="flex flex-col items-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.15,
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: true, amount: 0.2 }}
+                >
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative w-full aspect-[3/4] block"
+                    // className="relative w-full aspect-[3/4] block leading-none overflow-hidden text-[0]"
                   >
                     <Image
                       src={project.image}
                       alt={project.title}
-                     
-                      className="rounded-md object-contain"
+                      className="rounded-md object-contain mb-2"
                     />
                   </a>
-                  <h3 className="text-center font-mont text-sm md:text-base font-semibold text-gray-800 mt-2">
+                  <h3 className="text-center font-mont text-sm md:text-base font-semibold text-black mt-2">
                     {project.title}
                   </h3>
-                </div>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
+
+
+
       </div>
 
-     
+
     </div>
   );
 }

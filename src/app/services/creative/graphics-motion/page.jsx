@@ -4,7 +4,7 @@ import HeroSection from "./HeroSection";
 import Platforms from "./Platforms";
 import Services from "./Services";
 import Navbar from "@/component/Navbar";
-import { BASE_URL, getSeo } from "./Server";
+import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
 

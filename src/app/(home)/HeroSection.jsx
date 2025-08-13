@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import socialgiff from "../../../public/home/Accolades-banner-elements.gif";
-import topline from "../../../public/home/top-line.svg";
+import topline from "../../../public/home/top-line.webp";
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState("");

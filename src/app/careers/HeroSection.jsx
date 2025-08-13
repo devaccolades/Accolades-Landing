@@ -2,9 +2,9 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import box from "../../../public/careers/Abox.png";
-import brain from "../../../public/careers/Abrain.png";
-import hand from "../../../public/careers/Ahand.png";
+import box from "../../../public/careers/Abox.webp";
+import brain from "../../../public/careers/Abrain.webp";
+import hand from "../../../public/careers/Ahand.webp";
 
 function HeroSection() {
   // Animation variants

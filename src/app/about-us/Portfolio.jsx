@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Img2 from "../../../public/about-us/Img2.png";
-import Img3 from "../../../public/about-us/Img3.png";
-import Img4 from "../../../public/about-us/Img4.png";
-import Img5 from "../../../public/about-us/Img5.png";
-import Img6 from "../../../public/about-us/Img6.png";
-import Img7 from "../../../public/about-us/Img7.png";
-import Invention from "../../../public/about-us/invention.png";
+import Img2 from "../../../public/about-us/Img2.webp";
+import Img3 from "../../../public/about-us/Img3.webp";
+import Img4 from "../../../public/about-us/Img4.webp";
+import Img5 from "../../../public/about-us/Img5.webp";
+import Img6 from "../../../public/about-us/Img6.webp";
+import Img7 from "../../../public/about-us/Img7.webp";
+import Invention from "../../../public/about-us/invention.webp";
 import float from "../../../public/about-us/floating.gif";
 
 export default function Portfolio() {

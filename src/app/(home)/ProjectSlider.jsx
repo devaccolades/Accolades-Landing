@@ -8,10 +8,10 @@ import "swiper/css/navigation";
 import Image from "next/image";
 import topline from "../../../public/home/top-line.svg";
 
-import alappat from "../../../public/home/alappat.png";
-import family from "../../../public/home/family.png";
-import niahara from "../../../public/home/nihara.png";
-import silk from "../../../public/home/silk_galeria.png";
+import alappat from "../../../public/home/alappat.webp";
+import family from "../../../public/home/family.webp";
+import niahara from "../../../public/home/nihara.webp";
+import silk from "../../../public/home/silk_galeria.webp";
 import fut from "../../../public/creative/futura04-min.jpg";
 import cure from "../../../public/creative/branding/curegarden 05 copy-min (1).jpg";
 

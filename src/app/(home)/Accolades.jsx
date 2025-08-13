@@ -2,8 +2,8 @@
 import { motion } from "framer-motion"
 import React from "react";
 import Image from "next/image";
-import stack from "../../../public/home/1133de05fd2a190083088cb835978a45d95b9e4e.png";
-import bottom from "../../../public/home/bottom-line.svg";
+import stack from "../../../public/home/1133de05fd2a190083088cb835978a45d95b9e4e.webp";
+import bottom from "../../../public/home/bottom-line.webp";
 
 const Accolades = () => {
   return (

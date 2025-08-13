@@ -3,9 +3,9 @@ import { motion } from "framer-motion"
 import React from "react";
 import float from "../../../public/home/floating.gif";
 import Image from "next/image";
-import digital from "../../../public/home/Frame 1171275626.svg";
-import creative from "../../../public/home/Vector (1).svg";
-import web from "../../../public/home/Frame 1171275625.svg";
+import digital from "../../../public/home/Frame 1171275626.webp";
+import creative from "../../../public/home/Vector (1).webp";
+import web from "../../../public/home/Frame 1171275625.webp";
 
 const services = [
   {

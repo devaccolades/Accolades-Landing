@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import logo from "../../public/accolades_logo.svg";
+import logo from "../../public/accolades_logo.webp";
 
 import {
   FaBars,

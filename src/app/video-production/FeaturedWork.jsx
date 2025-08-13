@@ -14,12 +14,12 @@ import "swiper/css/pagination";
 // import feVid3 from "../../../public/videos/featuredWorks/fe3.mp4";
 
 // image import
-import feI1 from "../../../public/videos/featuredWorks/feI1.png";
-import feI2 from "../../../public/videos/featuredWorks/feI2.png";
+import feI1 from "../../../public/videos/featuredWorks/feI1.webp";
+import feI2 from "../../../public/videos/featuredWorks/feI2.webp";
 import feI3 from "../../../public/videos/featuredWorks/feI3.png";
 
 // Images
-import play from "../../../public/images/play-circle.svg";
+import play from "../../../public/images/play-circle.webp";
 import { BASE_URL, getVideoCategories } from "../Server";
 
 const containerVariants = {

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Pagination } from "swiper/modules";
-import play from "../../../public/images/play-circle.svg";
+import play from "../../../public/images/play-circle.webp";
 import c1 from "../../../public/images/client1.png";
 import c2 from "../../../public/images/client2.png";
 import national from "../../../public/images/national.png";
@@ -14,16 +14,10 @@ import { motion } from "framer-motion";
 
 import { BASE_URL } from "../Server";
 
-// Video imports
-// import feVid from "../../../public/videos/featuredWorks/fe1.mp4";
-// import feVid2 from "../../../public/videos/featuredWorks/fe2.mp4";
-// import feVid3 from "../../../public/videos/featuredWorks/fe3.mp4";
-
-// image import
-import feI1 from "../../../public/videos/featuredWorks/feI1.png";
-import feI2 from "../../../public/videos/featuredWorks/feI2.png";
+import feI1 from "../../../public/videos/featuredWorks/feI1.webp";
+import feI2 from "../../../public/videos/featuredWorks/feI2.webp";
 import feI3 from "../../../public/videos/featuredWorks/feI3.png";
-import avathar from "../../../public/videos/avathar.png";
+import avathar from "../../../public/videos/avathar.webp";
 
 const containerVariants = {
   hidden: {},

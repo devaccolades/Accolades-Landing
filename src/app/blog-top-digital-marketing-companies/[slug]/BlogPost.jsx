@@ -11,15 +11,15 @@ import {
   Link2,
 } from "lucide-react";
 import Image from "next/image";
-import Img17 from "../../../../public/blog/img17.png";
-import Img18 from "../../../../public/blog/img18.png";
-import Img19 from "../../../../public/blog/img19.png";
-import Img20 from "../../../../public/blog/img20.png";
-import Img21 from "../../../../public/blog/img21.png";
-import Icon1 from "../../../../public/blog/icon1.svg";
-import Icon2 from "../../../../public/blog/icon2.svg";
-import Icon3 from "../../../../public/blog/icon3.svg";
-import Icon4 from "../../../../public/blog/icon4.svg";
+import Img17 from "../../../../public/blog/img17.webp";
+import Img18 from "../../../../public/blog/img18.webp";
+import Img19 from "../../../../public/blog/img19.webp";
+import Img20 from "../../../../public/blog/img20.webp";
+import Img21 from "../../../../public/blog/img21.webp";
+import Icon1 from "../../../../public/blog/icon1.webp";
+import Icon2 from "../../../../public/blog/icon2.webp";
+import Icon3 from "../../../../public/blog/icon3.webp";
+import Icon4 from "../../../../public/blog/icon4.webp";
 
 export default function BlogPost({ data,category }) {
   // console.log(category)

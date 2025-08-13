@@ -19,7 +19,7 @@ const Herosection = ({ main_title, title, subtitle, button_text, image }) => {
         <motion.div
           className="flex-1 p-4  md:p-6 bg-white rounded-3xl shadow-md"
           initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
           // transition={{ duration: 0.3 }}
           
         >
@@ -39,7 +39,7 @@ const Herosection = ({ main_title, title, subtitle, button_text, image }) => {
         <motion.div
           className="flex-1"
           initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           
         >

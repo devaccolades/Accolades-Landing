@@ -20,7 +20,7 @@ const Projects = () => {
         </div>
       </div>
       <div className="w-full">
-        <p className="text-[16px] md:text-[20px] xl:text-[28px]  font-mont font-normal leading-[156%]">
+        <p className="text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px]  font-mont font-normal leading-[156%]">
           Discover our latest work, where creativity meets strategy to deliver
           exceptional results. Each project reflects our dedication to helping
           brands thrive through innovative digital solutions.

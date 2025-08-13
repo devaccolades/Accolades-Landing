@@ -3,8 +3,8 @@ import { motion, useMotionValue, useTransform, animate, useInView } from "framer
 import { useRef, useEffect } from "react";
 import Image from "next/image";
 
-import cover from "../../../public/home/Line 1.svg";
-import line from "../../../public/Line 1 (2).svg";
+import cover from "../../../public/home/Line 1.webp";
+import line from "../../../public/Line 1 (2).webp";
 
 
 function Counter({ from, to, duration = 2 }) {

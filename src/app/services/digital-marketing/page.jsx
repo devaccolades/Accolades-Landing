@@ -6,7 +6,7 @@ import Tools from "./Tools";
 import WhyChoose from "./WhyChoose";
 import OurClients from "./OurClients";
 import Footer from "@/component/Footer";
-import { BASE_URL, getSeo } from "../Server";
+import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
 

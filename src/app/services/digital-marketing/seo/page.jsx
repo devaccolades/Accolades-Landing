@@ -3,7 +3,7 @@ import HeroSection from "./HeroSection";
 import Process from "./Process";
 import Types from "./Types";
 import Footer from "@/component/Footer";
-import { BASE_URL, getSeo } from "./Server";
+import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
 

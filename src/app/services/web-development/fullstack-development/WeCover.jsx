@@ -15,6 +15,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { motion } from "framer-motion";
 
 
 // Tabs and Technologies Data.
@@ -91,7 +92,7 @@ export default function WhatWeCover() {
 
     return (
         // <section className=" py-6 px-4 md:px-8 lg:px-20">
-         <section className=" containers">
+        <section className=" containers">
             {/* What We Cover Section */}
             <div className="max-w-7xl mx-auto mb-8 bg-white px-2 md:px-4  lg:px-8 py-6 md:py-4  lg:py-8 rounded-2xl shadow-lg">
                 <h2 className="text-[20px] md:text-2xl font-bold font-mont text-[#1eb2a6] mb-4 md:mb-6">What We Cover</h2>
@@ -103,15 +104,15 @@ export default function WhatWeCover() {
                             key={tab.value}
                             onClick={() => setSelectedTab(tab.value)}
                             className={`px-4 py-2 rounded-full text-[12px] md:text-[14px] font-mont font-semibold border transition whitespace-nowrap ${selectedTab === tab.value
-                                    ? "bg-[#1eb2a6] text-white"
-                                    : "text-[#1eb2a6] border-[#1eb2a6]"
+                                ? "bg-[#1eb2a6] text-white"
+                                : "text-[#1eb2a6] border-[#1eb2a6]"
                                 }`}
                         >
                             {tab.label}
                         </button>
                     ))}
                 </div>
-                
+
 
                 {/* Tech Logos */}
                 <Swiper
@@ -148,15 +149,46 @@ export default function WhatWeCover() {
 
                 {/* Description */}
                 <p className="text-gray-600 font-mont text-[13px] md:text-[14px] leading-relaxed mt-4">
-                    We build powerful apps using React.js and Next.js for fast and dynamic frontends. 
-                    Our backend stack includes Python and Django, trusted for speed and security. 
-                    We work with PostgreSQL and other databases to manage data with ease. Every layer 
+                    We build powerful apps using React.js and Next.js for fast and dynamic frontends.
+                    Our backend stack includes Python and Django, trusted for speed and security.
+                    We work with PostgreSQL and other databases to manage data with ease. Every layer
                     is built to scale, load fast, and keep your data safe.
                 </p>
             </div>
 
             {/* Why Choose Our Stack */}
+
             <div className="max-w-7xl mx-auto">
+                <h2 className="text-[20px] md:text-2xl font-mont font-bold text-[#1eb2a6] mb-2 md:mb-6 lg:mb-10">
+                    Why Choose Our Stack
+                </h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 lg::gap-6">
+                    {stackFeatures.map((feature, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.6,
+                                delay: index * 0.2,
+                                ease: "easeOut",
+                            }}
+                            viewport={{ once: true, amount: 0.4 }}
+                            className="bg-white p-4 lg:p-6 rounded-2xl shadow-md text-center"
+                        >
+                            <div className="flex items-center justify-center gap-x-2 mb-2">
+                                <div className="text-2xl">{feature.icon}</div>
+                                <h3 className="text-[#1eb2a6] font-mont font-semibold text-[16px] lg:text-lg">
+                                    {feature.title}
+                                </h3>
+                            </div>
+                            <p className="text-gray-600 font-mont text-[13px] lg:text-sm">{feature.description}</p>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+            {/* <div className="max-w-7xl mx-auto">
                 <h2 className="text-[20px] md:text-2xl font-mont font-bold text-[#1eb2a6] mb-2 md:mb-6 lg:mb-10">
                     Why Choose Our Stack
                 </h2>
@@ -177,7 +209,7 @@ export default function WhatWeCover() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </section>
     );
 }

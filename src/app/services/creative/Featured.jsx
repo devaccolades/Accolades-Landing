@@ -5,13 +5,13 @@ import VideoSlider from "./VideoSlider";
 import shade from "../../../../public/creative/Vector (2).svg";
 import Image from "next/image";
 
-import p1 from "../../../../public/creative/2-7-25 copy-min.jpg";
-import p2 from "../../../../public/creative/22-5-25 copy-min.jpg";
-import p3 from "../../../../public/creative/24-5-25 copy-min.jpg";
-import p4 from "../../../../public/creative/arya bhangi 7-7-25-min.jpg";
-import p5 from "../../../../public/creative/corel1 copy-min.jpg";
-import p6 from "../../../../public/creative/curegarden 05 copy-min.jpg";
-import p7 from "../../../../public/creative/futura 07  bali copy-min.jpg";
+import p1 from "../../../../public/creative/2-7-25 copy-min.webp";
+import p2 from "../../../../public/creative/22-5-25 copy-min.webp";
+import p3 from "../../../../public/creative/24-5-25 copy-min.webp";
+import p4 from "../../../../public/creative/arya bhangi 7-7-25-min.webp";
+import p5 from "../../../../public/creative/corel1 copy-min.webp";
+import p6 from "../../../../public/creative/curegarden 05 copy-min.webp";
+import p7 from "../../../../public/creative/futura 07  bali copy-min.webp";
 
 const categories = ["Branding & Graphics", "Motion & Video"];
 

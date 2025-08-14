@@ -8,19 +8,19 @@ import React, { useState } from "react";
 // import niahara from "../../../../../public/home/nihara.png";
 // import silk from "../../../../../public/home/silk_galeria.png";
 
-import pack1 from "../../../../../public/creative/branding/1.1 (1)-min.jpg";
-import pack2 from "../../../../../public/creative/branding/Mockup_002-min.jpg";
-import pack3 from "../../../../../public/creative/branding/Poster02-min.jpg";
+import pack1 from "../../../../../public/creative/branding/1.1 (1)-min.webp";
+import pack2 from "../../../../../public/creative/branding/Mockup_002-min.webp";
+import pack3 from "../../../../../public/creative/branding/Poster02-min.webp";
 import pack4 from "../../../../../public/creative/branding/Black papper 150_11zon.webp";
 import pack5 from "../../../../../public/creative/branding/GARAM MASALA 100g-min_11zon.webp";
 import pack6 from "../../../../../public/creative/branding/SAMABAR POWDER 100g_11zon.webp";
 
-import brand1 from "../../../../../public/creative/branding/01 (1)-min.jpg";
-import brand2 from "../../../../../public/creative/branding/01-min.jpg";
-import brand3 from "../../../../../public/creative/branding/Square_Book_Mockup_1 copy-min.jpg";
+import brand1 from "../../../../../public/creative/branding/01 (1)-min.webp";
+import brand2 from "../../../../../public/creative/branding/01-min.webp";
+import brand3 from "../../../../../public/creative/branding/Square_Book_Mockup_1 copy-min.webp";
 
-import logo1 from "../../../../../public/creative/branding/0222-min.jpg";
-import logo2 from "../../../../../public/creative/branding/Asset 1.png";
+import logo1 from "../../../../../public/creative/branding/0222-min.webp";
+import logo2 from "../../../../../public/creative/branding/Asset 1.webp";
 
 const logo = [
   { id: 1, src: logo1, alt: "logo" },

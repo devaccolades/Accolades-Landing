@@ -35,7 +35,7 @@ export async function POST(req) {
 
     const mailOptions = {
       from: `"Accolades Careers" <${process.env.SMTP_EMAIL}>`,
-      to: "manjimanm001@gmail.com",
+      to: "career.accolades@gmail.com",
       subject: "New Job Application",
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px;">

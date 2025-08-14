@@ -29,7 +29,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              // viewport={{ once: true }}
             >
               <div className="bg-white rounded-[30px] px-6 md:px-8 lg:px-10 py-6 md:py-8 lg:py-10 mt-6">
                 <p className="font-mont font-normal md:text-[15px] text-[10px] leading-[130%] -tracking-[2%] text-[#333333] uppercase">

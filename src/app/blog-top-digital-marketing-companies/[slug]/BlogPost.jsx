@@ -11,8 +11,8 @@ import {
   Link2,
 } from "lucide-react";
 import Image from "next/image";
-import Img17 from "../../../../public/blog/img17.webp";
-import Img18 from "../../../../public/blog/img18.webp";
+// import Img17 from "../../../../public/blog/img17.webp";
+// import Img18 from "../../../../public/blog/img18.webp";
 import Img19 from "../../../../public/blog/img19.webp";
 import Img20 from "../../../../public/blog/img20.webp";
 import Img21 from "../../../../public/blog/img21.webp";

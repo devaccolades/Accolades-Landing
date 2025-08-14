@@ -73,7 +73,7 @@ const offer = {
   services: services,
 };
 const tech = {
-  title: "Tools & Tech We Use",
+  title: "Tools & Platforms We Use",
   desc: "To ensure peak performance and precise tracking, we leverage a suite of industry-leading tools. From audience targeting and analytics with Meta Business Suite and Google Ads, to conversion tracking with Google Tag Manager and behavior insights via Hotjar — our tech stack enables real-time data optimization for better campaign results.",
   services: tools,
 };

@@ -94,7 +94,7 @@ export default function WhatWeCover() {
         // <section className=" py-6 px-4 md:px-8 lg:px-20">
         <section className=" containers">
             {/* What We Cover Section */}
-            <div className="max-w-7xl mx-auto mb-8 bg-white px-2 md:px-4  lg:px-8 py-6 md:py-4  lg:py-8 rounded-2xl shadow-lg">
+            <div className=" mx-auto mb-8 bg-white px-2 md:px-4  lg:px-8 py-6 md:py-4  lg:py-8 rounded-2xl shadow-lg">
                 <h2 className="text-[20px] md:text-2xl font-bold font-mont text-[#1eb2a6] mb-4 md:mb-6">What We Cover</h2>
 
                 {/* Tabs */}
@@ -152,7 +152,7 @@ export default function WhatWeCover() {
 
             {/* Why Choose Our Stack */}
 
-            <div className="max-w-7xl mx-auto">
+            <div className=" mx-auto">
                 <h2 className="text-[20px] md:text-2xl font-mont font-bold text-[#1eb2a6] mb-2 md:mb-6 lg:mb-10">
                     Why Choose Our Stack
                 </h2>

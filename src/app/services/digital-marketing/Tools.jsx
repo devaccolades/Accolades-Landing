@@ -1,6 +1,7 @@
 import React from "react";
 import adobeE from "../../../../public/services/metaa.png";
-import adobeC from "../../../../public/services/gads.png";
+import adobeC from "../../../../public/services/g-ads.jpg";
+import lin from "../../../../public/services/link.png";
 import adobeP from "../../../../public/creative/Adobe_Premiere_Pro_CC_icon.svg 1.webp";
 import canva from "../../../../public/creative/Canva-New-Logo-1440x810 1.webp";
 import pr from "../../../../public/creative/Adobe_Premiere_Pro_CC_icon.svg 2.svg";
@@ -10,6 +11,7 @@ import Image from "next/image";
 const tools = [
   { name: "Meta Ads", icon: adobeE },
   { name: "Google Ads", icon: adobeC },
+  {name: "LinkedIn Ads",icon: lin,},
   //   { name: "Canva Pro", icon: canva },
   //   { name: "Premiere Pro", icon: adobeP },
   //   { name: "Adobe Illustrator", icon: illus },
@@ -42,13 +44,13 @@ const Tools = () => {
                   loading="lazy"
                 />
                 <p className="font-semibold text-[12px] md:text-[14px]">
-                  {/* {tool.name} */}
+                  {tool.name}
                 </p>
               </div>
             ))}
           </div>
 
-          <p className="text-gray-700 text-sm max-w-3xl mx-auto">
+          <p className="text-gray-700 text-sm  mx-auto">
             We leverage industry-leading tools to ensure every digital marketing
             campaign is efficient, targeted, and result-oriented. Our team uses
             Google Ads to run highly optimized search and display campaigns,

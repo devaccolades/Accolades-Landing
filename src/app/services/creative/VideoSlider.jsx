@@ -8,11 +8,26 @@ import { Autoplay } from "swiper/modules";
 import { FaPlay, FaPause } from "react-icons/fa";
 
 const videos = [
-  "/creative/WhatsApp Video 2025-07-30 at 11.03.55 AM (1).mp4",
-  "/creative/WhatsApp Video 2025-07-30 at 11.03.55 AM.mp4",
-  "/creative/WhatsApp Video 2025-07-30 at 11.03.56 AM.mp4",
-  "/creative/WhatsApp Video 2025-07-30 at 1.05.52 PM.mp4",
-  "/creative/WhatsApp Video 2025-07-30 at 1.01.36 PM.mp4",
+  {
+    video: "/creative/vid1.mp4",
+    poster: "/creative/pos1.webp",
+  },
+  {
+    video: "/creative/vid2.mp4",
+    poster: "/creative/pos2.webp",
+  },
+  {
+    video: "/creative/vid3.mp4",
+    poster: "/creative/pos3.webp",
+  },
+  {
+    video: "/creative/vid4.mp4",
+    poster: "/creative/pos4.webp",
+  },
+  {
+    video: "/creative/vid5.mp4",
+    poster: "/creative/pos5.webp",
+  },
 ];
 
 const VideoSlider = () => {
@@ -22,7 +37,6 @@ const VideoSlider = () => {
 
   const togglePlay = (index) => {
     const currentVideo = videoRefs.current[index];
-
     if (!currentVideo) return;
 
     // Pause all other videos
@@ -76,9 +90,11 @@ const VideoSlider = () => {
               >
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
-                  src={src}
+                  src={src.video}
                   loop
                   muted
+                  preload="none"
+                  poster={src.poster}
                   playsInline
                   className="w-full h-full object-contain bg-black"
                 />

@@ -2,7 +2,7 @@
 import Button from "@/component/Button";
 import React, { useEffect, useRef, useState } from "react";
 import phone from "../../../public/images/phone.webp";
-import laptop from "../../../public/images/MacBook Pro 14.webp";
+import laptop from "../../../public/images/MacBook.webp";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, AnimatePresence } from "framer-motion";

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Pagination } from "swiper/modules";
-import play from "../../../public/images/play-circle.webp";
+import play from "../../../public/images/play-circle.svg";
 import c1 from "../../../public/images/client1.png";
 import c2 from "../../../public/images/client2.png";
 import national from "../../../public/images/national.png";
@@ -16,8 +16,8 @@ import { BASE_URL } from "../Server";
 
 import feI1 from "../../../public/videos/featuredWorks/feI1.webp";
 import feI2 from "../../../public/videos/featuredWorks/feI2.webp";
-import feI3 from "../../../public/videos/featuredWorks/feI3.png";
-import avathar from "../../../public/videos/avathar.webp";
+// import feI3 from "../../../public/videos/featuredWorks/feI3.png";
+import avathar from "../../../public/videos/avathar.png";
 
 const containerVariants = {
   hidden: {},
@@ -183,7 +183,7 @@ const WhatOurClientsSay = ({ data }) => {
                     <div className="flex flex-col items-start">
                       {item.data.image && (
                         <Image
-                          src={item.data.logo || ""}
+                          src={item.data.logo || avathar}
                           alt="logo"
                           width={80}
                           height={80}
@@ -196,7 +196,7 @@ const WhatOurClientsSay = ({ data }) => {
                     </div>
                     <div className="flex items-center gap-3 mt-4">
                       <Image
-                        src={item.data.image || avathar}
+                        src={item.data.image  || "" }
                         alt={item.data.name}
                         width={40}
                         height={40}

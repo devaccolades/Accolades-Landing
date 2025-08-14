@@ -2,11 +2,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import adobeE from "../../../../public/creative/Adobe_After_Effects_CC_icon.svg 1.png";
-import adobeC from "../../../../public/creative/Adobe_Creative_Cloud_rainbow_icon.svg 1.png";
-import adobeP from "../../../../public/creative/Adobe_Premiere_Pro_CC_icon.svg 1.png";
-import canva from "../../../../public/creative/Canva-New-Logo-1440x810 1.png";
-import illus from "../../../../public/creative/c3e0457062b464bcdaa727faec5642528bcb2fb7.png";
+import adobeE from "../../../../public/creative/Adobe_After_Effects_CC_icon.svg 1.webp";
+import adobeC from "../../../../public/creative/Adobe_Creative_Cloud_rainbow_icon.svg 1.webp";
+import adobeP from "../../../../public/creative/Adobe_Premiere_Pro_CC_icon.svg 1.webp";
+import canva from "../../../../public/creative/Canva-New-Logo-1440x810 1.webp";
+import illus from "../../../../public/creative/c3e0457062b464bcdaa727faec5642528bcb2fb7.webp";
 import Photoshop from "../../../../public/graphics-motion/4.svg";
 
 const tools = [

@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import Image from "next/image";
@@ -39,17 +37,17 @@ export default function Types() {
             </h1>
             <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
               On-page SEO is essential for a winning digital marketing strategy.
-              It involves optimizing individual web pages to rank higher in search
-              engine results and drive more relevant traffic. At Accolades
-              Integrated, we focus on key on-page SEO techniques like keyword
-              optimization, content enhancement, meta tags, and URL structure
-              improvements. By ensuring that content is relevant, well-organized,
-              and aligned with search intent, we help businesses improve their
-              search engine rankings. Our on-page SEO services also include
-              optimizing images, internal linking, and mobile responsiveness,
-              ensuring that your website provides a seamless experience for users.
-              Let us help you improve visibility and reach your target audience
-              effectively.
+              It involves optimizing individual web pages to rank higher in
+              search engine results and drive more relevant traffic. At
+              Accolades Integrated, we focus on key on-page SEO techniques like
+              keyword optimization, content enhancement, meta tags, and URL
+              structure improvements. By ensuring that content is relevant,
+              well-organized, and aligned with search intent, we help businesses
+              improve their search engine rankings. Our on-page SEO services
+              also include optimizing images, internal linking, and mobile
+              responsiveness, ensuring that your website provides a seamless
+              experience for users. Let us help you improve visibility and reach
+              your target audience effectively.
             </p>
           </motion.div>
 
@@ -64,6 +62,8 @@ export default function Types() {
               src={Frame1}
               alt="frame1"
               className="lg:w-[500px] md:w-[300px] md:h-[300px] h-[200px]"
+              priority={false}
+              loading="lazy"
             />
           </motion.div>
         </div>
@@ -95,19 +95,19 @@ export default function Types() {
               Off-page SEO
             </h1>
             <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
-              Off-page SEO enhances your website’s authority and reputation using
-              external strategies. It includes building high-quality backlinks,
-              social media marketing, and online brand mentions. At Accolades
-              Integrated, we employ a comprehensive approach to off-page SEO,
-              focusing on strategies that increase your site’s trustworthiness
-              and relevance. By earning backlinks from reputable sources and
-              engaging with influencers, we help elevate your website’s authority
-              in search engine rankings. Our off-page strategies also include
-              local SEO techniques, reviews, and directory listings, ensuring
-              your business gains visibility and recognition. This holistic
-              approach boosts your online presence, enhances credibility, and
-              drives more targeted traffic. We’ll assist you in establishing a
-              powerful online presence.
+              Off-page SEO enhances your website’s authority and reputation
+              using external strategies. It includes building high-quality
+              backlinks, social media marketing, and online brand mentions. At
+              Accolades Integrated, we employ a comprehensive approach to
+              off-page SEO, focusing on strategies that increase your site’s
+              trustworthiness and relevance. By earning backlinks from reputable
+              sources and engaging with influencers, we help elevate your
+              website’s authority in search engine rankings. Our off-page
+              strategies also include local SEO techniques, reviews, and
+              directory listings, ensuring your business gains visibility and
+              recognition. This holistic approach boosts your online presence,
+              enhances credibility, and drives more targeted traffic. We’ll
+              assist you in establishing a powerful online presence.
             </p>
           </motion.div>
         </div>

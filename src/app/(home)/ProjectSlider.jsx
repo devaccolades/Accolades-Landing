@@ -23,8 +23,8 @@ import p10 from "../../../public/home/10-min.png";
 
 // import niahara from "../../../public/home/nihara.webp";
 // import silk from "../../../public/home/silk_galeria.webp";
-import fut from "../../../public/creative/futura04-min.jpg";
-import cure from "../../../public/creative/branding/curegarden 05 copy-min (1).jpg";
+// import fut from "../../../public/creative/futura04-min.jpg";
+// import cure from "../../../public/creative/branding/curegarden 05 copy-min (1).jpg";
 import { fromJSON } from "postcss";
 
 const fallbackImages = [

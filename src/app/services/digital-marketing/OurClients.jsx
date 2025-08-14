@@ -29,7 +29,6 @@ import cl18 from "../../../../public/mioc1.png";
 import cl19 from "../../../../public/cine1.png";
 import cl20 from "../../../../public/clas.png";
 
-
 const logos = [
   { id: 1, src: cl1, alt: "Client 1" },
   { id: 2, src: cl2, alt: "Client 2" },
@@ -58,8 +57,8 @@ const OurClients = () => {
     <>
       <section className="py-10  ">
         <h2 className="text-center text-3xl sm:text-4xl font-mont font-bold text-[#0199A4] mb-5">
-        Our Clients
-      </h2>
+          Our Clients
+        </h2>
 
         <Swiper
           loop={true}
@@ -103,6 +102,8 @@ const OurClients = () => {
                 <Image
                   src={logo.src}
                   alt={logo.alt}
+                  priority={false}
+                  loading="lazy"
                   fill
                   className="object-cover"
                 />

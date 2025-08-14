@@ -7,7 +7,6 @@
 // import six from "../../../../../public/google/Remarketing-Ad.svg";
 // import Image from "next/image";
 
-
 // const adTypes = [
 //   {
 //     icon: one,
@@ -90,7 +89,6 @@
 
 // export default Cards;
 
-
 "use client";
 
 import React from "react";
@@ -172,6 +170,8 @@ const Cards = () => {
                   width={100}
                   height={100}
                   className="h-[80px] w-auto pb-3 mb-3"
+                  priority={false}
+                  loading="lazy"
                 />
               </div>
               <h2 className="text-[#3FB4BA] text-xl font-semibold text-center mb-2 mt-1">

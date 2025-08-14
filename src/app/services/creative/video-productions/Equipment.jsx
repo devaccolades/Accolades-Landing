@@ -5,9 +5,9 @@ import davinci from "../../../../../public/video-production/Tech1.svg";
 import adobe from "../../../../../public/video-production/Tech2.svg";
 import afterEffects from "../../../../../public/video-production/Tech3.svg";
 import canva from "../../../../../public/video-production/Tech4.svg";
-import illus from "../../../../../public/creative/c3e0457062b464bcdaa727faec5642528bcb2fb7.png";
+import illus from "../../../../../public/creative/c3e0457062b464bcdaa727faec5642528bcb2fb7.webp";
 import Photoshop from "../../../../../public/graphics-motion/4.svg";
-import adobeP from "../../../../../public/creative/Adobe_Premiere_Pro_CC_icon.svg 1.png";
+import adobeP from "../../../../../public/creative/Adobe_Premiere_Pro_CC_icon.svg 1.webp";
 // import Invention from "../../../../../public/video-production/invention.png";
 
 export default function Equipment() {

@@ -18,7 +18,7 @@ function Digital() {
           />
         </div>
         <div className="w-full flex flex-col md:gap-[40px] lg:gap-[60px] bg-white/60 p-5 rounded-[30px]">
-          <p className="font-mont text-[36px] md:text-[50px] lg:text-[64px] font-semibold leading-[110%] text-center text-[#3FB4BA] mt-[17px] md:mt-[35px]">
+          <p className="font-mont text-[28px] md:text-[35px] lg:text-[75px] font-semibold leading-[110%] text-center text-[#3FB4BA] mt-[17px] md:mt-[35px]">
             Digital Marketing
           </p>
           <div className="flex flex-col md:flex-row justify-around items-center gap-4 mt-[34px] md:mt-[20px] ">
@@ -33,7 +33,7 @@ function Digital() {
             </div>
             <div className="flex flex-col gap-2 md:gap-1 lg:gap-4 p-[10px] md:p-[15px] lg:p-[30px] bg-white rounded-[30px] max-w-[338px] lg:max-w-[608px]">
               <h1 className="text-[#3FB4BA] text-[28px] md:text-[30px] font-semibold lg:text-[40px] font-mont leading-[100%]">
-                Google Ads
+                Search Engine Marketing
               </h1>
               <p className="max-w-md text-[12px] md:text-[14px] lg:text-[18px] md:leading-[150%] font-mont ">
                 It’s the prevalent method of strategically placing online
@@ -43,7 +43,7 @@ function Digital() {
                 that instantly appear above the organic listing is called Search
                 Ad.
               </p>
-              <Link href={"/services/digital-marketing/google-ads"}>
+              <Link href={"/services/digital-marketing/search-engine-marketing"}>
                 <button className="bg-[#3FB4BA] px-[20px] py-[6px] lg:px-[40px] lg:py-[12px] text-white w-fit text-[12px] md:text-[14px] lg:text-[16px] font-mont rounded-[30px] font-semibold mt-[15px]">
                   see more
                 </button>

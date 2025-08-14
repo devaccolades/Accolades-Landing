@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-import logo from "../../public/accolades_logo.webp";
+import logo from "../../public/accolades_logo1.svg";
 // import cover from "../../public/Line 1 (1).svg";
 import cover from "../../public/Line 1.webp";
 import line from "../../public/Line 1 (3).webp";

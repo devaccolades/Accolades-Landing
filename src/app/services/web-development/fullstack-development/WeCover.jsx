@@ -114,38 +114,32 @@ export default function WhatWeCover() {
                 </div>
 
 
-                {/* Tech Logos */}
-                <Swiper
-                    modules={[Navigation, Pagination]}
-                    //   spaceBetween={2}
-                    slidesPerView={1.5}
-                    breakpoints={{
-                        640: { slidesPerView: 3 },
-                        768: { slidesPerView: 6 },
-                        1024: { slidesPerView: 8 },
-                    }}
-                    className="mb-6"
-                >
+
+
+
+                {/* Tech Logos as Grid */}
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 mb-6">
                     {techList
                         .filter((item) => item.type === selectedTab)
                         .map((tech, index) => (
-                            <SwiperSlide key={index}>
-                                <div className="flex flex-col items-center bg-white p-4 rounded-xl shadow-md h-full">
-                                    <Image
-                                        src={tech.logo}
-                                        alt={tech.title}
-                                        width={60}
-                                        height={60}
-                                        className="mb-2"
-                                    />
-                                    {/* <span className="text-[#1eb2a6] font-semibold">{tech.title}</span> */}
-                                    <span className="text-sm font-mont text-gray-800 font-medium">
-                                        {tech.title}
-                                    </span>
-                                </div>
-                            </SwiperSlide>
+                            <div
+                                key={index}
+                                className="flex flex-col items-center justify-center"
+                            >
+                                <Image
+                                    src={tech.logo}
+                                    alt={tech.title}
+                                    width={60}
+                                    height={60}
+                                    className="mb-2"
+                                />
+                                <span className="text-sm font-mont text-gray-800 font-medium">
+                                    {tech.title}
+                                </span>
+                            </div>
                         ))}
-                </Swiper>
+                </div>
+
 
                 {/* Description */}
                 <p className="text-gray-600 font-mont text-[13px] md:text-[14px] leading-relaxed mt-4">

@@ -33,7 +33,7 @@ const cards = [
     link: "/services/digital-marketing/content-marketing"
   },
   {
-    title: "Google Ads",
+    title: "Search Engine Marketing",
     image: gd,
     link: "/services/digital-marketing/google-ads"
   },

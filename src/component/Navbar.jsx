@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import logo from "../../public/accolades_logo.webp";
+import logo from "../../public/accolades_logo1.svg";
 
 import {
   FaBars,
@@ -16,7 +16,7 @@ import Link from "next/link";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
+  // { label: "Services", href: "/services" },
   { label: "About", href: "/about-us" },
   { label: "Contact", href: "/contact-us" },
   { label: "Careers", href: "/careers" },
@@ -25,11 +25,11 @@ const navItems = [
 
 const mobileNavLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
   { label: "About", href: "/about-us" },
   { label: "Blogs", href: "/blog-top-digital-marketing-companies" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact-us" },
+  { label: "Services", href: "/services" },
 ];
 
 const mobileServicePages = {
@@ -38,10 +38,10 @@ const mobileServicePages = {
       label: "Performance Marketing",
       href: "/services/digital-marketing/performance-marketing",
     },
-    { label: "Google Ads", href: "/services/digital-marketing/google-ads" },
+    { label: "Search Engine Optimization", href: "/services/digital-marketing/seo" },
     {
-      label: "Search Engine Optimization",
-      href: "/services/digital-marketing/seo",
+      label: "Search Engine Marketing",
+      href: "/services/digital-marketing/search-engine-marketing",
     },
     {
       label: "Social Media Marketing",
@@ -107,7 +107,7 @@ const Navbar = () => {
           label: "Performance Marketing",
           href: "/services/digital-marketing/performance-marketing",
         },
-        { label: "Google Ads", href: "/services/digital-marketing/google-ads" },
+        { label: "Search Engine Marketing", href: "/services/digital-marketing/search-engine-marketing" },
         {
           label: "Search Engine Optimization",
           href: "/services/digital-marketing/seo",
@@ -258,12 +258,14 @@ const Navbar = () => {
               }}
             >
               {/* Main Services Label */}
+              <Link href={"/services"} passHref>
               <div className="cursor-pointer text-[#00777D] hover:text-[#005a5f] transition-all duration-300 select-none flex items-center gap-2 py-2 px-1 group">
                 <span className="text-sm xl:text-base whitespace-nowrap group-hover:font-medium transition-all duration-200">
                   Services
                 </span>
                 <FaChevronRight className="w-3 h-3 transition-all duration-300 group-hover:scale-110" />
               </div>
+              </Link>
 
               {/* First Level: Main Services Dropdown */}
               <div

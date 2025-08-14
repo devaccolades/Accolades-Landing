@@ -119,7 +119,7 @@ export default function HeroSection() {
         >
           {/* Content Card */}
           <motion.span 
-            className="bg-white md:p-8 p-6 rounded-xl shadow-md"
+            className="bg-white p-6 md:p-3 lg:p-4 xl:p-6 rounded-xl shadow-md"
             variants={cardVariants}
           >
             <motion.div
@@ -127,7 +127,7 @@ export default function HeroSection() {
             >
               {/* Main Title */}
               <motion.h2 
-                className="font-mont font-semibold xl:text-[42px] lg:text-[38px] md:text-[32px] text-[20px] leading-[110%] text-[#199eb8] md:mb-4 mb-2"
+                className="font-mont font-semibold xl:text-[38px] lg:text-[28px] md:text-[24px] text-[20px] leading-[110%] text-[#199eb8] md:mb-4 mb-2"
                 variants={textVariants}
               >
                 Videos That Captivate, Convert & Communicate

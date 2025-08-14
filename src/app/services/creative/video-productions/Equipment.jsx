@@ -12,9 +12,9 @@ import adobeP from "../../../../../public/creative/Adobe_Premiere_Pro_CC_icon.sv
 
 export default function Equipment() {
   const tools = [
-     { name: "Photoshop", icon: Photoshop },
-      { name: "Adobe Illustrator", icon: illus },
-        { name: "Premiere Pro", icon: adobeP },
+    { name: "Photoshop", icon: Photoshop },
+    { name: "Adobe Illustrator", icon: illus },
+    { name: "Premiere Pro", icon: adobeP },
     {
       name: "DaVinci Resolve",
       icon: davinci,

@@ -76,13 +76,13 @@ export default function Herosection() {
                 >
                   <FaFacebookF size={24} />
                 </a>
-                <a
+                {/* <a
                   href="#"
                   className="bg-white shadow-md rounded-full p-3 text-[#0C7479] hover:bg-teal-500 hover:text-white transition-all duration-300 ease-in-out"
                   aria-label="Twitter"
                 >
                   <FaXTwitter size={24} />
-                </a>
+                </a> */}
                 <a
                   href="https://www.instagram.com/accolades_integrated"
                   className="bg-white shadow-md rounded-full p-3 text-[#0C7479] hover:bg-teal-500 hover:text-white transition-all duration-300 ease-in-out"

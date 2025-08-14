@@ -166,7 +166,7 @@ export default function FullstackHero() {
 
   return (
     <div className="containers pt-20 pb-10">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto ">
         {/* Header */}
         <div className="bg-white rounded-[30px] py-6 px-4">
           <motion.h1

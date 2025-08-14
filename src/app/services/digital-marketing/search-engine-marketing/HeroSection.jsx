@@ -63,7 +63,7 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <section className="containers pt-[100px]">
-      <AnimatedPopTitle text={"Google Ads"} />
+      <AnimatedPopTitle text={"Search Engine Marketing"} />
 
       <div className="flex flex-col-reverse md:grid md:grid-cols-[55%_1fr] py-5 items-center gap-5">
 

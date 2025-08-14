@@ -1,6 +1,3 @@
-
-
-
 "use client";
 
 import React from "react";
@@ -54,7 +51,13 @@ const HeroSection = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
         >
-          <Image src={side} alt="side-image" className="w-full h-auto" />
+          <Image
+            src={side}
+            alt="side-image"
+            className="w-full h-auto"
+            priority={false}
+            loading="lazy"
+          />
         </motion.div>
       </div>
     </section>

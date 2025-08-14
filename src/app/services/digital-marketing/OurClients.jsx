@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/free-mode";
 import Image from "next/image";
-import bottom from "../../../../public/home/bottom-line.svg";
+// import bottom from "../../../../public/home/bottom-line.svg";
 
 import cl1 from "../../../../public/Group 207.png";
 import cl2 from "../../../../public/Group 208.png";

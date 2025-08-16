@@ -16,10 +16,12 @@ import "swiper/css/pagination";
 // image import
 import feI1 from "../../../public/videos/featuredWorks/feI1.webp";
 import feI2 from "../../../public/videos/featuredWorks/feI2.webp";
-import feI3 from "../../../public/videos/featuredWorks/feI3.png";
+import feI3 from "../../../public/videos/featuredWorks/thumb-1.jpeg";
+import feI4 from "../../../public/videos/featuredWorks/ma-th.png";
+// import feI3 from "../../../public/videos/featuredWorks/feI3.png";
 
 // Images
-import play from "../../../public/images/play-circle.webp";
+import play from "../../../public/images/play-circle.svg";
 import { BASE_URL, getVideoCategories } from "../Server";
 
 const containerVariants = {
@@ -42,17 +44,29 @@ const cardVariants = {
 };
 
 const featuredWorks = [
+  // {
+  //   client: "PRISM Trading",
+  //   getVideoCategories: "Testimonial Video",
+  //   image: feI1,
+  //   video: "/videos/featuredWorks/fe1.mp4",
+  // },
   {
-    client: "PRISM Trading",
+    client: "MASTREL",
     getVideoCategories: "Testimonial Video",
-    image: feI1,
-    video: "/videos/featuredWorks/fe1.mp4",
+    image: feI4,
+    video: "/videos/featuredWorks/Mastrel.mp4",
   },
+  // {
+  //   client: "Sky Line",
+  //   getVideoCategories: "Testimonial Video",
+  //   image: feI2,
+  //   video: "/videos/featuredWorks/fe2.mp4",
+  // },
   {
-    client: "Sky Line",
+    client: "Elements Of Cinema",
     getVideoCategories: "Testimonial Video",
-    image: feI2,
-    video: "/videos/featuredWorks/fe2.mp4",
+    image: feI3,
+    video: "/videos/featuredWorks/fet-1.mp4",
   },
   // {
   //   client: "National Builders",
@@ -147,7 +161,7 @@ const FeaturedWorks = ({ data }) => {
                     </div>
                     <div className="absolute bottom-4 left-4 text-white z-10">
                       <p className="font-medium">{work.client}</p>
-                      <p className="text-sm">{work.getVideoCategories}</p>
+                      {/* <p className="text-sm">{work.getVideoCategories}</p> */}
                     </div>
                   </>
                 )}

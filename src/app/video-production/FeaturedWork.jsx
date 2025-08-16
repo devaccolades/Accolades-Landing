@@ -17,7 +17,7 @@ import "swiper/css/pagination";
 import feI1 from "../../../public/videos/featuredWorks/feI1.webp";
 import feI2 from "../../../public/videos/featuredWorks/feI2.webp";
 import feI3 from "../../../public/videos/featuredWorks/thumb-1.jpeg";
-import feI4 from "../../../public/videos/featuredWorks/ax-th.jpeg";
+import feI4 from "../../../public/videos/featuredWorks/ma-th.png";
 // import feI3 from "../../../public/videos/featuredWorks/feI3.png";
 
 // Images
@@ -51,10 +51,10 @@ const featuredWorks = [
   //   video: "/videos/featuredWorks/fe1.mp4",
   // },
   {
-    client: "AXOR",
+    client: "MASTREL",
     getVideoCategories: "Testimonial Video",
     image: feI4,
-    video: "/videos/featuredWorks/AXOR.mp4",
+    video: "/videos/featuredWorks/Mastrel.mp4",
   },
   // {
   //   client: "Sky Line",
@@ -161,7 +161,7 @@ const FeaturedWorks = ({ data }) => {
                     </div>
                     <div className="absolute bottom-4 left-4 text-white z-10">
                       <p className="font-medium">{work.client}</p>
-                      <p className="text-sm">{work.getVideoCategories}</p>
+                      {/* <p className="text-sm">{work.getVideoCategories}</p> */}
                     </div>
                   </>
                 )}

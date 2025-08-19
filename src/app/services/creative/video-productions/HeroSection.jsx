@@ -95,10 +95,14 @@ export default function HeroSection() {
     }
   };
 
-  // Word-by-word animation for description
-  const wordVariants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.25 } },
+  // Paragraph animation (block, not word-by-word)
+  const paraVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" }
+    }
   };
 
   const description = "From product explainers to cinematic brand films — we shoot, edit, and deliver videos your audience will remember.";
@@ -122,9 +126,7 @@ export default function HeroSection() {
             className="bg-white p-6 md:p-3 lg:p-4 xl:p-6 rounded-xl shadow-md"
             variants={cardVariants}
           >
-            <motion.div
-              variants={textContainerVariants}
-            >
+            <motion.div variants={textContainerVariants}>
               {/* Main Title */}
               <motion.h2 
                 className="font-mont font-semibold xl:text-[38px] lg:text-[28px] md:text-[24px] text-[20px] leading-[110%] text-[#199eb8] md:mb-4 mb-2"
@@ -133,16 +135,12 @@ export default function HeroSection() {
                 Videos That Captivate, Convert & Communicate
               </motion.h2>
 
-              {/* Description with word-by-word animation */}
+              {/* Description as ONE block */}
               <motion.p 
-                className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify flex flex-wrap gap-[3px]"
-                variants={textContainerVariants}
+                className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify"
+                variants={paraVariants}
               >
-                {description.split(" ").map((word, i) => (
-                  <motion.span key={i} variants={wordVariants}>
-                    {word}
-                  </motion.span>
-                ))}
+                {description}
               </motion.p>
 
               {/* Button */}

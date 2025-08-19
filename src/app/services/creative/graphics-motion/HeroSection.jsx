@@ -11,16 +11,10 @@ const containerVariants = {
   show: { transition: { staggerChildren: 0.15 } },
 };
 
-// Fade-up for heading
+// Fade-up for heading & paragraph
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
-// Word-by-word animation for paragraph
-const wordVariants = {
-  hidden: { opacity: 0, y: 8 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.25 } },
 };
 
 // Button animation
@@ -53,6 +47,7 @@ export default function HeroSection() {
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
           >
+            {/* Heading */}
             <motion.h2
               className="font-mont font-semibold xl:text-[42px] lg:text-[38px] md:text-[32px] text-[26px] leading-[110%] text-[#199eb8] md:mb-4 mb-2"
               variants={fadeUp}
@@ -60,17 +55,15 @@ export default function HeroSection() {
               Static or Moving — We Design for Impact
             </motion.h2>
 
+            {/* Paragraph (fade-up as whole block) */}
             <motion.p
-              className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify flex flex-wrap gap-[4px]"
-              variants={containerVariants}
+              className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify"
+              variants={fadeUp}
             >
-              {paragraphText.split(" ").map((word, i) => (
-                <motion.span key={i} variants={wordVariants}>
-                  {word}
-                </motion.span>
-              ))}
+              {paragraphText}
             </motion.p>
 
+            {/* Button */}
             <Link href="/contact-us">
               <motion.button
                 className="font-mont font-semibold lg:text-[14px] text-[12px] leading-[100%] text-[#FFFFFF] bg-[#3FB4BA] px-6 py-3 rounded-[25px] mt-2"
@@ -81,6 +74,7 @@ export default function HeroSection() {
             </Link>
           </motion.span>
 
+          {/* Image */}
           <motion.div
             className="flex justify-center lg:justify-end w-full h-full"
             variants={imageVariants}

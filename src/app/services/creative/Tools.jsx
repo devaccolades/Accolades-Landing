@@ -24,12 +24,22 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.95 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1, 
+    transition: { duration: 0.5, ease: "easeOut" } 
+  },
 };
 
-const wordVariants = {
-  hidden: { opacity: 0, y: 10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.25 } },
+// Paragraph animation (whole block instead of word-by-word)
+const paragraphVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.8, ease: "easeOut" } 
+  },
 };
 
 const paragraph = `Our team leverages industry-leading tools to bring creativity and precision to every project. From motion graphics with After Effects to design and layout with Illustrator and Canva Pro, we ensure every visual asset meets the highest standards. These platforms empower us to craft compelling content, streamline collaboration, and deliver impactful results across digital and print media.`;
@@ -59,19 +69,15 @@ const Tools = () => {
             ))}
           </motion.div>
 
-          {/* Animated Paragraph Word-by-Word */}
+          {/* Animated Paragraph (Single Block) */}
           <motion.p
-            className="text-gray-700 text-sm max-w-3xl mx-auto flex flex-wrap gap-[4px] justify-center"
-            variants={containerVariants}
+            className="text-gray-700 text-sm max-w-3xl mx-auto"
+            variants={paragraphVariants}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
           >
-            {paragraph.split(" ").map((word, i) => (
-              <motion.span key={i} variants={wordVariants}>
-                {word}
-              </motion.span>
-            ))}
+            {paragraph}
           </motion.p>
         </div>
       </section>

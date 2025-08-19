@@ -1,4 +1,6 @@
 "use client";
+import Swal from "sweetalert2";
+
 
 import { useState } from "react";
 
@@ -50,45 +52,53 @@ const ReachUs = () => {
 
   // ✅ Handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!validate()) return;
+  if (!validate()) return;
 
-    setLoading(true); // Start loading
-    setSubmitMessage("");
+  setLoading(true);
 
-    try {
-      const res = await fetch("/api/send-mail", {
+  try {
+    const res = await fetch("/api/send-mail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+    const result = await res.json();
+
+    if (result.success) {
+      Swal.fire({
+        title: "✅ Success!",
+        text: "Submitted successfully!",
+        icon: "success",
+        confirmButtonColor: "#17AABF",
       });
 
-      const result = await res.json();
-
-      if (result.success) {
-        setMessageType("success");
-        setSubmitMessage("Submitted successfully!");
-        setFormData({ phone: "", email: "", name: "" });
-      } else {
-        setMessageType("error");
-        setSubmitMessage(" failed to submit.");
-      }
-    } catch (error) {
-      console.error("Email submit error:", error);
-      setMessageType("error");
-      setSubmitMessage("Something went wrong.");
-    } finally {
-      setLoading(false);
-      
-      setTimeout(() => {
-      setSubmitMessage("");
-    }, 5000);
+      setFormData({ phone: "", email: "", name: "" });
+    } else {
+      Swal.fire({
+        title: "❌ Failed!",
+        text: "Submission failed. Please try again.",
+        icon: "error",
+        confirmButtonColor: "#d33",
+      });
     }
-  };
+  } catch (error) {
+    console.error("Email submit error:", error);
+    Swal.fire({
+      title: "⚠️ Error!",
+      text: "Something went wrong. Please try again later.",
+      icon: "error",
+      confirmButtonColor: "#d33",
+    });
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <main className="containers pb-10">
@@ -152,7 +162,7 @@ const ReachUs = () => {
                   className="w-full rounded-full font-mont border border-gray-300 px-3 py-3 outline-none"
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                  <p className="text-red-500 font-mont text-sm mt-1">{errors.email}</p>
                 )}
               </div>
 
@@ -166,7 +176,7 @@ const ReachUs = () => {
                   className="w-full rounded-full font-mont border border-gray-300 px-3 py-3 outline-none"
                 />
                 {errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                  <p className="text-red-500 font-mont text-sm mt-1">{errors.name}</p>
                 )}
               </div>
 
@@ -178,14 +188,14 @@ const ReachUs = () => {
                 {loading ? "Loading..." : "Submit"}
               </button>
 
-              {submitMessage && (
+              {/* {submitMessage && (
                 <p
                   className={`text-sm mt-2 ${messageType === "success" ? "text-green-600" : "text-red-500"
                     }`}
                 >
                   {submitMessage}
                 </p>
-              )}
+              )} */}
             </form>
           </div>
         </div>

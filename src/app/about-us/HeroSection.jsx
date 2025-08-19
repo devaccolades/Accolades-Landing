@@ -25,23 +25,21 @@ export default function HeroSection() {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
   };
 
-  const container = {
-    hidden: { opacity: 0 },
+  // New paragraph animation
+  const paragraphVariant = {
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.05 },
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
     },
-  };
-
-  const word = {
-    hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
 
   const paragraphText1 =
     "We provide innovative digital marketing solutions to answer all your business needs. From strategy to execution, our expert team ensures seamless support, helping you connect, grow, and excel in the digital space. We are your trusted partner for maximizing engagement, enhancing visibility, and driving success across online platforms.";
 
-  const paragraphText2 = "We are a dedicated team of digital marketing experts based in Kochi passionate about driving your brand's growth. With innovative strategies and tailored solutions, we help businesses thrive in the digital landscape. Our focus on creativity, data-driven insights, and cutting-edge technology ensures impactful results. Partner with us to elevate your online presence, enhance engagement, and achieve measurable success. We have physical presence at Calicut, Trivandrum, Bengaluru, Mumbai and we serve globally.";
+  const paragraphText2 =
+    "We are a dedicated team of digital marketing experts based in Kochi passionate about driving your brand's growth. With innovative strategies and tailored solutions, we help businesses thrive in the digital landscape. Our focus on creativity, data-driven insights, and cutting-edge technology ensures impactful results. Partner with us to elevate your online presence, enhance engagement, and achieve measurable success. We have physical presence at Calicut, Trivandrum, Bengaluru, Mumbai and we serve globally.";
 
   const paragraphText3 =
     "We deliver complete digital marketing solutions tailored to your goals. From SEO and social media management to content creation and analytics, we enhance your brand’s online visibility. Other services include Google and Meta Ads, web design, and graphic design. With compelling graphic designs, we create impactful brand visuals, enhancing your online presence. By combining creativity with data-driven methods, we deliver measurable results that drive engagement, boost conversions, and fuel growth.";
@@ -49,6 +47,7 @@ export default function HeroSection() {
   return (
     <>
       <div className="bg-gradient-to-br from-white to-[#e6f4f9]">
+        {/* Main heading */}
         <motion.h1
           variants={fadeUp}
           initial="hidden"
@@ -59,6 +58,7 @@ export default function HeroSection() {
           Empowered Excellence
         </motion.h1>
 
+        {/* Section 1 */}
         <section className="lg:py-16 md:py-12 py-6">
           <div className="containers grid md:grid-cols-2 md:gap-6 gap-4 items-center">
             <motion.span
@@ -81,21 +81,13 @@ export default function HeroSection() {
                 The ideal platform for all your queries
               </motion.h3>
               <motion.p
-                variants={container}
+                variants={paragraphVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify"
               >
-                {paragraphText1.split(" ").map((wordText, i) => (
-                  <motion.span
-                    key={i}
-                    variants={word}
-                    style={{ display: "inline-block", marginRight: "5px" }}
-                  >
-                    {wordText}
-                  </motion.span>
-                ))}
+                {paragraphText1}
               </motion.p>
             </motion.span>
 
@@ -115,7 +107,7 @@ export default function HeroSection() {
           </div>
         </section>
 
-        {/* The rest of your file stays the same */}
+        {/* Section 2 */}
         <div className="containers mx-auto lg:py-16 md:py-12 py-6">
           <motion.div
             variants={slideInRight}
@@ -136,25 +128,18 @@ export default function HeroSection() {
             </div>
             <div className="md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
               <motion.p
-                variants={container}
+                variants={paragraphVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify"
               >
-                {paragraphText2.split(" ").map((wordText, i) => (
-                  <motion.span
-                    key={i}
-                    variants={word}
-                    style={{ display: "inline-block", marginRight: "5px" }}
-                  >
-                    {wordText}
-                  </motion.span>
-                ))}
+                {paragraphText2}
               </motion.p>
             </div>
           </motion.div>
 
+          {/* Section 3 */}
           <motion.div
             variants={slideInLeft}
             initial="hidden"
@@ -164,21 +149,13 @@ export default function HeroSection() {
           >
             <div className="md:w-1/2 bg-white p-8 rounded-lg shadow-lg mb-8 md:mb-0 order-2 md:order-1">
               <motion.p
-                variants={container}
+                variants={paragraphVariant}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify"
               >
-                {paragraphText3.split(" ").map((wordText, i) => (
-                  <motion.span
-                    key={i}
-                    variants={word}
-                    style={{ display: "inline-block", marginRight: "5px" }}
-                  >
-                    {wordText}
-                  </motion.span>
-                ))}
+                {paragraphText3}
               </motion.p>
             </div>
             <div className="relative md:w-1/2 text-center md:text-right order-1 md:order-2 mb-3 md:mb-0">

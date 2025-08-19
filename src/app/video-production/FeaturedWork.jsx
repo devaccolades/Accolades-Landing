@@ -77,6 +77,7 @@ const featuredWorks = [
 ];
 
 const FeaturedWorks = ({ data }) => {
+  console.log("Featured Works Data:", data);
   const works = featuredWorks;
   const [playingIndex, setPlayingIndex] = useState(null);
 

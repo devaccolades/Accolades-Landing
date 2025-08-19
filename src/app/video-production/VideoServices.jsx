@@ -129,7 +129,7 @@ function VideoServices({ data }) {
                       slidesPerView:
                         item.videos.some((v) => v.orientation === "vertical") &&
                         !item.videos.some((v) => v.orientation === "horizontal")
-                          ? 4
+                          ? 3
                           : 1.5,
                     },
                     1280: {

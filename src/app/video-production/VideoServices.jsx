@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 function VideoServices({ data }) {
   console.log("data", data[0]);
   const [selected, setSelected] = useState(data[0].name);
+  const [loading, setLoading] = useState({});
   const contents = data;
 
   // Create refs and hover states for all videos
@@ -182,6 +183,12 @@ function VideoServices({ data }) {
                                     : "w-[250px] h-[201px] md:w-[734px] md:h-[420px]"
                                 }`}
                               >
+                                {/* Loader */}
+                                {loading[videoKey] && (
+                                  <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="w-8 h-8 border-4 border-white border-t-transparent rounded-full animate-spin z-50"></div>
+                                  </div>
+                                )}
                                 <div
                                   className={`absolute  inset-0 overflow-hidden ${
                                     isVertical
@@ -207,6 +214,24 @@ function VideoServices({ data }) {
                                     <video
                                       ref={(el) =>
                                         (videoRefs.current[videoKey] = el)
+                                      }
+                                      onWaiting={() =>
+                                        setLoading((prev) => ({
+                                          ...prev,
+                                          [videoKey]: true,
+                                        }))
+                                      }
+                                      onCanPlay={() =>
+                                        setLoading((prev) => ({
+                                          ...prev,
+                                          [videoKey]: false,
+                                        }))
+                                      }
+                                      onPlaying={() =>
+                                        setLoading((prev) => ({
+                                          ...prev,
+                                          [videoKey]: false,
+                                        }))
                                       }
                                       src={vid.video}
                                       className="absolute inset-0 w-full h-full object-contain"

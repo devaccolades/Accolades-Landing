@@ -58,32 +58,32 @@ export default function Modal({ isOpen, onClose, data }) {
 
   return (
     <div
-      className="fixed inset-0 bg-black/50 bg-opacity-50 flex md:items-center justify-center z-50 "
+      className="fixed inset-0 bg-black/50 bg-opacity-50 flex items-center justify-center z-50"
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-lg shadow-xl w-[80%] max-w-[442px] md:max-w-[900px] md:w-full h-[50vh] grid grid-rows-2 md:grid-rows-1 grid-cols-5 md:grid-cols-12 mt-8"
+        className="w-[80%] h-[90%] md:h-[420px] md:w-[70%] xl:w-[50%] 2xl:w-[30%] bg-white flex flex-col md:flex-row justify-between"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="col-span-5 md:col-span-6 overflow-hidden h-[170px] md:h-[404px]">
+        <div className="overflow-hidden h-[80%] w-full md:h-[404px] flex justify-start">
           <video
             src={BASE_URL + data.modalVideo.url}
-            className="w-full h-full object-cover rounded-lg mb-4"
+            className="w-full h-full rounded-lg mb-4"
             autoPlay
             loop
             poster={BASE_URL + data.poster.url}
           ></video>
         </div>
-        <div className="col-span-5 md:col-span-6">
+        <div className="">
           <form
             onSubmit={handleSubmit}
-            className="bg-white p-6 rounded-lg  max-w-md w-full space-y-4 "
+            className="bg-white p-6 rounded-lg  max-w-md w-full space-y-4 md:min-w-[300px] lg:min-w-[460px]"
           >
             {/* Name */}
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
+                className="hidden md:block text-sm font-medium text-gray-700"
               >
                 Name
               </label>
@@ -102,7 +102,7 @@ export default function Modal({ isOpen, onClose, data }) {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-sm font-medium text-gray-700"
+                className="hidden md:block text-sm font-medium text-gray-700"
               >
                 Phone
               </label>
@@ -121,7 +121,7 @@ export default function Modal({ isOpen, onClose, data }) {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700"
+                className="hidden md:block text-sm font-medium text-gray-700"
               >
                 Message
               </label>

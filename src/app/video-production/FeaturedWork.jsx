@@ -78,14 +78,14 @@ const featuredWorks = [
 
 const FeaturedWorks = ({ data }) => {
   console.log("Featured Works Data:", data);
-  const works = featuredWorks;
+  const works = data.parterVideos;
   const [playingIndex, setPlayingIndex] = useState(null);
-  const [isPlaying,setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const handleCLick=(index) => {
-    setPlayingIndex(index)
-    setIsPlaying(!isPlaying)
-  }
+  const handleCLick = (index) => {
+    setPlayingIndex(index);
+    setIsPlaying(!isPlaying);
+  };
 
   return (
     <section className="py-6 bg-white mx-auto">
@@ -134,7 +134,7 @@ const FeaturedWorks = ({ data }) => {
                 {isPlaying && playingIndex === index ? (
                   <>
                     <video
-                      src={work.video}
+                      src={BASE_URL + work.video.url}
                       autoPlay
                       playsInline
                       controls
@@ -153,7 +153,7 @@ const FeaturedWorks = ({ data }) => {
                 ) : (
                   <>
                     <Image
-                      src={work.image}
+                      src={BASE_URL + work.image.formats.medium.url}
                       alt={work.image.id || work.image}
                       fill
                       className="object-cover"

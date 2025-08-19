@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
+import { fromJSON } from "postcss";
 import Image from "next/image";
 // import topline from "../../../public/home/top-line.svg";
 
@@ -17,24 +18,17 @@ import p6 from "../../../public/home/06-min.png";
 import p7 from "../../../public/home/07-min.png";
 import p8 from "../../../public/home/08-min.png";
 import p9 from "../../../public/home/09-min.png";
-import p10 from "../../../public/home/10-min.png"; 
- import p11 from "../../../public/home/11-min.png";
- import p12 from "../../../public/home/12-min.png";
-
-// import niahara from "../../../public/home/nihara.webp";
-// import silk from "../../../public/home/silk_galeria.webp";
-// import fut from "../../../public/creative/futura04-min.jpg";
-// import cure from "../../../public/creative/branding/curegarden 05 copy-min (1).jpg";
-import { fromJSON } from "postcss";
+import p10 from "../../../public/home/10-min.png";
+import p11 from "../../../public/home/11-min.png";
+import p12 from "../../../public/home/12-min.png";
 
 const fallbackImages = [
-  
   { id: 1, src: alappat, alt: "Alappat" },
   { id: 2, src: family, alt: "Family" },
   { id: 3, src: p3, alt: "Project 3" },
   { id: 4, src: p4, alt: "Project 4" },
   { id: 5, src: p5, alt: "Project 5" },
-  { id: 6, src: p6, alt: "Project 6"  },
+  { id: 6, src: p6, alt: "Project 6" },
   { id: 7, src: p7, alt: "Project 7" },
   { id: 8, src: p8, alt: "Project 8" },
   { id: 9, src: p9, alt: "Project 9" },
@@ -59,7 +53,7 @@ const ProjectSlider = ({ images = fallbackImages }) => {
           loop={true}
           grabCursor
           autoplay={{
-            delay: 500,
+            delay: 1000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
@@ -92,8 +86,8 @@ const ProjectSlider = ({ images = fallbackImages }) => {
               spaceBetween: 30,
             },
             1900: {
-              slidesPerView: 6,
-              spaceBetween: 30,
+              slidesPerView: 4.5,
+              spaceBetween: 50,
             },
           }}
           modules={[Autoplay]}
@@ -133,11 +127,6 @@ const ProjectSlider = ({ images = fallbackImages }) => {
           ))}
         </Swiper>
       </section>
-      {/* <Image
-        src={topline}
-        alt="line"
-        className="containers h-auto py-6 md:py-12 lg:py-20"
-      /> */}
     </>
   );
 };

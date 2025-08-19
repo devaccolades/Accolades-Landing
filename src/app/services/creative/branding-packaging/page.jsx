@@ -18,7 +18,7 @@ const page = () => {
         <Our />
         <Tools />
       </main>
-      <main className="-mt-[65px]">
+      <main className="-mt-[65px] 2xl:-mt-[110px] ">
         <Footer />
       </main>
     </>

@@ -34,6 +34,9 @@ const branding = [
   { id: 1, src: brand1, alt: "brand" },
   { id: 2, src: brand2, alt: "brand" },
   { id: 3, src: brand3, alt: "brand" },
+  { id: 1, src: brand1, alt: "brand" },
+  { id: 2, src: brand2, alt: "brand" },
+  { id: 3, src: brand3, alt: "brand" },
 ];
 const packing = [
   { id: 1, src: pack1, alt: "one" },
@@ -42,6 +45,14 @@ const packing = [
   { id: 4, src: pack4, alt: "one" },
   { id: 2, src: pack2, alt: "two" },
   { id: 6, src: pack6, alt: "three" },
+  { id: 5, src: pack5, alt: "two" },
+  { id: 1, src: pack1, alt: "one" },
+  { id: 5, src: pack5, alt: "two" },
+  { id: 3, src: pack3, alt: "three" },
+  { id: 4, src: pack4, alt: "one" },
+  { id: 2, src: pack2, alt: "two" },
+  { id: 6, src: pack6, alt: "three" },
+  { id: 5, src: pack5, alt: "two" },
 ];
 
 const Featured = () => {

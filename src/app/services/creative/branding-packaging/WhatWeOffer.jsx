@@ -11,11 +11,11 @@ import Image from "next/image";
 const cards = [
   {
     title: "Logo Design",
-    image: brand1,
+    image: brand4,
   },
   {
     title: "Packaging Design",
-    image: brand2,
+    image: brand1,
   },
   {
     title: "Brand Guidelines",
@@ -23,7 +23,7 @@ const cards = [
   },
   {
     title: "Rebranding",
-    image: brand4,
+    image: brand2,
   },
 ];
 

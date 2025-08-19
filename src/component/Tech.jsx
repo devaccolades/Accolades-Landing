@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -37,7 +37,12 @@ export default function Tech({ tools, title, para }) {
   };
 
   return (
-    <section className="lg:pt-12 md:pt-10 bg-gradient-to-b from-white to-[#d3f2f4] pb-24">
+    <section
+      className="lg:pt-12 md:pt-10  pb-32 2xl:pb-48"
+      style={{
+        background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
+      }}
+    >
       <div className="containers px-4 bg-white p-6 md:p-10 rounded-[30px] shadow">
         {/* Animated Title */}
         <motion.h2

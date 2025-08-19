@@ -15,6 +15,7 @@ export async function POST(req) {
     const mailOptions = {
       from: `"Accolades Website" <${process.env.SMTP_EMAIL}>`,
       to: "leadsaccolades@gmail.com",
+      // to: "manjima.accolades@gmai.com",
       subject: "New Contact Form Submission",
       html: `
   <div style="font-family: Arial, sans-serif; padding: 20px;">

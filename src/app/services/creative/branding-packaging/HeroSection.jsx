@@ -7,14 +7,15 @@ import AnimatedTitle from "@/component/AnimatedTitle";
 import Link from "next/link";
 
 const HeroSection = () => {
+  // Parent container for stagger (only for card + image, not subtitle)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.3,
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
+        duration: 0.2,
+        staggerChildren: 0.15, // smaller stagger
+        delayChildren: 0.05,
       },
     },
   };
@@ -30,7 +31,7 @@ const HeroSection = () => {
       x: 0,
       y: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.4,
         ease: [0.25, 0.25, 0.25, 0.75],
       },
     },
@@ -47,20 +48,32 @@ const HeroSection = () => {
       x: 0,
       scale: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.4,
         ease: [0.25, 0.25, 0.25, 0.75],
       },
     },
   };
 
-  const textVariants = {
+  const titleVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.2,
         ease: "easeOut",
+      },
+    },
+  };
+
+  const paragraphVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.8, 0.25, 1], // smooth cubic-bezier
       },
     },
   };
@@ -72,15 +85,10 @@ const HeroSection = () => {
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: "easeOut",
       },
     },
-  };
-
-  const wordVariants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.25 } },
   };
 
   const subtitle =
@@ -105,22 +113,21 @@ const HeroSection = () => {
           {/* Main Title */}
           <motion.h3
             className="text-[#3FB4BA] text-[24px] lg:text-[32px] font-extrabold leading-[100%]"
-            variants={textVariants}
+            variants={titleVariants}
           >
             Build a Brand That Commands Attention
           </motion.h3>
 
-          {/* Subtitle with word-by-word animation */}
-          <motion.h3
-            className="text-[16px] lg:text-[20px] text-[#333333] leading-[110%] font-normal flex flex-wrap gap-[3px]"
-            variants={containerVariants}
+          {/* Subtitle (independent animation, not staggered word by word) */}
+          <motion.div
+            initial={{ opacity: 0, y: 30, clipPath: "inset(100% 0% 0% 0%)" }}
+            animate={{ opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {subtitle.split(" ").map((word, i) => (
-              <motion.span key={i} variants={wordVariants}>
-                {word}
-              </motion.span>
-            ))}
-          </motion.h3>
+            <h3 className="text-[16px] lg:text-[20px] text-[#333333] leading-[110%] font-normal">
+              {subtitle}
+            </h3>
+          </motion.div>
 
           {/* Button */}
           <Link href="/contact-us">

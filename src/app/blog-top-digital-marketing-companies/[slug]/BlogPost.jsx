@@ -1,6 +1,7 @@
-"use client"
-import {motion} from "framer-motion"
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import {
   Calendar,
   User,
@@ -21,9 +22,9 @@ import Icon2 from "../../../../public/blog/icon2.webp";
 import Icon3 from "../../../../public/blog/icon3.webp";
 import Icon4 from "../../../../public/blog/icon4.webp";
 
-export default function BlogPost({ data,category }) {
-  console.log(data)
-  
+export default function BlogPost({ data, category }) {
+  console.log(data);
+
   const relatedPosts = [
     {
       title: "Digital Marketing Strategies That Convert",
@@ -70,14 +71,15 @@ export default function BlogPost({ data,category }) {
       }}
     >
       <div className="containers py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 md:gap-6 gap-4 "
-         >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 md:gap-6 gap-4 ">
           {/* Main Content */}
-          <motion.div className="lg:col-span-2"
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}>
+          <motion.div
+            className="lg:col-span-2"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <article className="bg-white rounded-2xl shadow-lg overflow-hidden">
               {/* Header */}
               <div className="md:px-8 px-4 pt-8">
@@ -97,21 +99,22 @@ export default function BlogPost({ data,category }) {
 
               {/* Content */}
               <div className="md:px-8 px-4 pb-6">
-                <div dangerouslySetInnerHTML={{ __html: data?.description }} />
+                <ReactMarkdown>{data?.description}</ReactMarkdown>
               </div>
             </article>
           </motion.div>
 
           {/* Sidebar */}
-          <div className="lg:col-span-1"
-          >
+          <div className="lg:col-span-1">
             <div className="sticky top-8 space-y-6">
               {/* Related Posts */}
-              <motion.div className="bg-white rounded-2xl shadow-lg p-6"
-              initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}>
+              <motion.div
+                className="bg-white rounded-2xl shadow-lg p-6"
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
                 <h3 className="font-mont font-semibold lg:text-[22px] md:text-[20px] text-[18px] leading-[150%] text-[#707070] mb-6">
                   Related posts
                 </h3>

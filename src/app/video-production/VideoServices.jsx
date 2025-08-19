@@ -55,7 +55,7 @@ function VideoServices({ data }) {
       </motion.p>
 
       <motion.div
-        className="flex gap-[20px] items-center overflow-x-scroll scrollbar-hidden"
+        className="flex gap-[20px] items-center overflow-x-scroll scrollbar-hidden p-8"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}

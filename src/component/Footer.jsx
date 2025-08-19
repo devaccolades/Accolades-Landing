@@ -17,7 +17,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="relative text-[#3C3C3C] pt-12 md:pt-28  overflow-hidden">
+    <footer className="relative text-[#3C3C3C] pt-12 md:pt-28   overflow-hidden">
       <Image
         src={line}
         alt="mobile-line"
@@ -26,7 +26,7 @@ const Footer = () => {
       <Image
         src={cover}
         alt="desktop-cover"
-        className="absolute top-0 left-0 w-full h-full object-cover  hidden md:block"
+        className="absolute top-0 left-0 w-full h-full object-cover object-top  hidden md:block"
       />
 
       <div className=" containers relative flex flex-col md:flex-row md:justify-between gap-10 border-b border-gray-300 pb-10 items-center">
@@ -37,7 +37,7 @@ const Footer = () => {
               alt="Logo"
               width={100}
               height={100}
-              className="h-full w-full"
+              className="h-full w-full "
             />
           </div>
           <p className="text-[15px] font-mont leading-relaxed">
@@ -114,7 +114,10 @@ const Footer = () => {
         </p>
 
         <p className="text-sm font-mont text-center md:text-left">
-          <a href="mailto:mail@accoladesmedia.co.in" className="hover:underline">
+          <a
+            href="mailto:mail@accoladesmedia.co.in"
+            className="hover:underline"
+          >
             mail@accoladesmedia.co.in
           </a>
         </p>

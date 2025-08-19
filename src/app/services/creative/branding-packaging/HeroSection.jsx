@@ -92,14 +92,15 @@ const HeroSection = () => {
   };
 
   const subtitle =
-    "From logo to label, we craft cohesive brand identities that turn first impressions into lasting connections.";
+    // "From logo to label, we craft cohesive brand identities that turn first impressions into lasting connections.";
+    "From your logo to every label, color, and touchpoint, we design complete and cohesive brand identities that don’t just capture attention in the moment—but create meaningful first impressions that grow into long-term recognition, credibility, and emotional connection with your audience.";
 
   return (
     <section className="containers font-mont pt-[100px]">
       <AnimatedTitle text={"Branding & Packaging"} />
 
       <motion.div
-        className="flex flex-col-reverse md:grid md:grid-cols-[50%_1fr] py-[3%] items-center gap-5"
+        className="flex flex-col-reverse md:grid md:grid-cols-2 py-[3%] items-center gap-5 2xl:gap-[10%]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"

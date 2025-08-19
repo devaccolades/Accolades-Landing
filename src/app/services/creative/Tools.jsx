@@ -24,21 +24,21 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.95 },
-  show: { 
-    opacity: 1, 
-    y: 0, 
-    scale: 1, 
-    transition: { duration: 0.5, ease: "easeOut" } 
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
 // Paragraph animation (whole block instead of word-by-word)
 const paragraphVariants = {
   hidden: { opacity: 0, y: 30 },
-  show: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.8, ease: "easeOut" } 
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
   },
 };
 
@@ -46,8 +46,12 @@ const paragraph = `Our team leverages industry-leading tools to bring creativity
 
 const Tools = () => {
   return (
-    <main style={{ background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)" }}>
-      <section className="containers font-mont pb-32">
+    <main
+      style={{
+        background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
+      }}
+    >
+      <section className="containers font-mont pb-32 2xl:pb-[170px]">
         <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0199A4] mb-8">
             Tools & Platforms We Use
@@ -62,8 +66,18 @@ const Tools = () => {
             viewport={{ once: true }}
           >
             {tools.map((tool, index) => (
-              <motion.div key={index} variants={itemVariants} className="flex flex-col items-center">
-                <Image src={tool.icon} alt={tool.name} width={64} height={64} className="mb-2" />
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="flex flex-col items-center"
+              >
+                <Image
+                  src={tool.icon}
+                  alt={tool.name}
+                  width={64}
+                  height={64}
+                  className="mb-2"
+                />
                 <p className="font-semibold text-xs md:text-sm">{tool.name}</p>
               </motion.div>
             ))}

@@ -22,7 +22,8 @@ import Icon3 from "../../../../public/blog/icon3.webp";
 import Icon4 from "../../../../public/blog/icon4.webp";
 
 export default function BlogPost({ data,category }) {
-  // console.log(category)
+  console.log(data)
+  
   const relatedPosts = [
     {
       title: "Digital Marketing Strategies That Convert",

@@ -39,7 +39,7 @@ const fadeUp = {
 export default function WebsiteProjects() {
   return (
     <div
-      className="pb-[150px] bg-[#f1f5f5]"
+      className="pb-[180px] -mb-[100px] bg-[#f1f5f5]"
       style={{
         background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
       }}

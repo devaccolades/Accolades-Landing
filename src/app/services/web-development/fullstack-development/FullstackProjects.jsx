@@ -52,7 +52,7 @@ export default function FullstackProjects() {
 
 
     <div
-      className="bg-[#f1f5f5] pt-4 pb-[100px]"
+      className="bg-[#f1f5f5] -mb-[100px] pt-4 pb-[150px]"
       style={{
         background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
       }}

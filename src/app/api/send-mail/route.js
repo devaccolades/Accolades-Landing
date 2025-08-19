@@ -14,7 +14,8 @@ export async function POST(req) {
 
     const mailOptions = {
       from: `"Accolades Website" <${process.env.SMTP_EMAIL}>`,
-      to: "leadsaccolades@gmail.com", // Replace with the receiver's email
+      // to: "leadsaccolades@gmail.com", 
+      to:"manjima.accolades@gmail.com",
       subject: "New Reach Us Form Submission",
       html: `
         <h3>Reach Us Form Details</h3>

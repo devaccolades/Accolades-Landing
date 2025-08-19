@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Swal from "sweetalert2";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -44,9 +45,10 @@ export default function ContactForm() {
 
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = "Message must be at least 10 characters";
-    }
+    } 
+    // else if (formData.message.trim().length < 10) {
+    //   newErrors.message = "Message must be at least 10 characters";
+    // }
 
     if (!formData.consent) {
       newErrors.consent = "You must agree to the Terms and Privacy Policy";
@@ -65,45 +67,61 @@ export default function ContactForm() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!validateForm()) return;
+  if (!validateForm()) return;
 
-    try {
-      setLoading(true);
-      setResponseMsg("");
+  try {
+    setLoading(true);
+    setResponseMsg("");
 
-      const res = await fetch("/api/send-contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+    const res = await fetch("/api/send-contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      Swal.fire({
+        title: "✅ Success!",
+        text: "Your message has been sent successfully.",
+        icon: "success",
+        confirmButtonColor: "#17AABF",
       });
 
-      const data = await res.json();
-      setResponseMsg(data.message);
-
-      if (data.success) {
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-          consent: false,
-        });
-        setErrors({});
-      }
-    } catch (err) {
-      setResponseMsg("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-
-      // ⏳ clear the response message after 4 seconds
-      setTimeout(() => setResponseMsg(""), 4000);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+        consent: false,
+      });
+      setErrors({});
+    } else {
+      Swal.fire({
+        title: "❌ Failed!",
+        text: data.message || "Submission failed. Please try again.",
+        icon: "error",
+        confirmButtonColor: "#d33",
+      });
     }
-  };
+  } catch (err) {
+    Swal.fire({
+      title: "⚠️ Error!",
+      text: "Something went wrong. Please try again later.",
+      icon: "error",
+      confirmButtonColor: "#d33",
+    });
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <section className="relative containers mx-auto  py-10">
@@ -278,13 +296,13 @@ export default function ContactForm() {
               </button>
             </div>
 
-            {responseMsg && (
+            {/* {responseMsg && (
               <div className="md:col-span-2 text-center font-mont mt-2 text-sm text-gray-700">
                 {responseMsg}
               </div>
-            )}
+            )} */}
           </form>
-          {responseMsg && (
+          {/* {responseMsg && (
             <div
               className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-md text-white shadow-md z-50 transition-all duration-300 ${
                 responseMsg.toLowerCase().includes("success")
@@ -294,7 +312,7 @@ export default function ContactForm() {
             >
               {responseMsg}
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </section>

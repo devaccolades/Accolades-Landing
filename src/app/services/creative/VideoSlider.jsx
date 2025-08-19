@@ -64,14 +64,15 @@ const VideoSlider = () => {
       <Swiper
         modules={[Autoplay]}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
-        spaceBetween={20}
+        // spaceBetween={20}
         loop={true}
         slidesPerView={1}
         breakpoints={{
-          640: { slidesPerView: 1.3 },
-          768: { slidesPerView: 2.5 },
-          1024: { slidesPerView: 3.3 },
-          1280: { slidesPerView: 4.2 },
+          320: { slidesPerView: 1.3 , spaceBetween: 10 },
+          640: { slidesPerView: 1.3 , spaceBetween: 20 },
+          768: { slidesPerView: 2.5 , spaceBetween: 20 },
+          1024: { slidesPerView: 3.3 , spaceBetween: 30 },
+          1280: { slidesPerView: 4.2 ,  spaceBetween: 20 },
         }}
         autoplay={{ delay: 800, disableOnInteraction: false }}
       >

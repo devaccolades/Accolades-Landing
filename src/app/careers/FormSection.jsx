@@ -1,7 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import Swal from "sweetalert2";
+
 
 function FormSection() {
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -60,48 +64,71 @@ function FormSection() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!validate()) return;
+  if (!validate()) return;
 
-    const form = new FormData();
-    form.append("firstName", formData.firstName);
-    form.append("lastName", formData.lastName);
-    form.append("email", formData.email);
-    form.append("phone", formData.phone);
-    form.append("position", formData.position);
-    form.append("termsAccepted", formData.termsAccepted); // optional
-    if (formData.file) form.append("file", formData.file); // optional
+  setLoading(true); // start loading
 
-    try {
-      const res = await fetch("/api/form-send", {
-        method: "POST",
-        body: form,
+  const form = new FormData();
+  form.append("firstName", formData.firstName);
+  form.append("lastName", formData.lastName);
+  form.append("email", formData.email);
+  form.append("phone", formData.phone);
+  form.append("position", formData.position);
+  form.append("termsAccepted", formData.termsAccepted);
+  if (formData.file) form.append("file", formData.file);
+
+  try {
+    const res = await fetch("/api/form-send", {
+      method: "POST",
+      body: form,
+    });
+
+    const result = await res.json();
+    console.log("result", result);
+
+    if (result.success) {
+      Swal.fire({
+        title: "✅ Success!",
+        text: "Form submitted successfully.",
+        icon: "success",
+        confirmButtonColor: "#3FB4BA",
       });
 
-      const result = await res.json();
-      console.log("result", result);
-
-      if (result.success) {
-        alert("Form submitted successfully!");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          position: "",
-          file: null,
-          termsAccepted: false,
-        });
-        setErrors({});
-      } else {
-        alert("Submission failed.");
-      }
-    } catch (error) {
-      console.error("Email submit error:", error);
-      alert("Something went wrong.");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        position: "",
+        file: null,
+        termsAccepted: false,
+      });
+      setErrors({});
+    } else {
+      Swal.fire({
+        title: "❌ Failed!",
+        text: "Submission failed. Please try again.",
+        icon: "error",
+        confirmButtonColor: "#d33",
+      });
     }
-  };
+  } catch (error) {
+    console.error("Email submit error:", error);
+    Swal.fire({
+      title: "⚠️ Error!",
+      text: "Something went wrong. Please try again later.",
+      icon: "error",
+      confirmButtonColor: "#d33",
+    });
+  } finally {
+    setLoading(false); // stop loading
+  }
+};
+
+
+
 
   return (
     <section className="py-8 md:py-14">
@@ -241,12 +268,45 @@ function FormSection() {
 
           {/* Submit Button */}
           <div className="flex justify-center lg:justify-end items-center w-full col-span-1 lg:col-span-2 mt-6">
-            <button
+            {/* <button
               type="submit"
               className="bg-[#3FB4BA] text-white rounded-full px-[20px] py-[10px] md:px-[40px] md:py-[14px]"
             >
               Submit
-            </button>
+            </button> */}
+            <button
+  type="submit"
+  disabled={loading}
+  className={`flex items-center justify-center bg-[#3FB4BA] text-white rounded-full px-[20px] py-[10px] md:px-[40px] md:py-[14px] transition-all ${
+    loading ? "opacity-70 cursor-not-allowed" : ""
+  }`}
+>
+  {loading ? (
+    <svg
+      className="animate-spin h-5 w-5 text-white"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <circle
+        className="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        strokeWidth="4"
+      ></circle>
+      <path
+        className="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+      ></path>
+    </svg>
+  ) : (
+    "Submit"
+  )}
+</button>
+
           </div>
         </div>
       </form>

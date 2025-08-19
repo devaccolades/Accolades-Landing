@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import logo from "../../public/logos/Accolades_logo_TM-2048x376 2.svg";
 import { motion } from "framer-motion";
 import Modal from "@/component/Modal";
+import Link from "next/link";
 
-function Header({data}) {
+function Header({ data }) {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleClick = () => {
@@ -27,20 +28,26 @@ function Header({data}) {
         `,
       }}
     >
-      <Image
-        src={logo}
-        alt="accolades logo"
-        height={100}
-        width={100}
-        className="object-cover h-[28px] w-[154px] md:w-[218px] md:h-[40px]"
-      />
+      <Link href="/" >
+        <Image
+          src={logo}
+          alt="accolades logo"
+          height={100}
+          width={100}
+          className="object-cover h-[28px] w-[154px] md:w-[218px] md:h-[40px]"
+        />
+      </Link>
       <button
         onClick={() => setModalOpen(true)}
         className="bg-[#0C7379] text-[13px] lg:text-[14px] font-bold rounded-lg py-[6px] px-[14px] md:py-[10px] md:px-[20px] text-white transition-transform cursor-pointer"
       >
         Contact Us
       </button>
-      <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} data={data} />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        data={data}
+      />
     </motion.header>
   );
 }

@@ -2,6 +2,10 @@
 import Button from "@/component/Button";
 import Image from "next/image";
 import React from "react";
+import web from "../../../public/web.jpg"
+import tab from "../../../public/tab.jpg"
+import mobile from "../../../public/mobile.jpg"
+
 import { BASE_URL } from "../Server";
 import { motion } from "framer-motion";
 
@@ -18,7 +22,7 @@ function HeroSection({ data }) {
       <div
         className="hidden lg:block absolute inset-0 bg-no-repeat bg-cover bg-center z-0 h-full"
         style={{
-          backgroundImage: `url(${BASE_URL + data?.heroBg?.url})`,
+          backgroundImage: `url(${web.src})`,
           backgroundRepeat: "no-repeat",
         }}
       />
@@ -26,14 +30,14 @@ function HeroSection({ data }) {
       <div
         className="hidden md:block lg:hidden absolute inset-0 bg-no-repeat bg-cover bg-center z-0 h-full"
         style={{
-          backgroundImage: `url(${BASE_URL + data?.tab?.url})`,
+          backgroundImage: `url(${tab.src})`,
         }}
       />
       {/* Background Image in mobile*/}
       <div
         className="md:hidden absolute inset-0 bg-no-repeat bg-cover bg-center z-0 h-full"
         style={{
-          backgroundImage: `url(${BASE_URL + data?.mobile?.url})`,
+          backgroundImage: `url(${mobile.src})`,
         }}
       />
       {/* White to Transparent Overlay at Bottom */}

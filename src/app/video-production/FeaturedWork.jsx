@@ -80,6 +80,12 @@ const FeaturedWorks = ({ data }) => {
   console.log("Featured Works Data:", data);
   const works = featuredWorks;
   const [playingIndex, setPlayingIndex] = useState(null);
+  const [isPlaying,setIsPlaying] = useState(false);
+
+  const handleCLick=(index) => {
+    setPlayingIndex(index)
+    setIsPlaying(!isPlaying)
+  }
 
   return (
     <section className="py-6 bg-white mx-auto">
@@ -123,9 +129,9 @@ const FeaturedWorks = ({ data }) => {
               <motion.div
                 variants={cardVariants}
                 className="relative w-full aspect-[4/3] rounded-xl overflow-hidden group shadow-sm hover:shadow-md transition cursor-pointer"
-                onClick={() => setPlayingIndex(index)}
+                onClick={() => handleCLick(index)}
               >
-                {playingIndex === index ? (
+                {isPlaying && playingIndex === index ? (
                   <>
                     <video
                       src={work.video}
@@ -135,6 +141,7 @@ const FeaturedWorks = ({ data }) => {
                       controlsList="nodownload nofullscreen noremoteplayback"
                       disablePictureInPicture
                       className="w-full h-full object-cover rounded-2xl"
+                      onClick={handleCLick}
                       onEnded={() => setPlayingIndex(null)}
                     />
                     <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/0 to-transparent pointer-events-none" />

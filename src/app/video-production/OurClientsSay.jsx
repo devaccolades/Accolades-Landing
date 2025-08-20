@@ -33,46 +33,52 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const textTest = [
-  {
-    type: "text",
-    logo: "",
-    text: "Worked with accolades for few of my clients. I do prefer them for more of my upcoming projects. Prompt response from client service. Always there a call away.",
-    name: "Joseph Mampilly",
-    position: "",
-  },
-];
+// const textTest = [
+//   {
+//     type: "text",
+//     logo: "",
+//     text: "Worked with accolades for few of my clients. I do prefer them for more of my upcoming projects. Prompt response from client service. Always there a call away.",
+//     name: "Joseph Mampilly",
+//     position: "",
+//   },
+// ];
 
-const VidTest = [
-  {
-    type: "video",
-    video: "/videos/featuredWorks/fe1.mp4",
-    image: feI1,
-    name: "Jomon Chacko",
-    position: "Managing Partner",
-  },
-  {
-    type: "video",
-    video: "/videos/featuredWorks/fe2.mp4",
-    image: feI2,
-    name: "Josbin Itty",
-    position: "Digital Marketing Manager",
-  },
-  // {
-  //   type: "video",
-  //   video: "/videos/featuredWorks/fe3.mp4",
-  //   image: feI3,
-  //   name: "Sijo Sunny",
-  //   position: "Director",
-  // },
-];
+// const VidTest = [
+//   {
+//     type: "video",
+//     video: "/videos/featuredWorks/fe1.mp4",
+//     image: feI1,
+//     name: "Jomon Chacko",
+//     position: "Managing Partner",
+//   },
+//   {
+//     type: "video",
+//     video: "/videos/featuredWorks/fe2.mp4",
+//     image: feI2,
+//     name: "Josbin Itty",
+//     position: "Digital Marketing Manager",
+//   },
+//   // {
+//   //   type: "video",
+//   //   video: "/videos/featuredWorks/fe3.mp4",
+//   //   image: feI3,
+//   //   name: "Sijo Sunny",
+//   //   position: "Director",
+//   // },
+// ];
 
 const WhatOurClientsSay = ({ data }) => {
-  const videotestimonials = VidTest;
+  const { testText, videoTestimonial } = data;
+  const videotestimonials = videoTestimonial;
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const textTestimonials = textTest;
+  const textTestimonials = testText;
   const [progress, setProgress] = useState(0);
   const [playingIndex, setPlayingIndex] = useState(null);
+  const HandleClick = (index) => {
+    setPlayingIndex(index);
+    setIsPlaying(!isPlaying);
+  };
 
   const combinedTestimonials = [];
   for (let i = 0; i < videotestimonials.length; i++) {
@@ -143,22 +149,23 @@ const WhatOurClientsSay = ({ data }) => {
               <motion.div variants={itemVariants}>
                 {item.type === "video" ? (
                   <div className="relative h-[400px] md:h-[480px] w-full rounded-2xl overflow-hidden shadow hover:shadow-lg transition">
-                    {playingIndex === index ? (
+                    {isPlaying && playingIndex === index ? (
                       <video
-                        src={item.data.video}
+                        src={BASE_URL + item.data.oneVideoofTest.url}
                         autoPlay
                         playsInline
                         controls
                         controlsList="nodownload nofullscreen noremoteplayback"
                         disablePictureInPicture
                         className="w-full h-full object-cover rounded-2xl"
-                        onEnded={() => setPlayingIndex(null)}
+                        onClick={HandleClick}
+                        onEnded={() => HandleClick}
                       />
                     ) : (
                       <>
                         <Image
-                          src={item.data.image}
-                          alt={item.data.image}
+                          src={BASE_URL + item.data.onePosterImage.url}
+                          alt={item.data.onePosterImage.url}
                           fill
                           className="object-cover rounded-2xl"
                         />
@@ -168,7 +175,7 @@ const WhatOurClientsSay = ({ data }) => {
                           width={60}
                           height={60}
                           className="absolute inset-0 m-auto cursor-pointer hover:scale-105 transition z-20"
-                          onClick={() => setPlayingIndex(index)}
+                          onClick={() => HandleClick(index)}
                         />
                       </>
                     )}
@@ -191,12 +198,16 @@ const WhatOurClientsSay = ({ data }) => {
                         />
                       )}
                       <p className="text-black font-poppins text-[13px] md:text-[14px] lg:text-[16px] leading-[140%] mt-4">
-                        {item.data.text}
+                        {item?.data?.testimonilaText}
                       </p>
                     </div>
                     <div className="flex items-center gap-3 mt-4">
                       <Image
-                        src={item.data.image || avathar}
+                        src={
+                          BASE_URL +
+                            item?.data?.personImage?.formats?.thumbnail?.url ||
+                          avathar
+                        }
                         alt={item.data.name}
                         width={40}
                         height={40}

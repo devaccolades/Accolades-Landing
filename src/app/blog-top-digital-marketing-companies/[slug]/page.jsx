@@ -5,7 +5,8 @@ import Footer from "@/component/Footer";
 import { getBlogs } from "@/app/Server";
 
 export default async function page({ params }) {
-  const { slug } = params;
+  // const { slug } = params;
+  const { slug } = await params; 
 
   const blog = await getBlogs();
   const data = blog

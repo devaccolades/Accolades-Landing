@@ -5,14 +5,14 @@ import Img9 from "../../../../public/blog/heroImg.png";
 import { BASE_URL } from "@/app/Server";
 
 export default function HeroSection({ data }) {
-  console.log('data',data)
+  console.log('data', data)
   return (
     <>
       <motion.div
         className="bg-gradient-to-br from-white to-[#e6f4f9] pt-12 mt-20 "
         initial={{ opacity: 0, y: -40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        animate={{ opacity: 1, y: 0 }}   // ✅ animate on page load
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="containers w-full h-full bg-white p-3 rounded-2xl">
           <Image

@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";   // enables lists, tables, checkboxes, etc.
+import rehypeRaw from "rehype-raw";  
 import {
   Calendar,
   User,
@@ -46,11 +48,11 @@ export default function BlogPost({ data, category }) {
       alt: "Facebook",
       href: "https://facebook.com/share-url",
     },
-    {
-      src: Icon2,
-      alt: "Twitter",
-      href: "https://twitter.com/share-url",
-    },
+    // {
+    //   src: Icon2,
+    //   alt: "Twitter",
+    //   href: "https://twitter.com/share-url",
+    // },
     {
       src: Icon3,
       alt: "LinkedIn",
@@ -99,7 +101,15 @@ export default function BlogPost({ data, category }) {
 
               {/* Content */}
               <div className="md:px-8 px-4 pb-6">
-                <ReactMarkdown>{data?.description}</ReactMarkdown>
+                {/* <ReactMarkdown >{data?.description}</ReactMarkdown> */}
+                <div className="blog-content prose prose-lg max-w-none">
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw]}
+    >
+      {data?.description}
+    </ReactMarkdown>
+  </div>
               </div>
             </article>
           </motion.div>

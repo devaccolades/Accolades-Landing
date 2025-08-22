@@ -113,7 +113,7 @@ const HeroSection = () => {
         >
           {/* Main Title */}
           <motion.h3
-            className="text-[#3FB4BA] text-[24px] lg:text-[32px] font-extrabold leading-[100%]"
+            className="text-[#3FB4BA] text-[24px] lg:text-[32px] font-extrabold font-mont leading-[100%]"
             variants={titleVariants}
           >
             Build a Brand That Commands Attention
@@ -125,7 +125,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h3 className="text-[16px] lg:text-[20px] text-[#333333] leading-[110%] font-normal">
+            <h3 className="text-[16px] lg:text-[18px] text-[#333333] leading-[156%] font-mont font-normal">
               {subtitle}
             </h3>
           </motion.div>

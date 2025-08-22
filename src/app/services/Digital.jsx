@@ -6,7 +6,7 @@ import Link from "next/link";
 
 function Digital() {
   return (
-    <seciton className="flex justify-center overflow-visible relative z-10 mx-auto w-[90%]">
+    <section className="flex justify-center overflow-visible relative z-10 mx-auto w-[90%]">
       <div className="flex gap-[10px] w-full relative">
         <div className="absoulte w-[10%] md:w-[10%] lg:w-[15%] ">
           <Image
@@ -148,7 +148,7 @@ function Digital() {
           </div>
         </div>
       </div>
-    </seciton>
+    </section>
   );
 }
 

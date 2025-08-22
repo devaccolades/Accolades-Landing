@@ -1,5 +1,5 @@
 "use client";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import { Clock, MapPin, ArrowRight, ArrowLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -11,12 +11,19 @@ import { BASE_URL } from "../Server.js";
 const BlogCardsGrid = ({ selectedTag, data }) => {
   // FIXED: Better filtering logic with exact case-sensitive matching
   // const [blogs, setBlogs] = useState([]);
-  const filteredPosts =
-    selectedTag === "All"
-      ? data.flatMap((post) => post.blogs || [])
-      : data
-          .filter((post) => post.category === selectedTag)
-          .flatMap((item) => item.blogs || []);
+  let filteredPosts;
+
+  if (selectedTag === "All") {
+    const allBlogs = data.flatMap((post) => post.blogs || []);
+
+    filteredPosts = Array.from(
+      new Map(allBlogs.map((blog) => [blog.id, blog])).values()
+    );
+  } else {
+    filteredPosts = data
+      .filter((post) => post.category === selectedTag)
+      .flatMap((item) => item.blogs || []);
+  }
   // console.log("filteredPosts", filteredPosts);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -63,10 +70,8 @@ const BlogCardsGrid = ({ selectedTag, data }) => {
     }
   };
 
-
   // Single card component
   const BlogCard = ({ post }) => {
-    // console.log("post", post);
     return (
       <div className="group cursor-pointer h-full">
         <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1 h-full flex flex-col">
@@ -90,7 +95,7 @@ const BlogCardsGrid = ({ selectedTag, data }) => {
             {/* Background Image */}
             <div className="absolute inset-0">
               <Image
-                src={BASE_URL + post?.coverImage.formats.medium.url}
+                src={BASE_URL + post?.coverImage?.url}
                 alt={post.title}
                 fill
                 className="object-cover object-center opacity-90"
@@ -148,11 +153,13 @@ const BlogCardsGrid = ({ selectedTag, data }) => {
           </div>
         ) : (
           <>
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4 lg:gap-6 auto-rows-fr"
-             initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4 lg:gap-6 auto-rows-fr"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               {currentPosts.map((post) => (
                 <BlogCard post={post} key={post.id} />
               ))}

@@ -38,15 +38,15 @@ export  async function generateMetadata() {
 
 
 
-const kochiData = {
-        locationName: "Kochi",
-        address: "No.32/3071 – B | First Floor | Anjiparambil Building Ponnurunni | NH Bypass | Vyttila | Cochin – 682 019",
-        email: "mail@accoladesmedia.co.in",
-        phoneNumbers: ["+91 90726 19922", "+91 87143 04849"],
-        // For the map, you would typically use an embed URL from Google Maps.
-        // For demonstration, I'm using the provided image as a placeholder.
-        mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.338634640268!2d76.31439647589313!3d9.988860973224527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080cf7e6baeda3%3A0x1f053eaaf85f927b!2sACCOLADES%20Integrated%20Pvt.Ltd!5e0!3m2!1sen!2sin!4v1753441166710!5m2!1sen!2sin"
-    };
+// const kochiData = {
+//         locationName: "Kochi",
+//         address: "Accolades Integrated Pvt Ltd, Rahmath Building, 46/2056 - A, AKG Vayanasala Road, Chakkaraparambu,Vennala, Kochi, Ernakulam, Kerala 682028",
+//         email: "mail@accoladesmedia.co.in",
+//         phoneNumbers: ["+91 90726 19922", "+91 87143 04849"],
+//         // For the map, you would typically use an embed URL from Google Maps.
+//         // For demonstration, I'm using the provided image as a placeholder.
+//         mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.338634640268!2d76.31439647589313!3d9.988860973224527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080cf7e6baeda3%3A0x1f053eaaf85f927b!2sACCOLADES%20Integrated%20Pvt.Ltd!5e0!3m2!1sen!2sin!4v1753441166710!5m2!1sen!2sin"
+//     };
 
 
 
@@ -92,7 +92,7 @@ const page = () => {
        {/* <div className="bg-gradient-to-br from-[#ecf3f6] to-[#f1f5f5]"> */}
       <Herosection />
       <OurPresence />
-     <LocationDetailCard {...kochiData} />
+     <LocationDetailCard />
      <ContactForm />
      {/* </div> */}
       <Footer />

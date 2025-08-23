@@ -120,8 +120,9 @@ const ReachUs = () => {
                 Office Address
               </h4>
               <p>
-                No.32/3071 - B | First Floor Anjiparambil Building, Ponnurunni
-                NH Bypass, Vyttila, Kochi, Kerala 682019.
+                Accolades Integrated Pvt Ltd Rahmath Building, 46/2056 - A, AKG Vayanasala Road, Chakkaraparambu,
+         
+            Vennala, Kochi, Ernakulam, Kerala 682028
               </p>
             </div>
 

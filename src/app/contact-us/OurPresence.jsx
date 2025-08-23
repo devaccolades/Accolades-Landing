@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 export default function OurPresence() {
@@ -62,47 +61,7 @@ export default function OurPresence() {
         </motion.div>
       </motion.section>
 
-      <section className="relative containers mx-auto">
-        <div className="py-6">
-          {/* Desktop view */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={containerVariants}
-            className="hidden md:flex flex-wrap justify-between gap-4 text-[18px] md:text-[24px]"
-          >
-            {locations.map((loc) => (
-              <motion.button
-                key={loc}
-                className="bg-white text-[#3FB4BA] font-mont font-semibold py-3 px-10 rounded-xl shadow-sm hover:bg-gray-100 transition-colors duration-300"
-                variants={itemVariants}
-              >
-                {loc}
-              </motion.button>
-            ))}
-          </motion.div>
-
-          {/* Mobile swiper */}
-          <div className="block md:hidden">
-            <Swiper spaceBetween={12} slidesPerView={1.6}>
-              {locations.map((loc) => (
-                <SwiperSlide key={loc}>
-                  <motion.button
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    viewport={{ once: true }}
-                    className="w-full bg-white text-[#3FB4BA] font-mont font-semibold py-3 px-6 rounded-xl shadow-sm hover:bg-gray-100 transition-colors duration-300"
-                  >
-                    {loc}
-                  </motion.button>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
-      </section>
+     
     </>
   );
 }

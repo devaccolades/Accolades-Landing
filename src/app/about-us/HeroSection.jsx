@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import heroImg from "../../../public/about-us/img1.webp";
+import heroImg from "../../../public/about-us/Img1.webp";
 import float from "../../../public/about-us/floating.gif";
 import { motion } from "framer-motion";
 

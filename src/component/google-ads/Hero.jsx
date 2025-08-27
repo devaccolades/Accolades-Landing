@@ -15,6 +15,7 @@ import chat from "../../../public/g-ads-landing/herosection/chat_bubble.svg";
 
 const HeroSection = () => {
   const [clickedCard, setClickedCard] = useState(null); // For clicked state on all devices
+  const [hoveredCard, setHoveredCard] = useState(null); // For hover state on md+ devices
   const [screenWidth, setScreenWidth] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -64,8 +65,10 @@ const HeroSection = () => {
 
     let baseTransform = `translateX(${x}px) translateY(${y}px) rotate(${degree}deg)`;
 
-    // Click effect for all devices (only when modal is not open)
-    if (clickedCard === index && !isModalOpen) {
+    // Enhanced effect for clicked cards (all devices) or hovered cards (md+ devices)
+    const isActive = clickedCard === index || (hoveredCard === index && screenWidth >= 768);
+    
+    if (isActive && !isModalOpen) {
       return `${baseTransform} translateY(-30px) scale(1.05)`;
     }
 
@@ -77,12 +80,26 @@ const HeroSection = () => {
     setClickedCard(clickedCard === index ? null : index);
   };
 
+  // Handle card hover for md+ devices
+  const handleCardHover = (index) => {
+    if (screenWidth >= 768) {
+      setHoveredCard(index);
+    }
+  };
+
+  const handleCardLeave = () => {
+    if (screenWidth >= 768) {
+      setHoveredCard(null);
+    }
+  };
+
   // Handle enquire button click
   const handleEnquireClick = (e) => {
     e.stopPropagation(); // Prevent card click event
     setIsModalOpen(true);
     // Reset clicked card state when opening modal
     setClickedCard(null);
+    setHoveredCard(null);
   };
 
   return (
@@ -101,12 +118,16 @@ const HeroSection = () => {
 
       {/* Cards */}
       <div className="flex justify-center items-center h-50 md:h-72 relative">
-        {/* Enquire Now bubble for all devices (click) */}
+        {/* Enquire Now bubble for clicked cards (all devices) and hovered cards (md+ devices) */}
         {serviceCards.map(
-          (card, i) =>
-            clickedCard === i && !isModalOpen && (
+          (card, i) => {
+            const shouldShowButton = 
+              (clickedCard === i) || 
+              (hoveredCard === i && screenWidth >= 768);
+            
+            return shouldShowButton && !isModalOpen && (
               <div
-                key={`click-container-${card.id}`}
+                key={`button-container-${card.id}`}
                 className="absolute -mt-16 md:-mt-30 lg:-mt-40"
                 style={{
                   transform: `${getCardTransform(i).replace(
@@ -134,7 +155,8 @@ const HeroSection = () => {
                   />
                 </button>
               </div>
-            )
+            );
+          }
         )}
 
         {/* Card containers */}
@@ -145,15 +167,17 @@ const HeroSection = () => {
             style={{
               transform: getCardTransform(i),
               zIndex: 
-                (clickedCard === i && !isModalOpen) 
+                (clickedCard === i || (hoveredCard === i && screenWidth >= 768)) && !isModalOpen
                   ? 100 
                   : serviceCards.length - 1 - i,
               boxShadow:
-                (clickedCard === i && !isModalOpen)
+                (clickedCard === i || (hoveredCard === i && screenWidth >= 768)) && !isModalOpen
                   ? "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
                   : "0 10px 15px -3px rgba(0, 0, 0, 0.3)",
             }}
             onClick={() => handleCardClick(i)}
+            onMouseEnter={() => handleCardHover(i)}
+            onMouseLeave={handleCardLeave}
           >
             <Image
               src={card.imagePath}
@@ -162,7 +186,7 @@ const HeroSection = () => {
               className="object-cover transition-transform duration-500"
               style={{
                 transform: 
-                  (clickedCard === i && !isModalOpen)
+                  (clickedCard === i || (hoveredCard === i && screenWidth >= 768)) && !isModalOpen
                     ? "scale(1.1)" 
                     : "scale(1)",
               }}
@@ -191,17 +215,11 @@ const HeroSection = () => {
           >
             Book a Free Meeting
           </button>
-          {/* <button className="flex gap-2 items-center text-black px-2 xl:px-6 py-2 border rounded-[10px] border-[#E1E1E1] font-poppins font-bold text-[12px] md:text-[13px]"> */}
-          {/* <button 
-          className="flex gap-2 items-center text-black px-2 xl:px-6 py-3 transition-colors duration-200 font-poppins font-bold text-[13px] leading-[100%] border rounded-[10px] border-[#E1E1E1] ">
-            <Image src={chat} alt="Chat Icon" className="size-[14px]" />
-            Whatsapp us
-          </button> */}
           <a 
           href="https://wa.me/919048689977"   
           target="_blank"
           rel="noopener noreferrer"
-          className="flex gap-2 items-center text-black px-2 xl:px-6 py-3 transition-colors duration-200 font-poppins font-bold text-[13px] leading-[100%] border rounded-[10px] border-[#E1E1E1]">
+          className="flex gap-2 items-center text-black px-2 xl:px-6 py-2 transition-colors duration-200 font-poppins font-bold text-[13px] leading-[100%] border rounded-[10px] border-[#E1E1E1]">
           <Image src={chat} alt="Chat Icon" className="size-[14px]" />
           Whatsapp us
         </a>

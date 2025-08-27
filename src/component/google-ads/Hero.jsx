@@ -86,10 +86,10 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="py-16 flex flex-col items-center justify-center">
+    <div className="py-16 md:py-24 flex flex-col items-center justify-center">
       {/* Header */}
       <div className="text-center mb-4 xl:mb-6 max-w-4xl">
-        <h1 className="font-poppins font-medium  text-[34px] md:text-[42px] lg:text-[49px] xl:text-[56px] leading-[106%] tracking-[-0.6px] px-3">
+        <h1 className="font-poppins font-medium text-[34px] md:text-[42px] lg:text-[49px] xl:text-[56px] leading-[106%] tracking-[-0.6px]">
           Complete{" "}
           <span className="text-teal-600">
             digital, web <span className="text-black">&</span> creative
@@ -100,7 +100,7 @@ const HeroSection = () => {
       </div>
 
       {/* Cards */}
-      <div className="flex justify-center items-center h-50 md:h-72 lg:h-80 xl:h-90 relative">
+      <div className="flex justify-center items-center h-50 md:h-72 relative">
         {/* Enquire Now bubble for all devices (click) */}
         {serviceCards.map(
           (card, i) =>
@@ -169,8 +169,8 @@ const HeroSection = () => {
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            <div className="relative z-10 p-4 text-white h-full flex items-end">
-              <h3 className="font-poppins font-bold xl:text-[24px]">
+            <div className="relative z-10 p-2 md:p-4 text-white h-full flex items-end">
+              <h3 className="font-poppins font-bold xl:text-[22px] lg:text-[20px] md:text-[20px] text-[13px] xl:leading-[24px] lg:leading-[22px] md:leading-[22px] leading-[15px] ">
                 {card.title}
               </h3>
             </div>
@@ -180,7 +180,7 @@ const HeroSection = () => {
 
       {/* Bottom Section */}
       <div className="text-center max-w-2xl mx-auto">
-        <p className="font-poppins font-normal w-[90%] md:w-[75%] lg:w-[60%] mx-auto text-[13px] text-[#000000]">
+        <p className="font-poppins font-normal w-[90%] md:w-[75%] lg:w-[60%] mx-auto text-[14px] text-[#000000]">
           We combine creativity, technology, and strategy to deliver solutions
           that help businesses stand out, engage audiences, and grow online.
         </p>

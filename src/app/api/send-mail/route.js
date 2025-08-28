@@ -14,24 +14,31 @@ export async function POST(req) {
 
     const mailOptions = {
       from: `"Accolades Website" <${process.env.SMTP_EMAIL}>`,
-      to: "leadsaccolades@gmail.com", 
-      // to:"manjima.accolades@gmail.com",
+      to: "leadsaccolades@gmail.com",
+      // to: "manjima.accolades@gmail.com",
       subject: "New Reach Us Form Submission",
       html: `
         <h3>Reach Us Form Details</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong> ${message}</p>
+        <p><strong>Name:</strong> ${name || "N/A"}</p>
+        <p><strong>Email:</strong> ${email || "N/A"}</p>
+        <p><strong>Phone:</strong> ${phone || "N/A"}</p>
       `,
+
+      if(message) {
+        htmlContent += `<p><strong>Message:</strong> ${message}</p>`;
+      },
     };
 
     await transporter.sendMail(mailOptions);
-    return Response.json({ success: true, message: "Email sent successfully!" });
+    return Response.json({
+      success: true,
+      message: "Email sent successfully!",
+    });
   } catch (error) {
     console.error("Email send error:", error);
-    return Response.json({ success: false, message: "Failed to send email." }, { status: 500 });
+    return Response.json(
+      { success: false, message: "Failed to send email." },
+      { status: 500 }
+    );
   }
-
-  
 }

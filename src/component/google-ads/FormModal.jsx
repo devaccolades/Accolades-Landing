@@ -1,38 +1,35 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
+const validationSchema = Yup.object({
+  name: Yup.string()
+    .min(2, "Name must be at least 2 characters")
+    .required("Name is required"),
+  phone: Yup.string()
+    .matches(/^[0-9]{10}$/, "Phone must be 10 digits")
+    .required("Phone is required"),
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
+  message: Yup.string()
+    .min(5, "Message should be at least 5 characters")
+    .required("Message is required"),
+});
 
 const FormModal = ({ isOpen, onClose }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    message: "",
-  });
+  if (!isOpen) return null;
 
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-
+   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
       const res = await fetch("/api/send-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(values),
       });
 
-      console.log("Response status:", res.status);
-
       const data = await res.json();
-      console.log("API Response:", data);
 
       if (data.success) {
         Swal.fire({
@@ -41,7 +38,7 @@ const FormModal = ({ isOpen, onClose }) => {
           text: "We’ll get back to you soon!",
           confirmButtonColor: "#0d9488",
         });
-        setFormData({ name: "", phone: "", email: "", message: "" });
+        resetForm();
         onClose();
       } else {
         Swal.fire({
@@ -51,18 +48,15 @@ const FormModal = ({ isOpen, onClose }) => {
         });
       }
     } catch (error) {
-      console.error("Error sending form:", error);
       Swal.fire({
         icon: "error",
         title: "Error",
         text: "Failed to send message",
       });
     } finally {
-      setIsLoading(false);
+      setSubmitting(false);
     }
   };
-
-  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/40">
@@ -75,69 +69,88 @@ const FormModal = ({ isOpen, onClose }) => {
           &times;
         </button>
 
-        {/* <h2 className="text-2xl font-bold text-teal-600 mb-4">Get Started</h2> */}
-
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <Formik
+          initialValues={{ name: "", phone: "", email: "", message: "" }}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {({ isSubmitting }) => (
+        <Form className="space-y-4">
           <div>
             <label className="block text-gray-700 font-medium">Name</label>
-            <input
+            <Field
               name="name"
               type="text"
-              value={formData.name}
-              onChange={handleChange}
-              required
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="Your Name"
             />
+            <ErrorMessage
+              name="name"
+              component="div"
+              className="text-red-500 text-sm mt-1"
+              />
           </div>
+
           <div>
             <label className="block text-gray-700 font-medium">Phone</label>
-            <input
+            <Field
               name="phone"
               type="text"
-              value={formData.phone}
-              onChange={handleChange}
-              required
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="1234 567 8901"
             />
+            <ErrorMessage
+              name="phone"
+              component="div"
+              className="text-red-500 text-sm mt-1" 
+              />
           </div>
+
           <div>
             <label className="block text-gray-700 font-medium">Email</label>
-            <input
+            <Field
               name="email"
               type="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="you@example.com"
             />
+            <ErrorMessage
+              name="email"
+              component="div"
+              className="text-red-500 text-sm mt-1"
+              />
           </div>
+
           <div>
             <label className="block text-gray-700 font-medium">Message</label>
-            <textarea
+            <Field
+              as="textarea"
               name="message"
               rows="3"
-              value={formData.message}
-              onChange={handleChange}
-              required
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="Your Message"
-            ></textarea>
+            />
+            <ErrorMessage
+              name="message"
+              component="div"
+              className="text-red-500 text-sm mt-1"
+              />
           </div>
+
           <button
             type="submit"
-            disabled={isLoading}
+            disabled={isSubmitting}
             className={`w-full py-2 rounded-lg font-semibold transition-all ${
-              isLoading
+              isSubmitting
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-teal-600 text-white hover:bg-teal-700"
             }`}
           >
-            {isLoading ? "Sending..." : "Submit"}
+            {isSubmitting ? "Sending..." : "Submit"}
           </button>
-        </form>
+        </Form>
+          )}
+        </Formik>
       </div>
     </div>
   );

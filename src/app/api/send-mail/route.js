@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
-    const { name, email, phone } = await req.json();
+    const { name, email, phone, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
       service: "Gmail",
@@ -22,14 +22,11 @@ export async function POST(req) {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Message:</strong> ${message}</p>
       `,
     };
 
     await transporter.sendMail(mailOptions);
-    console.log("ENV EMAIL:", process.env.SMTP_EMAIL);
-console.log("Received:", { name, email, phone });
-
-
     return Response.json({ success: true, message: "Email sent successfully!" });
   } catch (error) {
     console.error("Email send error:", error);

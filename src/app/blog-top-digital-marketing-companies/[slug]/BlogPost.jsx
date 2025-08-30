@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";   // enables lists, tables, checkboxes, etc.
-import rehypeRaw from "rehype-raw";  
+import remarkGfm from "remark-gfm"; // enables lists, tables, checkboxes, etc.
+import rehypeRaw from "rehype-raw";
 import {
   Calendar,
   User,
@@ -23,24 +23,20 @@ import Icon1 from "../../../../public/blog/icon1.webp";
 import Icon2 from "../../../../public/blog/icon2.webp";
 import Icon3 from "../../../../public/blog/icon3.webp";
 import Icon4 from "../../../../public/blog/icon4.webp";
+import { BASE_URL } from "@/app/Server";
+import Link from "next/link";
 
-export default function BlogPost({ data, category }) {
-  console.log(data);
+export default function BlogPost({ data, category, blog, slug }) {
+  console.log("data", data);
+  console.log("blog", blog);
+  // console.log("slug", slug);
 
-  const relatedPosts = [
-    {
-      title: "Digital Marketing Strategies That Convert",
-      image: Img19,
-    },
-    {
-      title: "Creating an Effective Brand Identity Through Social Media",
-      image: Img20,
-    },
-    {
-      title: "The Ultimate Guide to Social Media Analytics and What They Mean",
-      image: Img21,
-    },
-  ];
+  const relatedPosts = blog
+    .filter((item) => item.blogs[0].id !== slug)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3);
+
+  console.log("relatedPosts", relatedPosts);
 
   const socialIcons = [
     {
@@ -102,7 +98,8 @@ export default function BlogPost({ data, category }) {
               {/* Content */}
               <div className="md:px-8 px-4 pb-6">
                 {/* <ReactMarkdown >{data?.description}</ReactMarkdown> */}
-                <div className="blog-content prose prose-lg max-w-none
+                <div
+                  className="blog-content prose prose-lg max-w-none
   [&_h1]:mt-8 [&_h1]:mb-4
   [&_h2]:mt-6 [&_h2]:mb-3
   [&_h3]:mt-4 [&_h3]:mb-2
@@ -110,14 +107,15 @@ export default function BlogPost({ data, category }) {
   [&_ul]:my-4 [&_ol]:my-4
   [&_ul]:list-disc [&_ul]:ml-6
   [&_ol]:list-decimal [&_ol]:ml-6
-">
-  <ReactMarkdown
-    remarkPlugins={[remarkGfm]}
-    rehypePlugins={[rehypeRaw]}
-  >
-    {data?.description}
-  </ReactMarkdown>
-</div>
+"
+                >
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeRaw]}
+                  >
+                    {data?.description}
+                  </ReactMarkdown>
+                </div>
               </div>
             </article>
           </motion.div>
@@ -139,14 +137,26 @@ export default function BlogPost({ data, category }) {
                 <div className="space-y-6">
                   {relatedPosts.map((post, index) => (
                     <div key={index} className="group cursor-pointer">
-                      <div className="flex gap-4">
-                        <Image src={post.image} alt={post.title} />
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-mont font-normal lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] group-hover:text-teal-600 transition-colors line-clamp-3">
-                            {post.title}
-                          </h4>
+                      <Link
+                        href={`/blog-top-digital-marketing-companies/${post?.blogs[0]?.id}`}
+                      >
+                        <div className="flex gap-4">
+                          <Image
+                            src={
+                              BASE_URL +
+                              post?.blogs[0]?.coverImage?.formats?.medium?.url
+                            }
+                            alt={post?.blogs[0]?.id}
+                            width={100}
+                            height={100}
+                          />
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-mont font-normal lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] group-hover:text-teal-600 transition-colors line-clamp-3">
+                              {post?.blogs[0].title}
+                            </h4>
+                          </div>
                         </div>
-                      </div>
+                      </Link>
                     </div>
                   ))}
                 </div>

@@ -20,7 +20,7 @@ export default async function page({ params }) {
       <Navbar />
       <main className="bg-[#F1F1F1]">
         <HeroSection data={data} />
-        <BlogPost data={data} category={data.category} />
+        <BlogPost data={data} category={data.category} blog={blog} slug={slug}/>
       </main>
       <main className="-mt-[65px]">
         <Footer />

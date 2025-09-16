@@ -109,7 +109,7 @@ const ReachUs = () => {
               Reach Us
             </h2>
             <p className="text-gray-600 font-mont text-lg mt-4">
-              Accolades is here to fulfil all your needs and leading you towards
+              Accolades is here to fulfill all your needs and leading you towards
               the light of knowledge.
             </p>
           </div>

@@ -20,6 +20,7 @@ export async function generateMetadata() {
   return {
     title: post[0]?.metaTitle,
     description: post[0]?.metaDescription,
+     keywords:"Best  digtal marketing agency in Kochi",
     openGraph: {
       title: post[0]?.ogTitle,
       description: post[0]?.ogDescription,

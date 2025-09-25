@@ -124,17 +124,18 @@ const FormModal = ({ isOpen, onClose, serviceTitle }) => {
                 />
               </div>
 
-               <div>
-                <Field
-                  name="service"
-                  type="text"
-                  placeholder="Selected service"
-                  value={serviceTitle || ""}
-                  hidden
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
-                />
-               
-              </div>
+              {serviceTitle && (
+  <div>
+    <Field
+      name="service"
+      type="text"
+      placeholder="Selected service"
+      value={serviceTitle || ""}
+      readOnly
+      className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+    />
+  </div>
+)}
 
               {/* Submit Button */}
               <button

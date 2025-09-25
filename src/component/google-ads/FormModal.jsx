@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+
+import React from "react";
 import Swal from "sweetalert2";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -13,17 +14,14 @@ const validationSchema = Yup.object({
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),
-  message: Yup.string()
-    .min(5, "Message should be at least 5 characters")
-    .required("Message is required"),
 });
 
-const FormModal = ({ isOpen, onClose }) => {
+const FormModal = ({ isOpen, onClose, serviceTitle }) => {
   if (!isOpen) return null;
 
-   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
-      const res = await fetch("/api/send-mail", {
+      const res = await fetch("/api/g-ads-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
@@ -59,99 +57,118 @@ const FormModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/40">
-      <div className="bg-white rounded-2xl p-6 shadow-lg w-[90%] max-w-lg relative animate-fade-in-up">
+    <div className="fixed inset-0 z-50 font-poppins flex items-center justify-center bg-white/60 backdrop-blur-sm">
+      <div className="relative w-[90%] max-w-lg rounded-3xl bg-white p-8 shadow-2xl border border-gray-200 animate-fade-in-up">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl"
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl"
         >
           &times;
         </button>
 
+        {/* Header */}
+        <h2 className="text-2xl font-bold text-center bg-gradient-to-r from-teal-600 to-cyan-500 bg-clip-text text-transparent mb-6">
+          Get in Touch ✨
+        </h2>
+
         <Formik
-          initialValues={{ name: "", phone: "", email: "", message: "" }}
+          initialValues={{ name: "", phone: "", email: "", service: serviceTitle || "" }}
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
           {({ isSubmitting }) => (
-        <Form className="space-y-4">
-          <div>
-            <label className="block text-gray-700 font-medium">Name</label>
-            <Field
-              name="name"
-              type="text"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-              placeholder="Your Name"
-            />
-            <ErrorMessage
-              name="name"
-              component="div"
-              className="text-red-500 text-sm mt-1"
-              />
-          </div>
+            <Form className="space-y-5">
+              {/* Name */}
+              <div>
+                <Field
+                  name="name"
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+                />
+                <ErrorMessage
+                  name="name"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
 
-          <div>
-            <label className="block text-gray-700 font-medium">Phone</label>
-            <Field
-              name="phone"
-              type="text"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-              placeholder="1234 567 8901"
-            />
-            <ErrorMessage
-              name="phone"
-              component="div"
-              className="text-red-500 text-sm mt-1" 
-              />
-          </div>
+              {/* Phone */}
+              <div>
+                <Field
+                  name="phone"
+                  type="text"
+                  placeholder="1234567890"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+                />
+                <ErrorMessage
+                  name="phone"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
 
-          <div>
-            <label className="block text-gray-700 font-medium">Email</label>
-            <Field
-              name="email"
-              type="email"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-              placeholder="you@example.com"
-            />
-            <ErrorMessage
-              name="email"
-              component="div"
-              className="text-red-500 text-sm mt-1"
-              />
-          </div>
+              {/* Email */}
+              <div>
+                <Field
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+                />
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
 
-          <div>
-            <label className="block text-gray-700 font-medium">Message</label>
-            <Field
-              as="textarea"
-              name="message"
-              rows="3"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-              placeholder="Your Message"
-            />
-            <ErrorMessage
-              name="message"
-              component="div"
-              className="text-red-500 text-sm mt-1"
-              />
-          </div>
+              {serviceTitle && (
+  <div>
+    <Field
+      name="service"
+      type="text"
+      placeholder="Selected service"
+      value={serviceTitle || ""}
+      readOnly
+      className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+    />
+  </div>
+)}
 
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className={`w-full py-2 rounded-lg font-semibold transition-all ${
-              isSubmitting
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-teal-600 text-white hover:bg-teal-700"
-            }`}
-          >
-            {isSubmitting ? "Sending..." : "Submit"}
-          </button>
-        </Form>
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full py-3 rounded-xl font-semibold text-lg shadow-md transition-all duration-300 ${
+                  isSubmitting
+                    ? "bg-gray-400 cursor-not-allowed text-white"
+                    : "bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-cyan-600 hover:to-teal-600"
+                }`}
+              >
+                {isSubmitting ? "Sending..." : "Submit"}
+              </button>
+            </Form>
           )}
         </Formik>
       </div>
+
+      <style jsx>{`
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in-up {
+          animation: fade-in-up 0.6s ease-out;
+        }
+      `}</style>
     </div>
   );
 };

@@ -111,10 +111,10 @@ const WhyChooseUs = () => {
       <div className="absolute top-10 right-10 w-6 h-6 border-2 border-white opacity-20 transform rotate-45 animate-spin-slow"></div>
       <div className="absolute bottom-32 left-16 w-8 h-8 border-2 border-white opacity-20 animate-bounce"></div>
       
-      <div ref={sectionRef} className="containers relative z-10 container mx-auto px-6 py-20">
+      <div ref={sectionRef} className="containers relative z-10 container mx-auto px-0 md:px-6 py-16 md:py-20">
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 md:gap-8 mb-16">
-          <div className="relative">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 md:gap-8 mb-10 md:mb-16">
+          <div className="relative font-poppins">
             <StatCard 
               number={counters.projects} 
               suffix="+" 
@@ -122,7 +122,7 @@ const WhyChooseUs = () => {
               delay={0}
             />
           </div>
-          <div className="relative">
+          <div className="relative font-poppins">
             <StatCard 
               number={counters.experience} 
               suffix="+" 
@@ -130,7 +130,7 @@ const WhyChooseUs = () => {
               delay={200}
             />
           </div>
-          <div className="relative">
+          <div className="relative font-poppins">
             <StatCard 
               number={counters.customers} 
               suffix="+" 
@@ -138,7 +138,7 @@ const WhyChooseUs = () => {
               delay={400}
             />
           </div>
-          <div className="relative">
+          <div className="relative font-poppins">
             <StatCard 
               number={counters.team} 
               suffix="+" 
@@ -150,16 +150,16 @@ const WhyChooseUs = () => {
 
         {/* Main Content */}
         <div className="text-center text-white max-w-4xl mx-auto">
-          <h2 className={`text-3xl md:text-5xl font-bold mb-2 md:mb-4 lg:mb-8 ${
+          <h2 className={`font-poppins text-2xl md:text-5xl font-bold mb-2 md:mb-4 lg:mb-8 ${
             isVisible ? 'animate-fade-in-up' : 'opacity-0'
           }`} style={{animationDelay: '800ms'}}>
             Why Choose Us.
           </h2>
           
-          <div className={`text-sm md:text-xl leading-relaxed font-light ${
+          <div className={`text-sm font-poppins md:text-xl leading-relaxed font-light ${
             isVisible ? 'animate-fade-in-up' : 'opacity-0'
           }`} style={{animationDelay: '1000ms'}}>
-            <p className="mb-6">
+            <p className="mb-6 font-poppins">
               We strictly believe in maximizing your sales, captivate appropriate traffic to your 
               official website, and turn visitors into your potential customers. 
             </p>
@@ -174,7 +174,7 @@ const WhyChooseUs = () => {
           }`} style={{animationDelay: '1200ms'}}>
             <button 
             onClick={() => setIsModalOpen(true)}
-            className="bg-white text-teal-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+            className="bg-white text-teal-600 font-poppins px-10 py-4 rounded-full font-bold text-sm md:text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started Today
             </button>
           </div>

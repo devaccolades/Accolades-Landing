@@ -58,7 +58,7 @@ const OurClients = () => {
   return (
     <section className="w-full py-10 bg-gray-50">
       <div className="containers">
-        <h2 className="text-[24px] md:text-[36px] lg:text-[48px] font-bold text-center text-gray-800 mb-5">
+        <h2 className="font-poppins text-[24px] md:text-[36px] lg:text-[48px] font-bold text-center text-gray-800 mb-5">
           Trusted by <span className="text-teal-600">Our Clients</span>
         </h2>
 

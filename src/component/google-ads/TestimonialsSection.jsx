@@ -4,10 +4,11 @@
 import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
-  { id: 1, title: "Classic Homes", url: "l8W-wF_mv-Y" },
-  { id: 2, title: "Skyline Builders", url: "0zPvh90Ntgc" },
-  { id: 3, title: "TJP Mats Pvt. Ltd", url: "6hgmP2xyLxg" },
-  { id: 4, title: "Jomon Chacko, Partner at Prism", url: "YVyiTkWDVzU" },
+   { id: 1, title: "National Builders", url: "EC2C0YB4luc" },
+  { id: 2, title: "Classic Homes", url: "l8W-wF_mv-Y" },
+  { id: 3, title: "Skyline Builders", url: "0zPvh90Ntgc" },
+  { id: 4, title: "TJP Mats Pvt. Ltd", url: "6hgmP2xyLxg" },
+ 
 ];
 
 const TestimonialsSection = () => {
@@ -22,37 +23,79 @@ const TestimonialsSection = () => {
     }
   }, []);
 
+  // useEffect(() => {
+  //   if (activeVideo !== null && window.YT && window.YT.Player) {
+  //     const video = testimonials.find((t) => t.id === activeVideo);
+
+  //     if (playersRef.current[activeVideo]) {
+  //       playersRef.current[activeVideo].destroy();
+  //     }
+
+  //     playersRef.current[activeVideo] = new window.YT.Player(
+  //       `player-${activeVideo}`,
+  //       {
+  //         videoId: video.url,
+  //         playerVars: {
+  //           autoplay: 1,
+  //           modestbranding: 1,
+  //           controls: 1,
+  //           rel: 0,
+  //         },
+  //         events: {
+  //           onStateChange: (event) => {
+  //             if (event.data === window.YT.PlayerState.ENDED) {
+  //               playersRef.current[activeVideo]?.destroy();
+  //               playersRef.current[activeVideo] = null;
+  //               setActiveVideo(null);
+  //             }
+  //           },
+  //         },
+  //       }
+  //     );
+  //   }
+  // }, [activeVideo]);
   useEffect(() => {
-    if (activeVideo !== null && window.YT && window.YT.Player) {
-      const video = testimonials.find((t) => t.id === activeVideo);
+  if (activeVideo !== null && window.YT && window.YT.Player) {
+    const video = testimonials.find((t) => t.id === activeVideo);
 
-      if (playersRef.current[activeVideo]) {
-        playersRef.current[activeVideo].destroy();
+    // Stop all other players before starting new one
+    Object.keys(playersRef.current).forEach((key) => {
+      if (playersRef.current[key] && key !== String(activeVideo)) {
+        playersRef.current[key].stopVideo();
       }
+    });
 
-      playersRef.current[activeVideo] = new window.YT.Player(
-        `player-${activeVideo}`,
-        {
-          videoId: video.url,
-          playerVars: {
-            autoplay: 1,
-            modestbranding: 1,
-            controls: 1,
-            rel: 0,
-          },
-          events: {
-            onStateChange: (event) => {
-              if (event.data === window.YT.PlayerState.ENDED) {
-                playersRef.current[activeVideo]?.destroy();
-                playersRef.current[activeVideo] = null;
-                setActiveVideo(null);
-              }
-            },
-          },
-        }
-      );
+    // If the player already exists, just play it again
+    if (playersRef.current[activeVideo]) {
+      playersRef.current[activeVideo].playVideo();
+      return;
     }
-  }, [activeVideo]);
+
+    // Otherwise, create a new player
+    playersRef.current[activeVideo] = new window.YT.Player(
+      `player-${activeVideo}`,
+      {
+        videoId: video.url,
+        playerVars: {
+          autoplay: 1,
+          modestbranding: 1,
+          controls: 1,
+          rel: 0,
+        },
+        events: {
+          onStateChange: (event) => {
+            if (event.data === window.YT.PlayerState.ENDED) {
+              playersRef.current[activeVideo]?.destroy();
+              playersRef.current[activeVideo] = null;
+              setActiveVideo(null);
+            }
+          },
+        },
+      }
+    );
+  }
+}, [activeVideo]);
+
 
   return (
     <section className="py-10 relative overflow-hidden ">
@@ -104,12 +147,12 @@ const TestimonialsSection = () => {
         {/* Header with retro styling */}
         <div className="text-center mb-8">
           <div className="inline-block">
-            <h2 className="text-2xl md:text-5xl font-bold bg-gradient-to-r from-gray-700 via-teal-500 to-gray-800 bg-clip-text text-transparent mb-4 animate-pulse">
-              CLIENT TESTIMONIALS
+            <h2 className="text-2xl md:text-5xl font-poppins font-bold bg-gradient-to-r from-gray-700 via-teal-500 to-gray-800 bg-clip-text text-transparent mb-4 animate-pulse">
+              Client Testimonial
             </h2>
-            <div className="h-1 w-full bg-gradient-to-r from-cyan-400 via-white to-cyan-500 rounded-full mb-4"></div>
+            <div className="h-1 font-poppins w-full bg-gradient-to-r from-cyan-400 via-white to-cyan-500 rounded-full mb-4"></div>
           </div>
-          <p className="text-sm md:text-xl text-gray-600 mt-6 font-light tracking-wide">
+          <p className="text-sm  font-poppins md:text-xl text-gray-600 mt-6 font-light tracking-wide">
             Experience the success stories of our valued partners
           </p>
         </div>
@@ -164,7 +207,7 @@ const TestimonialsSection = () => {
                           {/* Play button */}
                           <div className="relative bg-gradient-to-r from-cyan-500 to-cyan-600 text-white px-4 md:px-6 py-2 rounded-full font-bold text-sm shadow-lg transform group-hover/play:scale-110 transition-all duration-300 border-2 border-white/30">
                             <span className="flex items-center gap-2">
-                              <span className="text-sm">▶</span>
+                              <span className="text-sm font-poppins">▶</span>
                               PLAY
                             </span>
                           </div>
@@ -177,7 +220,7 @@ const TestimonialsSection = () => {
                 {/* Title section with retro styling */}
                 <div className="p-2 border-t border-cyan-200/30">
                   <div className="text-center">
-                    <h3 className="text-sm lg:text-xl font-bold bg-gradient-to-r from-gray-700 to-cyan-600 bg-clip-text text-transparent mb-2">
+                    <h3 className="font-poppins text-sm lg:text-xl font-bold bg-gradient-to-r from-gray-700 to-cyan-600 bg-clip-text text-transparent mb-2">
                       {item.title}
                     </h3>
                     <div className="w-12 h-0.5 bg-gradient-to-r from-cyan-400 to-cyan-600 mx-auto rounded-full"></div>

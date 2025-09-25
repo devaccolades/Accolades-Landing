@@ -19,7 +19,7 @@ export const servicesData = [
     icon: smm,
   },
   {
-    title: "Search Engine Optimization (SEO)",
+    title: "Search Engine Optimization",
     description:
       "SEO stands for Search Engine Optimization. It is the process of taking steps to help a website or a piece of content rank higher on Google.",
     icon: seo,

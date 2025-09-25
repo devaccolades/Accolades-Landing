@@ -1,10 +1,23 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { servicesData } from "@/Data/ServicesData";
 import Image from "next/image";
 import Waves from "./Waves";
+import FormModal from "./FormModal";
 
 const Services = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState("");
+
+  const handleEnquiryClick = (serviceTitle) => {
+    setSelectedService(serviceTitle);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedService("");
+  };
   return (
     <section className="relative w-full py-16 overflow-hidden ">
       <div className="absolute inset-0 -z-10">
@@ -20,7 +33,7 @@ const Services = () => {
       </div>
 
       {/* Content */}
-      <div className="containers mx-auto px-6">
+      <div className="containers mx-auto px-2 md:px-6">
         <div className="text-center mb-12">
           <h2 className="font-poppins text-[24px] md:text-[36px] lg:text-[48px] font-bold text-center ">
             Our Services
@@ -37,17 +50,24 @@ const Services = () => {
               title={service.title}
               description={service.description}
               icon={service.icon}
+              onEnquiryClick={handleEnquiryClick}
             />
           ))}
         </div>
       </div>
+      {/* Form Modal */}
+      <FormModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        serviceTitle={selectedService}
+      />
     </section>
   );
 };
 
-export const ServiceCard = ({ icon, title, description }) => {
+export const ServiceCard = ({ icon, title, description, onEnquiryClick }) => {
   return (
-    <div className="bg-white/90 rounded-2xl shadow-md p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center">
+    <div className="bg-white/90 rounded-2xl shadow-md p-4 md:p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center">
 
       <div className="relative w-[100px] h-[100px] flex items-center justify-center">
         {/* Outer Spinner */}
@@ -66,9 +86,16 @@ export const ServiceCard = ({ icon, title, description }) => {
       </h3>
 
       {/* Description */}
-      <p className="text-gray-600 text-sm md:text-base leading-relaxed font-poppins">
+      <p className="text-gray-600 text-sm md:text-base leading-relaxed font-poppins mb-2">
         {description}
       </p>
+     <button
+        onClick={() => onEnquiryClick(title)}
+        className="mt-auto bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+      >
+        Enquire Now
+      </button>
+
     </div>
   );
 };

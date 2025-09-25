@@ -8,6 +8,7 @@ import TestimonialsSection from "@/component/google-ads/TestimonialsSection";
 import WhyChooseUs from "@/component/google-ads/WhyChoose";
 import Image from "next/image";
 import img from "../../../public/telephone.png";
+import wat from  "../../../public/g-ads-landing/icons//whatsapp_icon.png"
 
 export default function Home() {
   return (
@@ -29,6 +30,20 @@ export default function Home() {
           className="w-14 h-14"
         />
       </a>
+       <a
+          href="https://wa.me/919048689977" // Replace with actual number
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-26 right-6 z-50"
+        >
+          <Image
+            src={wat}
+            width={56}
+            height={56}
+            alt="Chat on WhatsApp"
+            className="w-14 h-14"
+          />
+        </a>
     </>
   );
 }

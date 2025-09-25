@@ -106,10 +106,10 @@ const HeroSection = () => {
     <div className="py-16 md:py-24 flex flex-col items-center justify-center">
       {/* Header */}
       <div className="text-center mb-4 xl:mb-6 max-w-4xl">
-        <h1 className="font-poppins font-medium text-[34px] md:text-[42px] lg:text-[49px] xl:text-[56px] leading-[106%] tracking-[-0.6px]">
+        <h1 className="font-poppins font-medium text-[34px] md:text-[42px] lg:text-[49px] xl:text-[52px] leading-[106%] tracking-[-0.6px]">
           Complete{" "}
           <span className="text-teal-600">
-            digital, web <span className="text-black">&</span> creative
+            Digital, Web <span className="text-black">&</span> Creative
           </span>
           <br />
           <span className="px-3">solutions under one roof.</span>

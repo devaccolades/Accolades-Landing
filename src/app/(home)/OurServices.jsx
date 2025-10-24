@@ -18,22 +18,22 @@ const services = [
     icon: digital,
   },
   {
-    title: "Web Development",
-    description:
-      "Get your website developed exactly to fit your business requirements. We build cross-browser compatible and responsive sites with the latest features for optimal performance.",
-
-    bgColor: "bg-[#FDEFEF]", // Light pink
-    textColor: "text-[#C94A4A]", // Darker red
-    icon: web,
-  },
-  {
     title: "Creative Design",
     description:
-      "We provide creative design for social media and digital ads along with graphic designs like brochure, magazine ads to elevate your brand’s online presence.  ",
-
+    "We provide creative design for social media and digital ads along with graphic designs like brochure, magazine ads to elevate your brand’s online presence.  ",
+    
     bgColor: "bg-[#e1d4fa]", // Light Violet
     textColor: "text-[#64489e]", // Dark Violet
     icon: creative,
+  },
+  {
+    title: "Web Development",
+    description:
+      "Get your website developed exactly to fit your business requirements. We build cross-browser compatible and responsive sites with the latest features for optimal performance.",
+  
+    bgColor: "bg-[#FDEFEF]", // Light pink
+    textColor: "text-[#C94A4A]", // Darker red
+    icon: web,
   },
 ];
 

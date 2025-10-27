@@ -13,6 +13,8 @@ import Footer from "@/component/Footer";
 import Navbar from "@/component/Navbar";
 import { BASE_URL, getSeo } from "./Server";
 import TestimonialSlider from "./(home)/TestimonialSlider";
+import WebsiteProjects from "./services/web-development/WebsiteProjects";
+import WebProjects from "./(home)/WebProjects";
 
 export const dynamic = "force-dynamic";
 
@@ -51,6 +53,7 @@ export default function page() {
       <ClientSlider />
       {/* <Testimonials /> */}
       <TestimonialSlider />
+      <WebProjects />
       <ReachUs />
       <Footer />
     </>

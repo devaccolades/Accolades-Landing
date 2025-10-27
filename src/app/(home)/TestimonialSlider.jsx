@@ -219,7 +219,7 @@ export default function TestimonialSlider() {
         }}
         className="pb-1 "
       >
-        {testimonials.concat(testimonials).map((item, i) => (
+        {testimonials.concat(testimonials, testimonials).map((item, i) => (
           <SwiperSlide key={i}>
             <motion.div
               whileHover={{ scale: 1.03 }}
@@ -270,7 +270,7 @@ export default function TestimonialSlider() {
     
       >
         <div className="min-h-[480px]">
-        {testimonials.concat(testimonials).map((item, i) => (
+        {testimonials.concat(testimonials, testimonials).map((item, i) => (
           <SwiperSlide key={i}>
             <motion.div
               whileHover={{ scale: 1.03 }}

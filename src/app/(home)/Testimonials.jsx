@@ -5,7 +5,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { FaQuoteLeft } from "react-icons/fa";
-import user from "../../../public/testimonial-dp.webp";
+import user from "../../../public/account.png";
 import bottom from "../../../public/home/bottom-line.webp";
 
 import client from "../../../public/Group 213.webp";
@@ -78,7 +78,73 @@ const testimonials = [
     bgColor: "bg-purple-100",
     quoteColor: "text-purple-300",
   },
-];
+  {
+    id: 7,
+    name: "Aju Abraham Mathew",
+    role: "",
+    content:
+  
+    "We have been working with Accolades Integrated for over five years and are extremely pleased with their services. Their team is highly dedicated and professional, consistently delivering creative solutions tailored to our requirements. Mr. Jagesh’s expert advice on digital marketing strategies has been particularly valuable, helping us achieve impactful results on various platforms. We highly recommend Accolades Integrated for their expertise and client-centric approach."  ,
+
+    avatar: user,
+    bgColor: "bg-green-100",
+    quoteColor: "text-green-300",  
+  },
+
+   {
+    id: 8,
+    name: "Akex Joseph",
+    role: "",
+    content:
+      "We are a client of Accolades Media. The professional approach taken in online marketing has brought us great satisfaction. This company is excellent for digital marketing, and we recommend it. Wishing you all the best",
+    avatar: user,
+    bgColor: "bg-blue-100",
+    quoteColor: "text-blue-300",
+  },
+  {
+    id: 9,
+    name: "Joseph Mampilly",
+    role: "",
+    content:
+    "Worked with accolades for few of my clients. I do prefer them for more of my upcoming projects. Prompt response from client service. Always there a call away",
+    avatar: user,
+    bgColor: "bg-pink-100",
+    quoteColor: "text-pink-300",
+  },
+   {
+    id: 10,
+    name: "Nidhin Mohan",
+    role: "Graphic Designer, MGM Muthoot Hospitals",
+    content:
+    "It's great pleasure to associate with Accolades for last one year and to understand better ideas and to get beautiful designs from them. For someone from medical fretanity I personally suggest Accolades for digital promo.Thanks to the entire team of Accolades",
+    avatar: user,
+    bgColor: "bg-blue-100",
+    quoteColor: "text-blue-300",
+  },
+  {
+    id: 11,
+    name: "Connect With GK",
+    role: "",
+    content:
+    "The future of marketing is certainly having a great influence on the way we participate in the cloud space. The Team at ACCOLADES are very passionate about their work & creative. My clients are getting tremendous results from their CAMPAIGN Management. Great work ...",
+    avatar: user,
+    bgColor: "bg-blue-100",
+    quoteColor: "text-blue-300",
+  },
+  {
+    id: 12,
+    name: " Jubeerich Bussiness",
+    role: "",
+    content:
+    "  Accolades media is one of the best professional SEO and Digital marketing providers. Thank you for providing us best services for our business.",
+    avatar: user,
+    bgColor: "bg-blue-100",
+    quoteColor: "text-blue-300",
+  },
+
+  
+    ];
+
 
 const Testimonials = () => {
   return (

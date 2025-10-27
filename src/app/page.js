@@ -12,6 +12,7 @@ import ReachUs from "./(home)/ReachUs";
 import Footer from "@/component/Footer";
 import Navbar from "@/component/Navbar";
 import { BASE_URL, getSeo } from "./Server";
+import TestimonialSlider from "./(home)/TestimonialSlider";
 
 export const dynamic = "force-dynamic";
 
@@ -48,7 +49,8 @@ export default function page() {
       <ProjectSlider />
       <OurClients />
       <ClientSlider />
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <TestimonialSlider />
       <ReachUs />
       <Footer />
     </>

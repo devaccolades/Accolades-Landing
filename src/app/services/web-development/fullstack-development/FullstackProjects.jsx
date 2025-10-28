@@ -40,11 +40,11 @@ const projects = [
     link: "https://cidbi.com/",
   },
 
-  {
-    title: "NATIONAL BUILDERS",
-    image: img7,
-    link: "https://nationalbuilders.in/",
-  },
+  // {
+  //   title: "NATIONAL BUILDERS",
+  //   image: img7,
+  //   link: "https://nationalbuilders.in/",
+  // },
 ];
 
 export default function FullstackProjects() {

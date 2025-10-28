@@ -26,7 +26,7 @@ const projects = [
   { title: "ATC KODANAD", image: img4, link: "https://atckodanad.com/" },
   { title: "CIDBI", image: img5, link: "https://cidbi.com/" },
   { title: "GO GREEN COMPANY", image: img6, link: "https://ggc-travel.com/" },
-  { title: "NATIONAL BUILDERS", image: img7, link: "https://nationalbuilders.in/" },
+  // { title: "NATIONAL BUILDERS", image: img7, link: "https://nationalbuilders.in/" },
   { title: "GREEN TEA", image: img8, link: "https://greenteahotels.com/" },
 ];
 

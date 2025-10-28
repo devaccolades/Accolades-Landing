@@ -393,7 +393,7 @@ const testimonials = [
    {
     id: 10,
     name: "Nidhin Mohan",
-    title: "Graphic Designer, MGM Muthoot Hospitals",
+    title: "MGM Muthoot Hospitals",
     text:
     "It's great pleasure to associate with Accolades for last one year and to understand better ideas and to get beautiful designs from them. For someone from medical fretanity I personally suggest Accolades for digital promo.Thanks to the entire team of Accolades",
     logo: user,
@@ -465,7 +465,7 @@ export default function TestimonialSlider() {
           swiper.el.addEventListener("mouseleave", () => swiper.autoplay.start());
         }}
         onTouchEnd={(swiper) => swiper.autoplay.start()}
-        className="pb-1"
+        className="pb-1 "
       >
         {repeatedSlides.map((item, i) => (
           <SwiperSlide key={i}>
@@ -482,11 +482,11 @@ export default function TestimonialSlider() {
                   className="rounded-full mr-3 object-cover"
                 />
                 <div>
-                  <h4 className="font-semibold text-gray-800">{item.name}</h4>
-                  <p className="text-sm text-gray-500">{item.title}</p>
+                  <h4 className="font-semibold text-[12px] xl:text-sm text-gray-800">{item.name}</h4>
+                  <p className="text-[12px] xl:text-sm text-gray-500">{item.title}</p>
                 </div>
               </div>
-              <p className="text-gray-700 rounded-2xl pt-4 px-4 pb-0 min-h-[270px] bg-white text-[10px] md:text-[12px] lg:text-sm leading-relaxed">
+              <p className="text-gray-700 rounded-2xl pt-4 px-4 pb-0 min-h-[270px] bg-white text-[10px] md:text-[12px] xl:text-sm leading-relaxed">
                 {item.text}
               </p>
             </motion.div>
@@ -536,11 +536,11 @@ export default function TestimonialSlider() {
                   className="rounded-full mr-3 object-cover"
                 />
                 <div>
-                  <h4 className="font-semibold text-gray-800">{item.name}</h4>
-                  <p className="text-sm text-gray-500">{item.title}</p>
+                  <h4 className="font-semibold text-[12px] xl:text-sm text-gray-800">{item.name}</h4>
+                  <p className="text-[12px] xl:text-sm text-gray-500">{item.title}</p>
                 </div>
               </div>
-              <p className="text-gray-700 rounded-2xl px-4 pt-4 pb-0 min-h-[270px] bg-white text-[10px] md:text-[12px] lg:text-sm leading-relaxed">
+              <p className="text-gray-700 rounded-2xl px-4 pt-4 pb-0 min-h-[270px] bg-white text-[10px] md:text-[12px] xl:text-sm leading-relaxed">
                 {item.text}
               </p>
             </motion.div>

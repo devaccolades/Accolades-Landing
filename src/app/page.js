@@ -51,12 +51,11 @@ export default function page() {
       <ProjectSlider />
       <OurClients />
       <ClientSlider />
-      {/* <Testimonials /> */}
-      <TestimonialSlider />
+      <Testimonials />
+      {/* <TestimonialSlider /> */}
       <WebProjects />
       <ReachUs />
       <Footer />
     </>
   );
 }
-

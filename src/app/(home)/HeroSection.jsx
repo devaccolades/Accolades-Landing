@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import socialgiff from "../../../public/home/Accolades-banner-elements.gif";
 import topline from "../../../public/home/top-line.webp";
+import LightRays from "@/components/LightRays";
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState("");
@@ -46,37 +47,89 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="containers flex flex-col-reverse md:flex-row justify-between gap-6 pt-[100px]  items-center">
-        {/* Text Content */}
-        <div className="w-full md:w-1/2 flex justify-start md:justify-start">
-          <div className="text-left">
-            <h3 className="text-[24px] font-mont md:text-[32px] lg:text-[36px] font-medium leading-tight">
-              We are
-            </h3>
-            <h3 className="text-[#3FB4BA] text-[44px] md:text-[56px] xl:text-[60px] font-semibold leading-tight relative">
-              <span>{displayText}</span>
-              <span className="animate-pulse text-[#3FB4BA] font-mont">|</span>
-            </h3>
-            <h3 className="font-bold font-mont text-[44px] md:text-[56px] xl:text-[60px] leading-tight">
-              Different
-            </h3>
-            <h3 className="text-[16px] md:text-[20px] xl:text-[28px]  font-mont font-normal leading-tight mt-2">
-              We help your business grow through digital innovation.
-            </h3>
+      <div className="relative h-[110vh] -mt-21">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#34c3cb"
+          raysSpeed={1.5}
+          lightSpread={1.3}
+          rayLength={1.2}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0.1}
+          distortion={0.05}
+          opacity={0.02}
+          className="absolute inset-0 opacity-60"
+        />
+
+        <div className="absolute inset-0 h-screen containers flex flex-col pt-[200px]">
+          <div className="relative z-20 text-center flex flex-col justify-center items-center ">
+            <div className="bg-black w-fit px-[20px] py-[10px] rounded-full">
+              <p className="text-[16px] font-bold text-white">
+                Digital Creative Web
+              </p>
+            </div>
+            <div className="flex flex-col justify-center items-center mt-[10px]">
+              <p className="font-mont uppercase text-[64px] leading-[62px] font-extrabold">
+                Ideas that <span className="text-[#0C7379]"> Inspire.</span>{" "}
+              </p>
+              <p className="font-mont uppercase text-[64px] leading-[62px] font-extrabold">
+                Design that <span className="text-[#0C7379]"> Engages.</span>{" "}
+              </p>
+              <p className="font-mont uppercase text-[64px] leading-[62px] font-extrabold">
+                Tech that <span className="text-[#0C7379]"> Works.</span>{" "}
+              </p>
+            </div>
+            <p className="text-[14px] leading-[18px] font-normal mt-[14px]">
+              From campaigns to code — we shape digital experiences that
+              perform.
+            </p>
+          </div>
+          <div className="flex w-full mt-10">
+            <Image
+              src={"/home/todo.svg"}
+              alt="todos image"
+              width={100}
+              height={100}
+              className="h-[193px] w-fit object-contain object-center"
+            />
+            <Image
+              src={"/home/todo2.svg"}
+              alt="todos image"
+              width={100}
+              height={100}
+              className="h-[193px] w-fit object-contain object-center"
+            />
+            <Image
+              src={"/home/todo3.svg"}
+              alt="todos image"
+              width={100}
+              height={100}
+              className="h-[193px] w-fit object-contain object-center"
+            />
+            <Image
+              src={"/home/todo4.svg"}
+              alt="todos image"
+              width={100}
+              height={100}
+              className="h-[193px] w-fit object-contain object-center"
+            />
+            <Image
+              src={"/home/todo5.svg"}
+              alt="todos image"
+              width={100}
+              height={100}
+              className="h-[193px] w-fit object-contain object-center"
+            />
+            <Image
+              src={"/home/todo6.svg"}
+              alt="todos image"
+              width={100}
+              height={100}
+              className="h-[193px] w-fit object-contain object-center"
+            />
           </div>
         </div>
-        {/* Animated Image */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <Image
-            src={socialgiff}
-            alt="Social"
-            className="w-[80%] ml-auto h-auto md:h-[400px] xl:h-[500px] md:w-auto"
-          />
-        </div>
-      </div>
-      {/* Bottom Topline */}
-      <div className="containers py-10  md:py-24">
-        <Image src={topline} alt="Decorative Line" className="w-full h-auto" />
       </div>
     </>
   );

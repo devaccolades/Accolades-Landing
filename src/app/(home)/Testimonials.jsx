@@ -85,15 +85,15 @@ const testimonials = [
     name: "Aju Abraham Mathew",
     role: "Client Experience",
     content:
-  
-    "We have been working with Accolades Integrated for over five years and are extremely pleased with their services. Their team is highly dedicated and professional, consistently delivering creative solutions tailored to our requirements. Mr. Jagesh’s expert advice on digital marketing strategies has been particularly valuable, helping us achieve impactful results on various platforms. We highly recommend Accolades Integrated for their expertise and client-centric approach."  ,
+
+      "We have been working with Accolades Integrated for over five years and are extremely pleased with their services. Their team is highly dedicated and professional, consistently delivering creative solutions tailored to our requirements. Mr. Jagesh’s expert advice on digital marketing strategies has been particularly valuable, helping us achieve impactful results on various platforms. We highly recommend Accolades Integrated for their expertise and client-centric approach.",
 
     avatar: user,
     bgColor: "bg-green-100",
-    quoteColor: "text-green-300",  
+    quoteColor: "text-green-300",
   },
 
-   {
+  {
     id: 8,
     name: "Akex Joseph",
     role: "Client Experience",
@@ -108,17 +108,17 @@ const testimonials = [
     name: "Joseph Mampilly",
     role: "Client Experience",
     content:
-    "Worked with accolades for few of my clients. I do prefer them for more of my upcoming projects. Prompt response from client service. Always there a call away",
+      "Worked with accolades for few of my clients. I do prefer them for more of my upcoming projects. Prompt response from client service. Always there a call away",
     avatar: user,
     bgColor: "bg-pink-100",
     quoteColor: "text-pink-300",
   },
-   {
+  {
     id: 10,
     name: "Nidhin Mohan",
     role: " MGM Muthoot Hospitals",
     content:
-    "It's great pleasure to associate with Accolades for last one year and to understand better ideas and to get beautiful designs from them. For someone from medical fretanity I personally suggest Accolades for digital promo.Thanks to the entire team of Accolades",
+      "It's great pleasure to associate with Accolades for last one year and to understand better ideas and to get beautiful designs from them. For someone from medical fretanity I personally suggest Accolades for digital promo.Thanks to the entire team of Accolades",
     avatar: user,
     bgColor: "bg-blue-100",
     quoteColor: "text-blue-300",
@@ -128,7 +128,7 @@ const testimonials = [
     name: "Connect With GK",
     role: "Client Experience",
     content:
-    "The future of marketing is certainly having a great influence on the way we participate in the cloud space. The Team at ACCOLADES are very passionate about their work & creative. My clients are getting tremendous results from their CAMPAIGN Management. Great work ...",
+      "The future of marketing is certainly having a great influence on the way we participate in the cloud space. The Team at ACCOLADES are very passionate about their work & creative. My clients are getting tremendous results from their CAMPAIGN Management. Great work ...",
     avatar: user,
     bgColor: "bg-blue-100",
     quoteColor: "text-blue-300",
@@ -138,14 +138,14 @@ const testimonials = [
     name: " Jubeerich Bussiness",
     role: "Client Experience",
     content:
-    "  Accolades media is one of the best professional SEO and Digital marketing providers. Thank you for providing us best services for our business.",
+      "  Accolades media is one of the best professional SEO and Digital marketing providers. Thank you for providing us best services for our business.",
     avatar: user,
     bgColor: "bg-blue-100",
     quoteColor: "text-blue-300",
   },
 
-  
-    ];
+
+];
 
 
 const Testimonials = () => {
@@ -164,195 +164,215 @@ const Testimonials = () => {
           Testimonials
         </h3>
       </div>
-      
-    <div className="gap-0">
-      <div className="py-1 ">
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={20}
-          slidesPerView={1}
-          loop={true}
-          // pagination={{ clickable: true }}
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 1.6,
-            },
-            1024: {
-              slidesPerView: 2.5,
-            },
-            1280: {
-              slidesPerView: 2.5,
-            },
-          }}
-        >
-          {testimonials.map((t) => (
-            <SwiperSlide key={t.id}>
-              <div
-                className={`rounded-3xl p-2 md:p-8 min-h-[350px] ${t.bgColor} transition-shadow shadow-md hover:shadow-xl flex flex-col`}
-              >
-                <div className="flex flex-column-2 mt-auto justify-start mb-4 gap-4">
-                  <div>
-                   <Image
-                    src={t.avatar}
-                    alt={t.name}
-                    width={50}
-                    height={50}
-                    className="rounded-full mb-4 object-cover"
+
+      <div className="gap-0">
+        <div className="py-1 ">
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            loop={true}
+            // pagination={{ clickable: true }}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 1.6,
+              },
+              1024: {
+                slidesPerView: 2.5,
+              },
+              1280: {
+                slidesPerView: 2.5,
+              },
+            }}
+          >
+            {testimonials.map((t) => (
+              <SwiperSlide key={t.id}>
+                <div
+                  className={`rounded-3xl p-6 md:p-8 min-h-[250px] ${t.bgColor} transition-shadow shadow-md hover:shadow-xl flex flex-col`}
+                >
+                  <div className="flex flex-column-2 mt-auto justify-start mb-4 gap-4">
+                    <div>
+                      <Image
+                        src={t.avatar}
+                        alt={t.name}
+                        width={50}
+                        height={50}
+                        className="rounded-full mb-4 object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-semibold font-mont">{t.name}</p>
+                      <p className="text-sm text-gray-600 font-mont">{t.role}</p>
+                    </div>
+                  </div>
+                  <FaQuoteRight
+                    className={`text-5xl  ${t.quoteColor} absolute top-8 right-8 opacity-30`}
                   />
-                  </div>
-                  <div>
-                  <p className="font-semibold font-mont">{t.name}</p>
-                  <p className="text-sm text-gray-600 font-mont">{t.role}</p>
-                  </div>
-                </div>
-                <FaQuoteRight
-                  className={`text-5xl  ${t.quoteColor} absolute top-8 right-8 opacity-30`}
-                />
-                <div className="flex flex-col items-center text-center flex-grow">
-                  {/* <Image
+                  <div className="flex flex-col items-center text-center flex-grow">
+                    {/* <Image
                     src={t.avatar}
                     alt={t.name}
                     width={70}
                     height={70}
                     className="rounded-full mb-4 object-cover"
                   /> */}
-                  <p className="text-gray-700 font-mont text-[13px] md:text-[14px] mb-4 flex-grow line-clamp-3 cursor-pointer"
-                  onClick={() => setSelectedTestimonial(t)}>
-                    {t.content}
-                  </p>
-                  {/* <div className="mt-auto">
+                    <div className="w-full">
+                      <p
+                        className="text-gray-700 font-mont text-[13px] md:text-[14px] mb-4 cursor-pointer overflow-hidden text-ellipsis"
+                        style={{
+                          display: "-webkit-box",
+                          WebkitLineClamp: 3,
+                          WebkitBoxOrient: "vertical",
+                        }}
+                        onClick={() => setSelectedTestimonial(t)}
+                      >
+                        {t.content}
+                      </p>
+                    </div>
+
+                    {/* <div className="mt-auto">
                   <p className="font-semibold font-mont">{t.name}</p>
                   <p className="text-sm text-gray-600 font-mont">{t.role}</p>
                   </div> */}
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-       <div className="py-1 ">
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={20}
-          slidesPerView={1}
-          loop={true}
-          // pagination={{ clickable: true }}
-          autoplay={{
-          delay:1000,
-          reverseDirection: true,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: false,
-        }}
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 1.6,
-            },
-            1024: {
-              slidesPerView: 2.5,
-            },
-            1280: {
-              slidesPerView: 2.5,
-            },
-          }}
-        >
-          {testimonials.map((t) => (
-            <SwiperSlide key={t.id}>
-              <div
-                className={`rounded-3xl p-2 md:p-8 min-h-[350px] ${t.bgColor} transition-shadow shadow-md hover:shadow-xl flex flex-col`}
-              >
-                <div className="flex flex-column-2 mt-auto justify-start mb-4 gap-4">
-                  <div>
-                   <Image
-                    src={t.avatar}
-                    alt={t.name}
-                    width={50}
-                    height={50}
-                    className="rounded-full mb-4 object-cover"
-                  />
-                  </div>
-                  <div>
-                  <p className="font-semibold font-mont">{t.name}</p>
-                  <p className="text-sm text-gray-600 font-mont">{t.role}</p>
                   </div>
                 </div>
-                <FaQuoteRight
-                  className={`text-5xl  ${t.quoteColor} absolute top-8 right-8 opacity-30`}
-                />
-                <div className="flex flex-col items-center text-center flex-grow">
-                  {/* <Image
-                    src={t.avatar}
-                    alt={t.name}
-                    width={70}
-                    height={70}
-                    className="rounded-full mb-4 object-cover"
-                  /> */}
-                  <p onClick={() => setSelectedTestimonial(t)}
-                 className="text-gray-700 font-mont text-[13px] md:text-[14px] mb-4 flex-grow line-clamp-4 cursor-pointer">
-                    {t.content}
-                  </p>
-                  {/* <div className="mt-auto">
-                  <p className="font-semibold font-mont">{t.name}</p>
-                  <p className="text-sm text-gray-600 font-mont">{t.role}</p>
-                  </div> */}
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-
-      {selectedTestimonial && (
-  <div
-    className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50 p-4"
-    onClick={() => setSelectedTestimonial(null)}
-  >
-    <div
-      className="bg-white rounded-3xl p-6 md:p-10 max-w-lg w-full relative shadow-lg"
-      onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
-    >
-      <button
-        onClick={() => setSelectedTestimonial(null)}
-        className="absolute top-4 right-4 text-gray-500 hover:text-black"
-      >
-        <X size={24} />
-      </button>
-
-      <div className="flex items-center gap-4 mb-4">
-        <Image
-          src={selectedTestimonial.avatar}
-          alt={selectedTestimonial.name}
-          width={60}
-          height={60}
-          className="rounded-full object-cover"
-        />
-        <div>
-          <p className="font-semibold font-mont">{selectedTestimonial.name}</p>
-          <p className="text-sm text-gray-600 font-mont">
-            {selectedTestimonial.role}
-          </p>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
+        <div className="py-1 ">
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            loop={true}
+            // pagination={{ clickable: true }}
+            autoplay={{
+              delay: 1000,
+              reverseDirection: true,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 1.6,
+              },
+              1024: {
+                slidesPerView: 2.5,
+              },
+              1280: {
+                slidesPerView: 2.5,
+              },
+            }}
+          >
+            {testimonials.map((t) => (
+              <SwiperSlide key={t.id}>
+                <div
+                  className={`rounded-3xl p-6 md:p-8 min-h-[250px] ${t.bgColor} transition-shadow shadow-md hover:shadow-xl flex flex-col`}
+                >
+                  <div className="flex flex-column-2 mt-auto justify-start mb-4 gap-4">
+                    <div>
+                      <Image
+                        src={t.avatar}
+                        alt={t.name}
+                        width={50}
+                        height={50}
+                        className="rounded-full mb-4 object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-semibold font-mont">{t.name}</p>
+                      <p className="text-sm text-gray-600 font-mont">{t.role}</p>
+                    </div>
+                  </div>
+                  <FaQuoteRight
+                    className={`text-5xl  ${t.quoteColor} absolute top-8 right-8 opacity-30`}
+                  />
+                  <div className="flex flex-col items-center text-center flex-grow">
+                    {/* <Image
+                    src={t.avatar}
+                    alt={t.name}
+                    width={70}
+                    height={70}
+                    className="rounded-full mb-4 object-cover"
+                  /> */}
+                    <div className="w-full">
+                      <p
+                        className="text-gray-700 font-mont text-[13px] md:text-[14px] mb-4 cursor-pointer overflow-hidden text-ellipsis"
+                        style={{
+                          display: "-webkit-box",
+                          WebkitLineClamp: 3,
+                          WebkitBoxOrient: "vertical",
+                        }}
+                        onClick={() => setSelectedTestimonial(t)}
+                      >
+                        {t.content}
+                      </p>
+                    </div>
+
+                    {/* <div className="mt-auto">
+                  <p className="font-semibold font-mont">{t.name}</p>
+                  <p className="text-sm text-gray-600 font-mont">{t.role}</p>
+                  </div> */}
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+
+        {selectedTestimonial && (
+          <div
+            className="fixed inset-0 bg-gray-100 bg-opacity-40 flex justify-center items-center z-50 p-4"
+            onClick={() => setSelectedTestimonial(null)}
+          >
+            <div
+              className="bg-white rounded-3xl p-6 md:p-10 max-w-lg w-full relative shadow-lg"
+              onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+            >
+              <button
+                onClick={() => setSelectedTestimonial(null)}
+                className="absolute top-4 right-4 text-gray-500 hover:text-black"
+              >
+                <X size={24} />
+              </button>
+
+              <div className="flex items-center gap-4 mb-4">
+                <Image
+                  src={selectedTestimonial.avatar}
+                  alt={selectedTestimonial.name}
+                  width={60}
+                  height={60}
+                  className="rounded-full object-cover"
+                />
+                <div>
+                  <p className="font-semibold font-mont">{selectedTestimonial.name}</p>
+                  <p className="text-sm text-gray-600 font-mont">
+                    {selectedTestimonial.role}
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-gray-700 font-mont text-[14px] leading-relaxed">
+                {selectedTestimonial.content}
+              </p>
+            </div>
+          </div>
+        )}
+
+
       </div>
-
-      <p className="text-gray-700 font-mont text-[14px] leading-relaxed">
-        {selectedTestimonial.content}
-      </p>
-    </div>
-  </div>
-)}
-
-
-    </div>
       <Image
         src={bottom}
         alt="bottom-line"

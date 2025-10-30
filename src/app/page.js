@@ -42,8 +42,8 @@ export  async function generateMetadata() {
 export default function page() {
   return (
     <>
-      {/* <Navbar />
-      <HeroSection /> */}
+      <Navbar />
+      <HeroSection />
       <Accolades />
       <OurServices />
       <Count />

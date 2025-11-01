@@ -9,7 +9,7 @@ const Accolades = () => {
   return (
     <>
       {/* <section className="containers flex flex-col md:grid md:grid-cols-2 justify-center items-center  gap-10"> */}
-      <section className="containers flex flex-col md:grid md:grid-cols-2 md:place-items-center gap-10">
+      <section className="containers flex flex-col md:grid md:grid-cols-2 md:place-items-center gap-10 pt-5">
         <div className="w-auto h-full flex justify-center items-center">
           <Image
             src={stack}

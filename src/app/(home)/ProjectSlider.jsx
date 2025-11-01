@@ -22,6 +22,22 @@ import p10 from "../../../public/home/10-min.png";
 import p11 from "../../../public/home/11-min.png";
 import p12 from "../../../public/home/12-min.png";
 
+import p13 from "../../../public/home/posters/p1.jpg";
+import p14 from "../../../public/home/posters/p2.jpg";
+import p15 from "../../../public/home/posters/p3.jpg";
+import p16 from "../../../public/home/posters/p4.jpg";
+import p17 from "../../../public/home/posters/p5.jpg";
+import p18 from "../../../public/home/posters/p6.jpg";
+import p19 from "../../../public/home/posters/p7.jpg";
+import p20 from "../../../public/home/posters/p8.jpg";
+import p21 from "../../../public/home/posters/p9.jpg";
+import p22 from "../../../public/home/posters/p10.jpg";
+import p23 from "../../../public/home/posters/p11.jpg";
+import p24 from "../../../public/home/posters/p12.jpg";
+import p25 from "../../../public/home/posters/p13.jpg";
+import p26 from "../../../public/home/posters/p14.jpg";
+
+
 const fallbackImages = [
   { id: 1, src: alappat, alt: "Alappat" },
   { id: 2, src: family, alt: "Family" },
@@ -38,6 +54,20 @@ const fallbackImages = [
   // { id: 3, src: niahara, alt: "Niahara" },
   // { id: 6, src: silk, alt: "silk" },
   // { id: 5, src: family, alt: "Family" },
+  { id: 12, src: p13, alt: "Poster 1" },
+  { id: 13, src: p14, alt: "Poster 2" },
+  { id: 14, src: p15, alt: "Poster 3" },    
+  { id: 15, src: p16, alt: "Poster 4" },
+  { id: 16, src: p17, alt: "Poster 5" },
+  { id: 17, src: p18, alt: "Poster 6" },
+  { id: 18, src: p19, alt: "Poster 7" },
+  { id: 19, src: p20, alt: "Poster 8" },
+  { id: 20, src: p21, alt: "Poster 9" },
+  { id: 21, src: p22, alt: "Poster 10" },
+  { id: 22, src: p23, alt: "Poster 11" },
+  { id: 23, src: p24, alt: "Poster 12" },
+  { id: 24, src: p25, alt: "Poster 13" },
+  { id: 25, src: p26, alt: "Poster 14" },
 ];
 const ProjectSlider = ({ images = fallbackImages }) => {
   const sliderKey = useMemo(() => {

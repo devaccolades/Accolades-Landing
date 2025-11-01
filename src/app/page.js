@@ -18,7 +18,7 @@ import WebProjects from "./(home)/WebProjects";
 
 export const dynamic = "force-dynamic";
 
-export  async function generateMetadata() {
+export async function generateMetadata() {
   const name = "home";
 
   // fetch post information
@@ -37,7 +37,6 @@ export  async function generateMetadata() {
     },
   };
 }
-
 
 export default function page() {
   return (

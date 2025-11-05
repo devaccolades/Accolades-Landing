@@ -32,10 +32,10 @@ import p19 from "../../../public/home/posters/p7.jpg";
 import p20 from "../../../public/home/posters/p8.jpg";
 import p21 from "../../../public/home/posters/p9.jpg";
 import p22 from "../../../public/home/posters/p10.jpg";
-import p23 from "../../../public/home/posters/p11.jpg";
-import p24 from "../../../public/home/posters/p12.jpg";
-import p25 from "../../../public/home/posters/p13.jpg";
-import p26 from "../../../public/home/posters/p14.jpg";
+import p23 from "../../../public/home/posters/2.jpg";
+import p24 from "../../../public/home/posters/3.jpg";
+import p25 from "../../../public/home/posters/4.jpg";
+import p26 from "../../../public/home/posters/Untitled-1.jpg";
 
 
 const fallbackImages = [

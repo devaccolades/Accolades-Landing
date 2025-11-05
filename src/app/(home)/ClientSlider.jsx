@@ -56,7 +56,7 @@ const logos = [
 const ClientSlider = () => {
   return (
     <>
-      <section className="py-10">
+      {/* <section className="py-10">
         <Swiper
           loop={true}
           autoplay={{
@@ -106,7 +106,7 @@ const ClientSlider = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </section>
+      </section> */}
       <Image
         src={bottom}
         alt="bottom-line"

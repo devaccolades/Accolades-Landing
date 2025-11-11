@@ -266,14 +266,14 @@ const Navbar = () => {
           className="my-custom-class"
         >
           {/* <Link href="/"> */}
-            <Image
-              src={logo}
-              alt="logo"
-              height={100}
-              width={100}
-              priority
-              className="h-[28px] w-full object-contain md:w-[205px] md:h-[38px] cursor-pointer"
-            />
+          <Image
+            src={logo}
+            alt="logo"
+            height={100}
+            width={100}
+            priority
+            className="h-[28px] w-full object-contain md:w-[205px] md:h-[38px] cursor-pointer"
+          />
           {/* </Link> */}
           <div className="hidden lg:flex items-center gap-[40px]">
             <Link href="/">
@@ -316,9 +316,11 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="flex flex-row items-center gap-[10px]">
-            <button className="bg-[#0C7379] py-[8px] px-[12px] md:py-[10px] md:px-[16px] text-white rounded-[10px] text-[12px] md:text-[16px] font-bold leading-[100%] cursor-pointer">
-              WhatsApp now
-            </button>
+            <Link href={"https://wa.me/919048689977"}>
+              <button className="bg-[#0C7379] py-[8px] px-[12px] md:py-[10px] md:px-[16px] text-white rounded-[10px] text-[12px] md:text-[16px] font-bold leading-[100%] cursor-pointer">
+                WhatsApp now
+              </button>
+            </Link>
             <div className="md:hidden">
               <Image
                 src={"/home/nav.svg"}
@@ -354,14 +356,14 @@ const Navbar = () => {
           className="my-custom-class"
         >
           {/* <Link href="/"> */}
-            <Image
-              src={logo}
-              alt="logo"
-              height={500}
-              width={500}
-              priority
-              className="h-[30px] w-full  md:w-[205px] md:h-[38px] cursor-pointer"
-            />
+          <Image
+            src={logo}
+            alt="logo"
+            height={500}
+            width={500}
+            priority
+            className="h-[30px] w-full  md:w-[205px] md:h-[38px] cursor-pointer"
+          />
           {/* </Link> */}
           <div className="hidden lg:flex items-center gap-[40px]">
             <Link href="/">
@@ -438,4 +440,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

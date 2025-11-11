@@ -5,6 +5,7 @@ import socialgiff from "../../../public/home/Accolades-banner-elements.gif";
 import topline from "../../../public/home/top-line.webp";
 import LightRays from "@/components/LightRays";
 import LogoLoop from "@/components/LogoLoop";
+import Link from "next/link";
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState("");
@@ -72,12 +73,18 @@ const HeroSection = () => {
   ];
 
   const todo = [
-    "/home/todo.svg",
-    "/home/todo2.svg",
-    "/home/todo3.svg",
-    "/home/todo4.svg",
-    "/home/todo5.svg",
-    "/home/todo6.svg",
+    { label: "/home/todo.svg", route: "/google-ads" },
+    { label: "/home/todo2.svg", route: "/services/digital-marketing/smm" },
+    { label: "/home/todo3.svg", route: "/services/digital-marketing/seo" },
+    {
+      label: "/home/todo4.svg",
+      route: "/services/digital-marketing/content-marketing",
+    },
+    {
+      label: "/home/todo5.svg",
+      route: "/services/creative/branding-packaging",
+    },
+    { label: "/home/todo6.svg", route: "/services/services/web-development" },
   ];
 
   return (
@@ -121,7 +128,7 @@ const HeroSection = () => {
             </p>
           </div>
           <div className="flex flex-wrap justify-center w-full mt-10 ">
-            {todo && todo.map((item) => <Todos key={item} item={item} />)}
+            {todo && todo.map((item) => <Todos key={item.label} item={item} />)}
 
             <style jsx>{`
               @keyframes shake {
@@ -189,15 +196,17 @@ export default HeroSection;
 
 const Todos = ({ item }) => {
   return (
-    <div className="mobile-shake">
-      <Image
-        src={item}
-        alt="todos image"
-        width={100}
-        height={100}
-        className="h-[144px] md:h-[193px] w-fit object-contain object-center 
-      hover:[animation:shake_0.3s_ease-in-out_infinite] "
-      />
-    </div>
+    <Link href={item.route}>
+      <div className="mobile-shake">
+        <Image
+          src={item.label}
+          alt="todos image"
+          width={100}
+          height={100}
+          className="h-[144px] md:h-[193px] w-fit object-contain object-center 
+        hover:[animation:shake_0.3s_ease-in-out_infinite] "
+        />
+      </div>
+    </Link>
   );
 };

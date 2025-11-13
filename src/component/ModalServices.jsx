@@ -114,19 +114,19 @@ export default function ModalServices({ isOpen, onClose }) {
                   return (
                     <div key={index} className="flex flex-col">
                       <div className="flex gap-2 md:gap-5 justify-between items-center">
-                        <div className="flex gap-2 md:gap-5">
-                          <p className="text-[10px] md:text-[13px] mt-2 md:mt-3">{`0${
-                            index + 1
-                          }`}</p>
-                          <p className="font-monst text-[24px] lg:text-[40px] text-[#0C7379]">
-                            {services}
-                          </p>
-                        </div>
+                        <Link href={page.href}>
+                          <div className="flex gap-2 md:gap-5 items-center cursor-pointer hover:opacity-80 transition">
+                            <p className="text-[10px] md:text-[13px] mt-2 md:mt-3">{`0${index + 1}`}</p>
+                            <p className="font-monst text-[24px] lg:text-[40px] text-[#0C7379]">
+                              {services}
+                            </p>
+                          </div>
+                        </Link>
+
                         <button>
                           <IoIosArrowDown
-                            className={`text-[16px] md:text-[24px] ${
-                              openIndex === index ? "rotate-180" : "rotate-0"
-                            }`}
+                            className={`text-[16px] md:text-[24px] ${openIndex === index ? "rotate-180" : "rotate-0"
+                              }`}
                             onClick={() =>
                               setOpenIndex(openIndex === index ? null : index)
                             }

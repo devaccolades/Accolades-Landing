@@ -39,7 +39,7 @@ export async function generateMetadata() {
 export default function page() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <HeroSection />
       <Accolades />
       <OurServices />

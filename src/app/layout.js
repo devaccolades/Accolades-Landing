@@ -59,7 +59,8 @@ export default function RootLayout({ children }) {
         className={`${mont.variable} ${zenOldMincho.variable} ${geistSans.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
      
-      <LayoutWrapper />
+      {/* <LayoutWrapper /> */}
+      {/* <Navbar /> */}
         {children}
       </body>
     </html>

@@ -73,7 +73,7 @@ const HeroSection = () => {
   ];
 
   const todo = [
-    { label: "/home/todo.svg", route: "/google-ads" },
+    { label: "/home/todo.svg", route: "/services/digital-marketing/search-engine-marketing" },
     { label: "/home/todo2.svg", route: "/services/digital-marketing/smm" },
     { label: "/home/todo3.svg", route: "/services/digital-marketing/seo" },
     {
@@ -89,7 +89,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="relative h-full  [@media(min-width:1800px)]:h-[95vh] -mt-21 pb-10">
+      <div className="relative h-full  [@media(min-width:1800px)]:h-[95vh]  pb-10">
         <div className="absolute inset-0 opacity-60 z-0">
           <LightRays
             raysOrigin="top-center"

@@ -137,7 +137,7 @@ export default function ModalServices({ isOpen, onClose }) {
                         page.services.map((service, index) => (
                           <Link href={service.href} key={index}>
                             <div className="ml-10 h-fit" key={index}>
-                              <p className="capitalize text-[16px] lg:text-[20px] leading-[20px] leading-[43px] text-[#0C7379]">
+                              <p className="capitalize text-[16px] lg:text-[20px] leading-[20px] md:leading-[43px] text-[#0C7379]">
                                 {service.label}
                               </p>
                             </div>

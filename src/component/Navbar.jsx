@@ -88,7 +88,7 @@ const Navbar = () => {
 
   // Service pages data
   const servicePages = {
-    Creative: {
+    "Creative Services": {
       title: "Creative Services",
       href: "/services/creative",
       services: [
@@ -246,7 +246,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="hidden lg:block sticky top-[10px] md:top-10 containers z-50">
+      <nav className="hidden lg:block fixed inset-0 top-[10px] md:top-10 containers z-50">
         <GlassSurface
           width={"100%"}
           height={59}

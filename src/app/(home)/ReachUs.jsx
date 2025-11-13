@@ -52,52 +52,52 @@ const ReachUs = () => {
 
   // ✅ Handle form submission
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (!validate()) return;
+    if (!validate()) return;
 
-  setLoading(true);
+    setLoading(true);
 
-  try {
-    const res = await fetch("/api/send-mail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    const result = await res.json();
-
-    if (result.success) {
-      Swal.fire({
-        title: "✅ Success!",
-        text: "Submitted successfully!",
-        icon: "success",
-        confirmButtonColor: "#17AABF",
+    try {
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
-      setFormData({ phone: "", email: "", name: "" });
-    } else {
+      const result = await res.json();
+
+      if (result.success) {
+        Swal.fire({
+          title: "✅ Success!",
+          text: "Submitted successfully!",
+          icon: "success",
+          confirmButtonColor: "#17AABF",
+        });
+
+        setFormData({ phone: "", email: "", name: "" });
+      } else {
+        Swal.fire({
+          title: "❌ Failed!",
+          text: "Submission failed. Please try again.",
+          icon: "error",
+          confirmButtonColor: "#d33",
+        });
+      }
+    } catch (error) {
+      console.error("Email submit error:", error);
       Swal.fire({
-        title: "❌ Failed!",
-        text: "Submission failed. Please try again.",
+        title: "⚠️ Error!",
+        text: "Something went wrong. Please try again later.",
         icon: "error",
         confirmButtonColor: "#d33",
       });
+    } finally {
+      setLoading(false);
     }
-  } catch (error) {
-    console.error("Email submit error:", error);
-    Swal.fire({
-      title: "⚠️ Error!",
-      text: "Something went wrong. Please try again later.",
-      icon: "error",
-      confirmButtonColor: "#d33",
-    });
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
 
   return (
@@ -121,20 +121,31 @@ const ReachUs = () => {
               </h4>
               <p>
                 Accolades Integrated Pvt Ltd Rahmath Building, 46/2056 - A, AKG Vayanasala Road, Chakkaraparambu,
-         
-            Vennala, Kochi, Ernakulam, Kerala 682028
+
+                Vennala, Kochi, Ernakulam, Kerala 682028
               </p>
             </div>
 
             <div>
               <h4 className="text-[#17AABF] font-mont font-semibold mb-1">Call Us</h4>
-              <p>+91 7072619922</p>
+              <a
+                href="tel:+917072619922"
+                className="text-gray-800 hover:text-[#17AABF] transition-colors duration-200"
+              >
+                +91 7072619922
+              </a>
             </div>
 
             <div>
               <h4 className="text-[#17AABF] font-mont font-semibold mb-1">Mail Us</h4>
-              <p>mail@accoladesmedia.co.in</p>
+              <a
+                href="mailto:mail@accoladesmedia.co.in"
+                className="text-gray-800 hover:text-[#17AABF] transition-colors duration-200"
+              >
+                mail@accoladesmedia.co.in
+              </a>
             </div>
+
           </div>
 
           <div className="w-full md:w-[30%] flex-1">
@@ -189,14 +200,7 @@ const ReachUs = () => {
                 {loading ? "Loading..." : "Submit"}
               </button>
 
-              {/* {submitMessage && (
-                <p
-                  className={`text-sm mt-2 ${messageType === "success" ? "text-green-600" : "text-red-500"
-                    }`}
-                >
-                  {submitMessage}
-                </p>
-              )} */}
+
             </form>
           </div>
         </div>

@@ -68,6 +68,8 @@ export default function WebProjects() {
         <div className="mt-16 ml-[5%] lg:ml-[10%]">
           <Swiper
             modules={[Navigation, Pagination]}
+            pagination={{ clickable:true}}
+            
             slidesPerView={1}
             breakpoints={{
               320: { slidesPerView: 1.2, spaceBetween: 20 },
@@ -78,7 +80,7 @@ export default function WebProjects() {
             {projects.map((project, index) => (
               <SwiperSlide key={index}>
                 <motion.div
-                  className="flex flex-col items-center"
+                  className="flex flex-col pb-10 items-center"
                   variants={fadeUp}
                   initial="hidden"
                   whileInView="show"

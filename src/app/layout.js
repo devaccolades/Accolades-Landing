@@ -3,6 +3,8 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import { Zen_Old_Mincho } from "next/font/google";
 import localFont from "next/font/local";
+import Navbar from "@/component/Navbar";
+import LayoutWrapper from "@/component/LayoutWrapper";
 
 const poppins = localFont({
   src: [
@@ -52,10 +54,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="relative">
       <body
         className={`${mont.variable} ${zenOldMincho.variable} ${geistSans.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
+     
+      <LayoutWrapper />
         {children}
       </body>
     </html>

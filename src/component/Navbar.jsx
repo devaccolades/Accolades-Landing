@@ -88,7 +88,7 @@ const Navbar = () => {
 
   // Service pages data
   const servicePages = {
-    "Creative Services": {
+    Creative : {
       title: "Creative Services",
       href: "/services/creative",
       services: [
@@ -246,7 +246,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="hidden lg:block fixed inset-0 top-[10px] md:top-10 containers z-50">
+      <nav className="hidden lg:block fixed inset-0 top-[10px] md:top-10  containers z-50">
+        <div className="pointer-events-auto">
         <GlassSurface
           width={"100%"}
           height={59}
@@ -265,7 +266,7 @@ const Navbar = () => {
           blueOffset={0}
           className="my-custom-class"
         >
-          {/* <Link href="/"> */}
+          <Link href="/">
           <Image
             src={logo}
             alt="logo"
@@ -274,7 +275,7 @@ const Navbar = () => {
             priority
             className="h-[28px] w-full object-contain md:w-[205px] md:h-[38px] cursor-pointer"
           />
-          {/* </Link> */}
+          </Link>
           <div className="hidden lg:flex items-center gap-[40px]">
             <Link href="/">
               <p
@@ -333,6 +334,7 @@ const Navbar = () => {
             </div>
           </div>
         </GlassSurface>
+        </div>
       </nav>
 
       {/* for mobile view */}
@@ -427,6 +429,7 @@ const Navbar = () => {
             </div>
           </div>
         </GlassSurface>
+        
       </nav>
 
       {isModalOpen && (

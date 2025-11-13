@@ -87,6 +87,7 @@ export default function FullstackProjects() {
           <Swiper
             modules={[Navigation, Pagination]}
             slidesPerView={1}
+            pagination={{ clickable:true}}
             breakpoints={{
               320: { slidesPerView: 1.2, spaceBetween: 20 },
               768: { slidesPerView: 1.5, spaceBetween: 30 },
@@ -96,7 +97,7 @@ export default function FullstackProjects() {
             {projects.map((project, index) => (
               <SwiperSlide key={index}>
                 <motion.div
-                  className="flex flex-col items-center"
+                  className="flex flex-col items-center pb-10"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{

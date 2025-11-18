@@ -4,7 +4,7 @@ import HeroSection from "./HeroSection";
 import Latest from "./Latest";
 
 function BlogThings({ data }) {
-  console.log(data);
+  // console.log(data);
   const [selectedTag, setSelectedTag] = useState("All");
   return (
     <>

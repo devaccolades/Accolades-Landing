@@ -21,7 +21,7 @@ export async function generateMetadata() {
 
   // fetch post information
   const post = await getSeo(name);
-  console.log("post", post[0].ogTitle);
+  // console.log("post", post[0].ogTitle);
 
   return {
     title: post[0]?.metaTitle,

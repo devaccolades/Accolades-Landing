@@ -5,7 +5,7 @@ import Img9 from "../../../../public/blog/heroImg.png";
 import { BASE_URL } from "@/app/Server";
 
 export default function HeroSection({ data }) {
-  console.log('data', data)
+  // console.log('data', data)
   return (
     <>
       <motion.div

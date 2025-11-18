@@ -87,7 +87,7 @@ const WhatOurClientsSay = ({ data }) => {
       combinedTestimonials.push({ type: "text", data: textTestimonials[i] });
   }
 
-  console.log("combinedTestimonials", combinedTestimonials);
+  // console.log("combinedTestimonials", combinedTestimonials);
 
   return (
     <section className="ml-0 md:ml-20 mx-auto px-4 py-10">

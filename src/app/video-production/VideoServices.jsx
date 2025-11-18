@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 function VideoServices({ data }) {
-  console.log("data", data[0]);
+  // console.log("data", data[0]);
   const [selected, setSelected] = useState(data[0].name);
   const [loading, setLoading] = useState({});
   const contents = data;

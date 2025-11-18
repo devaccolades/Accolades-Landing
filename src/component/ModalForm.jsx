@@ -7,7 +7,7 @@ function ModalForm() {
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
-    console.log("Form submitted with:", { name, phone, message });
+    // console.log("Form submitted with:", { name, phone, message });
     e.preventDefault();
 
     if (!name || !phone || !message) {
@@ -30,7 +30,7 @@ function ModalForm() {
     });
 
     const result = await res.json();
-    console.log("Form submission result:", result);
+    // console.log("Form submission result:", result);
   };
 
   return (

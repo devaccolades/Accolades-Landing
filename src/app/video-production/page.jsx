@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'; // makes this page render dynamically
+
 import React from "react";
 import Header from "@/Layout/Header";
 import Image from "next/image";
@@ -28,7 +30,7 @@ async function page() {
   const featured = await getFeaturedParteners();
   const client = await getWhatOurClientSays();
   const modal = await getModalVideo();
-  console.log("modal", video);
+  // console.log("modal", video);
 
   return (
     <>

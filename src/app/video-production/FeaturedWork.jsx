@@ -77,7 +77,7 @@ const featuredWorks = [
 ];
 
 const FeaturedWorks = ({ data }) => {
-  console.log("Featured Works Data:", data);
+  // console.log("Featured Works Data:", data);
   const works = data.parterVideos;
   const [playingIndex, setPlayingIndex] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);

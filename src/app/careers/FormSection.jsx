@@ -86,7 +86,7 @@ function FormSection() {
     });
 
     const result = await res.json();
-    console.log("result", result);
+    // console.log("result", result);
 
     if (result.success) {
       Swal.fire({

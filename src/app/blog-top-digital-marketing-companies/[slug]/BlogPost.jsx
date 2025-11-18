@@ -27,8 +27,8 @@ import { BASE_URL } from "@/app/Server";
 import Link from "next/link";
 
 export default function BlogPost({ data, category, blog, slug }) {
-  console.log("data", data);
-  console.log("blog", blog);
+  // console.log("data", data);
+  // console.log("blog", blog);
   // console.log("slug", slug);
 
   const relatedPosts = blog
@@ -36,7 +36,7 @@ export default function BlogPost({ data, category, blog, slug }) {
     .sort(() => 0.5 - Math.random())
     .slice(0, 3);
 
-  console.log("relatedPosts", relatedPosts);
+  // console.log("relatedPosts", relatedPosts);
 
   const socialIcons = [
     {

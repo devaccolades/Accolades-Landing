@@ -13,7 +13,7 @@ export default function Modal({ isOpen, onClose, data }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted with:", { name, phone, message });
+    // console.log("Form submitted with:", { name, phone, message });
 
     if (!name || !phone || !message) {
       alert("Please fill out all fields.");
@@ -36,7 +36,7 @@ export default function Modal({ isOpen, onClose, data }) {
       });
 
       const result = await res.json();
-      console.log("Form submission result:", result);
+      // console.log("Form submission result:", result);
 
       if (!res.ok) {
         alert("Submission failed. Please try again.");

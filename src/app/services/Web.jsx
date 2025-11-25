@@ -68,7 +68,7 @@ import Link from "next/link";
 
 function Creative() {
   return (
-    <section className="flex justify-center overflow-visible relative  z-10 mx-auto w-[90%] mb-20">
+    <section className="flex justify-center overflow-visible relative  z-10 mx-auto w-[90%] mb-2">
       <div className="flex gap-[10px] w-full relative">
         <div className="absoulte w-[10%] md:w-[10%] lg:w-[15%] ">
           <Image
@@ -80,7 +80,7 @@ function Creative() {
           />
         </div>
         <div className="w-full flex flex-col md:gap-[40px] lg:gap-[60px] bg-white/60 p-5 rounded-[30px]">
-          <h2 className="font-mont text-[20px] md:text-[35px] lg:text-[55px] font-semibold leading-[110%] text-center text-[#3FB4BA] mt-[17px] md:mt-[35px]">
+          <h2 className="font-mont text-[20px] md:text-[35px] lg:text-[40px] font-semibold leading-[110%] text-center text-[#3FB4BA] mt-[17px] md:mt-[35px]">
             Web Development Services in Kochi
           </h2>
 

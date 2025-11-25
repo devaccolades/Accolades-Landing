@@ -78,7 +78,7 @@ function Creative() {
           />
         </div>
         <div className="w-full flex flex-col md:gap-[40px] lg:gap-[60px] bg-white/60 p-5 rounded-[30px]">
-          <h2 className="font-mont text-[20px] md:text-[35px] lg:text-[55px] font-semibold leading-[110%] text-center text-[#3FB4BA] mt-[17px] md:mt-[35px]">
+          <h2 className="font-mont text-[20px] md:text-[35px] lg:text-[40px] font-semibold leading-[110%] text-center text-[#3FB4BA] mt-[17px] md:mt-[35px]">
             Creative Services for Business Branding in Kochi
           </h2>
 

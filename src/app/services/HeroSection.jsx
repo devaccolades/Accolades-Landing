@@ -6,7 +6,7 @@ function HeroSection() {
       <div className="flex flex-col items-center justify-center bg-white w-[90%] mx-auto p-4 rounded-2xl relative z-10">
         <h1 className="font-mont text-[20px] md:text-[30px] lg:text-[36px] text-center font-bold leading-[130%] text-[#3FB4BA]">
           Complete Digital Marketing Services in Kochi, Creative & Web Solutions
-for Modern Brands
+          for Modern Brands
         </h1>
         <p className="max-w-7xl font-mont text-left mt-[30px] text-[14px] md:text-[16px] leading-[150%] ">
           Accolades Integrated creates strategies that connect and designs that perform. As a leading name in
@@ -16,11 +16,11 @@ for Modern Brands
           ensure every brand touch point, from awareness to conversion. We manage this with clarity and
           creativity.
         </p>
-        <p className="">
+        <p className="font-mont text-left text-[14px] md:text-[16px] leading-[150%]" >
           We Provide:
         </p>
 
-        <ul className="max-w-7xl font-mont mx-auto text-center mt-[0px] text-[14px] md:text-[16px] leading-[150%] list-disc mx-auto">
+        <ul className="max-w-7xl font-mont  text-left mt-[0px] text-[14px] md:text-[16px] leading-[150%] list-disc mx-auto">
           <li>Digital Marketing in Kochi — Performance Marketing, SEM, SEO, Social Media, and Content Marketing</li>
           <li>Creative Services in Kochi — Graphic Design, Motion Graphics, Branding, Packaging, and Video Production</li>
           <li>Web Services in Kochi — Full Stack Development, WordPress Pages, and E-commerce Websites</li>

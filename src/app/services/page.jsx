@@ -11,6 +11,31 @@ import bottomGrade from "../../../public/services/bottomSide.webp";
 import Image from "next/image";
 import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
+import { BASE_URL, getSeo } from "@/app/Server";
+import SeoFoot from "./SeoFoot";
+
+export const dynamic = "force-dynamic";
+
+export async function generateMetadata() {
+  const name = "services";
+
+  // fetch post information
+  const post = await getSeo(name);
+  // console.log("post", post[0].metaTitle);
+
+  return {
+    title: post[0]?.metaTitle,
+    description: post[0]?.metaDescription,
+    openGraph: {
+      title: post[0]?.ogTitle,
+      description: post[0]?.ogDescription,
+      images: [
+        BASE_URL + post[0]?.ogImage?.formats?.medium?.url, // Make sure this is a full URL to the image
+      ],
+    },
+  };
+}
+
 
 function page() {
   return (
@@ -55,6 +80,7 @@ function page() {
       <Digital />
       <Creative />
       <Web />
+      <SeoFoot />
       <div className="-mb-[37px]">
         <Footer />
       </div>

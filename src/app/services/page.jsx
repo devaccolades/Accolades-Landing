@@ -15,7 +15,7 @@ import Footer from "@/component/Footer";
 function page() {
   return (
     <section className="relative flex flex-col">
-      <Navbar />
+      {/* <Navbar /> */}
       <Image
         src={circleT}
         alt="crcle on top"

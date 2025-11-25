@@ -32,7 +32,7 @@ export async function generateMetadata() {
 const page = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="bg-[#F1F1F1]">
         <WebHero />
         <WebsiteFeatures />

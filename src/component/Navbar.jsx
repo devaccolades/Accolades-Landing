@@ -88,7 +88,7 @@ const Navbar = () => {
 
   // Service pages data
   const servicePages = {
-    Creative : {
+    Creative: {
       title: "Creative Services",
       href: "/services/creative",
       services: [
@@ -166,6 +166,10 @@ const Navbar = () => {
       window.removeEventListener("resize", updateScreenHeight);
     };
   }, []);
+
+  useEffect(() => {
+    setIsModalOpen(false);
+  }, [pathName]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -246,94 +250,94 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="hidden lg:block fixed inset-0 top-[10px] md:top-10  containers z-50">
+      <nav className="hidden lg:block fixed left-0 right-0 top-[10px] md:top-10  containers z-50">
         <div className="pointer-events-auto">
-        <GlassSurface
-          width={"100%"}
-          height={59}
-          borderRadius={16}
-          backgroundOpacity={0.1}
-          saturation={1}
-          borderWidth={0.07}
-          brightness={"50%"}
-          backgroundOpacity={0.01}
-          opacity={0.91}
-          blur={"11px"}
-          displace={0.5}
-          distortionScale={-180}
-          redOffset={0}
-          greenOffset={0}
-          blueOffset={0}
-          className="my-custom-class"
-        >
-          <Link href="/">
-          <Image
-            src={logo}
-            alt="logo"
-            height={100}
-            width={100}
-            priority
-            className="h-[28px] w-full object-contain md:w-[205px] md:h-[38px] cursor-pointer"
-          />
-          </Link>
-          <div className="hidden lg:flex items-center gap-[40px]">
+          <GlassSurface
+            width={"100%"}
+            height={59}
+            borderRadius={16}
+            backgroundOpacity={0.1}
+            saturation={1}
+            borderWidth={0.07}
+            brightness={"50%"}
+            backgroundOpacity={0.01}
+            opacity={0.91}
+            blur={"11px"}
+            displace={0.5}
+            distortionScale={-180}
+            redOffset={0}
+            greenOffset={0}
+            blueOffset={0}
+            className="my-custom-class"
+          >
             <Link href="/">
-              <p
-                className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                  active === "Home" ? "text-[#0C7379]" : ""
-                }`}
-                onClick={(e) => setActive(e.target.textContent)}
-              >
-                Home
-              </p>
-            </Link>
-            <p
-              className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                active === "Services" ? "text-[#0C7379]" : ""
-              }`}
-              onClick={(e) => handleService(e.target.textContent)}
-            >
-              Services
-            </p>
-            <Link href="/about-us">
-              <p
-                className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                  active === "About Us" ? "text-[#0C7379]" : ""
-                }`}
-                onClick={(e) => setActive(e.target.textContent)}
-              >
-                About Us
-              </p>
-            </Link>
-            <Link href="/contact-us">
-              <p
-                className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                  active === "Contact Us" ? "text-[#0C7379]" : ""
-                }`}
-                onClick={(e) => setActive(e.target.textContent)}
-              >
-                Contact Us
-              </p>
-            </Link>
-          </div>
-          <div className="flex flex-row items-center gap-[10px]">
-            <Link href={"https://wa.me/919048689977"}>
-              <button className="bg-[#0C7379] py-[8px] px-[12px] md:py-[10px] md:px-[16px] text-white rounded-[10px] text-[12px] md:text-[16px] font-bold leading-[100%] cursor-pointer">
-                WhatsApp now
-              </button>
-            </Link>
-            <div className="md:hidden">
               <Image
-                src={"/home/nav.svg"}
-                width={100}
+                src={logo}
+                alt="logo"
                 height={100}
-                alt="image"
-                className="h-[13px] w-[22px]"
-                onClick={() => setIsModalOpen(true)}
+                width={100}
+                priority
+                className="h-[28px] w-full object-contain md:w-[205px] md:h-[38px] cursor-pointer"
               />
+            </Link>
+            <div className="hidden lg:flex items-center gap-[40px]">
+              <Link href="/">
+                <p
+                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
+                    active === "Home" ? "text-[#0C7379]" : ""
+                  }`}
+                  onClick={(e) => setActive(e.target.textContent)}
+                >
+                  Home
+                </p>
+              </Link>
+              <p
+                className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
+                  active === "Services" ? "text-[#0C7379]" : ""
+                }`}
+                onClick={(e) => handleService(e.target.textContent)}
+              >
+                Services
+              </p>
+              <Link href="/about-us">
+                <p
+                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
+                    active === "About Us" ? "text-[#0C7379]" : ""
+                  }`}
+                  onClick={(e) => setActive(e.target.textContent)}
+                >
+                  About Us
+                </p>
+              </Link>
+              <Link href="/contact-us">
+                <p
+                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
+                    active === "Contact Us" ? "text-[#0C7379]" : ""
+                  }`}
+                  onClick={(e) => setActive(e.target.textContent)}
+                >
+                  Contact Us
+                </p>
+              </Link>
             </div>
-          </div>
-        </GlassSurface>
+            <div className="flex flex-row items-center gap-[10px]">
+              <Link href={"https://wa.me/919048689977"}>
+                <button className="bg-[#0C7379] py-[8px] px-[12px] md:py-[10px] md:px-[16px] text-white rounded-[10px] text-[12px] md:text-[16px] font-bold leading-[100%] cursor-pointer">
+                  WhatsApp now
+                </button>
+              </Link>
+              <div className="md:hidden">
+                <Image
+                  src={"/home/nav.svg"}
+                  width={100}
+                  height={100}
+                  alt="image"
+                  className="h-[13px] w-[22px]"
+                  onClick={() => setIsModalOpen(true)}
+                />
+              </div>
+            </div>
+          </GlassSurface>
         </div>
       </nav>
 
@@ -429,7 +433,6 @@ const Navbar = () => {
             </div>
           </div>
         </GlassSurface>
-        
       </nav>
 
       {isModalOpen && (

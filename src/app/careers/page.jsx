@@ -73,7 +73,7 @@ function page() {
         width={100}
         className="absolute bottom-0 left-0 h-full w-full  z-0"
       />
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
       {/* <Discover /> */}
       <FormSection />

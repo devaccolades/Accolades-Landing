@@ -35,7 +35,7 @@ function page() {
   return (
     <div>
       <main className="bg-[#F1F1F1] ">
-        <Navbar />
+        {/* <Navbar /> */}
         <DigitalHero />
         <WhatWeDo />
         <OurClients />

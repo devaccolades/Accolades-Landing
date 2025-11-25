@@ -11,7 +11,7 @@ const page = () => {
   return (
     <>
       <main className="bg-[#F1F1F1] ">
-        <Navbar />
+        {/* <Navbar /> */}
         <HeroSection />
         <WhatWeOffer />
         <Featured />

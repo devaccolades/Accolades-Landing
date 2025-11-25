@@ -31,7 +31,7 @@ export default async function page() {
   const data = await getBlogs();
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <BlogThings data={data}/>
       <main className="-mt-[65px]">
         <Footer />

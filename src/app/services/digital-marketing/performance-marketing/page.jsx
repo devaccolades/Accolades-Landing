@@ -82,7 +82,7 @@ const page = () => {
   return (
     <>
       <main className="bg-[#F1F1F1]">
-        <Navbar />
+        {/* <Navbar /> */}
         <Herosection {...heroData} />
         <WhatWeOffer {...offer} />
         <ServicesIncluded />

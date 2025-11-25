@@ -17,7 +17,7 @@ export default async function page({ params }) {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="bg-[#F1F1F1]">
         <HeroSection data={data} />
         <BlogPost data={data} category={data.category} blog={blog} slug={slug}/>

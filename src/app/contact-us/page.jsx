@@ -88,7 +88,7 @@ const page = () => {
             width={100}
             className="absolute bottom-0 left-0 h-full w-full  z-0"
           />
-      <Navbar />
+      {/* <Navbar /> */}
        {/* <div className="bg-gradient-to-br from-[#ecf3f6] to-[#f1f5f5]"> */}
       <Herosection />
       <OurPresence />

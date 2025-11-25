@@ -8,7 +8,7 @@ import Footer from "@/component/Footer";
 function page() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="bg-[#F1F1F1]">
         <WordpressHero />
         <OfferAndFeatures />

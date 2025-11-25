@@ -76,7 +76,7 @@ const page = () => {
         background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
       }}
     >
-      <Navbar />
+      {/* <Navbar /> */}
       <Herosection {...heroData} />
       <WhatWeOffer {...tech} />
       <FeaturesHighlight />

@@ -33,7 +33,7 @@ export async function generateMetadata() {
 function page() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
        <div className="bg-[#F1F1F1]">
          <FullstackHero /> 
          <WhatWeCover />

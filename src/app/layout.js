@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
       >
      
       {/* <LayoutWrapper /> */}
-      {/* <Navbar /> */}
+      <Navbar />
         {children}
       </body>
     </html>

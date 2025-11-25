@@ -30,7 +30,7 @@ export async function generateMetadata() {
 export default function page() {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <main className="bg-[#F1F1F1]">
       <HeroSection />
     </main>

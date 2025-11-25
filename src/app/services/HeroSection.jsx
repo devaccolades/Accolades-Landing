@@ -16,7 +16,7 @@ function HeroSection() {
           ensure every brand touch point, from awareness to conversion. We manage this with clarity and
           creativity.
         </p>
-        <p className="font-mont" >
+        <p className="font-mont text-left text-[14px] md:text-[16px] leading-[150%]" >
           We Provide:
         </p>
 

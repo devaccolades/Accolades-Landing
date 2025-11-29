@@ -22,6 +22,7 @@ const Accolades = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true ,amount: 0.3}}>
+            
           <p className="text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] font-mont font-normal">
             Accolades, the creative hub for digital marketing in Kerala, keenly
             takes care of your diverse internet marketing solutions for your

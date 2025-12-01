@@ -19,6 +19,8 @@ import img6 from "../../../public/web/ggc.png";
 import img7 from "../../../public/web/nabuil.png";
 import img8 from "../../../public/web/gtea.png";
 
+import bottom from "../../../public/home/bottom-line.webp";
+
 const projects = [
   { title: "ABE SERVICES", image: img1, link: "https://abeservices.in/" },
   { title: "ABLS HUMAN RESOURCES", image: img2, link: "https://ablshumanresources.com/" },
@@ -39,7 +41,7 @@ const fadeUp = {
 export default function WebProjects() {
   return (
     <div
-      className="pb-[180px] -mb-[100px] bg-white"
+      className="pb-[100px] -mb-[100px] bg-white"
     //   style={{
     //     background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
     //   }}
@@ -113,6 +115,12 @@ export default function WebProjects() {
           </Swiper>
         </div>
       </div>
+
+       <Image
+              src={bottom}
+              alt="bottom-line"
+              className="containers py-6 md:py-12 lg:py-20"
+            />
     </div>
   );
 }

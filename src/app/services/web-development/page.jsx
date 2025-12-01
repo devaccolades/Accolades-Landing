@@ -5,6 +5,8 @@ import WebHero from "./WebHero";
 import WebsiteFeatures from "./WebsiteFeatures";
 import WebsiteProjects from "./WebsiteProjects";
 import { BASE_URL, getSeo } from "@/app/Server";
+import WebSeo from "./WebSeo";
+import WebFaq from "./WebFaq";
 
 export const dynamic = "force-dynamic";
 
@@ -36,7 +38,10 @@ const page = () => {
       <div className="bg-[#F1F1F1]">
         <WebHero />
         <WebsiteFeatures />
+        <WebSeo />
+        <WebFaq />
         <WebsiteProjects />
+        
       </div>
       <div className="-mt-[65px]">
         <Footer />

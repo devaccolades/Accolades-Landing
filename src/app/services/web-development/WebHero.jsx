@@ -60,19 +60,19 @@ export default function WebHero() {
             variants={textVariants}
           >
             <p className="uppercase text-xs sm:text-sm text-gray-500 font-mont font-semibold mb-1 lg:mb-2">
-              Development
+            
             </p>
-            <h2 className="text-[20px] lg:text-[24px] leading-[130%] font-bold font-mont text-[#1eb2a6] mb-2">
-              Web Development
-            </h2>
+            <h1 className="text-[20px] lg:text-[24px] leading-[130%] font-bold font-mont text-[#1eb2a6] mb-2">
+               Web Development Company in Kochi — Build Fast, Scalable, and Beautiful Websites
+            </h1>
 
             {/* Paragraphs */}
             {[
-              "Accolades Integrated deliver innovative and cost-effective web development services for businesses in Kerala. With over five years of expertise, our skilled web designers create responsive, lead-generating websites that elevate your business.",
-              "We focus on functionality, usability, and conversion optimization, ensuring your site turns visitors into loyal customers. Our designs are both visually appealing and performance-driven, tailored to meet your business goals.",
-              "As a trusted web development company in Kochi, we provide scalable solutions that align with your needs. Our commitment to your success drives us to craft websites that stand out and perform exceptionally.",
-              "Choose Accolades for professional web design services that amplify your digital presence and help you achieve measurable results. Let’s transform your vision into a powerful, lead-generating website that stands above the competition.",
-              "Optimize your online growth with us—your trusted partner in web development in Kerala.",
+              "Accolades Integrated is a trusted Web Development Company in Kochi. We design and build websites that meet business goals. Our team blends clean code, smart user experience, and modern tech to deliver sites that load fast and convert. We focus on scalable solutions that grow with your business.",
+              "We offer full-stack websites, WordPress sites, and e-commerce platforms. Our engineers use React.js, Next.js, and Python to deliver secure and high-performance systems. For design and UX, we pair form with function so users stay and act.",
+              // "As a trusted web development company in Kochi, we provide scalable solutions that align with your needs. Our commitment to your success drives us to craft websites that stand out and perform exceptionally.",
+              // "Choose Accolades for professional web design services that amplify your digital presence and help you achieve measurable results. Let’s transform your vision into a powerful, lead-generating website that stands above the competition.",
+              // "Optimize your online growth with us—your trusted partner in web development in Kerala.",
             ].map((text, i) => (
               <motion.p
                 key={i}

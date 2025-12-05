@@ -3,6 +3,7 @@ import React from "react";
 function HeroSection() {
   return (
     <section className="h-[400px] md:h-[400px] w-full pb-30 pt-20 md:pt-24 lg:pt-30 mb-140 md:mb-80 lg:mb-30">
+    {/* <section className=" "> */}
       <div className="flex flex-col items-center justify-center bg-white w-[90%] mx-auto p-4 rounded-2xl relative z-10">
         <h1 className="font-mont text-[20px] md:text-[30px] lg:text-[36px] text-center font-bold leading-[130%] text-[#3FB4BA]">
           Complete Digital Marketing Services in Kochi, Creative & Web Solutions

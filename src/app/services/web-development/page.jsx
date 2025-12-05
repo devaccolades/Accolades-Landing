@@ -38,8 +38,8 @@ const page = () => {
       <div className="bg-[#F1F1F1]">
         <WebHero />
         <WebsiteFeatures />
-        <WebSeo />
-        <WebFaq />
+        {/* <WebSeo />
+        <WebFaq /> */}
         <WebsiteProjects />
         
       </div>

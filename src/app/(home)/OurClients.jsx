@@ -7,11 +7,12 @@ const OurClients = () => {
     <section className="containers flex flex-col md:flex-row justify-between items-center gap-10 pb-10">
       <div className="w-full">
         <p className="text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px]  font-mont font-normal">
-          We’re honoured to serve over 500 clients, including National Builders,
-          Classic Builders, English Cafe, TJP Rubber Industries, Radisson Blu,
-          CIDBI, Abe Services and more. Our dedication to quality,
-          collaboration, and timely delivery has fostered lasting partnerships
-          and outstanding results.
+          As a leading Branding Agency in Kochi, we partner with organisations across industries to deliver creatives.
+           We’ve proudly worked with national names and local favourites. A few of our ongoing clients are Confident Group,
+           Aurex Builders, Radisson Blu, Classic Homes, CIDBI, TJP Rubber Industries, English Cafe,  RAK Interiors George Projects
+            and Abe Services and many more…
+
+
         </p>
       </div>
       <div className="relative w-full">

@@ -123,8 +123,7 @@ const HeroSection = () => {
               </p>
             </div>
             <p className="text-[14px] font-monst leading-[18px] font-normal mt-[14px] max-w-[300px]">
-              From campaigns to code — we shape digital experiences that
-              perform.
+              Your trusted branding agency in Kochi.  We shape digital experiences that perform.
             </p>
           </div>
           <div className="flex flex-wrap justify-center w-full mt-10 ">

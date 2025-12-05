@@ -11,7 +11,8 @@ const services = [
   {
     title: "Digital Marketing",
     description:
-      "Grow your brand and achieve measurable results with us. Maximize your ROI with tailored digital marketing services online campaigns that drive impactful results.",
+    "As a performance-led Branding Agency In Kochi, we design digital strategies that turn awareness into measurable growth. Our services combine SEO, SEM, performance marketing, social media advertising and content marketing to attract high-intent customers. We are one of the top Branding Companies in Kochi that businesses rely on to increase traffic, improve conversion rates. ",
+      // "Grow your brand and achieve measurable results with us. Maximize your ROI with tailored digital marketing services online campaigns that drive impactful results.",
 
     bgColor: "bg-[#E5EEF0]", // Light blue
     textColor: "text-[#2C99B1]", // Darker blue
@@ -20,7 +21,8 @@ const services = [
   {
     title: "Creative Design",
     description:
-    "We provide creative design for social media and digital ads along with graphic designs like brochure, magazine ads to elevate your brand’s online presence.  ",
+    "We deliver logo design, visual identity systems, packaging, motion graphics and brand guidelines as a specialised Branding Agency In Kochi, tailored to your market. We focus on storytelling, typography and colour systems that communicate purpose and build emotional connection. Businesses trust us as one of the leading Branding Companies in Kochi to partner with. ",
+    // "We provide creative design for social media and digital ads along with graphic designs like brochure, magazine ads to elevate your brand’s online presence.  ",
     
     bgColor: "bg-[#e1d4fa]", // Light Violet
     textColor: "text-[#64489e]", // Dark Violet
@@ -29,7 +31,8 @@ const services = [
   {
     title: "Web Development",
     description:
-      "Get your website developed exactly to fit your business requirements. We build cross-browser compatible and responsive sites with the latest features for optimal performance.",
+    "We build websites that blend elegant design with robust engineering.  As a trusted Branding Agency In Kochi, our web services include responsive WordPress sites, full-stack development, e-commerce platforms and CMS integrations with mobile-first UX. We also integrate secure payment gateways, analytics and  CRM. Clients choose our team among top Branding Companies in Kochi.",
+      // "Get your website developed exactly to fit your business requirements. We build cross-browser compatible and responsive sites with the latest features for optimal performance.",
   
     bgColor: "bg-[#FDEFEF]", // Light pink
     textColor: "text-[#C94A4A]", // Darker red
@@ -43,8 +46,14 @@ const OurServices = () => {
       <section className="containers flex flex-col-reverse md:flex-row justify-between items-center gap-10  ">
         <div className="w-full">
           <p className="text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] leading-[156%] font-mont font-normal">
-            We deliver a complete suite of digital marketing solutions, from graphic design, social media marketing & management,
-            Google & Meta Ads to web development and SEO. Our goal is to drive measurable growth by crafting personalized strategies for your brand’s success.
+           As a leading branding agency in Kochi, we deliver a complete suite of digital marketing solutions, 
+           from Google & Meta Ads to web development and SEO. Our goal is to drive growth by crafting 
+           personalized strategies for your brand’s success. Being one of the best branding companies in Kochi,
+           we build brands that deliver measurable results. Our approach blends creative thinking with data-driven 
+           insight. We make sure every step adds value, from defining your brand voice to executing campaigns that 
+           convert. Whether you are launching a new business or refreshing an existing one, we create brand systems
+            that look great and perform even better. Our services are in three main sections — Digital, Creative, and Web.
+             These three zones ensure every brand touch point.
           </p>
         </div>
         <div className="relative w-full">
@@ -59,15 +68,15 @@ const OurServices = () => {
             viewport={{ once: true }}
             >
 
-            <h3 className="text-[36px] text-[#3F3F3F] font-normal leading-[100%]">
-              What we do{" "}
-            </h3>
-            <h3 className="text-[#3FB4BA] text-[48px] md:text-[56px] xl:text-[76px] font-semibold leading-[100%]">
-              Our
-            </h3>
-            <h3 className="font-bold text-[48px] md:text-[64px] xl:text-[86px] leading-[100%">
-              Services
-            </h3>
+            <h1 className="text-[36px] text-[#3F3F3F] font-normal leading-[100%]">
+              Branding {" "}
+            </h1>
+            <h1 className="text-[#3FB4BA] text-[48px] md:text-[56px] xl:text-[76px] font-semibold leading-[100%]">
+              Agency
+            </h1>
+            <h1 className="font-bold text-[48px] md:text-[64px] xl:text-[86px] leading-[100%">
+              in Kochi
+            </h1>
           </motion.div>
             </div>
 

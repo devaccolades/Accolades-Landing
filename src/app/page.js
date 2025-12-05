@@ -54,7 +54,7 @@ export default function page() {
       <WebProjects />
       <FAQ />
       <ReachUs />
-      <SeoContents />
+      {/* <SeoContents /> */}
       <Footer />
     </>
   );

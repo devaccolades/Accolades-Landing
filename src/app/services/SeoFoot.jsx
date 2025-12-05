@@ -2,7 +2,7 @@ import React from "react";
 
 function SeoFoot() {
   return (
-    <section className="h-[400px] md:h-[400px] w-full pb-30 pt-2 md:pt-24 lg:pt-3 mb-60 md:mb-14">
+    <section className="h-[300px] md:h-[300px] w-full pt-2 md:pt-10 lg:pt-3 mb-60 md:mb-20 lg:mb-4 ">
       <div className="flex flex-col items-center justify-center bg-white w-[90%] mx-auto p-4 rounded-2xl relative z-10">
         <h2 className="font-mont text-[20px] md:text-[30px] lg:text-[36px] text-center font-bold leading-[130%] text-[#3FB4BA]">
           The Accolades Legacy

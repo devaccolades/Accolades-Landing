@@ -13,6 +13,7 @@ import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
 import { BASE_URL, getSeo } from "@/app/Server";
 import SeoFoot from "./SeoFoot";
+import ServicesFaq from "./ServicesFaq";
 
 export const dynamic = "force-dynamic";
 
@@ -81,6 +82,7 @@ function page() {
       <Creative />
       <Web />
       <SeoFoot />
+      <ServicesFaq />
       <div className="-mb-[37px]">
         <Footer />
       </div>

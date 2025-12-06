@@ -27,21 +27,21 @@ const HeroSection = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         >
-          <h3 className="text-[16px] lg:text-[20px] leading-[110%] font-normal">
+          <h3 className="text-[16px] lg:text-[18px] leading-[110%] font-normal">
             WHY YOU CHOOSE OUR SOCIAL MEDIA MARKETING SERVICE?
           </h3>
-          <h3 className="text-[#3FB4BA] text-[24px] lg:text-[36px] font-bold leading-[100%]">
-            Social Media Marketing
+          <h3 className="text-[#3FB4BA] text-[24px] lg:text-[34px] font-bold leading-[100%]">
+           Social Media Marketing Services in Kochi
           </h3>
           <p className="text-[13px] md:text-[14px] xl:text-[18px] leading-[156%]">
-            Social Media Marketing, or SMM has become an inevitable phenomenon
-            in the present scenario, as our world is at fast pace with advancing
-            technology. At Accolades the digital marketing agency in Kerala, we
-            adopt and execute exceptional Social Media Marketing Services, to
-            identify target audience for our distinguished clientele by
-            creating, attractive Social Media posts of their esteemed
-            establishment. We depict excellent piece of designs, which captivate
-            the broad attention of multitude.
+            Social Media Marketing (SMM) uses platforms like Facebook, Instagram (Meta),
+           LinkedIn, and YouTube. It promotes your products and engages your audience across
+            these channels. Accolades Integrated is a leading digital marketing agency in Kochi. 
+            Many brands trust us as leading creative force for digital marketing in Kerala. 
+            We help local businesses grow by driving traffic and converting visitors into customers. 
+            By harnessing SMM, companies in Kochi can boost their brand awareness and reach new customers 
+            in India. Our tailored social media strategies ensure your content resonates with viewers,
+             builds trust, and drives measurable results
           </p>
         </motion.div>
 

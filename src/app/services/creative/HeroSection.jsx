@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
 
-  const paragraphText1 = "Fuel your growth with scroll-stopping visuals, thumb-stopping videos, and packaging that leaps off the shelf."
+  const paragraphText1 = "Accolades Integrated is a creative agency based in Kochi that builds brands with strategy, design, and compelling visual stories. Our creative team blends design thinking with modern tools to help brands look sharper and sound clearer for faster growth. As one of the most trusted creative agency in Kochi, we deliver branding, packaging, motion graphics, and full scale video production. We design with purpose and create visuals that match your goals. From Kochi to Calicut, Trivandrum, Bengaluru, and Mumbai, we serve across India. Our core creative services include, Branding & Packaging, Graphics & Motion Graphics, and Video Production."
 
     const container = {
     hidden: { opacity: 0 },
@@ -27,9 +27,9 @@ const HeroSection = () => {
       <AnimatedTitle text={"Creative"} />
       <div className="flex flex-col-reverse md:grid md:grid-cols-[60%_1fr] py-[5%] items-center gap-5">
         <div className="flex flex-col font-mont bg-white p-5 lg:p-8 rounded-[30px] lg:space-y-3 space-y-2">
-          <h3 className="text-[#3FB4BA] text-[24px] lg:text-[36px] font-bold leading-[100%]">
-            Bringing Ideas to Life with Design That Inspires
-          </h3>
+          <h1 className="text-[#3FB4BA] text-[24px] lg:text-[36px] font-bold leading-[100%]">
+Creative Agency in Kochi for Visual Storytelling
+          </h1>
           <h3 className="text-[13px] md:text-[14px] xl:text-[18px] leading-[156%]">
 
           </h3>

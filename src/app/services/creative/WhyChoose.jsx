@@ -5,23 +5,23 @@ import { motion } from "framer-motion";
 const features = [
   {
     emoji: "🎯",
-    title: "Strategic + Aesthetic Thinking",
-    desc: "Every pixel rooted in research and ROI.",
+    title: "Strong Market Insight",
+    desc: "We know how customers in Kerala think, engage, and buy. This helps us design creative assets that feel relevant and local.",
   },
   {
     emoji: "🧠",
-    title: "Multi-Industry Experience",
-    desc: "E-commerce, FMCG, tech, healthcare—you name it.",
+    title: "Multi Sector Expertise",
+    desc: "We have worked with brands across Real estate, Retail, Healthcare, Education, and Corporate sectors. Our work blends creativity with business goals.",
   },
   {
     emoji: "🚀",
-    title: "Fast Turnaround",
-    desc: "Agile sprints, overnight revisions when needed.",
+    title: "Transparent Collaboration",
+    desc: "We involve you at every step. You review early drafts, share input, and guide the final output. This ensures every design matches your expectations.",
   },
   {
     emoji: "📈",
-    title: "Creative that Drives ROI",
-    desc: "Average 38% increase in engagement for clients.",
+    title: "Creative Partnership",
+    desc: "We support brands even after delivery with updates, new design assets, campaign creativity, and brand expansion.",
   },
 ];
 
@@ -58,7 +58,7 @@ const WhyChoose = () => {
   return (
     <section className="containers py-10 text-center">
       <h2 className="text-3xl sm:text-4xl font-mont font-bold text-[#0199A4] mb-5">
-        Why Choose Our Creative Team
+        Why Choose Accolades Integrated as Your Creative Agency in Kochi
       </h2>
 
       <motion.div 

@@ -46,12 +46,12 @@ const paragraph = `Our team leverages industry-leading tools to bring creativity
 
 const Tools = () => {
   return (
-    <main
-      style={{
-        background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
-      }}
-    >
-      <section className="containers font-mont pb-32 2xl:pb-[170px]">
+    // <main
+    //   style={{
+    //     background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
+    //   }}
+    // >
+      <section className="containers font-mont pb-12 2xl:pb-[130px]">
         <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0199A4] mb-8">
             Tools & Platforms We Use
@@ -95,7 +95,7 @@ const Tools = () => {
           </motion.p>
         </div>
       </section>
-    </main>
+    // </main>
   );
 };
 

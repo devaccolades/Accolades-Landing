@@ -3,23 +3,23 @@ import React from "react";
 const features = [
   {
     emoji: "🎯",
-    title: "Tailored Strategies",
-    desc: "Our tactics are tailored to your company and your field to guarantee success.",
+    title: "Local Insight",
+    desc: "We understand Kochi’s audience, culture, and buying rhythms. That local knowledge helps this Digital Marketing Agency in Kochi craft campaigns that connect.",
   },
   {
     emoji: "🧠",
-    title: "Experienced Team",
-    desc: "Our highly qualified employees have years of experience and knowledge in distinct areas of digital marketing.",
+    title: "Data Driven",
+    desc: "Decisions are based on tracking, testing, and real results. We use analytics to lower cost per lead and improve return on ad spend.",
   },
   {
     emoji: "📊",
-    title: "Data-Driven Approach",
-    desc: "Analytics and analyzing these insights help us optimize the future strategies, and the future steps to be taken for your campaigns.",
+    title: "Clear KPIs",
+    desc: "Every campaign starts with measurable targets and simple dashboards. You’ll see how this Digital Marketing Agency in Kochi is delivering value week by week.",
   },
   {
     emoji: " 🤝",
-    title: "Client-Centric Focus",
-    desc: "Your success is our priority. Here we shall partner with you all the time throughout the project effective the task at hand.",
+    title: "End to End",
+    desc: "We plan, build, run, and optimise — from creative to conversion. That full stack approach reduces waste and scales what works.",
   },
 ];
 
@@ -27,9 +27,13 @@ const WhyChoose = () => {
   return (
     <section className="containers py-10 text-center">
       <h2 className="text-3xl sm:text-4xl font-mont font-bold text-[#0199A4] mb-5">
-        Why Choose Our Creative Team
+        Why Choose our Digital Marketing Team
       </h2>
-
+      <p className="font-mont font-normal lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
+      Our team blends local market knowledge with measurable tactics to grow brands in Kerala and beyond. 
+      As a trusted Digital Marketing Agency in Kochi, we pair strategy, execution, and clear KPIs so your
+       marketing actually moves the business needle.
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {features.map((feature, idx) => (
           <div

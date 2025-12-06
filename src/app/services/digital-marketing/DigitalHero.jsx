@@ -22,17 +22,17 @@ const DigitalHero = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <h3 className="text-[#3FB4BA] text-[24px] lg:text-[40px] font-bold leading-[120%]">
-            Full-Spectrum Digital Marketing Services: Target. Engage. Convert.
+            Digital Marketing Agency in Kochi for Strategy & Growth
           </h3>
 
           <p className="text-[13px] md:text-[16px] leading-[156%]">
-            At Accolades Integrated, we harness the power of digital to
-            transform brands and accelerate business growth. Our expert team
-            blends strategy, creativity, and technology to deliver
-            performance-driven digital marketing solutions tailored to your
-            goals. From Google Ads and Meta Campaigns to SEO, content creation,
-            LinkedIn marketing, and analytics—every service is built to boost
-            visibility, engage audiences, and drive measurable results.
+            Accolades Integrated is an end to end Digital Marketing Agency in Kochi. 
+            Our services cover performance marketing, search engine marketing, SEO, 
+            social media marketing, and content marketing. We plan campaigns, run ads, 
+            and build systems that drive leads and sales. Our team blends local insight 
+            with modern ad tech to help brands grow. We focus on measurable growth. 
+            If you seek a reliable Digital Marketing Agency in Kochi, we pair strategy
+             with action. Our work aims to scale wins, and build long term value.
           </p>
         </motion.div>
 

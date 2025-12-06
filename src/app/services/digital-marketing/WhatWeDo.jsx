@@ -41,8 +41,13 @@ const WhatWeDo = () => {
   return (
     <section className="containers">
       <h3 className="text-center font-mont font-extrabold text-[30px] lg:text-[40px] text-[#3FB4BA]">
-        What We Do
+       Our Digital Marketing Services 
       </h3>
+       <p className="font-mont font-normal lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
+        We offer end to end digital marketing services for startups, SMEs, and enterprises as a trusted Digital Marketing Agency in Kochi.
+         Our core services include, Performance Marketing (PPC), Search Engine Marketing (Google Ads), Search Engine Optimization, 
+         Social Media Marketing Content Marketing We integrate these services into a single growth plan and design campaigns that work together.
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 xl:gap-10 pt-3">
         {cards.slice(0, 3).map((card, index) => (
           <Link

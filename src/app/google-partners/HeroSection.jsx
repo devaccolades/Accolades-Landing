@@ -16,7 +16,7 @@ const features = [
 
 const HeroSection = () => {
   return (
-    <section className="container mt-20 py-14">
+    <section className="containers mt-20 py-14">
       <div className="   text-center ">
 
         {/* ✅ GOOGLE PARTNERS BADGE */}
@@ -44,7 +44,7 @@ const HeroSection = () => {
           <Image
             src={hero}
             alt="Google Growth Visual"
-            width={650}
+            width={600}
             height={350}
             className="object-contain w-full"
             priority

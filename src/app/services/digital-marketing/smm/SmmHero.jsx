@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 export default function SocialMediaHero() {
   return (
     <section className="containers bg-white pt-10 lg:pt-40 pb-8 md:pb-12 font-mont">
-      <div className="container mx-auto px-0 md:px-4 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 lg:gap-10 items-center">
+      <div className=" mx-auto px-0 md:px-4 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 lg:gap-10 items-center">
 
         {/* ================= LEFT CONTENT ================= */}
         <div className="flex flex-col gap-3 lg:gap-5 max-w-xl">

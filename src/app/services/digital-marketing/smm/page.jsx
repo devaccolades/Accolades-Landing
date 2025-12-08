@@ -7,6 +7,7 @@ import { BASE_URL, getSeo } from "@/app/Server";
 import SocialMediaHero from "./SmmHero";
 
 import WhyInvestSMM from "./WhyInvestSMM";
+import MetaMarketing from "./MetaMarketing";
 
 export const dynamic = "force-dynamic";
 
@@ -52,6 +53,7 @@ const page = () => {
       </main> */}
       <SocialMediaHero />
       <WhyInvestSMM />
+      <MetaMarketing />
      
     </>
   );

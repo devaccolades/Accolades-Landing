@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat, Urbanist  } from "next/font/google";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import { Zen_Old_Mincho } from "next/font/google";
@@ -16,6 +16,12 @@ const poppins = localFont({
     // Add other weights/styles as needed
   ],
   variable: "--font-poppins",
+});
+
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-urbanist",
 });
 
 const zenOldMincho = localFont({
@@ -56,7 +62,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="relative">
       <body
-        className={`${mont.variable} ${zenOldMincho.variable} ${geistSans.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
+        className={`${mont.variable} ${zenOldMincho.variable} ${geistSans.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${urbanist.variable} antialiased`}
       >
      
       <LayoutWrapper />

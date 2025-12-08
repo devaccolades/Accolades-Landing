@@ -54,7 +54,9 @@ export default function CreativeFaq() {
       }}
     >
     <section className="containers  font-mont mx-auto pt-4 md:pt-10 py-20 mb-30 relative z-10">
-      <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-10">Frequently Asked Questions | Creative Agency in Kochi</h2>
+      <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-10">
+        Frequently Asked Questions | Creative Agency in Kochi
+        </h2>
 
       <div className="space-y-0 border-t border-gray-300">
         {faqData.map((item, i) => (

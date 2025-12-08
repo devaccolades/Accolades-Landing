@@ -8,6 +8,7 @@ function SeoFoot() {
           The Accolades Legacy
         </h2>
         <p className="max-w-7xl font-mont text-left mt-[30px] text-[14px] md:text-[16px] leading-[150%] ">
+
           Accolades Integrated has evolved into a leading force in the digital and creative industry. Since 2012,
           our commitment to innovation and client success has helped hundreds of brands across India grow
           their presence.
@@ -16,11 +17,9 @@ function SeoFoot() {
           names in digital marketing services Kochi, our mission is to make every brand more visible, valuable,
           and memorable.
           Our legacy is built on measurable performance, creative excellence, and long-term partnerships —
-          because when our clients grow, we grow with them.
+          because when our clients grow, we grow with them. 
 
         </p>
-
-
 
       </div>
     </section>

@@ -62,6 +62,10 @@ body {
   font-family: var(--font-mont), serif;
 }
 
+.font-urbanist {
+  font-family: var(--font-urbanist);
+}
+
 .containers {
   width: 80%;
   margin: 0 auto;

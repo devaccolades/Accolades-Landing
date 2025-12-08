@@ -4,6 +4,10 @@ import React from "react";
 import HeroSection from "./HeroSection";
 import Details from "./Details";
 import { BASE_URL, getSeo } from "@/app/Server";
+import SocialMediaHero from "./SmmHero";
+
+import WhyInvestSMM from "./WhyInvestSMM";
+
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
@@ -13,18 +17,18 @@ export async function generateMetadata() {
   const post = await getSeo(name);
   // console.log("post", post[0].metaTitle);
 
-  return {
-    title: post[0]?.metaTitle,
-    description: post[0]?.metaDescription,
-    keywords:"Social Media Marketing Company in Kochi",
-    openGraph: {
-      title: post[0]?.ogTitle,
-      description: post[0]?.ogDescription,
-      images: [
-        BASE_URL + post[0]?.ogImage?.formats?.medium?.url, // Make sure this is a full URL to the image
-      ],
-    },
-  };
+  // return {
+  //   title: post[0]?.metaTitle,
+  //   description: post[0]?.metaDescription,
+  //   keywords:"Social Media Marketing Company in Kochi",
+  //   openGraph: {
+  //     title: post[0]?.ogTitle,
+  //     description: post[0]?.ogDescription,
+  //     images: [
+  //       BASE_URL + post[0]?.ogImage?.formats?.medium?.url, // Make sure this is a full URL to the image
+  //     ],
+  //   },
+  // };
 }
 
 
@@ -32,19 +36,23 @@ export async function generateMetadata() {
 const page = () => {
   return (
     <>
-      <main
+      {/* <main
         className="bg-[#F1F1F1] pb-40"
         style={{
           background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
         }}
       >
-        {/* <Navbar /> */}
+    
         <HeroSection />
+        
         <Details />
       </main>
       <main className="-mt-[80px]">
         <Footer />
-      </main>
+      </main> */}
+      <SocialMediaHero />
+      <WhyInvestSMM />
+     
     </>
   );
 };

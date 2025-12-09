@@ -62,6 +62,7 @@ const page = () => {
       <YoutubeMarketing />
       <AccoladesSection />
      <SmmFaq />
+     <Footer />
     </>
   );
 };

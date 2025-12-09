@@ -149,7 +149,7 @@ export default function MetaMarketing() {
             Reels that showcase your products and message.
           </p>
 
-          {/* ================= FEATURE CARDS ================= */}
+          {/*  FEATURE CARDS  */}
           <div className="flex flex-col gap-3 lg:gap-4 max-w-xl">
 
             {/* Card 1 */}

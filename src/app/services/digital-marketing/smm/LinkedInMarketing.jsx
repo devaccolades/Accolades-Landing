@@ -9,16 +9,16 @@ export default function LinkedinMarketing() {
 
                 {/* LEFT ─ IMAGE */}
                 {/* LEFT — IMAGE */}
-<div className="relative w-full h-[260px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-[30px] overflow-hidden">
-  <Image
-    src="/new-smm/link.jpg"
-    alt="Advanced AI Targeting"
-    fill
-    className="object-cover"
-  />
-</div>
+                <div className="relative w-full h-[260px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-[30px] overflow-hidden">
+                    <Image
+                        src="/new-smm/link.jpg"
+                        alt="Advanced AI Targeting"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
 
-                
+
 
                 {/* RIGHT ─ CONTENT */}
                 <div className="flex flex-col gap-4 md:gap-2 xl:gap-6">
@@ -42,7 +42,7 @@ export default function LinkedinMarketing() {
                     </h2>
 
                     {/* DESCRIPTION */}
-                     <p className="text-black font-medium text-[13px] sm:text-[14px] lg:text-[16px] leading-[150%] max-w-xl">
+                    <p className="text-black font-medium text-[13px] sm:text-[14px] lg:text-[16px] leading-[150%] max-w-xl">
                         LinkedIn is a B2B-focused social network that connects professionals and
                         businesses. It’s a goldmine for anyone networking in the B2B space,
                         focusing on industry trends and decision-makers.
@@ -53,7 +53,7 @@ export default function LinkedinMarketing() {
 
                         {/* ITEM 1 */}
                         {/* <div className="border rounded-2xl p-4 flex gap-3 bg-white shadow-sm"> */}
-                         <div className="flex items-start gap-3 md:gap-4 bg-white p-2 lg:p-5 rounded-2xl shadow-sm">
+                        <div className="flex items-start gap-3 md:gap-4 bg-white p-2 lg:p-5 rounded-2xl shadow-sm">
                             <div className="w-9 h-9 lg:w-10 lg:h-12 flex-shrink-0 overflow-hidden">
                                 <Image
                                     src="/new-smm/bui.svg"
@@ -66,7 +66,7 @@ export default function LinkedinMarketing() {
                             <div>
                                 <h4 className="text-[14px] md:text-[16px] xl:text-[18px] font-semibold text-black mb-1 leading-tight">
                                     Build Authority</h4>
-                                 <p className="text-black text-[12px] md:text-[13px] xl:text-[14px] leading-[150%]">
+                                <p className="text-black text-[12px] md:text-[13px] xl:text-[14px] leading-[150%]">
                                     Post thought-leadership articles and company updates to
                                     position yourself as an industry leader.
                                 </p>
@@ -75,7 +75,7 @@ export default function LinkedinMarketing() {
 
                         {/* ITEM 2 */}
                         {/* <div className="border rounded-2xl p-4 flex gap-3 bg-white shadow-sm"> */}
-                         <div className="flex items-start gap-3 md:gap-4 bg-white p-2 lg:p-5 rounded-2xl shadow-sm">
+                        <div className="flex items-start gap-3 md:gap-4 bg-white p-2 lg:p-5 rounded-2xl shadow-sm">
                             <div className="w-9 h-9 lg:w-10 lg:h-12 flex-shrink-0 overflow-hidden">
                                 <Image
                                     src="/new-smm/adva.svg"
@@ -86,9 +86,9 @@ export default function LinkedinMarketing() {
                                 />
                             </div>
                             <div>
-                              <h4 className="text-[14px] md:text-[16px] xl:text-[18px] font-semibold text-black mb-1 leading-tight">
-                                Targeted B2B Ads</h4>
-                               <p className="text-black text-[12px] md:text-[13px] xl:text-[14px] leading-[150%]">
+                                <h4 className="text-[14px] md:text-[16px] xl:text-[18px] font-semibold text-black mb-1 leading-tight">
+                                    Targeted B2B Ads</h4>
+                                <p className="text-black text-[12px] md:text-[13px] xl:text-[14px] leading-[150%]">
                                     Boost content distribution and lead generation while opening
                                     doors to partnerships and talent.
                                 </p>

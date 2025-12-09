@@ -110,14 +110,13 @@ export default function MetaMarketing() {
     <section className="bg-[#f7f7f7] py-10 md:py-16 font-mont rounded-[20px] md:rounded-[30px]">
       <div className="containers mx-auto px-0 md:px-4 grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 items-center">
 
-        {/* ================= LEFT CONTENT ================= */}
+        {/*  LEFT CONTENT */}
         <div className="flex flex-col gap-4 md:gap-2 xl:gap-6">
 
           {/* Badge */}
           <div className="flex items-center gap-2 bg-black text-white text-[10px] sm:text-xs px-3 md:px-4 py-2 rounded-full w-fit">
             <span className="flex items-center gap-1">
-              {/* <span className="w-3 h-3 md:w-4 md:h-4 bg-white rounded-full" />
-              <span className="w-3 h-3 md:w-4 md:h-4 bg-white rounded-full" /> */}
+              
                <Image
                   src="/new-smm/insta.svg"
                   alt="Optimized for Sales"
@@ -150,7 +149,7 @@ export default function MetaMarketing() {
             Reels that showcase your products and message.
           </p>
 
-          {/* ================= FEATURE CARDS ================= */}
+          {/*  FEATURE CARDS  */}
           <div className="flex flex-col gap-3 lg:gap-4 max-w-xl">
 
             {/* Card 1 */}
@@ -200,15 +199,14 @@ export default function MetaMarketing() {
           </div>
         </div>
 
-        {/* ================= RIGHT IMAGE ================= */}
+        {/*  RIGHT IMAGE */}
         <div className="relative w-full h-[260px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-[20px] md:rounded-[30px] overflow-hidden">
 
           <Image
             src="/new-smm/meta-ad.png"
             alt="Meta Marketing Ad"
             fill
-            className="object-cover xl:object-cover
-            "
+            className="object-cover xl:object-cover"
             priority
           />
 

@@ -8,6 +8,10 @@ import SocialMediaHero from "./SmmHero";
 
 import WhyInvestSMM from "./WhyInvestSMM";
 import MetaMarketing from "./MetaMarketing";
+import LinkedinMarketing from "./LinkedInMarketing";
+import YoutubeMarketing from "./YoutubeMarketing";
+import AccoladesSection from "./AccoladesSection";
+import SmmFaq from "./SmmFaq";
 
 export const dynamic = "force-dynamic";
 
@@ -54,7 +58,11 @@ const page = () => {
       <SocialMediaHero />
       <WhyInvestSMM />
       <MetaMarketing />
-     
+      <LinkedinMarketing />
+      <YoutubeMarketing />
+      <AccoladesSection />
+     <SmmFaq />
+     <Footer />
     </>
   );
 };

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import ModalForm from "./ModalForm";
-import { BASE_URL, getModalVideo } from "@/app/Server";
+// import { BASE_URL, getModalVideo } from "@/app/Server";
 
 export default function Modal({ isOpen, onClose, data }) {
   // console.log("Modal isOpen:", isOpen);
@@ -20,40 +20,42 @@ export default function Modal({ isOpen, onClose, data }) {
       return;
     }
 
-    try {
-      const res = await fetch(`${BASE_URL}/api/form-submissions`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          data: {
-            name,
-            phone,
-            message,
-          },
-        }),
-      });
+    //server issue fixed later
+    // try {
+    //   const res = await fetch(`${BASE_URL}/api/form-submissions`, {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       data: {
+    //         name,
+    //         phone,
+    //         message,
+    //       },
+    //     }),
+    //   });
 
-      const result = await res.json();
-      // console.log("Form submission result:", result);
+    //   const result = await res.json();
+    //   // console.log("Form submission result:", result);
 
-      if (!res.ok) {
-        alert("Submission failed. Please try again.");
-        return;
-      }
+    //   if (!res.ok) {
+    //     alert("Submission failed. Please try again.");
+    //     return;
+    //   }
 
-      // ✅ Clear fields
-      setName("");
-      setPhone("");
-      setMessage("");
+    //   // ✅ Clear fields
+    //   setName("");
+    //   setPhone("");
+    //   setMessage("");
 
-      // ✅ Close modal
-      onClose();
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Something went wrong. Please try again.");
-    }
+    //   // ✅ Close modal
+    //   onClose();
+    // } catch (error) {
+    //   console.error("Error submitting form:", error);
+    //   alert("Something went wrong. Please try again.");
+    // }
+    //server issue fixed later
   };
 
   return (

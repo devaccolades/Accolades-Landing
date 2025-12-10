@@ -72,11 +72,11 @@ const Footer = () => {
                   Careers
                 </a>
               </li>
-              <li>
-                <a href="/blog" className="hover:text-teal-700 transition">
+              {/* <li>
+                <a href="/blog-top-digital-marketing-companies" className="hover:text-teal-700 transition">
                   Blogs
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

@@ -89,6 +89,7 @@ const page = () => {
     <div>
       <EcommerceHero />
       <EcommerceServices />
+      <Footer />
     </div>
   );
 };

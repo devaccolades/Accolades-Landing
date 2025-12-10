@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export default function SocialMediaHero() {
   return (
@@ -28,10 +29,12 @@ export default function SocialMediaHero() {
           </p>
 
           {/* Button */}
+          <Link href="/contact-us">
           <button className="w-fit flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-[10px] text-[16px] leading-[100%] font-semibold transition">
             Start Growing Your Brand
             <ArrowUpRight size={16} />
           </button>
+          </Link>
 
           
         </div>

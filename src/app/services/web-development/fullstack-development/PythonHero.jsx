@@ -56,7 +56,7 @@ export default function PythonHero() {
         <div className="flex justify-center items-center px-0 md:px-6 mt-0">
           <div className="relative h-[130px] md:h-[200px] lg:h-[260px] xl:h-[380px] w-[286px] md:w-[860px] lg:w-[940px] xl:w-[990px]   overflow-hidden">
             <Image
-              src="/fullstack-new/py-hero.png" // replace with your image
+              src="/new-fullstack/py-hero.png" // replace with your image
               alt="Main Tech Graphic"
               fill
             //   className="object-contain drop-shadow-xl"

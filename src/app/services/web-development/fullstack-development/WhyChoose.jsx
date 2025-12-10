@@ -2,19 +2,19 @@ import Image from "next/image";
 
 const FEATURES = [
   {
-    icon: "/fullstack-new/w1.svg",
+    icon: "/new-fullstack/w1.svg",
     title: "Scalable",
     bg: "bg-[#F1FFF7]",
     text: "We build sites that grow with you. Frameworks like Django are known to scale efficiently. Some of the highest-traffic sites rely on Django’s ability to flexibly handle growth. Our architecture is designed so you can add users and features without reworking the core code."
   },
   {
-    icon: "/fullstack-new/w2.svg",
+    icon: "/new-fullstack/w2.svg",
     title: "Secure",
     bg: "bg-[#F3F7FF]",
     text: "Security is a priority. We enforce HTTPS and use token-based authentication to protect data. Django includes many built-in protections against common web attacks. We follow best practices to keep your site and data safe."
   },
   {
-    icon: "/fullstack-new/w3.svg",
+    icon: "/new-fullstack/w3.svg",
     title: "Fast",
     bg: "bg-[#FFF6EB]",
     text: "Fast is user-friendly. We optimize every layer for speed. Next.js supports server-side rendering and caching to speed up page loads. On the backend we write efficient Python code and use caching where needed."

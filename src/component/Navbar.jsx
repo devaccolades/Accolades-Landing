@@ -15,13 +15,13 @@ const navItems = [
   { label: "About", href: "/about-us" },
   { label: "Contact", href: "/contact-us" },
   { label: "Careers", href: "/careers" },
-  { label: "Blog", href: "/blog-top-digital-marketing-companies" },
+  // { label: "Blog", href: "/blog-top-digital-marketing-companies" },
 ];
 
 const mobileNavLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about-us" },
-  { label: "Blogs", href: "/blog-top-digital-marketing-companies" },
+  // { label: "Blogs", href: "/blog-top-digital-marketing-companies" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact-us" },
   { label: "Services", href: "/services" },

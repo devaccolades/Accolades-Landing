@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/app/Server";
+// import { BASE_URL } from "@/app/Server";
 import React, { useState } from "react";
 
 function ModalForm() {
@@ -14,22 +14,23 @@ function ModalForm() {
       alert("Please fill out all fields.");
       return;
     }
-
-    const res = await fetch(`${BASE_URL + "/api/form-submissions"}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        data: {
-          name,
-          phone,
-          message,
-        },
-      }),
-    });
-
-    const result = await res.json();
+ 
+    //server issue fixed later
+    // const res = await fetch(`${BASE_URL + "/api/form-submissions"}`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     data: {
+    //       name,
+    //       phone,
+    //       message,
+    //     },
+    //   }),
+    // });
+   //server issue fixed later
+    // const result = await res.json();
     // console.log("Form submission result:", result);
   };
 

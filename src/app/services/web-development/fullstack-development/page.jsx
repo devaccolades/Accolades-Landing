@@ -6,6 +6,8 @@ import Footer from '@/component/Footer'
 import FullstackProjects from './FullstackProjects'
 
 import { BASE_URL, getSeo } from "@/app/Server";
+import PythonHero from './PythonHero'
+import TechnologyStack from './TechnologyStack'
 
 export const dynamic = "force-dynamic";
 
@@ -16,32 +18,34 @@ export async function generateMetadata() {
   const post = await getSeo(name);
   // console.log("post", post[0].metaTitle);
 
-  return {
-    title: post[0]?.metaTitle,
-    description: post[0]?.metaDescription,
-     keywords:"Python Web Developers in Kochi ",
-    openGraph: {
-      title: post[0]?.ogTitle,
-      description: post[0]?.ogDescription,
-      images: [
-        BASE_URL + post[0]?.ogImage?.formats?.medium?.url, // Make sure this is a full URL to the image
-      ],
-    },
-  };
+  // return {
+  //   title: post[0]?.metaTitle,
+  //   description: post[0]?.metaDescription,
+  //    keywords:"Python Web Developers in Kochi ",
+  //   openGraph: {
+  //     title: post[0]?.ogTitle,
+  //     description: post[0]?.ogDescription,
+  //     images: [
+  //       BASE_URL + post[0]?.ogImage?.formats?.medium?.url, // Make sure this is a full URL to the image
+  //     ],
+  //   },
+  // };
 }
 
 function page() {
   return (
     <div>
       {/* <Navbar /> */}
-       <div className="bg-[#F1F1F1]">
+       {/* <div className="bg-[#F1F1F1]">
          <FullstackHero /> 
          <WhatWeCover />
          <FullstackProjects />
              </div>
                <div className="-mt-[65px]">
              <Footer />
-             </div>
+             </div> */}
+             <PythonHero />
+             <TechnologyStack />
     </div>
   )
 }

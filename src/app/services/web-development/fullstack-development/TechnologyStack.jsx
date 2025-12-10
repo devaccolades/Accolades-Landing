@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function TechnologyStack() {
   const techCards = [
     {
-      icon: "/fullstack-new/fr.svg",
+      icon: "/new-fullstack/fr.svg",
       title: "Frontend Frameworks",
       bg: "bg-[#ECFEFF]",
       bordercolor: "#0E99BC",
@@ -13,7 +13,7 @@ export default function TechnologyStack() {
       tags: ["React.js", "Next.js"],
     },
     {
-      icon: "/fullstack-new/bk.svg",
+      icon: "/new-fullstack/bk.svg",
       title: "Backend Technologies",
       bg: "bg-[#fff8fc]",
       bordercolor: "#9810FA",
@@ -22,7 +22,7 @@ export default function TechnologyStack() {
       tags: ["Python-Django", "Strapi CMS"],
     },
     {
-      icon: "/fullstack-new/da.svg",
+      icon: "/new-fullstack/da.svg",
       title: "Databases",
       bg: "bg-[#f4fbff]",
       bordercolor: "#145CFC",

@@ -8,6 +8,8 @@ import FullstackProjects from './FullstackProjects'
 // import { BASE_URL, getSeo } from "@/app/Server";
 import PythonHero from './PythonHero'
 import TechnologyStack from './TechnologyStack'
+import WhyChoose from './WhyChoose'
+import PythonFaq from './PythonFaq'
 
 export const dynamic = "force-dynamic";
 
@@ -45,6 +47,9 @@ function page() {
              </div> */}
              <PythonHero />
              <TechnologyStack />
+             <WhyChoose />
+             <PythonFaq />
+             <Footer />
     </div>
   )
 }

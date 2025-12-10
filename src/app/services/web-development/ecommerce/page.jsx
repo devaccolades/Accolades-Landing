@@ -10,6 +10,8 @@ import next from "../../../../../public/web/next-js.png";
 import py from "../../../../../public/web/python.png";
 import dj from "../../../../../public/web/dj2.png";
 import postg from "../../../../../public/web/postgres.png";
+import EcommerceHero from "./EcommerceHero";
+import EcommerceServices from "./EcommerceServices";
 
 const heroData = {
   main_title: "Ecommerce Website",
@@ -71,18 +73,22 @@ const tech = {
 
 const page = () => {
   return (
-    <div
-      style={{
-        background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
-      }}
-    >
-      {/* <Navbar /> */}
-      <Herosection {...heroData} />
-      <WhatWeOffer {...tech} />
-      <FeaturesHighlight />
-      {/* <WebsiteProjectsIntro /> */}
-      <Footer />
+    // <div
+    //   style={{
+    //     background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
+    //   }}
+    // >
+    //   {/* <Navbar /> */}
+    //   <Herosection {...heroData} />
+    //   <WhatWeOffer {...tech} />
+    //   <FeaturesHighlight />
+    //   {/* <WebsiteProjectsIntro /> */}
+    //   <Footer />
       
+    // </div>
+    <div>
+      <EcommerceHero />
+      <EcommerceServices />
     </div>
   );
 };

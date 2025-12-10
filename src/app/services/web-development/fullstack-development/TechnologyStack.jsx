@@ -34,7 +34,7 @@ export default function TechnologyStack() {
 
   return (
     <section className="w-full py-6 md:py-8 lg:py-16 bg-white font-mont">
-      <div className="containers mx-auto px-0 lg:px-6">
+      <div className="containers mx-auto px-0 ">
 
         {/* Heading */}
         <h2 className="text-center text-xl lg:text-2xl font-bold">

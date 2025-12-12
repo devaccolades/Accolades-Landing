@@ -11,6 +11,8 @@ import WebDevHero from "./DevHero";
 import WebDevServices from "./WebDevServices";
 import Technologies from "./Technologies";
 import WhatWeBuild from "./WhatWeBuild";
+import WebWhyChoose from "./WebWhyChoose";
+import ProcessAndCaseFit from "./ProcessAndCaseFit";
 
 export const dynamic = "force-dynamic";
 
@@ -50,6 +52,9 @@ const page = () => {
       <WebDevServices />
       <Technologies />
       <WhatWeBuild />
+      <WebWhyChoose />
+      <ProcessAndCaseFit />
+      <Footer />
     </>
   );
 };

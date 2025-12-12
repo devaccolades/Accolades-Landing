@@ -7,6 +7,7 @@ import SeoHero from "./SeoHero";
 import SeoServices from "./SeoServices";
 import SeoValueSection from "./SeoValue";
 import WhyChooseAndProcess from "./WhyChoose";
+import SeoDeliverables from "./SeoDeliverable";
 // import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
@@ -48,6 +49,7 @@ export default function page() {
       <SeoServices />
       <SeoValueSection />
       <WhyChooseAndProcess />
+      <SeoDeliverables />
     </>
   );
 }

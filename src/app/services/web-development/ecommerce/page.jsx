@@ -12,6 +12,9 @@ import dj from "../../../../../public/web/dj2.png";
 import postg from "../../../../../public/web/postgres.png";
 import EcommerceHero from "./EcommerceHero";
 import EcommerceServices from "./EcommerceServices";
+import FeaturesSection from "./FeaturesSection";
+import WhyChooseSection from "./WhyChoose";
+import FreeConsultation from "./FreeConsultation";
 
 const heroData = {
   main_title: "Ecommerce Website",
@@ -89,6 +92,9 @@ const page = () => {
     <div>
       <EcommerceHero />
       <EcommerceServices />
+      <FeaturesSection />
+      <WhyChooseSection />
+      <FreeConsultation />
       <Footer />
     </div>
   );

@@ -3,6 +3,10 @@ import HeroSection from "./HeroSection";
 import Process from "./Process";
 import Types from "./Types";
 import Footer from "@/component/Footer";
+import SeoHero from "./SeoHero";
+import SeoServices from "./SeoServices";
+import SeoValueSection from "./SeoValue";
+import WhyChooseAndProcess from "./WhyChoose";
 // import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
@@ -31,7 +35,7 @@ export const dynamic = "force-dynamic";
 export default function page() {
   return (
     <>
-      {/* <Navbar /> */}
+      {/* <Navbar />
       <main className="bg-[#F1F1F1]">
         <HeroSection />
         <Process />
@@ -39,7 +43,11 @@ export default function page() {
       </main>
       <main className="-mt-[65px]">
         <Footer />
-      </main>
+      </main> */}
+      <SeoHero />
+      <SeoServices />
+      <SeoValueSection />
+      <WhyChooseAndProcess />
     </>
   );
 }

@@ -97,30 +97,7 @@ export default function WhyChooseAndProcess() {
           </p>
         </div>
 
-        {/* PROCESS STEPS  */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-4  lg:gap-10 mt-6">
-          {process.map((item, index) => (
-            <div key={index} className="text-center flex flex-col items-center">
-
-              <div className=" w-fit mb-2">
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={40}
-                  height={40}
-                />
-              </div>
-
-              <p className="text-[#0E9F8A] font-semibold"> {item.step} </p>
-
-              <h3 className="font-semibold text-gray-900 mt-1">{item.title}</h3>
-
-             <p className="text-black mt-2 text-[12px] lg:text-[14px] leading-[156%]">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div> */}
+       
 
         {/* PROCESS STEPS  */}
 <div className="relative grid grid-cols-1 md:grid-cols-4 gap-4 lg:gap-10 mt-6">

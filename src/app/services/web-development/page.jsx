@@ -7,6 +7,10 @@ import WebsiteProjects from "./WebsiteProjects";
 // import { BASE_URL, getSeo } from "@/app/Server";
 import WebSeo from "./WebSeo";
 import WebFaq from "./WebFaq";
+import WebDevHero from "./DevHero";
+import WebDevServices from "./WebDevServices";
+import Technologies from "./Technologies";
+import WhatWeBuild from "./WhatWeBuild";
 
 export const dynamic = "force-dynamic";
 
@@ -34,17 +38,18 @@ const page = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="bg-[#F1F1F1]">
+      {/* <div className="bg-[#F1F1F1]">
         <WebHero />
         <WebsiteFeatures />
-        {/* <WebSeo />
-        <WebFaq /> */}
-        <WebsiteProjects />
-        
+        <WebsiteProjects />      
       </div>
       <div className="-mt-[65px]">
         <Footer />
-      </div>
+      </div> */}
+      <WebDevHero />
+      <WebDevServices />
+      <Technologies />
+      <WhatWeBuild />
     </>
   );
 };

@@ -17,7 +17,7 @@ export default function SeoHero() {
           </div>
 
           {/* Title */}
-          <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-[36px] xl:leading-[48px]">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-[36px] xl:leading-[48px]">
             SEO COMPANY IN KOCHI - ORGANIC SEARCH THAT SCALES YOUR BUSINESS
           </h1>
 

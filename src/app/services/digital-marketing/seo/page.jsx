@@ -5,6 +5,8 @@ import Types from "./Types";
 import Footer from "@/component/Footer";
 import SeoHero from "./SeoHero";
 import SeoServices from "./SeoServices";
+import SeoValueSection from "./SeoValue";
+import WhyChooseAndProcess from "./WhyChoose";
 // import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
@@ -44,6 +46,8 @@ export default function page() {
       </main> */}
       <SeoHero />
       <SeoServices />
+      <SeoValueSection />
+      <WhyChooseAndProcess />
     </>
   );
 }

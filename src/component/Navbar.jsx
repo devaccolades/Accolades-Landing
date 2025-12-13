@@ -342,7 +342,7 @@ const Navbar = () => {
       </nav>
 
       {/* for mobile view */}
-      <nav className="lg:hidden sticky top-[10px] md:top-10 containers z-50">
+      <nav className="lg:hidden fixed left-0 right-0 top-[10px] md:top-10 containers z-50">
         <GlassSurface
           width={"100%"}
           height={52}
@@ -368,49 +368,10 @@ const Navbar = () => {
             height={500}
             width={500}
             priority
-            className="h-[30px] w-full  md:w-[205px] md:h-[38px] cursor-pointer"
+            className="h-[30px] w-fit  md:w-[205px] md:h-[38px] cursor-pointer"
           />
           {/* </Link> */}
-          <div className="hidden lg:flex items-center gap-[40px]">
-            <Link href="/">
-              <p
-                className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                  active === "Home" ? "text-[#0C7379]" : ""
-                }`}
-                onClick={(e) => setActive(e.target.textContent)}
-              >
-                Home
-              </p>
-            </Link>
-            <p
-              className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                active === "Services" ? "text-[#0C7379]" : ""
-              }`}
-              onClick={(e) => handleService(e.target.textContent)}
-            >
-              Services
-            </p>
-            <Link href="/about-us">
-              <p
-                className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                  active === "About Us" ? "text-[#0C7379]" : ""
-                }`}
-                onClick={(e) => setActive(e.target.textContent)}
-              >
-                About Us
-              </p>
-            </Link>
-            <Link href="/contact-us">
-              <p
-                className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                  active === "Contact Us" ? "text-[#0C7379]" : ""
-                }`}
-                onClick={(e) => setActive(e.target.textContent)}
-              >
-                Contact Us
-              </p>
-            </Link>
-          </div>
+          
           <div className="flex flex-row items-center gap-[10px]">
             <button className="">
               <Image

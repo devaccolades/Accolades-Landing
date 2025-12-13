@@ -74,6 +74,17 @@ export default function ModalServices({ isOpen, onClose }) {
     },
   };
 
+  const mobileAdds = [
+    {
+      label: "About Us",
+      href: "/about-us",
+    },
+    {
+      label: "Contact Us",
+      href: "/contact-us",
+    },
+  ];
+
   return (
     <div className="relative z-50">
       {/* Modal Overlay */}
@@ -116,7 +127,9 @@ export default function ModalServices({ isOpen, onClose }) {
                       <div className="flex gap-2 md:gap-5 justify-between items-center">
                         <Link href={page.href}>
                           <div className="flex gap-2 md:gap-5 items-center cursor-pointer hover:opacity-80 transition">
-                            <p className="text-[10px] md:text-[13px] mt-2 md:mt-3">{`0${index + 1}`}</p>
+                            <p className="text-[10px] md:text-[13px] mt-2 md:mt-3">{`0${
+                              index + 1
+                            }`}</p>
                             <p className="font-monst text-[24px] lg:text-[40px] text-[#0C7379]">
                               {services}
                             </p>
@@ -125,8 +138,9 @@ export default function ModalServices({ isOpen, onClose }) {
 
                         <button>
                           <IoIosArrowDown
-                            className={`text-[16px] md:text-[24px] ${openIndex === index ? "rotate-180" : "rotate-0"
-                              }`}
+                            className={`text-[16px] md:text-[24px] ${
+                              openIndex === index ? "rotate-180" : "rotate-0"
+                            }`}
                             onClick={() =>
                               setOpenIndex(openIndex === index ? null : index)
                             }
@@ -146,6 +160,22 @@ export default function ModalServices({ isOpen, onClose }) {
                     </div>
                   );
                 })}
+                <div className="">
+                  <div className="md:hidden flex flex-col  md:gap-5 justify-between items-start">
+                    {mobileAdds.map((item, index) => (
+                      <Link href={item.href} key={index}>
+                        <div className="flex gap-2 md:gap-5 items-center cursor-pointer hover:opacity-80 transition">
+                          <p className="text-[10px] md:text-[13px] mt-2 md:mt-3">
+                            {`0${index + 4}`}
+                          </p>
+                          <p className="font-monst text-[24px] lg:text-[40px] text-[#0C7379]">
+                            {item.label}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
               <div className="flex flex-col md:flex-row gap-5">
                 <div className="flex flex-col gap-[5px]">

@@ -5,7 +5,8 @@ import React from "react";
 // ✅ Replace with your actual image paths
 // import robotHands from "@/public/google/robot-hands.png";
 import googleLogo from "../../../public/google-partner/g-logo.svg";
-import hero from "../../../public/google-partner/hero-gp.png";
+import hero from "../../../public/google-partner/hg.svg";
+import { ArrowUpRight } from "lucide-react";
 
 const features = [
   "Google-certified advertising experts",
@@ -16,17 +17,17 @@ const features = [
 
 const HeroSection = () => {
   return (
-    <section className="containers mt-20 py-14">
-      <div className="   text-center ">
+    <section className="py-4 md:py-10 lg:py-14 bg-[#F5F5F5]">
+      <div className="pt-2 md:pt-10 lg:pt-20 containers  text-center font-mont ">
 
         {/* ✅ GOOGLE PARTNERS BADGE */}
-        <div className="flex justify-center mb-4">
+        <div className="flex justify-center mb-1 md:mb-4">
           <Image
             src={googleLogo}
             alt="Google Partner"
             width={160}
             height={50}
-            className="object-contain"
+            className="object-contain w-[80px] md:w-[160px]"
           />
         </div>
 
@@ -46,7 +47,7 @@ const HeroSection = () => {
             alt="Google Growth Visual"
             width={600}
             height={350}
-            className="object-contain w-full"
+            className="object-contain "
             priority
           />
         </div>
@@ -58,16 +59,19 @@ const HeroSection = () => {
         </p>
 
         {/* ✅ FEATURES / BADGES */}
-        <div className="flex flex-wrap justify-center gap-3 mt-6">
+        {/* <div className="flex flex-wrap justify-center gap-3 mt-6"> */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 md:gap-3 justify-center mt-6">
           {features.map((item, index) => (
             <span
               key={index}
-              className="px-4 py-2 text-[11px] sm:text-[12px] font-mont rounded-full bg-black text-white"
+              className="flex items-center gap-0 md:gap-2 px-2 md:px-5 py-2 text-[11px] sm:text-[12px] font-mont rounded-full bg-black text-white"
             >
-              {item}
+              <ArrowUpRight size={14} className="shrink-0" />
+              <span className="leading-none">{item}</span>
             </span>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -54,6 +54,8 @@ const page = () => {
       <WhatWeBuild />
       <WebWhyChoose />
       <ProcessAndCaseFit />
+      <WebFaq />
+      <WebsiteProjects />
       <Footer />
     </>
   );

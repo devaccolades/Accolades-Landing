@@ -94,7 +94,7 @@ const page = () => {
       <EcommerceServices />
       <FeaturesSection />
       <WhyChooseSection />
-      <FreeConsultation />
+      <FreeConsultation /> 
       <Footer />
     </div>
   );

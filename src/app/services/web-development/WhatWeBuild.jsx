@@ -44,12 +44,12 @@ export default function WhatWeBuild() {
       <div className="">
 
         {/* HEADING */}
-        <h2 className="text-center md:text-center text-xl md:text-2xl font-bold text-black mb-0 ">
+        <h2 className="text-start md:text-center text-xl md:text-2xl font-bold text-black mb-0 ">
           WHAT WE BUILD — REAL SOLUTIONS FOR REAL NEEDS
         </h2>
 
         {/* SUBTEXT */}
-        <p className="text-center md:text-center mt-2 text-black font-semibold text-[14px] leading-[106%] mb-4 ">
+        <p className="text-start md:text-center mt-2 text-black font-semibold text-[14px] leading-[106%] mb-4 ">
           We design UI/UX to match brand tone and user goals. We focus on 
           frontend performance, image optimisation, and fast time to interactive.
         </p>

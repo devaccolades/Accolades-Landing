@@ -61,7 +61,7 @@ export default function ProcessAndCaseFit() {
 
   return (
     <section className="w-full px-6 md:px-16 py-20">
-      {/* ---------------------------------- DEVELOPMENT PROCESS ----------------------------------- */}
+      {/*  DEVELOPMENT PROCESS  */}
       <div className="text-center">
         <h2 className="text-xl md:text-2xl font-semibold">
           OUR DEVELOPMENT PROCESS
@@ -90,7 +90,7 @@ export default function ProcessAndCaseFit() {
         ))}
       </div>
 
-      {/* ---------------------------------- CASE FIT SECTION ----------------------------------- */}
+      {/*  CASE FIT SECTION  */}
       <div className="mt-24 text-center">
         <h2 className="text-xl md:text-2xl font-semibold">
           CASE FIT — WHO BENEFITS MOST

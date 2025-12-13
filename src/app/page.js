@@ -11,18 +11,18 @@ import Testimonials from "./(home)/Testimonials";
 import ReachUs from "./(home)/ReachUs";
 import Footer from "@/component/Footer";
 import Navbar from "@/component/Navbar";
-import { BASE_URL, getSeo } from "./Server";
+// import { BASE_URL, getSeo } from "./Server";
 import WebProjects from "./(home)/WebProjects";
 import SeoContents from "./(home)/SeoContents";
 import FAQ from "./(home)/FAQ";
 
 export const dynamic = "force-dynamic";
 
-export async function generateMetadata() {
-  const name = "home";
+// export async function generateMetadata() {
+//   const name = "home";
 
   // fetch post information
-  const post = await getSeo(name);
+  // const post = await getSeo(name);
   // console.log("post", post[0].ogTitle);
 
   // return {
@@ -36,7 +36,7 @@ export async function generateMetadata() {
   //     ],
   //   },
   // };
-}
+// }
 
 export default function page() {
   return (

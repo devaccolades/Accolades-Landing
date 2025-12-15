@@ -33,6 +33,20 @@ export const dynamic = "force-dynamic";
 //   };
 // }
 
+
+export async function generateMetadata() {
+  return {
+    title: "Web Development Services – Python Developers in Kochi ",
+    description: "Accolades Integrated offers end-to-end full-stack web development services in Kerala. Our expert Python developers in Kochi build fast, scalable sites.",
+
+    openGraph: {
+      title: "Web Development Services – Python Developers in Kochi ",
+      description: "Accolades Integrated offers end-to-end full-stack web development services in Kerala. Our expert Python developers in Kochi build fast, scalable sites.",
+     
+    },
+  };
+}
+
 function page() {
   return (
     <div>

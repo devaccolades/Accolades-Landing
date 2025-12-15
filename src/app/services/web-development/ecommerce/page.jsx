@@ -17,6 +17,21 @@ import WhyChooseSection from "./WhyChoose";
 import FreeConsultation from "./FreeConsultation";
 import EcommerceFaq from "./EcommerceFaq";
 
+
+
+export async function generateMetadata() {
+  return {
+    title: "Reliable E commerce Web Development Company in Kochi ",
+    description: "Accolades Integrated, Trusted E commerce Web Development Company in Kochi, builds Shopify, WooCommerce, and custom React/Next.js stores for online sales.",
+
+    openGraph: {
+      title: "Reliable E commerce Web Development Company in Kochi ",
+      description: "Accolades Integrated, Trusted E commerce Web Development Company in Kochi, builds Shopify, WooCommerce, and custom React/Next.js stores for online sales.",
+     
+    },
+  };
+}
+
 const heroData = {
   main_title: "Ecommerce Website",
   title: "Your Online Store. Built to Convert.",
@@ -25,6 +40,7 @@ const heroData = {
   button_text: "Get a Creative Proposal",
   image: "/web/ecom/ecom.webp",
 };
+
 
 const tools = [
   {

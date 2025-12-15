@@ -32,6 +32,19 @@ export const dynamic = "force-dynamic";
 //   };
 // }
 
+export async function generateMetadata() {
+  return {
+    title: "Digital Marketing Agency in Kochi | Accolades Integrated",
+    description: "End to end digital marketing agency in Kochi for reliable Performance marketing, SEO, SEM, social media, and content services for business growth.",
+
+    openGraph: {
+      title: "Digital Marketing Agency in Kochi | Accolades Integrated",
+      description: "End to end digital marketing agency in Kochi for reliable Performance marketing, SEO, SEM, social media, and content services for business growth.",
+     
+    },
+  };
+}
+
 function page() {
   return (
     <div>

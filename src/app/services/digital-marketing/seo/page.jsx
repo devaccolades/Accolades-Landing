@@ -35,6 +35,19 @@ export const dynamic = "force-dynamic";
 //   };
 // }
 
+export async function generateMetadata() {
+  return {
+    title: "SEO Company in Kochi | Accolades Integrated",
+    description: "Accolades Integrated — trusted SEO Company in Kochi. Technical SEO, on-page, local SEO, e-commerce SEO, and link building for steady organic growth.",
+
+    openGraph: {
+      title: "SEO Company in Kochi | Accolades Integrated",
+      description: "Accolades Integrated — trusted SEO Company in Kochi. Technical SEO, on-page, local SEO, e-commerce SEO, and link building for steady organic growth.",
+     
+    },
+  };
+}
+
 export default function page() {
   return (
     <>

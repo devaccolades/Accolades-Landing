@@ -10,16 +10,17 @@ import Link from "next/link";
 export default function WebDevHero() {
   const projects = [
     { img: "/new-web/cd.webp", alt: "Project 1" },
-    { img: "/new-web/au.png", alt: "Project 2" },
+    { img: "/new-web/alp.png", alt: "Project 2" },
+     { img: "/new-web/recr.png", alt: "Project 2" },
     { img: "/new-web/ab.webp", alt: "Project 3" },
   ];
 
   return (
-    <section className="w-full font-mont bg-gradient-to-b from-[#eaf5fc] to-white pb-2 md:pb-10 pt-2 md:pt-8 lg:pt-30">
+    <section className="w-full font-mont bg-gradient-to-b from-[#eaf5fc] to-white pb-2 md:pb-10 pt-18 md:pt-26 lg:pt-30">
       <div className="containers  text-center items-center">
 
         {/* HEADING */}
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold leading-[24px] md:leading-tight">
+        <h1 className="text-2xl md:text-4xl xl:text-5xl font-extrabold leading-[24px] md:leading-tight">
           WEB DEVELOPMENT COMPANY IN
           <br className="hidden md:block"/>
           KOCHI — BUILD FAST, SCALABLE,
@@ -67,7 +68,7 @@ export default function WebDevHero() {
                     alt={item.alt}
                     width={600}
                     height={400}
-                    className="w-full h-[200px] md:h-[250px] lg:h-[300px] object-cover"
+                    className="w-full h-[200px] md:h-[250px] xl:h-[300px] object-cover"
                   />
                 </div>
               </SwiperSlide>

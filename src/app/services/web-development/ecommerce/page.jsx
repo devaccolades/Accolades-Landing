@@ -15,6 +15,7 @@ import EcommerceServices from "./EcommerceServices";
 import FeaturesSection from "./FeaturesSection";
 import WhyChooseSection from "./WhyChoose";
 import FreeConsultation from "./FreeConsultation";
+import EcommerceFaq from "./EcommerceFaq";
 
 const heroData = {
   main_title: "Ecommerce Website",
@@ -95,6 +96,7 @@ const page = () => {
       <FeaturesSection />
       <WhyChooseSection />
       <FreeConsultation /> 
+      <EcommerceFaq />
       <Footer />
     </div>
   );

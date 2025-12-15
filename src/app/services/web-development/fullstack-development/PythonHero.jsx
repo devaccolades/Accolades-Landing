@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function PythonHero() {
   return (
-    <section className=" bg-[#DFDFE1] font-mont pt-4 md:pt-10 lg:pt-40 rounded-[30px] mx-2 my-2">
+    <section className=" bg-[#DFDFE1] font-mont pt-18 md:pt-24 lg:pt-40 rounded-[30px] mx-2 my-2">
       <div className="containers mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12">
 
         {/* LEFT SIDE */}

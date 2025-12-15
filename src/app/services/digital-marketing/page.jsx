@@ -6,6 +6,7 @@ import Tools from "./Tools";
 import WhyChoose from "./WhyChoose";
 import OurClients from "./OurClients";
 import Footer from "@/component/Footer";
+import DigitalFaq from "./DigitalFaq";
 // import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
@@ -41,6 +42,7 @@ function page() {
         <OurClients />
         <WhyChoose />
         <Tools />
+        <DigitalFaq />
       </main>
       <main className="-mt-[65px]">
         <Footer />

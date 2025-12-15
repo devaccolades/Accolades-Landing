@@ -51,7 +51,7 @@ const Tools = () => {
     //     background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
     //   }}
     // >
-      <section className="containers font-mont pb-12 2xl:pb-[130px]">
+      <section className="containers font-mont pb-12 ">
         <div className="bg-white rounded-3xl p-8 shadow-lg text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0199A4] mb-8">
             Tools & Platforms We Use

@@ -104,7 +104,7 @@ const HeroSection = () => {
             opacity={0.02}
           />
         </div>
-        <div className="relative h-full md:containers flex flex-col pt-[150px] z-40">
+        <div className="relative h-full md:containers flex flex-col pt-[100px] md:pt-[150px] z-40">
           <div className="relative z-20 text-center flex flex-col justify-center items-center ">
             <div className="bg-black w-fit px-[16px] py-[8px] md:px-[20px] md:py-[10px] rounded-full">
               <p className="text-[12px] md:text-[16px] font-semibold text-white">

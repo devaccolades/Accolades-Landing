@@ -17,7 +17,7 @@ const features = [
 
 const HeroSection = () => {
   return (
-    <section className="py-4 md:py-10 lg:py-14 bg-[#F5F5F5]">
+    <section className="pt-18 md:pt-24 lg:pt-14 pb-8 bg-[#F5F5F5]">
       <div className="pt-2 md:pt-10 lg:pt-20 containers  text-center font-mont ">
 
         {/* ✅ GOOGLE PARTNERS BADGE */}

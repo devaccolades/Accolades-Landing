@@ -7,6 +7,20 @@ import ServicesIncluded from "./ServicesIncluded";
 import OurProcess from "./OurProcess";
 import CreativeApproach from "./CreativeApproach";
 
+
+export async function generateMetadata() {
+  return {
+    title: "Performance Marketing Solutions",
+    description: "Maximize ROI with data-driven performance marketing strategies focused on conversions, lead generation, and measurable business growth. ",
+
+    openGraph: {
+      title: "Performance Marketing Solutions",
+      description: "Maximize ROI with data-driven performance marketing strategies focused on conversions, lead generation, and measurable business growth. ",
+     
+    },
+  };
+}
+
 const heroData = {
   main_title: "Performance Marketing",
   title: "Drive Measurable Growth with Performance Marketing",

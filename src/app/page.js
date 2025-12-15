@@ -40,12 +40,12 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
   return {
-    title: "Home | Accolades Integrated",
-    description: "Accolades",
+    title: "Leading Branding Agency in Kochi | Accolades Integrated",
+    description: "Build a brand that stands out with Accolades Integrated, the best branding company in Kochi offering strategy, design, and digital identity solutions.",
 
     openGraph: {
-      title: "Home |  Accolades Integrated",
-      description: "Accolades",
+      title: "Leading Branding Agency in Kochi | Accolades Integrated",
+      description: "Build a brand that stands out with Accolades Integrated, the best branding company in Kochi offering strategy, design, and digital identity solutions.",
      
     },
   };

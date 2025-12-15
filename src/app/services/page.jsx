@@ -40,12 +40,12 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
   return {
-    title: "Services | Accolades Integrated",
-    description: "Accolades",
+    title: "Digital Marketing Services Kochi | Accolades Integrated",
+    description: "Expert digital marketing services in Kochi. SEO, SEM, social media, creative design, and web development. Boost your brand with Accolades Integrated.",
 
     openGraph: {
-      title: "Services |  Accolades Integrated",
-      description: "Accolades",
+      title: "Digital Marketing Services Kochi | Accolades Integrated",
+      description: "Expert digital marketing services in Kochi. SEO, SEM, social media, creative design, and web development. Boost your brand with Accolades Integrated.",
      
     },
   };

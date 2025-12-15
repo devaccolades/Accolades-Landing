@@ -116,21 +116,21 @@ export default function MetaMarketing() {
           {/* Badge */}
           <div className="flex items-center gap-2 bg-black text-white text-[10px] sm:text-xs px-3 md:px-4 py-2 rounded-full w-fit">
             <span className="flex items-center gap-1">
-              
-               <Image
-                  src="/new-smm/insta.svg"
-                  alt="Optimized for Sales"
-                  width={20}
-                  height={20}
-                  className="w-3 h-3 md:w-4 md:h-4 object-contain"
-                />
-                 <Image
-                  src="/new-smm/fb.svg"
-                  alt="Optimized for Sales"
-                  width={20}
-                  height={20}
-                  className="w-3 h-3 md:w-4 md:h-4 object-contain"
-                />
+
+              <Image
+                src="/new-smm/insta.svg"
+                alt="Optimized for Sales"
+                width={20}
+                height={20}
+                className="w-3 h-3 md:w-4 md:h-4 object-contain"
+              />
+              <Image
+                src="/new-smm/fb.svg"
+                alt="Optimized for Sales"
+                width={20}
+                height={20}
+                className="w-3 h-3 md:w-4 md:h-4 object-contain"
+              />
             </span>
             Leading SMM Agency in Kochi
           </div>
@@ -200,17 +200,20 @@ export default function MetaMarketing() {
         </div>
 
         {/*  RIGHT IMAGE */}
-        <div className="relative w-full h-[260px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-[20px] md:rounded-[30px] overflow-hidden">
+
+        <div className="relative w-full h-[360px] sm:h-[320px] md:h-[380px] lg:h-[420px] xl:h-[520px]
+                rounded-[20px] md:rounded-[30px] overflow-hidden">
 
           <Image
             src="/new-smm/meta-ad.png"
             alt="Meta Marketing Ad"
             fill
-            className="object-cover xl:object-cover"
+            className="object-cover "
             priority
           />
 
         </div>
+
 
       </div>
     </section>

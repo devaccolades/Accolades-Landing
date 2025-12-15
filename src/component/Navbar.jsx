@@ -261,7 +261,7 @@ const Navbar = () => {
             saturation={1}
             borderWidth={0.07}
             brightness={"50%"}
-            backgroundOpacity={0.01}
+            // backgroundOpacity={0.01}
             opacity={0.91}
             blur={"11px"}
             displace={0.5}
@@ -353,7 +353,7 @@ const Navbar = () => {
           saturation={1}
           borderWidth={0.07}
           brightness={"50%"}
-          backgroundOpacity={0.01}
+          // backgroundOpacity={0.01}
           opacity={0.91}
           blur={"11px"}
           displace={0.5}

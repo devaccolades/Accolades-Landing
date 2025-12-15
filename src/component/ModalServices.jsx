@@ -83,6 +83,10 @@ export default function ModalServices({ isOpen, onClose }) {
       label: "Contact Us",
       href: "/contact-us",
     },
+    //  {
+    //   label: "Google Partners",
+    //   href: "/google-partners",
+    // },
   ];
 
   return (
@@ -109,11 +113,13 @@ export default function ModalServices({ isOpen, onClose }) {
             </div>
             <div className="flex flex-col justify-between h-full">
               <div className="">
+                
+
                 <div className="flex gap-2 md:gap-5 justify-between items-center">
                   <Link href="/services">
                     <div className="flex gap-2 md:gap-5">
                       <p className="text-[10px] md:text-[13px] mt-2 md:mt-3">{`00`}</p>
-                      <p className="font-monst text-[24px] lg:text-[40px] text-[#0C7379]">
+                      <p className="font-monst text-[24px] lg:text-[30px] xl:text-[40px] text-[#0C7379]">
                         Services
                       </p>
                     </div>
@@ -130,7 +136,7 @@ export default function ModalServices({ isOpen, onClose }) {
                             <p className="text-[10px] md:text-[13px] mt-2 md:mt-3">{`0${
                               index + 1
                             }`}</p>
-                            <p className="font-monst text-[24px] lg:text-[40px] text-[#0C7379]">
+                            <p className="font-monst text-[24px] lg:text-[30px] xl:text-[40px] text-[#0C7379]">
                               {services}
                             </p>
                           </div>
@@ -150,7 +156,7 @@ export default function ModalServices({ isOpen, onClose }) {
                       {openIndex === index &&
                         page.services.map((service, index) => (
                           <Link href={service.href} key={index}>
-                            <div className="ml-10 h-fit" key={index}>
+                            <div className="ml-10 h-fit pb-3" key={index}>
                               <p className="capitalize text-[16px] lg:text-[20px] leading-[20px] md:leading-[43px] text-[#0C7379]">
                                 {service.label}
                               </p>
@@ -160,13 +166,24 @@ export default function ModalServices({ isOpen, onClose }) {
                     </div>
                   );
                 })}
+                  <div className="flex gap-2 md:gap-5 justify-between items-center">
+                  <Link href="/google-partners">
+                    <div className="flex gap-2 md:gap-5">
+                      <p className="text-[10px] md:text-[13px] mt-2 md:mt-3">{`04`}</p>
+                      <p className="font-monst text-[24px] lg:text-[30px] xl:text-[40px] text-[#0C7379]">
+                        Google Partners
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+
                 <div className="">
-                  <div className="md:hidden flex flex-col  md:gap-5 justify-between items-start">
+                  <div className="lg:hidden flex flex-col  md:gap-2 justify-between items-start">
                     {mobileAdds.map((item, index) => (
                       <Link href={item.href} key={index}>
                         <div className="flex gap-2 md:gap-5 items-center cursor-pointer hover:opacity-80 transition">
                           <p className="text-[10px] md:text-[13px] mt-2 md:mt-3">
-                            {`0${index + 4}`}
+                            {`0${index + 5}`}
                           </p>
                           <p className="font-monst text-[24px] lg:text-[40px] text-[#0C7379]">
                             {item.label}

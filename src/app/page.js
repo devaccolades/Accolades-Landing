@@ -38,6 +38,20 @@ export const dynamic = "force-dynamic";
   // };
 // }
 
+export async function generateMetadata() {
+  return {
+    title: "Home | Accolades Integrated",
+    description: "Accolades",
+
+    openGraph: {
+      title: "Home |  Accolades Integrated",
+      description: "Accolades",
+     
+    },
+  };
+}
+
+
 export default function page() {
   return (
     <>

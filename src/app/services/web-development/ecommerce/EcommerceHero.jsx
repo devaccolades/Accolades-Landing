@@ -74,7 +74,7 @@ import Link from "next/link";
 
 export default function EcommerceHero() {
   return (
-    <section className="bg-[#DFDFE1] font-mont pt-6 md:pt-10 lg:pt-32 pb-12 rounded-[30px] mx-2  my-2">
+    <section className="bg-[#DFDFE1] font-mont pt-18 md:pt-24 lg:pt-32 pb-12 rounded-[30px] mx-2  my-2">
       <div className="containers mx-auto grid lg:grid-cols-2 gap-12 items-center px-0">
 
         {/* LEFT CONTENT */}

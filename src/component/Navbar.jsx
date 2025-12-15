@@ -25,6 +25,7 @@ const mobileNavLinks = [
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact-us" },
   { label: "Services", href: "/services" },
+  { label: "Google Partners", href: "/google-partners" },
 ];
 
 const mobileServicePages = {
@@ -260,7 +261,7 @@ const Navbar = () => {
             saturation={1}
             borderWidth={0.07}
             brightness={"50%"}
-            backgroundOpacity={0.01}
+            // backgroundOpacity={0.01}
             opacity={0.91}
             blur={"11px"}
             displace={0.5}
@@ -319,6 +320,7 @@ const Navbar = () => {
                   Contact Us
                 </p>
               </Link>
+              
             </div>
             <div className="flex flex-row items-center gap-[10px]">
               <Link href={"https://wa.me/919048689977"}>
@@ -351,7 +353,7 @@ const Navbar = () => {
           saturation={1}
           borderWidth={0.07}
           brightness={"50%"}
-          backgroundOpacity={0.01}
+          // backgroundOpacity={0.01}
           opacity={0.91}
           blur={"11px"}
           displace={0.5}

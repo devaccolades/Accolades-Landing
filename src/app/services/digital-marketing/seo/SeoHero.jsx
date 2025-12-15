@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function SeoHero() {
   return (
-    <section className=" bg-gradient-to-br from-[rgb(232,244,244)] to-gray-300 font-mont pt-6 md:pt-10 lg:pt-32 pb-12 rounded-[30px] mx-2 my-2">
+    <section className=" bg-gradient-to-br from-[rgb(232,244,244)] to-gray-300 font-mont pt-18 md:pt-24 lg:pt-32 pb-12 rounded-[30px] mx-2 my-2">
       <div className="containers grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
         {/* LEFT CONTENT */}

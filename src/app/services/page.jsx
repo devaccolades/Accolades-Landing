@@ -38,6 +38,19 @@ export const dynamic = "force-dynamic";
 // }
 
 
+export async function generateMetadata() {
+  return {
+    title: "Services | Accolades Integrated",
+    description: "Accolades",
+
+    openGraph: {
+      title: "Services |  Accolades Integrated",
+      description: "Accolades",
+     
+    },
+  };
+}
+
 function page() {
   return (
     <section className="relative flex flex-col">

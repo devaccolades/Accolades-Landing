@@ -35,7 +35,18 @@ export const dynamic = "force-dynamic";
 //   };
 // }
 
+export async function generateMetadata() {
+  return {
+    title: "Social Media Marketing Kochi – Facebook, LinkedIn & YouTube",
+    description: "Accolades Integrated manage your Social Media Marketing in Kochi – Facebook &  Instagram, LinkedIn campaigns to grow your brand awareness and drive leads.",
 
+    openGraph: {
+      title: "Social Media Marketing Kochi – Facebook, LinkedIn & YouTube",
+      description: "Accolades Integrated manage your Social Media Marketing in Kochi – Facebook &  Instagram, LinkedIn campaigns to grow your brand awareness and drive leads.",
+     
+    },
+  };
+}
 
 const page = () => {
   return (

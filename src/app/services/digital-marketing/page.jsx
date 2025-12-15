@@ -6,6 +6,7 @@ import Tools from "./Tools";
 import WhyChoose from "./WhyChoose";
 import OurClients from "./OurClients";
 import Footer from "@/component/Footer";
+import DigitalFaq from "./DigitalFaq";
 // import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
@@ -31,6 +32,19 @@ export const dynamic = "force-dynamic";
 //   };
 // }
 
+export async function generateMetadata() {
+  return {
+    title: "Digital Marketing Agency in Kochi | Accolades Integrated",
+    description: "End to end digital marketing agency in Kochi for reliable Performance marketing, SEO, SEM, social media, and content services for business growth.",
+
+    openGraph: {
+      title: "Digital Marketing Agency in Kochi | Accolades Integrated",
+      description: "End to end digital marketing agency in Kochi for reliable Performance marketing, SEO, SEM, social media, and content services for business growth.",
+     
+    },
+  };
+}
+
 function page() {
   return (
     <div>
@@ -41,6 +55,7 @@ function page() {
         <OurClients />
         <WhyChoose />
         <Tools />
+        <DigitalFaq />
       </main>
       <main className="-mt-[65px]">
         <Footer />

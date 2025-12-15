@@ -27,6 +27,18 @@ export const dynamic = "force-dynamic";
 // }
 
 
+export async function generateMetadata() {
+  return {
+    title: " About Accolades Integrated ",
+    description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow. ",
+
+    openGraph: {
+      title: " About Accolades Integrated ",
+      description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
+     
+    },
+  };
+}
 
 export default function page() {
   return (

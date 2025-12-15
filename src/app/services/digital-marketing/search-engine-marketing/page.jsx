@@ -27,6 +27,19 @@ export const dynamic = "force-dynamic";
 //   };
 // }
 
+export async function generateMetadata() {
+  return {
+    title: "Search Engine Marketing Services (SEM)",
+    description: "Drive instant traffic and qualified leads with result-oriented search engine marketing services, including Google Ads and PPC campaign optimization. ",
+
+    openGraph: {
+      title: "Search Engine Marketing Services (SEM)",
+      description: "Drive instant traffic and qualified leads with result-oriented search engine marketing services, including Google Ads and PPC campaign optimization. ",
+     
+    },
+  };
+}
+
 
 const page = () => {
   return (

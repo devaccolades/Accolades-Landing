@@ -49,6 +49,18 @@ export const dynamic = "force-dynamic";
 //     };
 
 
+export async function generateMetadata() {
+  return {
+    title: "Contact Accolades Integrated   ",
+    description: "Get in touch with Accolades Integrated to discuss your digital marketing, branding, web development, or creative project requirements today.   ",
+
+    openGraph: {
+      title: "Contact Accolades Integrated   ",
+      description: "Get in touch with Accolades Integrated to discuss your digital marketing, branding, web development, or creative project requirements today.   ",
+     
+    },
+  };
+}
 
 const page = () => {
   return (

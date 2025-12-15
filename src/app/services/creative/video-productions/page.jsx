@@ -6,6 +6,20 @@ import Process from "./Process";
 import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
 
+
+export async function generateMetadata() {
+  return {
+    title: "Creative Video Production Services",
+    description: "Bring your brand story to life with professional video production services including brand films, ads, promos, and social media video content.",
+
+    openGraph: {
+      title: "Creative Video Production Services",
+      description: "Bring your brand story to life with professional video production services including brand films, ads, promos, and social media video content.",
+     
+    },
+  };
+}
+
 export default function page() {
   return (
     <>

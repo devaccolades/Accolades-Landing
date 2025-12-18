@@ -366,12 +366,12 @@ const Navbar = () => {
             height={500}
             width={500}
             priority
-            className="h-[30px] w-fit  md:w-[205px] md:h-[38px] cursor-pointer"
+            className="h-[36px] w-fit  md:w-[205px] md:h-[38px] cursor-pointer"
           />
           {/* </Link> */}
 
           <div className="flex flex-row items-center gap-[10px]">
-            <Link href={"https://wa.me/919048100233"}>
+            {/* <Link href={"https://wa.me/919048100233"}>
               <button type="button">
                 <Image
                   src="/home/whatsapp.svg"
@@ -381,7 +381,7 @@ const Navbar = () => {
                   className="h-[30px] w-[30px]"
                 />
               </button>
-            </Link>
+            </Link> */}
 
             <div className="lg:hidden">
               <Image

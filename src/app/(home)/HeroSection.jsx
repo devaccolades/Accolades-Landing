@@ -171,7 +171,7 @@ const HeroSection = () => {
 
           <div className="mt-[30px] lg:mt-[89px]">
             <p className="text-[16px] font-mont font-semibold capitalize text-center">
-              who trust us
+              Growing With Us
             </p>
             <LogoLoop
               logos={imageLogos}

@@ -115,7 +115,7 @@ const ReachUs = () => {
           </div>
 
           <div className="w-full md:w-[35%] font-mont space-y-6 text-gray-700 text-base">
-            <div>
+            {/* <div>
               <h4 className="text-[#17AABF] font-mont font-semibold mb-1">
                 Office Address
               </h4>
@@ -124,7 +124,7 @@ const ReachUs = () => {
 
                 Vennala, Kochi, Ernakulam, Kerala 682028
               </p>
-            </div>
+            </div> */}
 
             <div>
               <h4 className="text-[#17AABF] font-mont font-semibold mb-1">Call Us</h4>

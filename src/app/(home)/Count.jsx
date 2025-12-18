@@ -52,10 +52,10 @@ const Count = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-white text-[60px] xl:text-[96px] font-bold mb-2">
-            <Counter from={0} to={150} duration={2} />+
+            <Counter from={0} to={250} duration={2} />+
           </h2>
           <p className="text-white text-sm md:text-lg font-medium">
-            Projects Done
+            Web Projects Done
           </p>
         </motion.div>
 

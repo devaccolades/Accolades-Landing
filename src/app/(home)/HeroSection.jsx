@@ -70,6 +70,8 @@ const HeroSection = () => {
     { src: "/home/logos/logo (19).svg", alt: "Company 19" },
     { src: "/home/logos/logo (20).svg", alt: "Company 20" },
     { src: "/home/logos/logo (21).svg", alt: "Company 21" },
+    { src: "/home/logos/logo 1.png", alt: "Company 22" },
+    { src: "/home/logos/NESTO.png", alt: "Company 23" },
   ];
 
   const todo = [
@@ -106,25 +108,36 @@ const HeroSection = () => {
         </div>
         <div className="relative h-full md:containers flex flex-col pt-[100px] md:pt-[150px] z-40">
           <div className="relative z-20 text-center flex flex-col justify-center items-center ">
-            <div className="bg-black w-fit px-[16px] py-[8px] md:px-[20px] md:py-[10px] rounded-full">
-              <p className="text-[12px] md:text-[16px] font-semibold text-white">
-                Digital Creative Web
+            <div className=" w-fit px-[16px] py-[8px] md:px-[20px] md:py-[10px] rounded-full">
+              <p className="text-[12px] md:text-[16px] font-semibold font-mont text-[#0C7379]">
+                Digital . Creative . Web
               </p>
             </div>
             <div className="flex flex-col justify-center items-center mt-[10px]">
-              <p className="font-mont uppercase text-[24px] md:text-[48px] md:leading-[46px] xl:text-[64px] leading-[28px] tracking-[0%]  xl:leading-[62px] font-extrabold">
-                Ideas that <span className="text-[#0C7379]"> Inspire.</span>{" "}
+              <p className="font-urbanist  text-[30px] md:text-[48px] md:leading-[46px]  xl:text-[64px] leading-[28px] tracking-[0%]  xl:leading-[62px] font-regular">
+                Ideas That <span className="text-[#0C7379]"> Inspire</span>{" "}
               </p>
-              <p className="font-mont uppercase text-[24px] md:text-[48px] md:leading-[46px] xl:text-[64px] leading-[28px] tracking-[0%]  xl:leading-[62px] font-extrabold">
-                Design that <span className="text-[#0C7379]"> Engages.</span>{" "}
+              <p className="font-urbanist   text-[30px] md:text-[48px] md:leading-[46px] xl:text-[64px] leading-[28px] tracking-[0%]  xl:leading-[62px] font-regular">
+                Design That <span className="text-[#0C7379]"> Engages</span>{" "}
               </p>
-              <p className="font-mont uppercase text-[24px] md:text-[48px] md:leading-[46px] xl:text-[64px] leading-[28px] tracking-[0%]  xl:leading-[62px] font-extrabold">
-                Tech that <span className="text-[#0C7379]"> Works.</span>{" "}
+              <p className="font-urbanist  text-[30px] md:text-[48px] md:leading-[46px] xl:text-[64px] leading-[28px] tracking-[0%]  xl:leading-[62px] font-regular">
+                Tech That <span className="text-[#0C7379]"> Works</span>{" "}
               </p>
+
             </div>
-            <p className="text-[14px] font-monst leading-[18px] font-normal mt-[14px] max-w-[300px]">
+            <p className="text-[12px] lg:text-[14px] font-mont leading-[18px] font-normal mt-[14px]">
               Your trusted branding agency in Kochi.  We shape digital experiences that perform.
             </p>
+            <div className="flex justify-center font-mont items-center py-4 gap-[10px]">
+              <Link href="tel:+919048689977">
+                <button className="bg-[#0C7379] py-[8px] px-[12px] md:py-[10px] md:px-[16px] text-white rounded-[10px] text-[12px] md:text-[16px] font-bold leading-[100%] cursor-pointer">
+                  Get A Free Brand Audit
+                </button>
+              </Link>
+
+             
+            </div>
+
           </div>
           <div className="flex flex-wrap justify-center w-full mt-10 ">
             {todo && todo.map((item) => <Todos key={item.label} item={item} />)}
@@ -154,8 +167,10 @@ const HeroSection = () => {
               }
             `}</style>
           </div>
+
+
           <div className="mt-[30px] lg:mt-[89px]">
-            <p className="text-[16px] font-monst font-semibold capitalize text-center">
+            <p className="text-[16px] font-mont font-semibold capitalize text-center">
               who trust us
             </p>
             <LogoLoop
@@ -202,7 +217,7 @@ const Todos = ({ item }) => {
           alt="todos image"
           width={100}
           height={100}
-          className="h-[144px] md:h-[193px] w-fit object-contain object-center 
+          className="h-[94px] md:h-[193px] w-fit object-contain object-center 
         hover:[animation:shake_0.3s_ease-in-out_infinite] "
         />
       </div>

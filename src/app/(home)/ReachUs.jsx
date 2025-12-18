@@ -129,10 +129,10 @@ const ReachUs = () => {
             <div>
               <h4 className="text-[#17AABF] font-mont font-semibold mb-1">Call Us</h4>
               <a
-                href="tel:+917072619922"
+                href="tel:+919048100233"
                 className="text-gray-800 hover:text-[#17AABF] transition-colors duration-200"
               >
-                +91 7072619922
+                +91 90481 00233
               </a>
             </div>
 

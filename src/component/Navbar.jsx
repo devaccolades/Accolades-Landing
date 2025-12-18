@@ -319,7 +319,7 @@ const Navbar = () => {
 
             </div>
             <div className="flex flex-row items-center gap-[10px]">
-              <Link href={"https://wa.me/919048689977"}>
+              <Link href={"https://wa.me/919048100233"}>
                 <button className="bg-[#0C7379] py-[8px] px-[12px] md:py-[10px] md:px-[16px] text-white rounded-[10px] text-[12px] md:text-[16px] font-bold leading-[100%] cursor-pointer">
                   WhatsApp now
                 </button>
@@ -371,14 +371,14 @@ const Navbar = () => {
           {/* </Link> */}
 
           <div className="flex flex-row items-center gap-[10px]">
-            <Link href="tel:+919048100233">
+            <Link href={"https://wa.me/919048100233"}>
               <button type="button">
                 <Image
                   src="/home/whatsapp.svg"
                   alt="Call"
-                  height={100}
-                  width={100}
-                  className="h-[36px] w-[36px]"
+                  height={30}
+                  width={30}
+                  className="h-[30px] w-[30px]"
                 />
               </button>
             </Link>

@@ -72,6 +72,14 @@ const HeroSection = () => {
     { src: "/home/logos/logo (21).svg", alt: "Company 21" },
     { src: "/home/logos/logo 1.png", alt: "Company 22" },
     { src: "/home/logos/NESTO.png", alt: "Company 23" },
+    { src: "/home/logos/nandi.jpeg", alt: "Company 24" },
+    // { src: "/home/logos/cur.png", alt: "Company 25" },
+    { src: "/home/logos/ja.svg", alt: "Company 26" },
+    { src: "/home/logos/sky.png", alt: "Company 27" },
+    { src: "/home/logos/tyrex.svg", alt: "Company 28" },
+    { src: "/home/logos/viv.svg", alt: "Company 29" },
+    { src: "/home/logos/rad.png", alt: "Company 30" },
+     { src: "/home/logos/aur.svg", alt: "Company 31" },
   ];
 
   const todo = [

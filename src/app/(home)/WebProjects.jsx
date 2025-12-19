@@ -119,7 +119,7 @@ export default function WebProjects() {
        <Image
               src={bottom}
               alt="bottom-line"
-              className="containers py-6 md:py-12 lg:py-20"
+              className="containers py-4 md:py-12"
             />
     </div>
   );

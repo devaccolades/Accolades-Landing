@@ -49,37 +49,46 @@ const HeroSection = () => {
 
   // Alternative with image sources
   const imageLogos = [
+    { src: "/home/logos/logo (18).svg", alt: "Company 18" },
     { src: "/home/logos/logo (1).svg", alt: "Company 1" },
     { src: "/home/logos/logo (2).svg", alt: "Company 2" },
-    { src: "/home/logos/logo (3).svg", alt: "Company 3" },
+    // { src: "/home/logos/logo (3).svg", alt: "Company 3" },
     { src: "/home/logos/logo (4).svg", alt: "Company 4" },
     { src: "/home/logos/logo (10).svg", alt: "Company 10" },
-    { src: "/home/logos/logo (5).svg", alt: "Company 5" },
-    { src: "/home/logos/logo (11).svg", alt: "Company 11" },
+    // { src: "/home/logos/logo (5).svg", alt: "Company 5" },
+    // { src: "/home/logos/logo (11).svg", alt: "Company 11" },
     { src: "/home/logos/logo (6).svg", alt: "Company 6" },
     { src: "/home/logos/logo (7).svg", alt: "Company 7" },
-    { src: "/home/logos/logo (8).svg", alt: "Company 8" },
+    // { src: "/home/logos/logo (8).svg", alt: "Company 8" },
     { src: "/home/logos/logo (9).svg", alt: "Company 9" },
     { src: "/home/logos/logo (15).svg", alt: "Company 15" },
-    { src: "/home/logos/logo (12).svg", alt: "Company 12" },
+    { src: "/home/logos/logo (19).svg", alt: "Company 19" },
+    { src: "/home/logos/asa.svg", alt: "Company 12" },
     { src: "/home/logos/logo (13).svg", alt: "Company 13" },
     { src: "/home/logos/logo (14).svg", alt: "Company 14" },
     { src: "/home/logos/logo (16).svg", alt: "Company 16" },
     { src: "/home/logos/logo (17).svg", alt: "Company 17" },
-    { src: "/home/logos/logo (18).svg", alt: "Company 18" },
-    { src: "/home/logos/logo (19).svg", alt: "Company 19" },
+    
+   
     { src: "/home/logos/logo (20).svg", alt: "Company 20" },
     { src: "/home/logos/logo (21).svg", alt: "Company 21" },
     { src: "/home/logos/logo 1.png", alt: "Company 22" },
-    { src: "/home/logos/NESTO.png", alt: "Company 23" },
-    { src: "/home/logos/nandi.jpeg", alt: "Company 24" },
-    // { src: "/home/logos/cur.png", alt: "Company 25" },
-    { src: "/home/logos/ja.svg", alt: "Company 26" },
+    { src: "/home/logos/nesto.svg", alt: "Company 23" },
+    { src: "/home/logos/silk.png", alt: "Company 24" },
+    { src: "/home/logos/cureg.svg", alt: "Company 25" },
+    { src: "/home/logos/recru.svg", alt: "Company 26" },
     { src: "/home/logos/sky.png", alt: "Company 27" },
-    { src: "/home/logos/tyrex.svg", alt: "Company 28" },
-    { src: "/home/logos/viv.svg", alt: "Company 29" },
-    { src: "/home/logos/rad.png", alt: "Company 30" },
-     { src: "/home/logos/aur.svg", alt: "Company 31" },
+    { src: "/home/logos/tyr.svg", alt: "Company 28" },
+    { src: "/home/logos/vv.svg", alt: "Company 29" },
+    { src: "/home/logos/radis.svg", alt: "Company 30" },
+    { src: "/home/logos/aurex1.svg", alt: "Company 31" },
+    { src: "/home/logos/binoy.svg", alt: "Company 28" },
+    { src: "/home/logos/paris.svg", alt: "Company 29" },
+    { src: "/home/logos/svo.svg", alt: "Company 30" },
+    { src: "/home/logos/ves.svg", alt: "Company 31" },
+     { src: "/home/logos/manapuram.svg", alt: "Company 29" },
+    { src: "/home/logos/friday.svg", alt: "Company 30" },
+    { src: "/home/logos/Nandilath.svg", alt: "Company 31" },
   ];
 
   const todo = [
@@ -133,12 +142,12 @@ const HeroSection = () => {
               </p>
 
             </div>
-            <p className="text-[12px] lg:text-[14px] font-mont leading-[18px] font-normal mt-[14px]">
+            <p className="text-[12px] lg:text-[14px] px-6 md:px-0 font-mont leading-[18px] font-normal mt-[14px]">
               Your trusted branding agency in Kochi.  We shape digital experiences that perform.
             </p>
             <div className="flex justify-center font-mont items-center py-4 gap-[10px]">
               <Link href="tel:+919048689977">
-                <button className="bg-[#0C7379] py-[8px] px-[12px] md:py-[10px] md:px-[16px] text-white rounded-[10px] text-[12px] md:text-[16px] font-bold leading-[100%] cursor-pointer">
+                <button className="bg-[#0C7379] py-[10px] px-[14px] md:py-[10px] md:px-[16px] text-white rounded-[10px] text-[12px] md:text-[16px] font-bold leading-[100%] cursor-pointer">
                   Get A Free Brand Audit
                 </button>
               </Link>
@@ -177,8 +186,8 @@ const HeroSection = () => {
           </div>
 
 
-          <div className="mt-[30px] lg:mt-[89px]">
-            <p className="text-[16px] font-mont font-semibold capitalize text-center">
+          <div className="mt-[30px] lg:mt-[30px]">
+            <p className="text-[16px] font-mont font-semibold capitalize text-center mb-3">
               Growing With Us
             </p>
             <LogoLoop

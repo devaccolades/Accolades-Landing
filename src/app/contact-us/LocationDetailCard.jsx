@@ -16,14 +16,14 @@ export default function LocationDetailCard({ }) {
     "Kochi (HQ)": {
       locationName: "Kochi",
       address: "Accolades Integrated Pvt Ltd, Rahmath Building, 46/2056 - A, AKG Vayanasala Road, Chakkaraparambu,Vennala, Kochi, Ernakulam, Kerala 682028",
-      email: "mail@accoladesmedia.co.in",
+      email: "mail@accoladesintegrated.com",
       phoneNumbers: ["+91 90481 00233", "+91 90726 19928"],
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.338634640268!2d76.31439647589313!3d9.988860973224527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080cf7e6baeda3%3A0x1f053eaaf85f927b!2sACCOLADES%20Integrated%20Pvt.Ltd!5e0!3m2!1sen!2sin!4v1753441166710!5m2!1sen!2sin",
     },
     Calicut: {
       locationName: "Calicut",
       address: "Accolades Integrated Pvt Ltd Akkai Tower | 59/3785, 2nd Floor | Tali Cross Road | Calicut – 673002",
-      email: "mail@accoladesmedia.co.in",
+      email: "mail@accoladesintegrated.com",
       phoneNumbers: ["+91 9947847237",],
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4896.582642652338!2d75.7880639!3d11.2474385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65932cf91c009%3A0xf48916f4d304f205!2sACCOLADES%20Integrated%20Pvt.Ltd!5e1!3m2!1sen!2sin!4v1755941788946!5m2!1sen!2sin",
     },
@@ -37,7 +37,7 @@ export default function LocationDetailCard({ }) {
     Bengaluru: {
       locationName: "Bengaluru",
       address: "Accolades Integrated Pvt Ltd | 5th Floor| ITPL Main Road | Garudachan Palaya | Mahadevapura | Bengaluru – 560 048",
-      email: "mail@accoladesmedia.co.in",
+      email: "mail@accoladesintegrated.com",
       phoneNumbers: ["+91 90726 19922", "+91 87143 04849"],
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d608.0760816731475!2d77.69714717924873!3d12.995034665068514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae110acc03a14f%3A0x90ddf5a37aa1c34a!2s048%2C%20560%2C%20ITPL%20Main%20Rd%2C%20Mahadevapura%20Layout%2C%20RHB%20Colony%2C%20Mahadevapura%2C%20Bengaluru%2C%20Karnataka%20560048!5e1!3m2!1sen!2sin!4v1755942211445!5m2!1sen!2sin",
     },

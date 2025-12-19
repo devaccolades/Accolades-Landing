@@ -43,7 +43,7 @@ const services = [
 const OurServices = () => {
   return (
     <>
-      <section className="containers flex flex-col-reverse md:flex-row justify-between items-center gap-10  ">
+      <section className="containers flex flex-col-reverse md:flex-row justify-between items-center gap-4 md:gap-10  ">
         <div className="w-full">
           <p className="text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] leading-[156%] font-mont font-normal">
            As a leading branding agency in Kochi, we deliver a complete suite of digital marketing solutions, 

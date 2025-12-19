@@ -46,7 +46,8 @@ const Footer = () => {
             demand from us.
           </p>
         </div>
-        <div className="md:flex grid grid-cols-2  md:flex-col lg:flex-row justify-center md:justify-between gap-15 md:gap-1 lg:gap-3 ">
+        
+        <div className="hidden md:flex   md:flex-col lg:flex-row justify-center md:justify-between gap-15 md:gap-1 lg:gap-3 ">
           <div className="md:w-[15%]">
             <h4 className="font-semibold text-teal-700 font-mont mb-3 text-center md:text-left">
               Explore
@@ -96,7 +97,7 @@ const Footer = () => {
 <div className="md:w-[40%] lg:w-[30%]  flex flex-col">
         {/* Address */}
         <div className=" text-center md:text-left">
-          <h4 className="font-semibold font-mont text-teal-700 mb-3">
+          <h4 className="font-semibold font-mont text-teal-700 mt-3">
              Corporate Office
           </h4>
           <p className="text-[13px] lg:text-[15px] font-mont leading-relaxed mb-2">
@@ -107,7 +108,7 @@ const Footer = () => {
           </p>
         </div>
          <div className=" text-center md:text-left">
-          <h4 className="font-semibold font-mont text-teal-700 mb-3">
+          <h4 className="font-semibold font-mont text-teal-700 mt-3">
              Mumbai Office and Development Center
           </h4>
           <p className="text-[13px] lg:text-[15px] font-mont leading-relaxed">
@@ -117,6 +118,53 @@ const Footer = () => {
              +91 90726 19925
           </p>
         </div>
+        </div>
+
+        <div className="md:hidden grid grid-cols-2  md:flex-col lg:flex-row justify-center md:justify-between gap-15 md:gap-1 lg:gap-3 ">
+          <div className="md:w-[15%]">
+            <h4 className="font-semibold text-teal-700 font-mont mb-3 text-center md:text-left">
+              Explore
+            </h4>
+            <ul className="space-y-2 text-center font-mont md:text-left text-[13px] lg:text-[15px]">
+              <li>
+                <a href="/" className="hover:text-teal-700 transition">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/about-us" className="hover:text-teal-700 transition">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="hover:text-teal-700 transition">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="/careers" className="hover:text-teal-700 transition">
+                  Careers
+                </a>
+              </li>
+              {/* <li>
+                <a href="/blog-top-digital-marketing-companies" className="hover:text-teal-700 transition">
+                  Blogs
+                </a>
+              </li> */}
+            </ul>
+          </div>
+
+          <div className="md:w-[15%]">
+            <h4 className="font-semibold font-mont text-teal-700 mb-3 text-center md:text-left">
+              Branches
+            </h4>
+            <ul className="space-y-2 font-mont text-center md:text-left text-[13px] lg:text-[15px]">
+              <li>Calicut</li>
+              <li>Trivandrum</li>
+              <li>Bengaluru</li>
+              <li>Mumbai</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -128,10 +176,10 @@ const Footer = () => {
 
         <p className="text-sm font-mont text-center md:text-left">
           <a
-            href="mailto:mail@accoladesmedia.co.in"
+            href="mailto:mail@accoladesintegrated.com"
             className="hover:underline"
           >
-            mail@accoladesmedia.co.in
+            mail@accoladesintegrated.com
           </a>
         </p>
 

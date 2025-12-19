@@ -18,7 +18,7 @@ const NowAt = () => {
       place: "Kochi",
       address: "Accolades Integrated Pvt Ltd Rahmath Building, 46/2056 - A, AKG Vayanasala Road, Chakkaraparambu, Vennala, Kochi, Ernakulam, Kerala 682028",
       mobile: "+91 90486 89977",
-      email: "mail@accoladesmedia.co.in",
+      email: "mail@accoladesintegrated.com",
       map: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d940.1253727708323!2d76.3162912695514!3d9.988720320158786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwNTknMTkuNCJOIDc2wrAxOScwMS4wIkU!5e1!3m2!1sen!2sin!4v1755942872136!5m2!1sen!2sin",
     },
     {
@@ -39,14 +39,14 @@ const NowAt = () => {
       place: "Calicut",
       address: "Accolades Integrated Pvt Ltd Akkai Tower | 59/3785, 2nd Floor | Tali Cross Road | Calicut – 673002",
       mobile: "+91 9947847237",
-      email: "mail@accoladesmedia.co.in",
+      email: "mail@accoladesintegrated.com",
       map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d936.260750551965!2d75.78761117314679!3d11.247591980312464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65932cf91c009%3A0xf48916f4d304f205!2sACCOLADES%20Integrated%20Pvt.Ltd!5e1!3m2!1sen!2sin!4v1756101480060!5m2!1sen!2sin",
     },
     {
       place: "Bengaluru",
       address: "Accolades Integrated Pvt Ltd | 5th Floor| ITPL Main Road | Garudachan Palaya | Mahadevapura | Bengaluru – 560 048",
       mobile: "+91 90726 19922",
-      email: "mail@accoladesmedia.co.in",
+      email: "mail@accoladesintegrated.com",
       map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d608.0760816731475!2d77.69714717924873!3d12.995034665068514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae110acc03a14f%3A0x90ddf5a37aa1c34a!2s048%2C%20560%2C%20ITPL%20Main%20Rd%2C%20Mahadevapura%20Layout%2C%20RHB%20Colony%2C%20Mahadevapura%2C%20Bengaluru%2C%20Karnataka%20560048!5e1!3m2!1sen!2sin!4v1755942211445!5m2!1sen!2sin",
     },
   ];

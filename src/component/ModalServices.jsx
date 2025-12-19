@@ -227,10 +227,10 @@ export default function ModalServices({ isOpen, onClose }) {
   </a>
 
   <a
-    href="mailto:mail@accoladesmedia.co.in"
+    href="mailto:mail@accoladesintegrated.com"
     className="font-normal text-[12px] leading-[120%] tracking-[2%] hover:underline"
   >
-    mail@accoladesmedia.co.in
+    mail@accoladesintegrated.com
   </a>
 </div>
 

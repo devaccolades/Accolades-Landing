@@ -102,35 +102,27 @@ const ReachUs = () => {
 
   return (
     <main className="containers pb-10">
-      <section className="bg-[#EDF5F8] rounded-[50px] lg:rounded-[70px] px-6 md:px-12 py-6 md:py-12">
+      <section className="bg-[#EDF5F8] rounded-[50px] lg:rounded-[70px] px-4 md:px-8 py-6 md:py-8">
         <div className="flex flex-col md:flex-row justify-between items-start gap-5 lg:gap-10">
           <div className="w-full md:w-[35%] space-y-3">
-            <h2 className="text-[28px] md:text-5xl font-mont font-bold text-gray-800">
+            <h2 className="text-[28px] lg:text-[38px] font-mont font-bold text-gray-800">
               Reach Us
             </h2>
-            <p className="text-gray-600 font-mont text-lg mt-4">
-              Accolades is here to fulfill all your needs and leading you towards
-              the light of knowledge.
+           <p className="text-gray-600 font-mont text-sm  mt-4">
+             Looking to build a stronger digital presence for your brand? 
+             Connect with Accolades Integrated and let our experts craft result 
+             driven strategies tailored to your business goals.
             </p>
+
           </div>
 
-          <div className="w-full md:w-[35%] font-mont space-y-6 text-gray-700 text-base">
-            {/* <div>
-              <h4 className="text-[#17AABF] font-mont font-semibold mb-1">
-                Office Address
-              </h4>
-              <p>
-                Accolades Integrated Pvt Ltd Rahmath Building, 46/2056 - A, AKG Vayanasala Road, Chakkaraparambu,
-
-                Vennala, Kochi, Ernakulam, Kerala 682028
-              </p>
-            </div> */}
-
+          <div className="w-full md:w-[30%] font-mont space-y-6 text-gray-700 text-base">
+            
             <div>
               <h4 className="text-[#17AABF] font-mont font-semibold mb-1">Call Us</h4>
               <a
                 href="tel:+919048100233"
-                className="text-gray-800 hover:text-[#17AABF] transition-colors duration-200"
+                className="text-gray-800 text-sm hover:text-[#17AABF] transition-colors duration-200"
               >
                 +91 90481 00233
               </a>
@@ -139,16 +131,16 @@ const ReachUs = () => {
             <div>
               <h4 className="text-[#17AABF] font-mont font-semibold mb-1">Mail Us</h4>
               <a
-                href="mailto:mail@accoladesmedia.co.in"
-                className="text-gray-800 hover:text-[#17AABF] transition-colors duration-200"
+                href="mailto:mail@accoladesintegrated.com"
+                className="text-gray-800 hover:text-[#17AABF] text-sm transition-colors duration-200"
               >
-                mail@accoladesmedia.co.in
+                mail@accoladesintegrated.com
               </a>
             </div>
 
           </div>
 
-          <div className="w-full md:w-[30%] flex-1">
+          <div className="w-full md:w-[35%] flex-1">
             <form onSubmit={handleSubmit} className="space-y-4 w-full">
               <div>
                 <input
@@ -210,3 +202,5 @@ const ReachUs = () => {
 };
 
 export default ReachUs;
+
+

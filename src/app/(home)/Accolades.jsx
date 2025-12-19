@@ -9,15 +9,15 @@ const Accolades = () => {
   return (
     <>
       {/* <section className="containers flex flex-col md:grid md:grid-cols-2 justify-center items-center  gap-10"> */}
-      <section className="containers flex flex-col md:grid md:grid-cols-2 md:place-items-center gap-10 pt-5">
+      <section className="containers flex flex-col md:grid md:grid-cols-2 md:place-items-center gap-4 md:gap-10 pt-5">
         <div className="flex justify-center items-center">
           <Image
             src={stack}
             alt="top-line"
             className="
                 w-[240px] h-[200px]
-                md:w-[420px] md:h-[270px]
-                lg:w-[500px] lg:h-[360px]
+                md:w-[400px] md:h-[270px]
+                lg:w-[480px] lg:h-[340px]
                 object-contain
               "
           />
@@ -42,7 +42,7 @@ const Accolades = () => {
       <Image
         src={bottom}
         alt="bottom-line"
-        className="containers py-10 md:py-20 xl:py-28"
+        className="containers py-6 md:py-8 xl:py-8"
       />
     </>
   );

@@ -358,13 +358,13 @@ const Testimonials = () => {
   return (
     <section className="w-[90%] mx-auto md:w-[100%]  ">
       <div className=" text-center font-mont space-y-2 md:space-y-0 py-4">
-        <h3 className="font-normal text-[22px]  md:text-[32px] lg:text-[36px] text-[#3F3F3F] leading-[100%] md:leading-snug">
+        {/* <h3 className="font-normal text-[22px]  md:text-[32px] lg:text-[36px] text-[#3F3F3F] leading-[100%] md:leading-snug">
           What Our Customers Say
         </h3>
         <h3 className="text-[#3FB4BA] font-semibold text-[32px] md:text-[48px] lg:text-[64px] leading-[100%] ">
           Client
-        </h3>
-        <h3 className="font-bold text-[32px] md:text-[48px] lg:text-[64px] text-[#3F3F3F] leading-[100%] ">
+        </h3> */}
+        <h3 className="font-bold text-[32px] md:text-[48px] lg:text-[64px] text-black leading-[100%] ">
           Testimonials
         </h3>
       </div>
@@ -594,7 +594,7 @@ const Testimonials = () => {
       <Image
         src={bottom}
         alt="bottom-line"
-        className="containers py-6 md:py-12 lg:py-20"
+        className="containers py-2 md:py-8"
       />
     </section>
   );

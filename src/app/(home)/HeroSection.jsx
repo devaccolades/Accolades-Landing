@@ -77,18 +77,18 @@ const HeroSection = () => {
     { src: "/home/logos/silk.png", alt: "Company 24" },
     { src: "/home/logos/cureg.svg", alt: "Company 25" },
     { src: "/home/logos/recru.svg", alt: "Company 26" },
-    { src: "/home/logos/sky.png", alt: "Company 27" },
+    { src: "/home/logos/skyline.svg", alt: "Company 27" },
     { src: "/home/logos/tyr.svg", alt: "Company 28" },
     { src: "/home/logos/vv.svg", alt: "Company 29" },
     { src: "/home/logos/radis.svg", alt: "Company 30" },
-    { src: "/home/logos/aurex1.svg", alt: "Company 31" },
-    { src: "/home/logos/binoy.svg", alt: "Company 28" },
+    { src: "/home/logos/au.svg", alt: "Company 31" },
+    { src: "/home/logos/bm.svg", alt: "Company 28" },
     { src: "/home/logos/paris.svg", alt: "Company 29" },
     { src: "/home/logos/svo.svg", alt: "Company 30" },
     { src: "/home/logos/ves.svg", alt: "Company 31" },
      { src: "/home/logos/manapuram.svg", alt: "Company 29" },
     { src: "/home/logos/friday.svg", alt: "Company 30" },
-    { src: "/home/logos/Nandilath.svg", alt: "Company 31" },
+    { src: "/home/logos/nandilat.svg", alt: "Company 31" },
   ];
 
   const todo = [

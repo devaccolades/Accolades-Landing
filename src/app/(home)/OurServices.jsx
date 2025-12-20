@@ -69,14 +69,14 @@ const OurServices = () => {
             >
 
             <h1 className="text-[36px] text-[#3F3F3F] font-normal leading-[100%]">
-              Branding {" "}
+              We are the MARKETERS  {" "}
             </h1>
-            <h1 className="text-[#3FB4BA] text-[48px] md:text-[56px] xl:text-[76px] font-semibold leading-[100%]">
-              Agency
+            <h1 className="text-[#3FB4BA] text-[48px] md:text-[50px] xl:text-[76px] font-semibold leading-[100%]">
+              having a Tech
             </h1>
-            <h1 className="font-bold text-[48px] md:text-[64px] xl:text-[86px] leading-[100%">
-              in Kochi
-            </h1>
+             <h3 className="font-bold text-[36px] md:text-[44px] xl:text-[64px] leading-[100%">
+               POWERHOUSE
+            </h3>
           </motion.div>
             </div>
 

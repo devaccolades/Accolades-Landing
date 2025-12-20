@@ -16,6 +16,10 @@ export async function POST(req) {
       from: `"Accolades Website" <${process.env.SMTP_EMAIL}>`,
       to: "leadsaccolades@gmail.com",
       // to: "manjima.accolades@gmail.com",
+      cc: [
+    // "manjima.accolades@gmail.com",
+    "mail@accoladesintegrated.com",
+  ],
       subject: "New Form Submission From Google Ads Page",                                                                                                                                                                                                                                                                                         
       html: `
         <h3> Form Details</h3>

@@ -103,7 +103,7 @@ const Footer = ({ data }) => {
             <div className="space-y-2 pt-2">
               <div className="flex items-center gap-2">
                 <Image src={mail} alt="email icon" />
-                <p>mail@accoladesmedia.co.in</p>
+                <p>mail@accoladesintegrated.com</p>
               </div>
               <div className="flex items-center gap-2">
                 <Image src={call} alt="phone icon" />

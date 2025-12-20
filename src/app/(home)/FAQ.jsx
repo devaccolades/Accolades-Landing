@@ -50,7 +50,7 @@ export default function FAQ() {
   const toggleFAQ = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="containers  font-mont mx-auto py-6">
+    <section className="containers  font-mont mx-auto pt-2 pb-6">
       <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-10">Frequently Asked Questions – Branding Agency in Kochi</h2>
 
       <div className="space-y-0 border-t border-gray-300">

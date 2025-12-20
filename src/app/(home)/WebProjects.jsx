@@ -56,7 +56,7 @@ export default function WebProjects() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1">
-            Web Projects
+            Our Premium Web Projects
           </h2>
           <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
             We craft digital spaces that elevate your brand. From builders and
@@ -119,7 +119,7 @@ export default function WebProjects() {
        <Image
               src={bottom}
               alt="bottom-line"
-              className="containers py-6 md:py-12 lg:py-20"
+              className="containers py-4 md:py-12"
             />
     </div>
   );

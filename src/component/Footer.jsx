@@ -29,8 +29,8 @@ const Footer = () => {
         className="absolute top-0 left-0 w-full h-full object-cover object-top  hidden md:block"
       />
 
-      <div className=" containers relative flex flex-col md:flex-row md:justify-between gap-10 border-b border-gray-300 pb-10 items-center">
-        <div className="md:w-[28%] space-y-4 text-center md:text-left">
+      <div className=" containers relative flex flex-col md:flex-row md:justify-between gap-2 border-b border-gray-300 pb-10 items-center">
+        <div className="md:w-[25%] space-y-2 text-center md:text-left">
           <div className="flex justify-center md:justify-start h-[70px] w-auto">
             <Image
               src={logo}
@@ -40,18 +40,19 @@ const Footer = () => {
               className="h-full w-full "
             />
           </div>
-          <p className="text-[15px] font-mont leading-relaxed">
-            The ultimatum of our successful company is to adequately provide our
+          <p className="text-[13px] lg:text-[15px] font-mont leading-relaxed">
+            The ultimatum of our work culture is to adequately provide our
             prospective clients with the required service that they promptly
             demand from us.
           </p>
         </div>
-        <div className="md:flex grid grid-cols-2   md:flex-row justify-center md:justify-between gap-15 md:gap-1 lg:gap-5 ">
+        
+        <div className="hidden md:flex   md:flex-col lg:flex-row justify-center md:justify-between gap-15 md:gap-1 lg:gap-3 ">
           <div className="md:w-[15%]">
             <h4 className="font-semibold text-teal-700 font-mont mb-3 text-center md:text-left">
               Explore
             </h4>
-            <ul className="space-y-2 text-center font-mont md:text-left text-sm">
+            <ul className="space-y-2 text-center font-mont md:text-left text-[13px] lg:text-[15px]">
               <li>
                 <a href="/" className="hover:text-teal-700 transition">
                   Home
@@ -84,7 +85,7 @@ const Footer = () => {
             <h4 className="font-semibold font-mont text-teal-700 mb-3 text-center md:text-left">
               Branches
             </h4>
-            <ul className="space-y-2 font-mont text-center md:text-left text-sm">
+            <ul className="space-y-2 font-mont text-center md:text-left text-[13px] lg:text-[15px]">
               <li>Calicut</li>
               <li>Trivandrum</li>
               <li>Bengaluru</li>
@@ -93,17 +94,77 @@ const Footer = () => {
           </div>
         </div>
 
+<div className="md:w-[40%] lg:w-[30%]  flex flex-col">
         {/* Address */}
-        <div className=" md:w-[30%] text-center md:text-left">
-          <h4 className="font-semibold font-mont text-teal-700 mb-3">
-            Address Corporate Office
+        <div className=" text-center md:text-left">
+          <h4 className="font-semibold font-mont text-teal-700 mt-3">
+             Corporate Office
           </h4>
-          <p className="text-[15px] font-mont leading-relaxed">
-            Accolades Integrated Pvt Ltd <br />
+          <p className="text-[13px] lg:text-[15px] font-mont leading-relaxed mb-2">
+            Accolades Integrated Pvt Ltd -
             Rahmath Building, 46/2056 - A, AKG Vayanasala Road, Chakkaraparambu,
-            <br />
-            Vennala, Kochi, Ernakulam, Kerala 682028
+          
+            Near Holiday Inn, Kochi, Ernakulam, Kerala 682028
           </p>
+        </div>
+         <div className=" text-center md:text-left">
+          <h4 className="font-semibold font-mont text-teal-700 mt-3">
+             Mumbai Office and Development Center
+          </h4>
+          <p className="text-[13px] lg:text-[15px] font-mont leading-relaxed">
+            Accolades Integrated Pvt Ltd -
+            301 | 3rd floor | Corporate Corner | Sundar Nagar | Malad West | Mumbai – 400064
+            <br />
+             +91 90726 19925
+          </p>
+        </div>
+        </div>
+
+        <div className="md:hidden grid grid-cols-2  md:flex-col lg:flex-row justify-center md:justify-between gap-15 md:gap-1 lg:gap-3 ">
+          <div className="md:w-[15%]">
+            <h4 className="font-semibold text-teal-700 font-mont mb-3 text-center md:text-left">
+              Explore
+            </h4>
+            <ul className="space-y-2 text-center font-mont md:text-left text-[13px] lg:text-[15px]">
+              <li>
+                <a href="/" className="hover:text-teal-700 transition">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/about-us" className="hover:text-teal-700 transition">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="hover:text-teal-700 transition">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="/careers" className="hover:text-teal-700 transition">
+                  Careers
+                </a>
+              </li>
+              {/* <li>
+                <a href="/blog-top-digital-marketing-companies" className="hover:text-teal-700 transition">
+                  Blogs
+                </a>
+              </li> */}
+            </ul>
+          </div>
+
+          <div className="md:w-[15%]">
+            <h4 className="font-semibold font-mont text-teal-700 mb-3 text-center md:text-left">
+              Branches
+            </h4>
+            <ul className="space-y-2 font-mont text-center md:text-left text-[13px] lg:text-[15px]">
+              <li>Calicut</li>
+              <li>Trivandrum</li>
+              <li>Bengaluru</li>
+              <li>Mumbai</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -115,10 +176,10 @@ const Footer = () => {
 
         <p className="text-sm font-mont text-center md:text-left">
           <a
-            href="mailto:mail@accoladesmedia.co.in"
+            href="mailto:mail@accoladesintegrated.com"
             className="hover:underline"
           >
-            mail@accoladesmedia.co.in
+            mail@accoladesintegrated.com
           </a>
         </p>
 

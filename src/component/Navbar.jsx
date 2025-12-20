@@ -284,27 +284,24 @@ const Navbar = () => {
             <div className="hidden lg:flex items-center gap-[40px]">
               <Link href="/">
                 <p
-                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                    active === "Home" ? "text-[#0C7379]" : ""
-                  }`}
+                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${active === "Home" ? "text-[#0C7379]" : ""
+                    }`}
                   onClick={(e) => setActive(e.target.textContent)}
                 >
                   Home
                 </p>
               </Link>
               <p
-                className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                  active === "Services" ? "text-[#0C7379]" : ""
-                }`}
+                className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${active === "Services" ? "text-[#0C7379]" : ""
+                  }`}
                 onClick={(e) => handleService(e.target.textContent)}
               >
                 Services
               </p>
               <Link href="/about-us">
                 <p
-                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                    active === "About Us" ? "text-[#0C7379]" : ""
-                  }`}
+                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${active === "About Us" ? "text-[#0C7379]" : ""
+                    }`}
                   onClick={(e) => setActive(e.target.textContent)}
                 >
                   About Us
@@ -312,18 +309,17 @@ const Navbar = () => {
               </Link>
               <Link href="/contact-us">
                 <p
-                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
-                    active === "Contact Us" ? "text-[#0C7379]" : ""
-                  }`}
+                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${active === "Contact Us" ? "text-[#0C7379]" : ""
+                    }`}
                   onClick={(e) => setActive(e.target.textContent)}
                 >
                   Contact Us
                 </p>
               </Link>
-              
+
             </div>
             <div className="flex flex-row items-center gap-[10px]">
-              <Link href={"https://wa.me/919048689977"}>
+              <Link href={"https://wa.me/919048100233"}>
                 <button className="bg-[#0C7379] py-[8px] px-[12px] md:py-[10px] md:px-[16px] text-white rounded-[10px] text-[12px] md:text-[16px] font-bold leading-[100%] cursor-pointer">
                   WhatsApp now
                 </button>
@@ -370,20 +366,23 @@ const Navbar = () => {
             height={500}
             width={500}
             priority
-            className="h-[30px] w-fit  md:w-[205px] md:h-[38px] cursor-pointer"
+            className="h-[36px] w-fit  md:w-[205px] md:h-[38px] cursor-pointer"
           />
           {/* </Link> */}
-          
+
           <div className="flex flex-row items-center gap-[10px]">
-            <button className="">
-              <Image
-                src={"/home/whatsapp.svg"}
-                alt="whatsapp image"
-                height={100}
-                width={100}
-                className="h-[36px] w-[36px]"
-              />
-            </button>
+            {/* <Link href={"https://wa.me/919048100233"}>
+              <button type="button">
+                <Image
+                  src="/home/whatsapp.svg"
+                  alt="Call"
+                  height={30}
+                  width={30}
+                  className="h-[30px] w-[30px]"
+                />
+              </button>
+            </Link> */}
+
             <div className="lg:hidden">
               <Image
                 src={"/home/nav.svg"}

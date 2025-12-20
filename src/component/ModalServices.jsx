@@ -98,7 +98,7 @@ export default function ModalServices({ isOpen, onClose }) {
           onClick={onClose}
         >
           <div
-            className=" h-screen w-full md:w-[45%] xl:w-[35%] bg-white absolute right-0 top-0 z-50 pl-[30px] pt-[64px] md:pl-[30px] lg:pl-[70px] pr-[40px] md:pt-[60px] lg:pt-[107px] pb-[50px]"
+            className=" h-screen w-full md:w-[45%] xl:w-[35%] bg-white absolute right-0 top-0 z-50 pl-[30px] pt-[50px] md:pl-[30px] lg:pl-[70px] pr-[40px] md:pt-[60px] lg:pt-[107px] pb-[50px]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="absolute top-5 right-5 z-50 text-black">
@@ -210,14 +210,30 @@ export default function ModalServices({ isOpen, onClose }) {
                   <p className="text-[10.84px] font-bold leading-[160%] tracking-[2%]">
                     Contact Us
                   </p>
-                  <div className="flex flex-col gap-[5px]">
+                  {/* <div className="flex flex-col gap-[5px]">
                     <p className="font-normal text-[12px] leading-[120%] tracking-[2%]">
-                      +91 90726 19922, +91 87143 04849
+                      +91 9190481 00233, +91 87143 04849
                     </p>
                     <p className="font-normal text-[12px] leading-[120%] tracking-[2%]">
                       mail@accoladesmedia.co.in
                     </p>
-                  </div>
+                  </div> */}
+                  <div className="flex flex-col gap-[5px]">
+  <a
+    href="tel:+91919048100233"
+    className="font-normal text-[12px] leading-[120%] tracking-[2%] hover:underline"
+  >
+    +91 9190481 00233
+  </a>
+
+  <a
+    href="mailto:mail@accoladesintegrated.com"
+    className="font-normal text-[12px] leading-[120%] tracking-[2%] hover:underline"
+  >
+    mail@accoladesintegrated.com
+  </a>
+</div>
+
                 </div>
               </div>
             </div>

@@ -43,7 +43,7 @@ const services = [
 const OurServices = () => {
   return (
     <>
-      <section className="containers flex flex-col-reverse md:flex-row justify-between items-center gap-10  ">
+      <section className="containers flex flex-col-reverse md:flex-row justify-between items-center gap-4 md:gap-10  ">
         <div className="w-full">
           <p className="text-[14px] md:text-[16px] xl:text-[18px] 2xl:text-[20px] leading-[156%] font-mont font-normal">
            As a leading branding agency in Kochi, we deliver a complete suite of digital marketing solutions, 
@@ -69,14 +69,14 @@ const OurServices = () => {
             >
 
             <h1 className="text-[36px] text-[#3F3F3F] font-normal leading-[100%]">
-              Branding {" "}
+              We are the MARKETERS  {" "}
             </h1>
-            <h1 className="text-[#3FB4BA] text-[48px] md:text-[56px] xl:text-[76px] font-semibold leading-[100%]">
-              Agency
+            <h1 className="text-[#3FB4BA] text-[48px] md:text-[50px] xl:text-[76px] font-semibold leading-[100%]">
+              having a Tech
             </h1>
-            <h1 className="font-bold text-[48px] md:text-[64px] xl:text-[86px] leading-[100%">
-              in Kochi
-            </h1>
+             <h3 className="font-bold text-[36px] md:text-[44px] xl:text-[64px] leading-[100%">
+               POWERHOUSE
+            </h3>
           </motion.div>
             </div>
 

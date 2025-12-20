@@ -110,7 +110,7 @@ const ClientSlider = () => {
       <Image
         src={bottom}
         alt="bottom-line"
-        className="containers py-6 md:py-8 lg:py-16"
+        className="containers py-6 md:py-8 "
       />
     </>
   );

@@ -30,7 +30,7 @@ function Counter({ from, to, duration = 2 }) {
 
 const Count = () => {
   return (
-    <section className="relative w-full py-14 bg-cover bg-center">
+    <section className="relative w-full py-6 md:py-14 bg-cover bg-center">
       <div className="cover-count h-full w-full relative">
         <Image
           src={cover}
@@ -52,10 +52,10 @@ const Count = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-white text-[60px] xl:text-[96px] font-bold mb-2">
-            <Counter from={0} to={150} duration={2} />+
+            <Counter from={0} to={1000} duration={2} />+
           </h2>
           <p className="text-white text-sm md:text-lg font-medium">
-            Projects Done
+            Web Projects Done
           </p>
         </motion.div>
 
@@ -67,10 +67,10 @@ const Count = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-white text-[60px] xl:text-[96px] font-bold mb-2">
-            <Counter from={0} to={500} duration={2.5} />+
+            <Counter from={0} to={10} duration={2.5} />+
           </h2>
           <p className="text-white text-sm md:text-lg font-medium">
-            Happy Customers
+            Years of Experience
           </p>
         </motion.div>
 
@@ -82,7 +82,7 @@ const Count = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-white text-[60px] xl:text-[96px] font-bold mb-2">
-            <Counter from={0} to={75} duration={2} />+
+            <Counter from={0} to={100} duration={2} />+
           </h2>
           <p className="text-white text-sm md:text-lg font-medium">
             Team Members

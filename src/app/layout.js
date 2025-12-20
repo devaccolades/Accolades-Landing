@@ -5,6 +5,7 @@ import { Zen_Old_Mincho } from "next/font/google";
 import localFont from "next/font/local";
 import Navbar from "@/component/Navbar";
 import LayoutWrapper from "@/component/LayoutWrapper";
+import Image from "next/image";
 
 const poppins = localFont({
   src: [
@@ -68,6 +69,21 @@ export default function RootLayout({ children }) {
       <LayoutWrapper />
       {/* <Navbar className="pb-14"/> */}
         {children}
+
+         <a
+          href="https://wa.me/919048100233" // Replace with actual number
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 z-50"
+        >
+          <Image
+           src="/home/whatsapp.svg"
+            width={56}
+            height={56}
+            alt="Chat on WhatsApp"
+            className="w-10 h-10 lg:w-14 lg:h-14"
+          />
+        </a>
       </body>
     </html>
   );

@@ -105,6 +105,8 @@ const Footer = () => {
             Rahmath Building, 46/2056 - A, AKG Vayanasala Road, Chakkaraparambu,
           
             Near Holiday Inn, Kochi, Ernakulam, Kerala 682028
+            <br />
+             +91 90481 00233
           </p>
         </div>
          <div className=" text-center md:text-left">
@@ -171,7 +173,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="containers py-6 flex flex-col-reverse md:flex-row items-center justify-between gap-4  px-2 relative">
         <p className="text-sm font-mont text-center md:text-left">
-          © 2025 | All Rights Reserved
+          © 2026 | All Rights Reserved
         </p>
 
         <p className="text-sm font-mont text-center md:text-left">

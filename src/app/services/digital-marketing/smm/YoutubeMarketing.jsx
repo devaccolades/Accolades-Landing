@@ -77,7 +77,8 @@ export default function YoutubeMarketing() {
                     onClick={() => setOpen(true)}
                 >
                     <Image
-                        src="/new-smm/thumbnail.png"    // <<--- REPLACE THIS
+                    
+                        src="/videos/featuredWorks/feI2.webp"    // <<--- REPLACE THIS
                         alt="Video Thumbnail"
                         fill
                         className="object-cover"
@@ -117,7 +118,7 @@ export default function YoutubeMarketing() {
                             controls
                             autoPlay
                         >
-                            <source src="/videos/video3.mp4" type="video/mp4" /> 
+                            <source src="/videos/featuredWorks/fe2.mp4" type="video/mp4" /> 
                             Your browser does not support the video tag.
                         </video>
                     </div>

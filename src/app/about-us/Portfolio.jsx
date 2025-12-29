@@ -4,7 +4,8 @@ import Img3 from "../../../public/about-us/Img3.webp";
 import Img4 from "../../../public/about-us/Img4.webp";
 import Img5 from "../../../public/about-us/Img5.webp";
 import Img6 from "../../../public/about-us/Img6.webp";
-import Img7 from "../../../public/about-us/Img7.webp";
+// import Img7 from "../../../public/about-us/Img7.webp";
+import Img7 from "../../../public/about-us/family.jpg";
 import Invention from "../../../public/about-us/invention.webp";
 import float from "../../../public/about-us/floating.gif";
 
@@ -52,7 +53,7 @@ export default function Portfolio() {
             <div className="grid grid-cols-2 gap-2 mb-5">
               {topImages.map((image, index) => (
                 <div key={index} className="w-full">
-                  <div className="relative h-[160px] md:h-[230px] lg:h-[260px] xl:h-[280px] 2xl:h-[600px] w-auto  md:w-[190px] lg:w-[220px] xl:w-[300px] 2xl:w-auto ">
+                  <div className="relative h-[160px] md:h-[230px] lg:h-[260px] xl:h-[280px] 2xl:h-[400px] w-auto  md:w-[190px] lg:w-[220px] xl:w-[300px] 2xl:w-auto ">
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -85,7 +86,7 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {bottomImages.map((image, index) => (
               <div key={index} className="">
-                <div className="relative h-[340px] md:h-[400px] lg:h-[400px] xl:h-[560px] 2xl:h-[1000px] w-auto  md:w-[350px] lg:w-[400px] xl:w-[550px] 2xl:w-auto">
+                <div className="relative h-[340px] md:h-[400px] lg:h-[400px] xl:h-[560px] 2xl:h-[700px] w-auto  md:w-[350px] lg:w-[400px] xl:w-[550px] 2xl:w-auto">
                   <Image
                     src={image.src}
                     alt={image.alt}

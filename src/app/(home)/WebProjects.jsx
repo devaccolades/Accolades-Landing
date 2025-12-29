@@ -18,15 +18,20 @@ import img5 from "../../../public/web/cidb.png";
 import img6 from "../../../public/web/ggc.png";
 import img7 from "../../../public/web/nabuil.png";
 import img8 from "../../../public/web/gtea.png";
+import img9 from "../../../public/web/e-cafe.png";
+import img10 from "../../../public/web/ladder.png";
 
 import bottom from "../../../public/home/bottom-line.webp";
 
 const projects = [
+   { title: "ENGLISH CAFE", image: img9, link: "https://englishcafeonline.com/" },
+   { title: "LADDER", image: img10, link: "https://ladderkerala.com/" },
+   { title: "CIDBI", image: img5, link: "https://cidbi.com/" },
   { title: "ABE SERVICES", image: img1, link: "https://abeservices.in/" },
   { title: "ABLS HUMAN RESOURCES", image: img2, link: "https://ablshumanresources.com/" },
   { title: "ALPHA ARC", image: img3, link: "https://alphaarc.in/" },
   { title: "ATC KODANAD", image: img4, link: "https://atckodanad.com/" },
-  { title: "CIDBI", image: img5, link: "https://cidbi.com/" },
+ 
   { title: "GO GREEN COMPANY", image: img6, link: "https://ggc-travel.com/" },
 //   { title: "NATIONAL BUILDERS", image: img7, link: "https://nationalbuilders.in/" },
   { title: "GREEN TEA", image: img8, link: "https://greenteahotels.com/" },

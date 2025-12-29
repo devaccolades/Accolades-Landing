@@ -9,6 +9,29 @@ import "swiper/css/pagination";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import user from "../../../public/account.png";
 import akki from "../../../public/testimonial/akkinova.png";
+import post from "../../../public/testimonial/posticon.png";
+import cad from "../../../public/testimonial/cadbim.png";
+import jm from "../../../public/testimonial/joseph.png";
+import jimbsa from "../../../public/testimonial/jimbsa.png";
+import qims from "../../../public/testimonial/qims.png";
+import sujith from "../../../public/testimonial/sujith.png";
+import sl from "../../../public/testimonial/shalini.png";
+import sr from "../../../public/testimonial/sreejith.png";
+import nid from "../../../public/testimonial/nid.png";
+import an from "../../../public/testimonial/anju.png";
+import gk from "../../../public/testimonial/gk.png";
+import sv from "../../../public/testimonial/sav.png";
+import jb from "../../../public/testimonial/jub.png";
+import gv from "../../../public/testimonial/gv.png";
+import sajo from "../../../public/testimonial/sajo.png";
+import mag from "../../../public/testimonial/magdy.png";
+import rj from "../../../public/testimonial/rejee.png";
+import jj from "../../../public/testimonial/jj.png";
+import ant from "../../../public/testimonial/anto.png";
+import vy from "../../../public/testimonial/vyka.jpeg";
+import kj from "../../../public/testimonial/kj.png";
+import ec from "../../../public/testimonial/ec.png";
+
 import bottom from "../../../public/home/bottom-line.webp";
 
 import client from "../../../public/Group 213.webp";
@@ -33,7 +56,7 @@ const testimonials = [
     content:
       "We are one of the client of Accolades Media. Quilon Institute of Management Studies, QIMS, Kollam is one of the top Aviation Degree colleges in Kerala. We are extremely satisfied in the professional way of works in website Management, Online Marketing and designing. M.D of the company Mr Jagesh always shows a professional approach in all the dealings and projects.. We suggest this excellent company for website Management, online marketing and SEO on the base of our experience for the last 2 years.. All the very Best for the Team Accolades...",
 
-    avatar: user,
+    avatar: qims,
     bgColor: "bg-blue-100",
     quoteColor: "text-blue-300",
   },
@@ -81,18 +104,16 @@ const testimonials = [
     bgColor: "bg-purple-100",
     quoteColor: "text-purple-300",
   },
-  {
-    id: 7,
-    name: "Aju Abraham Mathew",
-    role: "Client Experience",
-    content:
-
-      "We have been working with Accolades Integrated for over five years and are extremely pleased with their services. Their team is highly dedicated and professional, consistently delivering creative solutions tailored to our requirements. Mr. Jagesh’s expert advice on digital marketing strategies has been particularly valuable, helping us achieve impactful results on various platforms. We highly recommend Accolades Integrated for their expertise and client-centric approach.",
-
-    avatar: user,
-    bgColor: "bg-green-100",
-    quoteColor: "text-green-300",
-  },
+  // {
+  //   id: 7,
+  //   name: "Aju Abraham Mathew",
+  //   role: "Client Experience",
+  //   content:
+  //     "We have been working with Accolades Integrated for over five years and are extremely pleased with their services. Their team is highly dedicated and professional, consistently delivering creative solutions tailored to our requirements. Mr. Jagesh’s expert advice on digital marketing strategies has been particularly valuable, helping us achieve impactful results on various platforms. We highly recommend Accolades Integrated for their expertise and client-centric approach.",
+  //   avatar: user,
+  //   bgColor: "bg-green-100",
+  //   quoteColor: "text-green-300",
+  // },
 
   {
     id: 8,
@@ -107,10 +128,10 @@ const testimonials = [
   {
     id: 9,
     name: "Joseph Mampilly",
-    role: "Client Experience",
+    role: "Sales Head-Prime Meridian Builders",
     content:
       "Worked with accolades for few of my clients. I do prefer them for more of my upcoming projects. Prompt response from client service. Always there a call away",
-    avatar: user,
+    avatar: jm,
     bgColor: "bg-pink-100",
     quoteColor: "text-pink-300",
   },
@@ -120,7 +141,7 @@ const testimonials = [
     role: " MGM Muthoot Hospitals",
     content:
       "It's great pleasure to associate with Accolades for last one year and to understand better ideas and to get beautiful designs from them. For someone from medical fretanity I personally suggest Accolades for digital promo.Thanks to the entire team of Accolades",
-    avatar: user,
+    avatar: nid,
     bgColor: "bg-blue-100",
     quoteColor: "text-blue-300",
   },
@@ -130,7 +151,7 @@ const testimonials = [
     role: "Client Experience",
     content:
       "The future of marketing is certainly having a great influence on the way we participate in the cloud space. The Team at ACCOLADES are very passionate about their work & creative. My clients are getting tremendous results from their CAMPAIGN Management. Great work ...",
-    avatar: user,
+    avatar: gk,
     bgColor: "bg-blue-100",
     quoteColor: "text-blue-300",
   },
@@ -140,7 +161,7 @@ const testimonials = [
     role: "Client Experience",
     content:
       "  Accolades media is one of the best professional SEO and Digital marketing providers. Thank you for providing us best services for our business.",
-    avatar: user,
+    avatar: jb,
     bgColor: "bg-blue-100",
     quoteColor: "text-blue-300",
   },
@@ -152,7 +173,7 @@ const testimonials = [
     role: "MGM Muthoot Hospitals Kozhencherry",
     content:
       "It's a wonderful and great experience with Accolades for last one year.The team behind each and every creatives are just awesome.Usually when it's very difficult and a zig zag game with the copy righters to give idea and wat comes at the end,here in Accolades the team used to deliver exact of wat in someone's mind.Ur dedication and patience to listen and draw the ideas are highly appreciated.Special thanks to MD- Nimmy for such a unique coordination with us.",
-    avatar: user,
+    avatar: sujith,
     bgColor: "bg-pink-100",
     quoteColor: "text-pink-300",
   },
@@ -187,6 +208,147 @@ const testimonials = [
     bgColor: "bg-purple-100",
     quoteColor: "text-purple-300",
   },
+  {
+    id: 33,
+    name: "POST-EDU ",
+    role: "Mumbai",
+    content:
+    "From day one, they took the time to deeply understand our niche in our competitive space—specifically, promoting prestigious programs like the MIMS Online MBA and BBA. Their strategic approach to lead generation has directly translated into a significant increase in qualified inquiries and enrolled students.Thanks to Accolades Integrated, our digital presence is stronger, our funnel is more efficient, and our growth trajectory is clear. They are more than an agency—they are a growth partner.If you're looking for a marketing team that delivers real results with professionalism and passion, look no further. Highly recommended!",
+    avatar: post,
+    bgColor: "bg-green-100",
+    quoteColor: "text-green-300",
+  },
+   {
+    id: 34,
+    name: "Rijo K John",
+    role: "CADBIM",
+    content:
+    "CADBIM Centre has had an exceptional experience with Accolades — a truly professional team that understood our needs and delivered real results in a short time. Their expertise in Google marketing and digital strategy has been invaluable in elevating our online presence. We confidently recommend Accolades to anyone looking for a reliable, results-driven partner.",
+    avatar: cad,
+    bgColor: "bg-pink-100",
+    quoteColor: "text-pink-300",
+  },
+   {
+    id: 35,
+    name: "Aju Abraham Mathew",
+    role: "WGH Hotels Resorts",
+    content:
+    "We have been working with Accolades Integrated for over five years and are extremely pleased with their services. Their team is highly dedicated and professional, consistently delivering creative solutions tailored to our requirements. Mr. Jagesh’s expert advice on digital marketing strategies has been particularly valuable, helping us achieve impactful results on various platforms. We highly recommend Accolades Integrated for their expertise and client-centric approach.",
+    avatar:"/testimonial/wgh.png",
+    bgColor: "bg-purple-100",
+    quoteColor: "text-purple-300",
+  },
+   {
+    id: 36,
+    name: "Shalini Menon",
+    role: "Artist",
+    content:
+    "Great team out there to get your work done and reach out .Good ambience and connectivity",
+    avatar: sl,
+    bgColor: "bg-green-100",
+    quoteColor: "text-green-300",
+  },
+   {
+    id: 37,
+    name: "Ann Mary",
+    role: "Elements of Cinema",
+    content:
+    "Best Digital Marketing Agency in Kerala. Good service.",
+    avatar: ec,
+    bgColor: "bg-purple-100",
+    quoteColor: "text-purple-300",
+  },
+   {
+    id: 38,
+    name: "Ayrin Eduwizz",
+    role: "Eduwizz",
+    content:
+    "Excellent work.... thank you for a part of us",
+    avatar: user,
+    bgColor: "bg-red-100",
+    quoteColor: "text-red-300",
+  },
+   {
+    id: 39,
+    name: "Anju Nair",
+    role: "",
+    content:
+    "I have used services of Accolades Integrated, in the past. The are very professional in their approach and quality if work is exceptional!.Would highly recommend Accolades Integrated for all my associates!.Thank you ",
+    avatar: an,
+    bgColor: "bg-purple-100",
+    quoteColor: "text-purple-300",
+  },
+   {
+    id: 40,
+    name: "Savan MP",
+    role: "",
+    content:
+    "Accoalades is one of the best companies in Kerala that can do digital marketing & SEO . All the staff do their job responsibly at the right time. We wish you all the best to become one of the leading marketing agencies in India.",
+    avatar: sv,
+    bgColor: "bg-green-100",
+    quoteColor: "text-green-300",
+  },
+   {
+    id: 41,
+    name: "Sajo Albin",
+    role: "",
+    content:
+    "The association with Accolades was a breath of fresh air of life to my company. They have been marketing my company successfully. Team Accolades are magicians in Digital Marketing.",
+    avatar: sajo,
+    bgColor: "bg-pink-100",
+    quoteColor: "text-pink-300",
+  },
+   {
+    id: 42,
+    name: "Rejeesh Kannyadath",
+    role: "",
+    content:
+    "I highly recommend Accolades to everyone for best quality service. They have best experience and expertise in d field.",
+    avatar: rj,
+    bgColor: "bg-purple-100",
+    quoteColor: "text-purple-300",
+  },
+   {
+    id: 43,
+    name: "VYKA By VVK",
+    role: "",
+    content:
+    "Best designs, services, promotions that 100% gives returns for your business is done by accolades. Once by giving your promotional handlings to them will start giving the returns in business much more than we expected. This is a genuine review happily given out of personal experience with their service.",
+    avatar: vy,
+    bgColor: "bg-green-100",
+    quoteColor: "text-green-300",
+  },
+   {
+    id: 44,
+    name: "Althaf Mohammed",
+    role: "Knee Joint",
+    content:
+    "Very good service. Prompt and professional..",
+    avatar: kj,
+    bgColor: "bg-purple-100",
+    quoteColor: "text-purple-300",
+  },
+  //  {
+  //   id: 16,
+  //   name: "",
+  //   role: "",
+  //   content:
+  //   "",
+  //   avatar: user,
+  //   bgColor: "bg-purple-100",
+  //   quoteColor: "text-purple-300",
+  // },
+  //  {
+  //   id: 16,
+  //   name: "",
+  //   role: "",
+  //   content:
+  //   "",
+  //   avatar: user,
+  //   bgColor: "bg-purple-100",
+  //   quoteColor: "text-purple-300",
+  // },
+
 ]
 const testimonials2 = [
   {
@@ -195,7 +357,7 @@ const testimonials2 = [
     role: "Client Experience",
     content:
       "Google ad experts with great content marketing strategies. This team can give you remarkable digital marketing ideas.",
-    avatar: user,
+    avatar: gv,
     bgColor: "bg-green-100",
     quoteColor: "text-green-300",
   },
@@ -215,7 +377,7 @@ const testimonials2 = [
     role: "Client Experience",
     content:
       "Quality at its peak. Excellent after sales service & Dealing. The flagship is its work environment.Thank you accolades......",
-    avatar: user,
+    avatar: ant,
     bgColor: "bg-pink-100",
     quoteColor: "text-pink-300",
   },
@@ -295,7 +457,7 @@ const testimonials2 = [
     role: "Client Experience",
     content:
       "The right choice for Google lead generation, Facebook & instagram lead generation, SEO & YouTube marketing.",
-    avatar: user,
+    avatar: jj,
     bgColor: "bg-purple-100",
     quoteColor: "text-purple-300",
   },
@@ -312,10 +474,10 @@ const testimonials2 = [
   {
     id: 29,
     name: "Sreejith Menon",
-    role: "Client Experience",
+    role: "Svojas Farms",
     content:
       "Great at creatives & a solid, overall digital marketing provider …. Keep it up, Accolades👍",
-    avatar: user,
+    avatar: sr,
     bgColor: "bg-green-100",
     quoteColor: "text-green-300",
   },
@@ -335,17 +497,17 @@ const testimonials2 = [
     role: "Client Experience",
     content:
       "Very supportive and enthusiastic team. Guided our company the right way on ad campaigns.",
-    avatar: user,
+    avatar: mag,
     bgColor: "bg-green-100",
     quoteColor: "text-green-300",
   },
   {
     id: 32,
     name: "Jimbssa Abraham",
-    role: "Client Experience",
+    role: "Slated",
     content:
       "Highly creative and surprisingly insightful, Accolades impresses you with their flair.Jagesh and his team lives up to the name.",
-    avatar: user,
+    avatar: jimbsa,
     bgColor: "bg-blue-100",
     quoteColor: "text-blue-300",
   },
@@ -378,12 +540,12 @@ const Testimonials = () => {
             loop={true}
             freeMode={true}
             // freeModeMomentum={false}
-            allowTouchMove={false}
+            allowTouchMove={true}
             speed={8000} // higher = slower movement
             autoplay={{
               delay: 0, // keeps motion continuous
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
+              // disableOnInteraction: false,
+              // pauseOnMouseEnter: false,
             }}
             style={{
               transitionTimingFunction: "linear", // removes easing curve
@@ -466,13 +628,13 @@ const Testimonials = () => {
             loop={true}
             freeMode={true}
             // freeModeMomentum={false}
-            allowTouchMove={false}
+            allowTouchMove={true}
             speed={8000} // ✅ same smooth speed
             autoplay={{
               delay: 0,
               reverseDirection: true, // ✅ opposite direction only
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
+              // disableOnInteraction: false,
+              // pauseOnMouseEnter: false,
             }}
             style={{
               transitionTimingFunction: "linear", // ✅ smooth continuous

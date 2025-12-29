@@ -14,6 +14,7 @@ import Navbar from "@/component/Navbar";
 // import { BASE_URL, getSeo } from "./Server";
 import WebProjects from "./(home)/WebProjects";
 import FAQ from "./(home)/FAQ";
+import ClientLogo from "./(home)/ClientLogo";
 
 export const dynamic = "force-dynamic";
 
@@ -63,6 +64,7 @@ export default function page() {
       <ProjectSlider />
       <OurClients />
       <ClientSlider />
+    
       <Testimonials />
       <WebProjects />
       <FAQ />

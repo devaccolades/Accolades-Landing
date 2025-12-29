@@ -20,6 +20,13 @@ export default function LocationDetailCard({ }) {
       phoneNumbers: ["+91 90481 00233", "+91 90726 19928"],
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.338634640268!2d76.31439647589313!3d9.988860973224527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080cf7e6baeda3%3A0x1f053eaaf85f927b!2sACCOLADES%20Integrated%20Pvt.Ltd!5e0!3m2!1sen!2sin!4v1753441166710!5m2!1sen!2sin",
     },
+    Mumbai: {
+      locationName: "Mumbai (Office and Development Center)",
+      address: "Accolades Integrated Pvt Ltd – 301 | 3rd floor | Corporate Corner | Sundar Nagar | Malad West | Mumbai – 400064",
+      email: "mumbai@accoladesmedia.co.in",
+      phoneNumbers: ["+91 9048033588",],
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4715.425278398671!2d72.83962167599567!3d19.17707724879009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7fc5db51bbf%3A0xd85e9d4ba277c50a!2sAccolades%20Integrated%20Pvt%20Ltd!5e1!3m2!1sen!2sin!4v1755942289816!5m2!1sen!2sin",
+    },
     Calicut: {
       locationName: "Calicut",
       address: "Accolades Integrated Pvt Ltd Akkai Tower | 59/3785, 2nd Floor | Tali Cross Road | Calicut – 673002",
@@ -41,13 +48,7 @@ export default function LocationDetailCard({ }) {
       phoneNumbers: ["+91 90726 19922", "+91 87143 04849"],
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d608.0760816731475!2d77.69714717924873!3d12.995034665068514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae110acc03a14f%3A0x90ddf5a37aa1c34a!2s048%2C%20560%2C%20ITPL%20Main%20Rd%2C%20Mahadevapura%20Layout%2C%20RHB%20Colony%2C%20Mahadevapura%2C%20Bengaluru%2C%20Karnataka%20560048!5e1!3m2!1sen!2sin!4v1755942211445!5m2!1sen!2sin",
     },
-    Mumbai: {
-      locationName: "Mumbai",
-      address: "Accolades Integrated Pvt Ltd – 301 | 3rd floor | Corporate Corner | Sundar Nagar | Malad West | Mumbai – 400064",
-      email: "mumbai@accoladesmedia.co.in",
-      phoneNumbers: ["+91 9048033588",],
-      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4715.425278398671!2d72.83962167599567!3d19.17707724879009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7fc5db51bbf%3A0xd85e9d4ba277c50a!2sAccolades%20Integrated%20Pvt%20Ltd!5e1!3m2!1sen!2sin!4v1755942289816!5m2!1sen!2sin",
-    },
+
   };
 
   // Get the data for the currently active location
@@ -70,10 +71,11 @@ export default function LocationDetailCard({ }) {
   // Array of location names for the buttons
   const locations = [
     "Kochi (HQ)",
+    "Mumbai",
     "Calicut",
     "Trivandrum",
     "Bengaluru",
-    "Mumbai",
+    
   ];
 
   // Animation variants for each item

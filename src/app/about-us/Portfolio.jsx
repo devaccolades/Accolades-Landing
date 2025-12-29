@@ -48,11 +48,11 @@ export default function Portfolio() {
         }}
       >
         <div className="containers">
-          <div className="relative flex flex-col-reverse lg:grid lg:grid-cols-[55%_1fr]">
+          <div className="relative flex flex-col-reverse md:grid md:grid-cols-[55%_1fr]">
             <div className="grid grid-cols-2 gap-2 mb-5">
               {topImages.map((image, index) => (
                 <div key={index} className="w-full">
-                  <div className="relative h-[250px]  2xl:h-[350px] w-auto ">
+                  <div className="relative h-[160px] md:h-[230px] lg:h-[260px] xl:h-[280px] 2xl:h-[600px] w-auto  md:w-[190px] lg:w-[220px] xl:w-[300px] 2xl:w-auto ">
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -66,9 +66,9 @@ export default function Portfolio() {
               <Image
                 src={float}
                 alt="gif"
-                className="w-[60%] lg:w-full h-full"
+                className="w-[60%] md:w-full h-full"
               />
-              <div className="absolute inset-0 flex flex-col justify-center items-start lg:pl-[5%]">
+              <div className="absolute inset-0 flex flex-col justify-center items-start md:pl-[5%]">
                 <h3 className="text-[36px] text-[#3F3F3F] font-normal leading-[100%]">
                   Latest Projects
                 </h3>
@@ -82,10 +82,10 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {bottomImages.map((image, index) => (
               <div key={index} className="">
-                <div className="relative h-[300px] md:h-[700px] lg:h-[450px] 2xl:h-[750px] w-auto">
+                <div className="relative h-[340px] md:h-[400px] lg:h-[400px] xl:h-[560px] 2xl:h-[1000px] w-auto  md:w-[350px] lg:w-[400px] xl:w-[550px] 2xl:w-auto">
                   <Image
                     src={image.src}
                     alt={image.alt}

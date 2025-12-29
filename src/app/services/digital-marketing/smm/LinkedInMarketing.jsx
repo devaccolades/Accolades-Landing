@@ -11,13 +11,12 @@ export default function LinkedinMarketing() {
                 {/* LEFT — IMAGE */}
                 <div className="relative w-full h-[260px] sm:h-[320px] md:h-[380px] lg:h-[420px] rounded-[30px] overflow-hidden">
                     <Image
-                        src="/new-smm/link.jpg"
+                        src="/new-smm/linked-in.png"
                         alt="Advanced AI Targeting"
                         fill
                         className="object-cover"
                     />
                 </div>
-
 
 
                 {/* RIGHT ─ CONTENT */}

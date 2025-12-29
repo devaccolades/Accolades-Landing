@@ -63,7 +63,7 @@ export default function WordProjects() {
                   viewport={{ once: true, amount: 0.3 }}
                 >
           <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-1 md:mb-4">
-            Web Projects 
+            Our Premium Web Projects 
           </h2> 
           <p className="text-gray-700 font-mont text-[13px] md:text-[14px] leading-relaxed">
             We build WordPress sites that are fast, sleek, and easy to run. Each

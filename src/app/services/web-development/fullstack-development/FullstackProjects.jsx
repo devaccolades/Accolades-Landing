@@ -20,8 +20,13 @@ import img5 from "../../../../../public/web/cidb.png";
 import img6 from "../../../../../public/web/ggc.png";
 import img7 from "../../../../../public/web/nabuil.png";
 import img8 from "../../../../../public/web/gtea.png";
+import img9 from "../../../../../public/web/e-cafe.png";
+import img10 from "../../../../../public/web/ladder.png";
 
 const projects = [
+     { title: "ENGLISH CAFE", image: img9, link: "https://englishcafeonline.com/" },
+     { title: "LADDER", image: img10, link: "https://ladderkerala.com/" },
+     { title: "CIDBI", image: img5, link: "https://cidbi.com/" },
   {
     title: "ABE SERVICES",
     image: img1,
@@ -34,11 +39,7 @@ const projects = [
     link: "https://alphaarc.in/",
   },
 
-  {
-    title: "CIDBI",
-    image: img5,
-    link: "https://cidbi.com/",
-  },
+
 
   // {
   //   title: "NATIONAL BUILDERS",

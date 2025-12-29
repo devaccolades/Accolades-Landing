@@ -186,7 +186,7 @@ const HeroSection = () => {
           </div>
 
 
-          <div className="mt-[30px] lg:mt-[30px]">
+          {/* <div className="mt-[30px] lg:mt-[30px]">
             <p className="text-[16px] font-mont font-semibold capitalize text-center mb-3">
               Growing With Us
             </p>
@@ -216,7 +216,7 @@ const HeroSection = () => {
               ariaLabel="Technology partners"
               className="md:hidden"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

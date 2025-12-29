@@ -28,6 +28,7 @@ import cl17 from "../../../public/arj.webp";
 import cl18 from "../../../public/mioc1.webp";
 import cl19 from "../../../public/cine1.webp";
 import cl20 from "../../../public/clas.webp";
+import ClientLogo from "./ClientLogo";
 
 
 const logos = [
@@ -107,10 +108,11 @@ const ClientSlider = () => {
           ))}
         </Swiper>
       </section> */}
+      <ClientLogo />
       <Image
         src={bottom}
         alt="bottom-line"
-        className="containers py-6 md:py-8 "
+        className="containers py-6 md:py-8"
       />
     </>
   );

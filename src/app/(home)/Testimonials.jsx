@@ -29,6 +29,8 @@ import rj from "../../../public/testimonial/rejee.png";
 import jj from "../../../public/testimonial/jj.png";
 import ant from "../../../public/testimonial/anto.png";
 import vy from "../../../public/testimonial/vyka.jpeg";
+import kj from "../../../public/testimonial/kj.png";
+import ec from "../../../public/testimonial/ec.png";
 
 import bottom from "../../../public/home/bottom-line.webp";
 
@@ -249,10 +251,10 @@ const testimonials = [
    {
     id: 37,
     name: "Ann Mary",
-    role: "",
+    role: "Elements of Cinema",
     content:
     "Best Digital Marketing Agency in Kerala. Good service.",
-    avatar: user,
+    avatar: ec,
     bgColor: "bg-purple-100",
     quoteColor: "text-purple-300",
   },
@@ -267,7 +269,7 @@ const testimonials = [
     quoteColor: "text-red-300",
   },
    {
-    id: 38,
+    id: 39,
     name: "Anju Nair",
     role: "",
     content:
@@ -277,7 +279,7 @@ const testimonials = [
     quoteColor: "text-purple-300",
   },
    {
-    id: 39,
+    id: 40,
     name: "Savan MP",
     role: "",
     content:
@@ -287,7 +289,7 @@ const testimonials = [
     quoteColor: "text-green-300",
   },
    {
-    id: 40,
+    id: 41,
     name: "Sajo Albin",
     role: "",
     content:
@@ -297,7 +299,7 @@ const testimonials = [
     quoteColor: "text-pink-300",
   },
    {
-    id: 41,
+    id: 42,
     name: "Rejeesh Kannyadath",
     role: "",
     content:
@@ -307,7 +309,7 @@ const testimonials = [
     quoteColor: "text-purple-300",
   },
    {
-    id: 42,
+    id: 43,
     name: "VYKA By VVK",
     role: "",
     content:
@@ -316,16 +318,16 @@ const testimonials = [
     bgColor: "bg-green-100",
     quoteColor: "text-green-300",
   },
-  //  {
-  //   id: 16,
-  //   name: "",
-  //   role: "",
-  //   content:
-  //   "",
-  //   avatar: user,
-  //   bgColor: "bg-purple-100",
-  //   quoteColor: "text-purple-300",
-  // },
+   {
+    id: 44,
+    name: "Althaf Mohammed",
+    role: "Knee Joint",
+    content:
+    "Very good service. Prompt and professional..",
+    avatar: kj,
+    bgColor: "bg-purple-100",
+    quoteColor: "text-purple-300",
+  },
   //  {
   //   id: 16,
   //   name: "",
@@ -472,7 +474,7 @@ const testimonials2 = [
   {
     id: 29,
     name: "Sreejith Menon",
-    role: "Client Experience",
+    role: "Svojas Farms",
     content:
       "Great at creatives & a solid, overall digital marketing provider …. Keep it up, Accolades👍",
     avatar: sr,

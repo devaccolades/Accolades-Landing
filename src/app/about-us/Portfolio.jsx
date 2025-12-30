@@ -20,6 +20,8 @@ export default function Portfolio() {
   const bottomImages = [
     { src: Img6, alt: "Saree Model Ad" },
     { src: Img7, alt: "Family Plastics Drums" },
+   
+
   ];
 
   return (
@@ -83,7 +85,7 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {bottomImages.map((image, index) => (
               <div key={index} className="">
                 <div className="relative h-[340px] md:h-[400px] lg:h-[400px] xl:h-[560px] 2xl:h-[700px] w-auto  md:w-[350px] lg:w-[400px] xl:w-[550px] 2xl:w-auto">

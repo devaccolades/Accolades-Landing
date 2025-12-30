@@ -31,6 +31,7 @@ import ant from "../../../public/testimonial/anto.png";
 import vy from "../../../public/testimonial/vyka.jpeg";
 import kj from "../../../public/testimonial/kj.png";
 import ec from "../../../public/testimonial/ec.png";
+import cdb from "../../../public/testimonial/cidbi.ico";
 
 import bottom from "../../../public/home/bottom-line.webp";
 
@@ -328,16 +329,16 @@ const testimonials = [
     bgColor: "bg-purple-100",
     quoteColor: "text-purple-300",
   },
-  //  {
-  //   id: 16,
-  //   name: "",
-  //   role: "",
-  //   content:
-  //   "",
-  //   avatar: user,
-  //   bgColor: "bg-purple-100",
-  //   quoteColor: "text-purple-300",
-  // },
+   {
+    id: 45,
+    name: "Mr. A A Abdul Lathif",
+    role: "Chairman, CIDBI, Thrissur",
+    content:
+    "For the past 5 years, Accolades has been our trusted marketing partner. Their professional approach and result-driven strategies have played a key role in strengthening our sales and marketing growth. We look forward to continuing this successful partnership.All the best, Team Accolades!",
+    avatar: cdb,
+    bgColor: "bg-purple-100",
+    quoteColor: "text-purple-300",
+  },
   //  {
   //   id: 16,
   //   name: "",

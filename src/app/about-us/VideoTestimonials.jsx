@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -41,6 +41,8 @@ const testimonials = [
 //   },
 ];
 
+
+
 export default function VideoTestimonials() {
   const [activeVideo, setActiveVideo] = useState(null);
 
@@ -52,6 +54,31 @@ export default function VideoTestimonials() {
       return `https://www.youtube.com/embed/${url.split("watch?v=")[1]}`;
     return url;
   };
+
+  const playerRef = useRef(null);
+
+useEffect(() => {
+  if (window.YT) return;
+
+  const tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.body.appendChild(tag);
+}, []);
+
+  useEffect(() => {
+  if (!activeVideo || !window.YT) return;
+
+  playerRef.current = new window.YT.Player("yt-player", {
+    events: {
+      onStateChange: (event) => {
+        if (event.data === window.YT.PlayerState.ENDED) {
+          setActiveVideo(null); // ✅ auto close modal
+        }
+      },
+    },
+  });
+}, [activeVideo]);
+
 
   return (
     <section className="containers py-10 relative">
@@ -131,7 +158,7 @@ export default function VideoTestimonials() {
                 onClick={() => setActiveVideo(item.youtubeUrl)}
                 className="absolute inset-0 flex items-center justify-center z-10"
               >
-                <div className="w-14 h-14 lg:w-20 lg:h-20  rounded-full flex items-center justify-center text-black text-xl shadow-lg">
+                <div className="w-14 h-14 lg:w-20 lg:h-20  rounded-full flex items-center justify-center text-white text-xl shadow-lg">
                   ▶
                 </div>
               </button>
@@ -182,13 +209,21 @@ export default function VideoTestimonials() {
             >
               ✕
             </button>
-
+{/* 
             <iframe
               src={`${getEmbedUrl(activeVideo)}?autoplay=1`}
               allow="autoplay; encrypted-media"
               allowFullScreen
               className="w-full h-full rounded-xl"
-            />
+            /> */}
+            <iframe
+  id="yt-player"
+  src={`${getEmbedUrl(activeVideo)}?autoplay=1&enablejsapi=1`}
+  allow="autoplay; encrypted-media"
+  allowFullScreen
+  className="w-full h-full rounded-xl"
+/>
+
           </div>
         </div>
       )}

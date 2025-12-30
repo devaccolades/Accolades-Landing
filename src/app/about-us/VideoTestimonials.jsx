@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 
 const testimonials = [
   {
-    name: "Skyline",
+    name: "Skyline Builders",
     thumbnail: "/about-us/thumbnail/t1.webp",
     youtubeUrl: "https://www.youtube.com/watch?v=0zPvh90Ntgc",
   },
@@ -20,7 +20,7 @@ const testimonials = [
     youtubeUrl: "https://www.youtube.com/watch?v=YVyiTkWDVzU",
   },
   {
-    name: "TJP Mats",
+    name: "TJP Mats Pvt. Ltd. ",
     thumbnail: "/about-us/thumbnail/t3.png",
     youtubeUrl: "https://www.youtube.com/watch?v=6hgmP2xyLxg",
   },

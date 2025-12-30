@@ -2,6 +2,7 @@ import Footer from "@/component/Footer";
 import HeroSection from "./HeroSection";
 import Portfolio from "./Portfolio";
 import Navbar from "@/component/Navbar";
+import VideoTestimonials from "./VideoTestimonials";
 // import { BASE_URL, getSeo } from "../Server";
 
 export const dynamic = "force-dynamic";
@@ -46,7 +47,9 @@ export default function page() {
       {/* <Navbar /> */}
       <main className="bg-[#F1F1F1]">
         <HeroSection />
+          <VideoTestimonials />
         <Portfolio />
+      
       </main>
       <main className="-mt-[65px]">
         <Footer />

@@ -21,7 +21,7 @@ export default function Home() {
       <TestimonialsSection />
       <NowAt />
       <Footer />
-      <a href="tel:+919048100233" className="fixed bottom-6 right-6 z-50">
+      <a href="tel:+919048100233" className="fixed  bottom-26 right-6 z-50">
         <Image
           src={img}
           width={56}
@@ -30,7 +30,7 @@ export default function Home() {
           className="w-14 h-14"
         />
       </a>
-       <a
+       {/* <a
           href="https://wa.me/919048100233" // Replace with actual number
           target="_blank"
           rel="noopener noreferrer"
@@ -43,7 +43,7 @@ export default function Home() {
             alt="Chat on WhatsApp"
             className="w-14 h-14"
           />
-        </a>
+        </a> */}
     </>
   );
 }

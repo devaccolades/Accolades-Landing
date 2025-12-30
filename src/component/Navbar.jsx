@@ -359,16 +359,19 @@ const Navbar = () => {
           blueOffset={0}
           className="my-custom-class"
         >
-          {/* <Link href="/"> */}
+          <Link href="/">
           <Image
             src={logo}
             alt="logo"
-            height={500}
-            width={500}
-            priority
-            className="h-[36px] w-fit  md:w-[205px] md:h-[38px] cursor-pointer"
+            width={160}
+            height={40}
+            className="h-[40px] w-[160px] object-contain"
+            // height={500}
+            // width={500}
+            // priority
+            // className="h-[36px] w-fit  md:w-[205px] md:h-[38px] cursor-pointer"
           />
-          {/* </Link> */}
+          </Link>
 
           <div className="flex flex-row items-center gap-[10px]">
             {/* <Link href={"https://wa.me/919048100233"}>

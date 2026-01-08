@@ -24,7 +24,7 @@ export default function LocationDetailCard({ }) {
       locationName: "Mumbai (Office and Development Center)",
       address: "Accolades Integrated Pvt Ltd – 301 | 3rd floor | Corporate Corner | Sundar Nagar | Malad West | Mumbai – 400064",
       email: "mumbai@accoladesmedia.co.in",
-      phoneNumbers: ["+91 9048033588",],
+      phoneNumbers: ["+91 90726 19925",],
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4715.425278398671!2d72.83962167599567!3d19.17707724879009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7fc5db51bbf%3A0xd85e9d4ba277c50a!2sAccolades%20Integrated%20Pvt%20Ltd!5e1!3m2!1sen!2sin!4v1755942289816!5m2!1sen!2sin",
     },
     Calicut: {

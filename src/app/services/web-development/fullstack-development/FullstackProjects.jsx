@@ -22,6 +22,7 @@ import img7 from "../../../../../public/web/nabuil.png";
 import img8 from "../../../../../public/web/gtea.png";
 import img9 from "../../../../../public/web/e-cafe.png";
 import img10 from "../../../../../public/web/ladder.png";
+import img11 from "../../../../../public/web/asha.webp";
 
 const projects = [
      { title: "ENGLISH CAFE", image: img9, link: "https://englishcafeonline.com/" },
@@ -38,7 +39,7 @@ const projects = [
     image: img3,
     link: "https://alphaarc.in/",
   },
-
+    { title: "ASHA EDUCATION", image: img11, link: "https://www.asha.education/" },
 
 
   // {

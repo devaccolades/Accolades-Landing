@@ -20,6 +20,7 @@ import img7 from "../../../public/web/nabuil.png";
 import img8 from "../../../public/web/gtea.png";
 import img9 from "../../../public/web/e-cafe.png";
 import img10 from "../../../public/web/ladder.png";
+import img11 from "../../../public/web/asha.webp";
 
 import bottom from "../../../public/home/bottom-line.webp";
 
@@ -30,6 +31,7 @@ const projects = [
   { title: "ABE SERVICES", image: img1, link: "https://abeservices.in/" },
   { title: "ABLS HUMAN RESOURCES", image: img2, link: "https://ablshumanresources.com/" },
   { title: "ALPHA ARC", image: img3, link: "https://alphaarc.in/" },
+  { title: "ASHA EDUCATION", image: img11, link: "https://www.asha.education/" },
   { title: "ATC KODANAD", image: img4, link: "https://atckodanad.com/" },
  
   { title: "GO GREEN COMPANY", image: img6, link: "https://ggc-travel.com/" },

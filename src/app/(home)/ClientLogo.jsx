@@ -286,6 +286,7 @@ const ClientLogo = () => {
     { src: "/home/logos/manapuram.svg", alt: "Manappuram" },
     { src: "/home/logos/friday.svg", alt: "Friday" },
     { src: "/home/logos/nandilat.svg", alt: "Nandilath" },
+    { src: "/home/logos/smit.svg", alt: "SMET" },
   ];
 
   return (

@@ -32,6 +32,7 @@ import vy from "../../../public/testimonial/vyka.jpeg";
 import kj from "../../../public/testimonial/kj.png";
 import ec from "../../../public/testimonial/ec.png";
 import cdb from "../../../public/testimonial/cidbi.ico";
+import cdb1 from "../../../public/testimonial/hisham.png";
 
 import bottom from "../../../public/home/bottom-line.webp";
 
@@ -339,16 +340,48 @@ const testimonials = [
     bgColor: "bg-green-100",
     quoteColor: "text-green-300",
   },
-  //  {
-  //   id: 16,
+   {
+    id: 46,
+    name: "Hisham",
+    role: "CIDBI, Executive Director",
+    content:
+    "We have been associating with Accolades Integrated for the past 4 years and the experience with them is been impeccable.They provide us digital, Creative and Web services.Highly Recommended group of passionate professionals.Wishing them the very best for many years to come",
+    avatar: cdb1,
+    bgColor: "bg-purple-100",
+    quoteColor: "text-purple-300",
+  },
+   {
+    id: 47,
+    name: "Sandeep Kumar",
+    role: "",
+    content:
+    "My experience with ACCOLADES has been very positive. The team is professional, supportive, and clear in their communication. Processes are smooth, and they genuinely follow up and deliver as promised. It’s reassuring to work with a company that values transparency and professionalism. Highly recommended.",
+    avatar: user,
+    bgColor: "bg-pink-100",
+    quoteColor: "text-pink-300",
+  },
+
+  // {
+  //   id: 47,
   //   name: "",
   //   role: "",
   //   content:
   //   "",
   //   avatar: user,
-  //   bgColor: "bg-purple-100",
-  //   quoteColor: "text-purple-300",
+  //   bgColor: "bg-pink-100",
+  //   quoteColor: "text-pink-300",
   // },
+  // {
+  //   id: 47,
+  //   name: "",
+  //   role: "",
+  //   content:
+  //   "",
+  //   avatar: user,
+  //   bgColor: "bg-pink-100",
+  //   quoteColor: "text-pink-300",
+  // },
+
 
 ]
 const testimonials2 = [

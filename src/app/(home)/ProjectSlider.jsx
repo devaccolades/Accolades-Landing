@@ -38,6 +38,12 @@ import p25 from "../../../public/home/posters/4.jpg";
 import p26 from "../../../public/home/posters/Untitled-1.jpg";
 import p27 from "../../../public/about-us/family.jpg";
 import p28 from "../../../public/home/posters/p28.jpeg";
+import p29 from "../../../public/home/posters/CADBIM.webp";
+import p30 from "../../../public/home/posters/CIDBI.webp";
+import p31 from "../../../public/home/posters/RYAN.webp";
+import p32 from "../../../public/home/posters/TJP.webp";
+import p33 from "../../../public/home/posters/CLASSIC.webp";
+
 
 
 const fallbackImages = [
@@ -69,6 +75,11 @@ const fallbackImages = [
   { id: 25, src: p26, alt: "Poster 14" },
   { id: 26, src: p27, alt: "Poster 15" },
   { id: 27, src: p28, alt: "Project 16" },
+  { id: 28, src: p29, alt: "Poster 12" },
+  { id: 29, src: p30, alt: "Poster 13" },
+  { id: 30, src: p31, alt: "Poster 14" },
+  { id: 31, src: p32, alt: "Poster 15" },
+  { id: 32, src: p33, alt: "Project 16" },
 ];
 const ProjectSlider = ({ images = fallbackImages }) => {
   const sliderKey = useMemo(() => {

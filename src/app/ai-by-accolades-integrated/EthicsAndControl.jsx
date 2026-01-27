@@ -35,7 +35,7 @@ const ethicsData = [
 
 export default function EthicsAndControl() {
     return (
-        <section className="w-full py-16 bg-[#F9F9F9] font-mont rounded-[30px]">
+        <section className="relative w-full py-16 bg-[#F9F9F9] font-mont rounded-[30px]">
 
             {/* Header */}
             <div className="text-center max-w-3xl mx-auto mb-4">

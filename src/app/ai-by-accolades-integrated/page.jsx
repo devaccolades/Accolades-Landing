@@ -5,6 +5,9 @@ import HowWeUseAI from './HowWeUseAI'
 import BenefitsForClients from './BenefitsOfClients'
 import OurProcess from './OurProcess'
 import EthicsAndControl from './EthicsAndControl'
+import AiCtaSection from './AiCtaSection'
+import Footer from '@/component/Footer'
+
 
 function page() {
   return (
@@ -15,6 +18,10 @@ function page() {
       <BenefitsForClients /> 
       <OurProcess />
       <EthicsAndControl />
+      <AiCtaSection />
+     <div className="-mt-[88px]">
+        <Footer />
+      </div>
     </div>
   )
 }

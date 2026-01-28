@@ -9,8 +9,8 @@ export default function Benefits() {
     return (
         <div className='containers'>
             <div className='flex flex-col justify-center items-center'>
-            <h1 className='font-urban font-bold lg:text-[20px] leading-[16px] text-[#000000]'>CORE BENEFITS</h1>
-            <p className='font-urban font-semibold lg:text-[16px] text-[14px] text-[#000000]'>Integration isn't just theory. Here's what it means for your business.</p>
+            <h1 className='font-urbanist font-bold lg:text-[20px] leading-[16px] text-[#000000]'>CORE BENEFITS</h1>
+            <p className='font-urbanist font-semibold lg:text-[16px] text-[14px] text-[#000000]'>Integration isn't just theory. Here's what it means for your business.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
 
@@ -19,7 +19,7 @@ export default function Benefits() {
                     <div className="md:mb-4 mb-2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-[10px] bg-[#F75000]">
                         <Image src={target} alt="target" />
                     </div>
-                    <h3 className="font-urban font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
+                    <h3 className="font-urbanist font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
                         One Strategy
                     </h3>
                     <p className="font-poppins font-normal text-[12px] md:text-[14px] text-[#484848] leading-[156%] ">
@@ -32,7 +32,7 @@ export default function Benefits() {
                     <div className="md:mb-4 mb-2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-[10px] bg-[#009C8E]">
                         <Image src={rocket} alt="rocket" />
                     </div>
-                    <h3 className="font-urban font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
+                    <h3 className="font-urbanist font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
                         Faster Launches
                     </h3>
                     <p className="font-poppins font-normal text-[12px] md:text-[14px] text-[#484848] leading-[156%]">
@@ -45,7 +45,7 @@ export default function Benefits() {
                     <div className="md:mb-4 mb-2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-[10px] bg-[#9B1EFC]">
                         <Image src={sound} alt="sound" />
                     </div>
-                    <h3 className="font-urban font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
+                    <h3 className="font-urbanist font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
                         Consistent Brand
                     </h3>
                     <p className="font-poppins font-normal text-[12px] md:text-[14px] text-[#484848] leading-[156%]">
@@ -57,7 +57,7 @@ export default function Benefits() {
                     <div className="md:mb-4 mb-2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-[10px] bg-[#277AFF]">
                         <Image src={increase} alt="increase" />
                     </div>
-                    <h3 className="font-urban font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
+                    <h3 className="font-urbanist font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
                         Better ROI
                     </h3>
                     <p className="font-poppins font-normal text-[12px] md:text-[14px] text-[#484848] leading-[156%]">

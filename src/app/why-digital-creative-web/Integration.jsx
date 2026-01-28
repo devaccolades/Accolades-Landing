@@ -18,11 +18,11 @@ export default function Integration() {
             <div className="containers text-center">
 
                 {/* ---------- Heading ---------- */}
-                <h2 className="font-urban font-bold lg:text-[20px] leading-[16px] text-[#000000]">
+                <h2 className="font-urbanist font-bold lg:text-[20px] leading-[16px] text-[#000000]">
                     What this looks like in work
                 </h2>
 
-                <p className="mt-2 font-urban font-semibold lg:text-[16px] leading-[120%] text-[#000000]">
+                <p className="mt-2 font-urbanist font-semibold lg:text-[16px] leading-[120%] text-[#000000]">
                     Real examples of how integration creates better outcomes.
                 </p>
 
@@ -35,7 +35,7 @@ export default function Integration() {
                             <Image src={file} alt='file' />
                         </div>
                         <div>
-                            <h3 className="font-urban font-semibold lg:text-[18px] text-[#000000]">
+                            <h3 className="font-urbanist font-semibold lg:text-[18px] text-[#000000]">
                                 Campaign Brief Flows Into Design and Code
                             </h3>
                             <p className="font-poppins font-normal text-[14px] leading-[120%] text-[#484848] mt-1">
@@ -52,7 +52,7 @@ export default function Integration() {
                             <Image src={pointer} alt='pointer' />
                         </div>
                         <div>
-                            <h3 className="font-urban font-semibold lg:text-[18px] text-[#000000]">
+                            <h3 className="font-urbanist font-semibold lg:text-[18px] text-[#000000]">
                                 Ads Point to Pages Built to Convert
                             </h3>
                             <p className="font-poppins font-normal text-[14px] leading-[120%] text-[#484848] mt-1">
@@ -69,7 +69,7 @@ export default function Integration() {
                             <Image src={message} alt='message' />
                         </div>
                         <div>
-                            <h3 className="font-urban font-semibold lg:text-[18px] text-[#000000]">
+                            <h3 className="font-urbanist font-semibold lg:text-[18px] text-[#000000]">
                                 Creative and SEO Use the Same Keywords and Tone
                             </h3>
                             <p className="font-poppins font-normal text-[14px] leading-[120%] text-[#484848] mt-1">

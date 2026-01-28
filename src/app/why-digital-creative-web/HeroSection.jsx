@@ -32,19 +32,19 @@ export default function HeroSection() {
                 <div className="containers py-8 md:py-12 lg:py-16">
 
                     {/* Tag */}
-                    <span className="inline-block mb-2 md:mb-4 rounded-full px-4 py-[6px] md:py-2 font-urban font-extrabold lg:text-[16px] md:text-[14px] text-[12px] leading-[13px] text-[#484848] bg-gradient-to-r from-[#FDEDD6] via-[#CDFBF0] to-[#F1E8FE]
+                    <span className="inline-block mb-2 md:mb-4 rounded-full px-4 py-[6px] md:py-2 font-urbanist font-extrabold lg:text-[16px] md:text-[14px] text-[12px] leading-[13px] text-[#484848] bg-gradient-to-r from-[#FDEDD6] via-[#CDFBF0] to-[#F1E8FE]
 ">
                         Why Digital • Creative • Web
                     </span>
 
 
                     {/* Subheading */}
-                    <p className="font-urban font-semibold xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] xl:leading-[18px] lg:leading-[16px] md:leading-[14px] leading-[12px] text-[#FFFFFF] mb-2 md:mb-3">
+                    <p className="font-urbanist font-semibold xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] xl:leading-[18px] lg:leading-[16px] md:leading-[14px] leading-[12px] text-[#FFFFFF] mb-2 md:mb-3">
                         Three pillars. One clear path to growth.
                     </p>
 
                     {/* Main Heading */}
-                    <h1 className="font-mont font-bold  text-white uppercase
+                    <h1 className="font-urbanist font-bold  text-white uppercase
                          text-[30px] md:text-[36px] lg:text-[42px] xl:text-[48px] leading-[32px] md:leading-[36px] lg:leading-[42px] xl:leading-[48px] md:w-[75%] lg:w-[80%] xl:w-[50%]">
                         When strategy, design, and web work as one,
                         brands win.

@@ -19,7 +19,7 @@ export default function Roles() {
                         <div className="md:mb-4 mb-2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-[10px] bg-[#F75000]">
                             <Image src={bulb} alt="Digital" />
                         </div>
-                        <h3 className="font-urban font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
+                        <h3 className="font-urbanist font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
                             Digital
                         </h3>
                         <p className="font-poppins font-normal text-[12px] md:text-[14px] text-[#484848] leading-[156%] ">
@@ -32,7 +32,7 @@ export default function Roles() {
                         <div className="md:mb-4 mb-2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-[10px] bg-[#009C8E]">
                             <Image src={color} alt="Creative" />
                         </div>
-                        <h3 className="font-urban font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
+                        <h3 className="font-urbanist font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
                             Creative
                         </h3>
                         <p className="font-poppins font-normal text-[12px] md:text-[14px] text-[#484848] leading-[156%]">
@@ -45,7 +45,7 @@ export default function Roles() {
                         <div className="md:mb-4 mb-2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-[10px] bg-[#9B1EFC]">
                             <Image src={forward} alt="Web" />
                         </div>
-                        <h3 className="font-urban font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
+                        <h3 className="font-urbanist font-semibold xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[24px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
                             Web
                         </h3>
                         <p className="font-poppins font-normal text-[12px] md:text-[14px] text-[#484848] leading-[156%]">
@@ -71,7 +71,7 @@ export default function Roles() {
                     </p>
 
                     {/* Main paragraph */}
-                    <p className="font-urban font-semibold lg:text-[16px] md:text-[14px] text-[12px] leading-[156%] text-[#000000] w-[45%] mb-4">
+                    <p className="font-urbanist font-semibold lg:text-[16px] md:text-[14px] text-[12px] leading-[156%] text-[#000000] w-[45%] mb-4">
                         Many firms split these roles. That causes drift and slow delivery.
                         We keep them close. This yields a clear voice and fast results.
                     </p>
@@ -85,7 +85,7 @@ export default function Roles() {
                             <div className=" flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-[10px] bg-[#00C950]">
                                 <Image src={power} alt="power" />
                             </div>
-                            <h3 className="font-urban font-semibold xl:text-[20px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[20px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
+                            <h3 className="font-urbanist font-semibold xl:text-[20px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[20px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
                                 Integrated Approach
                             </h3>
                         </div>
@@ -102,7 +102,7 @@ export default function Roles() {
                             <div className=" flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-[10px] bg-[#FB2C36]">
                                 <Image src={alert} alt="alert" />
                             </div>
-                            <h3 className="font-urban font-semibold xl:text-[20px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[20px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
+                            <h3 className="font-urbanist font-semibold xl:text-[20px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[20px] lg:leading-[20px] md:leading-[18px] leading-[16px] mb-2 text-[#000000]">
                                 Seperated Themes
                             </h3>
                         </div>

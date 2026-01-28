@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+
 
 export default function AiCtaSection() {
   return (
@@ -9,7 +11,7 @@ export default function AiCtaSection() {
       {/* Top pill */}
       <div className="flex justify-center mb-6">
         <span className="flex items-center gap-2 rounded-full border border-white/40 bg-white/20 px-4 py-1 text-xs text-white backdrop-blur">
-          <span className="text-sm">⚡</span>
+          <Image src="/ai-by/spark-w.svg" width={16} height={16} alt="" />
           See AI in Action
         </span>
       </div>
@@ -27,13 +29,44 @@ export default function AiCtaSection() {
 
         {/* Buttons */}
         <div className="flex flex-row justify-center gap-3 mb-10">
-          <button className="rounded-lg bg-[#0F6D6D] px-6 py-2 text-[14px] lg:text-[16px] leading-[100%] font-bold text-white hover:bg-[#0b5a5a] transition">
-            Request Free Audit
-          </button>
+          <Link href="/contact-us">
+            <button className="group flex items-center gap-2 rounded-lg border border-[#0C7379] px-2 md:px-6 py-2 text-[13px] lg:text-[16px] leading-[100%] font-bold text-[#0C7379] hover:text-white hover:bg-[#0F6D6D] transition">
+              Request Free Audit
+              <span className="text-[18px] leading-none transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                ↗
+              </span>
+            </button>
+          </Link>
 
-          <button className="rounded-lg border border-white/60 px-6 py-2 text-[14px] lg:text-[16px] leading-[100%] font-bold text-white hover:bg-white/10 transition">
-            Book a Demo
-          </button>
+          <a
+            href="https://wa.me/919048100233"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="group flex flex-row items-center gap-1 rounded-lg border border-[#0C7379] px-2 md:px-6 py-2 text-[13px] lg:text-[16px] leading-[100%] font-bold text-[#0C7379] hover:text-white hover:bg-[#0F6D6D] transition">
+
+              {/* Default icon */}
+              <Image
+                src="/ai-by/spark-t.svg"
+                width={16}
+                height={16}
+                alt="spark"
+                className="block group-hover:hidden"
+              />
+
+              {/* Hover icon */}
+              <Image
+                src="/ai-by/spark-w.svg"
+                width={16}
+                height={16}
+                alt="spark"
+                className="hidden group-hover:block"
+              />
+
+              Book a Demo
+            </button>
+          </a>
+
         </div>
 
         {/* Stats */}
@@ -51,7 +84,7 @@ export default function AiCtaSection() {
 function Stat({ value, label }) {
   return (
     <div className="text-center">
-      <div className="text-[#0F6D6D] text-[22px] md:text-[26px] font-bold">
+      <div className="text-[#0F6D6D] text-[22px] md:text-[26px] font-semibold">
         {value}
       </div>
       <div className="text-black text-xs md:text-sm">

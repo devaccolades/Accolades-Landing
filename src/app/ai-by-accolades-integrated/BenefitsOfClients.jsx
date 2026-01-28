@@ -47,16 +47,16 @@ export default function BenefitsForClients() {
       </div>
 
       {/* Pills */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-5xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-4 max-w-5xl mx-auto">
         {benefitsData.map((item, index) => {
           const Icon = item.icon;
 
           return (
             <div
               key={index}
-              className={`flex items-center gap-3 rounded-full px-5 py-3 border ${item.border} ${item.bg}`}
+              className={`flex items-start gap-1 md:gap-3 rounded-[20px] px-3 md:px-5 py-3 border ${item.border} ${item.bg}`}
             >
-              <div className="w-8 h-8 flex items-center justify-center rounded-[10px] bg-white">
+              <div className="w-16 md:w-8 h-8 flex items-center justify-center rounded-[10px] bg-white">
                 <Icon className={item.iconColor} size={16} />
               </div>
 

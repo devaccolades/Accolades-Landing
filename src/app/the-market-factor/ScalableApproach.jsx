@@ -5,7 +5,7 @@ export default function ScalableApproachSection() {
   return (
     <section className=" font-mont">
       <div className="containers py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-4 md:gap-10 items-center">
 
           {/* Left Content Card */}
           <div className="border border-[#C9B6FF] rounded-[20px] p-6 md:p-8 max-w-xl">
@@ -18,7 +18,7 @@ export default function ScalableApproachSection() {
               />
             </div>
 
-            <h3 className="text-[18px] md:text-[10px] lg:text-[24px] leading-[24px] font-bold mb-3">
+            <h3 className="text-[18px] md:text-[20px] lg:text-[24px] leading-[24px] font-bold mb-3">
               Scalable Approach
             </h3>
 

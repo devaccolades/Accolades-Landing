@@ -71,22 +71,7 @@ export default function HeroSection() {
 
 
         </div>
-        {/* RIGHT FEATURES – pinned to top-right */}
-        {/* <div className="absolute bottom-4 right-1 z-30 px-6">
-          <div className="space-y-3">
-            {["Machine Learning", "Data Analysis", "Automation", "Optimization"].map(
-              (item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[13px] md:text-[14px] lg:text-[16px] font-semibold text-white backdrop-blur"
-                >
-                  <Image src="/ai-by/spark-t.svg" width={16} height={16} alt="spark" />
-                  {item}
-                </div>
-              )
-            )}
-          </div>
-        </div> */}
+       
         {/* RIGHT FEATURES – pinned bottom-right */}
 <div className="absolute bottom-1 md:bottom-6 right-0 md:right-6 z-30">
   <div className="flex flex-col items-center space-y-2">

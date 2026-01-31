@@ -103,17 +103,17 @@ export default function HowWeWork() {
                                     </div>
 
                                     {/* Mobile arrow */}
-                                    <div className="my-10 md:hidden">
+                                    <div className="my-4 md:hidden">
                                         <Image
-                                            src="/new-seo/arrow-right.svg"
+                                            src="/purpose/down.svg"
                                             alt=""
-                                            width={40}
-                                            height={40}
-                                            className="rotate-90"
+                                            width={18}
+                                            height={18}
+                                    
                                         />
                                     </div>
                                 </>
-                            )}
+                             )}
                         </div>
                     ))}
 

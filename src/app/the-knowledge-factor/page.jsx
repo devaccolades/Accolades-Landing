@@ -29,9 +29,9 @@ export default function page() {
                 <Process />
                 <EcommerceFaq faqData={faqData} title={"Frequently Asked Questions"} subtitle={"Quick answers about our experience and approach"} />
                 <Callback />
-                {/* <div className="-mt-[80px]">
+                <div className="-mt-[80px]">
                     <Footer />
-                </div> */}
+                </div>
             </div>
         </>
     )

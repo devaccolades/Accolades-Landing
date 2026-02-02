@@ -1,7 +1,7 @@
 const HeroSection = () => {
     return (
         <section
-            className="relative w-full overflow-hidden rounded-b-[2 8px] md:rounded-b-[48px]"
+            className="relative w-full overflow-hidden rounded-b-[28px] md:rounded-b-[48px]"
             style={{
                 background:
                     "linear-gradient(180deg, #FFFFFF 44.23%, #0F9EA8 100%)",

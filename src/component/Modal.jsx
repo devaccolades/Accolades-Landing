@@ -1,154 +1,160 @@
 "use client";
 import { useState } from "react";
 import ModalForm from "./ModalForm";
-// import { BASE_URL, getModalVideo } from "@/app/Server";
+import { BASE_URL } from "@/app/Server";
 
 export default function Modal({ isOpen, onClose, data }) {
   // console.log("Modal isOpen:", isOpen);
   if (!isOpen) return null;
 
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [message, setMessage] = useState('')
+  const [errors, setErrors] = useState({})
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // console.log("Form submitted with:", { name, phone, message });
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
-    if (!name || !phone || !message) {
-      alert("Please fill out all fields.");
-      return;
+    const newErrors = {}
+
+    // Name validation (no numbers)
+    if (!name.trim()) {
+      newErrors.name = 'Name is required'
+    } else if (!/^[A-Za-z\s]+$/.test(name)) {
+      newErrors.name = 'Name cannot contain numbers'
     }
 
-    //server issue fixed later
-    // try {
-    //   const res = await fetch(`${BASE_URL}/api/form-submissions`, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       data: {
-    //         name,
-    //         phone,
-    //         message,
-    //       },
-    //     }),
-    //   });
+    // Phone validation (10 digits only)
+    if (!phone.trim()) {
+      newErrors.phone = 'Phone number is required'
+    } else if (!/^\d{10}$/.test(phone)) {
+      newErrors.phone = 'Phone number must be exactly 10 digits'
+    }
 
-    //   const result = await res.json();
-    //   // console.log("Form submission result:", result);
+    setErrors(newErrors)
 
-    //   if (!res.ok) {
-    //     alert("Submission failed. Please try again.");
-    //     return;
-    //   }
+    if (Object.keys(newErrors).length === 0) {
+      // ✅ Submit logic here
+      console.log({ name, phone, message })
+    }
+  }
 
-    //   // ✅ Clear fields
-    //   setName("");
-    //   setPhone("");
-    //   setMessage("");
-
-    //   // ✅ Close modal
-    //   onClose();
-    // } catch (error) {
-    //   console.error("Error submitting form:", error);
-    //   alert("Something went wrong. Please try again.");
-    // }
-    //server issue fixed later
-  };
 
   return (
     <div
-      className="fixed inset-0 bg-black/50 bg-opacity-50 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 "
       onClick={onClose}
     >
       <div
-        className="w-[80%] h-[90%] md:h-[420px] md:w-[70%] xl:w-[50%] 2xl:w-[30%] bg-white flex flex-col md:flex-row justify-between"
+        className="w-[80%] h-fit md:h-[500px] lg:h-[600px] xl:h-[750px] md:w-[80%] xl:w-[60%]
+               bg-white flex flex-col md:flex-row rounded-md overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="overflow-hidden h-[80%] w-full md:h-[404px] flex justify-start">
+
+        {/* LEFT – Video (50%) */}
+        <div className="w-full md:w-1/2 h-[200px] md:h-full overflow-hidden hidden md:flex">
           <video
-            src={BASE_URL + data.modalVideo.url}
-            className="w-full h-full rounded-lg mb-4"
+            src={BASE_URL + data?.modalVideo.url}
+            className="w-full h-full object-cover"
             autoPlay
             loop
-            poster={BASE_URL + data.poster.url}
-          ></video>
+            muted
+            poster={BASE_URL + data?.poster.url}
+          />
         </div>
-        <div className="">
+
+        {/* RIGHT – Form (50%) */}
+        <div className="w-full h-full md:w-1/2 flex items-center justify-center">
           <form
             onSubmit={handleSubmit}
-            className="bg-white p-6 rounded-lg  max-w-md w-full space-y-4 md:min-w-[300px] lg:min-w-[460px]"
+            noValidate
+            className="md:p-6 p-4 w-full space-y-2 md:scroll-py-3"
           >
-            {/* Name */}
+            {/* Form Heading */}
+            <div className="mb-4">
+              <h2 className="xl:text-[30px] md:text-[20px] text-[14px] font-bold text-center font-mont">
+                Contact <span className="text-teal-600">Us</span> 
+              </h2>
+              <p className="text-[11px] md:text-[12px] lg:text-[14px] font-poppins text-center mt-1">
+                Submit your queries here. we will listen.
+              </p>
+            </div>
+
             <div>
               <label
                 htmlFor="name"
-                className="hidden md:block text-sm font-medium text-gray-700"
+                className="block mb-1 text-[12px] md:text-[14px] font-mont text-gray-700"
               >
                 Name
               </label>
               <input
-                type="text"
                 id="name"
-                name="name"
-                onChange={(e) => setName(e.target.value)}
-                required
+                type="text"
                 placeholder="Your name"
-                className="mt-1 block w-full rounded-md border border-gray-300 p-2 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                value={name}
+                onChange={(e) =>
+                  setName(e.target.value.replace(/[^A-Za-z\s]/g, ''))
+                }
+                className="w-full border rounded-md p-2 font-mont text-[12px] md:text-[14px]"
               />
+              {errors.name && (
+                <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+              )}
             </div>
 
-            {/* Phone */}
+
             <div>
               <label
                 htmlFor="phone"
-                className="hidden md:block text-sm font-medium text-gray-700"
+                className="block mb-1 text-[12px] md:text-[14px] font-mont text-gray-700"
               >
                 Phone
               </label>
               <input
-                type="tel"
                 id="phone"
-                name="phone"
-                onChange={(e) => setPhone(e.target.value)}
-                required
+                type="tel"
                 placeholder="Your phone number"
-                className="mt-1 block w-full rounded-md border border-gray-300 p-2 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                value={phone}
+                onChange={(e) =>
+                  setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))
+                }
+                className="w-full border rounded-md p-2 font-mont text-[12px] md:text-[14px]"
               />
+              {errors.phone && (
+                <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+              )}
             </div>
 
-            {/* Message */}
+
             <div>
               <label
                 htmlFor="message"
-                className="hidden md:block text-sm font-medium text-gray-700"
+                className="block mb-1 text-[12px] md:text-[14px] font-mont text-gray-700"
               >
-                Message
+                Message <span className="text-gray-400">(optional)</span>
               </label>
               <textarea
                 id="message"
-                name="message"
-                onChange={(e) => setMessage(e.target.value)}
                 rows="4"
-                required
                 placeholder="Your message"
-                className="mt-1 block w-full rounded-md border border-gray-300 p-2 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="w-full border rounded-md p-2 font-mont text-[12px] md:text-[14px]"
               />
             </div>
 
-            {/* Submit */}
+
             <button
-              onClick={() => console.log("Button clicked")}
               type="submit"
-              className="w-full bg-teal-600 text-white py-2 px-4 rounded-md hover:bg-teal-700 transition cursor-pointer"
+              className="w-full bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700 font-mont text-[12px] md:text-[14px]"
             >
               Submit
             </button>
           </form>
         </div>
+
       </div>
     </div>
+
   );
 }

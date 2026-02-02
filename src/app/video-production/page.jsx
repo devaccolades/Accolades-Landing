@@ -30,7 +30,7 @@ async function page() {
   const featured = await getFeaturedParteners();
   const client = await getWhatOurClientSays();
   const modal = await getModalVideo();
-  // console.log("modal", video);
+  console.log("modal", video);
 
   return (
     <>

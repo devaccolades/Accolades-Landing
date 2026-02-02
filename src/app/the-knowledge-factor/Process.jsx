@@ -6,21 +6,21 @@ const steps = [
         title: "Learn from data and past work.",
         description:
             "We analyze your market, competitors, and historical performance to extract actionable insights.",
-        icon: "/process/p1.svg",
+        icon: "/knowledge/p1.svg",
     },
     {
         id: 2,
         title: "Build a local plan from those lessons.",
         description:
             "We create a customized strategy tailored to Kochi market dynamics and your business goals.",
-        icon: "/process/p2.svg",
+        icon: "/knowledge/p2.svg",
     },
     {
         id: 3,
         title: "Run tests, then scale the wins.",
         description:
             "Small experiments validate our approach before we commit resources to full-scale campaigns.",
-        icon: "/process/p3.svg",
+        icon: "/knowledge/p3.svg",
     },
 ];
 

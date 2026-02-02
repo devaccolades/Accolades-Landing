@@ -13,8 +13,6 @@ function Header({ data }) {
     setIsOpen(true);
   };
 
-  console.log('rre',data);
-  
   return (
     <motion.header
       initial={{ opacity: 0, y: -30 }}

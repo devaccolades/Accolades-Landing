@@ -37,7 +37,7 @@ const HeroSection = () => {
                         alt="WhatsApp"
                         width={100}
                         height={100}
-                        className='w-52 h-fit'
+                        className='w-40 lg:w-52 h-fit'
                     />
                 </a>
 

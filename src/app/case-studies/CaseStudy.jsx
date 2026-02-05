@@ -10,101 +10,101 @@ import logo3 from "../../../public/case-study/d07fe78c0f33cf25c81c43774465b9291d
 import logo4 from "../../../public/case-study/d07fe78c0f33cf25c81c43774465b9291d8b1fdc.png";
 import Image from "next/image";
 
-const caseStudies = [
-  {
-    no: 1,
-    cover: cover1,
-    category: "Real Estate",
-    title: "National Builders",
-    description:
-      "We were brought on board to enhance National Builder’s online presence to address the challenges.",
-    logo: logo1,
-  },
-  {
-    no: 2,
-    cover: cover2,
-    category: "Interiors",
-    title: "RAK Interior",
-    description:
-      "RAK Interiors started its journey in 2011. They wanted to create brand awareness in the market.",
-    logo: logo2,
-  },
-  {
-    no: 3,
-    cover: cover3,
-    category: "Film Industry",
-    title: "Movie Marketing Case Study",
-    description:
-      "Combining various Google Ads formats can create a cohesive and comprehensive marketing strategy.",
-    logo: null,
-  },
-  {
-    no: 4,
-    cover: cover4,
-    category: "Real Estate",
-    title: "CIDBI Thrissur",
-    description:
-      "CIDBI needed a strong digital transformation partner to elevate brand presence.",
-    logo: logo4,
-  },
-  {
-    no: 5,
-    cover: cover2,
-    category: "Interiors",
-    title: "RAK Interior",
-    description:
-      "RAK Interiors started its journey in 2011. They wanted to create brand awareness in the market.",
-    logo: logo2,
-  },
-  {
-    no: 6,
+// const caseStudies = [
+//   {
+//     no: 1,
+//     cover: cover1,
+//     category: "Real Estate",
+//     title: "National Builders",
+//     description:
+//       "We were brought on board to enhance National Builder’s online presence to address the challenges.",
+//     logo: logo1,
+//   },
+//   {
+//     no: 2,
+//     cover: cover2,
+//     category: "Interiors",
+//     title: "RAK Interior",
+//     description:
+//       "RAK Interiors started its journey in 2011. They wanted to create brand awareness in the market.",
+//     logo: logo2,
+//   },
+//   {
+//     no: 3,
+//     cover: cover3,
+//     category: "Film Industry",
+//     title: "Movie Marketing Case Study",
+//     description:
+//       "Combining various Google Ads formats can create a cohesive and comprehensive marketing strategy.",
+//     logo: null,
+//   },
+//   {
+//     no: 4,
+//     cover: cover4,
+//     category: "Real Estate",
+//     title: "CIDBI Thrissur",
+//     description:
+//       "CIDBI needed a strong digital transformation partner to elevate brand presence.",
+//     logo: logo4,
+//   },
+//   {
+//     no: 5,
+//     cover: cover2,
+//     category: "Interiors",
+//     title: "RAK Interior",
+//     description:
+//       "RAK Interiors started its journey in 2011. They wanted to create brand awareness in the market.",
+//     logo: logo2,
+//   },
+//   {
+//     no: 6,
 
-    cover: cover3,
-    category: "Film Industry",
-    title: "Movie Marketing Case Study",
-    description:
-      "Combining various Google Ads formats can create a cohesive and comprehensive marketing strategy.",
-    logo: null,
-  },
-  {
-    no: 7,
-    cover: cover4,
-    category: "Real Estate",
-    title: "CIDBI Thrissur",
-    description:
-      "CIDBI needed a strong digital transformation partner to elevate brand presence.",
-    logo: logo4,
-  },
-  {
-    no: 8,
-    cover: cover2,
-    category: "Interiors",
-    title: "RAK Interior",
-    description:
-      "RAK Interiors started its journey in 2011. They wanted to create brand awareness in the market.",
-    logo: logo2,
-  },
-  {
-    no: 9,
-    cover: cover3,
-    category: "Film Industry",
-    title: "Movie Marketing Case Study",
-    description:
-      "Combining various Google Ads formats can create a cohesive and comprehensive marketing strategy.",
-    logo: null,
-  },
-  {
-    no: 10,
-    cover: cover4,
-    category: "Real Estate",
-    title: "CIDBI Thrissur",
-    description:
-      "CIDBI needed a strong digital transformation partner to elevate brand presence.",
-    logo: logo4,
-  },
-];
+//     cover: cover3,
+//     category: "Film Industry",
+//     title: "Movie Marketing Case Study",
+//     description:
+//       "Combining various Google Ads formats can create a cohesive and comprehensive marketing strategy.",
+//     logo: null,
+//   },
+//   {
+//     no: 7,
+//     cover: cover4,
+//     category: "Real Estate",
+//     title: "CIDBI Thrissur",
+//     description:
+//       "CIDBI needed a strong digital transformation partner to elevate brand presence.",
+//     logo: logo4,
+//   },
+//   {
+//     no: 8,
+//     cover: cover2,
+//     category: "Interiors",
+//     title: "RAK Interior",
+//     description:
+//       "RAK Interiors started its journey in 2011. They wanted to create brand awareness in the market.",
+//     logo: logo2,
+//   },
+//   {
+//     no: 9,
+//     cover: cover3,
+//     category: "Film Industry",
+//     title: "Movie Marketing Case Study",
+//     description:
+//       "Combining various Google Ads formats can create a cohesive and comprehensive marketing strategy.",
+//     logo: null,
+//   },
+//   {
+//     no: 10,
+//     cover: cover4,
+//     category: "Real Estate",
+//     title: "CIDBI Thrissur",
+//     description:
+//       "CIDBI needed a strong digital transformation partner to elevate brand presence.",
+//     logo: logo4,
+//   },
+// ];
 
-const CaseStudy = () => {
+const CaseStudy = ({ data }) => {
   const [{ initial, loadMore }, setCounts] = useState({
     initial: 4,
     loadMore: 4,
@@ -126,6 +126,8 @@ const CaseStudy = () => {
     window.addEventListener("resize", updateCounts);
     return () => window.removeEventListener("resize", updateCounts);
   }, []);
+
+  const caseStudies = data;
 
   const getCounts = () => {
     if (typeof window === "undefined") {
@@ -159,6 +161,8 @@ const CaseStudy = () => {
       }, 100);
     }, 300);
   };
+
+  console.log(data, "compoenent test");
 
   return (
     <>
@@ -199,10 +203,11 @@ const CaseStudyCard = ({
   cover,
   category,
   title,
-  subtitle,
+  no,
   description,
   logo,
   index,
+  attachment,
 }) => {
   return (
     <>
@@ -233,18 +238,20 @@ const CaseStudyCard = ({
 
           {/* Content (stretching) */}
           <div className="pt-2 flex flex-col flex-1">
-            <p className="text-black text-[16px] leading-[156%] mb-2">01</p>
+            <p className="text-black text-[16px] leading-[156%] mb-2">
+              {no > 9 ? { no } : `0${no}`}
+            </p>
 
             {/* Logo row – reserve height even if logo missing */}
             <div className="flex items-center gap-2 mb-2 min-h-[64px]">
               {logo && (
-                <div className="w-[64px] flex items-center justify-center">
+                <div className="h-[100px] w-[200px] flex items-center justify-center">
                   <Image
                     src={logo}
                     alt="logo"
-                    width={60}
-                    height={60}
-                    className="object-contain"
+                    width={100}
+                    height={100}
+                    className="object-contain w-[200px]"
                   />
                 </div>
               )}
@@ -258,11 +265,19 @@ const CaseStudyCard = ({
             </div>
 
             {/* Button pinned */}
-            <div className="flex justify-center items-center mt-auto pt-3">
-              <button className="text-[13px] font-normal text-black flex items-center gap-1 cursor-pointer transition-all duration-300 group-hover:text-teal-700 group-hover:font-bold">
-                Download Case Study
-                <span className="text-[23px] leading-none">↓</span>
-              </button>
+            <div className=" flex justify-center items-center mt-auto py-2">
+              {attachment && (
+                <a
+                  href={attachment}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  className="text-[13px] font-normal text-black flex items-center gap-1 cursor-pointer transition-all duration-300 group-hover:text-teal-700 group-hover:font-bold"
+                >
+                  Download Case Study
+                  <span className="text-[23px] leading-none">↓</span>
+                </a>
+              )}
             </div>
           </div>
         </div>

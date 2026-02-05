@@ -1,18 +1,19 @@
-import React from 'react'
-import CallToAction from './CallToAction'
-import HeroSection from './HeroSection'
-import CaseStudy from './CaseStudy'
-import Footer from '@/component/Footer'
+import React from "react";
+import CallToAction from "./CallToAction";
+import HeroSection from "./HeroSection";
+import CaseStudy from "./CaseStudy";
+import Footer from "@/component/Footer";
+import { getCaseStudiesData } from "@/lib/services/djangoBackend";
 
-const page = () => {
-    return (
-        <>
-            <HeroSection />
-            <CaseStudy />
-            <CallToAction />
-            <Footer />
-        </>
-    )
+export default async function Page() {
+  const data = await getCaseStudiesData();
+
+  return (
+    <>
+      <HeroSection />
+      <CaseStudy data={data} />
+      <CallToAction />
+      <Footer />
+    </>
+  );
 }
-
-export default page

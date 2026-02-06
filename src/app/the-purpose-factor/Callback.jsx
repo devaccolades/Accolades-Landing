@@ -24,7 +24,7 @@ export default function Callback() {
             Start with a short workshop that reveals what makes your brand truly matter.
           </p>
 
-          <button className="mt-6 inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-900">
+          <button className="mt-6 inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-900 cursor-pointer">
             Get a Call Back <span aria-hidden>↗</span>
           </button>
 

@@ -9,6 +9,20 @@ import AiCtaSection from './AiCtaSection'
 import Footer from '@/component/Footer'
 
 
+
+export async function generateMetadata() {
+  return {
+    title: "AI By Accolades Integrated ",
+    description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow. ",
+
+    openGraph: {
+      title: " AI By Accolades Integrated ",
+      description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
+     
+    },
+  };
+}
+
 function page() {
   return (
     <div>

@@ -8,6 +8,19 @@ import ExampleOutcomesSection from './ExampleOutcomes'
 import CtaSection from './CTASection'
 import Footer from '@/component/Footer'
 
+export async function generateMetadata() {
+  return {
+    title: " The Market Factor | Accolades Integrated ",
+    description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow. ",
+
+    openGraph: {
+      title: "The Market Factor |  Accolades Integrated ",
+      description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
+     
+    },
+  };
+}
+
 function page() {
   return (
     <div>

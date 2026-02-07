@@ -29,14 +29,16 @@ export default function AiCtaSection() {
 
         {/* Buttons */}
         <div className="flex flex-row justify-center gap-3 mb-10">
-          <Link href="/contact-us">
+           <a
+              href="tel:+919048100233"
+            >
             <button className="group flex items-center gap-2 rounded-lg border border-[#0C7379] px-2 md:px-6 py-2 text-[13px] lg:text-[16px] leading-[100%] font-bold text-[#0C7379] hover:text-white hover:bg-[#0F6D6D] transition">
               Request Free Audit
               <span className="text-[18px] leading-none transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                 ↗
               </span>
             </button>
-          </Link>
+          </a>
 
           <a
             href="https://wa.me/919048100233"

@@ -64,37 +64,27 @@ export default function HeroSection() {
               ACTION.
             </h1>
 
-            <button className="mt-3 w-fit rounded-[10px] bg-[#0C7379] px-[16px] py-[10px] text-sm md:text-[16px] leading-[16px] font-semibold text-white transition hover:bg-teal-400">
-              Get Free Audit  ↗
-            </button>
+            <a
+              href="tel:+919048100233"
+            >
+              <button className="mt-3 w-fit rounded-[10px] bg-[#0C7379] px-[16px] py-[10px] text-sm md:text-[16px] leading-[16px] font-semibold text-white transition hover:bg-teal-400">
+                Get Free Audit  ↗
+              </button>
+            </a>
           </div>
 
 
+
         </div>
-        {/* RIGHT FEATURES – pinned to top-right */}
-        {/* <div className="absolute bottom-4 right-1 z-30 px-6">
-          <div className="space-y-3">
+
+        {/* RIGHT FEATURES – pinned bottom-right */}
+        <div className="absolute bottom-1 md:bottom-6 right-0 md:right-6 z-30">
+          <div className="flex flex-col items-center space-y-2">
             {["Machine Learning", "Data Analysis", "Automation", "Optimization"].map(
               (item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[13px] md:text-[14px] lg:text-[16px] font-semibold text-white backdrop-blur"
-                >
-                  <Image src="/ai-by/spark-t.svg" width={16} height={16} alt="spark" />
-                  {item}
-                </div>
-              )
-            )}
-          </div>
-        </div> */}
-        {/* RIGHT FEATURES – pinned bottom-right */}
-<div className="absolute bottom-1 md:bottom-6 right-0 md:right-6 z-30">
-  <div className="flex flex-col items-center space-y-2">
-    {["Machine Learning", "Data Analysis", "Automation", "Optimization"].map(
-      (item) => (
-        <div
-          key={item}
-          className="
+                  className="
             flex items-center justify-center gap-3
            
             rounded-full
@@ -104,19 +94,19 @@ export default function HeroSection() {
             font-semibold text-white
             backdrop-blur
           "
-        >
-          <Image
-            src="/ai-by/spark-t.svg"
-            width={18}
-            height={18}
-            alt="spark"
-          />
-          {item}
+                >
+                  <Image
+                    src="/ai-by/spark-t.svg"
+                    width={18}
+                    height={18}
+                    alt="spark"
+                  />
+                  {item}
+                </div>
+              )
+            )}
+          </div>
         </div>
-      )
-    )}
-  </div>
-</div>
 
 
       </div>

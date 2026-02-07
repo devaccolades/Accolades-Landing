@@ -3,6 +3,10 @@ import HeroSection from './HeroSection'
 import OverviewSection from './Overview'
 import LocalInsightSection from './LocalInsight'
 import ScalableApproachSection from './ScalableApproach'
+import RiskControlSection from './RiskControl'
+import ExampleOutcomesSection from './ExampleOutcomes'
+import CtaSection from './CTASection'
+import Footer from '@/component/Footer'
 
 function page() {
   return (
@@ -11,6 +15,12 @@ function page() {
       <OverviewSection />
       <LocalInsightSection />
       <ScalableApproachSection />
+      <RiskControlSection />
+      <ExampleOutcomesSection />
+      <CtaSection />
+         <div className="-mt-[88px]">
+        <Footer />
+      </div>
     </div>
   )
 }

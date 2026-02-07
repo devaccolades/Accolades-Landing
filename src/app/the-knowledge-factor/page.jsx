@@ -16,6 +16,19 @@ import Callback from "./Callback";
   ];
 
 
+ export async function generateMetadata() {
+  return {
+    title: " The Knowledge Factor | Accolades Integrated ",
+    description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow. ",
+
+    openGraph: {
+      title: "The Knowledge Factor | Accolades Integrated ",
+      description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
+     
+    },
+  };
+} 
+
 export default function page() {
     return (
         <>

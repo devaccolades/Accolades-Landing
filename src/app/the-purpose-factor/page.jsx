@@ -4,6 +4,19 @@ import HeroSection from "./Herosection";
 import HowWeWork from "./HowWeWork";
 import WhySection from "./WhySection";
 
+export async function generateMetadata() {
+  return {
+    title: " The Purpose Factor | Accolades Integrated ",
+    description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow. ",
+
+    openGraph: {
+      title: "The Purpose Factor | Accolades Integrated ",
+      description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
+     
+    },
+  };
+}
+
 export default function page() {
     return (
         <>

@@ -61,7 +61,7 @@ const Modal = ({ isOpen, onClose }) => {
         setIsLoading(true);
 
         try {
-            const res = await fetch("/api/contact", {
+            const res = await fetch("/api/send-mail", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

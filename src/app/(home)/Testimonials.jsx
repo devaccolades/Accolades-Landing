@@ -300,16 +300,16 @@ const testimonials = [
     bgColor: "bg-pink-100",
     quoteColor: "text-pink-300",
   },
-   {
-    id: 42,
-    name: "Rejeesh Kannyadath",
-    role: "",
-    content:
-    "I highly recommend Accolades to everyone for best quality service. They have best experience and expertise in d field.",
-    avatar: rj,
-    bgColor: "bg-purple-100",
-    quoteColor: "text-purple-300",
-  },
+  //  {
+  //   id: 42,
+  //   name: "Rejeesh Kannyadath",
+  //   role: "",
+  //   content:
+  //   "I highly recommend Accolades to everyone for best quality service. They have best experience and expertise in d field.",
+  //   avatar: rj,
+  //   bgColor: "bg-purple-100",
+  //   quoteColor: "text-purple-300",
+  // },
    {
     id: 43,
     name: "VYKA By VVK",
@@ -330,16 +330,16 @@ const testimonials = [
     bgColor: "bg-purple-100",
     quoteColor: "text-purple-300",
   },
-   {
-    id: 45,
-    name: "Mr. A A Abdul Lathif",
-    role: "Chairman, CIDBI, Thrissur",
-    content:
-    "For the past 5 years, Accolades has been our trusted marketing partner. Their professional approach and result-driven strategies have played a key role in strengthening our sales and marketing growth. We look forward to continuing this successful partnership.All the best, Team Accolades!",
-    avatar: cdb,
-    bgColor: "bg-green-100",
-    quoteColor: "text-green-300",
-  },
+  //  {
+  //   id: 45,
+  //   name: "Mr. A A Abdul Lathif",
+  //   role: "Chairman, CIDBI, Thrissur",
+  //   content:
+  //   "For the past 5 years, Accolades has been our trusted marketing partner. Their professional approach and result-driven strategies have played a key role in strengthening our sales and marketing growth. We look forward to continuing this successful partnership.All the best, Team Accolades!",
+  //   avatar: cdb,
+  //   bgColor: "bg-green-100",
+  //   quoteColor: "text-green-300",
+  // },
    {
     id: 46,
     name: "Hisham",

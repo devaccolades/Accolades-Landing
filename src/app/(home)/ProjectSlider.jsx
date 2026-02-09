@@ -22,7 +22,7 @@ import p10 from "../../../public/home/10-min.png";
 import p11 from "../../../public/home/11-min.png";
 import p12 from "../../../public/home/12-min.png";
 
-import p13 from "../../../public/home/posters/p1.jpg";
+// import p13 from "../../../public/home/posters/p1.jpg";
 import p14 from "../../../public/home/posters/p2.jpg";
 import p15 from "../../../public/home/posters/p3.jpg";
 import p16 from "../../../public/home/posters/p4.jpg";
@@ -57,8 +57,8 @@ const fallbackImages = [
   // { id: 9, src: p9, alt: "Project 9" },
   // { id: 10, src: p10, alt: "Project 10" },
   // { id: 11, src: p11, alt: "Project 11" },
-  { id: 16, src: p17, alt: "Poster 5" },
-  { id: 12, src: p13, alt: "Poster 1" },
+  // { id: 16, src: p17, alt: "Poster 5" },
+  // { id: 12, src: p13, alt: "Poster 1" },
 
   { id: 14, src: p15, alt: "Poster 3" },    
   { id: 15, src: p16, alt: "Poster 4" },
@@ -71,8 +71,8 @@ const fallbackImages = [
   { id: 21, src: p22, alt: "Poster 10" },
   { id: 22, src: p23, alt: "Poster 11" },
   { id: 23, src: p24, alt: "Poster 12" },
-  { id: 24, src: p25, alt: "Poster 13" },
-  { id: 25, src: p26, alt: "Poster 14" },
+  // { id: 24, src: p25, alt: "Poster 13" },
+  // { id: 25, src: p26, alt: "Poster 14" },
   { id: 26, src: p27, alt: "Poster 15" },
   { id: 27, src: p28, alt: "Project 16" },
   { id: 28, src: p29, alt: "Poster 12" },

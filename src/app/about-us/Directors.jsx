@@ -27,7 +27,7 @@ export default function DirectorsSection() {
     <section className="relative pt-16 pb-24 overflow-hidden font-mont">
 
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#DFF3F4] to-[#0199A4]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#81f0f8] md:via-[#DFF3F4] to-[#0199A4]" />
 
       {/* Decorative Background */}
       <Image
@@ -35,7 +35,7 @@ export default function DirectorsSection() {
         alt="background"
         width={350}
         height={350}
-        className="absolute left-1/2 top-3/4
+        className="absolute left-1/2 top-2/3 md:top-3/4
         -translate-x-1/2 -translate-y-1/2 
         opacity-15 blur-[1px] pointer-events-none"
       />
@@ -43,7 +43,7 @@ export default function DirectorsSection() {
       <div className="containers relative z-10">
 
         {/* Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold">
             Connect{" "}
             <span className="inline-flex items-center justify-center bg-[#0A66C2] text-white p-1 rounded">
@@ -52,40 +52,14 @@ export default function DirectorsSection() {
             with Our Directors
           </h2>
 
-          <p className="text-gray-600 mt-4 text-sm md:text-base">
+          <p className="text-black mt-4 text-sm leading-[156%]">
             We believe strong leadership begins with openness. Connect directly
             with the founders who drive our vision and growth.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-20">
-
-          {/* {directors.map((director, index) => (
-            <a
-              key={index}
-              href={director.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`relative group w-full max-w-[520px] transform ${director.tilt} transition-all duration-500 hover:rotate-0 hover:scale-[1.03]`}
-            >
-
-              <div className="absolute -inset-3 rounded-3xl 
-              bg-[#A4EAEE] blur-xl opacity-50 group-hover:opacity-70 transition" />
-
-              <div className="relative rounded-[30px] border border-[#A4EAEE] bg-[#D5EEEF] p-2 overflow-hidden shadow-2xl">
-                <Image
-                  src={director.img}
-                  alt="director card"
-                  width={520}
-                  height={380}
-                  className="w-full h-auto rounded-[20px] object-cover"
-                  priority
-                />
-              </div>
-
-            </a>
-          ))} */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20">
 
           {directors.map((director, index) => (
             <div key={index} className="relative">

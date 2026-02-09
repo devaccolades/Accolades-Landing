@@ -9,6 +9,7 @@ if (!DJANGO_BASE) {
 async function request(url, options = {}) {
   const res = await fetch(`${DJANGO_BASE}${url}`, {
     headers: {
+      cache: "no-store",
       "Content-Type": "application/json",
       ...(options.headers || {}),
     },

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const HeroSection = () => {
     return (
         <section
@@ -6,7 +8,15 @@ const HeroSection = () => {
                 background:
                     "linear-gradient(180deg, #FFFFFF 44.23%, #0F9EA8 100%)",
             }}
-        >
+        >   
+         {/* SVG */}
+      <Image
+        src="knowledge/knw.svg"   // from public/hero-shape.svg
+        alt="Hero shape"
+        className="absolute bottom-0 left-0 w-full"
+        width={1000}
+        height={1000}
+      />
             <div className="mx-auto flex containers flex-col items-center px-6 py-24 text-center">
                 {/* Badge */}
                 <div className="mb-6 flex items-center gap-2 rounded-full bg-white px-4 py-2 md:mt-4 text-sm font-medium text-teal-700 shadow-sm">

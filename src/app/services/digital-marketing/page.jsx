@@ -7,6 +7,7 @@ import WhyChoose from "./WhyChoose";
 import OurClients from "./OurClients";
 import Footer from "@/component/Footer";
 import DigitalFaq from "./DigitalFaq";
+import HeroSection from "./HeroSection";
 // import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
@@ -49,12 +50,13 @@ function page() {
   return (
     <div>
       <main className="bg-[#F1F1F1] ">
-        {/* <Navbar /> */}
-        <DigitalHero />
+       <HeroSection />
+        {/* <DigitalHero />
         <WhatWeDo />
         <OurClients />
         <WhyChoose />
-        <Tools />
+        <Tools /> */}
+   
         <DigitalFaq />
       </main>
       <main className="-mt-[65px]">

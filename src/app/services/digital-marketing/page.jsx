@@ -50,12 +50,12 @@ function page() {
   return (
     <div>
       <main className="bg-[#F1F1F1] ">
-       <HeroSection />
-        {/* <DigitalHero />
+       {/* <HeroSection /> */}
+        <DigitalHero />
         <WhatWeDo />
         <OurClients />
         <WhyChoose />
-        <Tools /> */}
+        <Tools />
    
         <DigitalFaq />
       </main>

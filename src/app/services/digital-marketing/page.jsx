@@ -8,6 +8,9 @@ import OurClients from "./OurClients";
 import Footer from "@/component/Footer";
 import DigitalFaq from "./DigitalFaq";
 import HeroSection from "./HeroSection";
+import DigitalMarketingServices from "./DigitalMarketingServices";
+import WhyChooseSection from "./WhychooseSection";
+import DigitalCTA from "./DigitalCTA";
 // import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
@@ -49,19 +52,21 @@ export async function generateMetadata() {
 function page() {
   return (
     <div>
-      <main className="bg-[#F1F1F1] ">
-       {/* <HeroSection /> */}
-        <DigitalHero />
+      {/* <main className="bg-[#F1F1F1] "> */}
+       <HeroSection />
+       <DigitalMarketingServices />
+       <WhyChooseSection />
+       <DigitalCTA />
+        {/* <DigitalHero />
         <WhatWeDo />
         <OurClients />
         <WhyChoose />
-        <Tools />
+        <Tools /> */}
    
         <DigitalFaq />
-      </main>
-      <main className="-mt-[65px]">
+       {/* <main className="-mt-[65px]"> */}
         <Footer />
-      </main>
+     {/* </main> */}
     </div>
   );
 }

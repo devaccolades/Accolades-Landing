@@ -50,8 +50,8 @@ export default function HeroSection() {
           hoverFillColor="#dbdbdb"
         ></Squares>
       </div>
-      <div className="containers py-16 lg:py-24  z-999 relative">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="containers py-16 lg:py-24  opacity-100 relative">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-10 items-center">
 
           {/* LEFT CONTENT */}
           <div>
@@ -60,9 +60,9 @@ export default function HeroSection() {
             </span>
 
             {/* <h1 className="font-urbanist text-[32px] md:text-[30px] lg:text-[36px] xl:text-[48px] leading-[32px] md:leading-[32px] lg:leading-[36px] xl:leading-[48px] font-bold mb-2  lg:mb-6"> */}
-                <h1 className="mt-0 text-[28px] lg:text-3xl xl:text-4xl font-bold leading-tight text-left text-black">
-              DIGITAL MARKETING <br className="hidden xl:block"/>
-              AGENCY IN KOCHI FOR <br className="hidden xl:block"/>
+            <h1 className="mt-0 text-[28px] lg:text-3xl xl:text-4xl font-bold leading-tight text-left text-black">
+              DIGITAL MARKETING <br className="hidden xl:block" />
+              AGENCY IN KOCHI FOR <br className="hidden xl:block" />
               STRATEGY && GROWTH
             </h1>
 
@@ -76,11 +76,17 @@ export default function HeroSection() {
 
             {/* CTA BUTTONS */}
             <div className="flex gap-4">
-              <button className="bg-teal-600 text-white text-[12px] md:text-[14px] lg:text-[16px] leading-[100%] px-[16px] py-[10px] rounded-[10px] hover:bg-teal-700 transition">
-                Get Started →
-              </button>
+              <a
+                href="https://wa.me/919048100233"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-teal-600 text-white text-[12px] md:text-[14px] lg:text-[16px] leading-[100%] px-[16px] py-[10px] rounded-[10px] hover:bg-teal-50 transition">
+                  Get Started →
+                </button>
+              </a>
 
-              <button className="border border-teal-600 text-teal-600 text-[12px] md:text-[14px] lg:text-[16px] leading-[100%]  px-[16px] py-[10px] rounded-[10px] hover:bg-teal-50 transition">
+              <button className="border bg-teal-600  text-white text-[12px] md:text-[14px] lg:text-[16px] leading-[100%]  px-[16px] py-[10px] rounded-[10px] hover:bg-teal-50 transition">
                 View Services
               </button>
             </div>
@@ -90,7 +96,7 @@ export default function HeroSection() {
           <div className="relative flex items-center justify-center">
 
             {/* LEFT TEXT */}
-            <span className="absolute max-w-[100px] left-0 top-1/2 -translate-y-1/2 text-[16px] lg:text-[16px] leading-[18px] text-black font-semibold">
+            <span className="absolute max-w-[100px] left-0 top-1/2 -translate-y-1/2 text-[14px] xl:text-[16px] leading-[18px] text-black font-semibold">
               Traditional Marketing
             </span>
 
@@ -104,7 +110,7 @@ export default function HeroSection() {
             />
 
             {/* RIGHT TEXT */}
-            <span className="absolute max-w-[100px] right-0 top-1/2 -translate-y-1/2 text-[16px] lg:text-[16px] leading-[18px] font-semibold  text-[#0C7379]">
+            <span className="absolute max-w-[100px] -right-10 md:-right-12 lg:-right-18 xl:right-0 top-2/3 lg:top-1/2 -translate-y-1/2 text-[14px] xl:text-[16px] leading-[18px] font-semibold  text-[#0C7379]">
               Digital Marketing
             </span>
 

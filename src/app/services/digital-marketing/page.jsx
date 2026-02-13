@@ -1,10 +1,7 @@
 import Navbar from "@/component/Navbar";
 import React from "react";
-import DigitalHero from "./DigitalHero";
-import WhatWeDo from "./WhatWeDo";
 import Tools from "./Tools";
-import WhyChoose from "./WhyChoose";
-import OurClients from "./OurClients";
+
 import Footer from "@/component/Footer";
 import DigitalFaq from "./DigitalFaq";
 import HeroSection from "./HeroSection";
@@ -52,7 +49,7 @@ export async function generateMetadata() {
 function page() {
   return (
     <div>
-      {/* <main className="bg-[#F1F1F1] "> */}
+     
        <HeroSection />
        <DigitalMarketingServices />
        <WhyChooseSection />
@@ -64,9 +61,9 @@ function page() {
         <Tools /> */}
    
         <DigitalFaq />
-       {/* <main className="-mt-[65px]"> */}
+ 
         <Footer />
-     {/* </main> */}
+
     </div>
   );
 }

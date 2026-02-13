@@ -51,15 +51,12 @@ export default function DigitalFaq() {
 
   const toggleFAQ = (i) => setOpenIndex(openIndex === i ? null : i);
 
-  return (
-     <main
-      className=""
-      style={{
-        background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
-      }}
-    >
-    <section className="containers  font-mont mx-auto pb-24 relative z-10">
-      <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-[#1eb2a6] mb-10">Digital Marketing Agency in Kochi | FAQs</h2>
+
+return (
+    <section className="containers  font-mont mx-auto py-4 mb-16">
+      <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-black mb-10">
+       Digital Marketing Agency in Kochi | FAQs</h2>
+        
 
       <div className="space-y-0 border-t border-gray-300">
         {faqData.map((item, i) => (
@@ -68,7 +65,7 @@ export default function DigitalFaq() {
             {/* Question Row */}
             <button
               onClick={() => toggleFAQ(i)}
-              className="w-full flex justify-between items-center text-gray-600 py-3 text-[14px] md:text-[16px] font-light tracking-tight"
+              className="w-full flex justify-between items-center text-black py-3 text-[14px] md:text-[16px] font-semibold tracking-tight"
             >
               <span>{item.q}</span>
               <span className="text-3xl pr-4">{openIndex === i ? "−" : "+"}</span>
@@ -80,13 +77,12 @@ export default function DigitalFaq() {
                 openIndex === i ? "max-h-40 opacity-100 pb-4" : "max-h-0 opacity-0"
               }`}
             >
-              <p className="text-gray-600 font-mont text-[13px] md:text-[14px] leading-relaxed px-1">{item.a}</p>
+              <p className="text-black font-semibold font-mont text-[13px] md:text-[14px] leading-relaxed px-1">{item.a}</p>
             </div>
 
           </div>
         ))}
       </div>
     </section>
-    </main>
   );
 }

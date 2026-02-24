@@ -81,14 +81,14 @@ export default function HeroSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="bg-teal-600 text-white text-[12px] md:text-[14px] lg:text-[16px] leading-[100%] px-[16px] py-[10px] rounded-[10px] hover:bg-teal-50 transition">
+                <button className="bg-teal-600 text-white text-[12px] md:text-[14px] lg:text-[16px] leading-[100%] px-[16px] py-[10px] rounded-[10px] hover:text-teal-600 hover:bg-teal-50 transition">
                   Get Started →
                 </button>
               </a>
 
-              <button className="border bg-teal-600  text-white text-[12px] md:text-[14px] lg:text-[16px] leading-[100%]  px-[16px] py-[10px] rounded-[10px] hover:bg-teal-50 transition">
+              {/* <button className="border bg-teal-600  text-white text-[12px] md:text-[14px] lg:text-[16px] leading-[100%]  px-[16px] py-[10px] rounded-[10px] hover:bg-teal-50 transition">
                 View Services
-              </button>
+              </button> */}
             </div>
           </div>
 

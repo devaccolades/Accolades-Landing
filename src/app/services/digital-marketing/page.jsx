@@ -8,6 +8,7 @@ import HeroSection from "./HeroSection";
 import DigitalMarketingServices from "./DigitalMarketingServices";
 import WhyChooseSection from "./WhychooseSection";
 import DigitalCTA from "./DigitalCTA";
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 // import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
@@ -36,12 +37,13 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata() {
   return {
     title: "Digital Marketing Agency in Kochi | Accolades Integrated",
-    description: "End to end digital marketing agency in Kochi for reliable Performance marketing, SEO, SEM, social media, and content services for business growth.",
+    description:
+      "End to end digital marketing agency in Kochi for reliable Performance marketing, SEO, SEM, social media, and content services for business growth.",
 
     openGraph: {
       title: "Digital Marketing Agency in Kochi | Accolades Integrated",
-      description: "End to end digital marketing agency in Kochi for reliable Performance marketing, SEO, SEM, social media, and content services for business growth.",
-     
+      description:
+        "End to end digital marketing agency in Kochi for reliable Performance marketing, SEO, SEM, social media, and content services for business growth.",
     },
   };
 }
@@ -49,21 +51,22 @@ export async function generateMetadata() {
 function page() {
   return (
     <div>
-     
-       <HeroSection />
-       <DigitalMarketingServices />
-       <WhyChooseSection />
-       <DigitalCTA />
-        {/* <DigitalHero />
+      <HeroSection />
+      <DigitalMarketingServices />
+      <WhyChooseSection />
+      <DigitalCTA />
+      {/* <DigitalHero />
         <WhatWeDo />
         <OurClients />
         <WhyChoose />
         <Tools /> */}
-   
-        <DigitalFaq />
- 
-        <Footer />
 
+      <DigitalFaq />
+
+      {/* <Footer /> */}
+      <main className="mt-[30px] ">
+        <UpdatedFooter />
+      </main>
     </div>
   );
 }

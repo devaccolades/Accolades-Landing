@@ -5,7 +5,7 @@ import button from "../../../public/case-study/call.svg";
 import mail from "../../../public/case-study/mail (2) 1.svg";
 const CallToAction = () => {
   return (
-    <section className="font-mont w-[90%] lg:w-[80%] mx-auto py-10 flex justify-center">
+    <section className="font-mont w-[90%] lg:w-[80%] mx-auto pt-10 pb-20 flex justify-center">
       <div className="text-center px-4">
         {/* Subtitle */}
         <p className="text-[16px] leading-[156%] text-gray-500 mb-3">

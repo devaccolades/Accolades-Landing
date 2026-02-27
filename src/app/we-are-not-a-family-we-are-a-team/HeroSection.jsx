@@ -7,7 +7,7 @@ const HeroSection = () => {
     return (
         <section className="font-mont w-full h-screen ">
             <div className="grid h-screen grid-cols-1 md:grid-cols-2 lg:grid-cols-[45%_55%] xl:grid-cols-[35%_65%]">
-                <div className="mt-[110px] md:mt-0 mb-5 md:mb-0 md:h-screen px-[5%] md:px-0 md:pl-[5%] lg:pl-[10%] flex flex-col justify-center-safe">
+                <div className="mt-[110px] md:mt-0 mb-5 md:mb-0 md:h-screen px-[5%] md:px-0 md:pl-[15%] lg:pl-[30%] flex flex-col justify-center-safe">
                     <span className="w-fit inline-block mb-2 px-[14px] py-[10px] xl:px-4 xl:py-3 text-[16px] font-extrabold text-[#0C7379] border border-[#0C7379] rounded-full">
                         Our Philosophy
                     </span>

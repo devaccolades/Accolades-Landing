@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 import heroImg from "../../../../../public/content-marketing/heroImg.png";
@@ -18,7 +17,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           > */}
-            <AnimatedPopTitle text={"Content      Marketing"} />
+          <AnimatedPopTitle text={"Content      Marketing"} />
           {/* </motion.div> */}
         </div>
 
@@ -80,7 +79,7 @@ export default function HeroSection() {
 
       {/* Second Section */}
       <div
-        className="flex items-center justify-center pt-8 md:pt-12 lg:pt-16 pb-20 lg:pb-30 "
+        className="flex items-center justify-center pt-8 md:pt-12 lg:pt-16 pb-20 lg:pb-42 "
         style={{
           background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
         }}
@@ -100,9 +99,11 @@ export default function HeroSection() {
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 md:gap-6 gap-4 mb-4 md:mb-8 lg:mb-12">
-              {[{ icon: icon1, text: "Increased sales" },
+              {[
+                { icon: icon1, text: "Increased sales" },
                 { icon: icon2, text: "Cost savings" },
-                { icon: icon3, text: "Better customers" }].map((item, i) => (
+                { icon: icon3, text: "Better customers" },
+              ].map((item, i) => (
                 <motion.div
                   key={i}
                   className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-300"
@@ -112,7 +113,11 @@ export default function HeroSection() {
                   viewport={{ once: true }}
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
-                    <Image src={item.icon} alt={item.text} className="w-8 h-8" />
+                    <Image
+                      src={item.icon}
+                      alt={item.text}
+                      className="w-8 h-8"
+                    />
                   </div>
                   <h3 className="font-mont font-semibold xl:text-[28px] leading-[100%] text-[#2C99B1]">
                     {item.text}

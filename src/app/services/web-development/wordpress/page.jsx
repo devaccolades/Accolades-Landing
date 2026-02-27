@@ -4,17 +4,18 @@ import WordpressHero from "./Word-Hero";
 import OfferAndFeatures from "./OfferAndFeatures";
 import WordProjects from "./WordProjects";
 import Footer from "@/component/Footer";
-
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export async function generateMetadata() {
   return {
     title: "WordPress Web Development Services",
-    description: "Accolades Integrated offers custom WordPress web development services focused on speed, security, scalability, and SEO-friendly design for growing brands. ",
+    description:
+      "Accolades Integrated offers custom WordPress web development services focused on speed, security, scalability, and SEO-friendly design for growing brands. ",
 
     openGraph: {
       title: "WordPress Web Development Services",
-      description: "Accolades Integrated offers custom WordPress web development services focused on speed, security, scalability, and SEO-friendly design for growing brands. ",
-     
+      description:
+        "Accolades Integrated offers custom WordPress web development services focused on speed, security, scalability, and SEO-friendly design for growing brands. ",
     },
   };
 }
@@ -29,7 +30,8 @@ function page() {
         <WordProjects />
       </div>
       <div className="-mt-[65px]">
-        <Footer />
+        {/* <Footer /> */}
+        <UpdatedFooter />
       </div>
     </div>
   );

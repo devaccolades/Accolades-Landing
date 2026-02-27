@@ -11,10 +11,11 @@ import Image from "next/image";
 import Discover from "./Discover";
 import FormSection from "./FormSection";
 import { BASE_URL, getSeo } from "../Server";
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export const dynamic = "force-dynamic";
 
-export  async function generateMetadata() {
+export async function generateMetadata() {
   const name = "career";
 
   // fetch post information
@@ -33,7 +34,6 @@ export  async function generateMetadata() {
     },
   };
 }
-
 
 function page() {
   return (
@@ -77,7 +77,8 @@ function page() {
       <HeroSection />
       {/* <Discover /> */}
       <FormSection />
-      <Footer />
+      {/* <Footer /> */}
+      <UpdatedFooter />
     </section>
   );
 }

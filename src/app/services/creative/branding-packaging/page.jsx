@@ -6,6 +6,7 @@ import WhatWeOffer from "./WhatWeOffer";
 import Tools from "../Tools";
 import Featured from "./Featured";
 import Our from "./Our";
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 const page = () => {
   return (
@@ -18,8 +19,9 @@ const page = () => {
         <Our />
         <Tools />
       </main>
-      <main className="-mt-[35px] 2xl:-mt-[40px] ">
-        <Footer />
+      <main className="-mt-[55px] md:-mt-[85px] 2xl:-mt-[80px] ">
+        {/* <Footer /> */}
+        <UpdatedFooter />
       </main>
     </>
   );

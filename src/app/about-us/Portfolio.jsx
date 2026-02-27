@@ -42,7 +42,7 @@ export default function Portfolio() {
 
       {/* ---------- Portfolio Section ---------- */}
       <div
-        className="pb-24"
+        className="pb-32"
         style={{
           background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
         }}

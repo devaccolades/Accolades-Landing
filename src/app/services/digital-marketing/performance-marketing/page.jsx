@@ -6,17 +6,18 @@ import WhatWeOffer from "./WhatWeOffer";
 import ServicesIncluded from "./ServicesIncluded";
 import OurProcess from "./OurProcess";
 import CreativeApproach from "./CreativeApproach";
-
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export async function generateMetadata() {
   return {
     title: "Performance Marketing Solutions",
-    description: "Maximize ROI with data-driven performance marketing strategies focused on conversions, lead generation, and measurable business growth. ",
+    description:
+      "Maximize ROI with data-driven performance marketing strategies focused on conversions, lead generation, and measurable business growth. ",
 
     openGraph: {
       title: "Performance Marketing Solutions",
-      description: "Maximize ROI with data-driven performance marketing strategies focused on conversions, lead generation, and measurable business growth. ",
-     
+      description:
+        "Maximize ROI with data-driven performance marketing strategies focused on conversions, lead generation, and measurable business growth. ",
     },
   };
 }
@@ -111,8 +112,9 @@ const page = () => {
           <WhatWeOffer {...tech} />
         </div>
       </main>
-      <main className="-mt-[65px]">
-        <Footer />
+      <main className="-mt-[85px]">
+        {/* <Footer /> */}
+        <UpdatedFooter />
       </main>
     </>
   );

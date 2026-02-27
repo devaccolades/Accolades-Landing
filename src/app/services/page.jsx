@@ -14,15 +14,14 @@ import Footer from "@/component/Footer";
 // import { BASE_URL, getSeo } from "@/app/Server";
 import SeoFoot from "./SeoFoot";
 import ServicesFaq from "./ServicesFaq";
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export const dynamic = "force-dynamic";
 
 // export async function generateMetadata() {
 //   const name = "services";
 
-
 //   const post = await getSeo(name);
-  
 
 //   return {
 //     title: post[0]?.metaTitle,
@@ -37,16 +36,16 @@ export const dynamic = "force-dynamic";
 //   };
 // }
 
-
 export async function generateMetadata() {
   return {
     title: "Digital Marketing Services Kochi | Accolades Integrated",
-    description: "Expert digital marketing services in Kochi. SEO, SEM, social media, creative design, and web development. Boost your brand with Accolades Integrated.",
+    description:
+      "Expert digital marketing services in Kochi. SEO, SEM, social media, creative design, and web development. Boost your brand with Accolades Integrated.",
 
     openGraph: {
       title: "Digital Marketing Services Kochi | Accolades Integrated",
-      description: "Expert digital marketing services in Kochi. SEO, SEM, social media, creative design, and web development. Boost your brand with Accolades Integrated.",
-     
+      description:
+        "Expert digital marketing services in Kochi. SEO, SEM, social media, creative design, and web development. Boost your brand with Accolades Integrated.",
     },
   };
 }
@@ -97,7 +96,8 @@ function page() {
       <SeoFoot />
       <ServicesFaq />
       <div className="-mb-[37px]">
-        <Footer />
+        {/* <Footer /> */}
+        <UpdatedFooter />
       </div>
     </section>
   );

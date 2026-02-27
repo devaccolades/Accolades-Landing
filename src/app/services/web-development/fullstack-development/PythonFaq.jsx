@@ -34,7 +34,7 @@ export default function PythonFaq() {
   const toggleFAQ = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="containers  font-mont mx-auto py-4">
+    <section className="containers  font-mont mx-auto py-12">
       <h2 className="text-[20px] lg:text-[26px] font-bold font-mont text-black mb-10">Frequently Asked Questions – Python Developers in Kochi </h2>
 
       <div className="space-y-0 border-t border-gray-300">

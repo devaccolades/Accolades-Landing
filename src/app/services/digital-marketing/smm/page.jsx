@@ -12,13 +12,13 @@ import LinkedinMarketing from "./LinkedInMarketing";
 import YoutubeMarketing from "./YoutubeMarketing";
 import AccoladesSection from "./AccoladesSection";
 import SmmFaq from "./SmmFaq";
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export const dynamic = "force-dynamic";
 
 // export async function generateMetadata() {
 //   const name = "smm";
 
-  
 //   const post = await getSeo(name);
 
 //   return {
@@ -38,12 +38,13 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata() {
   return {
     title: "Social Media Marketing Kochi – Facebook, LinkedIn & YouTube",
-    description: "Accolades Integrated manage your Social Media Marketing in Kochi – Facebook &  Instagram, LinkedIn campaigns to grow your brand awareness and drive leads.",
+    description:
+      "Accolades Integrated manage your Social Media Marketing in Kochi – Facebook &  Instagram, LinkedIn campaigns to grow your brand awareness and drive leads.",
 
     openGraph: {
       title: "Social Media Marketing Kochi – Facebook, LinkedIn & YouTube",
-      description: "Accolades Integrated manage your Social Media Marketing in Kochi – Facebook &  Instagram, LinkedIn campaigns to grow your brand awareness and drive leads.",
-     
+      description:
+        "Accolades Integrated manage your Social Media Marketing in Kochi – Facebook &  Instagram, LinkedIn campaigns to grow your brand awareness and drive leads.",
     },
   };
 }
@@ -71,8 +72,11 @@ const page = () => {
       <LinkedinMarketing />
       <YoutubeMarketing />
       <AccoladesSection />
-     <SmmFaq />
-     <Footer />
+      <SmmFaq />
+      {/* <Footer /> */}
+      <main className="mt-[20px]">
+        <UpdatedFooter />
+      </main>
     </>
   );
 };

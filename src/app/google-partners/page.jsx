@@ -1,23 +1,24 @@
-import React from 'react'
-import HeroSection from './HeroSection'
-import Description from './Description'
-import GooglePartnersProgram from './GooglePrograms'
-import Benefits from './Benefits'
-import Advantages from './Advantages'
-import WhyChoose from './WhyChooseGP'
+import React from "react";
+import HeroSection from "./HeroSection";
+import Description from "./Description";
+import GooglePartnersProgram from "./GooglePrograms";
+import Benefits from "./Benefits";
+import Advantages from "./Advantages";
+import WhyChoose from "./WhyChooseGP";
 import Footer from "@/component/Footer";
-import GooglePartnerFaq from './GPFaq'
-
+import GooglePartnerFaq from "./GPFaq";
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export async function generateMetadata() {
   return {
     title: "Google Partners Kochi – Benefits | Accolades Integrated",
-    description: "Accolades Integrated is a certified Google Partners agency in Kochi. Learn how our Google Partner status gives your brand better Google Ads results.",
+    description:
+      "Accolades Integrated is a certified Google Partners agency in Kochi. Learn how our Google Partner status gives your brand better Google Ads results.",
 
     openGraph: {
       title: "Google Partners Kochi – Benefits | Accolades Integrated",
-      description: "Accolades Integrated is a certified Google Partners agency in Kochi. Learn how our Google Partner status gives your brand better Google Ads results.",
-     
+      description:
+        "Accolades Integrated is a certified Google Partners agency in Kochi. Learn how our Google Partner status gives your brand better Google Ads results.",
     },
   };
 }
@@ -25,16 +26,17 @@ export async function generateMetadata() {
 function page() {
   return (
     <div>
-    <HeroSection />
-    <Description />
-    <GooglePartnersProgram />
-    <Benefits />
-    <Advantages />
-    <WhyChoose />
-    <GooglePartnerFaq />
-    <Footer />
+      <HeroSection />
+      <Description />
+      <GooglePartnersProgram />
+      <Benefits />
+      <Advantages />
+      <WhyChoose />
+      <GooglePartnerFaq />
+      {/* <Footer /> */}
+      <UpdatedFooter />
     </div>
-  )
+  );
 }
 
-export default page
+export default page;

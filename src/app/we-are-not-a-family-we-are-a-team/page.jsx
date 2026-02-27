@@ -1,36 +1,39 @@
-import React from 'react'
-import HeroSection from './HeroSection'
-import Overview from './Overview'
-import Clients from './Clients'
-import Workflow from './Workflow'
-import Culture from './Culture'
-import CallToAction from './CallToAction'
-import Footer from '@/component/Footer'
+import React from "react";
+import HeroSection from "./HeroSection";
+import Overview from "./Overview";
+import Clients from "./Clients";
+import Workflow from "./Workflow";
+import Culture from "./Culture";
+import CallToAction from "./CallToAction";
+import Footer from "@/component/Footer";
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export async function generateMetadata() {
   return {
     title: "We are not a family, we are a team | Accolades Integrated ",
-    description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow. ",
+    description:
+      "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow. ",
 
     openGraph: {
       title: "We are not a family, we are a team | Accolades Integrated ",
-      description: "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
-     
+      description:
+        "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
     },
   };
 }
 const page = () => {
-    return (
-        <>
-            <HeroSection />
-            <Overview />
-            <Clients />
-            <Workflow />
-            <Culture />
-            <CallToAction />
-            <Footer />
-        </>
-    )
-}
+  return (
+    <>
+      <HeroSection />
+      <Overview />
+      <Clients />
+      <Workflow />
+      <Culture />
+      <CallToAction />
+      {/* <Footer /> */}
+      <UpdatedFooter />
+    </>
+  );
+};
 
-export default page
+export default page;

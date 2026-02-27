@@ -1,6 +1,6 @@
 export default function Callback() {
   return (
-    <section className="py-24 bg-[#F9F9F9]">
+    <section className="pt-16 pb-36 bg-[#F9F9F9]">
       <div className="mx-auto containers ">
 
         {/* Headline */}

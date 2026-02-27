@@ -3,6 +3,7 @@ import Navbar from "@/component/Navbar";
 import React from "react";
 import HeroSection from "./HeroSection";
 import Cards from "./Cards";
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 // import { BASE_URL, getSeo } from "@/app/Server";
 
 export const dynamic = "force-dynamic";
@@ -30,16 +31,16 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata() {
   return {
     title: "Search Engine Marketing Services (SEM)",
-    description: "Drive instant traffic and qualified leads with result-oriented search engine marketing services, including Google Ads and PPC campaign optimization. ",
+    description:
+      "Drive instant traffic and qualified leads with result-oriented search engine marketing services, including Google Ads and PPC campaign optimization. ",
 
     openGraph: {
       title: "Search Engine Marketing Services (SEM)",
-      description: "Drive instant traffic and qualified leads with result-oriented search engine marketing services, including Google Ads and PPC campaign optimization. ",
-     
+      description:
+        "Drive instant traffic and qualified leads with result-oriented search engine marketing services, including Google Ads and PPC campaign optimization. ",
     },
   };
 }
-
 
 const page = () => {
   return (
@@ -50,7 +51,8 @@ const page = () => {
         <Cards />
       </main>
       <main className="-mt-[80px]">
-        <Footer />
+        {/* <Footer /> */}
+        <UpdatedFooter />
       </main>
     </>
   );

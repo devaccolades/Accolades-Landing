@@ -12,6 +12,7 @@ function Header({ data }) {
   const handleClick = () => {
     setIsOpen(true);
   };
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -30 }}

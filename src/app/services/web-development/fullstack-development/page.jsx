@@ -10,6 +10,7 @@ import PythonHero from './PythonHero'
 import TechnologyStack from './TechnologyStack'
 import WhyChoose from './WhyChoose'
 import PythonFaq from './PythonFaq'
+import UpdatedFooter from '@/Layout/UpdatedFooter'
 
 export const dynamic = "force-dynamic";
 
@@ -63,7 +64,8 @@ function page() {
              <TechnologyStack />
              <WhyChoose />
              <PythonFaq />
-             <Footer />
+             {/* <Footer /> */}
+             <UpdatedFooter/>
     </div>
   )
 }

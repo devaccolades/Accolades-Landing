@@ -48,7 +48,7 @@ export default function CreativeFaq() {
   const toggleFAQ = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-     <main
+     <main className="pb-10"
       style={{
         background: "linear-gradient(180deg, #F1F1F1 0%, #0199A4 100%)",
       }}

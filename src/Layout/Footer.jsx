@@ -43,7 +43,7 @@ const staggerContainer = {
 };
 
 const Footer = ({ data }) => {
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);  
   return (
     <main className="bg-[#E4F2F2] py-6 md:py-10">
       <motion.section

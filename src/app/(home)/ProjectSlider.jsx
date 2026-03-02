@@ -22,7 +22,7 @@ import p10 from "../../../public/home/10-min.png";
 import p11 from "../../../public/home/11-min.png";
 import p12 from "../../../public/home/12-min.png";
 
-import p13 from "../../../public/home/posters/p1.jpg";
+// import p13 from "../../../public/home/posters/p1.jpg";
 import p14 from "../../../public/home/posters/p2.jpg";
 import p15 from "../../../public/home/posters/p3.jpg";
 import p16 from "../../../public/home/posters/p4.jpg";
@@ -36,6 +36,16 @@ import p23 from "../../../public/home/posters/2.jpg";
 import p24 from "../../../public/home/posters/3.jpg";
 import p25 from "../../../public/home/posters/4.jpg";
 import p26 from "../../../public/home/posters/Untitled-1.jpg";
+import p27 from "../../../public/about-us/family.jpg";
+import p28 from "../../../public/home/posters/p28.jpeg";
+import p29 from "../../../public/home/posters/CADBIM.webp";
+import p30 from "../../../public/home/posters/CIDBI.webp";
+import p31 from "../../../public/home/posters/RYAN.webp";
+import p32 from "../../../public/home/posters/TJP.webp";
+import p33 from "../../../public/home/posters/CLASSIC.webp";
+import p34 from "../../../public/home/posters/fortune.jpeg";
+import p35 from "../../../public/home/posters/confident.jpeg";
+
 
 
 const fallbackImages = [
@@ -49,21 +59,31 @@ const fallbackImages = [
   // { id: 9, src: p9, alt: "Project 9" },
   // { id: 10, src: p10, alt: "Project 10" },
   // { id: 11, src: p11, alt: "Project 11" },
+  // { id: 16, src: p17, alt: "Poster 5" },
+  // { id: 12, src: p13, alt: "Poster 1" },
 
-  { id: 12, src: p13, alt: "Poster 1" },
-  { id: 13, src: p14, alt: "Poster 2" },
   { id: 14, src: p15, alt: "Poster 3" },    
   { id: 15, src: p16, alt: "Poster 4" },
-  { id: 16, src: p17, alt: "Poster 5" },
+  
   { id: 17, src: p18, alt: "Poster 6" },
   { id: 18, src: p19, alt: "Poster 7" },
   { id: 19, src: p20, alt: "Poster 8" },
+  { id: 13, src: p14, alt: "Poster 2" },
   { id: 20, src: p21, alt: "Poster 9" },
   { id: 21, src: p22, alt: "Poster 10" },
   { id: 22, src: p23, alt: "Poster 11" },
   { id: 23, src: p24, alt: "Poster 12" },
-  { id: 24, src: p25, alt: "Poster 13" },
-  { id: 25, src: p26, alt: "Poster 14" },
+  // { id: 24, src: p25, alt: "Poster 13" },
+  // { id: 25, src: p26, alt: "Poster 14" },
+  { id: 26, src: p27, alt: "Poster 15" },
+  { id: 27, src: p28, alt: "Project 16" },
+  { id: 28, src: p29, alt: "Poster 12" },
+  { id: 29, src: p30, alt: "Poster 13" },
+  { id: 30, src: p31, alt: "Poster 14" },
+  { id: 31, src: p32, alt: "Poster 15" },
+  { id: 32, src: p33, alt: "Project 16" },
+  { id: 33, src: p34, alt: "fortune" },
+  { id: 34, src: p35, alt: "confident" },
 ];
 const ProjectSlider = ({ images = fallbackImages }) => {
   const sliderKey = useMemo(() => {

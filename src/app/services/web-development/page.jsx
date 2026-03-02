@@ -13,6 +13,7 @@ import Technologies from "./Technologies";
 import WhatWeBuild from "./WhatWeBuild";
 import WebWhyChoose from "./WebWhyChoose";
 import ProcessAndCaseFit from "./ProcessAndCaseFit";
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export const dynamic = "force-dynamic";
 
@@ -39,12 +40,13 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata() {
   return {
     title: "Web Development Company in Kochi | Accolades Integrated",
-    description: "Trusted best Web Development Company in Kochi. We build React, Nest.js, and Python websites, WordPress sites, and e-commerce stores. Request a free audit.",
+    description:
+      "Trusted best Web Development Company in Kochi. We build React, Nest.js, and Python websites, WordPress sites, and e-commerce stores. Request a free audit.",
 
     openGraph: {
       title: "Web Development Company in Kochi | Accolades Integrated",
-      description: "Trusted best Web Development Company in Kochi. We build React, Nest.js, and Python websites, WordPress sites, and e-commerce stores. Request a free audit.",
-     
+      description:
+        "Trusted best Web Development Company in Kochi. We build React, Nest.js, and Python websites, WordPress sites, and e-commerce stores. Request a free audit.",
     },
   };
 }
@@ -69,7 +71,8 @@ const page = () => {
       <ProcessAndCaseFit />
       <WebFaq />
       <WebsiteProjects />
-      <Footer />
+      {/* <Footer /> */}
+      <UpdatedFooter />
     </>
   );
 };

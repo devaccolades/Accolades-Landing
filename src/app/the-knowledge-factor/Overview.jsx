@@ -20,10 +20,10 @@ const features = [
 
 const Overview = () => {
   return (
-    <section className="w-full bg-white py-20">
-      <div className="mx-auto max-w-7xl px-6 text-center">
+    <section className="w-full bg-white py-6 md:py-10 lg:py-16">
+      <div className="containers text-center">
         {/* Heading */}
-        <h2 className="text-sm font-semibold uppercase tracking-wider text-black">
+        <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-mont font-bold mb-1">
           Overview
         </h2>
 
@@ -33,13 +33,13 @@ const Overview = () => {
         </p>
 
         {/* Items */}
-        <div className="mt-16 grid grid-cols-1 gap-16 md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-6 md:gap-10 lg:gap-16 md:grid-cols-3">
           {features.map((item) => (
             <div
               key={item.title}
               className="flex flex-col items-center text-center"
             >
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl">
+              <div className="mb-2 flex h-16 w-16 items-center justify-center rounded-2xl">
                 <Image
                   src={item.icon}
                   alt={item.title}

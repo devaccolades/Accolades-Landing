@@ -22,10 +22,12 @@ export default function HeroSection() {
                 </p>
 
                 {/* CTA */}
+                <a href="tel:+919048100233">
                 <button className="mt-4 inline-flex items-center gap-2 rounded-lg bg-teal-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-800 cursor-pointer">
                     Start Your Journey
                     <span aria-hidden>→</span>
                 </button>
+                </a>
                 {/* Illustration */}
                 <div className="w-full mt-4 max-w-5xl">
                     <Image

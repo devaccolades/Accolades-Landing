@@ -17,10 +17,10 @@ const items = [
 
 const WhatWeBring = () => {
   return (
-    <section className="w-full  py-16 md:py-20">
+    <section className="w-full py-6 md:py-10 lg:py-16">
       <div className="mx-auto containers px-6 text-center">
         {/* Heading */}
-        <h2 className="text-sm font-semibold uppercase tracking-wider text-black">
+        <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-mont font-bold mb-3">
           What We Bring
         </h2>
 

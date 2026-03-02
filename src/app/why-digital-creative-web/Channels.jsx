@@ -32,10 +32,12 @@ export default function Channels() {
 
           {/* Button */}
           <div className="lg:mt-8 mt-4">
+            <a href="tel:+919048100233">
             <button className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white text-sm font-semibold px-4 md:px-6 py-2 md:py-3 rounded-[10px] transition font-inter lg:text-[16px] md:text-[14px] text-[14px] ">
               Book a Call
               <Image src={forward} alt="forward" />
             </button>
+            </a>
           </div>
 
           {/* Channel flow */}

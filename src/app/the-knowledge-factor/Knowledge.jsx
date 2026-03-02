@@ -29,11 +29,11 @@ const items = [
 
 const Knowledge = () => {
   return (
-    <section className="w-full py-16 md:py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="w-full py-6 md:py-10 lg:py-16 ">
+      <div className="containers">
         {/* Heading */}
         <div className="mb-10 text-center md:mb-16">
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-black">
+          <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-mont font-bold mb-1">
             How Knowledge Helps
           </h2>
           <p className="mt-3 text-sm text-gray-700 md:text-lg">

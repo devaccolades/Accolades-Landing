@@ -42,8 +42,8 @@ const framework = [
 
 export default function HowWeWork() {
     return (
-        <section className="px-4 py-24">
-            <div className="mx-auto max-w-6xl">
+        <section className="px-4 py-6 md:py-10 lg:py-16">
+            <div className="containers">
 
                 {/* Heading */}
                 <h2 className="mb-16 text-center text-[16px] md:text-[18px] lg:text-[20px] font-bold text-black">

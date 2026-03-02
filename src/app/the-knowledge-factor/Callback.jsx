@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Callback = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-20">
+    <section className="w-full bg-white py-6 md:py-10 lg:py-16">
       <div className="mx-auto max-w-3xl px-6 text-center">
         {/* Heading */}
         <h2 className="text-3xl font-semibold tracking-tight text-black md:text-4xl">
@@ -19,10 +19,12 @@ const Callback = () => {
         {/* CTA */}
         <div className="mt-10 flex flex-col items-center gap-4 md:flex-row md:justify-center md:gap-6">
           {/* Primary button */}
+          <a href="tel:+919048100233">
           <button className="inline-flex items-center gap-2 rounded-xl bg-teal-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-800">
             Book a Review
             <span className="text-lg">↗</span>
           </button>
+          </a>
 
           {/* OR */}
           <span className="text-sm text-gray-500">or</span>

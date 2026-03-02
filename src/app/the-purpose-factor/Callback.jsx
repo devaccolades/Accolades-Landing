@@ -23,10 +23,12 @@ export default function Callback() {
           <p className="mx-auto mt-2 max-w-md text-xs text-gray-600 sm:text-sm">
             Start with a short workshop that reveals what makes your brand truly matter.
           </p>
-
+        
+       <a href="tel:+919048100233">
           <button className="mt-6 inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-900 cursor-pointer">
             Get a Call Back <span aria-hidden>↗</span>
           </button>
+          </a>
 
         </div>
       </div>

@@ -10,6 +10,7 @@ export default async function page({ params }) {
   const { slug } = await params;
 
   const blog = await getBlogs();
+  // console.log("blog data", blog);
   const data = blog
     .flatMap((item) => item.blogs)
     .find((item) => item.id == slug);

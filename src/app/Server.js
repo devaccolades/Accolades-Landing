@@ -1,8 +1,7 @@
 // lib/server.js
 
-export const BASE_URL =
-  // process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
-  process.env.NEXT_PUBLIC_STRAPI_URL || "https://strapi.video.accoladesweb.com";
+export const BASE_URL = "https://strapi.video.accoladesweb.com";
+// process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
 
 export async function getHeroSection() {
   const res = await fetch(`${BASE_URL}/api/hero?populate=*`);

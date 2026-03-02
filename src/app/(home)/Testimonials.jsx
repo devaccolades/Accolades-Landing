@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import user from "../../../public/account.png";
 import akki from "../../../public/testimonial/akkinova.png";
-import post from "../../../public/testimonial/posticon.png";
+import  post from "../../../public/testimonial/posticon.png";
 import cad from "../../../public/testimonial/cadbim.png";
 import jm from "../../../public/testimonial/joseph.png";
 import jimbsa from "../../../public/testimonial/jimbsa.png";

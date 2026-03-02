@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic'; // makes this page render dynamically
+export const dynamic = "force-dynamic"; // makes this page render dynamically
 
 import React from "react";
 import Header from "@/Layout/Header";

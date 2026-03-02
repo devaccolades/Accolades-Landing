@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import ModalForm from "./ModalForm";
+import { BASE_URL } from "@/app/Server";
 // import { BASE_URL, getModalVideo } from "@/app/Server";
 
 export default function Modal({ isOpen, onClose, data }) {

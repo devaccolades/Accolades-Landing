@@ -83,10 +83,10 @@ export default function ModalServices({ isOpen, onClose }) {
       label: "Contact Us",
       href: "/contact-us",
     },
-    //  {
-    //   label: "Google Partners",
-    //   href: "/google-partners",
-    // },
+     {
+      label: "Blogs",
+      href: "/blog-top-digital-marketing-companies",
+    },
   ];
 
   return (
@@ -98,7 +98,7 @@ export default function ModalServices({ isOpen, onClose }) {
           onClick={onClose}
         >
           <div
-            className=" h-screen w-full md:w-[45%] xl:w-[35%] bg-white absolute right-0 top-0 z-50 pl-[30px] pt-[50px] md:pl-[30px] lg:pl-[70px] pr-[40px] md:pt-[60px] lg:pt-[107px] pb-[50px]"
+            className=" h-screen w-full md:w-[45%] xl:w-[35%] bg-white absolute right-0 top-0 z-50 pl-[30px] pt-[40px] md:pl-[30px] lg:pl-[70px] pr-[40px] md:pt-[40px] lg:pt-[107px] pb-[50px]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="absolute top-5 right-5 z-50 text-black">
@@ -106,8 +106,8 @@ export default function ModalServices({ isOpen, onClose }) {
                 src={"/home/closing.svg"}
                 className="h-[25px] w-[25px]"
                 alt="close"
-                width={100}
-                height={100}
+                width={80}
+                height={80}
                 onClick={onClose}
               />
             </div>
@@ -156,7 +156,7 @@ export default function ModalServices({ isOpen, onClose }) {
                       {openIndex === index &&
                         page.services.map((service, index) => (
                           <Link href={service.href} key={index}>
-                            <div className="ml-10 h-fit pb-3" key={index}>
+                            <div className="ml-10 h-fit pb-3 md:pb-0" key={index}>
                               <p className="capitalize text-[16px] lg:text-[20px] leading-[20px] md:leading-[43px] text-[#0C7379]">
                                 {service.label}
                               </p>

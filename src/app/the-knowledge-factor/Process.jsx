@@ -33,7 +33,7 @@ const Process = () => {
                     <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-mont font-bold mb-1">
                         Our Process
                     </h2>
-                    <p className="mt-3 text-sm text-gray-700 md:text-lg">
+                    <p className="mt-3 ext-[13px] md:text-[14px] lg:text-[16px]  text-gray-700 md:text-lg">
                         A systematic approach to integrating AI into your marketing operations.
                     </p>
                 </div>

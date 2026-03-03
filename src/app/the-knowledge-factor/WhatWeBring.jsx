@@ -18,18 +18,18 @@ const items = [
 const WhatWeBring = () => {
   return (
     <section className="w-full py-6 md:py-10 lg:py-16">
-      <div className="mx-auto containers px-6 text-center">
+      <div className="mx-auto containers text-center">
         {/* Heading */}
         <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-mont font-bold mb-3">
           What We Bring
         </h2>
 
-        <p className="mx-auto mt-3 max-w-xl text-sm text-gray-700 md:mt-4 md:text-lg">
+        <p className="mx-auto mt-3 max-w-xl text-[13px] md:text-[14px] lg:text-[16px] text-gray-700 md:mt-4 md:text-lg">
           A foundation built on real-world experience and proven tools
         </p>
 
         {/* Cards */}
-        <div className="mt-12 flex flex-col gap-4 md:mt-14 md:grid md:grid-cols-3 md:gap-6">
+        <div className="mt-6 flex flex-col gap-4 md:grid md:grid-cols-3 md:gap-6">
           {items.map((item, index) => (
             <div
               key={index}
@@ -39,17 +39,17 @@ const WhatWeBring = () => {
               "
             >
               {/* Icon */}
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#D9F4F1] md:mb-4">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#D9F4F1] md:mb-4">
                 <Image
                   src={item.icon}
                   alt=""
-                  width={24}
-                  height={24}
+                  width={40}
+                  height={40}
                 />
               </div>
 
               {/* Text */}
-              <p className="text-left text-sm font-medium text-black md:text-center md:text-base">
+              <p className="text-left text-[16px] lg:text-[18px] font-medium text-black md:text-center md:text-base">
                 {item.text}
               </p>
             </div>

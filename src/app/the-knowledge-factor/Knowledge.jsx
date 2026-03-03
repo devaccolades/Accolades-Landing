@@ -62,28 +62,28 @@ const Knowledge = () => {
           </div>
 
           {/* Cards */}
-          <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex flex-col gap-2 md:gap-4">
             {items.map((item, index) => (
               <div
                 key={index}
-                className={`flex gap-4 rounded-2xl border p-5 md:p-6 ${item.border} ${item.bg}`}
+                className={`flex gap-2 rounded-2xl border p-2 md:p-4 lg:p-6 ${item.border} ${item.bg}`}
               >
                 {/* Icon */}
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-white">
                   <Image
                     src={item.icon}
                     alt=""
-                    width={24}
-                    height={24}
+                    width={44}
+                    height={44}
                   />
                 </div>
 
-                {/* Text */}
+                {/* Text */}  
                 <div>
-                  <h3 className="text-sm font-semibold text-black md:text-base">
+                  <h3 className="text-[14px] md:text-[16px] lg:text-[18px] font-semibold text-black ">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm text-gray-600">
+                  <p className="mt-2 text-[13px] lg:text-[14px] text-gray-600">
                     {item.description}
                   </p>
                 </div>

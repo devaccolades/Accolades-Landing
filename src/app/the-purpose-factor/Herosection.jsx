@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
     return (
-        <section className="containers  w-full py-24 px-4">
+        <section className="containers w-full pt-20 pb-6 lg:pb-24 ">
             <div className="mx-auto max-w-4xl flex flex-col items-center text-center space-y-2 md:pt-12">
 
                 {/* Badge */}
@@ -29,7 +29,7 @@ export default function HeroSection() {
                 </button>
                 </a>
                 {/* Illustration */}
-                <div className="w-full mt-4 max-w-5xl">
+                <div className="w-full mt-4 md:max-w-5xl">
                     <Image
                         src="purpose/hero.png"
                         alt="Purpose-driven brand illustration"
@@ -65,7 +65,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Supporting Text */}
-                <p className="mt-14 max-w-3xl text-[14px] md:text-[16px] lg:text-[18px] text-black sm:text-base">
+                <p className="mt-4 md:mt-14 max-w-3xl text-[14px] md:text-[16px] lg:text-[18px] text-black sm:text-base">
                     Purpose is not a line on the site. It is the reason people choose you.
                     We help you find, state, and use that purpose.
                 </p>

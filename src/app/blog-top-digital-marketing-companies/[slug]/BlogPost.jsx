@@ -151,6 +151,7 @@ export default function BlogPost({ data, category, blog, slug }) {
                             alt={post?.blogs[0]?.id}
                             width={100}
                             height={100}
+                            className="h-30 w-24 object-cover"
                           />
                           <div className="flex-1 min-w-0">
                             <h4 className="font-mont font-normal lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] group-hover:text-teal-600 transition-colors line-clamp-3">

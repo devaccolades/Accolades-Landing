@@ -29,7 +29,7 @@ export default async function page({ params }) {
           slug={slug}
         />
       </main>
-      <main className="-mt-[65px]">
+      <main className="-mt-[80px]">
         {/* <Footer /> */}
         <UpdatedFooter />
       </main>

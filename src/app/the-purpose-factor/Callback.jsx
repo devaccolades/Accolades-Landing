@@ -1,6 +1,6 @@
 export default function Callback() {
   return (
-    <section className="pt-16 pb-36 bg-[#F9F9F9]">
+    <section className="pt-4 md:pt-16 pb-24 md:pb-36 bg-[#F9F9F9]">
       <div className="mx-auto containers ">
 
         {/* Headline */}
@@ -14,7 +14,7 @@ export default function Callback() {
         </p>
 
         {/* CTA Box */}
-        <div className="mt-14 rounded-2xl border border-blue-400/60 bg-blue-50 px-6 py-10 sm:px-10 sm:py-12 text-center">
+        <div className="mt-6 lg:mt-14 rounded-2xl border border-blue-400/60 bg-blue-50 px-6 py-10 sm:px-10 sm:py-12 text-center">
 
           <h3 className="text-sm font-semibold text-black sm:text-base">
             Ready to define your purpose?

@@ -23,8 +23,8 @@ const items = [
 
 export default function WhySection() {
   return (
-    <section className="bg-[#F1F8F8] ">
-      <div className="mx-auto containers rounded-3xl bg-teal-50/40 px-4 py-10 sm:px-6 md:px-12 md:py-16">
+    <section className="bg-[#F1F8F8] rounded-4xl">
+      <div className="mx-auto containers bg-teal-50/40 py-10 lg:py-16">
 
         {/* Heading */}
         <h2 className="mb-6 text-base font-bold text-black text-[18px] md:text-[20px]">

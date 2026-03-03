@@ -42,11 +42,11 @@ const framework = [
 
 export default function HowWeWork() {
     return (
-        <section className="px-4 py-6 md:py-10 lg:py-16">
+        <section className="py-6 md:py-10 lg:py-16">
             <div className="containers">
 
                 {/* Heading */}
-                <h2 className="mb-16 text-center text-[16px] md:text-[18px] lg:text-[20px] font-bold text-black">
+                <h2 className="mb-6 lg:mb-16 text-center text-[16px] md:text-[18px] lg:text-[20px] font-bold text-black">
                     How we work on purpose
                 </h2>
 
@@ -93,7 +93,7 @@ export default function HowWeWork() {
                             {index !== steps.length - 1 && (
                                 <>
                                     {/* Desktop arrow */}
-                                    <div className="mx-8 hidden md:block">
+                                    <div className="hidden md:block">
                                         <Image
                                             src="/new-seo/arrow-right.svg"
                                             alt=""
@@ -103,46 +103,56 @@ export default function HowWeWork() {
                                     </div>
 
                                     {/* Mobile arrow */}
-                                    <div className="my-4 md:hidden">
+                                    <div className="my-1 md:hidden">
                                         <Image
                                             src="/purpose/down.svg"
                                             alt=""
-                                            width={18}
-                                            height={18}
-                                    
+                                            width={8}
+                                            height={28}
+
                                         />
                                     </div>
                                 </>
-                             )}
+                            )}
                         </div>
                     ))}
 
                 </div>
 
                 {/* Quick framework */}
-                <div className="mt-24">
-                    <h3 className="mb-10 text-left text-[18px] lg:text-[20px] text-base font-bold text-black">
+                <div className="mt-12 lg:mt-24">
+                    <h3 className="mb-6 md:mb-10 text-left text-[18px] lg:text-[20px] text-base font-bold text-black">
                         Quick framework (for designers)
                     </h3>
 
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-3 items-center">
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
                         {framework.map((item) => (
                             <div
                                 key={item.title}
-                                className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
+                                className="rounded-2xl border border-gray-200 bg-white p-4 md:p-6 shadow-sm"
                             >
-                                {/* Icon */}
-                                <div className="mb-4 flex h-8 w-8 items-center justify-center rounded-full bg-green-100">
-                                    <span className="text-sm font-bold text-green-600">✓</span>
-                                </div>
+                                <div className="flex items-start gap-4 md:flex-col md:gap-3">
 
-                                {/* Text */}
-                                <h4 className="text-[16px] lg:text-[18px] font-semibold text-black">
-                                    {item.title}
-                                </h4>
-                                <p className="mt-1 text-[14px] font-normal text-black">
-                                    {item.desc}
-                                </p>
+                                    {/* Icon */}
+                                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-100">
+                                        <img
+                                            src="/purpose/tick.svg"
+                                            alt=""
+                                            className="w-10 h-10"
+                                        />
+                                    </div>
+
+                                    {/* Text */}
+                                    <div>
+                                        <h4 className="text-[16px] lg:text-[18px] font-semibold text-black">
+                                            {item.title}
+                                        </h4>
+                                        <p className="mt-1 text-[14px] text-gray-600">
+                                            {item.desc}
+                                        </p>
+                                    </div>
+
+                                </div>
                             </div>
                         ))}
                     </div>

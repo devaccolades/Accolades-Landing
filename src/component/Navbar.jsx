@@ -236,6 +236,8 @@ const Navbar = () => {
       setActive("About Us");
     } else if (pathName.includes("/contact-us")) {
       setActive("Contact Us");
+    } else if (pathName.includes("/blog-top-digital-marketing-companies")) {
+      setActive("Blogs");
     }
   }, []);
 
@@ -284,24 +286,27 @@ const Navbar = () => {
             <div className="hidden lg:flex items-center gap-[30px] xl:gap-[40px]">
               <Link href="/">
                 <p
-                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${active === "Home" ? "text-[#0C7379]" : ""
-                    }`}
+                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
+                    active === "Home" ? "text-[#0C7379]" : ""
+                  }`}
                   onClick={(e) => setActive(e.target.textContent)}
                 >
                   Home
                 </p>
               </Link>
               <p
-                className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${active === "Services" ? "text-[#0C7379]" : ""
-                  }`}
+                className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
+                  active === "Services" ? "text-[#0C7379]" : ""
+                }`}
                 onClick={(e) => handleService(e.target.textContent)}
               >
                 Services
               </p>
               <Link href="/about-us">
                 <p
-                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${active === "About Us" ? "text-[#0C7379]" : ""
-                    }`}
+                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
+                    active === "About Us" ? "text-[#0C7379]" : ""
+                  }`}
                   onClick={(e) => setActive(e.target.textContent)}
                 >
                   About Us
@@ -309,28 +314,29 @@ const Navbar = () => {
               </Link>
               <Link href="/contact-us">
                 <p
-                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${active === "Contact Us" ? "text-[#0C7379]" : ""
-                    }`}
+                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
+                    active === "Contact Us" ? "text-[#0C7379]" : ""
+                  }`}
                   onClick={(e) => setActive(e.target.textContent)}
                 >
                   Contact Us
                 </p>
               </Link>
-               <Link href="/blog-top-digital-marketing-companies">
+              <Link href="/blog-top-digital-marketing-companies">
                 <p
-                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${active === "About Us" ? "text-[#0C7379]" : ""
-                    }`}
+                  className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
+                    active === "Blogs" ? "text-[#0C7379]" : ""
+                  }`}
                   onClick={(e) => setActive(e.target.textContent)}
                 >
                   Blogs
                 </p>
               </Link>
-
             </div>
             <div className="flex flex-row items-center gap-[10px]">
               <Link href={"https://wa.me/919048100233"}>
                 <button className="bg-[#0C7379] py-[8px] px-[12px] md:py-[10px] md:px-[16px] text-white rounded-[10px] text-[12px] md:text-[16px] font-bold leading-[100%] cursor-pointer">
-                  WhatsApp 
+                  WhatsApp
                 </button>
               </Link>
               <div className="md:hidden">
@@ -369,17 +375,17 @@ const Navbar = () => {
           className="my-custom-class"
         >
           <Link href="/">
-          <Image
-            src={logo}
-            alt="logo"
-            width={160}
-            height={40}
-            className="h-[40px] w-[160px] object-contain"
-            // height={500}
-            // width={500}
-            // priority
-            // className="h-[36px] w-fit  md:w-[205px] md:h-[38px] cursor-pointer"
-          />
+            <Image
+              src={logo}
+              alt="logo"
+              width={160}
+              height={40}
+              className="h-[40px] w-[160px] object-contain"
+              // height={500}
+              // width={500}
+              // priority
+              // className="h-[36px] w-fit  md:w-[205px] md:h-[38px] cursor-pointer"
+            />
           </Link>
 
           <div className="flex flex-row items-center gap-[10px]">

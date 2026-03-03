@@ -2,6 +2,7 @@ import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
 import BlogThings from "./BlogThings";
 import { BASE_URL, getBlogs, getSeo } from "../Server";
+import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export const dynamic = "force-dynamic";
 
@@ -33,8 +34,8 @@ export default async function page() {
     <>
       {/* <Navbar /> */}
       <BlogThings data={data} />
-      <main className="-mt-[65px]">
-        <Footer />
+      <main className="-mt-[50px] md:-mt-[80px]">
+        <UpdatedFooter />
       </main>
     </>
   );

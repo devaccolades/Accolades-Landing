@@ -92,11 +92,11 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h1 className="md:text-center font-mont font-semibold xl:text-[20px] md:text-[18px] text-[14px] leading-[150%] mb-4 md:mb-8 lg:mb-12">
+            <h2 className="md:text-center font-mont font-semibold xl:text-[20px] md:text-[18px] text-[14px] leading-[150%] mb-4 md:mb-8 lg:mb-12">
               Content is the present and future of marketing. Specifically,
               there are three reasons and benefits for enterprises that use
               content marketing :
-            </h1>
+            </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 md:gap-6 gap-4 mb-4 md:mb-8 lg:mb-12">
               {[

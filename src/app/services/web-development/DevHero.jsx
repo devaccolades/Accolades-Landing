@@ -30,7 +30,7 @@ export default function WebDevHero() {
 
         {/* SUB-TEXT */}
         <p className="items-center justify-center text-center md:text-center mt-2 text-black font-medium text-[14px] md:text-[16px] leading-[106%] max-w-3xl mx-auto">
-          Aceblocks Integrated is a trusted Web Development Company in Kochi. 
+          Accolades Integrated is a trusted Web Development Company in Kochi. 
           We design and build websites that meet business goals. Our team blends 
           clean code, smart user experience, and modern tech to deliver sites 
           that load fast and convert. We focus on scalable solutions that grow 

@@ -141,14 +141,14 @@ export default function HeroSection({ selectedTag, setSelectedTag, data }) {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         {/* Simple title animation */}
-        <motion.h1
+        <motion.h2
           className="text-[#3FB4BA] font-mont font-semibold xl:text-[28px] lg:text-[26px] md:text-[24px] text-[20px] leading-[100%] mb-3"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
         >
           Latest & Trending Blogs
-        </motion.h1>
+        </motion.h2>
 
         {/* Simple paragraph animation */}
         <motion.p

@@ -32,9 +32,9 @@ export default function Types() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h1 className="font-mont font-bold xl:text-[40px] lg:text-[32px] md:text-[26px] text-[24px] text-[#3FB4BA]">
+            <h3 className="font-mont font-bold xl:text-[40px] lg:text-[32px] md:text-[26px] text-[24px] text-[#3FB4BA]">
               On-page SEO
-            </h1>
+            </h3>
             <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
               On-page SEO is essential for a winning digital marketing strategy.
               It involves optimizing individual web pages to rank higher in
@@ -91,9 +91,9 @@ export default function Types() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h1 className="font-mont font-bold xl:text-[40px] lg:text-[32px] md:text-[26px] text-[24px] text-[#3FB4BA]">
+            <h3 className="font-mont font-bold xl:text-[40px] lg:text-[32px] md:text-[26px] text-[24px] text-[#3FB4BA]">
               Off-page SEO
-            </h1>
+            </h3>
             <p className="font-mont font-normal xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] leading-[150%] text-[#2B2A29] text-justify">
               Off-page SEO enhances your website’s authority and reputation
               using external strategies. It includes building high-quality

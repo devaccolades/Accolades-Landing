@@ -52,7 +52,7 @@ export default function FullstackHero() {
       <div className="mx-auto ">
         {/* Header */}
         <div className="bg-white rounded-[30px] py-6 px-4">
-          <motion.h1
+          <motion.h2
             className="text-[#3FB4BA] font-mont font-bold text-center leading-[130%] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[70px]"
             variants={titleContainer}
             initial="hidden"
@@ -74,7 +74,7 @@ export default function FullstackHero() {
                 ))}
               </span>
             ))}
-          </motion.h1>
+          </motion.h2>
         </div>
 
         {/* Content Section */}

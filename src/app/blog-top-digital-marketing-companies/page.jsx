@@ -9,18 +9,24 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata() {
   const name = "blog";
 
-  // fetch post information
   const post = await getSeo(name);
-  // console.log("post", post[0].metaTitle);
+
+  const baseUrl = "https://www.accoladesintegrated.com";
 
   return {
     title: post[0]?.metaTitle,
     description: post[0]?.metaDescription,
+
+    alternates: {
+      canonical: `${baseUrl}/blog`, // ✅ canonical added
+    },
+
     openGraph: {
       title: post[0]?.ogTitle,
       description: post[0]?.ogDescription,
+      url: `${baseUrl}/blog`, // ✅ important
       images: [
-        BASE_URL + post[0]?.ogImage?.formats?.medium?.url, // Make sure this is a full URL to the image
+        BASE_URL + post[0]?.ogImage?.formats?.medium?.url,
       ],
     },
   };

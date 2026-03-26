@@ -30,15 +30,23 @@ export const dynamic = "force-dynamic";
 // }
 
 export async function generateMetadata() {
+  const baseUrl = "https://www.accoladesintegrated.com"; // 🔥 replace with your real domain
+
   return {
-    title: " About | Accolades Integrated ",
+    title: "About | Accolades Integrated",
     description:
-      "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow. ",
+      "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
+
+    alternates: {
+      canonical: `${baseUrl}/about-us`, 
+    },
 
     openGraph: {
-      title: " About | Accolades Integrated ",
+      title: "About | Accolades Integrated",
       description:
         "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
+      url: `${baseUrl}/about`, // ✅ good practice
+      type: "website",
     },
   };
 }

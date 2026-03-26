@@ -26,10 +26,10 @@ export default function Portfolio() {
     <>
       {/* ---------- Heading Section ---------- */}
       <div className="containers mx-auto lg:pt-16 md:pt-12 py-6">
-        <h1 className="text-center font-mont font-semibold xl:text-[56px] lg:text-[46px] md:text-[36px] text-[26px] leading-[110%] md:w-[60%] lg:w-[65%] xl:w-[55%] mx-auto">
+        <h2 className="text-center font-mont font-semibold xl:text-[56px] lg:text-[46px] md:text-[36px] text-[26px] leading-[110%] md:w-[60%] lg:w-[65%] xl:w-[55%] mx-auto">
           <span className="text-[#3FB4BA]">Creative Solutions</span> Delivering
           Quality
-        </h1>
+        </h2>
 
         <div className="flex">
           <Image

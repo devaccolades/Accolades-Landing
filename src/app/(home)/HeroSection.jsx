@@ -142,9 +142,9 @@ const HeroSection = () => {
               </p>
 
             </div>
-            <p className="text-[12px] lg:text-[14px] px-6 md:px-0 font-mont leading-[18px] font-normal mt-[14px]">
+            <h1 className="text-[12px] lg:text-[14px] px-6 md:px-0 font-mont leading-[18px] font-normal mt-[14px]">
               Your trusted branding agency in Kochi.  We shape digital experiences that perform.
-            </p>
+            </h1>
             <div className="flex justify-center font-mont items-center py-4 gap-[10px]">
               <Link href="tel:+919048689977">
                 <button className="bg-[#0C7379] py-[10px] px-[14px] md:py-[10px] md:px-[16px] text-white rounded-[10px] text-[12px] md:text-[16px] font-bold leading-[100%] cursor-pointer">

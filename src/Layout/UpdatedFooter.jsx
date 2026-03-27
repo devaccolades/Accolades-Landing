@@ -13,14 +13,105 @@ import linkedin from "../../public/updatedfooter/Frame 2147223292.svg";
 import desktop from "../../public/updatedfooter/desktop.svg";
 import tab from "../../public/updatedfooter/tab.svg";
 import mobile from "../../public/updatedfooter/mobile.svg";
+import Digital from "@/app/services/Digital";
+
+// const quickLinks = [
+//   { label: "Home", href: "/" },
+//   { label: "About Us", href: "/about-us" },
+//   { label: "Services", href: "/services" },
+//   { label: "Careers", href: "/careers" },
+//   { label: "Blogs", href: "/blog-top-digital-marketing-companies" },
+//   { label: "Contact Us", href: "/contact-us" },
+
+// //web development
+//   { label: "Web Development", href: "/services/web-development" },
+//   { label: "Fullstack Web Development", href: "/services/web-development/fullstack-development" },
+//   { label: "Wordpress Development", href: "/services/web-development/wordpress" },
+//   { label: "Ecommerce Solutions", href: "/services/web-development/ecommerce" },
+//   //Digital marketing
+//   { label: "Digital Marketing", href: "/services/digital-marketing" },
+//   { label: "Performance Marketing", href: "/services/digital-marketing/performance-marketing" },
+//   { label: "SEO", href: "/services/digital-marketing/seo" },
+//   { label: "SMM", href: "/services/digital-marketing/smm" },
+//   { label: "Google-ads", href: "/services/digital-marketing/search-engine-marketing" },
+//   { label: "Content Marketing", href: "/services/digital-marketing/content-marketing" },
+
+//   //creative
+//   { label: "Creative", href: "/services/creative" },
+//   { label: "Graphics & Motion", href: "/services/creative/graphics-motion" },
+//   { label: "Branding & Packaging", href: "/services/creative/branding-packaging" },
+//   { label: "Video Production", href: "/services/creative/video-productions" },
+
+//   //others
+
+//    { label: "AI By Accolades Integrated", href: "/ai-by-accolades-integrated" },
+//   { label: "The Market Factor", href: "/the-market-factor" },
+//   { label: "Why Digital Creative Web", href: "/why-digital-creative-web" },
+//   {
+//     label: "We are not a family, We are a team",
+//     href: "/we-are-not-a-family-we-are-a-team",
+//   },
+//   { label: "The Purpose Factor", href: "/the-purpose-factor" },
+//   { label: "Case-study", href: "/case-studies" },
+//   { label: "The Knowledge Factor", href: "/the-knowledge-factor" },
+// ];
+
 
 const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about-us" },
-  { label: "Services", href: "/services" },
-  { label: "Careers", href: "/careers" },
-  { label: "Blogs", href: "/blog-top-digital-marketing-companies" },
-  { label: "Contact Us", href: "/contact-us" },
+  {
+    title: "Quick Links",
+    links: [
+      { label: "Home", href: "/" },
+      { label: "About Us", href: "/about-us" },
+      { label: "Services", href: "/services" },
+      { label: "Careers", href: "/careers" },
+      { label: "Blogs", href: "/blog-top-digital-marketing-companies" },
+      { label: "Contact Us", href: "/contact-us" },
+       { label: "Site Map", href: "/sitemap" },
+    ],
+  },
+    {
+    title: "Digital ",
+    links: [
+      { label: "Digital Marketing", href: "/services/digital-marketing" },
+      { label: "Performance Marketing", href: "/services/digital-marketing/performance-marketing" },
+      { label: "SEO", href: "/services/digital-marketing/seo" },
+      { label: "SMM", href: "/services/digital-marketing/smm" },
+      { label: "Google Ads", href: "/services/digital-marketing/search-engine-marketing" },
+      { label: "Content Marketing", href: "/services/digital-marketing/content-marketing" },
+    ],
+  },
+  {
+    title: "Creative",
+    links: [
+      { label: "Creative", href: "/services/creative" },
+      { label: "Graphics & Motion", href: "/services/creative/graphics-motion" },
+      { label: "Branding & Packaging", href: "/services/creative/branding-packaging" },
+      { label: "Video Production", href: "/services/creative/video-productions" },
+    ],
+  },
+  {
+    title: "Web ",
+    links: [
+      { label: "Web Development", href: "/services/web-development" },
+      { label: "Fullstack Web Development", href: "/services/web-development/fullstack-development" },
+      { label: "Wordpress Development", href: "/services/web-development/wordpress" },
+      { label: "Ecommerce Solutions", href: "/services/web-development/ecommerce" },
+    ],
+  },
+
+  {
+    title: "Others",
+    links: [
+      { label: "AI By Accolades Integrated", href: "/ai-by-accolades-integrated" },
+      { label: "The Market Factor", href: "/the-market-factor" },
+      { label: "Why Digital Creative Web", href: "/why-digital-creative-web" },
+      { label: "We are not a family, We are a team", href: "/we-are-not-a-family-we-are-a-team" },
+      { label: "The Purpose Factor", href: "/the-purpose-factor" },
+      { label: "Case-study", href: "/case-studies" },
+      { label: "The Knowledge Factor", href: "/the-knowledge-factor" },
+    ],
+  },
 ];
 
 const articleLinks = [
@@ -205,14 +296,37 @@ const UpdatedFooter = () => {
           </div>
         </section>
         <div className="w-[90%] lg:w-[80%] mx-auto block flex-1 h-px bg-[#D9D9D9] my-5" />
-        <div className="w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-12 ">
-          <div className="min-w-[320px]">
+        <div className="w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-1 gap-6 xl:gap-6 ">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+  {quickLinks.map((section) => (
+    <div key={section.title}>
+      <h3 className="mb-4 text-[16px] font-bold text-[#1a7070]">
+        {section.title}
+      </h3>
+
+      <div className="flex flex-col gap-3">
+        {section.links.map((link) => (
+          <Link
+            key={link.label}
+            href={link.href}
+            className="text-[14px] text-[#2d2d2d] font-medium hover:text-[#1a7070] transition"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
+          {/* <div className="min-w-[320px]">
             <h3 className="mb-6 text-[18px] font-bold text-[#1a7070] ">
               Quick Links
             </h3>
 
-            <div className="grid grid-cols-2 gap-y-4 w-fit gap-x-10">
-              {quickLinks.map((link) => (
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-y-4 w-fit gap-x-6 md:gap-x-10">
+              {quickLinks.map((link) => ( 
                 <Link
                   key={link.label}
                   href={link.href}
@@ -222,9 +336,9 @@ const UpdatedFooter = () => {
                 </Link>
               ))}
             </div>
-          </div>
+          </div> */}
 
-          <div className="flex flex-wrap gap-2 xl:gap-3 2xl:gap-4">
+          {/* <div className="flex flex-wrap gap-2 xl:gap-3 2xl:gap-4">
             {articleLinks.map((link) => (
               <Link
                 key={link.label}
@@ -251,7 +365,7 @@ const UpdatedFooter = () => {
                 </span>
               </Link>
             ))}
-          </div>
+          </div> */}
         </div>
         <div className="w-[90%] lg:w-[80%] mx-auto block flex-1 h-px bg-[#D9D9D9] my-5" />
         <div className="w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5 lg:gap-10 pb-2 items-center">

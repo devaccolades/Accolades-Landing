@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Montserrat, Urbanist  } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat, Urbanist } from "next/font/google";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import { Zen_Old_Mincho } from "next/font/google";
@@ -65,41 +65,36 @@ export default function RootLayout({ children }) {
       <body
         className={`${mont.variable} ${zenOldMincho.variable} ${geistSans.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${urbanist.variable} antialiased`}
       >
-     
-      <LayoutWrapper />
-      {/* <Navbar className="pb-14"/> */}
+        <LayoutWrapper />
+        {/* <Navbar className="pb-14"/> */}
         {children}
 
-         <a
-          href="https://wa.me/919048100233" 
-          target="_blank"
-          rel="noopener noreferrer"
+        <a
+          href="tel:+919048100233"
           className="fixed bottom-20 lg:bottom-24 right-6 z-50"
         >
           <Image
-           src="/home/telephone.png"
+            src="/home/telephone.png"
             width={56}
             height={56}
             alt="Call Now"
             className="w-10 h-10 lg:w-14 lg:h-14"
           />
-          </a>
+        </a>
 
-         <a
-          href="https://wa.me/919048100233" 
+        <a
+          href="https://wa.me/919048100233"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50"
         >
           <Image
-           src="/home/whatsapp.svg"
+            src="/home/whatsapp.svg"
             width={56}
             height={56}
             alt="Chat on WhatsApp"
             className="w-10 h-10 lg:w-14 lg:h-14"
           />
-
-
         </a>
       </body>
     </html>

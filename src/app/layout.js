@@ -71,7 +71,22 @@ export default function RootLayout({ children }) {
         {children}
 
          <a
-          href="https://wa.me/919048100233" // Replace with actual number
+          href="https://wa.me/919048100233" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-20 lg:bottom-24 right-6 z-50"
+        >
+          <Image
+           src="/home/telephone.png"
+            width={56}
+            height={56}
+            alt="Call Now"
+            className="w-10 h-10 lg:w-14 lg:h-14"
+          />
+          </a>
+
+         <a
+          href="https://wa.me/919048100233" 
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50"
@@ -83,6 +98,8 @@ export default function RootLayout({ children }) {
             alt="Chat on WhatsApp"
             className="w-10 h-10 lg:w-14 lg:h-14"
           />
+
+
         </a>
       </body>
     </html>

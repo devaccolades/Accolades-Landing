@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Swal from "sweetalert2";
 
 
 function FormSection() {
+  const fileInputRef = useRef(null);
   const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -54,10 +55,10 @@ function FormSection() {
     if (!formData.position) newErrors.position = "Position is required";
 
     // File is optional now
-    // if (!formData.file) newErrors.file = "Please upload a file";
+    if (!formData.file) newErrors.file = "Please upload a file";
 
     // Terms checkbox is optional now
-    // if (!formData.termsAccepted) newErrors.termsAccepted = "You must accept the terms";
+    if (!formData.termsAccepted) newErrors.termsAccepted = "You must accept the terms";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -105,6 +106,10 @@ function FormSection() {
         file: null,
         termsAccepted: false,
       });
+
+      if (fileInputRef.current) {
+    fileInputRef.current.value = "";
+  }
       setErrors({});
     } else {
       Swal.fire({
@@ -217,14 +222,15 @@ function FormSection() {
             </p>
             <select
               name="position"
+              ref={fileInputRef}
               value={formData.position}
               onChange={handleChange}
               className="p-[19px] bg-white w-full rounded-xl border border-gray-300"
             >
               <option value="">Select a role</option>
-              <option value="ui/ux">UI/UX Designer</option>
-              <option value="frontend">Frontend Developer</option>
-              <option value="backend">Backend Developer</option>
+              <option value="No Vaccancy">No Vaccancy</option>
+              {/* <option value="frontend">Frontend Developer</option>
+              <option value="backend">Backend Developer</option> */}
             </select>
             {errors.position && (
               <p className="text-red-500 text-sm mt-1">{errors.position}</p>

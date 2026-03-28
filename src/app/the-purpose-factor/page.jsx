@@ -6,15 +6,33 @@ import WhySection from "./WhySection";
 import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export async function generateMetadata() {
+  const title = "The Purpose Factor | Accolades Integrated";
+
+  const description =
+    "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.";
+
+  const url =
+    "https://www.accoladesintegrated.com/the-purpose-factor"; // 👈 adjust if route differs
+
   return {
-    title: " The Purpose Factor | Accolades Integrated ",
-    description:
-      "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow. ",
+    title,
+    description,
+
+    alternates: {
+      canonical: url,
+    },
 
     openGraph: {
-      title: "The Purpose Factor | Accolades Integrated ",
-      description:
-        "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
+      title,
+      description,
+      url,
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }

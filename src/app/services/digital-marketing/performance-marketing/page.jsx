@@ -9,19 +9,36 @@ import CreativeApproach from "./CreativeApproach";
 import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export async function generateMetadata() {
+  const title = "Performance Marketing Solutions";
+
+  const description =
+    "Maximize ROI with data-driven performance marketing strategies focused on conversions, lead generation, and measurable business growth.";
+
+  const url =
+    "https://www.accoladesintegrated.com/services/digital-marketing/performance-marketing"; 
+
   return {
-    title: "Performance Marketing Solutions",
-    description:
-      "Maximize ROI with data-driven performance marketing strategies focused on conversions, lead generation, and measurable business growth. ",
+    title,
+    description,
+
+    alternates: {
+      canonical: url,
+    },
 
     openGraph: {
-      title: "Performance Marketing Solutions",
-      description:
-        "Maximize ROI with data-driven performance marketing strategies focused on conversions, lead generation, and measurable business growth. ",
+      title,
+      description,
+      url,
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }
-
 const heroData = {
   main_title: "Performance Marketing",
   title: "Drive Measurable Growth with Performance Marketing",

@@ -27,6 +27,25 @@ export const dynamic = "force-dynamic";
 //   };
 // }
 
+export async function generateMetadata() {
+  return {
+    title: "Creative Agency in Kochi | Branding, Design & Video",
+    description:
+      "Accolades Integrated — leading creative agency in Kochi for branding, graphic design, motion graphics, and video production. Build a brand that stands out.",
+
+    alternates: {
+      canonical: "https://www.accoladesintegrated.com/services/creative/graphics-motion", 
+    },
+
+    openGraph: {
+      title: "Creative Agency in Kochi | Branding, Design & Video",
+      description:
+        "Accolades Integrated — leading creative agency in Kochi for branding, graphic design, motion graphics, and video production. Build a brand that stands out.",
+      url: "https://www.accoladesintegrated.com/services/creative/graphics-motion",
+    },
+  };
+}
+
 export default function page() {
   return (
     <>

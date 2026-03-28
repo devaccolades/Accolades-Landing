@@ -42,14 +42,18 @@ export async function generateMetadata() {
     description:
       "Expert digital marketing services in Kochi. SEO, SEM, social media, creative design, and web development. Boost your brand with Accolades Integrated.",
 
+    alternates: {
+      canonical: "https://www.accoladesintegrated.com/services", 
+    },
+
     openGraph: {
       title: "Digital Marketing Services Kochi | Accolades Integrated",
       description:
         "Expert digital marketing services in Kochi. SEO, SEM, social media, creative design, and web development. Boost your brand with Accolades Integrated.",
+      url: "https://www.accoladesintegrated.com/services",
     },
   };
 }
-
 function page() {
   return (
     <section className="relative flex flex-col">

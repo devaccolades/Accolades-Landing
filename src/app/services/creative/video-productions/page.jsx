@@ -21,6 +21,24 @@ export async function generateMetadata() {
   };
 }
 
+export async function generateMetadata() {
+  return {
+    title: "Creative Video Production Services",
+     description:
+        "Bring your brand story to life with professional video production services including brand films, ads, promos, and social media video content.",
+    alternates: {
+      canonical: "https://www.accoladesintegrated.com/services/creative/video-productions", 
+    },
+
+    openGraph: {
+      title: "Creative Video Production Services",
+       description:
+        "Bring your brand story to life with professional video production services including brand films, ads, promos, and social media video content.",
+      url: "https://www.accoladesintegrated.com/services/creative/video-productions",
+    },
+  };
+}
+
 export default function page() {
   return (
     <>

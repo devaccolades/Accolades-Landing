@@ -10,6 +10,38 @@ import Image from "next/image";
 import img from "../../../public/telephone.png";
 import wat from  "../../../public/g-ads-landing/icons//whatsapp_icon.png"
 
+export async function generateMetadata() {
+  const title = "Why Digital Creative Web | Accolades Integrated";
+
+  const description =
+    "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.";
+
+  const url =
+    "https://www.accoladesintegrated.com/google-ads"; // 👈 adjust if route differs
+
+  return {
+    title,
+    description,
+
+    alternates: {
+      canonical: url,
+    },
+
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
+
 export default function Home() {
   return (
     <>

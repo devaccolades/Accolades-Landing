@@ -15,14 +15,18 @@ export async function generateMetadata() {
     description:
       "Accolades Integrated is a certified Google Partners agency in Kochi. Learn how our Google Partner status gives your brand better Google Ads results.",
 
+    alternates: {
+      canonical: "https://www.accoladesintegrated.com/google-partners", // 👈 update if slug is different
+    },
+
     openGraph: {
       title: "Google Partners Kochi – Benefits | Accolades Integrated",
       description:
         "Accolades Integrated is a certified Google Partners agency in Kochi. Learn how our Google Partner status gives your brand better Google Ads results.",
+      url: "https://www.accoladesintegrated.com/google-partners",
     },
   };
 }
-
 function page() {
   return (
     <div>

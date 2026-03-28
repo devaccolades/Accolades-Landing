@@ -8,6 +8,26 @@ import Featured from "./Featured";
 import Our from "./Our";
 import UpdatedFooter from "@/Layout/UpdatedFooter";
 
+
+export async function generateMetadata() {
+  return {
+    title: "Creative Agency in Kochi | Branding, Design & Video",
+    description:
+      "Accolades Integrated — leading creative agency in Kochi for branding, graphic design, motion graphics, and video production. Build a brand that stands out.",
+
+    alternates: {
+      canonical: "https://www.accoladesintegrated.com/services/creative/branding-packaging", 
+    },
+
+    openGraph: {
+      title: "Creative Agency in Kochi | Branding, Design & Video",
+      description:
+        "Accolades Integrated — leading creative agency in Kochi for branding, graphic design, motion graphics, and video production. Build a brand that stands out.",
+      url: "https://www.accoladesintegrated.com/services/creative/branding-packaging",
+    },
+  };
+}
+
 const page = () => {
   return (
     <>

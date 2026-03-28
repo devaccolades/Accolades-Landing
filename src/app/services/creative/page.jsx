@@ -35,10 +35,15 @@ export async function generateMetadata() {
     description:
       "Accolades Integrated — leading creative agency in Kochi for branding, graphic design, motion graphics, and video production. Build a brand that stands out.",
 
+    alternates: {
+      canonical: "https://www.accoladesintegrated.com/services/creative", // 👈 update if your route is different
+    },
+
     openGraph: {
       title: "Creative Agency in Kochi | Branding, Design & Video",
       description:
         "Accolades Integrated — leading creative agency in Kochi for branding, graphic design, motion graphics, and video production. Build a brand that stands out.",
+      url: "https://www.accoladesintegrated.com/services/creative",
     },
   };
 }

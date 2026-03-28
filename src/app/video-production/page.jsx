@@ -22,6 +22,38 @@ import {
 } from "../Server";
 import WhatOurClientsSay from "./OurClientsSay";
 
+export async function generateMetadata() {
+  const title = "Video Production | Accolades Integrated";
+
+  const description =
+    "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.";
+
+  const url =
+    "https://www.accoladesintegrated.com/video-production"; // 👈 adjust if route differs
+
+  return {
+    title,
+    description,
+
+    alternates: {
+      canonical: url,
+    },
+
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
+
 async function page() {
   const hero = await getHeroSection();
   const video = await getVideoCategories();

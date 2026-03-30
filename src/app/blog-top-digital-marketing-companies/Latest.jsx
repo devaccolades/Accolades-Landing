@@ -95,7 +95,7 @@ const BlogCardsGrid = ({ selectedTag, data }) => {
             {/* Background Image */}
             <div className="absolute inset-0">
               <Image
-                src={BASE_URL + post?.coverImage?.url}
+                 src={post?.coverImage?.url || "/fallback.jpg"}
                 alt={post.title}
                 fill
                 className="object-cover object-center opacity-90"
@@ -113,7 +113,7 @@ const BlogCardsGrid = ({ selectedTag, data }) => {
               <div className="flex-shrink-0">
                 <div className="md:w-14 md:h-14 h-10 w-10 rounded-full border-4 border-[#BFE1DE] flex items-center justify-center">
                   <Link
-                    href={`/blog-top-digital-marketing-companies/${post.id}`}
+                    href={`/blog-top-digital-marketing-companies/${post.slug}`}
                     className="md:w-10 md:h-10 w-8 h-8 bg-teal-600 hover:bg-teal-700 text-white rounded-full flex items-center justify-center transition-colors duration-200 group-hover:scale-110 transform"
                   >
                     <ArrowRight className="w-4 h-4" />

@@ -38,15 +38,34 @@ export const dynamic = "force-dynamic";
 // }
 
 export async function generateMetadata() {
+  const title =
+    "Web Development Company in Kochi | Accolades Integrated";
+
+  const description =
+    "Trusted best Web Development Company in Kochi. We build React, Nest.js, and Python websites, WordPress sites, and e-commerce stores. Request a free audit.";
+
+  const url =
+    "https://www.accoladesintegrated.com/services/web-development"; // 👈 adjust if your route differs
+
   return {
-    title: "Web Development Company in Kochi | Accolades Integrated",
-    description:
-      "Trusted best Web Development Company in Kochi. We build React, Nest.js, and Python websites, WordPress sites, and e-commerce stores. Request a free audit.",
+    title,
+    description,
+
+    alternates: {
+      canonical: url,
+    },
 
     openGraph: {
-      title: "Web Development Company in Kochi | Accolades Integrated",
-      description:
-        "Trusted best Web Development Company in Kochi. We build React, Nest.js, and Python websites, WordPress sites, and e-commerce stores. Request a free audit.",
+      title,
+      description,
+      url,
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }

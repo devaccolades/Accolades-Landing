@@ -15,25 +15,51 @@ import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export const dynamic = "force-dynamic";
 
-export async function generateMetadata() {
-  const name = "career";
 
-  // fetch post information
-  const post = await getSeo(name);
-  // console.log("post", post[0].metaTitle);
+// export async function generateMetadata() {
+//   const name = "career";
+
+//   // fetch post information
+//   const post = await getSeo(name);
+//   // console.log("post", post[0].metaTitle);
+
+//   return {
+//     title: post[0]?.metaTitle,
+//     description: post[0]?.metaDescription,
+//     openGraph: {
+//       title: post[0]?.ogTitle,
+//       description: post[0]?.ogDescription,
+//       images: [
+//         BASE_URL + post[0]?.ogImage?.formats?.medium?.url, // Make sure this is a full URL to the image
+//       ],
+//     },
+//   };
+// }
+
+export async function generateMetadata() {
+  const baseUrl = "https://www.accoladesintegrated.com/careers"; 
 
   return {
-    title: post[0]?.metaTitle,
-    description: post[0]?.metaDescription,
-    openGraph: {
-      title: post[0]?.ogTitle,
-      description: post[0]?.ogDescription,
-      images: [
-        BASE_URL + post[0]?.ogImage?.formats?.medium?.url, // Make sure this is a full URL to the image
-      ],
+    title: "Leading Branding Agency in Kochi | Accolades Integrated",
+    description:
+      "Build a brand that stands out with Accolades Integrated, the best branding company in Kochi offering strategy, design, and digital identity solutions.",
+
+    alternates: {
+      canonical: baseUrl, 
     },
+
+    openGraph: {
+      title: "Careers | Accolades Integrated",
+      description:
+        "Build a brand that stands out with Accolades Integrated, the best branding company in Kochi offering strategy, design, and digital identity solutions.",
+      url: baseUrl, 
+      type: "website",
+    },
+
+
   };
 }
+
 
 function page() {
   return (

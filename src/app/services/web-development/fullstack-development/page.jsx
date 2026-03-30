@@ -36,14 +36,34 @@ export const dynamic = "force-dynamic";
 
 
 export async function generateMetadata() {
+  const title =
+    "Web Development Services – Python Developers in Kochi";
+
+  const description =
+    "Accolades Integrated offers end-to-end full-stack web development services in Kerala. Our expert Python developers in Kochi build fast, scalable sites.";
+
+  const url =
+    "https://www.accoladesintegrated.com/services/web-development/fullstack-development"; // 👈 adjust if route differs
+
   return {
-    title: "Web Development Services – Python Developers in Kochi ",
-    description: "Accolades Integrated offers end-to-end full-stack web development services in Kerala. Our expert Python developers in Kochi build fast, scalable sites.",
+    title,
+    description,
+
+    alternates: {
+      canonical: url,
+    },
 
     openGraph: {
-      title: "Web Development Services – Python Developers in Kochi ",
-      description: "Accolades Integrated offers end-to-end full-stack web development services in Kerala. Our expert Python developers in Kochi build fast, scalable sites.",
-     
+      title,
+      description,
+      url,
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }

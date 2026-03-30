@@ -40,10 +40,15 @@ export async function generateMetadata() {
     description:
       "End to end digital marketing agency in Kochi for reliable Performance marketing, SEO, SEM, social media, and content services for business growth.",
 
+    alternates: {
+      canonical: "https://www.accoladesintegrated.com/services/digital-marketing", // 👈 adjust if route differs
+    },
+
     openGraph: {
       title: "Digital Marketing Agency in Kochi | Accolades Integrated",
       description:
         "End to end digital marketing agency in Kochi for reliable Performance marketing, SEO, SEM, social media, and content services for business growth.",
+      url: "https://www.accoladesintegrated.com/services/digital-marketing",
     },
   };
 }

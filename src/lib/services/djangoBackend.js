@@ -18,6 +18,7 @@ async function request(url, options = {}) {
 
   if (!res.ok) {
     const text = await res.text();
+    console.log("API ERROR RESPONSE:", text); 
     throw new Error(`Django API error ${res.status}: ${text}`);
   }
 
@@ -28,4 +29,25 @@ async function request(url, options = {}) {
 
 export function getCaseStudiesData() {
   return request("/api/case-studies/");
+}
+
+// SEO - List
+export function getSeoList() {
+  return request("/api/seo/");
+}
+
+// SEO - Detail (by name)
+export function getSeoByName(name) {
+  return request(`/api/seo/${name}/`);
+}
+
+// Blogs - List
+export async function getBlogs() {
+  const res = await request("/api/blogs/");
+  return res.data; 
+}
+
+// Blog - Detail (by slug)
+export function getBlogBySlug(slug) {
+  return request(`/api/blogs/${slug}`);
 }

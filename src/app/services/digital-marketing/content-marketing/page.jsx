@@ -27,25 +27,28 @@ export async function generateMetadata() {
   const title =
     "Content Marketing Services in Kochi | SEO Content Agency | Accolades Integrated";
 
-  const desc =
+  const description =
     "Looking for content marketing services in Kochi? Accolades Integrated creates SEO-driven content strategies that increase website traffic, generate leads and boost sales.";
 
-  const url = "https://www.accoladesintegrated.com/services/digital-marketing/content-marketing";
+  const url =
+    "https://www.accoladesintegrated.com/services/digital-marketing/content-marketing";
 
   return {
-    title: title,
-    description: desc,
+    title,
+    description,
 
     alternates: {
       canonical: url,
     },
 
     openGraph: {
-      title: title,
-      description: desc,
-      url: url,
+      title,
+      description,
+      url,
       type: "website",
     },
+
+
   };
 }
 export default function page() {

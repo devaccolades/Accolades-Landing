@@ -19,15 +19,34 @@ import EcommerceFaq from "./EcommerceFaq";
 import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export async function generateMetadata() {
+  const title =
+    "Reliable E-commerce Web Development Company in Kochi";
+
+  const description =
+    "Accolades Integrated, trusted e-commerce web development company in Kochi, builds Shopify, WooCommerce, and custom React/Next.js stores for online sales.";
+
+  const url =
+    "https://www.accoladesintegrated.com/services/web-development/ecommerce"; // 👈 adjust if route differs
+
   return {
-    title: "Reliable E commerce Web Development Company in Kochi ",
-    description:
-      "Accolades Integrated, Trusted E commerce Web Development Company in Kochi, builds Shopify, WooCommerce, and custom React/Next.js stores for online sales.",
+    title,
+    description,
+
+    alternates: {
+      canonical: url,
+    },
 
     openGraph: {
-      title: "Reliable E commerce Web Development Company in Kochi ",
-      description:
-        "Accolades Integrated, Trusted E commerce Web Development Company in Kochi, builds Shopify, WooCommerce, and custom React/Next.js stores for online sales.",
+      title,
+      description,
+      url,
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }

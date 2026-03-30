@@ -47,18 +47,22 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
   return {
-    title: "Contact Accolades Integrated   ",
+    title: "Contact Accolades Integrated",
     description:
-      "Get in touch with Accolades Integrated to discuss your digital marketing, branding, web development, or creative project requirements today.   ",
+      "Get in touch with Accolades Integrated to discuss your digital marketing, branding, web development, or creative project requirements today.",
+
+    alternates: {
+      canonical: "https://www.accoladesintegrated.com/contact-us", // 👈 replace with your actual URL
+    },
 
     openGraph: {
-      title: "Contact Accolades Integrated   ",
+      title: "Contact Accolades Integrated",
       description:
-        "Get in touch with Accolades Integrated to discuss your digital marketing, branding, web development, or creative project requirements today.   ",
+        "Get in touch with Accolades Integrated to discuss your digital marketing, branding, web development, or creative project requirements today.",
+      url: "https://www.accoladesintegrated.com/contact-us", // optional but recommended
     },
   };
 }
-
 const page = () => {
   return (
     <section className="relative">

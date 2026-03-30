@@ -16,7 +16,14 @@ export default function HeroSection({ data }) {
       >
         <div className="containers w-full h-full bg-white p-3 rounded-2xl">
           <Image
-            src={BASE_URL + data?.innerImage?.url}
+            // src={BASE_URL + data?.innerImage?.url}
+            src={
+    data?.image
+      ? data.image.startsWith("http")
+        ? data.image
+        : BASE_URL + data.image
+      : "/fallback.jpg"
+  }
             height={100}
             width={100}
             alt="hero-img"

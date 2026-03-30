@@ -2,7 +2,7 @@
 const nextConfig = {
   devIndicators: false,
   images: {
-    domains: ['https://strapi.video.accoladesweb.com'], // Your existing Strapi host configuration+
+    domains: [ 'https://admin.accoladesweb.com', 'https://strapi.video.accoladesweb.com'], // Your existing Strapi host configuration+
     unoptimized: true, // Disable Next.js image optimization
   },
   // Add font optimization settings:

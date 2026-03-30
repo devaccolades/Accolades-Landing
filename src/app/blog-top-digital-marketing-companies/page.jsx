@@ -1,7 +1,8 @@
 import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
 import BlogThings from "./BlogThings";
-import { BASE_URL, getBlogs, getSeo } from "../Server";
+// import { BASE_URL, getBlogs, getSeo } from "../Server";
+import { getBlogs, getSeoByName } from "@/lib/services/djangoBackend";
 import UpdatedFooter from "@/Layout/UpdatedFooter";
 
 export const dynamic = "force-dynamic";
@@ -9,37 +10,61 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata() {
   const name = "blog";
 
-  const post = await getSeo(name);
+  const post = await getSeoByName(name);
 
   const baseUrl = "https://www.accoladesintegrated.com";
 
   return {
-    title: post[0]?.metaTitle,
-    description: post[0]?.metaDescription,
+    title: post?.meta_title,
+    description: post?.meta_description,
 
     alternates: {
-      canonical: `${baseUrl}/blog`, // ✅ canonical added
+      canonical: `${baseUrl}/blog`,
     },
 
     openGraph: {
-      title: post[0]?.ogTitle,
-      description: post[0]?.ogDescription,
-      url: `${baseUrl}/blog`, // ✅ important
-      images: [
-        BASE_URL + post[0]?.ogImage?.formats?.medium?.url,
-      ],
+      title: post?.meta_title,
+      description: post?.meta_description,
+      url: `${baseUrl}/blog`,
+      images: [post?.ogImage],
     },
   };
 }
 
 export default async function page() {
-  const data = await getBlogs();
+  const blogs = await getBlogs();
 
-//   console.log("blog data", data[1].blogs);
+  // ✅ Transform API data to match your UI
+  const groupedData = Object.values(
+    blogs.reduce((acc, blog) => {
+      const category = blog.category_name || "Uncategorized";
+
+      if (!acc[category]) {
+        acc[category] = {
+          category,
+          blogs: [],
+        };
+      }
+
+      acc[category].blogs.push({
+        id: blog.id,
+        title: blog.title,
+        category: blog.category_name,
+        coverImage: {
+          url: blog.image, // ⚠️ important
+        },
+        time: blog.blog_date,
+        readTime: "5 min read", // optional (since not in backend)
+        slug: blog.slug,
+      });
+
+      return acc;
+    }, {})
+  );
   return (
     <>
       {/* <Navbar /> */}
-      <BlogThings data={data} />
+      <BlogThings data={groupedData} />
       <main className="-mt-[50px] md:-mt-[80px]">
         <UpdatedFooter />
       </main>

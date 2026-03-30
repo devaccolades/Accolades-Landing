@@ -29,16 +29,30 @@ export const dynamic = "force-dynamic";
 // }
 
 export async function generateMetadata() {
+  const title = "Search Engine Marketing Services (SEM)";
+
+  const description =
+    "Drive instant traffic and qualified leads with result-oriented search engine marketing services, including Google Ads and PPC campaign optimization.";
+
+  const url =
+    "https://www.accoladesintegrated.com/services/digital-marketing/search-engine-marketing"; 
+
   return {
-    title: "Search Engine Marketing Services (SEM)",
-    description:
-      "Drive instant traffic and qualified leads with result-oriented search engine marketing services, including Google Ads and PPC campaign optimization. ",
+    title,
+    description,
+
+    alternates: {
+      canonical: url,
+    },
 
     openGraph: {
-      title: "Search Engine Marketing Services (SEM)",
-      description:
-        "Drive instant traffic and qualified leads with result-oriented search engine marketing services, including Google Ads and PPC campaign optimization. ",
+      title,
+      description,
+      url,
+      type: "website",
     },
+
+  
   };
 }
 

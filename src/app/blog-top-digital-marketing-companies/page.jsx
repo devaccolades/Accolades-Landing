@@ -37,7 +37,7 @@ export default async function page() {
   // ✅ Transform API data to match your UI
   const groupedData = Object.values(
     blogs.reduce((acc, blog) => {
-      const category = blog.category || "Uncategorized";
+      const category = blog.category_name || "Uncategorized";
 
       if (!acc[category]) {
         acc[category] = {
@@ -49,7 +49,7 @@ export default async function page() {
       acc[category].blogs.push({
         id: blog.id,
         title: blog.title,
-        category: blog.category,
+        category: blog.category_name,
         coverImage: {
           url: blog.image, // ⚠️ important
         },

@@ -13,19 +13,25 @@ import Link from "next/link";
 
 export default function BlogPost({ data, category, related = [], slug }) {
   let relatedPosts = related.filter(
-  (post) => post.category === data?.category
+  (post) =>
+    post.slug !== slug &&
+    post.selectCategory?.id === data?.selectCategory?.id
 );
 
-// fallback if not enough
+// fallback if less than 3
 if (relatedPosts.length < 3) {
   const extra = related.filter(
     (post) =>
-      post.category !== data?.category &&
+      post.slug !== slug &&
+      post.selectCategory?.id !== data?.selectCategory?.id &&
       !relatedPosts.find((p) => p.id === post.id)
   );
 
   relatedPosts = [...relatedPosts, ...extra].slice(0, 3);
 }
+
+  console.log("CURRENT BLOG:", data);
+  console.log("RELATED:", related);
 
   return (
     <div
@@ -106,7 +112,7 @@ if (relatedPosts.length < 3) {
                     return (
                       <Link
                         key={post.id}
-                        href={`/blog/${post.slug}`}
+                        href={`/blog-top-digital-marketing-companies/${post.slug}`}
                       >
                         <div className="flex gap-4 group cursor-pointer">
                           

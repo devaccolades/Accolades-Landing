@@ -14,55 +14,68 @@ import bottomGrade from "../../../public/services/bottomSide.webp";
 import Image from "next/image";
 import UpdatedFooter from "@/Layout/UpdatedFooter";
 // import { BASE_URL, getSeo } from '../Server'
-
 export const dynamic = "force-dynamic";
-
-// export  async function generateMetadata() {
-//   const name = "contact";
-
-//   const post = await getSeo(name);
-
-//   return {
-//     title: post[0]?.metaTitle,
-//     description: post[0]?.metaDescription,
-//     openGraph: {
-//       title: post[0]?.ogTitle,
-//       description: post[0]?.ogDescription,
-//       images: [
-//         BASE_URL + post[0]?.ogImage?.formats?.medium?.url, // Make sure this is a full URL to the image
-//       ],
-//     },
-//   };
-// }
-
-// const kochiData = {
-//         locationName: "Kochi",
-//         address: "Accolades Integrated Pvt Ltd, Rahmath Building, 46/2056 - A, AKG Vayanasala Road, Chakkaraparambu,Vennala, Kochi, Ernakulam, Kerala 682028",
-//         email: "mail@accoladesmedia.co.in",
-//         phoneNumbers: ["+91 90726 19922", "+91 87143 04849"],
-//         // For the map, you would typically use an embed URL from Google Maps.
-//         // For demonstration, I'm using the provided image as a placeholder.
-//         mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.338634640268!2d76.31439647589313!3d9.988860973224527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080cf7e6baeda3%3A0x1f053eaaf85f927b!2sACCOLADES%20Integrated%20Pvt.Ltd!5e0!3m2!1sen!2sin!4v1753441166710!5m2!1sen!2sin"
-//     };
+import { getSeoByName } from "@/lib/services/djangoBackend";
 
 export async function generateMetadata() {
+  const baseUrl = "https://www.accoladesintegrated.com";
+
+  try {
+    const seo = await getSeoByName("contact-us"); // ✅ match Django `page`
+
+    if (seo && Object.keys(seo).length > 0) {
+      return {
+        title: seo.meta_title || "Contact Accolades Integrated",
+
+        description:
+          seo.meta_description ||
+          "Get in touch with Accolades Integrated to discuss your digital marketing, branding, web development, or creative project requirements today.",
+
+        alternates: {
+          canonical: `${baseUrl}/contact-us`,
+        },
+
+        openGraph: {
+          title: seo.og_title || seo.meta_title,
+          description: seo.og_description || seo.meta_description,
+          url: `${baseUrl}/contact-us`,
+          type: "website",
+          images: seo.og_image
+            ? [
+                {
+                  url: seo.og_image,
+                  width: 1200,
+                  height: 630,
+                },
+              ]
+            : [],
+        },
+      };
+    }
+  } catch (error) {
+    console.log("SEO fetch failed (contact):", error.message);
+  }
+
+  // ✅ fallback (your current static one)
   return {
     title: "Contact Accolades Integrated",
     description:
       "Get in touch with Accolades Integrated to discuss your digital marketing, branding, web development, or creative project requirements today.",
 
     alternates: {
-      canonical: "https://www.accoladesintegrated.com/contact-us", // 👈 replace with your actual URL
+      canonical: `${baseUrl}/contact-us`,
     },
 
     openGraph: {
       title: "Contact Accolades Integrated",
       description:
         "Get in touch with Accolades Integrated to discuss your digital marketing, branding, web development, or creative project requirements today.",
-      url: "https://www.accoladesintegrated.com/contact-us", // optional but recommended
+      url: `${baseUrl}/contact-us`,
+      type: "website",
     },
   };
 }
+
 const page = () => {
   return (
     <section className="relative">

@@ -5,47 +5,66 @@ import Navbar from "@/component/Navbar";
 import VideoTestimonials from "./VideoTestimonials";
 import DirectorsSection from "./Directors";
 import UpdatedFooter from "@/Layout/UpdatedFooter";
-// import { BASE_URL, getSeo } from "../Server";
+import { getSeoByName } from "@/lib/services/djangoBackend";
 
 export const dynamic = "force-dynamic";
 
-// export async function generateMetadata() {
-//   const name = "about-us";
 
-//   // fetch post information
-//   const post = await getSeo(name);
-//   // console.log("post", post[0].metaTitle);
-
-//   return {
-//     title: post[0]?.metaTitle,
-//     description: post[0]?.metaDescription,
-//     openGraph: {
-//       title: post[0]?.ogTitle,
-//       description: post[0]?.ogDescription,
-//       images: [
-//         BASE_URL + post[0]?.ogImage?.formats?.medium?.url, // Make sure this is a full URL to the image
-//       ],
-//     },
-//   };
-// }
 
 export async function generateMetadata() {
-  const baseUrl = "https://www.accoladesintegrated.com"; // 🔥 replace with your real domain
+  const baseUrl = "https://www.accoladesintegrated.com";
 
+  try {
+    const seo = await getSeoByName("about"); // ⚠️ make sure this matches Django `page`
+
+    if (seo && Object.keys(seo).length > 0) {
+      return {
+        title: seo.meta_title || "About | Accolades Integrated",
+
+        description:
+          seo.meta_description ||
+          "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
+
+        alternates: {
+          canonical: `${baseUrl}/about-us`,
+        },
+
+        openGraph: {
+          title: seo.og_title || seo.meta_title,
+          description: seo.og_description || seo.meta_description,
+          url: `${baseUrl}/about-us`, // ⚠️ keep consistent (you had `/about`)
+          type: "website",
+          images: seo.og_image
+            ? [
+                {
+                  url: seo.og_image,
+                  width: 1200,
+                  height: 630,
+                },
+              ]
+            : [],
+        },
+      };
+    }
+  } catch (error) {
+    console.log("SEO fetch failed (about):", error.message);
+  }
+
+  // ✅ fallback (your current one)
   return {
     title: "About | Accolades Integrated",
     description:
       "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
 
     alternates: {
-      canonical: `${baseUrl}/about-us`, 
+      canonical: `${baseUrl}/about-us`,
     },
 
     openGraph: {
       title: "About | Accolades Integrated",
       description:
         "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.",
-      url: `${baseUrl}/about`, // ✅ good practice
+      url: `${baseUrl}/about-us`, // fixed mismatch
       type: "website",
     },
   };

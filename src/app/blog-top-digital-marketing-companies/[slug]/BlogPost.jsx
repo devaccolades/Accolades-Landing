@@ -12,7 +12,7 @@ import { BASE_URL } from "@/app/Server";
 import Link from "next/link";
 
 export default function BlogPost({ data, category, related = [], slug }) {
-  const relatedPosts = related;
+  const relatedPosts = related?.length ? related : [];
 
 
   return (
@@ -85,6 +85,7 @@ export default function BlogPost({ data, category, related = [], slug }) {
           <div className="lg:col-span-1">
             <div className="sticky top-8 space-y-6">
 
+
               {/* RELATED POSTS */}
               <motion.div
                 className="bg-white rounded-2xl shadow-lg p-6"
@@ -137,6 +138,7 @@ export default function BlogPost({ data, category, related = [], slug }) {
                   })}
                 </div>
               </motion.div>
+              
 
             </div>
           </div>

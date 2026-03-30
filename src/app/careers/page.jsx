@@ -16,49 +16,67 @@ import UpdatedFooter from "@/Layout/UpdatedFooter";
 export const dynamic = "force-dynamic";
 
 
-// export async function generateMetadata() {
-//   const name = "career";
-
-//   // fetch post information
-//   const post = await getSeo(name);
-//   // console.log("post", post[0].metaTitle);
-
-//   return {
-//     title: post[0]?.metaTitle,
-//     description: post[0]?.metaDescription,
-//     openGraph: {
-//       title: post[0]?.ogTitle,
-//       description: post[0]?.ogDescription,
-//       images: [
-//         BASE_URL + post[0]?.ogImage?.formats?.medium?.url, // Make sure this is a full URL to the image
-//       ],
-//     },
-//   };
-// }
+import { getSeoByName } from "@/lib/services/djangoBackend";
 
 export async function generateMetadata() {
-  const baseUrl = "https://www.accoladesintegrated.com/careers"; 
+  const baseUrl = "https://www.accoladesintegrated.com/careers";
 
+  try {
+    const seo = await getSeoByName("careers");
+
+    if (seo && Object.keys(seo).length > 0) {
+      return {
+        title:
+          seo.meta_title ||
+          "Leading Branding Agency in Kochi | Accolades Integrated",
+
+        description:
+          seo.meta_description ||
+          "Build a brand that stands out with Accolades Integrated, the best branding company in Kochi offering strategy, design, and digital identity solutions.",
+
+        alternates: {
+          canonical: baseUrl,
+        },
+
+        openGraph: {
+          title: seo.og_title || seo.meta_title,
+          description: seo.og_description || seo.meta_description,
+          url: baseUrl,
+          type: "website",
+          images: seo.og_image
+            ? [
+                {
+                  url: seo.og_image,
+                  width: 1200,
+                  height: 630,
+                },
+              ]
+            : [],
+        },
+      };
+    }
+  } catch (error) {
+    console.log("SEO fetch failed:", error.message);
+  }
+
+  // ✅ fallback
   return {
     title: "Leading Branding Agency in Kochi | Accolades Integrated",
     description:
       "Build a brand that stands out with Accolades Integrated, the best branding company in Kochi offering strategy, design, and digital identity solutions.",
-
     alternates: {
-      canonical: baseUrl, 
+      canonical: baseUrl,
     },
-
     openGraph: {
-      title: "Careers | Accolades Integrated",
+      title: "Leading Branding Agency in Kochi | Accolades Integrated",
       description:
         "Build a brand that stands out with Accolades Integrated, the best branding company in Kochi offering strategy, design, and digital identity solutions.",
-      url: baseUrl, 
+      url: baseUrl,
       type: "website",
     },
-
-
   };
 }
+
 
 
 function page() {

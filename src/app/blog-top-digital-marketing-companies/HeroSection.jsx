@@ -4,10 +4,13 @@ import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function HeroSection({ selectedTag, setSelectedTag, data }) {
-  const tagRows = data;
+  // const tagRows = data;
+  console.log("DATA:", data);
   const alltag = { category: "All" };
-  const [tags, setTags] = useState(tagRows);
-  const alltags = [alltag, ...tags];
+  // const [tags, setTags] = useState(tagRows);
+  // const alltags = [alltag, ...tags];
+  const tags = [...new Set(data?.map((item) => item.category))];
+const alltags = ["All", ...tags];
   const scrollContainerRef = useRef(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
@@ -91,22 +94,26 @@ export default function HeroSection({ selectedTag, setSelectedTag, data }) {
             ref={scrollContainerRef}
             className="flex flex-nowrap overflow-x-auto scrollbar-hide py-2 px-1 custom-scrollbar-hide"
           >
-            {alltags.map((tag, tagIndex) => (
+            {/* {alltags.map((tag, tagIndex) => (
               <button
                 key={`${tagIndex}`}
-                // FIXED: Only pass tag.label to handleTagClick
-                onClick={() => handleTagClick(tag.category)}
-                className={`
-                  flex-shrink-0 px-4 py-2 font-mont font-normal rounded-full text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] transition-all duration-200 hover:shadow-md mx-1
-                  ${selectedTag === tag.category
-                    ? "bg-[#5EB6BB] text-white shadow-lg"
-                    : "bg-[#F2FBFB] text-gray-600 hover:bg-gray-200"
-                  }
-                `}
-              >
-                {[tag.category]}
-              </button>
-            ))}
+                
+                onClick={() => handleTagClick(tag.category)} */}
+                {alltags.map((tag, tagIndex) => (
+  <button
+    key={tagIndex}
+    onClick={() => handleTagClick(tag)}
+    className={`
+      flex-shrink-0 px-4 py-2 font-mont font-normal rounded-full text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px]
+      ${selectedTag === tag
+        ? "bg-[#5EB6BB] text-white shadow-lg"
+        : "bg-[#F2FBFB] text-gray-600 hover:bg-gray-200"
+      }
+    `}
+  >
+    {tag}
+  </button>
+))}
           </div>
 
           {showRightArrow && (

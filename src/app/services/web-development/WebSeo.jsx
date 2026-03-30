@@ -100,8 +100,8 @@ function WebSeo() {
                         </h3>
                         <div className="flex flex-col gap-[10px]">
                             <p className="text-[12px] md:text-[13px]">
-                                For JavaScript back ends, we use Nest.js. It provides clear architecture,
-                                dependency injection, and scalable modules. Nest.js helps us deliver reliable APIs and services that handle growth.
+                                For JavaScript back ends, we use Next.js. It provides clear architecture,
+                                dependency injection, and scalable modules. Next.js helps us deliver reliable APIs and services that handle growth.
                             </p>
 
                         </div>

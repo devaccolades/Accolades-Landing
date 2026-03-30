@@ -8,7 +8,7 @@ export default function WebDevServices() {
       icon: <Code size={22} className="text-[#4169E1]" />,
       title: "Full-Stack Web Development",
       href:"/services/web-development/fullstack-development",
-      desc: "We build custom web apps from the database to the browser. We use React for fast front ends and Nest.js or Python for robust back ends. This approach gives you a single team that owns the full product.",
+      desc: "We build custom web apps from the database to the browser. We use React for fast front ends and Next.js or Python for robust back ends. This approach gives you a single team that owns the full product.",
     },
     {
       icon: <Globe size={22} className="text-[#4169E1]" />,

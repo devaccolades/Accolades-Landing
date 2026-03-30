@@ -6,32 +6,14 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import { Calendar } from "lucide-react";
+import { Calendar, User } from "lucide-react";
 import Image from "next/image";
 import { BASE_URL } from "@/app/Server";
 import Link from "next/link";
 
 export default function BlogPost({ data, category, related = [], slug }) {
-  let relatedPosts = related.filter(
-  (post) =>
-    post.slug !== slug &&
-    post.selectCategory?.id === data?.selectCategory?.id
-);
+  const relatedPosts = related;
 
-// fallback if less than 3
-if (relatedPosts.length < 3) {
-  const extra = related.filter(
-    (post) =>
-      post.slug !== slug &&
-      post.selectCategory?.id !== data?.selectCategory?.id &&
-      !relatedPosts.find((p) => p.id === post.id)
-  );
-
-  relatedPosts = [...relatedPosts, ...extra].slice(0, 3);
-}
-
-  console.log("CURRENT BLOG:", data);
-  console.log("RELATED:", related);
 
   return (
     <div
@@ -41,8 +23,8 @@ if (relatedPosts.length < 3) {
       }}
     >
       <div className="containers py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 md:gap-6 gap-4">
-          
+        <div className="grid grid-cols-1 md:grid-cols-[70%_30%] lg:grid-cols-3 lg:gap-6  gap-4">
+
           {/* ================= MAIN CONTENT ================= */}
           <motion.div
             className="lg:col-span-2"
@@ -51,7 +33,7 @@ if (relatedPosts.length < 3) {
             transition={{ duration: 0.6 }}
           >
             <article className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              
+
               {/* HEADER */}
               <div className="md:px-8 px-4 pt-8">
                 <span className="font-mont p-2 text-sm text-[#7B7B7B] rounded-[30px] border">
@@ -62,9 +44,22 @@ if (relatedPosts.length < 3) {
                   {data?.title}
                 </h1>
 
-                <div className="flex items-center gap-4 text-sm text-gray-600 mb-6">
-                  <Calendar className="w-4 h-4" />
-                  <span>{data?.blog_date}</span>
+                <div className="flex items-center gap-6 text-sm text-gray-600 mb-6">
+
+                  {/* DATE */}
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>{data?.blog_date}</span>
+                  </div>
+
+                  {/* AUTHOR */}
+                  {data?.author_name && (
+                    <div className="flex items-center gap-2">
+                      <User className="w-4 h-4" />
+                      <span>{data?.author_name}</span>
+                    </div>
+                  )}
+
                 </div>
               </div>
 
@@ -78,9 +73,9 @@ if (relatedPosts.length < 3) {
                     {data?.descriptions || ""}
                   </ReactMarkdown> */}
                   <div
-  className="blog-content prose max-w-none"
-  dangerouslySetInnerHTML={{ __html: data?.descriptions || "" }}
-/>
+                    className="blog-content prose max-w-none"
+                    dangerouslySetInnerHTML={{ __html: data?.descriptions || "" }}
+                  />
                 </div>
               </div>
             </article>
@@ -104,10 +99,10 @@ if (relatedPosts.length < 3) {
                 <div className="space-y-6">
                   {relatedPosts.map((post) => {
                     const imageUrl = post?.image
-  ? post.image.startsWith("http")
-    ? post.image
-    : BASE_URL + post.image
-  : null;
+                      ? post.image.startsWith("http")
+                        ? post.image
+                        : BASE_URL + post.image
+                      : null;
 
                     return (
                       <Link
@@ -115,7 +110,7 @@ if (relatedPosts.length < 3) {
                         href={`/blog-top-digital-marketing-companies/${post.slug}`}
                       >
                         <div className="flex gap-4 group cursor-pointer">
-                          
+
                           {/* IMAGE */}
                           {imageUrl ? (
                             <Image

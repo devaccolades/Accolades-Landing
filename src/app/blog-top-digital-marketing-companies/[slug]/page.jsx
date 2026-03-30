@@ -6,7 +6,7 @@ import UpdatedFooter from "@/Layout/UpdatedFooter";
 import { getBlogBySlug, getBlogs } from "@/lib/services/djangoBackend";
 
 export async function generateMetadata({ params }) {
-  const { slug } = params;
+  const { slug } = await params;  
   const baseUrl = "https://www.accoladesintegrated.com";
 
   try {
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function page({ params }) {
-  const { slug } = params;
+  const { slug } = await params;  
 
   const blogs = await getBlogs();
   const res = await getBlogBySlug(slug);
@@ -58,11 +58,11 @@ export default async function page({ params }) {
       <main className="bg-[#F1F1F1]">
         <HeroSection data={data} />
         <BlogPost
-  data={data}
-  category={data?.category_name}
-  related={blogs}
-  slug={slug}
-/>
+          data={data}
+          category={data?.category_name}
+          related={related} 
+          slug={slug}
+        />
       </main>
 
       <main className="-mt-[80px]">

@@ -11,8 +11,8 @@ export default function Technologies() {
     },
     {
       icon: <CodeXml size={22} className="text-[#F38BA0]" />,
-      title: "Nest.js for Structured Back-Ends",
-      desc: "For TypeScript back ends, we use Nest.js. It provides clear architecture, dependency injection, and scalable modules. Nest.js helps us deliver reliable APIs and services that handle growth.",
+      title: "Next.js for Structured Back-Ends",
+      desc: "For TypeScript back ends, we use Next.js. It provides clear architecture, dependency injection, and scalable modules. Next.js helps us deliver reliable APIs and services that handle growth.",
       bg: "bg-[#FFF0F3]",
       border: "border-[#F7C6D0]"
     },

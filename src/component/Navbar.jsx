@@ -15,13 +15,13 @@ const navItems = [
   { label: "About", href: "/about-us" },
   { label: "Contact", href: "/contact-us" },
   { label: "Careers", href: "/careers" },
-  { label: "Blog", href: "/blog-top-digital-marketing-companies" },
+  { label: "Blog", href: "/blogs" },
 ];
 
 const mobileNavLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about-us" },
-  { label: "Blogs", href: "/blog-top-digital-marketing-companies" },
+  { label: "Blogs", href: "/blogs" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact-us" },
   { label: "Services", href: "/services" },
@@ -236,7 +236,7 @@ const Navbar = () => {
       setActive("About Us");
     } else if (pathName.includes("/contact-us")) {
       setActive("Contact Us");
-    } else if (pathName.includes("/blog-top-digital-marketing-companies")) {
+    } else if (pathName.includes("/blogs")) {
       setActive("Blogs");
     }
   }, []);
@@ -322,7 +322,7 @@ const Navbar = () => {
                   Contact Us
                 </p>
               </Link>
-              <Link href="/blog-top-digital-marketing-companies">
+              <Link href="/blogs">
                 <p
                   className={`text-[16px] leading-[100%] font-semibold cursor-pointer ${
                     active === "Blogs" ? "text-[#0C7379]" : ""

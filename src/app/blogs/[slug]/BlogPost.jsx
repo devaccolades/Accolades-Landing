@@ -108,7 +108,7 @@ export default function BlogPost({ data, category, related = [], slug }) {
                     return (
                       <Link
                         key={post.id}
-                        href={`/blog-top-digital-marketing-companies/${post.slug}`}
+                        href={`/blogs/${post.slug}`}
                       >
                         <div className="flex gap-4 group cursor-pointer">
 

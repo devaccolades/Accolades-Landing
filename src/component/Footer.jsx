@@ -79,7 +79,7 @@ const Footer = () => {
                 </a>
               </li>
               {/* <li>
-                <a href="/blog-top-digital-marketing-companies" className="hover:text-teal-700 transition">
+                <a href="/blogs" className="hover:text-teal-700 transition">
                   Blogs
                 </a>
               </li> */}
@@ -154,7 +154,7 @@ const Footer = () => {
                 </a>
               </li>
               {/* <li>
-                <a href="/blog-top-digital-marketing-companies" className="hover:text-teal-700 transition">
+                <a href="/blogs" className="hover:text-teal-700 transition">
                   Blogs
                 </a>
               </li> */}

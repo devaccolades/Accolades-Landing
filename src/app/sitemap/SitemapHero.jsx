@@ -9,7 +9,7 @@ const quickLinks = [
       { label: "About Us", href: "/about-us" },
       { label: "Services", href: "/services" },
       { label: "Careers", href: "/careers" },
-      { label: "Blogs", href: "/blog-top-digital-marketing-companies" },
+      { label: "Blogs", href: "/blogs" },
       { label: "Contact Us", href: "/contact-us" },
     ],
   },

@@ -85,7 +85,7 @@ export default function ModalServices({ isOpen, onClose }) {
     },
      {
       label: "Blogs",
-      href: "/blog-top-digital-marketing-companies",
+      href: "/blogs",
     },
   ];
 

@@ -28,60 +28,16 @@ const OurPartners = ({ data }) => {
         <div className="pointer-events-none absolute top-0 left-0 h-full w-8 sm:w-16 lg:w-24 bg-gradient-to-r from-white to-transparent z-10" />
         <div className="pointer-events-none absolute top-0 right-0 h-full w-8 sm:w-16 lg:w-24 bg-gradient-to-l from-white to-transparent z-10" />
 
-        {/* First row - scrolling left */}
-        <div className="flex animate-marquee whitespace-nowrap items-center mb-[3px] lg:mb-4 gap-[3px]">
+        {/* Scrolling marquee */}
+        <div className="flex animate-marquee whitespace-nowrap items-center p-2 gap-[6px]">
           {loopedPartners.map((partner, index) => (
-            <div
-              key={`left-${index}`}
-              className="flex items-center justify-center shadow-lg rounded-lg px-[10px] py-[10px]"
-            >
-              <div className="relative h-12 w-24 lg:h-20 lg:w-32 ">
-                <Image
-                  src={partner.logo}
-                  alt="partner logo"
-                  fill
-                  className="object-contain"
-                  loading="lazy"
-                  // sizes="128px"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="flex animate-marquee-reverse whitespace-nowrap items-center">
-          {loopedPartners.map((partner, index) => (
-            <div
-              key={`left-${index}`}
-              className="flex items-center justify-center  shadow-lg rounded-lg px-[10px] py-[10px]"
-            >
-              <div className="relative h-12 w-24 lg:h-20 lg:w-32">
-                <Image
-                  src={partner.logo}
-                  alt="partner logo"
-                  fill
-                  className="object-contain"
-                  loading="lazy"
-                  // sizes="128px"
-                />
-              </div>
+            <div key={`left-${index}`} className="flex items-center justify-center shadow-2xl rounded-lg px-[10px] py-[10px]">
+              <div className="relative h-12 w-24 md:h-16 md:w-32 lg:h-20 lg:w-40 xl:h-30 xl:w-45"><Image src={partner.logo} alt="partner logo" fill className="object-contain" loading="lazy" /></div>
             </div>
           ))}
           {loopedPartners.map((partner, index) => (
-            <div
-              key={`right-${index}`}
-              className="flex items-center justify-center shadow-lg rounded-lg px-[10px] py-[10px]"
-            >
-              <div className="relative h-12 w-24 lg:h-20 lg:w-32">
-                <Image
-                  src={partner.logo}
-                  alt="partner logo"
-                  fill
-                  className="object-contain"
-                  sizes="128px"
-                  loading="lazy"
-                />
-              </div>
+            <div key={`right-${index}`} className="flex items-center justify-center shadow-2xl rounded-lg px-[10px] py-[10px]">
+              <div className="relative h-12 w-24 md:h-16 md:w-32 lg:h-20 lg:w-40 xl:h-30 xl:w-45"><Image src={partner.logo} alt="partner logo" fill className="object-contain" loading="lazy" /></div>
             </div>
           ))}
         </div>

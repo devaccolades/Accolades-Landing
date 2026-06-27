@@ -5,6 +5,7 @@ import ScrollingRow from "./ScrollingRow";
 import { motion } from "framer-motion";
 
 function WhyBrands({ data }) {
+  console.log("WhyBrands data:", data);
   return (
     <section className="containers py-4 grid">
       <div className="grid grid-cols-1 md:grid-cols-2">

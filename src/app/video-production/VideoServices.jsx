@@ -13,34 +13,49 @@ function VideoServices({ data }) {
   // console.log("data", data[0]);
   const [selected, setSelected] = useState(data[0].name);
   const [loading, setLoading] = useState({});
+  const [activeVideoKey, setActiveVideoKey] = useState(null);
+  const [modalVideo, setModalVideo] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
   const contents = data;
 
-  // Create refs and hover states for all videos
   const videoRefs = useRef({});
-  const [hoverStates, setHoverStates] = useState({});
 
-  const handleMouseEnter = (itemName, videoIndex) => {
-    setHoverStates((prev) => ({
-      ...prev,
-      [`${itemName}-${videoIndex}`]: true,
-    }));
-    const ref = videoRefs.current[`${itemName}-${videoIndex}`];
-    if (ref) {
-      ref.currentTime = 0;
-      ref.play().catch((e) => console.warn("Video play failed:", e));
+  useEffect(() => {
+    const updateIsMobile = () => setIsMobile(window.innerWidth < 768);
+    updateIsMobile();
+    window.addEventListener("resize", updateIsMobile);
+    return () => window.removeEventListener("resize", updateIsMobile);
+  }, []);
+
+  useEffect(() => {
+    Object.entries(videoRefs.current).forEach(([key, ref]) => {
+      if (!ref) return;
+      if (key === activeVideoKey) {
+        ref.currentTime = 0;
+        ref.play().catch((e) => console.warn("Video play failed:", e));
+      } else {
+        ref.pause();
+        ref.currentTime = 0;
+      }
+    });
+  }, [activeVideoKey]);
+
+  const handleVideoClick = (itemName, videoIndex, vid) => {
+    const videoKey = `${itemName}-${videoIndex}`;
+    if (isMobile) {
+      setModalVideo({ videoKey, itemName, vid });
+      setActiveVideoKey(null);
+      return;
     }
+
+    setModalVideo(null);
+    setActiveVideoKey((currentKey) =>
+      currentKey === videoKey ? null : videoKey
+    );
   };
 
-  const handleMouseLeave = (itemName, videoIndex) => {
-    setHoverStates((prev) => ({
-      ...prev,
-      [`${itemName}-${videoIndex}`]: false,
-    }));
-    const ref = videoRefs.current[`${itemName}-${videoIndex}`];
-    if (ref) {
-      ref.pause();
-      ref.currentTime = 0;
-    }
+  const closeModal = () => {
+    setModalVideo(null);
   };
 
   return (
@@ -56,7 +71,7 @@ function VideoServices({ data }) {
       </motion.p>
 
       <motion.div
-        className="flex gap-[20px] items-center overflow-x-scroll scrollbar-hidden p-8"
+        className="flex gap-[20px] items-center overflow-x-scroll scrollbar-hidden"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
@@ -152,7 +167,6 @@ function VideoServices({ data }) {
                   <AnimatePresence mode="wait">
                     {item.videos.map((vid, index) => {
                       const videoKey = `${item.name}-${index}`;
-                      const isHovered = hoverStates[videoKey] || false;
                       const isVertical = vid.orientation === "vertical";
 
                       return (
@@ -190,27 +204,22 @@ function VideoServices({ data }) {
                                   </div>
                                 )}
                                 <div
-                                  className={`absolute  inset-0 overflow-hidden ${
+                                  className={`absolute inset-0 overflow-hidden ${
                                     isVertical
                                       ? "rounded-[30px] mx-[10px] my-[10px]"
-                                      : "-left-[68px] h-[170px] w-[245px]  rounded-[20px] mx-[70px] my-[0px] md:w-[570px] md:h-[425px] md:left-[0px] md:inset-0"
-                                  } bg-black`}
-                                  onMouseEnter={() =>
-                                    handleMouseEnter(item.name, index)
-                                  }
-                                  onMouseLeave={() =>
-                                    handleMouseLeave(item.name, index)
+                                      : "-left-[68px] h-[170px] w-[245px] rounded-[20px] mx-[70px] my-[0px] md:w-[570px] md:h-[425px] md:left-[0px] md:inset-0"
+                                  } bg-black cursor-pointer`}
+                                  onClick={() =>
+                                    handleVideoClick(item.name, index, vid)
                                   }
                                 >
-                                  {!isHovered && (
-                                    <Image
-                                      src={vid.poster}
-                                      alt="cover"
-                                      fill
-                                      className="object-cover transition-opacity duration-300"
-                                    />
-                                  )}
-                                  {isHovered && (
+                                  <Image
+                                    src={vid.poster}
+                                    alt="cover"
+                                    fill
+                                    className="object-cover transition-opacity duration-300"
+                                  />
+                                  {activeVideoKey === videoKey && !modalVideo && (
                                     <video
                                       ref={(el) =>
                                         (videoRefs.current[videoKey] = el)
@@ -236,6 +245,9 @@ function VideoServices({ data }) {
                                       src={vid.video}
                                       className="absolute inset-0 w-full h-full object-contain"
                                       playsInline
+                                      muted
+                                      autoPlay
+                                      controls
                                     />
                                   )}
                                 </div>
@@ -271,6 +283,30 @@ function VideoServices({ data }) {
           ) : null
         )}
       </div>
+
+      {modalVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 md:p-10">
+          <div className="relative w-full max-w-3xl rounded-[24px] bg-black overflow-hidden shadow-2xl">
+            <button
+              className="absolute right-4 top-4 z-20 rounded-full bg-white/10 px-3 py-1.5 text-sm text-white backdrop-blur"
+              onClick={closeModal}
+            >
+              Close
+            </button>
+            <div className="relative aspect-video bg-black">
+              <video
+                ref={(el) =>
+                  (videoRefs.current[modalVideo.videoKey] = el)
+                }
+                src={modalVideo.vid.video}
+                controls
+                autoPlay
+                className="absolute inset-0 h-full w-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

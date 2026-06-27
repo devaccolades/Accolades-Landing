@@ -45,7 +45,9 @@ const ScrollingRow = ({ direction = "up", video }) => {
             autoPlay
             loop
             muted
+            playsInline
             className="rounded-lg w-[300px] h-full object-cover"
+            onClick={(e) => e.preventDefault()}
           />
         ))}
       </div>

@@ -41,7 +41,7 @@ function WhyBrands({ data }) {
             className="font-zen  text-[36px] leading-[32px] lg:text-[40px] font-bold lg:leading-[40px] mt-[10px]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
+            transition={{ delay: 0.2, duration: 0.6 }}  
             viewport={{ once: true, amount: 0.3 }}
           >
             Why Brands <br />

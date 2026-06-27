@@ -57,7 +57,9 @@ function VideoServices({ data }) {
 
   const handleVideoClick = (itemName, videoIndex, vid) => {
     const videoKey = `${itemName}-${videoIndex}`;
-    if (isMobile) {
+    const isVertical = vid.orientation === "vertical";
+
+    if (isMobile && !isVertical) {
       setModalVideo({ videoKey, itemName, vid });
       setActiveVideoKey(null);
       return;
@@ -322,6 +324,9 @@ function VideoServices({ data }) {
                 src={modalVideo.vid.video}
                 controls
                 autoPlay
+                playsInline
+                webkitPlaysInline
+                controlsList="nodownload nofullscreen noremoteplayback"
                 className="absolute inset-0 h-full w-full object-contain"
               />
             </div>

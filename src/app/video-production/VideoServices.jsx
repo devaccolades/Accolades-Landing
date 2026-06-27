@@ -11,12 +11,27 @@ import "swiper/css/pagination";
 
 function VideoServices({ data }) {
   // console.log("data", data[0]);
-  const [selected, setSelected] = useState(data[0].name);
+  const [selected, setSelected] = useState("Podcast");
   const [loading, setLoading] = useState({});
   const [activeVideoKey, setActiveVideoKey] = useState(null);
   const [modalVideo, setModalVideo] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
-  const contents = data;
+  
+  const customOrder = [
+    "Podcast",
+    "Interactive",
+    "Presentation Videos",
+    "Events",
+    "Animations",
+    "Motion Graphics",
+    "AI",
+    "Drone Videos",
+    "Corporate Videos"
+  ];
+  
+  const contents = [...data].sort((a, b) => 
+    customOrder.indexOf(a.name) - customOrder.indexOf(b.name)
+  );
 
   const videoRefs = useRef({});
 
@@ -78,7 +93,10 @@ function VideoServices({ data }) {
         viewport={{ once: true, amount: 0.3 }}
       >
         {contents.map((item) => (
+          
           <div key={item.name} className="text-center">
+            
+            
             {selected === item.name ? (
               <Button
                 content={item.name}
@@ -99,7 +117,7 @@ function VideoServices({ data }) {
       </motion.div>
 
       <motion.p
-        className="mt-[20px] text-[14px] font-medium leading-[156%] max-w-4xl"
+        className="hidden md:flex mt-[20px] text-[14px] font-medium leading-[156%] max-w-4xl"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.6 }}
@@ -122,10 +140,13 @@ function VideoServices({ data }) {
                 <Swiper
                   spaceBetween={20}
                   slidesPerView={"auto"}
-                  className="!px-4 !justify-center"
+                  className="!justify-center"
                   breakpoints={{
                     0: {
-                      slidesPerView: 1,
+                      slidesPerView: 1.1,
+                    },
+                    450:{
+                      slidesPerView: 1.5,
                     },
                     640: {
                       slidesPerView:

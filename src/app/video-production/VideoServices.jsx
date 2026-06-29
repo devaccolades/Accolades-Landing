@@ -266,11 +266,13 @@ function VideoServices({ data }) {
                                         }))
                                       }
                                       src={vid.video}
-                                      className="absolute inset-0 w-full h-full object-contain"
+                                      className="absolute inset-0 w-full h-full object-cover"
                                       playsInline
                                       muted
                                       autoPlay
                                       controls
+                                      onClick={(e) => e.stopPropagation()}
+                                      onTouchStart={(e) => e.stopPropagation()}
                                     />
                                   )}
                                 </div>

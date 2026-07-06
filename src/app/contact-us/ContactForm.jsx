@@ -5,10 +5,10 @@ import Swal from "sweetalert2";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    fullName: "",
     email: "",
     phone: "",
+    whatsapp: "",
     message: "",
     consent: false,
   });
@@ -20,16 +20,16 @@ export default function ContactForm() {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.firstName.trim()) {
-      newErrors.firstName = "First name is required";
-    } else if (!/^[A-Za-z\s]+$/.test(formData.firstName)) {
-      newErrors.firstName = "First name should only contain letters";
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full name is required";
+    } else if (!/^[A-Za-z\s]+$/.test(formData.fullName)) {
+      newErrors.fullName = "Full name should only contain letters";
     }
 
-    if (!formData.lastName.trim()) {
-      newErrors.lastName = "Last name is required";
-    } else if (!/^[A-Za-z\s]+$/.test(formData.lastName)) {
-      newErrors.lastName = "Last name should only contain letters";
+    if (!formData.whatsapp.trim()) {
+      newErrors.whatsapp = "WhatsApp number is required";
+    } else if (!/^\d{10,15}$/.test(formData.whatsapp)) {
+      newErrors.whatsapp = "WhatsApp must be 10–15 digits";
     }
 
     if (!formData.email.trim()) {
@@ -94,10 +94,10 @@ export default function ContactForm() {
       });
 
       setFormData({
-        firstName: "",
-        lastName: "",
+        fullName: "",
         email: "",
         phone: "",
+        whatsapp: "",
         message: "",
         consent: false,
       });
@@ -150,49 +150,27 @@ export default function ContactForm() {
           >
             <div>
               <label
-                htmlFor="firstName"
+                htmlFor="fullName"
                 className="block text-gray-700 font-mont font-semibold mb-2"
               >
-                First Name
+                Full Name
               </label>
               <input
                 type="text"
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
+                id="fullName"
+                name="fullName"
+                value={formData.fullName}
                 onChange={handleChange}
-                placeholder="Enter First Name"
+                placeholder="Enter Full Name"
                 required
                 className="w-full px-4 py-3 border border-gray-300 bg-[#FFFFFF] font-mont rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
-                            {errors.firstName && (
-                <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
+                            {errors.fullName && (
+                <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>
               )}
             </div>
 
-            <div>
-              <label
-                htmlFor="lastName"
-                className="block text-gray-700 font-mont font-semibold mb-2"
-              >
-                Last Name
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                placeholder="Enter Last Name"
-                required
-                className="w-full px-4 py-3 font-mont border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-              />
-                            {errors.lastName && (
-                <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
-              )}
-            </div>
-
-            <div>
+             <div>
               <label
                 htmlFor="email"
                 className="block font-mont text-gray-700 font-semibold mb-2"
@@ -214,6 +192,30 @@ export default function ContactForm() {
               )}
             </div>
 
+            
+
+            {/* <div>
+              <label
+                htmlFor="email"
+                className="block font-mont text-gray-700 font-semibold mb-2"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter Your Email"
+                required
+                className="w-full px-4 py-3 font-mont border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              />
+                            {errors.email && (
+                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+              )}
+            </div> */}
+
             <div>
               <label
                 htmlFor="phone"
@@ -233,6 +235,28 @@ export default function ContactForm() {
               />
                             {errors.phone && (
                 <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+              )}
+            </div>
+
+            <div>
+              <label
+                htmlFor="whatsapp"
+                className="block text-gray-700 font-mont font-semibold mb-2"
+              >
+                Whatsapp Number
+              </label>
+              <input
+                type="tel"
+                id="whatsapp"
+                name="whatsapp"
+                value={formData.whatsapp}
+                onChange={handleChange}
+                placeholder="Enter WhatsApp Number"
+                required
+                className="w-full px-4 py-3 font-mont border border-gray-300 bg-[#FFFFFF] rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              />
+                            {errors.whatsapp && (
+                <p className="text-red-500 text-sm mt-1">{errors.whatsapp}</p>
               )}
             </div>
 

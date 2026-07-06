@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
-    const { firstName, lastName, email, phone, message } = await req.json();
+    const { fullName, whatsapp, email, phone, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
       service: "Gmail",
@@ -20,14 +20,14 @@ export async function POST(req) {
     // "manjima.accolades@gmail.com",
     "mail@accoladesintegrated.com",
   ],
-      subject: "New Contact Form Submission",
+      subject: "New Contact Form Submission Accolades Website",
       html: `
   <div style="font-family: Arial, sans-serif; padding: 20px;">
     <h2 style="color: #008080;">New Contact Message</h2>
-    <p><strong>First Name:</strong> ${firstName}</p>
-    <p><strong>Last Name:</strong> ${lastName}</p>
+    <p><strong>Full Name:</strong> ${fullName}</p>
     <p><strong>Email:</strong> ${email}</p>
     <p><strong>Phone:</strong> ${phone}</p>
+    <p><strong>Whatsapp:</strong> ${whatsapp}</p>
     <p style="margin-top: 10px;"><strong>Message:</strong></p>
     <div style="background-color: #f1f1f1; padding: 10px; border-left: 4px solid #008080;">
       ${message}

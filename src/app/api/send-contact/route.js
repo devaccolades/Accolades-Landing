@@ -17,9 +17,9 @@ export async function POST(req) {
       to: "leadsaccolades@gmail.com",
       // to: "manjima.accolades@gmai.com",
       cc: [
-    // "manjima.accolades@gmail.com",
-    "mail@accoladesintegrated.com",
-  ],
+        // "manjima.accolades@gmail.com",
+        "mail@accoladesintegrated.com",
+      ],
       subject: "New Contact Form Submission Accolades Website",
       html: `
   <div style="font-family: Arial, sans-serif; padding: 20px;">
@@ -33,14 +33,20 @@ export async function POST(req) {
       ${message}
     </div>
   </div>
-`
+`,
     };
 
     await transporter.sendMail(mailOptions);
 
-    return Response.json({ success: true, message: "Contact email sent successfully!" });
+    return Response.json({
+      success: true,
+      message: "Contact email sent successfully!",
+    });
   } catch (error) {
     console.error("Email send error:", error);
-    return Response.json({ success: false, message: "Failed to send contact email." }, { status: 500 });
+    return Response.json(
+      { success: false, message: "Failed to send contact email." },
+      { status: 500 },
+    );
   }
 }

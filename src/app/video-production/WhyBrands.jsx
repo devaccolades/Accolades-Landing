@@ -1,14 +1,12 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import ScrollingRow from "./ScrollingRow";
 import { motion } from "framer-motion";
 
-function WhyBrands({ data }) {
-  console.log("WhyBrands data:", data);
+function WhyBrands() {
   return (
     <section className="containers py-4 grid">
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-10">
         {/* TEXT SECTION */}
         <div className="row-span-1">
           {/* Top strip with arrows */}
@@ -86,17 +84,24 @@ function WhyBrands({ data }) {
           </motion.div>
         </div>
 
-        {/* SCROLLING VIDEO SECTION */}
-        <div className="row-span-1 h-[400px] md:h-[600px] overflow-hidden mt-[20px] md:-mt-[10px] relative">
-          <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white to-transparent z-10" />
-          <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10" />
-          <div className="flex gap-4">
-            <ScrollingRow direction="up" video={data} />
-            <ScrollingRow direction="down" video={data} />
-            <div className="md:hidden">
-              <ScrollingRow direction="up" video={data} />
-            </div>
-          </div>
+        {/* VIDEO SECTION */}
+        <div className="row-span-1 mt-[10px] flex items-center justify-center">
+          <video
+            src="/videos/acco-mob.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="block md:hidden w-full max-w-[560px] h-[320px] rounded-[12px] object-cover "
+          />
+          <video
+            src="/videos/acco-desktop.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="hidden md:block w-full max-w-[560px] h-[450px] lg:h-[480px] rounded-[12px] object-cover "
+          />
         </div>
       </div>
     </section>

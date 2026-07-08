@@ -108,11 +108,11 @@ body {
 }
 
 .animate-scroll-up {
-  animation: scroll-up 20s linear infinite;
+  animation: scroll-up 35s linear infinite;
 }
 
 .animate-scroll-down {
-  animation: scroll-down 20s linear infinite;
+  animation: scroll-down 35s linear infinite;
 }
 
 @keyframes marquee {

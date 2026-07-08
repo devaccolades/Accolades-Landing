@@ -11,12 +11,12 @@ import WhyAccolades from "./WhyAccolades";
 import OurPartners from "./OurPartners";
 import FeaturedWorks from "./FeaturedWork";
 import WhyBrands from "./WhyBrands";
+import { videoServicesData } from "@/Data/VideoServicesData";
 import {
   getFeaturedParteners,
   getHeroSection,
   getModalVideo,
   getOurPartner,
-  getVideoCategories,
   getWhatOurClientSays,
   getWhyBrandChoose,
 } from "../Server";
@@ -56,7 +56,7 @@ export async function generateMetadata() {
 
 async function page() {
   const hero = await getHeroSection();
-  const video = await getVideoCategories();
+  const video = videoServicesData;
   const brandVideo = await getWhyBrandChoose();
   const partners = await getOurPartner();
   const featured = await getFeaturedParteners();
@@ -69,7 +69,7 @@ async function page() {
       {hero && <HeroSection data={hero} />}
       <UnderHero />
       {video && <VideoServices data={video} />}
-      {brandVideo && <WhyBrands data={brandVideo} />}
+      {brandVideo && <WhyBrands />}
       {partners && <OurPartners data={partners} />}
       {featured && <FeaturedWorks data={featured} />}
       {client && <WhatOurClientsSay data={client} />}

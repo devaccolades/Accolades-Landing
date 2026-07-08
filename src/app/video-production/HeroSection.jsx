@@ -48,21 +48,6 @@ function HeroSection({ data }) {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex flex-col items-center gap-2 md:gap-4 z-40 md:-mt-[100px] lg:-mt-[150px]"
       >
-        {data?.googleImage?.url && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-          >
-            <Image
-              src={BASE_URL + data.googleImage.url}
-              height={100}
-              width={100}
-              className="h-[56px] w-[61px]"
-              alt="google partner"
-            />
-          </motion.div>
-        )}
 
         {data?.HeroTitle && (
           <motion.h1

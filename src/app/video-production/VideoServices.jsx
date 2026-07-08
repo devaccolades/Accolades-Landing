@@ -33,6 +33,31 @@ function VideoServices({ data }) {
     customOrder.indexOf(a.name) - customOrder.indexOf(b.name)
   );
 
+  const isYouTubeUrl = (url) =>
+    typeof url === "string" && /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/))/i.test(url);
+
+  const getYouTubeEmbedUrl = (url) => {
+    if (!url || !isYouTubeUrl(url)) return url;
+
+    if (url.includes("youtu.be/")) {
+      const id = url.split("youtu.be/")[1].split(/[?&]/)[0];
+      return `https://www.youtube.com/embed/${id}?autoplay=1&mute=1`;
+    }
+
+    try {
+      const parsed = new URL(url);
+      const videoId = parsed.searchParams.get("v");
+      if (videoId) return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
+
+      const pathMatch = parsed.pathname.match(/\/embed\/([^/?]+)/) || parsed.pathname.match(/\/v\/([^/?]+)/);
+      if (pathMatch) return `https://www.youtube.com/embed/${pathMatch[1]}?autoplay=1&mute=1`;
+    } catch (error) {
+      return url;
+    }
+
+    return url;
+  };
+
   const videoRefs = useRef({});
 
   useEffect(() => {
@@ -58,8 +83,9 @@ function VideoServices({ data }) {
   const handleVideoClick = (itemName, videoIndex, vid) => {
     const videoKey = `${itemName}-${videoIndex}`;
     const isVertical = vid.orientation === "vertical";
+    const isYouTube = isYouTubeUrl(vid.video);
 
-    if (isMobile && !isVertical) {
+    if (isYouTube || (isMobile && !isVertical)) {
       setModalVideo({ videoKey, itemName, vid });
       setActiveVideoKey(null);
       return;
@@ -242,39 +268,46 @@ function VideoServices({ data }) {
                                     fill
                                     className="object-cover transition-opacity duration-300"
                                   />
-                                  {activeVideoKey === videoKey && !modalVideo && (
-                                    <video
-                                      ref={(el) =>
-                                        (videoRefs.current[videoKey] = el)
-                                      }
-                                      onWaiting={() =>
-                                        setLoading((prev) => ({
-                                          ...prev,
-                                          [videoKey]: true,
-                                        }))
-                                      }
-                                      onCanPlay={() =>
-                                        setLoading((prev) => ({
-                                          ...prev,
-                                          [videoKey]: false,
-                                        }))
-                                      }
-                                      onPlaying={() =>
-                                        setLoading((prev) => ({
-                                          ...prev,
-                                          [videoKey]: false,
-                                        }))
-                                      }
-                                      src={vid.video}
-                                      className="absolute inset-0 w-full h-full object-cover"
-                                      playsInline
-                                      muted
-                                      autoPlay
-                                      controls
-                                      onClick={(e) => e.stopPropagation()}
-                                      onTouchStart={(e) => e.stopPropagation()}
-                                    />
-                                  )}
+                                  <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-[#0C7379] shadow-xl">
+                                      <span className="text-2xl">▶</span>
+                                    </div>
+                                  </div>
+                                  {!isYouTubeUrl(vid.video) &&
+                                    activeVideoKey === videoKey &&
+                                    !modalVideo && (
+                                      <video
+                                        ref={(el) =>
+                                          (videoRefs.current[videoKey] = el)
+                                        }
+                                        onWaiting={() =>
+                                          setLoading((prev) => ({
+                                            ...prev,
+                                            [videoKey]: true,
+                                          }))
+                                        }
+                                        onCanPlay={() =>
+                                          setLoading((prev) => ({
+                                            ...prev,
+                                            [videoKey]: false,
+                                          }))
+                                        }
+                                        onPlaying={() =>
+                                          setLoading((prev) => ({
+                                            ...prev,
+                                            [videoKey]: false,
+                                          }))
+                                        }
+                                        src={vid.video}
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                        playsInline
+                                        muted
+                                        autoPlay
+                                        controls
+                                        onClick={(e) => e.stopPropagation()}
+                                        onTouchStart={(e) => e.stopPropagation()}
+                                      />
+                                    )}
                                 </div>
                                 <Image
                                   src={isVertical ? phone : laptop}
@@ -319,18 +352,29 @@ function VideoServices({ data }) {
               Close
             </button>
             <div className="relative aspect-video bg-black">
-              <video
-                ref={(el) =>
-                  (videoRefs.current[modalVideo.videoKey] = el)
-                }
-                src={modalVideo.vid.video}
-                controls
-                autoPlay
-                playsInline
-                webkitPlaysInline
-                controlsList="nodownload nofullscreen noremoteplayback"
-                className="absolute inset-0 h-full w-full object-contain"
-              />
+              {isYouTubeUrl(modalVideo.vid.video) ? (
+                <iframe
+                  src={getYouTubeEmbedUrl(modalVideo.vid.video)}
+                  title="YouTube video player"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                  frameBorder="0"
+                />
+              ) : (
+                <video
+                  ref={(el) =>
+                    (videoRefs.current[modalVideo.videoKey] = el)
+                  }
+                  src={modalVideo.vid.video}
+                  controls
+                  autoPlay
+                  playsInline
+                  webkitPlaysInline
+                  controlsList="nodownload nofullscreen noremoteplayback"
+                  className="absolute inset-0 h-full w-full object-contain"
+                />
+              )}
             </div>
           </div>
         </div>

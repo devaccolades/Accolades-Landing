@@ -88,7 +88,7 @@ const FeaturedWorks = ({ data }) => {
   };
 
   return (
-    <section className="py-6 bg-white mx-auto">
+    <section className="containers py-6 bg-white mx-auto">
       {/* Title & Subtitle with animation */}
       <motion.div
         className="mx-auto text-center px-4"
@@ -107,7 +107,7 @@ const FeaturedWorks = ({ data }) => {
 
       {/* Video Cards (animated per card) */}
       <motion.div
-        className="mt-[19px] lg:mt-10 ml-0 md:ml-20 mx-auto px-4"
+        className="mt-[19px] mx-auto"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"

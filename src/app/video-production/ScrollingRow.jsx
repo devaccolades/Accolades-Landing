@@ -6,25 +6,29 @@ const ScrollingRow = ({ direction = "up", video }) => {
   const [shuffledVideos, setShuffledVideos] = useState([]);
 
   useEffect(() => {
-    function shuffleArray(array) {
+    function shuffleArray(array, seed) {
       const newArray = [...array];
+      const directionSeed = seed || 1;
+
       for (let i = newArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+        const j = (directionSeed + i + Math.floor(Math.random() * (i + 1))) % (i + 1);
         [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
       }
+
       return newArray;
     }
 
     if (video && video.length) {
-      setShuffledVideos(shuffleArray(video));
+      const seed = direction === "up" ? 3 : 7;
+      setShuffledVideos(shuffleArray(video, seed));
     }
-  }, [video]);
+  }, [video, direction]);
 
   const animationClass =
     direction === "up" ? "animate-scroll-up" : "animate-scroll-down";
 
   const scrollingStyle = {
-    animationDuration: "20s",
+    animationDuration: "35s",
     animationTimingFunction: "linear",
     animationIterationCount: "infinite",
   };

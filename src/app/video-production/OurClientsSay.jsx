@@ -90,7 +90,7 @@ const WhatOurClientsSay = ({ data }) => {
   // console.log("combinedTestimonials", combinedTestimonials);
 
   return (
-    <section className="ml-0 md:ml-20 mx-auto px-4 py-10">
+    <section className="containers py-10">
       {/* Section Heading */}
       <motion.div
         className="text-center mb-6"

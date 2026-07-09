@@ -1,52 +1,44 @@
 export const videoServicesData = [
   {
     name: "Podcast",
-    companyName: "Accolades Podcast",
-    videoType: "Brand Stories",
     videos: [
       {
-        orientation: "horizontal",
-        video: "https://www.youtube.com/watch?v=VIDEO_ID_1",
-        poster: "/images/video-poster-1.jpg",
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=4AWSFK6UpY8",
+      },
+            {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=AkrY4H6ogH4",
       },
       {
-        orientation: "horizontal",
-        video: "https://www.youtube.com/watch?v=VIDEO_ID_2",
-        poster: "/images/video-poster-2.jpg",
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=3UgpOOriYnc",
       },
     ],
   },
   {
     name: "Presentation Videos",
-    companyName: "Accolades Presentations",
-    videoType: "Corporate",
     videos: [
       {
-        orientation: "horizontal",
-        video: "https://www.youtube.com/watch?v=VIDEO_ID_3",
-        poster: "/images/video-poster-3.jpg",
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=CXVHxmKap4E",
       },
       {
-        orientation: "horizontal",
-        video: "https://www.youtube.com/watch?v=VIDEO_ID_4",
-        poster: "/images/video-poster-4.jpg",
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=GAlyqNhPmMM",
+      },
+      {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=qfYpG3Ahgnk",
       },
     ],
   },
   {
-    name: "Motion Graphics",
-    companyName: "Accolades Motion",
-    videoType: "Animation",
+    name: "AI",
     videos: [
       {
-        orientation: "horizontal",
-        video: "https://www.youtube.com/watch?v=VIDEO_ID_5",
-        poster: "/images/video-poster-5.jpg",
-      },
-      {
-        orientation: "horizontal",
-        video: "https://www.youtube.com/watch?v=VIDEO_ID_6",
-        poster: "/images/video-poster-6.jpg",
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=94GqzLiwAow",
       },
     ],
   },

@@ -11,10 +11,9 @@ import "swiper/css/pagination";
 
 function VideoServices({ data }) {
   // console.log("data", data[0]);
-  const [selected, setSelected] = useState("Podcast");
+  const [selected, setSelected] = useState("");
   const [loading, setLoading] = useState({});
   const [activeVideoKey, setActiveVideoKey] = useState(null);
-  const [modalVideo, setModalVideo] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   
   const customOrder = [
@@ -33,29 +32,41 @@ function VideoServices({ data }) {
     customOrder.indexOf(a.name) - customOrder.indexOf(b.name)
   );
 
+  useEffect(() => {
+    if (!selected && contents.length > 0) {
+      setSelected(contents[0].name);
+      setActiveVideoKey(null);
+    }
+  }, [contents, selected]);
+
   const isYouTubeUrl = (url) =>
     typeof url === "string" && /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/))/i.test(url);
 
-  const getYouTubeEmbedUrl = (url) => {
+  const getYouTubeEmbedUrl = (url, autoplay = false) => {
     if (!url || !isYouTubeUrl(url)) return url;
 
-    if (url.includes("youtu.be/")) {
-      const id = url.split("youtu.be/")[1].split(/[?&]/)[0];
-      return `https://www.youtube.com/embed/${id}?autoplay=1&mute=1`;
-    }
-
+    let videoId = "";
     try {
       const parsed = new URL(url);
-      const videoId = parsed.searchParams.get("v");
-      if (videoId) return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
-
-      const pathMatch = parsed.pathname.match(/\/embed\/([^/?]+)/) || parsed.pathname.match(/\/v\/([^/?]+)/);
-      if (pathMatch) return `https://www.youtube.com/embed/${pathMatch[1]}?autoplay=1&mute=1`;
+      videoId = parsed.searchParams.get("v");
+      if (!videoId) {
+        const pathMatch = parsed.pathname.match(/\/(?:embed|v|shorts)\/([^/?]+)/);
+        if (pathMatch) videoId = pathMatch[1];
+      }
     } catch (error) {
-      return url;
+      if (typeof url === "string") {
+        const fallbackMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([^?&"'<>]+)/i);
+        if (fallbackMatch) videoId = fallbackMatch[1];
+      }
     }
 
-    return url;
+    if (!videoId) return url;
+
+    let embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0&controls=0&iv_load_policy=3&cc_load_policy=0&modestbranding=1`;
+    if (autoplay) {
+      embedUrl += `&autoplay=1&mute=1&playlist=${videoId}&loop=1`;
+    }
+    return embedUrl;
   };
 
   const videoRefs = useRef({});
@@ -71,34 +82,44 @@ function VideoServices({ data }) {
     Object.entries(videoRefs.current).forEach(([key, ref]) => {
       if (!ref) return;
       if (key === activeVideoKey) {
-        ref.currentTime = 0;
-        ref.play().catch((e) => console.warn("Video play failed:", e));
+        if (typeof ref.play === "function") {
+          ref.currentTime = 0;
+          ref.play().catch((e) => console.warn("Video play failed:", e));
+        }
       } else {
-        ref.pause();
-        ref.currentTime = 0;
+        if (typeof ref.pause === "function") {
+          ref.pause();
+          ref.currentTime = 0;
+        }
       }
     });
   }, [activeVideoKey]);
 
-  const handleVideoClick = (itemName, videoIndex, vid) => {
-    const videoKey = `${itemName}-${videoIndex}`;
-    const isVertical = vid.orientation === "vertical";
-    const isYouTube = isYouTubeUrl(vid.video);
+  const handlePlayVideo = (videoKey) => {
+    setActiveVideoKey(videoKey);
+    const ref = videoRefs.current[videoKey];
+    if (ref) {
+      if (ref.requestFullscreen) {
+        ref.requestFullscreen().catch((err) => {
+          console.warn("Fullscreen request failed:", err);
+        });
+      } else if (ref.webkitRequestFullscreen) {
+        ref.webkitRequestFullscreen();
+      } else if (ref.mozRequestFullScreen) {
+        ref.mozRequestFullScreen();
+      } else if (ref.msRequestFullscreen) {
+        ref.msRequestFullscreen();
+      }
 
-    if (isYouTube || (isMobile && !isVertical)) {
-      setModalVideo({ videoKey, itemName, vid });
-      setActiveVideoKey(null);
-      return;
+      if (typeof ref.play === "function") {
+        ref.play().catch((e) => console.warn("Video play failed:", e));
+      }
     }
-
-    setModalVideo(null);
-    setActiveVideoKey((currentKey) =>
-      currentKey === videoKey ? null : videoKey
-    );
   };
 
-  const closeModal = () => {
-    setModalVideo(null);
+  const handleCategoryChange = (itemName, item) => {
+    setSelected(itemName);
+    setActiveVideoKey(null);
   };
 
   return (
@@ -132,7 +153,7 @@ function VideoServices({ data }) {
               />
             ) : (
               <p
-                onClick={() => setSelected(item.name)}
+                onClick={() => handleCategoryChange(item.name, item)}
                 className={`cursor-pointer text-[14px] font-medium whitespace-nowrap ${
                   selected === item ? "text-[#0C7379]" : "text-gray-700"
                 }`}
@@ -229,6 +250,7 @@ function VideoServices({ data }) {
                         >
                           <SwiperSlide
                             key={videoKey}
+                            onClick={() => handlePlayVideo(videoKey)}
                             className={` ${
                               isVertical
                                 ? "w-[255px]"
@@ -253,61 +275,56 @@ function VideoServices({ data }) {
                                   </div>
                                 )}
                                 <div
-                                  className={`absolute inset-0 overflow-hidden ${
+                                  className={`absolute inset-0 overflow-hidden z-0 ${
                                     isVertical
                                       ? "rounded-[30px] mx-[10px] my-[10px]"
                                       : "-left-[68px] h-[170px] w-[245px] rounded-[20px] mx-[70px] my-[0px] md:w-[570px] md:h-[425px] md:left-[0px] md:inset-0"
-                                  } bg-black cursor-pointer`}
-                                  onClick={() =>
-                                    handleVideoClick(item.name, index, vid)
-                                  }
+                                  } bg-black`}
                                 >
-                                  <Image
-                                    src={vid.poster}
-                                    alt="cover"
-                                    fill
-                                    className="object-cover transition-opacity duration-300"
-                                  />
-                                  <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-[#0C7379] shadow-xl">
-                                      <span className="text-2xl">▶</span>
-                                    </div>
-                                  </div>
-                                  {!isYouTubeUrl(vid.video) &&
-                                    activeVideoKey === videoKey &&
-                                    !modalVideo && (
-                                      <video
-                                        ref={(el) =>
-                                          (videoRefs.current[videoKey] = el)
-                                        }
-                                        onWaiting={() =>
-                                          setLoading((prev) => ({
-                                            ...prev,
-                                            [videoKey]: true,
-                                          }))
-                                        }
-                                        onCanPlay={() =>
-                                          setLoading((prev) => ({
-                                            ...prev,
-                                            [videoKey]: false,
-                                          }))
-                                        }
-                                        onPlaying={() =>
-                                          setLoading((prev) => ({
-                                            ...prev,
-                                            [videoKey]: false,
-                                          }))
-                                        }
-                                        src={vid.video}
-                                        className="absolute inset-0 w-full h-full object-cover"
-                                        playsInline
-                                        muted
-                                        autoPlay
-                                        controls
-                                        onClick={(e) => e.stopPropagation()}
-                                        onTouchStart={(e) => e.stopPropagation()}
-                                      />
-                                    )}
+                                  {isYouTubeUrl(vid.video) ? (
+                                    <iframe
+                                      ref={(el) =>
+                                        (videoRefs.current[videoKey] = el)
+                                      }
+                                      src={getYouTubeEmbedUrl(vid.video, videoKey === activeVideoKey)}
+                                      title="YouTube video player"
+                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                      referrerPolicy="strict-origin-when-cross-origin"
+                                      allowFullScreen
+                                      className="absolute inset-0 h-full w-full object-fill"
+                                      frameBorder="0"
+                                    />
+                                  ) : (
+                                    <video
+                                      ref={(el) =>
+                                        (videoRefs.current[videoKey] = el)
+                                      }
+                                      onWaiting={() =>
+                                        setLoading((prev) => ({
+                                          ...prev,
+                                          [videoKey]: true,
+                                        }))
+                                      }
+                                      onCanPlay={() =>
+                                        setLoading((prev) => ({
+                                          ...prev,
+                                          [videoKey]: false,
+                                        }))
+                                      }
+                                      onPlaying={() =>
+                                        setLoading((prev) => ({
+                                          ...prev,
+                                          [videoKey]: false,
+                                        }))
+                                      }
+                                      src={vid.video}
+                                      className="absolute inset-0 w-full h-full object-fill"
+                                      playsInline
+                                      muted
+                                      controls
+                                      controlsList="noremoteplayback"
+                                    />
+                                  )}
                                 </div>
                                 <Image
                                   src={isVertical ? phone : laptop}
@@ -316,19 +333,13 @@ function VideoServices({ data }) {
                                   }
                                   width={isVertical ? 255 : undefined}
                                   height={isVertical ? 512 : undefined}
-                                  className={`absolute top-0 left-0 z-10 pointer-events-none ${
+                                  className={`absolute top-0 left-0 z-20 pointer-events-none ${
                                     isVertical
                                       ? "w-[255px] h-[512px]"
                                       : "  md:w-[704px] md:h-[425px] w-[250px] h-[180px] object-cover"
                                   }`}
                                 />
                               </div>
-                              <p className="ml-6 font-semibold text-[16px]">
-                                {item.companyName}
-                              </p>
-                              <p className="ml-6 font-normal text-[16px]">
-                                {item.videoType}
-                              </p>
                             </div>
                           </SwiperSlide>
                         </motion.div>
@@ -342,43 +353,6 @@ function VideoServices({ data }) {
         )}
       </div>
 
-      {modalVideo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 md:p-10">
-          <div className="relative w-full max-w-3xl rounded-[24px] bg-black overflow-hidden shadow-2xl">
-            <button
-              className="absolute right-4 top-4 z-20 rounded-full bg-white/10 px-3 py-1.5 text-sm text-white backdrop-blur"
-              onClick={closeModal}
-            >
-              Close
-            </button>
-            <div className="relative aspect-video bg-black">
-              {isYouTubeUrl(modalVideo.vid.video) ? (
-                <iframe
-                  src={getYouTubeEmbedUrl(modalVideo.vid.video)}
-                  title="YouTube video player"
-                  allow="autoplay; encrypted-media; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                  frameBorder="0"
-                />
-              ) : (
-                <video
-                  ref={(el) =>
-                    (videoRefs.current[modalVideo.videoKey] = el)
-                  }
-                  src={modalVideo.vid.video}
-                  controls
-                  autoPlay
-                  playsInline
-                  webkitPlaysInline
-                  controlsList="nodownload nofullscreen noremoteplayback"
-                  className="absolute inset-0 h-full w-full object-contain"
-                />
-              )}
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

@@ -103,7 +103,7 @@ const HeroSection = () => {
       label: "/home/todo5.svg",
       route: "/services/creative/branding-packaging",
     },
-    { label: "/home/todo6.svg", route: "/services/services/web-development" },
+    { label: "/home/todo6.svg", route: "/services/web-development" },
   ];
 
   return (

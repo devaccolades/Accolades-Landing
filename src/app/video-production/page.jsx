@@ -19,6 +19,7 @@ import {
   getOurPartner,
   getWhatOurClientSays,
   getWhyBrandChoose,
+  getVideoCategories,
 } from "../Server";
 import WhatOurClientsSay from "./OurClientsSay";
 
@@ -28,8 +29,7 @@ export async function generateMetadata() {
   const description =
     "Learn about Accolades Integrated, a full-service digital agency delivering creative, marketing, and technology solutions that help brands grow.";
 
-  const url =
-    "https://www.accoladesintegrated.com/video-production"; // 👈 adjust if route differs
+  const url = "https://www.accoladesintegrated.com/video-production"; // 👈 adjust if route differs
 
   return {
     title,
@@ -56,7 +56,8 @@ export async function generateMetadata() {
 
 async function page() {
   const hero = await getHeroSection();
-  const video = videoServicesData;
+  const staticVideos = videoServicesData;
+  const backendVideos = await getVideoCategories();
   const brandVideo = await getWhyBrandChoose();
   const partners = await getOurPartner();
   const featured = await getFeaturedParteners();
@@ -68,7 +69,7 @@ async function page() {
       {modal && <Header data={modal} />}
       {hero && <HeroSection data={hero} />}
       <UnderHero />
-      {video && <VideoServices data={video} />}
+      <VideoServices data={staticVideos} categories={backendVideos} />
       {brandVideo && <WhyBrands />}
       {partners && <OurPartners data={partners} />}
       {featured && <FeaturedWorks data={featured} />}

@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 
-function VideoServices({ data }) {
+function VideoServices({ data, categories }) {
   // console.log("data", data[0]);
   const [selected, setSelected] = useState("");
   const [loading, setLoading] = useState({});
@@ -28,9 +28,23 @@ function VideoServices({ data }) {
     "Corporate Videos"
   ];
   
-  const contents = [...data].sort((a, b) => 
-    customOrder.indexOf(a.name) - customOrder.indexOf(b.name)
-  );
+ const mergedData = [...data];
+
+categories?.forEach((category) => {
+  const existing = mergedData.find((item) => item.name === category.name);
+
+  if (existing) {
+    // Same category -> add backend videos
+    existing.videos = [...existing.videos, ...category.videos];
+  } else {
+    // New category -> add it
+    mergedData.push(category);
+  }
+});
+
+const contents = mergedData.sort(
+  (a, b) => customOrder.indexOf(a.name) - customOrder.indexOf(b.name)
+);
 
   useEffect(() => {
     if (!selected && contents.length > 0) {

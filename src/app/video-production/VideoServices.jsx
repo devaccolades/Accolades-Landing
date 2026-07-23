@@ -15,7 +15,7 @@ function VideoServices({ data, categories }) {
   const [loading, setLoading] = useState({});
   const [activeVideoKey, setActiveVideoKey] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
-  
+
   const customOrder = [
     "Podcast",
     "Interactive",
@@ -25,26 +25,26 @@ function VideoServices({ data, categories }) {
     "Motion Graphics",
     "AI",
     "Drone Videos",
-    "Corporate Videos"
+    "Corporate Videos",
   ];
-  
- const mergedData = [...data];
 
-categories?.forEach((category) => {
-  const existing = mergedData.find((item) => item.name === category.name);
+  const mergedData = [...data];
 
-  if (existing) {
-    // Same category -> add backend videos
-    existing.videos = [...existing.videos, ...category.videos];
-  } else {
-    // New category -> add it
-    mergedData.push(category);
-  }
-});
+  categories?.forEach((category) => {
+    const existing = mergedData.find((item) => item.name === category.name);
 
-const contents = mergedData.sort(
-  (a, b) => customOrder.indexOf(a.name) - customOrder.indexOf(b.name)
-);
+    if (existing) {
+      // Same category -> add backend videos
+      existing.videos = [...existing.videos, ...category.videos];
+    } else {
+      // New category -> add it
+      mergedData.push(category);
+    }
+  });
+
+  const contents = mergedData.sort(
+    (a, b) => customOrder.indexOf(a.name) - customOrder.indexOf(b.name),
+  );
 
   useEffect(() => {
     if (!selected && contents.length > 0) {
@@ -54,7 +54,8 @@ const contents = mergedData.sort(
   }, [contents, selected]);
 
   const isYouTubeUrl = (url) =>
-    typeof url === "string" && /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/))/i.test(url);
+    typeof url === "string" &&
+    /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/))/i.test(url);
 
   const getYouTubeEmbedUrl = (url, autoplay = false) => {
     if (!url || !isYouTubeUrl(url)) return url;
@@ -64,12 +65,16 @@ const contents = mergedData.sort(
       const parsed = new URL(url);
       videoId = parsed.searchParams.get("v");
       if (!videoId) {
-        const pathMatch = parsed.pathname.match(/\/(?:embed|v|shorts)\/([^/?]+)/);
+        const pathMatch = parsed.pathname.match(
+          /\/(?:embed|v|shorts)\/([^/?]+)/,
+        );
         if (pathMatch) videoId = pathMatch[1];
       }
     } catch (error) {
       if (typeof url === "string") {
-        const fallbackMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([^?&"'<>]+)/i);
+        const fallbackMatch = url.match(
+          /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([^?&"'<>]+)/i,
+        );
         if (fallbackMatch) videoId = fallbackMatch[1];
       }
     }
@@ -156,10 +161,7 @@ const contents = mergedData.sort(
         viewport={{ once: true, amount: 0.3 }}
       >
         {contents.map((item) => (
-          
           <div key={item.name} className="text-center">
-            
-            
             {selected === item.name ? (
               <Button
                 content={item.name}
@@ -208,7 +210,7 @@ const contents = mergedData.sort(
                     0: {
                       slidesPerView: 1.1,
                     },
-                    450:{
+                    450: {
                       slidesPerView: 1.5,
                     },
                     640: {
@@ -300,7 +302,10 @@ const contents = mergedData.sort(
                                       ref={(el) =>
                                         (videoRefs.current[videoKey] = el)
                                       }
-                                      src={getYouTubeEmbedUrl(vid.video, videoKey === activeVideoKey)}
+                                      src={getYouTubeEmbedUrl(
+                                        vid.video,
+                                        videoKey === activeVideoKey,
+                                      )}
                                       title="YouTube video player"
                                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                       referrerPolicy="strict-origin-when-cross-origin"
@@ -363,10 +368,9 @@ const contents = mergedData.sort(
                 </Swiper>
               )}
             </div>
-          ) : null
+          ) : null,
         )}
       </div>
-
     </section>
   );
 }

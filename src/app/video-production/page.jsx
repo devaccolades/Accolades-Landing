@@ -19,7 +19,7 @@ import {
   getOurPartner,
   getWhatOurClientSays,
   getWhyBrandChoose,
-  getVideoCategories,
+  // getVideoCategories,
 } from "../Server";
 import WhatOurClientsSay from "./OurClientsSay";
 
@@ -57,7 +57,7 @@ export async function generateMetadata() {
 async function page() {
   const hero = await getHeroSection();
   const staticVideos = videoServicesData;
-  const backendVideos = await getVideoCategories();
+  // const backendVideos = await getVideoCategories();
   const brandVideo = await getWhyBrandChoose();
   const partners = await getOurPartner();
   const featured = await getFeaturedParteners();
@@ -69,7 +69,7 @@ async function page() {
       {modal && <Header data={modal} />}
       {hero && <HeroSection data={hero} />}
       <UnderHero />
-      <VideoServices data={staticVideos} categories={backendVideos} />
+      <VideoServices data={staticVideos} />
       {brandVideo && <WhyBrands />}
       {partners && <OurPartners data={partners} />}
       {featured && <FeaturedWorks data={featured} />}

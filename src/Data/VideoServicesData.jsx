@@ -31,6 +31,10 @@ export const videoServicesData = [
         orientation: "vertical",
         video: "https://www.youtube.com/watch?v=qfYpG3Ahgnk",
       },
+      {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=GAlyqNhPmMM",
+      },
     ],
   },
   {
@@ -42,4 +46,19 @@ export const videoServicesData = [
       },
     ],
   },
+  {
+    name: "Motion Graphics",
+    videos: [
+      {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=JObQKTNlUu8",
+      },
+      {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=2f_Kw0hkn1w",
+      },
+    ],
+  },
 ];
+
+

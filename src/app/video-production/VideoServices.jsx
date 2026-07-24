@@ -9,13 +9,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 
-function VideoServices({ data }) {
+function VideoServices({ data, categories }) {
   // console.log("data", data[0]);
   const [selected, setSelected] = useState("");
   const [loading, setLoading] = useState({});
   const [activeVideoKey, setActiveVideoKey] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
-  
+
   const customOrder = [
     "Podcast",
     "Interactive",
@@ -25,11 +25,25 @@ function VideoServices({ data }) {
     "Motion Graphics",
     "AI",
     "Drone Videos",
-    "Corporate Videos"
+    "Corporate Videos",
   ];
-  
-  const contents = [...data].sort((a, b) => 
-    customOrder.indexOf(a.name) - customOrder.indexOf(b.name)
+
+  const mergedData = [...data];
+
+  categories?.forEach((category) => {
+    const existing = mergedData.find((item) => item.name === category.name);
+
+    if (existing) {
+      // Same category -> add backend videos
+      existing.videos = [...existing.videos, ...category.videos];
+    } else {
+      // New category -> add it
+      mergedData.push(category);
+    }
+  });
+
+  const contents = mergedData.sort(
+    (a, b) => customOrder.indexOf(a.name) - customOrder.indexOf(b.name),
   );
 
   useEffect(() => {
@@ -40,7 +54,8 @@ function VideoServices({ data }) {
   }, [contents, selected]);
 
   const isYouTubeUrl = (url) =>
-    typeof url === "string" && /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/))/i.test(url);
+    typeof url === "string" &&
+    /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/))/i.test(url);
 
   const getYouTubeEmbedUrl = (url, autoplay = false) => {
     if (!url || !isYouTubeUrl(url)) return url;
@@ -50,12 +65,16 @@ function VideoServices({ data }) {
       const parsed = new URL(url);
       videoId = parsed.searchParams.get("v");
       if (!videoId) {
-        const pathMatch = parsed.pathname.match(/\/(?:embed|v|shorts)\/([^/?]+)/);
+        const pathMatch = parsed.pathname.match(
+          /\/(?:embed|v|shorts)\/([^/?]+)/,
+        );
         if (pathMatch) videoId = pathMatch[1];
       }
     } catch (error) {
       if (typeof url === "string") {
-        const fallbackMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([^?&"'<>]+)/i);
+        const fallbackMatch = url.match(
+          /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([^?&"'<>]+)/i,
+        );
         if (fallbackMatch) videoId = fallbackMatch[1];
       }
     }
@@ -142,10 +161,7 @@ function VideoServices({ data }) {
         viewport={{ once: true, amount: 0.3 }}
       >
         {contents.map((item) => (
-          
           <div key={item.name} className="text-center">
-            
-            
             {selected === item.name ? (
               <Button
                 content={item.name}
@@ -194,7 +210,7 @@ function VideoServices({ data }) {
                     0: {
                       slidesPerView: 1.1,
                     },
-                    450:{
+                    450: {
                       slidesPerView: 1.5,
                     },
                     640: {
@@ -286,7 +302,10 @@ function VideoServices({ data }) {
                                       ref={(el) =>
                                         (videoRefs.current[videoKey] = el)
                                       }
-                                      src={getYouTubeEmbedUrl(vid.video, videoKey === activeVideoKey)}
+                                      src={getYouTubeEmbedUrl(
+                                        vid.video,
+                                        videoKey === activeVideoKey,
+                                      )}
                                       title="YouTube video player"
                                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                       referrerPolicy="strict-origin-when-cross-origin"
@@ -349,10 +368,9 @@ function VideoServices({ data }) {
                 </Swiper>
               )}
             </div>
-          ) : null
+          ) : null,
         )}
       </div>
-
     </section>
   );
 }

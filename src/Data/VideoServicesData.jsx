@@ -33,7 +33,19 @@ export const videoServicesData = [
       },
       {
         orientation: "vertical",
-        video: "https://www.youtube.com/watch?v=GAlyqNhPmMM",
+        video: "https://www.youtube.com/watch?v=4DBX7l8d8y0",
+      },
+      {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=QcKJaoIleOA",
+      },
+      {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=fSPuuubXWVw",
+      },
+            {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=Obgmy9PIKDw",
       },
     ],
   },
@@ -43,6 +55,10 @@ export const videoServicesData = [
       {
         orientation: "vertical",
         video: "https://www.youtube.com/watch?v=94GqzLiwAow",
+      },
+      {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=augcYDA5tLM",
       },
     ],
   },
@@ -59,6 +75,33 @@ export const videoServicesData = [
       },
     ],
   },
+  {
+    name: "Short Ad Films",
+    videos: [
+      {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=o9NepA50P38",
+      },
+      {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=trmgipavyn0",
+      },
+      {
+        orientation: "vertical",
+        video: "https://www.youtube.com/watch?v=chZQUmBDgcI",
+      },
+    ],
+  },
+    {
+    name: "Drone Videos",
+    videos: [
+      
+    ],
+  },
+  {
+    name: "Corporate Videos",
+    videos: [
+      
+    ],
+  },
 ];
-
-

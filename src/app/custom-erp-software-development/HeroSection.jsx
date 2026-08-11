@@ -12,7 +12,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative isolate min-h-screen overflow-hidden bg-white pt-20 text-[#073f48] sm:pt-24 lg:pt-28">
+    <section className="relative isolate  overflow-hidden bg-white pt-20 text-[#073f48] sm:pt-24 lg:pt-28">
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-20 opacity-55 [background-image:radial-gradient(#b9d5d8_1px,transparent_1px)] [background-size:14px_14px]"
@@ -22,7 +22,7 @@ export default function HeroSection() {
         className="absolute inset-x-0 bottom-0 -z-10 h-[48%] bg-[radial-gradient(ellipse_at_center_bottom,rgba(255,190,184,0.48),rgba(213,247,250,0.48)_42%,transparent_72%)]"
       />
 
-      <div className="mx-auto w-[min(86%,1180px)]">
+      <div className="containers">
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-16">
           <div className="pt-4 lg:pt-10">
             <div className="mb-5 inline-flex items-center rounded-full bg-[#e6f7f8] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#07525d]">

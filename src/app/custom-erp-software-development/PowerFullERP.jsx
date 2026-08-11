@@ -54,7 +54,7 @@ const modules = [
 export default function PowerFullERP() {
   return (
     <section className="w-full bg-white py-14 sm:py-20 lg:py-24">
-      <div className="mx-auto w-full max-w-[1128px] px-5 sm:px-6">
+      <div className="containers">
 
         {/* Heading */}
         <div className="mb-10 text-center sm:mb-12">

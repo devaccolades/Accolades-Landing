@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Montserrat, Urbanist } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat, Urbanist, Almarai  } from "next/font/google";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import { Zen_Old_Mincho } from "next/font/google";
@@ -44,6 +44,13 @@ const mont = Montserrat({
   variable: "--font-mont",
 });
 
+const almarai = Almarai({
+  subsets: ["arabic"],
+  weight: ["300", "400", "700", "800"],
+  variable: "--font-almarai",
+  display: "swap",
+});
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -63,7 +70,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="relative">
       <body
-        className={`${mont.variable} ${zenOldMincho.variable} ${geistSans.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${urbanist.variable} antialiased`}
+        className={`${almarai.variable} ${mont.variable} ${zenOldMincho.variable} ${geistSans.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${urbanist.variable} antialiased`}
       >
         <LayoutWrapper />
         {/* <Navbar className="pb-14"/> */}

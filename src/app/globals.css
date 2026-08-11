@@ -6,6 +6,7 @@
 :root { /* white background */ /* black text */
   --font-family-base: var(--font-poppins);
   --font-zen: var(--font-zen-old-mincho);
+  --font-almarai: var(--font-almarai);
   --font-mont: var(--font-mont);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -64,6 +65,10 @@ body {
 
 .font-urbanist {
   font-family: var(--font-urbanist);
+}
+
+.font-almarai {
+  font-family: var(--font-almarai), sans-serif;
 }
 
 .containers {

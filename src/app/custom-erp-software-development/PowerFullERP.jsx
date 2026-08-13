@@ -53,8 +53,8 @@ const modules = [
 
 export default function PowerFullERP() {
   return (
-    <section className="w-full bg-white py-14 sm:py-20 lg:py-24">
-      <div className="mx-auto w-full max-w-[1128px] px-5 sm:px-6">
+    <section className="w-full bg-white py-14 sm:py-20 lg:py-20">
+      <div className="containers">
 
         {/* Heading */}
         <div className="mb-10 text-center sm:mb-12">
@@ -62,7 +62,7 @@ export default function PowerFullERP() {
             Everything Your Business Needs
           </span>
 
-          <h2 className="mt-3 font-normal leading-[100%] tracking-[-0.04em] text-[#111] text-[28px] md:text-[36px] lg:text-[48px]">
+          <h2 className="mt-3 text-[28px] font-normal leading-[1.08] tracking-[-0.04em] text-[#111] md:text-[36px] lg:text-[44px]">
             Powerful ERP Modules for Every Business Function
           </h2>
 
@@ -80,22 +80,22 @@ export default function PowerFullERP() {
               key={module.title}
               className={[
                 "group relative flex min-h-[250px] overflow-hidden rounded-[16px] px-4 py-5",
-                "sm:min-h-[286px] sm:px-5 sm:py-6 lg:min-h-[318px] lg:px-4 lg:py-5",
+                "sm:min-h-[286px] sm:px-5 sm:py-6 lg:min-h-[300px] lg:px-4 lg:py-5",
                 "bg-[#f7f7f7] transition-all duration-300 hover:bg-[#e9f5f8] hover:shadow-[0_12px_30px_rgba(17,166,201,0.12)] focus-within:bg-[#e9f5f8] focus-within:shadow-[0_12px_30px_rgba(17,166,201,0.12)]",
               ].join(" ")}
             >
               {/* Content */}
               <div className="relative z-10 flex w-[48%] min-w-0 flex-col lg:w-[45%]">
-                <h3 className="font-almarai font-bold leading-[100%] text-[#111] text-[16px] md:text-[20px] lg:text-[24px]">
+                <h3 className="text-[16px] font-bold leading-[1.1] text-[#111] md:text-[18px] lg:text-[20px]">
                   {module.title}
                 </h3>
 
-                <p className="mt-2 font-mont text-[12px] leading-[156%] text-black md:text-[14px] lg:text-[16px]">
+                <p className="mt-2 text-[12px] leading-[1.5] text-black md:text-[13px] lg:text-[14px]">
                   {module.description}
                 </p>
 
                 <div className="mt-2">
-                  <p className="text-[12px] md:text-[14px] lg:text-[16px] font-bold text-[#222] ">
+                  <p className="text-[12px] font-bold text-[#222] md:text-[13px] lg:text-[14px]">
                     Includes
                   </p>
 

@@ -12,30 +12,30 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative isolate min-h-screen overflow-hidden bg-white pt-20 text-[#073f48] sm:pt-24 lg:pt-28">
+    <section className="relative isolate overflow-hidden bg-white pt-24 text-[#073f48] sm:pt-28 lg:pt-32">
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-20 opacity-55 [background-image:radial-gradient(#b9d5d8_1px,transparent_1px)] [background-size:14px_14px]"
+        className="absolute inset-x-0 top-0 h-3/4 -z-20 opacity-55 [background-image:radial-gradient(#b9d5d8_1px,transparent_1px)] [background-size:14px_14px]"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 -z-10 h-[48%] bg-[radial-gradient(ellipse_at_center_bottom,rgba(255,190,184,0.48),rgba(213,247,250,0.48)_42%,transparent_72%)]"
+        className="absolute inset-x-0 bottom-0 -z-10 h-[62%] bg-[radial-gradient(ellipse_65%_58%_at_42%_100%,rgba(255,193,193,0.62),rgba(255,225,225,0.34)_46%,transparent_76%),radial-gradient(ellipse_42%_50%_at_82%_100%,rgba(207,244,249,0.62),transparent_74%)]"
       />
 
-      <div className="mx-auto w-[min(86%,1180px)]">
-        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-16">
-          <div className="pt-4 lg:pt-10">
+      <div className="containers">
+        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-14">
+          <div className="pt-4 lg:pt-12">
             <div className="mb-5 inline-flex items-center rounded-full bg-[#e6f7f8] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#07525d]">
               Custom ERP software development
             </div>
 
-            <h1 className="max-w-[760px] font-mont text-[38px] font-medium leading-[1.08] tracking-[-0.04em] text-[#087984] sm:text-[48px] lg:text-[56px]">
+            <h1 className="max-w-[760px] text-[37px] font-normal leading-[1.08] tracking-[-0.045em] text-[#087984] sm:text-[44px] lg:text-[48px]">
               Custom Web-Based ERP
               <br className="hidden sm:block" /> Solutions for Growing Small
               <br className="hidden sm:block" /> &amp; Medium Businesses
             </h1>
 
-            <p className="mt-6 max-w-[760px] text-sm leading-6 text-[#53656a] sm:text-[15px]">
+            <p className="mt-5 max-w-[760px] text-[13px] leading-[1.55] text-[#53656a] sm:text-[14px]">
               Streamline your operations with a tailored ERP system that brings
               sales, inventory, finance, HR, and business processes into one
               secure, cloud-based platform. Built for small and medium
@@ -46,9 +46,9 @@ export default function HeroSection() {
 
           <form
             onSubmit={handleSubmit}
-            className="rounded-2xl bg-[#064553] p-5 text-white shadow-[0_20px_55px_rgba(2,55,65,0.22)] sm:p-6"
+            className="rounded-[18px] bg-[#064553] p-5 text-white shadow-[0_20px_55px_rgba(2,55,65,0.22)]"
           >
-            <h2 className="font-mont text-xl font-medium">
+            <h2 className="text-[20px] font-medium leading-tight">
               Book Your Free ERP Consultation
             </h2>
             <p className="mt-2 text-xs leading-5 text-white/65">
@@ -104,7 +104,7 @@ export default function HeroSection() {
           </form>
         </div>
 
-        <div className="mt-12 pb-12 lg:mt-14 lg:pb-16">
+        <div className="mt-12 pb-6 lg:mt-14 lg:pb-8">
           <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-[#123f46]">
             <span className="grid size-5 place-items-center rounded-full bg-[#0aa9a8] text-white">
               <Check size={12} strokeWidth={3} />
@@ -112,8 +112,7 @@ export default function HeroSection() {
             Simple ERP Dashboard — Fully Customizable
           </div>
 
-          {/* Replace this block with the final Next/Image dashboard asset. */}
-          <div className="relative mx-auto flex w-full items-center justify-center overflow-hidden rounded-xl border  shadow-[0_20px_55px_rgba(22,76,85,0.13)] backdrop-blur-sm ">
+          <div className="relative mx-auto flex w-full items-center justify-center overflow-hidden rounded-xl border border-[#d9e7e8] shadow-[0_20px_55px_rgba(22,76,85,0.13)] backdrop-blur-sm">
             <div className="text-center">
               
               <Image

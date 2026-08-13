@@ -56,6 +56,10 @@ const mobileServicePages = {
       label: "FullStack Web Development",
       href: "/services/web-development/fullstack-development",
     },
+    {
+      label: "ERP Software Development",
+      href: "/custom-erp-software-development",
+    },
     { label: "WordPress Pages", href: "/services/web-development/wordpress" },
     { label: "Ecommerce Website", href: "/services/web-development/ecommerce" },
   ],
@@ -142,6 +146,10 @@ const Navbar = () => {
           label: "FullStack Web Development",
           href: "/services/web-development/fullstack-development",
         },
+         {
+      label: "ERP Software Development",
+      href: "/custom-erp-software-development",
+    },
         {
           label: "WordPress Pages",
           href: "/services/web-development/wordpress",

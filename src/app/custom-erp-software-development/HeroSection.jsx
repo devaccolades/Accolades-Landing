@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
 import { ArrowRight, Check, MessageCircle } from "lucide-react";
 
@@ -7,8 +9,53 @@ const inputClasses =
   "h-10 w-full rounded-md border border-white/20 bg-white/[0.04] px-3 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-[#16bad1] focus:ring-2 focus:ring-[#16bad1]/20";
 
 export default function HeroSection() {
-  function handleSubmit(event) {
+  const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
+  const [phoneError, setPhoneError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setFormData((current) => ({ ...current, [name]: value }));
+    if (name === "phone") setPhoneError("");
+  }
+
+  async function handleSubmit(event) {
     event.preventDefault();
+
+    if (!/^\d{10}$/.test(formData.phone)) {
+      setPhoneError("Enter a valid 10-digit phone number");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) throw new Error(result.message);
+
+      await Swal.fire({
+        title: "Success!",
+        text: "Your consultation request has been submitted.",
+        icon: "success",
+        confirmButtonColor: "#17AABF",
+      });
+      setFormData({ name: "", phone: "", message: "" });
+    } catch (error) {
+      console.error("ERP consultation submit error:", error);
+      Swal.fire({
+        title: "Submission failed",
+        text: "Please try again later.",
+        icon: "error",
+        confirmButtonColor: "#d33",
+      });
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -62,6 +109,8 @@ export default function HeroSection() {
                 <input
                   className={`${inputClasses} mt-1.5`}
                   name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Enter your name"
                   required
                 />
@@ -77,10 +126,13 @@ export default function HeroSection() {
                     className="h-10 min-w-0 flex-1 bg-transparent px-3 text-sm text-white outline-none placeholder:text-white/45"
                     inputMode="tel"
                     name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="Enter your phone number"
                     required
                   />
                 </div>
+                {phoneError && <p className="mt-1 text-[11px] text-red-300">{phoneError}</p>}
               </label>
 
               <label className="block text-xs font-medium">
@@ -88,6 +140,8 @@ export default function HeroSection() {
                 <textarea
                   className="mt-1.5 min-h-20 w-full resize-none rounded-md border border-white/20 bg-white/[0.04] p-3 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-[#16bad1] focus:ring-2 focus:ring-[#16bad1]/20"
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Leave a message if you need anything specific..."
                 />
               </label>
@@ -95,10 +149,11 @@ export default function HeroSection() {
 
             <button
               type="submit"
+              disabled={loading}
               className="mt-4 flex h-11 w-full items-center justify-center gap-2 rounded-md bg-[#08b6d0] text-sm font-semibold text-white transition hover:bg-[#13c5dc] focus:outline-none focus:ring-2 focus:ring-white/60"
             >
               <MessageCircle size={16} strokeWidth={2} />
-              Book a Free Consultation
+              {loading ? "Sending..." : "Book a Free Consultation"}
               <ArrowRight size={15} />
             </button>
           </form>

@@ -159,15 +159,20 @@ export default function HeroSection() {
           </form>
         </div>
 
-        <div className="mt-12 pb-6 lg:mt-14 lg:pb-8">
-          <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-[#123f46]">
+        <div className="relative mt-12 pb-6 lg:mt-14 lg:pb-8">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-[8%] -top-20 h-44 bg-[radial-gradient(ellipse_at_center,rgba(160,238,247,0.72)_0%,rgba(205,247,251,0.48)_38%,transparent_74%)] blur-[2px]"
+          />
+
+          <div className="relative z-10 mb-3 flex items-center gap-2 text-xs font-semibold text-[#123f46]">
             <span className="grid size-5 place-items-center rounded-full bg-[#0aa9a8] text-white">
               <Check size={12} strokeWidth={3} />
             </span>
             Simple ERP Dashboard — Fully Customizable
           </div>
 
-          <div className="relative mx-auto flex w-full items-center justify-center overflow-hidden rounded-xl border border-[#d9e7e8] shadow-[0_20px_55px_rgba(22,76,85,0.13)] backdrop-blur-sm">
+          <div className="relative z-10 mx-auto flex w-full items-center justify-center overflow-hidden rounded-xl border border-[#d9e7e8] ">
             <div className="text-center">
               
               <Image

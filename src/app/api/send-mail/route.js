@@ -12,6 +12,17 @@ export async function POST(req) {
       },
     });
 
+    let htmlContent = `
+      <h3>Website Form Details</h3>
+      <p><strong>Name:</strong> ${name || "N/A"}</p>
+      <p><strong>Email:</strong> ${email || "N/A"}</p>
+      <p><strong>Phone:</strong> ${phone || "N/A"}</p>
+    `;
+
+    if (message) {
+      htmlContent += `<p><strong>Message:</strong> ${message}</p>`;
+    }
+
     const mailOptions = {
       from: `"Accolades Website" <${process.env.SMTP_EMAIL}>`,
       to: "leadsaccolades@gmail.com",
@@ -20,17 +31,8 @@ export async function POST(req) {
     // "manjima.accolades@gmail.com",
     "mail@accoladesintegrated.com",
   ],
-      subject: "New Reach Us Form Submission",
-      html: `
-        <h3>Reach Us Form Details</h3>
-        <p><strong>Name:</strong> ${name || "N/A"}</p>
-        <p><strong>Email:</strong> ${email || "N/A"}</p>
-        <p><strong>Phone:</strong> ${phone || "N/A"}</p>
-      `,
-
-      if(message) {
-        htmlContent += `<p><strong>Message:</strong> ${message}</p>`;
-      },
+      subject: "New Website Form Submission",
+      html: htmlContent,
     };
 
     await transporter.sendMail(mailOptions);

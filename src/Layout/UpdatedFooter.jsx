@@ -95,9 +95,10 @@ const quickLinks = [
     links: [
       { label: "Web Development", href: "/services/web-development" },
       { label: "Fullstack Web Development", href: "/services/web-development/fullstack-development" },
+      { label: "ERP Software Development", href: "/custom-erp-software-development" },
       { label: "Wordpress Development", href: "/services/web-development/wordpress" },
       { label: "Ecommerce Solutions", href: "/services/web-development/ecommerce" },
-      { label: "ERP Software Development", href: "/custom-erp-software-development" },
+      
 
     ],
   },

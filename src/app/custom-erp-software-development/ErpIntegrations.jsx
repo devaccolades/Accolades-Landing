@@ -59,7 +59,7 @@ export default function ErpIntegrations() {
 
             <h2 className="mt-4 max-w-[680px] text-[31px] font-normal leading-[1.08] tracking-[-0.04em] text-[#080808] sm:text-[39px] lg:text-[46px]">
               Connect Your ERP with the
-              <br className="hidden sm:block" />
+              
               Tools You Already Use
             </h2>
 

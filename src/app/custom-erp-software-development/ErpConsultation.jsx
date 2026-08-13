@@ -1,13 +1,50 @@
 "use client";
 
 import { Mail, MessageCircle, Phone } from "lucide-react";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
 const inputStyles =
   "mt-1.5 h-10 w-full rounded-md border border-white/25 bg-transparent px-3 font-mont text-[12px] text-white outline-none transition placeholder:text-white/65 focus:border-[#19b9d6] focus:ring-2 focus:ring-[#19b9d6]/20";
 
 export default function ErpConsultation() {
-  function handleSubmit(event) {
+  const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
+  const [phoneError, setPhoneError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setFormData((current) => ({ ...current, [name]: value }));
+    if (name === "phone") setPhoneError("");
+  }
+
+  async function handleSubmit(event) {
     event.preventDefault();
+
+    if (!/^\d{10}$/.test(formData.phone)) {
+      setPhoneError("Enter a valid 10-digit phone number");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) throw new Error(result.message);
+
+      await Swal.fire({ title: "Success!", text: "Your consultation request has been submitted.", icon: "success", confirmButtonColor: "#17AABF" });
+      setFormData({ name: "", phone: "", message: "" });
+    } catch (error) {
+      console.error("ERP consultation submit error:", error);
+      Swal.fire({ title: "Submission failed", text: "Please try again later.", icon: "error", confirmButtonColor: "#d33" });
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -51,26 +88,27 @@ export default function ErpConsultation() {
           <div className="mt-4 space-y-3">
             <label className="block font-almarai text-[12px] font-bold text-white">
               Name*
-              <input className={inputStyles} name="name" placeholder="Enter your name" required />
+              <input className={inputStyles} name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" required />
             </label>
 
             <label className="block font-almarai text-[12px] font-bold text-white">
               Phone number*
               <span className="mt-1.5 flex h-10 overflow-hidden rounded-md border border-white/25 bg-transparent transition focus-within:border-[#19b9d6] focus-within:ring-2 focus-within:ring-[#19b9d6]/20">
                 <span className="grid place-items-center border-r border-white/20 px-3 font-mont text-[11px] font-normal">+91</span>
-                <input className="min-w-0 flex-1 bg-transparent px-3 font-mont text-[12px] font-normal text-white outline-none placeholder:text-white/65" inputMode="tel" name="phone" placeholder="Enter your phone number" required />
+                <input className="min-w-0 flex-1 bg-transparent px-3 font-mont text-[12px] font-normal text-white outline-none placeholder:text-white/65" inputMode="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your phone number" required />
               </span>
+              {phoneError && <span className="mt-1 block text-[11px] font-normal text-red-300">{phoneError}</span>}
             </label>
 
             <label className="block font-almarai text-[12px] font-bold text-white">
               Message
-              <textarea className="mt-1.5 min-h-[64px] w-full resize-none rounded-[10px] border border-white/25 bg-[#052a31]/60 p-3 font-mont text-[12px] font-normal text-white outline-none transition placeholder:text-white/60 focus:border-[#19b9d6] focus:ring-2 focus:ring-[#19b9d6]/20" name="message" placeholder="Leave a message if you need anything specific..." />
+              <textarea className="mt-1.5 min-h-[64px] w-full resize-none rounded-[10px] border border-white/25 bg-[#052a31]/60 p-3 font-mont text-[12px] font-normal text-white outline-none transition placeholder:text-white/60 focus:border-[#19b9d6] focus:ring-2 focus:ring-[#19b9d6]/20" name="message" value={formData.message} onChange={handleChange} placeholder="Leave a message if you need anything specific..." />
             </label>
           </div>
 
-          <button type="submit" className="mt-3 flex h-10 w-full items-center justify-center gap-2 rounded-md bg-[#0eb5db] font-almarai text-[13px] font-bold text-white transition hover:bg-[#20c4e7] focus:outline-none focus:ring-2 focus:ring-white/70">
+          <button type="submit" disabled={loading} className="mt-3 flex h-10 w-full items-center justify-center gap-2 rounded-md bg-[#0eb5db] font-almarai text-[13px] font-bold text-white transition hover:bg-[#20c4e7] focus:outline-none focus:ring-2 focus:ring-white/70 disabled:cursor-not-allowed disabled:opacity-70">
             <MessageCircle size={17} strokeWidth={2} aria-hidden="true" />
-            Book a Free Consultation
+            {loading ? "Sending..." : "Book a Free Consultation"}
           </button>
         </form>
       </div>

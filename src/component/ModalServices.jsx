@@ -62,6 +62,10 @@ export default function ModalServices({ isOpen, onClose }) {
           label: "FullStack Web Development",
           href: "/services/web-development/fullstack-development",
         },
+         {
+      label: "ERP Software Development",
+      href: "/custom-erp-software-development",
+    },
         {
           label: "WordPress Pages",
           href: "/services/web-development/wordpress",

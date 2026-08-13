@@ -71,7 +71,7 @@ export default function OnePlatform() {
                 className="relative z-10 flex min-w-[90px] flex-col items-center"
               >
                 <span className="size-3.5 rounded-full bg-[#08aa87] ring-4 ring-white" />
-                <span className="mt-3.5 rounded-[16px] bg-[#f6f6f6] px-5 py-4 font-mont text-[16px] leading-none text-[#111]">
+                <span className="mt-3.5 rounded-[14px] bg-[#f6f6f6] px-5 py-3 text-[13px] leading-none text-[#111]">
                   {department}
                 </span>
               </div>

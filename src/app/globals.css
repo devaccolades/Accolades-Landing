@@ -72,8 +72,21 @@ body {
 }
 
 .containers {
-  width: 80%;
+  width: min(80%, 1152px);
   margin: 0 auto;
+}
+
+.erp-page,
+.erp-page .font-almarai,
+.erp-page .font-mont {
+  font-family: var(--font-mont), sans-serif;
+}
+
+.erp-page h1,
+.erp-page h2,
+.erp-page h3,
+.erp-page p {
+  text-wrap: pretty;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

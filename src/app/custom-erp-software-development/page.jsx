@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function CustomErpSoftwareDevelopmentPage() {
   return (
-    <div>
+    <main className="erp-page overflow-x-hidden bg-white font-mont">
       <HeroSection />
       <BusinessChallenges />
       <OnePlatform />
@@ -24,6 +24,9 @@ export default function CustomErpSoftwareDevelopmentPage() {
       <WhyChoose />
       <ErpIntegrations />
       <ErpConsultation />
-    </div>
+      {/* <a href="#contact" className="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 rounded-l-md bg-[#e7a729] px-2 py-5 text-[10px] font-semibold tracking-wide text-[#27200f] shadow-md xl:block [writing-mode:vertical-rl]">
+        Enquire Now
+      </a> */}
+    </main>
   );
 }

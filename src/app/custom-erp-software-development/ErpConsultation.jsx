@@ -11,7 +11,7 @@ export default function ErpConsultation() {
   }
 
   return (
-    <section id="contact" className="relative isolate overflow-hidden bg-[#0a333b] text-white py-6 md:py-10 lg:py-16">
+    <section id="contact" className="relative isolate overflow-hidden bg-[#0a333b] pt-6 pb-24 text-white md:pt-10 md:pb-28 lg:pt-16 lg:pb-36">
       <div aria-hidden="true" className="absolute inset-0 -z-20 bg-[linear-gradient(110deg,#0b3037_0%,#0a3c47_43%,#75c4d4_70%,#effcff_100%)]" />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-[45%] bg-[radial-gradient(ellipse_at_center_bottom,rgba(215,242,246,0.78),transparent_67%)]" />
 

@@ -15,11 +15,11 @@ export default function HeroSection() {
     <section className="relative isolate overflow-hidden bg-white pt-24 text-[#073f48] sm:pt-28 lg:pt-32">
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-20 opacity-55 [background-image:radial-gradient(#b9d5d8_1px,transparent_1px)] [background-size:14px_14px]"
+        className="absolute inset-x-0 top-0 h-3/4 -z-20 opacity-55 [background-image:radial-gradient(#b9d5d8_1px,transparent_1px)] [background-size:14px_14px]"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 -z-10 h-[48%] bg-[radial-gradient(ellipse_at_center_bottom,rgba(255,190,184,0.48),rgba(213,247,250,0.48)_42%,transparent_72%)]"
+        className="absolute inset-x-0 bottom-0 -z-10 h-[62%] bg-[radial-gradient(ellipse_65%_58%_at_42%_100%,rgba(255,193,193,0.62),rgba(255,225,225,0.34)_46%,transparent_76%),radial-gradient(ellipse_42%_50%_at_82%_100%,rgba(207,244,249,0.62),transparent_74%)]"
       />
 
       <div className="containers">
@@ -104,7 +104,7 @@ export default function HeroSection() {
           </form>
         </div>
 
-        <div className="mt-12 pb-14 lg:mt-14 lg:pb-20">
+        <div className="mt-12 pb-6 lg:mt-14 lg:pb-8">
           <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-[#123f46]">
             <span className="grid size-5 place-items-center rounded-full bg-[#0aa9a8] text-white">
               <Check size={12} strokeWidth={3} />

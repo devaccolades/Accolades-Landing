@@ -35,10 +35,10 @@ const challenges = [
 
 export default function BusinessChallenges() {
   return (
-    <section className="relative isolate overflow-hidden bg-white py-14 sm:py-20 lg:py-24">
+    <section className="relative isolate -mt-px overflow-hidden bg-white pb-14 pt-12 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-20">
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 -z-10 h-[55%] bg-[radial-gradient(ellipse_at_top,rgba(255,211,211,0.78),rgba(255,255,255,0)_72%)]"
+        className="absolute inset-x-0 top-0 -z-10 h-[72%] bg-[radial-gradient(ellipse_64%_62%_at_41%_0%,rgba(255,195,195,0.58),rgba(255,228,228,0.3)_48%,transparent_77%),radial-gradient(ellipse_40%_55%_at_83%_4%,rgba(213,246,250,0.55),transparent_76%)]"
       />
 
       <div className="mx-auto w-full max-w-[1128px] px-5 sm:px-6">

@@ -105,8 +105,9 @@ export default function PowerFullERP() {
                 </div>
 
                 {/* Button */}
-                <button
-                  type="button"
+                <a
+                  href="tel:+919048100233"
+                  aria-label={`Call +91 90481 00233 about ${module.title}`}
                   className={[
                     "mt-auto w-fit rounded-full px-3 py-1.5",
                     "text-[12px] font-semibold transition-all duration-300",
@@ -114,7 +115,7 @@ export default function PowerFullERP() {
                   ].join(" ")}
                 >
                   Request Demo
-                </button>
+                </a>
               </div>
 
               {/* Dashboard Image */}

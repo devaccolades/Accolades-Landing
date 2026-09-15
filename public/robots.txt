@@ -1,5 +1,22 @@
-User-agent: *
+User-agent: GPTBot
+Allow: /
 
-Disallow: /?
-Disallow: /*?
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-user
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Gemini-Deep-Research
+Allow: /
+
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
 Sitemap: https://www.accoladesintegrated.com/sitemap.xml

@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 function LayoutWrapper({children}) {
     const pathName =usePathname();
-    const hiddenNavbarRoutes = ["/google-ads", "/video-production"];
+    const hiddenNavbarRoutes = ["/google-ads", "/video-production", "/mumbai"];
     const hideNavbar = hiddenNavbarRoutes.includes(pathName);
   return (
     <div>

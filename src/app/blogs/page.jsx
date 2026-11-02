@@ -19,13 +19,13 @@ export async function generateMetadata() {
     description: post?.meta_description,
 
     alternates: {
-      canonical: `${baseUrl}/blog`,
+      canonical: `${baseUrl}/blogs`,
     },
 
     openGraph: {
       title: post?.meta_title,
       description: post?.meta_description,
-      url: `${baseUrl}/blog`,
+      url: `${baseUrl}/blogs`,
       images: [post?.ogImage],
     },
   };

@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
       title: data.meta_title || data.title,
       description: data.meta_description || "",
       alternates: {
-        canonical: `${baseUrl}/blog/${slug}`,
+        canonical: `${baseUrl}/blogs/${slug}`,
       },
       openGraph: {
         title: data.meta_title || data.title,
@@ -41,6 +41,9 @@ export async function generateMetadata({ params }) {
     return {
       title: "Blog | Accolades Integrated",
       description: "Read our latest blogs",
+      alternates: {
+        canonical: `${baseUrl}/blogs/${slug}`,
+      },
     };
   }
 }

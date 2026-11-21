@@ -264,6 +264,7 @@ const Navbar = () => {
       <nav className="hidden lg:block fixed left-0 right-0 top-[10px] md:top-10  containers z-50">
         <div className="pointer-events-auto">
           <GlassSurface
+            lightweight={pathName === "/ui-ux"}
             width={"100%"}
             height={59}
             borderRadius={16}
@@ -365,6 +366,7 @@ const Navbar = () => {
       {/* for mobile view */}
       <nav className="lg:hidden fixed left-0 right-0 top-[10px] md:top-10 containers z-50">
         <GlassSurface
+          lightweight={pathName === "/ui-ux"}
           width={"100%"}
           height={52}
           borderRadius={16}

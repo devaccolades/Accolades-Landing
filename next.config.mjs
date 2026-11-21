@@ -1,3 +1,5 @@
+import { PHASE_DEVELOPMENT_SERVER } from 'next/constants.js';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   devIndicators: false,
@@ -17,4 +19,8 @@ const nextConfig = {
   },
 }
 
-export default nextConfig
+export default (phase) => ({
+  ...nextConfig,
+  // Keep development files separate from production builds so they can run together.
+  distDir: phase === PHASE_DEVELOPMENT_SERVER ? '.next-dev' : '.next',
+});

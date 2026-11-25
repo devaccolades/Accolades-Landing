@@ -107,6 +107,118 @@ body {
   }
 }
 
+@media (min-width: 1024px) {
+  .mumbai-page .containers {
+    width: min(76%, 1152px);
+  }
+}
+
+/* Travels the full 400% band width, so the light is off screen at both ends. The last 45% is a rest between passes */
+@keyframes mumbai-line-glint {
+  from {
+    transform: translateX(0);
+  }
+  55%,
+  to {
+    transform: translateX(-75%);
+  }
+}
+
+@keyframes mumbai-rise {
+  from {
+    opacity: 0;
+    translate: 0 22px;
+  }
+}
+
+/* Uses transform, not translate, so it composes with Tailwind's translate utilities instead of overriding them */
+@keyframes mumbai-text-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+}
+
+@keyframes mumbai-word-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em);
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  /* Plays on page load, for text that is on screen before any scrolling */
+  .mumbai-rise {
+    animation: mumbai-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--rise-delay, 0s) backwards;
+  }
+
+  /* TextReveal.jsx moves each block from waiting to in as it scrolls into view. Headings animate word by word instead of as one block */
+  [data-text-reveal="waiting"] {
+    opacity: 0;
+  }
+
+  [data-text-reveal="in"]:not([data-words]) {
+    animation: mumbai-text-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s) backwards;
+  }
+
+  .mumbai-word {
+    display: inline-block;
+  }
+
+  [data-text-reveal="in"] .mumbai-word {
+    animation: mumbai-word-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--reveal-delay, 0s) + var(--word) * 45ms) backwards;
+  }
+}
+
+@keyframes mumbai-star-in {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+@keyframes mumbai-star-blink {
+  50% {
+    opacity: 0.2;
+    scale: 0.6;
+  }
+}
+
+@keyframes mumbai-bridge-in {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Black disappears under the parent's screen blend, so the grid lines only show through the transparent gap */
+.mumbai-line-glint {
+  width: 400%;
+  background: linear-gradient(105deg, #000 42%, transparent 50%, #000 58%);
+  animation: mumbai-line-glint 12s ease-in-out infinite;
+}
+
+.mumbai-star {
+  animation:
+    mumbai-star-in 0.4s ease-out var(--star-delay) backwards,
+    mumbai-star-blink var(--star-blink) ease-in-out calc(var(--star-delay) + 0.4s) infinite;
+}
+
+/* Starts once the last star (index 6 x 0.15s, plus its 0.4s pop) has arrived */
+.mumbai-bridge {
+  animation: mumbai-bridge-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) 1.3s backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mumbai-star,
+  .mumbai-bridge,
+  .mumbai-line-glint {
+    animation: none;
+  }
+}
+
 @keyframes scroll-up {
   0% {
     transform: translateY(0%);

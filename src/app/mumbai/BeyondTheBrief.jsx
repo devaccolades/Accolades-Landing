@@ -9,7 +9,7 @@ const services = [
 
 export default function BeyondTheBrief() {
   return (
-    <section aria-labelledby="mumbai-beyond-heading" className="overflow-hidden bg-white bg-[radial-gradient(closest-side_at_75%_50%,#efefef,transparent)] py-12 text-black md:py-16 lg:py-10">
+    <section aria-labelledby="mumbai-beyond-heading" className="overflow-hidden bg-white bg-[radial-gradient(closest-side_at_75%_50%,#efefef,transparent)] py-12 text-black md:py-16">
       <div className="containers grid gap-10 md:grid-cols-[1.15fr_1fr] md:gap-x-[6%] lg:grid-cols-[1fr_.8fr_1.15fr] lg:items-center lg:gap-x-[3%]">
         <div className="md:col-start-1 md:row-start-1">
           <p className="mb-4 text-sm lg:text-base"><span aria-hidden="true" className="text-[#ffdf00]">✦</span> Beyond the brief</p>
@@ -26,7 +26,7 @@ export default function BeyondTheBrief() {
           ))}
         </dl>
 
-        <PhoneVideo videoId="chZQUmBDgcI" title="Best Interior Designers in Kochi & South India | D2R Interiors" className="mx-auto w-[min(70%,280px)] drop-shadow-[0_28px_36px_rgba(0,0,0,0.2)] md:col-start-2 md:row-span-2 md:row-start-1 md:w-full md:max-w-[300px] md:self-center lg:row-span-1 lg:max-w-[270px]" />
+        <PhoneVideo videoId="chZQUmBDgcI" title="Best Interior Designers in Kochi & South India | D2R Interiors" className="mumbai-reveal mx-auto w-[min(70%,280px)] drop-shadow-[0_28px_36px_rgba(0,0,0,0.2)] md:col-start-2 md:row-span-2 md:row-start-1 md:w-full md:max-w-[300px] md:self-center lg:row-span-1 lg:max-w-[250px]" />
       </div>
     </section>
   );

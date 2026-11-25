@@ -44,7 +44,7 @@ export default function ProjectEnquiry() {
           <h3 className="text-base lg:text-xl"><span aria-hidden="true" className="text-[#ffdf00]">✦</span> Discuss Your Project</h3>
           <p className="mt-3 text-xs leading-relaxed lg:text-sm">Tell us what works and what needs help.</p>
           <form onSubmit={handleSubmit} className="mt-10 md:mt-14">
-            <fieldset disabled={status.type === "loading"} className="grid min-w-0 gap-x-10 gap-y-8 disabled:opacity-60 sm:grid-cols-2 lg:gap-y-10">
+            <fieldset disabled={status.type === "loading"} className="grid min-w-0 gap-x-10 gap-y-8 disabled:opacity-60 sm:grid-cols-2 lg:gap-x-[76px] lg:gap-y-10">
               <legend className="sr-only">Project enquiry details</legend>
               <label className="block text-[11px] lg:text-xs" htmlFor="mumbai-name">Name<span aria-hidden="true" className="text-[#008391]">*</span>
                 <input id="mumbai-name" name="name" required maxLength={120} autoComplete="name" className="mt-2 block w-full rounded-none border-b border-[#e5e5e5] bg-transparent py-3 text-sm outline-none focus:border-[#008391]" />

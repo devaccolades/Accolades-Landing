@@ -10,39 +10,35 @@ const faqs = [
   },
   {
     question: "What does a software development company in Mumbai build?",
-    answer: "We build websites, online stores, custom CRMs, business applications and tools that connect your day-to-day operations. The right solution depends on what your team needs to do and the problems you want to solve.",
+    answer: "Custom web and mobile applications, CRM and ERP systems, SaaS products and other business software. We build around your existing workflow instead of forcing you into a generic tool.",
   },
   {
     question: "Can one company handle both my marketing and my software?",
-    answer: "Yes. Our marketing, creative and development teams work together, so your campaigns, website and business systems can follow the same plan. You have one team to coordinate the work from first enquiry to follow-up.",
+    answer: "Yes. That is how we work. Marketing, creative and technology teams share one plan, so your CRM, website, app and campaigns fit together.",
   },
   {
     question: "Why should I hire a digital marketing company in Mumbai?",
-    answer: "A local team can work closely with you to understand your customers, market and sales process. Our Malad West office gives Mumbai businesses a place to meet the team and plan campaigns around their business goals.",
+    answer: "A local team knows your market. We can meet face-to-face in our Malad office. We tailor campaigns specifically for local buyers to get better results.",
   },
   {
     question: "Do I need a software development company in Mumbai for a small business?",
-    answer: "It depends on your needs. A small business may benefit from a faster website, an online store or a simple lead management tool. We start with the problem and help you decide whether an existing tool or custom software makes sense.",
+    answer: "Yes. We build simple tools that fit your exact size and budget. You do not need to pay for huge, complex systems. We build only what you actually need.",
   },
   {
     question: "How long does it take a digital marketing company in Mumbai to show results?",
-    answer: "The timeline depends on your goals, budget, starting point and channels. Paid campaigns can start generating data once they go live, while SEO and organic content take longer to build momentum. We agree on milestones and reporting before the work begins.",
+    answer: "Good marketing takes a little time. You usually see clear traffic shifts in three to six months. We focus on local search to bring you faster leads.",
   },
   {
     question: "Can a software development company in Mumbai fix my current systems?",
-    answer: "We can review your existing website or software to understand what is causing problems. Depending on what we find, we may recommend fixes, integrations or a phased upgrade rather than rebuilding everything.",
+    answer: "Yes. We start with a full system audit. If a simple fix works, we do it. If you need a total rebuild, we will tell you why and show the benefits.",
   },
   {
     question: "How do you connect marketing with custom software?",
-    answer: "We connect your website forms, campaigns and sales tools so enquiries can move into your CRM. Your team can then track where leads come from, follow up with customers and see which marketing activities lead to sales.",
+    answer: "We often build a CRM and tie it straight to your ad campaigns. This means every new website lead goes right to your sales team instantly.",
   },
   {
     question: "What makes you different from another digital marketing company in Mumbai?",
-    answer: "Accolades brings marketing, creative and software development into one team. That lets us plan how people find your business, what they experience on your website and how your team handles the next step.",
-  },
-  {
-    question: "How do I get started?",
-    answer: "Contact our Mumbai team to tell us about your business, goals and current challenges. We will discuss what you need, review the next steps and suggest a suitable scope of work.",
+    answer: "We do not just run ads. We also build the technology that catches those leads. You get marketing and custom software development under one roof.",
   },
 ];
 

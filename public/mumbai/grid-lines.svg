@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960">
+  <!-- Traces the grid baked into bg.webp: same size, 34px spacing, first lines at x=6 and y=4 -->
+  <pattern id="grid" x="6" y="4" width="34" height="34" patternUnits="userSpaceOnUse">
+    <path d="M.5 0V34M0 .5H34" fill="none" stroke="#fff" />
+  </pattern>
+  <rect width="1440" height="960" fill="url(#grid)" />
+</svg>

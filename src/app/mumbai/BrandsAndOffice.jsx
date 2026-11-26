@@ -14,7 +14,7 @@ export default function BrandsAndOffice() {
           <p className="mx-auto mt-6 max-w-[900px] text-xs leading-[1.6] text-[#58696a] md:text-sm lg:text-base">We have worked with businesses in real estate, finance, healthcare, education, hospitality, automotive and retail, including <span className="font-semibold text-black">Vivo, Volvo, Tata Motors, Manappuram Finance, Radisson Blu, Pepperfry</span> and <span className="font-semibold text-black">Yamaha.</span></p>
         </div>
 
-        <div className="mt-5 mb-10 md:mb-14 lg:mb-16">
+        <div className="mumbai-reveal mt-5 mb-10 md:mb-14 lg:mb-16">
           <LogoLoop logos={mumbaiClientLogos} speed={60} direction="left" logoHeight={72} gap={70} pauseOnHover fadeOut fadeOutColor="#ffffff" ariaLabel="Brands we have worked with" className="hidden md:block" />
           <LogoLoop logos={mumbaiClientLogos} speed={40} direction="left" logoHeight={50} gap={32} pauseOnHover fadeOut fadeOutColor="#ffffff" ariaLabel="Brands we have worked with" className="md:hidden" />
         </div>

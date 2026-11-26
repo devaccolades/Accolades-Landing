@@ -1,17 +1,18 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { animate, motion, useInView, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useSafeReducedMotion } from "./useSafeReducedMotion";
 
 const whatsappUrl = "https://wa.me/919048100233?text=Hi%2C%20I%27d%20like%20to%20talk%20to%20your%20Mumbai%20team.";
 
 const stats = [
-  { value: "1000+", label: "Web Projects Done" },
-  { value: "500+", label: "Clients" },
-  { value: "10+", label: "Years of Experience" },
-  { value: "100+", label: "Team Members" },
+  { value: 1000, label: "Web Projects Done" },
+  { value: 500, label: "Clients" },
+  { value: 10, label: "Years of Experience" },
+  { value: 100, label: "Team Members" },
 ];
 
 const services = [
@@ -54,24 +55,40 @@ const services = [
 // The illustration PNGs have uneven transparent margins, so each one is cropped to its drawing ([x, y, w, h] in source pixels) and then fitted to the panel
 function Illustration({ src, width, height, crop: [x, y, w, h] }) {
   return (
-    <div style={{ "--ar": w / h, aspectRatio: `${w} / ${h}` }} className="relative mt-4 mb-6 ml-auto w-[min(62cqw,calc(200px*var(--ar)))] overflow-hidden md:absolute md:right-[10%] md:bottom-[8%] md:m-0 md:w-[min(64cqw,calc(58cqh*var(--ar)))]">
+    <div style={{ "--ar": w / h, aspectRatio: `${w} / ${h}` }} className="relative mt-4 mb-6 ml-auto w-[min(62cqw,calc(200px*var(--ar)))] overflow-hidden md:absolute md:right-[17%] md:bottom-[8%] md:m-0 md:w-[min(64cqw,calc(58cqh*var(--ar)))]">
       <Image src={src} width={width} height={height} alt="" sizes="(max-width: 767px) 60vw, 30vw" className="absolute h-auto max-w-none" style={{ width: `${(width / w) * 100}%`, left: `${(-x / w) * 100}%`, top: `${(-y / h) * 100}%` }} />
     </div>
   );
 }
 
+// The server renders the final number, so it is there without JavaScript and for search engines. Counting starts at the first pixel in view, just before TextReveal fades it in, so the final number never flashes first
+function CountUp({ value }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+  const reduceMotion = useSafeReducedMotion();
+  const [count, setCount] = useState(value);
+
+  useEffect(() => {
+    if (!inView || reduceMotion) return;
+    const controls = animate(0, value, { duration: 1.8, ease: [0.22, 1, 0.36, 1], onUpdate: (latest) => setCount(Math.round(latest)) });
+    return () => controls.stop();
+  }, [inView, reduceMotion, value]);
+
+  return <span ref={ref}>{count}+</span>;
+}
+
 function ServiceCard({ service, index, total, progress }) {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useSafeReducedMotion();
   const targetScale = 1 - (total - 1 - index) * 0.04;
   const scale = useTransform(progress, [index / total, 1], [1, reduceMotion ? 1 : targetScale]);
 
   return (
     <div className="sticky top-[calc(12vh+var(--offset))] flex justify-center" style={{ "--offset": `${index * 14}px` }}>
-      <motion.article style={{ scale }} className="grid w-full origin-top overflow-hidden rounded-[24px] bg-[#f1ede6] shadow-[0_-10px_30px_-12px_rgba(0,0,0,0.18)] md:h-[clamp(420px,42vw,540px)] md:grid-cols-2">
-        <div className="relative isolate overflow-hidden px-6 pt-6 [container-type:inline-size] md:px-[6%] md:pt-[7%] md:[container-type:size]">
+      <motion.article style={{ scale }} className="grid w-full origin-top overflow-hidden rounded-[24px] bg-[#f1ede6] shadow-[0_-10px_30px_-12px_rgba(0,0,0,0.18)] md:h-[clamp(420px,34.7vw,540px)] md:grid-cols-[46fr_54fr]">
+        <div className="relative isolate overflow-hidden px-6 pt-6 [container-type:inline-size] md:px-[8%] md:pt-[7%] md:[container-type:size]">
           <h3 className="text-[26px] leading-tight tracking-[-.03em] lg:text-[34px]">{service.title}</h3>
           {service.subtitle && <p className="mt-2 max-w-[340px] text-xs lg:text-sm">{service.subtitle}</p>}
-          <svg aria-hidden="true" viewBox="0 0 100 100" className="absolute bottom-[-30%] left-[-22%] -z-10 w-[85%] fill-[#ffed00] md:bottom-[-24%] md:w-[78%]">
+          <svg aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute bottom-[-30%] left-[-22%] -z-10 w-[85%] fill-[#ffed00] aspect-square md:bottom-0 md:left-0 md:aspect-[127/150] md:w-[60%]">
             <path d="M50 0C54 36 64 46 100 50C64 54 54 64 50 100C46 64 36 54 0 50C36 46 46 36 50 0Z" />
           </svg>
           <Illustration {...service.illustration} />
@@ -89,23 +106,23 @@ export default function DigitalMarketing() {
   const { scrollYProgress } = useScroll({ target: stackRef, offset: ["start start", "end end"] });
 
   return (
-    <section aria-labelledby="mumbai-marketing-heading" className="bg-white py-12 text-black md:py-16 lg:py-20">
+    <section aria-labelledby="mumbai-marketing-heading" className="bg-white py-12 text-black md:py-16 lg:pt-10 lg:pb-20">
       <div className="containers">
-        <dl className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-4">
+        <dl className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-[29.3fr_28.4fr_26fr_16.3fr] md:gap-x-0">
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col-reverse">
               <dt className="mt-1 text-[11px] lg:text-sm"><span aria-hidden="true" className="mr-1 text-[#ffdf00]">✦</span>{stat.label}</dt>
-              <dd className="text-[34px] leading-none tracking-[-.04em] md:text-[40px] lg:text-[56px]">{stat.value}</dd>
+              <dd className="text-[34px] leading-none tracking-[-.04em] md:text-[40px] lg:text-[64px]"><CountUp value={stat.value} /></dd>
             </div>
           ))}
         </dl>
 
-        <div className="mt-12 grid gap-4 md:mt-16 md:grid-cols-[1.1fr_1fr] md:gap-[10%] lg:mt-20">
-          <h2 id="mumbai-marketing-heading" className="text-[26px] leading-[1.12] tracking-[-.03em] md:text-[32px] lg:text-[42px]">Digital Marketing Company in Mumbai: <span className="text-[#008391]">Visibility That Brings Enquiries</span></h2>
-          <p className="text-xs leading-[1.6] text-[#58696a] md:pt-1 lg:text-sm">Being visible is not enough. You need to reach the right people at the right moment, with a message that makes them act. Our digital marketing work is built around leads, sales and conversions you can measure.</p>
+        <div className="mt-12 grid gap-4 md:mt-16 md:grid-cols-[1.1fr_1fr] md:gap-[10%] lg:mt-28 lg:grid-cols-2 lg:gap-[4%]">
+          <h2 id="mumbai-marketing-heading" className="text-[26px] leading-[1.12] tracking-[-.03em] md:text-[32px] lg:text-[clamp(36px,3.2vw,46px)]">Digital Marketing Company in Mumbai: <span className="text-[#008391]">Visibility That Brings Enquiries</span></h2>
+          <p className="text-xs leading-[1.6] text-[#58696a] md:pt-1 lg:max-w-[490px] lg:text-sm">Being visible is not enough. You need to reach the right people at the right moment, with a message that makes them act. Our digital marketing work is built around leads, sales and conversions you can measure.</p>
         </div>
 
-        <div ref={stackRef} className="mt-10 flex flex-col gap-[8vh] md:mt-14">
+        <div ref={stackRef} className="mt-10 flex flex-col gap-[8vh] md:mt-14 lg:mt-20">
           {services.map((service, index) => (
             <ServiceCard key={service.image.src} service={service} index={index} total={services.length} progress={scrollYProgress} />
           ))}

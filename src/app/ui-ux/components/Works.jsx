@@ -19,7 +19,7 @@ export default function Works() {
         <div className="ss-sticky" id="ssStage" ref={stage}>
           <canvas className="ss-bg" ref={bg} aria-hidden="true"/>
           <div className="ss-world" ref={world}>
-            {WORKS.map((w, i) => (<div className="ss-plane" key={i}>
+            {WORKS.map((w) => (<div className="ss-plane" key={w.image}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={w.image} alt={`${w.name} – ${w.subtitle}`} decoding="async"/>
               </div>))}
@@ -28,16 +28,16 @@ export default function Works() {
             <div className="ss-mid">
               <div className="ss-kicker">Selected works</div>
               <div ref={titles}>
-                {WORKS.map((w, i) => (<div className="ss-t" key={i}>
+                {WORKS.map((w) => (<div className="ss-t" key={w.image}>
                     <h3>{w.name}</h3>
                     <p>{w.subtitle}</p>
-                    <a className="ss-pill" href={w.href}>View project</a>
+                    <a className="ss-pill" href={w.href} target="_blank" rel="noopener noreferrer">View project</a>
                   </div>))}
               </div>
             </div>
             <div className="ss-bot">
               <span>Scroll to explore</span>
-              <span ref={count}>01 / 06</span>
+              <span ref={count}>01 / {String(WORKS.length).padStart(2, "0")}</span>
             </div>
           </div>
         </div>

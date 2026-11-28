@@ -61,13 +61,14 @@ export function initHero(els) {
         cur += (target - cur) * (reduce ? 1 : 0.09);
         if (Math.abs(target - cur) < 0.0002)
             cur = target;
-        // Avoid rewriting hundreds of character styles after scroll settles.
-        if (cur === lastProgress && H === lastHeight) return;
-        lastProgress = cur;
-        lastHeight = H;
         const want = clamp(cur / 0.9, 0, 1) * Math.max(0, dur - 0.05);
         if (vid.readyState >= 1 && !vid.seeking && Math.abs(vid.currentTime - want) > 0.015)
             vid.currentTime = want;
+        // Keep the video catching up after an asynchronous seek, even when the
+        // text animation has settled at the current scroll position.
+        if (cur === lastProgress && H === lastHeight) return;
+        lastProgress = cur;
+        lastHeight = H;
         const v = (cur * tot) / H, tr = clamp((v - 2.1) / 1, 0, 1);
         /* block 1 scrolls up and out while block 2 rises in from below, at the speed of the scroll */
         b1.style.visibility = tr < 1 ? "visible" : "hidden";
@@ -92,22 +93,43 @@ export function initHero(els) {
         window.dispatchEvent(new CustomEvent("hero:ready"));
         stopAnimation = visibleAnimation(pin, frame);
     }
-    // Preserve scroll-scrubbed video support. Missing media falls back to the
-    // original dark hero rather than substituting the Works scene's sky image.
-    const onLoaded = () => { dur = Number.isFinite(vid.duration) ? vid.duration : 30; start(); };
+    // Match the supplied HTML: fully buffer the short-GOP video before the
+    // scroll timeline starts, and briefly prime decoding without autoplaying it.
+    const onLoaded = () => {
+        dur = Number.isFinite(vid.duration) ? vid.duration : 30;
+        lastProgress = -1;
+        start();
+    };
     vid.addEventListener("loadeddata", onLoaded);
     vid.addEventListener("error", start);
-    const timeout = setTimeout(start, 5000);
+    const timeout = setTimeout(start, 6000);
     fetch(HERO_VIDEO_URL, { signal: ctrl.signal })
-        .then(response => {
+        .then(async response => {
             if (!response.ok) throw new Error("Hero video unavailable");
-            return response.blob();
+            const total = Number(response.headers.get("Content-Length")) || 0;
+            if (!response.body) return response.blob();
+            const reader = response.body.getReader();
+            const chunks = [];
+            let received = 0;
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+                chunks.push(value);
+                received += value.byteLength;
+                if (total && !dead) window.dispatchEvent(new CustomEvent("hero:progress", {
+                    detail: Math.min(100, received / total * 100),
+                }));
+            }
+            return new Blob(chunks, { type: "video/mp4" });
         })
         .then(blob => {
             if (dead) return;
             objUrl = URL.createObjectURL(blob);
             vid.src = objUrl;
             vid.load();
+            const playback = vid.play();
+            playback?.then(() => { if (!dead) vid.pause(); }).catch(() => {});
+            if (vid.readyState >= 2) onLoaded();
         })
         .catch(() => { if (!dead) start(); });
     return () => {

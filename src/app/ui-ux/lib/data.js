@@ -33,11 +33,24 @@ export const SERVICES = [
 export const SHOWCASE_FRAME_COUNT = 180;
 export const SHOWCASE_FRAMES = Array.from({ length: SHOWCASE_FRAME_COUNT }, (_, i) => `/ui-ux/frames/f-${String(i + 1).padStart(3, "0")}.webp`);
 export const WORK_SUBTITLE = "Website with React and Next.js";
-// Placeholder projects, same as the original (alternating two entries)
-export const WORKS = [0, 1, 2, 3, 4, 5].map((i) => ({
-    name: i % 2 ? "Aurex Builders" : "CIDBI",
+export const WORKS = [
+    { name: "CIDBI", image: "cidbi.webp", href: "https://cidbi.com/" },
+    { name: "Aurex Builders", image: "aurex.webp", href: "https://aurexbuilders.com/" },
+    { name: "ABE Education", image: "abe-education.webp", href: "https://abeedu.com/" },
+    { name: "ABE Services", image: "abe-services.webp", href: "https://www.abeservices.in/" },
+    { name: "Alpha Arc", image: "alpha-arc.webp", href: "https://alphaarc.in/" },
+    { name: "Asha Education", image: "asha.webp", href: "https://www.asha.education/" },
+    { name: "HERMES EV", image: "hermes.webp", href: "https://hermesev.com/" },
+    { name: "HYBERMACH", image: "hybermach.webp", href: "https://hybermach.com/" },
+    { name: "RecruitNet", image: "recruitnet.webp", href: "https://www.recruitnet.ie/" },
+    { name: "Classic Homes", image: "classic-homes.webp", href: "https://www.classichomes.in/" },
+    { name: "Classic Insides", image: "classic-insides.webp", href: "https://classicinsides.com/" },
+].map((project) => ({
+    name: project.name,
     subtitle: WORK_SUBTITLE,
-    image: `/ui-ux/images/works/work-${(i % 2) + 1}.jpg`,
-    href: "#",
+    image: `/ui-ux/images/works/${project.image}`,
+    href: project.href,
 }));
-export const HERO_VIDEO_URL = "/ui-ux/video/hero.mp4";
+// Exact video extracted from the supplied HTML. Its frequent keyframes allow
+// short, responsive seeks in either scroll direction (40 keyframes / 10s).
+export const HERO_VIDEO_URL = "/ui-ux/hero-reference.mp4";

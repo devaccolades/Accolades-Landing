@@ -38,6 +38,7 @@ const GlassSurface = ({
   xChannel = "R",
   yChannel = "G",
   mixBlendMode = "difference",
+  lightweight = false,
   className = "",
   style = {},
 }) => {
@@ -204,6 +205,17 @@ const GlassSurface = ({
       "--glass-saturation": saturation,
     };
 
+    // Animated WebGL pages should not be reprocessed through an SVG backdrop
+    // displacement filter on every frame underneath the fixed navbar.
+    if (lightweight) {
+      return {
+        ...baseStyles,
+        background: "rgba(255, 255, 255, 0.96)",
+        border: "1px solid rgba(12, 115, 121, 0.12)",
+        boxShadow: "0 4px 20px rgba(14, 42, 44, 0.08)",
+      };
+    }
+
     // Use the precomputed feature flags (both default to false during SSR)
     if (svgSupported) {
       return {
@@ -294,7 +306,7 @@ const GlassSurface = ({
       {/* SVG filter is included unconditionally in the DOM,
           but the component only applies it via CSS when svgSupported is true.
           The svg itself won't force the hydratation mismatch because it's static markup. */}
-      <svg
+      {!lightweight && <svg
         className="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -377,7 +389,7 @@ const GlassSurface = ({
             />
           </filter>
         </defs>
-      </svg>
+      </svg>}
 
       <div className="w-full py-[8px] px-[10px] md:p-[10px] rounded-[inherit] relative z-50 flex justify-between items-center">
         {children}

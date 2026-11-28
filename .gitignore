@@ -4,6 +4,7 @@ node_modules/
 # Build output
 .next/
 /.next/
+/.next-dev/
 .next/trace
 out/
 dist/
